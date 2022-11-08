@@ -1,9 +1,5 @@
 ---
-title: "About"
+title: "Cutaneous Oncology Interest Group"
 ---
 
-About this site
-
-```{r}
-1 + 1
-```
+The `Cutaneous Oncology Interest Group` is a collective of clinicians and investigators committed to improving outcomes in patients with skin cancer.
