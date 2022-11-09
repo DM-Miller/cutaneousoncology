@@ -28,7 +28,7 @@ On October 7^th^, 2022, the multi-institutional **Skin Cancer Interest Group Jou
 
 Although the vast majority of cutaneous squamous cell carcinomas (CSCC) are treated and cured with local therapies, including excision and electrodesiccation and curettage, a portion go on to have poor outcomes, including regional, nodal and distant metastases. Approximately 6% of patients with CSCC will go on to develop nodal or distant disease, resulting in mortality in 1.5-2% of patients [@patel2021; @Thompson2016]. Consequently, there is an unmet need to find alternative treatment strategies to improve outcomes in patients with high-risk CSCC.
 
-Recently, clinical trial data has lead to the approval of immune checkpoint inhibitors for locally advanced and metastatic CSCC[@Migden2018; @Grob2020]. Objective response rates for advanced disease ranging from 46-51% and 35-50% in EMPOWER-CSCC-1 and KEYNOTE-29, respectively, led to the hypotheses tested by Gross et al. that pre-operative anti-PD-1 would led to improved pathological response rates at the time of surgical excision.
+Recently, clinical trial data has lead to the approval of immune checkpoint inhibitors for locally advanced and metastatic CSCC[@Migden2018; @Grob2020]. Objective response rates for advanced disease ranging from 46-51% and 35-50% in EMPOWER-CSCC-1 and KEYNOTE-629, respectively, led to the hypotheses tested by Gross et al. that pre-operative anti-PD-1 would led to improved pathological response rates at the time of surgical excision.
 
 **Study Design**
 
