@@ -4,14 +4,26 @@ project:
 website:
   title: "Cutaneous Oncology Interest Group"
   navbar:
+    background: primary
+    search: true
     left:
-      - href: index.qmd
-        text: Perspective Pieces
-      - about.qmd
+      - text: "About the COIG"
+        file: about.qmd  
+      - sidebar:perspectives
+  sidebar:
+    - id: perspectives
+      title: "Perspectives on the Science"
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents:
+        - POTS_October_2022.qmd
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: cosmo
+      dark: slate
     css: styles.css
     toc: true
 
