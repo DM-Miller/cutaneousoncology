@@ -3,21 +3,14 @@ project:
 
 website:
   title: "Cutaneous Oncology Interest Group"
+  page-navigation: true
+  reader-mode: true
   navbar:
     background: primary
     search: true
     left:
       - text: "About the COIG"
         file: about.qmd  
-      - sidebar:perspectives
-  sidebar:
-    - id: perspectives
-      title: "Perspectives on the Science"
-      style: "docked"
-      background: light
-      collapse-level: 2
-      contents:
-        - POTS_October_2022.qmd
 
 format:
   html:
