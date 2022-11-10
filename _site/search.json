@@ -1,9 +1,30 @@
 [
   {
+    "objectID": "testing.html",
+    "href": "testing.html",
+    "title": "Testing",
+    "section": "",
+    "text": "Testing"
+  },
+  {
+    "objectID": "perspectives.html",
+    "href": "perspectives.html",
+    "title": "Perspectives on the Science",
+    "section": "",
+    "text": "In “Perspectives on the Science”, we provide commentary on a publication reviewed in our multi-institutional COIG Journal Club. The comments in this article represent the views of the authors of this Perspectives on the Science piece. It does not represent views of any other members of the Interest Group or the affiliated institutions."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Cutaneous Oncology Interest Group",
     "section": "",
     "text": "The Cutaneous Oncology Interest Group (COIG) is a collective of clinicians and investigators committed to improving outcomes in patients with skin cancer."
+  },
+  {
+    "objectID": "about_the_coig.html",
+    "href": "about_the_coig.html",
+    "title": "About the COIG",
+    "section": "",
+    "text": "The `Cutaneous Oncology Interest Group (COIG)` is a collective of clinicians and investigators committed to improving outcomes in patients with skin cancer."
   }
 ]

@@ -10,7 +10,12 @@ website:
     search: true
     left:
       - text: "About the COIG"
-        file: about.qmd  
+        file: about_the_coig.qmd
+      - text: "Perspectives on the Science"
+        file: perspectives.qmd
+      - text: "Testing"
+        file: testing.qmd
+      
 
 format:
   html:
