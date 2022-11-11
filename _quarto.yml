@@ -11,9 +11,23 @@ website:
     left:
       - text: "About the COIG"
         file: about_the_coig.qmd
+      - text: "Journal Club"
+        file: jc.qmd
       - text: "Perspectives on the Science"
         file: perspectives.qmd
 
+  sidebar:
+    - title: "About the COIG"
+      style: "docked"
+      background: light
+      contents:
+        - about_the_coig.qmd
+    - title: "Perspectives on the Science"
+      style: "docked"
+      background: light
+      contents:
+        - perspectives.qmd
+        - POTS_October_2022.qmd
       
 
 format:

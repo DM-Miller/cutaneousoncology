@@ -3,4 +3,7 @@ title: "About the COIG"
 editor: visual
 ---
 
+![](files/group.jpg)
+
+
 The \`Cutaneous Oncology Interest Group (COIG)\` is a collective of clinicians and investigators committed to improving outcomes in patients with skin cancer.
