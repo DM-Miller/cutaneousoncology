@@ -1,7 +1,7 @@
 ---
-title: "Neoadjuvant Cemiplimab for Stage II to IV Cutaneous Squamous-Cell Carcinoma"
-author: "David Miller, Vishal Patel, Justine Cohen, Khalid Garmen, Sophia Shalhout"
-date: "`r Sys.Date()`"
+title: "Neoadjuvant Cemiplimab for High-Risk Squamous-Cell Carcinoma"
+author: "David Miller^1^, Vishal Patel^2^, Justine Cohen^3^, Khalid Garmen^4^, Sophia Shalhout^1^"
+date: 2022-11-08
 format: html
 link-citations: yes
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/nature.csl
@@ -9,6 +9,13 @@ bibliography: bibliography.bibtex
 ---
 
 ![](files/featured.jpg)
+
+# Author Affiliations  
+
+1. Mass General Cancer Center and Harvard Medical School, Boston MA
+2. GW Cancer Center, George Washington University School of Medicine & Health Sciences, Washington DC
+3. Penn Medicine, Philadelphia PA
+4. Visiting Fellow in the Dermatology Branch at the National Institute of Arthritis and Musculoskeletal and Skin Diseases
 
 # Featured Article
 
@@ -38,7 +45,7 @@ Pathological complete responses were seen in 40 patients (51%), with another 10 
 
 # Discussion Points
 
-The consensus amongst the group was that this study is indeed "practice-changing". A few participants were already incorporating pre-operative immunecheckpoint inhibitor (ICI) therapy for some of their highest-risk patients prior the publication of these results. Other participants that were primarily using ICI therapy per the FDA indications (e.g. locally advanced or metastatic disease) stated that they would consider implementing ICI earlier in the disease journey as a result of this study. Participants, however, stressed the importance of assessing the benefit-to-risk ratio. The absolute risk of poor outcomes for various stages of disease studied in this population varies and, in many cases, remain incompletely clarified. Impart this is due to CSCC not being part of the Surveillance, Epidemiology, and End Results Program. Therefore prognostic estimates of local recurrence, nodal and distant metastases, as well as disease-specific death, have come largely from single-institution datasets and are limited. For example, a 2019 study by Ruiz et al. evaluated the prognosis of 459 patients at BWH[@ruiz2019]. The 10-year cumulative incidence (CIN) rate of local recurrence (LR), nodal metastases (NM) and disease-specific death (DSD) for AJCC Stage II disease was 15.8, 12.2 and 7.6%, respectively in the 36 tumors evaluated. For the 119 T3 tumors (e.g. AJCC Stage III), the 10-year CIN rates for LR, NM and DSD were 19.7, 14.1 and 9.3%, respectively.
+The consensus amongst the group was that this study is indeed "practice-changing". A few participants were already incorporating pre-operative immunecheckpoint inhibitor (ICI) therapy for some of their highest-risk patients prior the publication of these results. Other participants that were primarily using ICI therapy per the FDA indications (e.g. locally advanced or metastatic disease) stated that they would consider implementing ICI earlier in the disease journey as a result of this study. Participants, however, stressed the importance of assessing the benefit-to-risk ratio. The absolute risk of poor outcomes for various stages of disease studied in this population varies and, in many cases, remain incompletely clarified. In part this is due to CSCC not being part of the Surveillance, Epidemiology, and End Results Program. Therefore prognostic estimates of local recurrence, nodal and distant metastases, as well as disease-specific death, have come largely from single-institution datasets and are limited. For example, a 2019 study by Ruiz et al. evaluated the prognosis of 459 patients at BWH[@ruiz2019]. The 10-year cumulative incidence (CIN) rate of local recurrence (LR), nodal metastases (NM) and disease-specific death (DSD) for AJCC Stage II disease was 15.8, 12.2 and 7.6%, respectively in the 36 tumors evaluated. For the 119 T3 tumors (e.g. AJCC Stage III), the 10-year CIN rates for LR, NM and DSD were 19.7, 14.1 and 9.3%, respectively.
 
 Thus the benefits of pre-operative ICI must be weighed in the setting of toxicity. The current study had 4 fatalities, an unusually high proportion, given 79 total subjects. Typical estimated rates of ICI-related mortality are 1:200. Although only one subject's death was considered possibly related to treatment, all four died of cardiac-related events. These subjects were advanced in age (73, 82, 85 and 93 years old) and had underlying heart disease; thus, making attributions of treatment relatedness challenging. However, we must continue to be vigilant of possible treatment-related effects of ICI therapy given the advanced age of the CSCC population and emerging data that anti-PD-1 therapies may be associated with increases in cardiovascular events and atherosclerotic plaque disruption[@Drobni2020].
 

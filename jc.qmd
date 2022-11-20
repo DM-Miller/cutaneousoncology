@@ -23,17 +23,17 @@ Kim, Sungjune, Evan Wuthrick, Dukagjin Blakaj, Zeynep Eroglu, Claire Verschraege
 
 ### October
 
-Gross, Neil D., David M. Miller, Nikhil I. Khushalani, Vasu Divi, Emily S. Ruiz, Evan J. Lipson, Friedegund Meier, et al. 2022. \"Neoadjuvant Cemiplimab for Stage II to IV Cutaneous Squamous-Cell Carcinoma.\" *New England Journal of Medicine*387 (17): 1557--68. <https://doi.org/10.1056/nejmoa2209813>.
+Gross, Neil D., David M. Miller, Nikhil I. Khushalani, Vasu Divi, Emily S. Ruiz, Evan J. Lipson, Friedegund Meier, et al. 2022. "Neoadjuvant Cemiplimab for Stage II to IV Cutaneous Squamous-Cell Carcinoma." *New England Journal of Medicine*387 (17): 1557--68. <https://doi.org/10.1056/nejmoa2209813>.
 
 ### August
 
-Reijers, Irene L. M., Alexander M. Menzies, Alexander C. J. van Akkooi, Judith M. Versluis, Noëlle M. J. van den Heuvel, Robyn P. M. Saw, Thomas E. Pennington, et al. 2022. \"Personalized Response-Directed Surgery and Adjuvant Therapy After Neoadjuvant Ipilimumab and Nivolumab in High-Risk Stage III Melanoma: The PRADO Trial.\" Nature Medicine 28 (6): 1178--88. https://doi.org/10.1038/s41591-022-01851-x.
+Reijers, Irene L. M., Alexander M. Menzies, Alexander C. J. van Akkooi, Judith M. Versluis, Noëlle M. J. van den Heuvel, Robyn P. M. Saw, Thomas E. Pennington, et al. 2022. "Personalized Response-Directed Surgery and Adjuvant Therapy After Neoadjuvant Ipilimumab and Nivolumab in High-Risk Stage III Melanoma: The PRADO Trial." Nature Medicine 28 (6): 1178--88. https://doi.org/10.1038/s41591-022-01851-x.
 
 ## July
 
-Ruiz, Emily S., Kylee J. B. Kus, Timothy D. Smile, Fadi Murad, Guohai Zhou, Evelyn O. Ilori, Jonathan D. Schoenfeld, et al. 2022. \"Adjuvant Radiation Following Clear Margin Resection of High T-Stage Cutaneous Squamous Cell Carcinoma Halves the Risk of Local and Locoregional Recurrence: A Dual-Center Retrospective Study.\" Journal of the American Academy of Dermatology 87 (1): 87--94. https://doi.org/10.1016/j.jaad.2022.03.044.
+Ruiz, Emily S., Kylee J. B. Kus, Timothy D. Smile, Fadi Murad, Guohai Zhou, Evelyn O. Ilori, Jonathan D. Schoenfeld, et al. 2022. "Adjuvant Radiation Following Clear Margin Resection of High T-Stage Cutaneous Squamous Cell Carcinoma Halves the Risk of Local and Locoregional Recurrence: A Dual-Center Retrospective Study." Journal of the American Academy of Dermatology 87 (1): 87--94. https://doi.org/10.1016/j.jaad.2022.03.044.
 
 ## June
 
-Liu, Kevin X., Michael G. Milligan, Jonathan D. Schoenfeld, Roy B. Tishler, Andrea K. Ng, Phillip M. Devlin, Elliott Fite, et al. 2022. \"Characterization of Clinical Outcomes After Shorter Course Hypofractionated and Standard-Course Radiotherapy for Stage I-III Curatively-Treated Merkel Cell Carcinoma.\" Radiotherapy and Oncology 173 (August): 32--40. https://doi.org/10.1016/j.radonc.2022.05.012.
+Liu, Kevin X., Michael G. Milligan, Jonathan D. Schoenfeld, Roy B. Tishler, Andrea K. Ng, Phillip M. Devlin, Elliott Fite, et al. 2022. "Characterization of Clinical Outcomes After Shorter Course Hypofractionated and Standard-Course Radiotherapy for Stage I-III Curatively-Treated Merkel Cell Carcinoma." Radiotherapy and Oncology 173 (August): 32--40. https://doi.org/10.1016/j.radonc.2022.05.012.
 :::
