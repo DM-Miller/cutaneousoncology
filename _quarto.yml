@@ -27,7 +27,8 @@ website:
       background: light
       contents:
         - perspectives.qmd
-        - POTS_October_2022.qmd
+        - POTS_October_2022.qmd  
+        - POTS_November_2022.qmd  
       
 
 format:

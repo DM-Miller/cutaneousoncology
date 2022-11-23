@@ -1,5 +1,5 @@
 ---
-title: "Neoadjuvant Cemiplimab for High-Risk Squamous-Cell Carcinoma"
+title: "Neoadjuvant ICI for High-Risk CSCC"
 author: "David M. Miller^1^, Vishal Patel^2^, Justine Cohen^3^, Khalid Garmen^4^, Sophia Z. Shalhout^1^"
 date: 2022-11-08
 format: html

@@ -1,8 +1,8 @@
 ---
-title: "Perspectives on the Science: Combined Nivolumab and Ipilimumab with or without Stereotactic Body Radiation Therapy for Advanced Merkel cell Carcinoma: A Randomised, Open Label, Phase 2 Trial"
+title: "Ipi/Nivo for Advanced MCC"
 author: "Sophia Z. Shalhout^1^, Justine Cohen^2^, Khalid Garmen^3^, Emily Kim^4^, Sonia Cohen^1^ David M. Miller^1^"
 date: "2022-11-21"
-format: docx
+format: html
 output: true
 link-citations: yes
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/nature.csl
