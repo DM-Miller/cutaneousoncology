@@ -30,18 +30,17 @@ library(tidyverse)
 
 ------------------------------------------------------------------------
 
-
 # Introduction
 
 On November 7^th^, 2022, the multi-institutional **Cutaneous Oncology Interest Group Journal Club** reviewed the recently published Lancet article "[Combined Nivolumab and Ipilimumab with or without Stereotactic Body Radiation Therapy for Advanced Merkel cell carcinoma: A Randomised, Open Label, Phase 2 Trial](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(22)01659-2/fulltext)".[@kim2022combined] Participants included clinicians and investigators from Massachusetts General Hospital, Mass Eye and Ear Infirmary, Brigham and Women's Hospital, University of Washington School of Medicine, the National Institute of Health, Northwestern University, University of Pennsylvania and Moffitt Cancer Center. Importantly, the comments in this article represent the views of the authors of this `Perspectives on the Science` piece after the Journal Club. It does not represent views of any other members of the Interest Group or the affiliated institutions. In this article we provide a summary of the discussion regarding this important contribution to the literature. Of note, one participant of the Journal Club is an investigator of the discussed study and an author on the Lancet article.
 
-# Background for the Study  
+# Background for the Study
 
 Merkel cell carcinoma (MCC) is a rare cutaneous neuroendocrine carcinoma often associated with chronic ultraviolet light exposure, a suppressed or weakened immune system, and/or the Merkel Cell Polyoma Virus (MCPyV). This aggressive skin cancer has a high distant metastasis rate, associated with a poor prognosis.
 
 The advent of immunotherapeutics and the regulatory approvals of anti-PD-L1 and anti-PD-1 agents for MCC have revolutionized the treatment landscape. Avelumab received an accelerated FDA approval for metastatic MCC in 2017. Pembrolizumab was approved by the FDA in 2018 for the treatment of recurrent, locally advanced, and metastatic MCC. Immunotherapy is associated with durable responses in MCC and pivotal trials reported an objective response rate (ORR) of 39.7% (95% CI 30.7-49.2) for avelumab in the first line setting and an ORR of 33% (95% CI 23.3--43.8) in the chemotherapy-refractory setting. [@kaufman2016avelumab; @d2021first; @d2020avelumab]. An ORR of 58% (95% CI 43.2--71.8) was observed with pembrolizumab in the first line setting. [@nghiem2021three] While anti-PD-L1 and anti-PD-1 monotherapy have been established as the standard of care for the treatment of advanced MCC, there are few systemic therapy options for those patients who have primary or acquired resistance and fail anti-PD(L)-1 treatment. Therefore, evaluating combination ipilimumab with nivolumab in patients who progress on anti-PD(L)-1 monotherapy as well as immunotherapy-naïve patients with MCC is warranted. Finally, since MCC is exceptionally radiosensitive and subablative hypofractionated radiotherapy may prime for anti-tumor immune responses, assessing combination ipilimumab with nivolumab in immunotherapy-naïve and refractory patients with or without the addition of stereotactic body radiotherapy (SBRT) is worthy of investigation.[@demaria2015role]
 
-# Study Design 
+# Study Design
 
 ![](files/november_2022/Figure1.jpg)
 
