@@ -12,6 +12,11 @@ Each month, the multi-institutional and multi-disciplinary COIG reviews recent a
 
 The following are the archive of the articles covered to date.
 
+# Shiny App
+
+Click [here](https://cutaneousoncology.shinyapps.io/coig_journal_club_timeline/) to visualize an interactive Shiny application of all of the articles covered today. 
+
+
 # Articles
 
 ## 2022 Articles
@@ -121,43 +126,43 @@ Danesh, Melissa J., Tyler D. Menge, Lydia Helliwell, Meera Mahalingam, and Abiga
 
 ### December
 
-Tarabadkar, Erica S., Teresa Fu, Kristina Lachance, Daniel S. Hippe, Thomas Pulliam, Hannah Thomas, Janet Y. Li, et al. 2021. \"Narrow Excision Margins Are Appropriate for Merkel Cell Carcinoma When Combined with Adjuvant Radiation: Analysis of 188 Cases of Localized Disease and Proposed Management Algorithm.\" Journal of the American Academy of Dermatology 84 (2): 340--47. https://doi.org/10.1016/j.jaad.2020.07.079.
+Tarabadkar, Erica S., Teresa Fu, Kristina Lachance, Daniel S. Hippe, Thomas Pulliam, Hannah Thomas, Janet Y. Li, et al. 2021. "Narrow Excision Margins Are Appropriate for Merkel Cell Carcinoma When Combined with Adjuvant Radiation: Analysis of 188 Cases of Localized Disease and Proposed Management Algorithm." Journal of the American Academy of Dermatology 84 (2): 340--47. https://doi.org/10.1016/j.jaad.2020.07.079.
 
 ### November
 
-Owen, Joshua L, Nour Kibbi, Brandon Worley, Ryan C Kelm, Jordan V Wang, Christopher A Barker, Ramona Behshad, et al. 2019. \"Sebaceous Carcinoma: Evidence-Based Clinical Practice Guidelines.\" The Lancet Oncology 20 (12): e699--714. https://doi.org/10.1016/s1470-2045(19)30673-4.
+Owen, Joshua L, Nour Kibbi, Brandon Worley, Ryan C Kelm, Jordan V Wang, Christopher A Barker, Ramona Behshad, et al. 2019. "Sebaceous Carcinoma: Evidence-Based Clinical Practice Guidelines." The Lancet Oncology 20 (12): e699--714. https://doi.org/10.1016/s1470-2045(19)30673-4.
 
 ### October
 
-Singh, Neha, Nora A. Alexander, Kristina Lachance, Christopher W. Lewis, Aubriana McEvoy, Gensuke Akaike, David Byrd, et al. 2021. \"Clinical Benefit of Baseline Imaging in Merkel Cell Carcinoma: Analysis of 584 Patients.\" Journal of the American Academy of Dermatology 84 (2): 330--39. https://doi.org/10.1016/j.jaad.2020.07.065.
+Singh, Neha, Nora A. Alexander, Kristina Lachance, Christopher W. Lewis, Aubriana McEvoy, Gensuke Akaike, David Byrd, et al. 2021. "Clinical Benefit of Baseline Imaging in Merkel Cell Carcinoma: Analysis of 584 Patients." Journal of the American Academy of Dermatology 84 (2): 330--39. https://doi.org/10.1016/j.jaad.2020.07.065.
 
 ### September
 
-D\'Arcy, Monica E, David Castenson, Charles F Lynch, Amy R Kahn, Lindsay M Morton, Meredith S Shiels, Ruth M Pfeiffer, and Eric A Engels. 2020. \"Risk of Rare Cancers Among Solid Organ Transplant Recipients.\" *JNCI: Journal of the National Cancer Institute*, May. <https://doi.org/10.1093/jnci/djaa078>.
+D'Arcy, Monica E, David Castenson, Charles F Lynch, Amy R Kahn, Lindsay M Morton, Meredith S Shiels, Ruth M Pfeiffer, and Eric A Engels. 2020. "Risk of Rare Cancers Among Solid Organ Transplant Recipients." *JNCI: Journal of the National Cancer Institute*, May. <https://doi.org/10.1093/jnci/djaa078>.
 
 ### August
 
-Schauder, David M., Jinwan Kim, and Rajiv I. Nijhawan. 2020. \"Evaluation of the Use of Capecitabine for the Treatment and Prevention of Actinic Keratoses, Squamous Cell Carcinoma, and Basal Cell Carcinoma.\" JAMA Dermatology 156 (10): 1117. https://doi.org/10.1001/jamadermatol.2020.2327.
+Schauder, David M., Jinwan Kim, and Rajiv I. Nijhawan. 2020. "Evaluation of the Use of Capecitabine for the Treatment and Prevention of Actinic Keratoses, Squamous Cell Carcinoma, and Basal Cell Carcinoma." JAMA Dermatology 156 (10): 1117. https://doi.org/10.1001/jamadermatol.2020.2327.
 
 ### July
 
-Lobl, Marissa B., Dillon Clarey, Shauna Higgins, Adam Sutton, Laura Hansen, and Ashley Wysong. 2020. \"Targeted Next-Generation Sequencing of Matched Localized and Metastatic Primary High-Risk SCCs Identifies Driver and Co-Occurring Mutations and Novel Therapeutic Targets.\" Journal of Dermatological Science 99 (1): 30--43. https://doi.org/10.1016/j.jdermsci.2020.05.007.
+Lobl, Marissa B., Dillon Clarey, Shauna Higgins, Adam Sutton, Laura Hansen, and Ashley Wysong. 2020. "Targeted Next-Generation Sequencing of Matched Localized and Metastatic Primary High-Risk SCCs Identifies Driver and Co-Occurring Mutations and Novel Therapeutic Targets." Journal of Dermatological Science 99 (1): 30--43. https://doi.org/10.1016/j.jdermsci.2020.05.007.
 
 ### June
 
-Wysong, Ashley, Jason G. Newman, Kyle R. Covington, Sarah J. Kurley, Sherrif F. Ibrahim, Aaron S. Farberg, Anna Bar, et al. 2021. \"Validation of a 40-Gene Expression Profile Test to Predict Metastatic Risk in Localized High-Risk Cutaneous Squamous Cell Carcinoma.\" Journal of the American Academy of Dermatology 84 (2): 361--69. https://doi.org/10.1016/j.jaad.2020.04.088.
+Wysong, Ashley, Jason G. Newman, Kyle R. Covington, Sarah J. Kurley, Sherrif F. Ibrahim, Aaron S. Farberg, Anna Bar, et al. 2021. "Validation of a 40-Gene Expression Profile Test to Predict Metastatic Risk in Localized High-Risk Cutaneous Squamous Cell Carcinoma." Journal of the American Academy of Dermatology 84 (2): 361--69. https://doi.org/10.1016/j.jaad.2020.04.088.
 
 ### May
 
-Topalian, Suzanne L., Shailender Bhatia, Asim Amin, Ragini R. Kudchadkar, William H. Sharfman, Celeste Lebbé, Jean-Pierre Delord, et al. 2020. \"Neoadjuvant Nivolumab for Patients With Resectable Merkel Cell Carcinoma in the CheckMate 358 Trial.\" Journal of Clinical Oncology 38 (22): 2476--87. https://doi.org/10.1200/jco.20.00201.
+Topalian, Suzanne L., Shailender Bhatia, Asim Amin, Ragini R. Kudchadkar, William H. Sharfman, Celeste Lebbé, Jean-Pierre Delord, et al. 2020. "Neoadjuvant Nivolumab for Patients With Resectable Merkel Cell Carcinoma in the CheckMate 358 Trial." Journal of Clinical Oncology 38 (22): 2476--87. https://doi.org/10.1200/jco.20.00201.
 
 ### March
 
-Sekulic, Aleksandar, Michael R. Migden, Nicole Basset-Seguin, Claus Garbe, Anja Gesierich, Christopher D. Lao, Chris Miller, et al. 2017. \"Long-Term Safety and Efficacy of Vismodegib in Patients with Advanced Basal Cell Carcinoma: Final Update of the Pivotal ERIVANCE BCC Study.\" BMC Cancer 17 (1). https://doi.org/10.1186/s12885-017-3286-5.
+Sekulic, Aleksandar, Michael R. Migden, Nicole Basset-Seguin, Claus Garbe, Anja Gesierich, Christopher D. Lao, Chris Miller, et al. 2017. "Long-Term Safety and Efficacy of Vismodegib in Patients with Advanced Basal Cell Carcinoma: Final Update of the Pivotal ERIVANCE BCC Study." BMC Cancer 17 (1). https://doi.org/10.1186/s12885-017-3286-5.
 
 ### February
 
-Ruiz, Emily Stamell, Shlomo A. Koyfman, Syril Keena T. Que, Jason Kass, and Chrysalyne D. Schmults. 2020. \"Evaluation of the Utility of Localized Adjuvant Radiation for Node-Negative Primary Cutaneous Squamous Cell Carcinoma with Clear Histologic Margins.\" Journal of the American Academy of Dermatology 82 (2): 420--29. https://doi.org/10.1016/j.jaad.2019.07.048.
+Ruiz, Emily Stamell, Shlomo A. Koyfman, Syril Keena T. Que, Jason Kass, and Chrysalyne D. Schmults. 2020. "Evaluation of the Utility of Localized Adjuvant Radiation for Node-Negative Primary Cutaneous Squamous Cell Carcinoma with Clear Histologic Margins." Journal of the American Academy of Dermatology 82 (2): 420--29. https://doi.org/10.1016/j.jaad.2019.07.048.
 
 ### 
 :::
@@ -169,41 +174,41 @@ Ruiz, Emily Stamell, Shlomo A. Koyfman, Syril Keena T. Que, Jason Kass, and Chry
 
 ### December
 
-Knepper, Todd C., Meagan Montesion, Jeffery S. Russell, Ethan S. Sokol, Garrett M. Frampton, Vincent A. Miller, Lee A. Albacker, et al. 2019. \"The Genomic Landscape of Merkel Cell Carcinoma and Clinicogenomic Biomarkers of Response to Immune Checkpoint Inhibitor Therapy.\" Clinical Cancer Research 25 (19): 5961--71. https://doi.org/10.1158/1078-0432.ccr-18-4159.
+Knepper, Todd C., Meagan Montesion, Jeffery S. Russell, Ethan S. Sokol, Garrett M. Frampton, Vincent A. Miller, Lee A. Albacker, et al. 2019. "The Genomic Landscape of Merkel Cell Carcinoma and Clinicogenomic Biomarkers of Response to Immune Checkpoint Inhibitor Therapy." Clinical Cancer Research 25 (19): 5961--71. https://doi.org/10.1158/1078-0432.ccr-18-4159.
 
 ### November
 
-Harris, Brianna N., Patrik Pipkorn, Ky Nam Bai Nguyen, Ryan S. Jackson, Shyam Rao, Michael G. Moore, D. Gregory Farwell, and Arnaud F. Bewley. 2019. \"Association of Adjuvant Radiation Therapy With Survival in Patients With Advanced Cutaneous Squamous Cell Carcinoma of the Head and Neck.\" JAMA OtolaryngologyHead & Neck Surgery145 (2): 153. https://doi.org/10.1001/jamaoto.2018.3650.
+Harris, Brianna N., Patrik Pipkorn, Ky Nam Bai Nguyen, Ryan S. Jackson, Shyam Rao, Michael G. Moore, D. Gregory Farwell, and Arnaud F. Bewley. 2019. "Association of Adjuvant Radiation Therapy With Survival in Patients With Advanced Cutaneous Squamous Cell Carcinoma of the Head and Neck." JAMA OtolaryngologyHead & Neck Surgery145 (2): 153. https://doi.org/10.1001/jamaoto.2018.3650.
 
-Strassen, Ulrich, Benedikt Hofauer, Christian Jacobi, and Andreas Knopf. 2016. \"Management of Locoregional Recurrence in Cutaneous Squamous Cell Carcinoma of the Head and Neck.\" European Archives of Oto-Rhino-Laryngology 274 (1): 501--6. https://doi.org/10.1007/s00405-016-4243-7.
+Strassen, Ulrich, Benedikt Hofauer, Christian Jacobi, and Andreas Knopf. 2016. "Management of Locoregional Recurrence in Cutaneous Squamous Cell Carcinoma of the Head and Neck." European Archives of Oto-Rhino-Laryngology 274 (1): 501--6. https://doi.org/10.1007/s00405-016-4243-7.
 
 ### October
 
-Migden, Michael R., Danny Rischin, Chrysalyne D. Schmults, Alexander Guminski, Axel Hauschild, Karl D. Lewis, Christine H. Chung, et al. 2018. \"PD-1 Blockade with Cemiplimab in Advanced Cutaneous Squamous-Cell Carcinoma.\" New England Journal of Medicine 379 (4): 341--51. https://doi.org/10.1056/nejmoa1805131.
+Migden, Michael R., Danny Rischin, Chrysalyne D. Schmults, Alexander Guminski, Axel Hauschild, Karl D. Lewis, Christine H. Chung, et al. 2018. "PD-1 Blockade with Cemiplimab in Advanced Cutaneous Squamous-Cell Carcinoma." New England Journal of Medicine 379 (4): 341--51. https://doi.org/10.1056/nejmoa1805131.
 
 ### September
 
-Fox, Matthew, Marc Brown, Nicholas Golda, Dori Goldberg, Christopher Miller, Melissa Pugliano-Mauro, Chrysalyne Schmults, et al. 2019. \"Nodal Staging of High-Risk Cutaneous Squamous Cell Carcinoma.\" Journal of the American Academy of Dermatology 81 (2): 548--57. https://doi.org/10.1016/j.jaad.2018.09.006.
+Fox, Matthew, Marc Brown, Nicholas Golda, Dori Goldberg, Christopher Miller, Melissa Pugliano-Mauro, Chrysalyne Schmults, et al. 2019. "Nodal Staging of High-Risk Cutaneous Squamous Cell Carcinoma." Journal of the American Academy of Dermatology 81 (2): 548--57. https://doi.org/10.1016/j.jaad.2018.09.006.
 
 ### August
 
-Ruiz, Emily Stamell, Pritesh S. Karia, Robert Besaw, and Chrysalyne D. Schmults. 2019. \"Performance of the American Joint Committee on Cancer Staging Manual, 8th Edition Vs the Brigham and Women\'s Hospital Tumor Classification System for Cutaneous Squamous Cell Carcinoma.\" JAMA Dermatology 155 (7): 819. https://doi.org/10.1001/jamadermatol.2019.0032.
+Ruiz, Emily Stamell, Pritesh S. Karia, Robert Besaw, and Chrysalyne D. Schmults. 2019. "Performance of the American Joint Committee on Cancer Staging Manual, 8th Edition Vs the Brigham and Women's Hospital Tumor Classification System for Cutaneous Squamous Cell Carcinoma." JAMA Dermatology 155 (7): 819. https://doi.org/10.1001/jamadermatol.2019.0032.
 
 ### July
 
-Gore, Sinclair M., Douglas Shaw, Richard C. W. Martin, Wendy Kelder, Kathryn Roth, Roger Uren, Kan Gao, et al. 2015. \"Prospective Study of Sentinel Node Biopsy for High-Risk Cutaneous Squamous Cell Carcinoma of the Head and Neck.\" Head & Neck 38 (S1): E884--89. https://doi.org/10.1002/hed.24120.
+Gore, Sinclair M., Douglas Shaw, Richard C. W. Martin, Wendy Kelder, Kathryn Roth, Roger Uren, Kan Gao, et al. 2015. "Prospective Study of Sentinel Node Biopsy for High-Risk Cutaneous Squamous Cell Carcinoma of the Head and Neck." Head & Neck 38 (S1): E884--89. https://doi.org/10.1002/hed.24120.
 
 ### June
 
-Miller, Natalie J., Candice D. Church, Steven P. Fling, Rima Kulikauskas, Nirasha Ramchurren, Michi M. Shinohara, Harriet M. Kluger, et al. 2018. \"Merkel Cell Polyomavirus-Specific Immune Responses in Patients with Merkel Cell Carcinoma Receiving Anti-PD-1 Therapy.\" Journal for ImmunoTherapy of Cancer 6 (1). https://doi.org/10.1186/s40425-018-0450-7.
+Miller, Natalie J., Candice D. Church, Steven P. Fling, Rima Kulikauskas, Nirasha Ramchurren, Michi M. Shinohara, Harriet M. Kluger, et al. 2018. "Merkel Cell Polyomavirus-Specific Immune Responses in Patients with Merkel Cell Carcinoma Receiving Anti-PD-1 Therapy." Journal for ImmunoTherapy of Cancer 6 (1). https://doi.org/10.1186/s40425-018-0450-7.
 
 ### May
 
-Rosenberg, Abby R., Mary Tabacchi, Kenneth H. Ngo, Michael Wallendorf, Ilana S. Rosman, Lynn A. Cornelius, and Shadmehr Demehri. 2019. \"Skin Cancer Precursor Immunotherapy for Squamous Cell Carcinoma Prevention.\" JCI Insight 4 (6). https://doi.org/10.1172/jci.insight.125476.
+Rosenberg, Abby R., Mary Tabacchi, Kenneth H. Ngo, Michael Wallendorf, Ilana S. Rosman, Lynn A. Cornelius, and Shadmehr Demehri. 2019. "Skin Cancer Precursor Immunotherapy for Squamous Cell Carcinoma Prevention." JCI Insight 4 (6). https://doi.org/10.1172/jci.insight.125476.
 
 ### April
 
-Porceddu, Sandro Virgilio, Mathias Bressel, Michael Geoffrey Poulsen, Adam Stoneley, Michael John Veness, Lizbeth Moira Kenny, Chris Wratten, et al. 2018. \"Postoperative Concurrent Chemoradiotherapy Versus Postoperative Radiotherapy in High-Risk Cutaneous Squamous Cell Carcinoma of the Head and Neck: The Randomized Phase III TROG 05.01 Trial.\" Journal of Clinical Oncology 36 (13): 1275--83. https://doi.org/10.1200/jco.2017.77.0941.
+Porceddu, Sandro Virgilio, Mathias Bressel, Michael Geoffrey Poulsen, Adam Stoneley, Michael John Veness, Lizbeth Moira Kenny, Chris Wratten, et al. 2018. "Postoperative Concurrent Chemoradiotherapy Versus Postoperative Radiotherapy in High-Risk Cutaneous Squamous Cell Carcinoma of the Head and Neck: The Randomized Phase III TROG 05.01 Trial." Journal of Clinical Oncology 36 (13): 1275--83. https://doi.org/10.1200/jco.2017.77.0941.
 
 ### 
 :::
