@@ -27,8 +27,10 @@ website:
       background: light
       contents:
         - perspectives.qmd
-        - POTS_October_2022.qmd  
-        - POTS_November_2022.qmd  
+        - neoadjuvant_ici_for_resectable_cscc.qmd  
+        - ipi_nivo_for_advanced_mcc.qmd  
+        - neoadjuvant_nivo_rela_for_resectable_melanoma.qmd  
+        
       
 
 format:
