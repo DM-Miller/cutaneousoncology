@@ -1,0 +1,888 @@
+---
+title: "Neoadjuvant Nivo/Rela for Resectable Melanoma"
+author: "David M. Miller^1^^,^^2^, Howard L. Kaufman^2^^,^^3^, Kevin S. Emerick^2^^,^^4^, Justine V. Cohen^5^, Sophia Z. Shalhout^1^^,^^2^,"
+date: 2022-12-05
+format: docx  
+link-citations: yes
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/nature.csl
+bibliography: bibliography.bibtex 
+---
+
+![](files/december_2022/featured.jpg)
+
+## Featured Article
+
+------------------------------------------------------------------------
+
+**Neoadjuvant relatlimab and nivolumab in resectable melanoma**. Amaria et al. Nature 2022 Nov;611(7934):155-160
+
+------------------------------------------------------------------------
+
+## Introduction
+
+On December 2^nd^, 2022, the multi-institutional **Cutaneous Oncology Interest Group Journal Club (COIG)** reviewed the recently published Lancet article [Neoadjuvant relatlimab and nivolumab in resectable melanoma](https://www.nature.com/articles/s41586-022-05368-8). @Amaria2022 Participants included clinicians and investigators from Massachusetts General Hospital, Mass Eye and Ear Infirmary, Brigham and Women's Hospital, University of Washington School of Medicine, the National Institute of Health, Stanford University, and the University of Pennsylvania. Importantly, the comments in this article represent the views of the authors of this `Perspectives on the Science` piece. It does not represent views of any other members of the Interest Group or the affiliated institutions. In this article we provide a summary of the discussion regarding this important contribution to the literature.
+
+## Background for the Study
+
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+library(tidyverse)
+library(plotly)
+
+dt <- FDA.Skin.CanceR::fda_skin_cancer_data()
+dt.melanoma <- FDA.Skin.CanceR::fda_approval_timeseries_df() |> filter(Dz == "Melanoma")
+
+```
+
+The therapeutic landscape in melanoma has evolved significantly since the first approval in 1967, with `r nrow(dt.melanoma)` US FDA actions for therapies indicated for the adjuvant, locally advanced and metastatic setting (**Figure 1**). @Miller2022
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 1 - FDA Approvals in Melanoma
+
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+#| fig-width: 10
+#| fig-height: 10
+library(tidyverse)
+library(plotly)
+
+
+timeseries.melanoma <- FDA.Skin.CanceR::fda_approval_timeseries_df() |> filter(Dz == "Melanoma")
+
+FDA.Skin.CanceR::fda_approval_timeseries_df() |> filter(Dz == "Melanoma") |> 
+  FDA.Skin.CanceR::fda_approval_timeseries_plot(
+  Title = "<b>FDA Approvals in Melanoma<b>",
+  StartDate = "1966-01-01",
+  Legend = FALSE
+)
+```
+:::
+
+While the number of therapeutic options have increased, patients with macroscopic nodal metastases have a risk of melanoma-specific mortality that can approximate 75%. @Gershenwald2017 Recent strategies to improve outcomes in this high-risk subset of patients includes peri-operative administration of therapies previously shown to have efficacy in the locally advanced and unresectable setting. Post-operative monotherapy anti-PD1 has been shown to decrease the risk of recurrence by as much as 50%. @Weber2017 @Eggermont2018. These studies led to the FDA-approval of nivolumab for resected Stage III disease in 2017 and pembrolizumab in 2019 (**Figure 2**).
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 2 - FDA Approved Agents for Resected Melanoma
+
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+#| fig-width: 10
+#| fig-height: 10
+
+dt <- FDA.Skin.CanceR::fda_data_for_timeliner()
+
+dt.select <- dt |> 
+  filter(Dz == "Melanoma")  |> 
+  filter(Indication_short == "Adjuvant")
+
+dt.select.1 <- dt.select |> 
+  filter(!str_detect(string = dt.select$Indication_brief, 
+                     pattern = "dosing"))
+
+dt.select.2 <- dt.select.1 |> 
+  filter(!str_detect(string = dt.select.1$Indication_brief, 
+                     pattern = "infusion"))
+
+dt.select.2 |> 
+  FDA.Skin.CanceR::timeliner_plot(
+    Title = "<b>FDA Approvals for Adjuvant Melanoma<b>",
+    TopBoundary = 61,
+    BottomBoundary = 40,
+    TextBuffer = 0.8
+  )
+```
+:::
+
+Pre-operative administration of systemic therapy has the potential to improve clinical outcomes by expanding antigen-specific immune response in the setting of an in situ tumor and preserved lymphatics. @Liu2016 Indeed, recently presented data at the 2022 Congress of the European Society of Medical Oncology (ESMO) demonstrated the superiority of combining pre-operative with post-operative anti-PD1 compared to adjuvant-only anti-PD1. @PatelS2022 In the phase 2 study SWOG S1801, 313 patients with Stage IIIB-IV melanoma were randomized to either 3 doses of pre-operative pembrolizumab followed by 15 doses of adjuvant pembrolizumab or upfront surgery followed by 18 doses of post-operative pembrolizumab. Neoadjuvant plus adjuvant pembrolizumab was associated with a significantly higher event-free survival (EFS) (HR 0.59, 95% CI, 0.40-0.86) versus adjuvant-only therapy. In addition to potentially improving outcomes compared to post-operative-only therapy, by intensifying upfront treatment with neoadjuvant therapy, clinicians can utilize pathological information gained at the time of surgery to tailor post-operative management. The optimal neoadjuvant strategy, however, has not been identified; though several approaches have been evaluated. In a phase 2 study of 23 patients, ipilimumab plus nivolumab was compared to monotherapy nivolumab in the neoadjuvant setting. @Amaria2018 (**Figure 3**).
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 3 - Neoadjuvant Ipi/Nivo vs. Nivolumab Study Design
+
+![](files/december_2022/ipi_nivo_vs_nivo_study_design.png)
+:::
+
+Although limited in size, the study's results suggested that three doses of ipilimumab 3 mg/kg plus nivolumab 1 mg/kg was associated with significant clinical activity, producing a complete pathological response (pCR) in 45% of patients. Despite not being adequately powered for comparison, the response seen with dual immune checkpoint blockade (ICB) appeared higher than with 4 doses of monotherapy anti-PD1 (pCR 25%). Combination Ipi/Nivo, however, resulted in grade 3-4 treatment emergent adverse events (TEAEs) in 73% of patients.
+
+In the OpACIN study, the combination of ipilimumab 3 mg/kg and nivolumab 1 mg/kg administered over two doses prior to surgery produced a pathological response in 7/9 (78%) patients, with 3/9 (33%) demonstrating a complete response (**Figure 4**). @Blank2018 Similar to the previous study, TEAEs were seen in 100% of patients, with 90% of patients experiencing grade 3-4 toxicity.
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 4 - OpACIN Study Design
+
+![](files/december_2022/opacin_study_design.png)
+:::
+
+In an effort to identify the optimal combination dosing schedule of dual ICB, investigators of the OpACIN-neo study randomly assigned 105 patients to one of three combination regimens: Group A patients received two cycles of every three week (q3 week) ipilimumab 3 mg/kg plus nivolumab 1 mg/kg (Ipi 3/Nivo 1); Group B patients received two cycles of q3 week ipilimumab 1 mg/kg plus nivolumab 3 mg/kg (Ipi 1/Nivo 3) ; and Group C patients received two cycles of q3 week ipilimumab 3 mg/kg followed by two cycles of q2 week nivolumab 3 mg/kg (Ipi 3 followed by Nivo 3) (**Figure 5**). @Rozeman2019. Recurrence-free survival (RFS) rates were similar between the 86 patients who were enrolled in the three groups, while grade 3-4 AEs were lower in the Ipi 1/Nivo 3 cohort (20%) compared to Ipi 3/Nivo 1 (40%) and the Ipi 3 followed by Nivo 3 (50%).
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 5 - OpACIN-neo Study Design
+
+![](files/december_2022/opacin_neo_study_design.png)
+:::
+
+Given the favorable risk/benefit findings of Ipi 1/Nivo 3, an expansion cohort of OpACIN-neo was enrolled to investigate the role of assessing pathologic response in the index lymph node (ILN) in determining post-operative management (**Figure 6**). This study, named the PRADO Trial (Personalized response-directed surgery and adjuvant therapy after neoadjuvant ipilimumab and nivolumab in high-risk stage III melanoma), found that two pre-operative doses of Ipi 1/Nivo 3 yielded a 72% pathological response (PR) rate (49% pCR, 12% near-pCR, 11% partial PR).
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 6 - PRADO Study Design
+
+![](files/december_2022/prado_study_design.png){alt="Figure 4"}
+:::
+
+Importantly, patients that achieved a major pathological response (MPR, ≤10% viable tumor cells) and no further treatment had a recurrence-free survival (RFS) of 93% at 2 years compared to 64% for subjects that were pathological non-responders that went on to have a total lymph node dissection (TLND) and adjuvant systemic therapy. These results support the importance and role of pathological response assessment following upfront immunotherapy in post-operative management decisions, including the potential for de-escalation of therapy for patients with excellent pathological responses.
+
+Although there are no therapies with labelled indications in the neoadjuvant setting, these studies support the clinical utility of pre-operative immune checkpoint blockade (**Table 1)**. Given the favorable responses seen with neoadjuvant treatment, the aforementioned clinical trials highlight the goal of continued investigation to find new approaches that augment immunological anti-tumor responses and minimize off-target autoimmunity.
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Table 1 - Summary of Neoadjuvant Studies {.smaller}
+
+|          Study          | Pre-Operative Intervention                                                                                                  |                Pathological Response                |     Any Grade AE      |     Grade 3-4 AE      |
+|:-------------:|:--------------|:-------------:|:-------------:|:-------------:|
+|    OpACIN @Blank2018    | Ipi 3 mg/kg/Nivo 1 mg/kg x 2 doses                                                                                          |                    78% (33% pCR)                    |         100%          |          90%          |
+| NCT02519322 @Amaria2018 | Ipi 3 mg/kg/Nivo 1 mg/kg x 3 doses <br> Nivo 3 mg/kg x 4 doses                                                              |                45% pCR <br> 25% pCR                 |          91%          |          73%          |
+| OpACIN-neo @Rozeman2019 | Ipi 3 mg/kg/Nivo 1 mg/kgx 2 doses <br> Ipi 1 mg/kg/Nivo 3 mg/kg x 2 doses <br> Ipi 3 mg/kg x 2 doses/Nivo 3 mg/kg x 2 doses | 80% (47% pCR) <br> 77% (57% pCR) <br> 65% (23% pCR) | 97% <br> 97% <br> 90% | 40% <br> 20% <br> 50% |
+|   PRADO @Reijers2022    | Ipi 1 mg/kg/Nivo 3 mg/kg x 2 doses                                                                                          |                      72% (49%)                      |          97%          |          22%          |
+
+: {tbl-colwidths="\[20,45,25,10,10\]"}
+:::
+
+The lymphocyte-activation gene 3 (LAG-3) molecule is a cell surface protein found on T-cells and engages the MHC complex located on antigen-presenting cells (APCs). Activation of LAG-3 attenuates T-cell activity (**Figure 7**).
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 7 - Immune Checkpoint Pathways
+
+![](files/december_2022/costimulation.png)
+:::
+
+On March 18, 2022, Relatlimab-rmbw, a first-in-class human IgG4 LAG-3-blocking monoclonal antibody, was approved in combination with nivolumab (Nivo/Rela) by the US FDA for unresectable or metastatic melanoma. Approval was based on data from the phase 2-3 study RELATIVITY-047, in which combination Nivo/Rela was associated with improved progression-free survial (PFS) compared to single-agent nivolumab (10.12 vs. 4.63 months, HR 0.75 (95% CI, 0.62 - 0.92)). @Tawbi2022 Compared to nivolumab monotherapy, Nivo/Rela was associated with a higher, but overall reasonable safety profile. Any grade toxicity was seen in 97.2% of patients treated with combination therapy vs. 94.4% single-agent nivolumab. Grade 3-4 AEs were seen in 40.3% of patients who received Nivo/Rela vs. 33.4% of those administered nivolumab monotherapy. Based on the improved PFS and acceptable safety profile seen in RELATIVITY-047, the OpACIN-neo investigators opened a new arm of NCT02519322 to evaluate the pCR rate, safety and efficacy of peri-operative Nivo/Rela.
+
+## Study Design
+
+Forty-one patients at MD Anderson Cancer Center and Memorial Sloan Kettering Cancer Center with resectable Stage IIIB - IV melanoma were consented from September 2018 to September 2022. Thirty patients were enrolled and treated with 2 doses of pre-operative nivolumab and relatlimab. Following surgical resection, subjects were treated with up to 10 doses of Nivo/Rela and then followed for recurrence. The primary endpoint was pathological complete response rate (**Figure 8**).
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 8 - Neoadjuvant Nivo/Rela Study Design
+
+![](files/december_2022/neo_nivo_rela_study_design.png)
+:::
+
+## Main Findings
+
+Twenty-nine patients received upfront Nivo/Rela and underwent surgery. Pathological complete responses were seen in 17 subjects (57%). Two subjects achieved near pCR (defined as greater than 0% but less than 10% viable tumor) (7%), and 2 had a partial PR (\>10-≤50% viable tumor) (7%). Eight (27%) patients had no pathological response (defined as \>50% viable tumor). Thus, a major PR (\<10% viable tumor) was seen in 63% of subjects and any pathologic response (PR) was achieved by 70% of patients. The 1- and 2-year RFS rate was 100% and 92% for patients with any PR compared with 88% and 55% for subjects with no PR.
+
+In regards to safety, no grade 3-4 AEs were seen in the neoadjuvant period. Twenty-six percent of subjects experienced grade 3 toxicities with continued dosing in the post-operative period.
+
+## Discussion Points
+
+We began Journal Club by administering a poll among the attendees. Our goal was to conduct a brief survey before and after journal club discussions to determine the current practices of clinicians participating in the dialogue and how the current article might affect their practice. The attendees on December 2^nd^, 2022 represented a diverse mix of clinical providers and non-clinical researchers (**Figure 9**).
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 9 - Journal Club Attendees
+
+```{r load redcap data, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+library(REDCapR)
+
+# Load Data
+# redcapr_dt <- REDCapR::redcap_read_oneshot(
+#   redcap_uri = "https://redcap.partners.org/redcap/api/",
+#   token = "95FCBA5C9E231A6CDE8C7886836042E2",
+# )
+# dt <- redcapr_dt$data
+# 
+# saveRDS(
+#   object = dt,
+#   file = "files/december_2022/survery_results.rds"
+# )
+# 
+dt <- readRDS(
+  file = "files/december_2022/survery_results.rds"
+)
+
+dt[,2] <- stringr::str_replace_all(
+  string = dt[,2],
+  pattern = regex("_1"),
+  replacement = ", "
+)
+
+dt[,2] <- stringr::str_replace_all(
+  string = dt[,2],
+  pattern = regex("_"),
+  replacement = " "
+)
+
+dt[,2] <- stringr::str_to_title(
+  string = dt[,2]
+)
+
+dt[,3] <- stringr::str_replace_all(
+  string = dt[,3],
+  pattern = regex("_1"),
+  replacement = ", "
+)
+
+dt[,3] <- stringr::str_replace_all(
+  string = dt[,3],
+  pattern = regex("_"),
+  replacement = " "
+)
+
+#dt[,3] <- stringr::str_to_title(
+#  string = dt[,3]
+#)
+
+dt[,4] <- stringr::str_replace_all(
+  string = dt[,4],
+  pattern = regex("_1"),
+  replacement = ", "
+)
+
+dt[,4] <- stringr::str_replace_all(
+  string = dt[,4],
+  pattern = regex("_"),
+  replacement = " "
+)
+
+dt[,4] <- stringr::str_to_title(
+  string = dt[,4]
+)
+
+dt[,5] <- stringr::str_replace_all(
+  string = dt[,5],
+  pattern = regex("_1"),
+  replacement = ", "
+)
+
+dt[,5] <- stringr::str_replace_all(
+  string = dt[,5],
+  pattern = regex("_"),
+  replacement = " "
+)
+
+dt[,5] <- stringr::str_to_title(
+  string = dt[,5]
+)
+
+dt[,6] <- stringr::str_replace_all(
+  string = dt[,6],
+  pattern = regex("_1"),
+  replacement = ", "
+)
+
+dt[,6] <- stringr::str_replace_all(
+  string = dt[,6],
+  pattern = regex("_"),
+  replacement = " "
+)
+
+#dt[,6] <- stringr::str_to_title(
+#  string = dt[,6]
+#)
+
+dt[,7] <- stringr::str_replace_all(
+  string = dt[,7],
+  pattern = regex("_1"),
+  replacement = ", "
+)
+
+dt[,7] <- stringr::str_replace_all(
+  string = dt[,7],
+  pattern = regex("_"),
+  replacement = " "
+)
+
+dt[,7] <- stringr::str_to_title(
+  string = dt[,7]
+)
+
+dt[,8] <- stringr::str_replace_all(
+  string = dt[,8],
+  pattern = regex("_1"),
+  replacement = ", "
+)
+
+dt[,8] <- stringr::str_replace_all(
+  string = dt[,8],
+  pattern = regex("_"),
+  replacement = " "
+)
+
+
+#dt[,8] <- stringr::str_to_title(
+#  string = dt[,8]
+#)
+
+dt[,9] <- stringr::str_replace_all(
+  string = dt[,9],
+  pattern = regex("_1"),
+  replacement = ", "
+)
+
+dt[,9] <- stringr::str_replace_all(
+  string = dt[,9],
+  pattern = regex("_"),
+  replacement = " "
+)
+
+#dt[,9] <- stringr::str_to_title(
+#  string = dt[,9]
+#)
+
+
+```
+
+```{r data dictionary}
+#| echo: false
+#| warning: false
+#| message: false
+
+dd <- readr::read_csv("files/december_2022/COIGJournalClub_DataDictionary_2022-12-04.csv")
+```
+
+```{r attendees graph, echo=FALSE}
+#| fig-width: 10
+who_are_you <- dt |> drop_na(who_are_you) |> 
+  count(who_are_you) |> 
+  mutate(prop = round(n/sum(n)*100))  |> 
+ arrange(desc(prop))
+
+who_are_you |> 
+  ggplot(
+    aes(x = fct_inorder(who_are_you),
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = who_are_you,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Which of the following best describes you?",
+    60)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 16)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(who_are_you$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+:::
+
+In order to begin a conversation about the evolving approach to resectable melanoma, attendees were queried as to how they would have likely managed a case of Stage IIIC melanoma, one year ago (**Figure 10**). Options included surgery only, surgery and adjuvant therapy, as well as pre-operative systemic therapy followed by a tailored post-operative approach based on the pathologic response seen on resection. Due to diverse nature of the COIG, nine respondents felt comfortable making a treatment recommendation for regionally metastatic melanoma (7 members did not). All nine clinicians (100%) replied that 1-year ago they would have recommended surgery followed by adjuvant anti-PD1. None of the respondents would have utilized a neoadjuvant approach.
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 10 - Management Strategies of Stage IIIC Melanoma 1-Year Ago
+
+```{r case one, warning=FALSE, echo=FALSE}
+#| fig-width: 10
+case_1.pre <- dt |> drop_na(mgmt_case_1)  
+#
+case_1.pre.1 <- case_1.pre
+
+# remove I don't feel comfortable making a recommendation
+case_1.pre.1 <- case_1.pre.1 |> 
+  filter(mgmt_case_1 != "I do not feel comfortable making a recommendation")
+
+
+case_1 <- case_1.pre.1 |> 
+  count(mgmt_case_1) |> 
+  mutate(prop = round(n/sum(n)*100))
+
+# add missing answers
+dd.case.1 <- dd |> 
+  dplyr::filter(`Variable / Field Name` == "mgmt_case_1") |> 
+  select(`Choices, Calculations, OR Slider Labels`)
+
+dd.case.1.long <- splitstackshape::cSplit(
+  indt = dd.case.1,
+  splitCols = "Choices, Calculations, OR Slider Labels",
+  sep = "|",
+  direction = "long"
+)
+
+dd.case.1.long.1 <- dd.case.1.long
+
+dd.case.1.long.1$`Choices, Calculations, OR Slider Labels` <- stringr::str_replace_all(
+  string = dd.case.1.long.1$`Choices, Calculations, OR Slider Labels`,
+  pattern = regex("(.+),(.+)"),
+  replacement = "\\1"
+)
+
+dd.case.1.long.2 <- dd.case.1.long.1
+
+dd.case.1.long.2$`Choices, Calculations, OR Slider Labels` <- stringr::str_replace_all(
+  string = dd.case.1.long.2$`Choices, Calculations, OR Slider Labels`,
+  pattern = regex("_1"),
+  replacement = ", "
+)
+
+dd.case.1.long.2$`Choices, Calculations, OR Slider Labels` <- stringr::str_replace_all(
+  string = dd.case.1.long.2$`Choices, Calculations, OR Slider Labels`,
+  pattern = regex("_"),
+  replacement = " "
+)
+
+case_1_null <- dd.case.1.long.2 |> 
+  transmute(mgmt_case_1 = `Choices, Calculations, OR Slider Labels`,
+            n = NA,
+            prop = NA)
+
+case_1_bind <- case_1 |> rbind(case_1_null) |> group_by(mgmt_case_1) |> slice_head()
+
+
+case_1_bind.1 <- case_1_bind |> 
+  filter(mgmt_case_1 != "I do not feel comfortable making a recommendation") |> 
+  filter(mgmt_case_1 != "Other")
+
+case_1_bind.1$n[is.na(case_1_bind.1$n)] <- 0
+
+case_1_bind.1$prop[is.na(case_1_bind.1$prop)] <- 0
+
+case_1 <- case_1_bind.1 |> arrange(desc(prop)
+                                   )
+
+
+case_1 |> 
+  ggplot(
+    aes(x = fct_inorder(mgmt_case_1),
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = mgmt_case_1,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "58M ECOG0, no PMH, T3bN1bM0, BRAF WT scalp melanoma. Which of the following would you have recommended 1 year ago?",
+    50)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 16)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 30)) +
+ scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1)))),
+   limits = c(0, max(case_1$n + 1))
+   ) +
+  coord_flip() 
+
+```
+:::
+
+Given the topic of the current paper, we surveyed how many clinicians had previously recommended the use of neoadjuvant immune checkpoint inhibition (ICI) for resectable melanoma. Of the 8 respondents, 75% responded that they had incorporated pre-operative ICI into at least one patient's treatment strategy (**Figure 11**).
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 11 - Use of Neoadjuvant Immunotherapy for Resectable Melanoma
+
+```{r neo io, warning=FALSE, echo=FALSE}
+#| fig-width: 10
+neo_io <- dt |> 
+  drop_na(neoadjuvant_io_yn) |> 
+  filter(neoadjuvant_io_yn != "I Do Not Make Treatment Recommendations For Melanoma") |> 
+  count(neoadjuvant_io_yn) |> 
+  mutate(prop = round(n/sum(n)*100))
+
+neo_io |> 
+  ggplot(
+    aes(x = neoadjuvant_io_yn,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = neoadjuvant_io_yn,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Have you recommended neoadjuvant immunotherapy for resectable melanoma?",
+    55)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 16)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 25)) +
+ scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(neo_io$n + 0.3))
+   ) +
+  coord_flip() 
+
+```
+:::
+
+The majority of clinicians (5/8), however, had not previously recommended neoadjuvant Ipi/Nivo for resectable melanoma (**Figure 12**). Concern for significant toxicity was cited as a common reason for not incorporating Ipi/Nivo into a neoadjuvant management plan for high-risk, but resectable melanoma. That said, clinicians in the group acknowledged the potential of neoadjuvant strategies to enhance pathologic responses and improve long-term outcomes while improving on the toxicity profile seen with neoadjuvant Ipi/Nivo.
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 12 - Use of Neoadjuvant Ipi/Nivo for Resectable Melanoma
+
+```{r neo ipi nivo, warning=FALSE, echo=FALSE}
+#| fig-width: 10
+neo_ipi_nivo <- dt |> 
+  drop_na(neoadjuvant_ipi_nivo_yn) |> 
+  filter(neoadjuvant_ipi_nivo_yn != "I Do Not Make Treatment Recommendations For Melanoma") |> 
+  count(neoadjuvant_ipi_nivo_yn) |> 
+  mutate(prop = round(n/sum(n)*100))
+
+neo_ipi_nivo |> 
+  ggplot(
+    aes(x = neoadjuvant_ipi_nivo_yn,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = neoadjuvant_ipi_nivo_yn,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Have you recommended neoadjuvant Ipi/Nivo for resectable melanoma?",
+    55)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 16)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 25)) +
+ scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(neo_ipi_nivo$n + 0.5))
+   ) +
+  coord_flip() 
+
+```
+:::
+
+Although the current study was fairly limited in size (n = 30), there was a generally favorable response to its outcomes and toxicity data. Similar to what was observed in previous neoadjuvant studies, pathological response to neoadjuvant treatment was associated with a significantly improved RFS rate at 2 years (92% vs. 55%). Thus, pathologic response likely serves as an early indicator of long-term outcome. However, unlike the PRADO study, however, all patients received post-operative adjuvant Nivo/Rela. Therefore, a follow up study will be necessary to learn if pathologic response can be used to de-escalate post-surgical therapy. Given that all of the grade 3-4 AEs to Nivo/Rela occurred in the post-operative setting, omission of adjuvant immunotherapy may preclude serious toxicity.
+
+Despite the limitations of the current study (e.g. small cohort, non-randomized design), the COIG participants who treat melanoma indicated that these data would affect their current practice. The vast majority (88%) replied that this paper would change their practice (**Figure 13**).
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 13 - Practice Impact of "Neoadjuvant relatlimab and nivolumab in resectable melanoma"
+
+```{r practice changing, warning=FALSE, echo=FALSE}
+#| fig-width: 10
+practice <- dt |> 
+  drop_na(change_practice_yn) |> 
+  filter(change_practice_yn != "I Do Not Make Treatment Recommendations For Melanoma") |> 
+  count(change_practice_yn) |> 
+  mutate(prop = round(n/sum(n)*100))
+
+practice |> 
+  ggplot(
+    aes(x = change_practice_yn,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = change_practice_yn,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Will this paper change your practice?",
+    55)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 16)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 25)) +
+ scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(practice$n + 0.5))
+   ) +
+  coord_flip()
+
+```
+:::
+
+When presented with the same clinical example as above (BRAF wild type, T3bN1bM0 scalp melanoma) 6/7 of the respondents answered that they would now recommend neoadjuvant Nivo/Rela (**Figure 14**). Despite the fact that 1 year ago, NCT02519322, OpACIN and OpACIN-neo had been published, none of the clinicians responded that they would have incorporated neoadjuvant therapy in the Stage IIIC melanoma vignette. There are likely several factors that underlie this change in approach to the management of resectable melanoma. Over the last year several studies have been either presented (SWOG S1801) or published (PRADO, the current study) supporting the clinical utility of pre-operative immune therapy for resectable disease. Furthermore, similar data supporting the use of neoadjuvant ICI have been demonstrated in other skin cancers such as Merkel cell carcinoma @Topalian2020 and cutaneous squamous cell carcinoma. @Gross2022 Since the majority of the practioners present at the meeting also manage patients with non-melanoma skin cancer, they are aware of the body of evidence in skin cancer supporting pre-operative ICI.
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 14 - Current Approach to Stage IIIC Melanoma
+
+```{r, warning=FALSE, echo=FALSE}
+#| fig-width: 10
+
+case_2.pre <- dt |> drop_na(mgmt_case_2)  
+#
+case_2.pre.1 <- case_2.pre
+
+# remove I don't feel comfortable making a recommendation
+case_2.pre.1 <- case_2.pre.1 |> 
+  filter(mgmt_case_2 != "I do not feel comfortable making a recommendation") 
+
+
+case_2 <- case_2.pre.1 |> 
+  count(mgmt_case_2) |> 
+  mutate(prop = round(n/sum(n)*100))
+
+# add missing answers
+dd.case.2 <- dd |> 
+  dplyr::filter(`Variable / Field Name` == "mgmt_case_2") |> 
+  select(`Choices, Calculations, OR Slider Labels`)
+
+dd.case.2.long <- splitstackshape::cSplit(
+  indt = dd.case.2,
+  splitCols = "Choices, Calculations, OR Slider Labels",
+  sep = "|",
+  direction = "long"
+)
+
+dd.case.2.long.1 <- dd.case.2.long
+
+dd.case.2.long.1$`Choices, Calculations, OR Slider Labels` <- stringr::str_replace_all(
+  string = dd.case.2.long.1$`Choices, Calculations, OR Slider Labels`,
+  pattern = regex("(.+),(.+)"),
+  replacement = "\\1"
+)
+
+dd.case.2.long.2 <- dd.case.2.long.1
+
+dd.case.2.long.2$`Choices, Calculations, OR Slider Labels` <- stringr::str_replace_all(
+  string = dd.case.2.long.2$`Choices, Calculations, OR Slider Labels`,
+  pattern = regex("_1"),
+  replacement = ", "
+)
+
+dd.case.2.long.2$`Choices, Calculations, OR Slider Labels` <- stringr::str_replace_all(
+  string = dd.case.2.long.2$`Choices, Calculations, OR Slider Labels`,
+  pattern = regex("_"),
+  replacement = " "
+)
+
+case_2_null <- dd.case.2.long.2 |> 
+  transmute(mgmt_case_2 = `Choices, Calculations, OR Slider Labels`,
+            n = NA,
+            prop = NA)
+
+case_2_bind <- case_2 |> 
+  rbind(case_2_null) |> 
+  group_by(mgmt_case_2) |> 
+  slice_head()
+
+
+case_2_bind.1 <- case_2_bind |> 
+  filter(mgmt_case_2 != "I do not feel comfortable making a recommendation") |> 
+  filter(mgmt_case_2 != "Other")
+
+case_2_bind.1$n[is.na(case_2_bind.1$n)] <- 0
+
+case_2_bind.1$prop[is.na(case_2_bind.1$prop)] <- 0
+
+case_2 <- case_2_bind.1 |> arrange(desc(prop)
+                                   )
+
+case_2 |> 
+  ggplot(
+    aes(x = fct_inorder(mgmt_case_2),
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = mgmt_case_2,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "58M ECOG0, no PMH, T3bN1bM0, BRAF WT scalp melanoma. Which of the following would you recommend?",
+    45)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 16)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 10)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 30)) +
+ scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(case_2$n + 0.5))
+   ) +
+  coord_flip() 
+  
+
+```
+:::
+
+Participants acknowledged the challenges in selecting a management strategy for resectable melanoma, given the promising results of several small neoadjuvant investigation, with varying treatment approaches. Currently, clinicians have a variety of options including on-label post-operative anti-PD1 monotherapy and off-label upfront therapy with single-agent anti-PD1 or dual ICB with anti-PD1/anti-CTLA4 and anti-PD1/anti-LAG-3 combinations. The safety profile may be more important in considering neoadjuvant therapy, and the safety profile reported in the small cohort of this paper suggests a more favorable safety signal than anti-PD-1/anti-CTLA4 combinations. Consequently, there is a critical need for a randomized, comparative study to help evaluate which of the various strategies yields the optimal clinical benefit. However, until those studies are performed, clinicians must choose which of the following management approaches will best serve their current patients. Based on the efficacy and toxicity data from this study relative to the existing data (**Table 2**),
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Table 2 - Neoadjuvant Study Summary Updated With Current Study {.smaller}
+
+|           Study           | Pre-Operative Intervention                                                                                                  |                Pathological Response                |     Any Grade AE      |     Grade 3-4 AE      |
+|:-------------:|:--------------|:-------------:|:-------------:|:-------------:|
+|     OpACIN @Blank2018     | Ipi 3 mg/kg/Nivo 1 mg/kg x 2 doses                                                                                          |                    78% (33% pCR)                    |         100%          |          90%          |
+|  NCT02519322 @Amaria2018  | Ipi 3 mg/kg/Nivo 1 mg/kg x 3 doses <br> Nivo 3 mg/kg x 4 doses                                                              |                45% pCR <br> 25% pCR                 |          91%          |          73%          |
+|  OpACIN-neo @Rozeman2019  | Ipi 3 mg/kg/Nivo 1 mg/kgx 2 doses <br> Ipi 1 mg/kg/Nivo 3 mg/kg x 2 doses <br> Ipi 3 mg/kg x 2 doses/Nivo 3 mg/kg x 2 doses | 80% (47% pCR) <br> 77% (57% pCR) <br> 65% (23% pCR) | 97% <br> 97% <br> 90% | 40% <br> 20% <br> 50% |
+|    PRADO @Reijers2022     | Ipi 1 mg/kg/Nivo 3 mg/kg x 2 doses                                                                                          |                      72% (49%)                      |          97%          |          22%          |
+| Neo Nivo Rela @Amaria2022 | Nivo 480mg/Rela 160 mg x 2 doses                                                                                            |                    70% (57% pCR)                    |          NA           |          26%          |
+
+: {tbl-colwidths="\[20,45,25,10,10\]"}
+:::
+
+62% (5/8) of the clinical respondents indicated that Nivo/Rela would now become their preferred regimen when a neoadjuvant strategy was incorporated into a patient's management plan for resectable melanoma (**Figure 15**).
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## Figure 15 - Incorporating Neoadjuvant Nivo/Rela Into Current Practice
+
+```{r, warning=FALSE, echo=FALSE}
+#| fig-width: 10
+nivo_rela <- dt |> 
+  drop_na(change_practice_yn_2) |> 
+  filter(change_practice_yn_2 != "I do not make treatment recommendations for melanoma") |> 
+  count(change_practice_yn_2) |> 
+  mutate(prop = round(n/sum(n)*100))
+
+nivo_rela |> 
+  ggplot(
+    aes(x = change_practice_yn_2,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = change_practice_yn_2,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Will Nivo/Rela become your preferred neoadjuvant regimen for resectable melanoma?",
+    45)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 16)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 25)) +
+ scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(nivo_rela$n + 0.5))
+   ) +
+  coord_flip() 
+  
+```
+:::
+
+The history of therapeutic drug development in melanoma has been complicated by misleading retrospective and single arm clinical trials. This was the case for margin resection of primary melanoma lesions, role for lymphadenectomy, and studies of adjuvant interferon-alfa. Indeed, in the case of adjuvant interferon, even randomized clinical trials were problematic with several demonstrating a relapse-free survival benefit but long-term randomized studies ultimately showed no overall survival benefit. Admittedly, randomized trials are challenging to design for neoadjuvant approaches, but we should expect longer follow-up of patients in such studies and larger, multi-institutional trials should be considered a priority.
+
+An important question remains: for which patients should a neoadjuvant approach be adopted? Until there is data that provides evidence that upfront systemic treatment for disease that is potentially curable by surgery alone improves disease-specific survival as compared to administration of the very same intervention at the time of first recurrence, an argument can be made that intensifying treatment for all patients with resectable disease unnecessarily exposes many patients to potentially serious toxicity. To emphasize this point, 60% of the patients in neoadjuvant nivo/rela study had Stage IIIB, which was associated with a 10-year melanoma-specific survival of 88% back in 2017 @Gershenwald2017. Thus, the vast majority of these patients would likely have been cured without upfront systemic therapy. This reality highlights the need to identify biomarkers to further risk-stratify those patients who might benefit from early treatment intensification, such as neoadjuvant immune therapy.
+
+## Materials and Methods
+
+This `Perspectives on the Science` piece was published using [Quarto](https://quarto.org)<sup>®</sup>. The survey was conducted using REDCap<sup>®</sup>. @Harris2009 The figures depicting the survey data were created using R (version 4.0.0) and the tidyverse suite of packages @tidyverse , including ggplot2 @ggplot2 . The figures depicting FDA approved therapies in skin cancer were created using the skincancerRx package @skincancerRx .
+
+## Author Affiliations
+
+1.  Mass General Cancer Center, Boston MA
+2.  Harvard Medical School, Boston MA
+3.  Division of Gastrointestinal and Oncologic Surgery, Department of Surgery, Massachusetts General Hospital
+4.  Division of Head and Neck Surgical Oncology, Department of Otolaryngology, Massachusetts Eye and Ear Infirmary
+5.  Pennsylvania Hospital and University of Pennsylvania, Philadelphia PA
+
+## Disclosures
+
+DMM reports grants and personal fees from Regeneron, grants from Kartos Therapeutics, grants from NeoImmuneTech, personal fees from Checkpoint Therapeutics, personal fees from Pfizer, personal fees from Merck Sharpe & Dome, personal fees from EMD Serono, grants from Project DataSphere, personal fees from Sanofi Genzyme, personal fees from Castle Biosciences, personal fees from Avstera, outside the submitted work. HLK is an employee of Ankyra Therapeutics and has received honoraria for participating on advisory boards for Castle Biosciences and Marengo Therapeutics. SZS reports no competing interests.

@@ -1,10 +1,23 @@
 ---
-title: "Perspectives on the Science"
-editor: visual
+listing:
+  contents: perspectives  
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true 
+  fields: [date, title, reading-time, description, categories]
+  # Set feed to true
+  feed: true
+page-layout: full
+title-block-banner: false
 ---
 
-![](files/perspective.jpg)
+
+------------------------------------------------------------------------
 
 ## Overview
 
 In "Perspectives on the Science", we provide commentary on a publication reviewed in our multi-institutional COIG Journal Club. The comments in this article represent the views of the authors of this `Perspectives on the Science` piece. It does not represent views of any other members of the Interest Group or the affiliated institutions.
+
+## All Perspectives Pieces
