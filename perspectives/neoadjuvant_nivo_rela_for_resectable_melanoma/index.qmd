@@ -2,7 +2,7 @@
 title: "Neoadjuvant Nivo/Rela for Resectable Melanoma"
 author: "David M. Miller^1^^,^^2^, Howard L. Kaufman^2^^,^^3^, Kevin S. Emerick^2^^,^^4^, Justine V. Cohen^5^, Sophia Z. Shalhout^1^^,^^2^,"
 date: 2022-12-05
-format: docx  
+format: html   
 link-citations: yes
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/nature.csl
 bibliography: bibliography.bibtex 
