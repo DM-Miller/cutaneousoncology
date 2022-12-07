@@ -20,7 +20,7 @@ bibliography: bibliography.bibtex
 
 ## Introduction
 
-On December 2^nd^, 2022, the multi-institutional **Cutaneous Oncology Interest Group Journal Club (COIG)** reviewed the recently published Lancet article [Neoadjuvant relatlimab and nivolumab in resectable melanoma](https://www.nature.com/articles/s41586-022-05368-8). @Amaria2022 Participants included clinicians and investigators from Massachusetts General Hospital, Mass Eye and Ear Infirmary, Brigham and Women's Hospital, University of Washington School of Medicine, the National Institute of Health, Stanford University, and the University of Pennsylvania. Importantly, the comments in this article represent the views of the authors of this `Perspectives on the Science` piece. It does not represent views of any other members of the Interest Group or the affiliated institutions. In this article we provide a summary of the discussion regarding this important contribution to the literature. 
+On December 2^nd^, 2022, the multi-institutional **Cutaneous Oncology Interest Group Journal Club (COIG)** reviewed the recently published Lancet article [Neoadjuvant relatlimab and nivolumab in resectable melanoma](https://www.nature.com/articles/s41586-022-05368-8). @Amaria2022 Participants included clinicians and investigators from Massachusetts General Hospital, Mass Eye and Ear Infirmary, Brigham and Women's Hospital, University of Washington School of Medicine, the National Institute of Health, Stanford University, and the University of Pennsylvania. Importantly, the comments in this article represent the views of the authors of this `Perspectives on the Science` piece. It does not represent views of any other members of the Interest Group or the affiliated institutions. In this article we provide a summary of the discussion regarding this important contribution to the literature.
 
 ## Background for the Study
 
@@ -134,7 +134,7 @@ Although there are no therapies with labelled indications in the neoadjuvant set
 ## Table 1 - Summary of Neoadjuvant Studies {.smaller}
 
 |          Study          | Pre-Operative Intervention                                                                                                  |                Pathological Response                |     Any Grade AE      |     Grade 3-4 AE      |
-|:---------:|:---------------------------|:---------:|:---------:|:---------:|
+|:-----------:|:---------------------|:-----------:|:-----------:|:-----------:|
 |    OpACIN @Blank2018    | Ipi 3 mg/kg/Nivo 1 mg/kg x 2 doses                                                                                          |                    78% (33% pCR)                    |         100%          |          90%          |
 | NCT02519322 @Amaria2018 | Ipi 3 mg/kg/Nivo 1 mg/kg x 3 doses <br> Nivo 3 mg/kg x 4 doses                                                              |                45% pCR <br> 25% pCR                 |          91%          |          73%          |
 | OpACIN-neo @Rozeman2019 | Ipi 3 mg/kg/Nivo 1 mg/kgx 2 doses <br> Ipi 1 mg/kg/Nivo 3 mg/kg x 2 doses <br> Ipi 3 mg/kg x 2 doses/Nivo 3 mg/kg x 2 doses | 80% (47% pCR) <br> 77% (57% pCR) <br> 65% (23% pCR) | 97% <br> 97% <br> 90% | 40% <br> 20% <br> 50% |
@@ -801,7 +801,7 @@ Participants acknowledged the challenges in selecting a management strategy for 
 ## Table 2 - Neoadjuvant Study Summary Updated With Current Study {.smaller}
 
 |           Study           | Pre-Operative Intervention                                                                                                  |                Pathological Response                |     Any Grade AE      |     Grade 3-4 AE      |
-|:---------:|:---------------------------|:---------:|:---------:|:---------:|
+|:-----------:|:---------------------|:-----------:|:-----------:|:-----------:|
 |     OpACIN @Blank2018     | Ipi 3 mg/kg/Nivo 1 mg/kg x 2 doses                                                                                          |                    78% (33% pCR)                    |         100%          |          90%          |
 |  NCT02519322 @Amaria2018  | Ipi 3 mg/kg/Nivo 1 mg/kg x 3 doses <br> Nivo 3 mg/kg x 4 doses                                                              |                45% pCR <br> 25% pCR                 |          91%          |          73%          |
 |  OpACIN-neo @Rozeman2019  | Ipi 3 mg/kg/Nivo 1 mg/kgx 2 doses <br> Ipi 1 mg/kg/Nivo 3 mg/kg x 2 doses <br> Ipi 3 mg/kg x 2 doses/Nivo 3 mg/kg x 2 doses | 80% (47% pCR) <br> 77% (57% pCR) <br> 65% (23% pCR) | 97% <br> 97% <br> 90% | 40% <br> 20% <br> 50% |
@@ -873,13 +873,13 @@ An important question remains: for which patients should a neoadjuvant approach 
 
 This `Perspectives on the Science` piece was published using [Quarto](https://quarto.org)<sup>®</sup>. The survey was conducted using REDCap<sup>®</sup>. @Harris2009 The figures depicting the survey data were created using R (version 4.0.0) and the tidyverse suite of packages @tidyverse , including ggplot2 @ggplot2 . The figures depicting FDA approved therapies in skin cancer were created using the skincancerRx package @skincancerRx .
 
-## Author Affiliations  
+## Author Affiliations
 
 1.  Mass General Cancer Center, Boston MA
 2.  Harvard Medical School, Boston MA
 3.  Division of Gastrointestinal and Oncologic Surgery, Department of Surgery, Massachusetts General Hospital
 4.  Division of Head and Neck Surgical Oncology, Department of Otolaryngology, Massachusetts Eye and Ear Infirmary
 
-## Disclosures   
+## Disclosures
 
-DMM reports grants and personal fees from Regeneron, grants from Kartos Therapeutics, grants from NeoImmuneTech, personal fees from Checkpoint Therapeutics, personal fees from Pfizer, personal fees from Merck Sharpe & Dome, personal fees from EMD Serono, grants from Project DataSphere, personal fees from Sanofi Genzyme, personal fees from Castle Biosciences, personal fees from Avstera, outside the submitted work. HLK is an employee of Ankyra Therapeutics and has received honoraria for participating on advisory boards for Castle Biosciences and Marengo Therapeutics.  SZS reports no competing interests. 
+DMM reports grants and personal fees from Regeneron, grants from Kartos Therapeutics, grants from NeoImmuneTech, personal fees from Checkpoint Therapeutics, personal fees from Pfizer, personal fees from Merck Sharpe & Dome, personal fees from EMD Serono, grants from Project DataSphere, personal fees from Sanofi Genzyme, personal fees from Castle Biosciences, personal fees from Avstera, outside the submitted work. HLK is an employee of Ankyra Therapeutics and has received honoraria for participating on advisory boards for Castle Biosciences and Marengo Therapeutics. SZS reports no competing interests.
