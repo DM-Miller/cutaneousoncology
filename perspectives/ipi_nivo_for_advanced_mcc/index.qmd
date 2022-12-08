@@ -7,13 +7,12 @@ output: true
 link-citations: yes
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/nature.csl
 bibliography: bibliography.bibtex 
+image: files/november_2022/november_2022_featured_image.jpg
 ---
 
 ```{r, warning=FALSE, echo=FALSE, include=FALSE}
 library(tidyverse)
 ```
-
-![](files/november_2022/november_2022_featured_image.jpg)
 
 # Featured Article
 

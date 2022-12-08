@@ -6,9 +6,8 @@ format: html
 link-citations: yes
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/nature.csl
 bibliography: bibliography.bibtex 
+image: files/december_2022/featured.jpg
 ---
-
-![](files/december_2022/featured.jpg)
 
 ## Featured Article
 
