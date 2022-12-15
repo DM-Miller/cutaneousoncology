@@ -14,8 +14,7 @@ The following are the archive of the articles covered to date.
 
 # Shiny App
 
-Click [here](https://cutaneousoncology.shinyapps.io/coig_journal_club_timeline/) to visualize an interactive Shiny application of all of the articles covered hitherto. 
-
+Click [here](https://cutaneousoncology.shinyapps.io/coig_journal_club_timeline/) to visualize an interactive Shiny application of all of the articles covered hitherto.
 
 # Articles
 
@@ -23,6 +22,11 @@ Click [here](https://cutaneousoncology.shinyapps.io/coig_journal_club_timeline/)
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - December 2022
+
+
+### December
+
+Amaria, Rodabe N., Michael Postow, Elizabeth M. Burton, Michael T. Tezlaff, Merrick I. Ross, Carlos Torres-Cabala, Isabella C. Glitza, et al. 2022. “Neoadjuvant Relatlimab and Nivolumab in Resectable Melanoma.” Nature 611 (7934): 155–60. https://doi.org/10.1038/s41586-022-05368-8.
 
 ### November
 
