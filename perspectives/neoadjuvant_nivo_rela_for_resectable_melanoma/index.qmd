@@ -135,7 +135,7 @@ Although there are no therapies with labelled indications in the neoadjuvant set
 ## Table 1 - Summary of Neoadjuvant Studies {.smaller}
 
 |          Study          | Pre-Operative Intervention                                                                                                  |                Pathological Response                |     Any Grade AE      |     Grade 3-4 AE      |
-|:-------------:|:--------------|:-------------:|:-------------:|:-------------:|
+|:-----------------------:|:----------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------:|:---------------------:|:---------------------:|
 |    OpACIN @Blank2018    | Ipi 3 mg/kg/Nivo 1 mg/kg x 2 doses                                                                                          |                    78% (33% pCR)                    |         100%          |          90%          |
 | NCT02519322 @Amaria2018 | Ipi 3 mg/kg/Nivo 1 mg/kg x 3 doses <br> Nivo 3 mg/kg x 4 doses                                                              |                45% pCR <br> 25% pCR                 |          91%          |          73%          |
 | OpACIN-neo @Rozeman2019 | Ipi 3 mg/kg/Nivo 1 mg/kgx 2 doses <br> Ipi 1 mg/kg/Nivo 3 mg/kg x 2 doses <br> Ipi 3 mg/kg x 2 doses/Nivo 3 mg/kg x 2 doses | 80% (47% pCR) <br> 77% (57% pCR) <br> 65% (23% pCR) | 97% <br> 97% <br> 90% | 40% <br> 20% <br> 50% |
@@ -802,7 +802,7 @@ Participants acknowledged the challenges in selecting a management strategy for 
 ## Table 2 - Neoadjuvant Study Summary Updated With Current Study {.smaller}
 
 |           Study           | Pre-Operative Intervention                                                                                                  |                Pathological Response                |     Any Grade AE      |     Grade 3-4 AE      |
-|:-------------:|:--------------|:-------------:|:-------------:|:-------------:|
+|:-------------------------:|:----------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------:|:---------------------:|:---------------------:|
 |     OpACIN @Blank2018     | Ipi 3 mg/kg/Nivo 1 mg/kg x 2 doses                                                                                          |                    78% (33% pCR)                    |         100%          |          90%          |
 |  NCT02519322 @Amaria2018  | Ipi 3 mg/kg/Nivo 1 mg/kg x 3 doses <br> Nivo 3 mg/kg x 4 doses                                                              |                45% pCR <br> 25% pCR                 |          91%          |          73%          |
 |  OpACIN-neo @Rozeman2019  | Ipi 3 mg/kg/Nivo 1 mg/kgx 2 doses <br> Ipi 1 mg/kg/Nivo 3 mg/kg x 2 doses <br> Ipi 3 mg/kg x 2 doses/Nivo 3 mg/kg x 2 doses | 80% (47% pCR) <br> 77% (57% pCR) <br> 65% (23% pCR) | 97% <br> 97% <br> 90% | 40% <br> 20% <br> 50% |
