@@ -7,8 +7,9 @@ link-citations: yes
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/nature.csl
 bibliography: bibliography.bibtex 
 image: files/october_2022/october_2022_featured_image.jpg
+categories: [2022, Squamous Cell Carcinoma, Neoadjuvant]
+description: In this `Perspectives on the Science` piece we reflect on the impact of the recently published article "Neoadjuvant Cemiplimab for Stage II to IV Cutaneous Squamous-Cell Carcinoma". 
 ---
-
 
 # Featured Article
 

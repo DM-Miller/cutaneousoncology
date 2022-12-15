@@ -2,12 +2,14 @@
 title: "Ipi/Nivo for Advanced MCC"
 author: "Sophia Z. Shalhout^1^, Justine Cohen^2^, Khalid Garmen^3^, Emily Kim^4^, Sonia Cohen^1^ David M. Miller^1^"
 date: "2022-11-21"
-format: html
+format: docx 
 output: true
 link-citations: yes
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/nature.csl
 bibliography: bibliography.bibtex 
 image: files/november_2022/november_2022_featured_image.jpg
+categories: [2022, Merkel Cell Carcinoma, Ipi/Nivo]
+description: In this `Perspectives on the Science` piece we reflect on the impact of the recently published article "Combined Nivolumab and Ipilimumab with or without Stereotactic Body Radiation Therapy for Advanced Merkel cell carcinoma - A Randomised, Open Label, Phase 2 Trial". 
 ---
 
 ```{r, warning=FALSE, echo=FALSE, include=FALSE}

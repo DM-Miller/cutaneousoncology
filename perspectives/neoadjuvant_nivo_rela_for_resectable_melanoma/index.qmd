@@ -7,6 +7,8 @@ link-citations: yes
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/nature.csl
 bibliography: bibliography.bibtex 
 image: files/december_2022/featured.jpg
+description: In this `Perspectives on the Science` piece we reflect on the impact of the recently published article "Neoadjuvant relatlimab and nivolumab in resectable melanoma".
+categories: [2022, Melanoma, Neoadjuvant, Nivo/Rela] 
 ---
 
 ## Featured Article
