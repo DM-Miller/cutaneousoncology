@@ -1,6 +1,6 @@
 ---
 title: "Neoadjuvant Nivo/Rela for Resectable Melanoma"
-author: "David M. Miller^1^^,^^2^, Howard L. Kaufman^2^^,^^3^, Kevin S. Emerick^2^^,^^4^, Justine V. Cohen^5^, Sophia Z. Shalhout^1^^,^^2^,"
+author: "David M. Miller^1^^,^^2^, Howard L. Kaufman^2^^,^^3^, Kevin S. Emerick^2^^,^^4^, Justine V. Cohen^5^, Emily Y Kim^6^, Sophia Z. Shalhout^1^^,^^2^,"
 date: 2022-12-05
 format: html   
 link-citations: yes
@@ -135,7 +135,7 @@ Although there are no therapies with labelled indications in the neoadjuvant set
 ## Table 1 - Summary of Neoadjuvant Studies {.smaller}
 
 |          Study          | Pre-Operative Intervention                                                                                                  |                Pathological Response                |     Any Grade AE      |     Grade 3-4 AE      |
-|:-----------------------:|:----------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------:|:---------------------:|:---------------------:|
+|:---------:|:---------------------------|:---------:|:---------:|:---------:|
 |    OpACIN @Blank2018    | Ipi 3 mg/kg/Nivo 1 mg/kg x 2 doses                                                                                          |                    78% (33% pCR)                    |         100%          |          90%          |
 | NCT02519322 @Amaria2018 | Ipi 3 mg/kg/Nivo 1 mg/kg x 3 doses <br> Nivo 3 mg/kg x 4 doses                                                              |                45% pCR <br> 25% pCR                 |          91%          |          73%          |
 | OpACIN-neo @Rozeman2019 | Ipi 3 mg/kg/Nivo 1 mg/kgx 2 doses <br> Ipi 1 mg/kg/Nivo 3 mg/kg x 2 doses <br> Ipi 3 mg/kg x 2 doses/Nivo 3 mg/kg x 2 doses | 80% (47% pCR) <br> 77% (57% pCR) <br> 65% (23% pCR) | 97% <br> 97% <br> 90% | 40% <br> 20% <br> 50% |
@@ -802,7 +802,7 @@ Participants acknowledged the challenges in selecting a management strategy for 
 ## Table 2 - Neoadjuvant Study Summary Updated With Current Study {.smaller}
 
 |           Study           | Pre-Operative Intervention                                                                                                  |                Pathological Response                |     Any Grade AE      |     Grade 3-4 AE      |
-|:-------------------------:|:----------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------:|:---------------------:|:---------------------:|
+|:---------:|:---------------------------|:---------:|:---------:|:---------:|
 |     OpACIN @Blank2018     | Ipi 3 mg/kg/Nivo 1 mg/kg x 2 doses                                                                                          |                    78% (33% pCR)                    |         100%          |          90%          |
 |  NCT02519322 @Amaria2018  | Ipi 3 mg/kg/Nivo 1 mg/kg x 3 doses <br> Nivo 3 mg/kg x 4 doses                                                              |                45% pCR <br> 25% pCR                 |          91%          |          73%          |
 |  OpACIN-neo @Rozeman2019  | Ipi 3 mg/kg/Nivo 1 mg/kgx 2 doses <br> Ipi 1 mg/kg/Nivo 3 mg/kg x 2 doses <br> Ipi 3 mg/kg x 2 doses/Nivo 3 mg/kg x 2 doses | 80% (47% pCR) <br> 77% (57% pCR) <br> 65% (23% pCR) | 97% <br> 97% <br> 90% | 40% <br> 20% <br> 50% |
@@ -883,6 +883,7 @@ This `Perspectives on the Science` piece was published using [Quarto](https://qu
 3.  Division of Gastrointestinal and Oncologic Surgery, Department of Surgery, Massachusetts General Hospital
 4.  Division of Head and Neck Surgical Oncology, Department of Otolaryngology, Massachusetts Eye and Ear Infirmary
 5.  Pennsylvania Hospital and University of Pennsylvania, Philadelphia PA
+6.  Brigham and Women's Hospital, Boston MA
 
 ## Disclosures
 
