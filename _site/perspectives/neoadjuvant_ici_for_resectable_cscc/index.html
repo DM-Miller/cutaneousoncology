@@ -6,7 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="David M. Miller1, Vishal Patel2, Justine Cohen3, Khalid Garmen4, Sophia Z. Shalhout1">
+<meta name="author" content="David M. Miller">
+<meta name="author" content="Vishal Patel">
+<meta name="author" content="Justine V. Cohen">
+<meta name="author" content="Khalid Garmen">
+<meta name="author" content="Sophia Z. Shalhout">
 <meta name="dcterms.date" content="2022-11-08">
 <meta name="description" content="In this Perspectives on the Science piece we reflect on the impact of the recently published article “Neoadjuvant Cemiplimab for Stage II to IV Cutaneous Squamous-Cell Carcinoma”.">
 
@@ -82,6 +86,14 @@ div.csl-indent {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="../../site_libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<script src="../../site_libs/plotly-binding-4.10.1.9000/plotly.js"></script>
+<script src="../../site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="../../site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="../../site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="../../site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="../../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="../../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -140,10 +152,9 @@ div.csl-indent {
   <li><a href="#study-design" id="toc-study-design" class="nav-link" data-scroll-target="#study-design">Study Design</a></li>
   <li><a href="#main-findings" id="toc-main-findings" class="nav-link" data-scroll-target="#main-findings">Main Findings</a></li>
   <li><a href="#discussion-points" id="toc-discussion-points" class="nav-link" data-scroll-target="#discussion-points">Discussion Points</a></li>
-  <li><a href="#author-affiliations" id="toc-author-affiliations" class="nav-link" data-scroll-target="#author-affiliations">Author Affiliations</a>
-  <ul class="collapse">
+  <li><a href="#materials-and-methods" id="toc-materials-and-methods" class="nav-link" data-scroll-target="#materials-and-methods">Materials and Methods</a></li>
   <li><a href="#disclosures" id="toc-disclosures" class="nav-link" data-scroll-target="#disclosures">Disclosures</a></li>
-  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -166,16 +177,61 @@ div.csl-indent {
   </div>
 </div>
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    David M. Miller <a href="https://orcid.org/0000-0001-9736-9119" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Massachusetts General Hospital
+          </p>
+        <p class="affiliation">
+            Harvard Medical School
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Vishal Patel <a href="https://orcid.org/0000-0003-1908-3478" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            GW School of Medicine &amp; Health Sciences
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Justine V. Cohen <a href="https://orcid.org/0000-0003-4803-9230" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Perelman School of Medicine
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Khalid Garmen 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Visiting Fellow in the Dermatology Branch at the National Institute of Arthritis and Musculoskeletal and Skin Diseases
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Sophia Z. Shalhout <a href="https://orcid.org/0000-0002-2783-5265" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Massachusetts General Hospital
+          </p>
+        <p class="affiliation">
+            Harvard Medical School
+          </p>
+      </div>
+    </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>David M. Miller<sup>1</sup>, Vishal Patel<sup>2</sup>, Justine Cohen<sup>3</sup>, Khalid Garmen<sup>4</sup>, Sophia Z. Shalhout<sup>1</sup> </p>
-          </div>
-  </div>
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
@@ -197,12 +253,34 @@ div.csl-indent {
 </section>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>On October 7<sup>th</sup>, 2022, the multi-institutional <strong>Cutaneous Oncology Interest Group Journal Club</strong> reviewed the recently published New England Journal of Medicine (NEJM) article “<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2209813">Neoadjuvant Cemiplimab for Stage II to IV Cutaneous Squamous-Cell Carcinoma</a>”<span class="citation" data-cites="Gross2022"><sup><a href="#ref-Gross2022" role="doc-biblioref">1</a></sup></span>. Participants included clinicians and investigators from Massachusetts General Hospital, Mass Eye and Ear Infirmary, Brigham and Women’s Hospital (BWH), George Washington Cancer Center, the National Institute of Health, University of Pennsylvania and Moffitt Cancer Center. Importantly, the comments in this article represent the views of the authors of this <code>Perspectives on the Science</code> piece after the Journal Club review. It does not represent views of any other members of the Interest Group or the affiliated institutions. Here, we provide a summary of the discussion regarding this important contribution to the literature. Of note, several participants of the Journal Club were investigators of this study and authors on the NEJM article.</p>
+<p>On October 7<sup>th</sup>, 2022, the multi-institutional <strong>Cutaneous Oncology Interest Group Journal Club</strong> reviewed the recently published New England Journal of Medicine (NEJM) article “<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2209813">Neoadjuvant Cemiplimab for Stage II to IV Cutaneous Squamous-Cell Carcinoma</a>” <span class="citation" data-cites="Gross2022">(<a href="#ref-Gross2022" role="doc-biblioref">Gross et al. 2022</a>)</span>. Participants included clinicians and investigators from Massachusetts General Hospital, Mass Eye and Ear Infirmary, Brigham and Women’s Hospital (BWH), George Washington Cancer Center, the National Institute of Health, University of Pennsylvania and Moffitt Cancer Center. Importantly, the comments in this article represent the views of the authors of this <code>Perspectives on the Science</code> piece after the Journal Club review. It does not represent views of any other members of the Interest Group or the affiliated institutions. Here, we provide a summary of the discussion regarding this important contribution to the literature. Of note, several participants of the Journal Club were investigators of this study and authors on the NEJM article.</p>
 </section>
 <section id="background-for-the-study" class="level1">
 <h1>Background for the Study</h1>
-<p>Although the vast majority of cutaneous squamous cell carcinomas (CSCC) are treated and cured with local destruction or surgical excision, a subset of patients have poor outcomes, including regional, nodal and distant metastases. Approximately 6% of patients with CSCC will go on to develop nodal or distant disease, resulting in a mortality of 1.5-2%<span class="citation" data-cites="patel2021"><sup><a href="#ref-patel2021" role="doc-biblioref">2</a></sup></span>;<span class="citation" data-cites="Thompson2016"><sup><a href="#ref-Thompson2016" role="doc-biblioref">3</a></sup></span>. Consequently, there is an unmet need to find alternative treatment strategies to improve outcomes in patients with high-risk CSCC.</p>
-<p>Recently, clinical trial data has lead to the approval of immune checkpoint inhibitors for locally advanced and metastatic CSCC<span class="citation" data-cites="Migden2018"><sup><a href="#ref-Migden2018" role="doc-biblioref">4</a></sup></span>;<span class="citation" data-cites="Grob2020"><sup><a href="#ref-Grob2020" role="doc-biblioref">5</a></sup></span> . Objective response rates for advanced disease ranging from 46-51% and 35-50% in EMPOWER-CSCC-1 and KEYNOTE-629, respectively, led to the hypotheses tested by Gross et al.&nbsp;that pre-operative anti-PD-1 would improve pathological response rates at the time of surgical excision.</p>
+<p>Although the vast majority of cutaneous squamous cell carcinomas (CSCC) are treated and cured with local destruction or surgical excision, a subset of patients have poor outcomes, including regional, nodal and distant metastases. Approximately 6% of patients with CSCC will go on to develop nodal or distant disease, resulting in a mortality of 1.5-2% <span class="citation" data-cites="patel2021 Thompson2016">(<a href="#ref-patel2021" role="doc-biblioref">Patel et al. 2021</a>; <a href="#ref-Thompson2016" role="doc-biblioref">Thompson et al. 2016</a>)</span>. Consequently, there is an unmet need to find alternative treatment strategies to improve outcomes in patients with high-risk CSCC.</p>
+<p>The therapeutic landscape for CSCC has rapidly evolved over the last five years <span class="citation" data-cites="Shalhout2021 Shalhout2023 Miller2022">(<a href="#ref-Shalhout2021" role="doc-biblioref">Shalhout et al. 2021</a>, <a href="#ref-Shalhout2023" role="doc-biblioref">2023</a>; <a href="#ref-Miller2022" role="doc-biblioref">D. M. Miller et al. 2022</a>)</span> (<strong>Figure 1</strong>). Recently, clinical trial data has lead to the approval of immune checkpoint inhibitors for locally advanced and metastatic CSCC <span class="citation" data-cites="Migden2018 Grob2020">(<a href="#ref-Migden2018" role="doc-biblioref">Migden et al. 2018</a>; <a href="#ref-Grob2020" role="doc-biblioref">Grob et al. 2020</a>)</span>.</p>
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Figure 1. Evolving treatment landscape in CSCC
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-9a745a430ed3bab3712f" style="width:100%;height:928px;"></div>
+<script type="application/json" data-for="htmlwidget-9a745a430ed3bab3712f">{"x":{"data":[{"x":[16651.65,19959.35],"y":[50,50],"text":"","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[16651.65,19959.35],"y":[55,55],"text":"","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(255,255,255,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[16651.65,19959.35],"y":[45,45],"text":"","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(255,255,255,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[17802,17802,null,18437,18437,null,18437,18437,null,18809,18809],"y":[48,50,null,52,50,null,46,50,null,54,50],"text":"","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[17802,18437,18437,18809],"y":[47.5,52.5,45.5,54.5],"text":["Cemiplimab-Rwlc","Pembrolizumab","Pembrolizumab","Pembrolizumab"],"hovertext":["<b>Drug:<\/b> Cemiplimab-Rwlc<br><b>Date of Approval:<\/b> 2018-09-28<br><b>Indication:<\/b> Locally Advanced or Metastatic Squamous Cell Carcinoma<br><b>Mechanism:<\/b> PD-1 Ab","<b>Drug:<\/b> Pembrolizumab<br><b>Date of Approval:<\/b> 2020-06-24<br><b>Indication:<\/b> r/mCSCC<br><b>Mechanism:<\/b> PD-1 Ab","<b>Drug:<\/b> Pembrolizumab<br><b>Date of Approval:<\/b> 2020-06-24<br><b>Indication:<\/b> Every 6 weeks dosing for CSCC<br><b>Mechanism:<\/b> PD-1 Ab","<b>Drug:<\/b> Pembrolizumab<br><b>Date of Approval:<\/b> 2021-07-01<br><b>Indication:<\/b> laCSCC<br><b>Mechanism:<\/b> PD-1 Ab"],"textfont":{"size":15.1181102362205,"color":"rgba(248,118,109,1)"},"type":"scatter","mode":"text","hoveron":"points","name":"PD-1 Ab","legendgroup":"PD-1 Ab","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":41,"r":10,"b":-10,"l":10},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[16651.65,19959.35],"tickmode":"array","ticktext":["01/2016"],"tickvals":[16802],"categoryorder":"array","categoryarray":["01/2016"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":14},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[44.89,55.11],"tickmode":"array","ticktext":["45.0","47.5","50.0","52.5","55.0"],"tickvals":[45,47.5,50,52.5,55],"categoryorder":"array","categoryarray":["45.0","47.5","50.0","52.5","55.0"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":15.9402241594022},"title":{"text":"Mechanism","font":{"color":"rgba(0,0,0,1)","family":"","size":18.5969281859693}},"orientation":"h","x":0,"y":-0.05},"hovermode":"closest","barmode":"relative","title":{"text":"<b>FDA Approvals in CSCC<b>"},"titlefont":{"size":28,"color":"black","family":"Arial"},"subtitle":"testing","hoverlabel":{"font":{"size":16}}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"320a7730b273":{"yintercept":{},"type":"scatter"},"320a1e13d927":{"yintercept":{}},"320a29159ede":{"yintercept":{}},"320a4a7115e4":{"x":{},"y":{},"xend":{},"yend":{}},"320a465451ea":{"x":{},"y":{},"label":{},"text":{},"colour":{}}},"cur_data":"320a7730b273","visdat":{"320a7730b273":["function (y) ","x"],"320a1e13d927":["function (y) ","x"],"320a29159ede":["function (y) ","x"],"320a4a7115e4":["function (y) ","x"],"320a465451ea":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Objective response rates for advanced disease ranging from 46-51% and 35-50% in EMPOWER-CSCC-1 and KEYNOTE-629, respectively, led to the hypotheses tested by Gross et al.&nbsp;that pre-operative anti-PD-1 would improve pathological response rates at the time of surgical excision.</p>
 </section>
 <section id="study-design" class="level1">
 <h1>Study Design</h1>
@@ -214,56 +292,78 @@ div.csl-indent {
 </section>
 <section id="discussion-points" class="level1">
 <h1>Discussion Points</h1>
-<p>The consensus amongst the Interest Group was that this study is indeed practice-changing. A few participants were already incorporating pre-operative immunecheckpoint inhibitor (ICI) therapy for some of their highest-risk patients prior the publication of these results. Other participants that were primarily using ICI therapy per the FDA indications (e.g.&nbsp;locally advanced or metastatic disease) stated that they would consider implementing ICI earlier in the disease journey as a result of this study. Participants, however, stressed the importance of assessing the benefit-to-risk ratio. The absolute risk of poor outcomes for various stages of disease studied in this population varies and, in many cases, remain incompletely clarified. This may be due to CSCC not being part of the Surveillance, Epidemiology, and End Results Program. Therefore prognostic estimates of local recurrence, nodal and distant metastases, as well as disease-specific death, have come largely from single-institution datasets and are limited. For example, a 2019 study by Ruiz et al.&nbsp;evaluated the prognosis of 459 patients at BWH<span class="citation" data-cites="ruiz2019"><sup><a href="#ref-ruiz2019" role="doc-biblioref">6</a></sup></span> . The 10-year cumulative incidence (CIN) rate of local recurrence (LR), nodal metastases (NM) and disease-specific death (DSD) for AJCC Stage II disease was 15.8, 12.2 and 7.6%, respectively in the 36 tumors evaluated. For the 119 T3 tumors (e.g.&nbsp;AJCC Stage III), the 10-year CIN rates for LR, NM and DSD were 19.7, 14.1 and 9.3%, respectively.</p>
-<p>Thus the benefits of pre-operative ICI must be weighed in the setting of toxicity. The current study had 4 fatalities, an unusually high proportion, given 79 total subjects. Typical estimated rates of ICI-related mortality are 1:200. Although only one subject’s death was considered possibly related to treatment, all four died of cardiac-related events. These subjects were advanced in age (73, 82, 85 and 93 years old) and had underlying heart disease; thus, making attributions of treatment relatedness challenging. However, we must continue to be vigilant of possible treatment-related effects of ICI therapy given the advanced age of the CSCC population and emerging data that anti-PD-1 therapies may be associated with increases in cardiovascular events and atherosclerotic plaque disruption<span class="citation" data-cites="Drobni2020"><sup><a href="#ref-Drobni2020" role="doc-biblioref">7</a></sup></span>.</p>
-<p>In the wake of this impactful study, several questions remain. These include the optimal number of doses of pre-operative ICI. Comparable path CR rates were observed in a pilot study two pre-operative doses of cemiplimab in Stage II-IV CSCC<span class="citation" data-cites="Ferrarotto2021"><sup><a href="#ref-Ferrarotto2021" role="doc-biblioref">8</a></sup></span> . Twenty-two percent of the subjects in the study did not received all four doses and 11% did not undergo surgery in the protocol-specified window. Thus, identifying the optimal number of pre-opreative doses of ICI therapy remains critical. In addition, understanding the clinical benefit of pre-operative ICI in some of the most at-risk patients is necessary, including those with incompetent immune systems. Furthermore, integrating pre-operative ICIs into a treatment landscape of post-operative systemic therapy, adjuvant radiation therapy or salvage treatment upon disease recurrence remains important unmet need.</p>
+<p>The consensus amongst the Interest Group was that this study is indeed practice-changing. A few participants were already incorporating pre-operative immunecheckpoint inhibitor (ICI) therapy for some of their highest-risk patients prior the publication of these results. Other participants that were primarily using ICI therapy per the FDA indications (e.g.&nbsp;locally advanced or metastatic disease) stated that they would consider implementing ICI earlier in the disease journey as a result of this study. Participants, however, stressed the importance of assessing the benefit-to-risk ratio. The absolute risk of poor outcomes for various stages of disease studied in this population varies and, in many cases, remain incompletely clarified. This may be due to CSCC not being part of the Surveillance, Epidemiology, and End Results Program. Therefore prognostic estimates of local recurrence, nodal and distant metastases, as well as disease-specific death, have come largely from single-institution datasets and are limited. For example, a 2019 study by Ruiz et al.&nbsp;evaluated the prognosis of 459 patients at BWH <span class="citation" data-cites="ruiz2019">(<a href="#ref-ruiz2019" role="doc-biblioref">Ruiz et al. 2019</a>)</span>. The 10-year cumulative incidence (CIN) rate of local recurrence (LR), nodal metastases (NM) and disease-specific death (DSD) for AJCC Stage II disease was 15.8, 12.2 and 7.6%, respectively in the 36 tumors evaluated. For the 119 T3 tumors (e.g.&nbsp;AJCC Stage III), the 10-year CIN rates for LR, NM and DSD were 19.7, 14.1 and 9.3%, respectively.</p>
+<p>Thus the benefits of pre-operative ICI must be weighed in the setting of toxicity. The current study had 4 fatalities, an unusually high proportion, given 79 total subjects. Typical estimated rates of ICI-related mortality are 1:200. Although only one subject’s death was considered possibly related to treatment, all four died of cardiac-related events. These subjects were advanced in age (73, 82, 85 and 93 years old) and had underlying heart disease; thus, making attributions of treatment relatedness challenging. However, we must continue to be vigilant of possible treatment-related effects of ICI therapy given the advanced age of the CSCC population and emerging data that anti-PD-1 therapies may be associated with increases in cardiovascular events and atherosclerotic plaque disruption <span class="citation" data-cites="Drobni2020">(<a href="#ref-Drobni2020" role="doc-biblioref">Drobni et al. 2020</a>)</span>.</p>
+<p>In the wake of this impactful study, several questions remain. These include the optimal number of doses of pre-operative ICI. Comparable path CR rates were observed in a pilot study two pre-operative doses of cemiplimab in Stage II-IV CSCC <span class="citation" data-cites="Ferrarotto2021">(<a href="#ref-Ferrarotto2021" role="doc-biblioref">Ferrarotto et al. 2021</a>)</span>. Twenty-two percent of the subjects in the study did not received all four doses and 11% did not undergo surgery in the protocol-specified window. Thus, identifying the optimal number of pre-operative doses of ICI therapy remains critical. In addition, understanding the clinical benefit of pre-operative ICI in some of the most at-risk patients is necessary, including those with incompetent immune systems. Furthermore, integrating pre-operative ICIs into a treatment landscape of post-operative systemic therapy, adjuvant radiation therapy or salvage treatment upon disease recurrence remains important unmet need.</p>
 <div style="background-color:#F5F5F5; margin-left: 0px; padding: 0px; padding-left: 0px; font-size: 12px">
 <p>This site represents our opinions only. See our full <a href="https://www.themillerlab.io/privacy/">Disclaimer</a> and <a href="https://www.themillerlab.io/terms/">Terms of Use Agreement</a></p>
 </div>
 </section>
-<section id="author-affiliations" class="level1">
-<h1>Author Affiliations</h1>
-<ol type="1">
-<li>Mass General Cancer Center and Harvard Medical School, Boston MA</li>
-<li>GW Cancer Center, George Washington University School of Medicine &amp; Health Sciences, Washington DC</li>
-<li>Pennsylvania Hospital and University of Pennsylvania, Philadelphia PA</li>
-<li>Visiting Fellow in the Dermatology Branch at the National Institute of Arthritis and Musculoskeletal and Skin Diseases</li>
-</ol>
-<section id="disclosures" class="level2">
-<h2 class="anchored" data-anchor-id="disclosures">Disclosures</h2>
+<section id="materials-and-methods" class="level1">
+<h1>Materials and Methods</h1>
+<p>This <code>Perspectives on the Science</code> piece was published using <a href="https://quarto.org">Quarto</a><sup>®</sup>. The figured depicting FDA approved therapies in CSCC was created using the skincancerRx package <span class="citation" data-cites="skincancerRx">(<a href="#ref-skincancerRx" role="doc-biblioref">D. Miller and Shalhout 2022</a>)</span>.</p>
+</section>
+<section id="disclosures" class="level1">
+<h1>Disclosures</h1>
 <p>DMM reports grants and personal fees from Regeneron, grants from Kartos Therapeutics, grants from NeoImmuneTech, personal fees from Checkpoint Therapeutics, personal fees from Pfizer, personal fees from Merck Sharpe &amp; Dome, personal fees from EMD Serono, grants from Project DataSphere, personal fees from Sanofi Genzyme, personal fees from Castle Biosciences, personal fees from Avstera, outside the submitted work. SZS reports no competing interests.</p>
+</section>
+<section id="references" class="level1">
+
 
 
 
 </section>
-</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-line-spacing="2" role="doc-bibliography">
-<div id="ref-Gross2022" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Gross, N. D. <em>et al.</em> <a href="https://doi.org/10.1056/nejmoa2209813">Neoadjuvant Cemiplimab for Stage II to IV Cutaneous Squamous-Cell Carcinoma</a>. <em>New England Journal of Medicine</em> <strong>387</strong>, 1557–1568 (2022).</div>
-</div>
-<div id="ref-patel2021" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">Patel, V. A. <em>et al.</em> <a href="https://doi.org/10.1002/cam4.4426">Cutaneous squamous cell carcinoma staging may influence management in users: A survey study</a>. <em>Cancer Medicine</em> <strong>11</strong>, 94–103 (2021).</div>
-</div>
-<div id="ref-Thompson2016" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Thompson, A. K., Kelley, B. F., Prokop, L. J., Murad, M. H. &amp; Baum, C. L. <a href="https://doi.org/10.1001/jamadermatol.2015.4994">Risk Factors for Cutaneous Squamous Cell Carcinoma Recurrence, Metastasis, and Disease-Specific Death</a>. <em>JAMA Dermatology</em> <strong>152</strong>, 419 (2016).</div>
-</div>
-<div id="ref-Migden2018" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Migden, M. R. <em>et al.</em> <a href="https://doi.org/10.1056/nejmoa1805131">PD-1 Blockade with Cemiplimab in Advanced Cutaneous Squamous-Cell Carcinoma</a>. <em>New England Journal of Medicine</em> <strong>379</strong>, 341–351 (2018).</div>
-</div>
-<div id="ref-Grob2020" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Grob, J.-J. <em>et al.</em> <a href="https://doi.org/10.1200/jco.19.03054">Pembrolizumab Monotherapy for Recurrent or Metastatic Cutaneous Squamous Cell Carcinoma: A Single-Arm Phase II Trial (KEYNOTE-629)</a>. <em>Journal of Clinical Oncology</em> <strong>38</strong>, 2916–2925 (2020).</div>
-</div>
-<div id="ref-ruiz2019" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Ruiz, E. S., Karia, P. S., Besaw, R. &amp; Schmults, C. D. <a href="https://doi.org/10.1001/jamadermatol.2019.0032">Performance of the American Joint Committee on Cancer Staging Manual, 8th Edition vs the Brigham and Women<span>’</span>s Hospital Tumor Classification System for Cutaneous Squamous Cell Carcinoma</a>. <em>JAMA Dermatology</em> <strong>155</strong>, 819 (2019).</div>
-</div>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-Drobni2020" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Drobni, Z. D. <em>et al.</em> <a href="https://doi.org/10.1161/circulationaha.120.049981">Association Between Immune Checkpoint Inhibitors With Cardiovascular Events and Atherosclerotic Plaque</a>. <em>Circulation</em> <strong>142</strong>, 2299–2311 (2020).</div>
+Drobni, Zsofia D., Raza M. Alvi, Jana Taron, Amna Zafar, Sean P. Murphy, Paula K. Rambarat, Rayma C. Mosarla, et al. 2020. <span>“Association Between Immune Checkpoint Inhibitors With Cardiovascular Events and Atherosclerotic Plaque.”</span> <em>Circulation</em> 142 (24): 2299–2311. <a href="https://doi.org/10.1161/circulationaha.120.049981">https://doi.org/10.1161/circulationaha.120.049981</a>.
 </div>
 <div id="ref-Ferrarotto2021" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Ferrarotto, R. <em>et al.</em> <a href="https://doi.org/10.1158/1078-0432.ccr-21-0585">Pilot Phase II Trial of Neoadjuvant Immunotherapy in Locoregionally Advanced, Resectable Cutaneous Squamous Cell Carcinoma of the Head and Neck</a>. <em>Clinical Cancer Research</em> <strong>27</strong>, 4557–4565 (2021).</div>
+Ferrarotto, Renata, Moran Amit, Priyadharsini Nagarajan, M. Laura Rubin, Ying Yuan, Diana Bell, Adel K. El-Naggar, et al. 2021. <span>“Pilot Phase II Trial of Neoadjuvant Immunotherapy in Locoregionally Advanced, Resectable Cutaneous Squamous Cell Carcinoma of the Head and Neck.”</span> <em>Clinical Cancer Research</em> 27 (16): 4557–65. <a href="https://doi.org/10.1158/1078-0432.ccr-21-0585">https://doi.org/10.1158/1078-0432.ccr-21-0585</a>.
 </div>
-</div></section></div></main> <!-- /main -->
+<div id="ref-Grob2020" class="csl-entry" role="doc-biblioentry">
+Grob, Jean-Jacques, Rene Gonzalez, Nicole Basset-Seguin, Olga Vornicova, Jacob Schachter, Abhishek Joshi, Nicolas Meyer, et al. 2020. <span>“Pembrolizumab Monotherapy for Recurrent or Metastatic Cutaneous Squamous Cell Carcinoma: A Single-Arm Phase II Trial (KEYNOTE-629).”</span> <em>Journal of Clinical Oncology</em> 38 (25): 2916–25. <a href="https://doi.org/10.1200/jco.19.03054">https://doi.org/10.1200/jco.19.03054</a>.
+</div>
+<div id="ref-Gross2022" class="csl-entry" role="doc-biblioentry">
+Gross, Neil D., David M. Miller, Nikhil I. Khushalani, Vasu Divi, Emily S. Ruiz, Evan J. Lipson, Friedegund Meier, et al. 2022. <span>“Neoadjuvant Cemiplimab for Stage II to IV Cutaneous Squamous-Cell Carcinoma.”</span> <em>New England Journal of Medicine</em> 387 (17): 1557–68. <a href="https://doi.org/10.1056/nejmoa2209813">https://doi.org/10.1056/nejmoa2209813</a>.
+</div>
+<div id="ref-Migden2018" class="csl-entry" role="doc-biblioentry">
+Migden, Michael R., Danny Rischin, Chrysalyne D. Schmults, Alexander Guminski, Axel Hauschild, Karl D. Lewis, Christine H. Chung, et al. 2018. <span>“PD-1 Blockade with Cemiplimab in Advanced Cutaneous Squamous-Cell Carcinoma.”</span> <em>New England Journal of Medicine</em> 379 (4): 341–51. <a href="https://doi.org/10.1056/nejmoa1805131">https://doi.org/10.1056/nejmoa1805131</a>.
+</div>
+<div id="ref-Miller2022" class="csl-entry" role="doc-biblioentry">
+Miller, David M, Sophia Z Shalhout, Denise Casey, Lola Fashoyin-Aje, Steven Lemery, Marc R Theoret, and Richard Pazdur. 2022. <span>“Impact of an Evolving Regulatory Landscape on Skin Cancer Drug Development in the u.s.”</span> <em>Dermatology Online Journal</em> 28 (2). <a href="https://doi.org/10.5070/d328257391">https://doi.org/10.5070/d328257391</a>.
+</div>
+<div id="ref-skincancerRx" class="csl-entry" role="doc-biblioentry">
+Miller, David, and Sophia Shalhout. 2022. <em>skincancerRx: Generates Visualizations for Data Related to FDA Approvals in Skin Cancer</em>.
+</div>
+<div id="ref-patel2021" class="csl-entry" role="doc-biblioentry">
+Patel, Vishal A., Catherine McCullum, Andrew D. Sparks, Chrysalyne D. Schmults, Sarah T Arron, and Anokhi Jambusaria-Pahlajani. 2021. <span>“Cutaneous Squamous Cell Carcinoma Staging May Influence Management in Users: A Survey Study.”</span> <em>Cancer Medicine</em> 11 (1): 94–103. <a href="https://doi.org/10.1002/cam4.4426">https://doi.org/10.1002/cam4.4426</a>.
+</div>
+<div id="ref-ruiz2019" class="csl-entry" role="doc-biblioentry">
+Ruiz, Emily Stamell, Pritesh S. Karia, Robert Besaw, and Chrysalyne D. Schmults. 2019. <span>“Performance of the American Joint Committee on Cancer Staging Manual, 8th Edition Vs the Brigham and Women<span>’</span>s Hospital Tumor Classification System for Cutaneous Squamous Cell Carcinoma.”</span> <em>JAMA Dermatology</em> 155 (7): 819. <a href="https://doi.org/10.1001/jamadermatol.2019.0032">https://doi.org/10.1001/jamadermatol.2019.0032</a>.
+</div>
+<div id="ref-Shalhout2021" class="csl-entry" role="doc-biblioentry">
+Shalhout, Sophia Z., Kevin S. Emerick, Howard L. Kaufman, and David M. Miller. 2021. <span>“Immunotherapy for Non-Melanoma Skin Cancer.”</span> <em>Current Oncology Reports</em> 23 (11). <a href="https://doi.org/10.1007/s11912-021-01120-z">https://doi.org/10.1007/s11912-021-01120-z</a>.
+</div>
+<div id="ref-Shalhout2023" class="csl-entry" role="doc-biblioentry">
+Shalhout, Sophia Z., David M. Miller, Kevin S. Emerick, and Howard L. Kaufman. 2023. <span>“Therapy with Oncolytic Viruses: Progress and Challenges.”</span> <em>Nature Reviews Clinical Oncology</em>, January. <a href="https://doi.org/10.1038/s41571-022-00719-w">https://doi.org/10.1038/s41571-022-00719-w</a>.
+</div>
+<div id="ref-Thompson2016" class="csl-entry" role="doc-biblioentry">
+Thompson, Agnieszka K., Benjamin F. Kelley, Larry J. Prokop, M. Hassan Murad, and Christian L. Baum. 2016. <span>“Risk Factors for Cutaneous Squamous Cell Carcinoma Recurrence, Metastasis, and Disease-Specific Death.”</span> <em>JAMA Dermatology</em> 152 (4): 419. <a href="https://doi.org/10.1001/jamadermatol.2015.4994">https://doi.org/10.1001/jamadermatol.2015.4994</a>.
+</div>
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{m.miller2022,
+  author = {David M. Miller and Vishal Patel and Justine V. Cohen and
+    Khalid Garmen and Sophia Z. Shalhout},
+  title = {Neoadjuvant {ICI} for {Resectable} {CSCC}},
+  date = {2022-11-08},
+  url = {https://cutaneousoncology.io/perspectives/neoadjuvant_ici_for_resectable_cscc},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-m.miller2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+David M. Miller, Vishal Patel, Justine V. Cohen, Khalid Garmen, and
+Sophia Z. Shalhout. 2022. <span>“Neoadjuvant ICI for Resectable
+CSCC.”</span> November 8, 2022. <a href="https://cutaneousoncology.io/perspectives/neoadjuvant_ici_for_resectable_cscc">https://cutaneousoncology.io/perspectives/neoadjuvant_ici_for_resectable_cscc</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

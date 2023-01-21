@@ -2,6 +2,7 @@
 title: "Journal Club"
 editor: visual
 bibliography: bibliography.bibtex
+title-block-banner: "#0F2A59"
 ---
 
 ![](files/journal.jpg)
@@ -18,15 +19,24 @@ Click [here](https://cutaneousoncology.shinyapps.io/coig_journal_club_timeline/)
 
 # Articles
 
+## 2023 Articles
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## January - December 2023
+
+### January.
+
+Rohaan, Maartje W., Troels H. Borch, Joost H. van den Berg, Özcan Met, Rob Kessels, Marnix H. Geukes Foppen, Joachim Stoltenborg Granhøj, et al. 2022. "Tumor-Infiltrating Lymphocyte Therapy or Ipilimumab in Advanced Melanoma." New England Journal of Medicine 387 (23): 2113--25. https://doi.org/10.1056/nejmoa2210233.
+:::
+
 ## 2022 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - December 2022
 
-
 ### December
 
-Amaria, Rodabe N., Michael Postow, Elizabeth M. Burton, Michael T. Tezlaff, Merrick I. Ross, Carlos Torres-Cabala, Isabella C. Glitza, et al. 2022. “Neoadjuvant Relatlimab and Nivolumab in Resectable Melanoma.” Nature 611 (7934): 155–60. https://doi.org/10.1038/s41586-022-05368-8.
+Amaria, Rodabe N., Michael Postow, Elizabeth M. Burton, Michael T. Tezlaff, Merrick I. Ross, Carlos Torres-Cabala, Isabella C. Glitza, et al. 2022. "Neoadjuvant Relatlimab and Nivolumab in Resectable Melanoma." Nature 611 (7934): 155--60. https://doi.org/10.1038/s41586-022-05368-8.
 
 ### November
 

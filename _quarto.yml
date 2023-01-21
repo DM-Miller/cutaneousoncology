@@ -11,20 +11,24 @@ website:
     background: primary
     search: true
     right:
-      - text: "Journal Club"
+      - text: "Journal of Cutaneous Oncology"
+        href: joco.qmd
+      - text: "COIG Journal Club"
         href: jc.qmd
-      - text: "Perspectives on the Science"
-        href: perspectives.qmd
 
 
     
+#format:
+#  html:
+#    theme: 
+#      light: cosmo
+#      dark: slate
+#    css: styles.css
+#    toc: true
+
 format:
   html:
-    theme: 
-      light: cosmo
-      dark: slate
-    css: styles.css
-    toc: true
+    theme: theme.scss
 
-editor: visual
+editor: source
 
