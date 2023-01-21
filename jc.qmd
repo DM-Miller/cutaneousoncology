@@ -22,7 +22,7 @@ Click [here](https://cutaneousoncology.shinyapps.io/coig_journal_club_timeline/)
 ## 2023 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## January - December 2023
+## January 2023
 
 ### January.
 
