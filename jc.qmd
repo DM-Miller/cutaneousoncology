@@ -22,9 +22,12 @@ Click [here](https://cutaneousoncology.shinyapps.io/coig_journal_club_timeline/)
 ## 2023 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## January 2023
+## January - February 2023
 
-### January.
+### February
+Ascierto, Paolo A, Daniil Stroyakovskiy, Helen Gogas, Caroline Robert, Karl Lewis, Svetlana Protsenko, Rodrigo P Pereira, et al. 2023. “Overall Survival with First-Line Atezolizumab in Combination with Vemurafenib and Cobimetinib in BRAFV600 Mutation-Positive Advanced Melanoma (IMspire150): Second Interim Analysis of a Multicentre, Randomised, Phase 3 Study.” The Lancet Oncology 24 (1): 33–44. https://doi.org/10.1016/s1470-2045(22)00687-8.
+
+### January
 
 Rohaan, Maartje W., Troels H. Borch, Joost H. van den Berg, Özcan Met, Rob Kessels, Marnix H. Geukes Foppen, Joachim Stoltenborg Granhøj, et al. 2022. "Tumor-Infiltrating Lymphocyte Therapy or Ipilimumab in Advanced Melanoma." New England Journal of Medicine 387 (23): 2113--25. https://doi.org/10.1056/nejmoa2210233.
 :::
