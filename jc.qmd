@@ -9,7 +9,7 @@ title-block-banner: "#0F2A59"
 
 # Overview
 
-Each month, the multi-institutional and multi-disciplinary COIG reviews recent articles describing new insights germane to cutaneous oncology.
+Each month, the multi-institutional and multi-disciplinary CCO reviews recent articles describing new insights germane to cutaneous oncology.
 
 The following are the archive of the articles covered to date.
 
@@ -25,7 +25,8 @@ Click [here](https://cutaneousoncology.shinyapps.io/coig_journal_club_timeline/)
 ## January - February 2023
 
 ### February
-Ascierto, Paolo A, Daniil Stroyakovskiy, Helen Gogas, Caroline Robert, Karl Lewis, Svetlana Protsenko, Rodrigo P Pereira, et al. 2023. “Overall Survival with First-Line Atezolizumab in Combination with Vemurafenib and Cobimetinib in BRAFV600 Mutation-Positive Advanced Melanoma (IMspire150): Second Interim Analysis of a Multicentre, Randomised, Phase 3 Study.” The Lancet Oncology 24 (1): 33–44. https://doi.org/10.1016/s1470-2045(22)00687-8.
+
+Ascierto, Paolo A, Daniil Stroyakovskiy, Helen Gogas, Caroline Robert, Karl Lewis, Svetlana Protsenko, Rodrigo P Pereira, et al. 2023. "Overall Survival with First-Line Atezolizumab in Combination with Vemurafenib and Cobimetinib in BRAFV600 Mutation-Positive Advanced Melanoma (IMspire150): Second Interim Analysis of a Multicentre, Randomised, Phase 3 Study." The Lancet Oncology 24 (1): 33--44. https://doi.org/10.1016/s1470-2045(22)00687-8.
 
 ### January
 
