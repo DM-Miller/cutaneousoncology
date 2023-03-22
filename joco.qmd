@@ -23,7 +23,7 @@ month_label <- month(month, label = TRUE, abbr = FALSE)
 
 issue <- case_when(
   month <= 6 ~ 1,
-  month >= 7 ~2
+  month >= 7 ~ 2
 )
 
 
@@ -37,7 +37,7 @@ volume <- case_when(
 ```
 
 
-[`r year`, Volume: `r volume`, Issue `r month`](https://journalofcutaneousoncology.io)
+[`r year`, Volume: `r volume`, Issue `r issue`](https://journalofcutaneousoncology.io)
 
 # About the Journal
 
