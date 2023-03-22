@@ -1,0 +1,13 @@
+---
+title: "Lessons learned from resident selection and recruitment"
+author: Mayra Lorenzo MD, PhD, FAAD
+date: "2023-03-17T13:00:00Z"
+image: mayra.jpg
+description: Lessons learned about DEI from resident selection and recruitment
+tags: 
+  - Melanoma
+categories: [2023, AAD Meeting]
+---
+
+# Event
+American Academy of Dermatology Annual Meeting "DEI in GME: Thoughts and Considerations" Session

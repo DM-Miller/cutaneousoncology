@@ -1,0 +1,13 @@
+---
+title: "Multidisciplinary Management of Melanoma and Merkel Cell Carcinoma"
+author: Vishal A. Patel
+date: "2023-03-18T16:30:00Z"
+image: VAP Headshot New.jpg
+description: Pearls on multi-disciplinary management of melanoma and Merkel cell carcinoma
+tags: 
+  - Melanoma
+categories: [2023, AAD Meeting, Melanoma, Merkel Cell Carcinoma]
+---
+
+# Event
+American Academy of Dermatology Annual Meeting "Pearls from Complex Mohs" Session

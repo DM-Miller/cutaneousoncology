@@ -1,0 +1,21 @@
+---
+author:
+- David M. Miller  
+- Vishal A. Patel
+date: "2023-03-19T19:00:00Z"
+image: featured.jpg
+tags: 
+- CSCC
+- Immunotherapy 
+- Neoadjvuant
+title: "Exploring Neoadjuvant Immunotherapies for Surgically Resectable Cutaneous Squamous Cell Carcinoma"
+description: This live program explores key clinical practice insights for patients with advanced cutaneous squamous cell carcinoma
+categories: [2023, CME, CSCC]  
+---
+ 
+## Event
+Med Learning Group TeleECHO. [Event URL](https://d.answersincme.com/160202423_1/160202423_1_p1/stage1reg?SpecialtyID=&ProfessionID=&Promocode=310&CampaignID=1730844323&CountryID=US&AudienceID=AICME&ProjectNumber=160202423_1)
+ 
+## Overview  
+
+In this live program we discuss how neoadjuvant immunotherapy fits into the treatment plan for many patients with surgically resectable cutaneous squamous cell carcinoma.

@@ -1,0 +1,13 @@
+---
+title: "Volunteering Abroad, A Surgical Perspective"
+author: Vishal A. Patel
+date: "2023-03-20T14:20:00Z"
+image: VAP Headshot New.jpg
+description: Pearls for surgeons volunteering abroad 
+tags: 
+  - Melanoma
+categories: [2023, AAD Meeting]
+---
+
+# Event
+American Academy of Dermatology Annual Meeting "Volunteers Abroad: Beginners" Session
