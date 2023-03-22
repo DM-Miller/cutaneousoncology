@@ -1,0 +1,27 @@
+---
+title: "Management of High Risk Uncommon Cutaneous Neoplasms"
+author: David M. Miller
+date: "2023-03-17T16:25:00Z"
+image: DMM_pic_cropped.jpg
+description: Pearls on the current concepts in diagnosis and management of uncommon cutaneous neoplasms
+tags: 
+  - Sebaceous Carcinoma
+  - Dermatofibrosarcoma Protuberans
+  - Merkel Cell Carcinoma
+categories: [2023, AAD Meeting, Merkel Cell Carcinoma]
+---
+
+# Event
+American Academy of Dermatology Annual Meeting "What's New in the Management of Advanced Skin Cancer" Session
+
+# Overview & Learning Objectives
+- Brief overview of pathophysiology of Sebaceous Carcinoma, Dermatofibrosarcoma Protuberans and Merkel cell carcinoma  
+- Recognize the use of Imaging and the Merkel cell polyoma virus serum antibody test in clinical practice  
+- Discuss recently approved therapeutic strategies in MCC, including the use of Immune Checkpoint Inhibitors as primary treatment, as well as emerging strategies in the neo-adjuvant and adjuvant setting  
+
+# Presentation Slides
+- To view the slides for this presentation, please click [here](https://www.themillerlab.io/presentations/aad_management_of_high_risk_uncommon_cutaneous-neoplasms_03-17-2023/slides)
+
+
+<div style="background-color:#F5F5F5; margin-left: 0px; padding: 0px; padding-left: 0px; font-size: 12px">
+Tis site represents our opinions only. See our full [Disclaimer](ttps://www.temillerlab.io/privacy/) and [Terms of Use Agreement](ttps://www.temillerlab.io/terms/)</div>

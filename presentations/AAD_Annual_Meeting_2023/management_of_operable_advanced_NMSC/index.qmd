@@ -1,0 +1,25 @@
+---
+title: "Management of Operable Advanced NMSC"
+author: David M. Miller
+date: "2023-03-17T16:00:00Z"
+image: DMM_pic_cropped.jpg
+description: Pearls on the current concepts in diagnosis and management of operable non-melanoma skin cancer
+tags: 
+  - Squamous Cell Carcinoma
+  - Basal Cell Carcinoma
+categories: [2023, AAD Meeting, BCC, CSCC]
+---
+
+# Event
+American Academy of Dermatology Annual Meeting "What's New in the Management of Advanced Skin Cancer" Session
+
+# Overview & Learning Objectives
+- Review the work up for operable NMSC
+  - Discuss the utility of SLNBx & imaging in CSCC
+  - Discuss the role of GEP in CSCC
+- Review the management of operable NMSC 
+  - Discuss the role of CPEMA and adjuvant therapy 
+  - Discuss the role of pre-operative systemic therapy for NMSC
+
+# Presentations Slides  
+- To view the slides for this presentation, please click [here](https://www.themillerlab.io/presentations/aad_management_of_operable_advanced_nmsc_03-17-2023/slides)
