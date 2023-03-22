@@ -10,7 +10,7 @@ tags:
 - Neoadjvuant
 title: "Exploring Neoadjuvant Immunotherapies for Surgically Resectable Cutaneous Squamous Cell Carcinoma"
 description: This live program explores key clinical practice insights for patients with advanced cutaneous squamous cell carcinoma
-categories: [2023, CME, CSCC]  
+categories: [2023, CSCC]  
 ---
  
 ## Event
