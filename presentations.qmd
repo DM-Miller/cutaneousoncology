@@ -1,0 +1,20 @@
+---
+title: "Presentations"
+listing:
+  contents: presentations  
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true 
+page-layout: full
+title-block-banner: "#0F2A59"
+---
+
+## Overview
+Members of the SoCO community contribute to the field of cutaneous oncology in a myriad of ways, including scientific investigation and medical education. Here, we highlight past and upcoming presentations by SoCO members at local, regional, national and international events.  
+
+
+## American Academy of Dermatology 2023 Annual Meeting
+:::{#AAD_Annual_Meeting_2023}
+:::

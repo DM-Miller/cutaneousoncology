@@ -1,0 +1,25 @@
+---
+title: "How do we implement systemic therapy to reduce recurrence of high-risk melanomas: from neoadjuvant to adjuvant therapy?"
+author: David M. Miller
+date: "2023-03-17T10:30:00Z"
+image: DMM_pic_cropped.jpg
+description: Pearls on the current concepts in peri-operative management of high-risk melanoma
+tags: 
+  - Melanoma
+categories: [2023, AAD Meeting, Melanoma]
+---
+
+# Event
+American Academy of Dermatology Annual Meeting "Managing Melanoma" Session
+
+# Overview & Learning Objectives
+- Review the work up for high-risk melanoma 
+- Review the role of pre-operative systemic therapy in melanoma 
+- Review the role of post-operative systemic therapy in melanoma
+
+# Presentation Slides
+- To view the slides for this presentation, please click [here](https://www.themillerlab.io/presentations/aad_peri-operative_management_of_high-risk_melanoma_03-17-2023/slides#/)
+
+
+<div style="background-color:#F5F5F5; margin-left: 0px; padding: 0px; padding-left: 0px; font-size: 12px">
+Tis site represents our opinions only. See our full [Disclaimer](ttps://www.temillerlab.io/privacy/) and [Terms of Use Agreement](ttps://www.temillerlab.io/terms/)</div>
