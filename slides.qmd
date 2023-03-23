@@ -1,0 +1,24 @@
+---
+title: "Presentation Slides"
+listing: 
+- id: AAD_2023
+  contents: slides/aad_annual_meeting_2023  
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  feed: true 
+page-layout: full
+title-block-banner: false
+---
+
+
+------------------------------------------------------------------------
+
+
+
+## AAD Annual Meeting 2023
+:::{#AAD_2023}
+:::
+

@@ -1,5 +1,14 @@
 [
   {
+    "listing": "/slides.html",
+    "items": [
+      "/slides/aad_annual_meeting_2023/updates_in_mcc/index.html",
+      "/slides/aad_annual_meeting_2023/management_of_high_risk_uncommon_cutaneous_neoplasms/index.html",
+      "/slides/aad_annual_meeting_2023/management_of_operable_advanced_NMSC/index.html",
+      "/slides/aad_annual_meeting_2023/perioperative_systemic_therapy_for_melanoma/index.html"
+    ]
+  },
+  {
     "listing": "/presentations.html",
     "items": [
       "/presentations/AAD_Annual_Meeting_2023/management_of_operable_advanced_NMSC/Slides.html",
@@ -18,7 +27,8 @@
       "/presentations/AAD_Annual_Meeting_2023/update_in_advanced_melanoma_therapy/index.html",
       "/presentations/AAD_Annual_Meeting_2023/lessons_learned_from_resident_selection_and_recruitment/index.html",
       "/presentations/AAD_Annual_Meeting_2023/perioperative_systemic_therapy_for_melanoma/index.html",
-      "/presentations/AAD_Annual_Meeting_2023/how_can_we_improve_detection_and_reduce_unnecessary_biopsies_in_melanoma/index.html"
+      "/presentations/AAD_Annual_Meeting_2023/how_can_we_improve_detection_and_reduce_unnecessary_biopsies_in_melanoma/index.html",
+      "/presentations/SSO_2023/Intralesional_Treatments_for_Cancer/index.html"
     ]
   }
 ]
