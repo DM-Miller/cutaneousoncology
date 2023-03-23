@@ -18,4 +18,4 @@ American Academy of Dermatology Annual Meeting "Updates in Cutaneous Oncology" S
 - Discuss recently approved therapeutic strategies in MCC, including the use of Immune Checkpoint Inhibitors as primary treatment, as well as emerging strategies in the neo-adjuvant and adjuvant setting  
 
 # Presentation Slides
-- To view the slides for this presentation, please click [here](https://www.themillerlab.io/presentations/aad_mcc_updates_03-18-2023/slides)
+- To view the slides for this presentation, please click [here](https://cutaneousoncology.io/slides/aad_annual_meeting_2023/updates_in_mcc/#/section)
