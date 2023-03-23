@@ -20,7 +20,7 @@ American Academy of Dermatology Annual Meeting "What's New in the Management of 
 - Discuss recently approved therapeutic strategies in MCC, including the use of Immune Checkpoint Inhibitors as primary treatment, as well as emerging strategies in the neo-adjuvant and adjuvant setting  
 
 # Presentation Slides
-- To view the slides for this presentation, please click [here](https://www.themillerlab.io/presentations/aad_management_of_high_risk_uncommon_cutaneous-neoplasms_03-17-2023/slides)
+- To view the slides for this presentation, please click [here](https://www.themillerlab.io/presentations/aad_management_of_high_risk_uncommon_cutaneous-neoplasms_03-17-2023/slides#/section)
 
 
 <div style="background-color:#F5F5F5; margin-left: 0px; padding: 0px; padding-left: 0px; font-size: 12px">
