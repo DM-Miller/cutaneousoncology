@@ -1,0 +1,19 @@
+---
+title: "ICARUS"
+author: David M. Miller
+date: "2023-03-31T16:00:00Z"
+image: DMM_pic_cropped.jpg
+description: We discuss a trial concept for high-risk CSCC
+tags: 
+  - Squamous Cell Carcinoma
+categories: [2023, SoCO Reserach Forum, CSCC]
+---
+
+# Event
+Society of Cutaneous Oncology Research Forum
+
+# Overview & Learning Objectives
+- We review the hypothesis, rationale and schema for ICARUS, an immunoprevention trial for patients with high-risk CSCC  
+
+# Presentation Slides
+- To view the slides for this presentation, please click [here](https://cutaneousoncology.io/slides/soco_research_forum/icarus_03_31_2023/#/section)

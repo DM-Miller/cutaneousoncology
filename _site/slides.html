@@ -88,6 +88,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-soco_research_forum .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-soco_research_forum'] = new List('listing-soco_research_forum', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -141,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="2023">2023 <span class="quarto-category-count">(4)</span></div><div class="category" data-category="AAD Meeting">AAD Meeting <span class="quarto-category-count">(4)</span></div><div class="category" data-category="BCC">BCC <span class="quarto-category-count">(1)</span></div><div class="category" data-category="CSCC">CSCC <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Melanoma">Melanoma <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Merkel Cell Carcinoma">Merkel Cell Carcinoma <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="2023">2023 <span class="quarto-category-count">(5)</span></div><div class="category" data-category="AAD Meeting">AAD Meeting <span class="quarto-category-count">(4)</span></div><div class="category" data-category="BCC">BCC <span class="quarto-category-count">(1)</span></div><div class="category" data-category="CSCC">CSCC <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Melanoma">Melanoma <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Merkel Cell Carcinoma">Merkel Cell Carcinoma <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SoCO Research Forum">SoCO Research Forum <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -163,6 +191,76 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <hr>
+<section id="soco-research-forum" class="level2">
+<h2 class="anchored" data-anchor-id="soco-research-forum">SoCO Research Forum</h2>
+<div id="listing-soco_research_forum" class="quarto-listing quarto-listing-container-default">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-soco_research_forum-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-soco_research_forum'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="2023,SoCO Research Forum" data-listing-date-sort="NaN" data-listing-file-modified-sort="1680384282722" data-listing-reading-time-sort="36.23">
+<div class="thumbnail">
+<p><a href="./slides/soco_research_forum/icarus_03_31_2023/index.html"> <img src="./slides/soco_research_forum/icarus_03_31_2023/figures/title_slide.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./slides/soco_research_forum/icarus_03_31_2023/index.html">
+<h3 class="no-anchor listing-title">
+{background-image=“figures/title_slide.jpg”}
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('2023'); return false;">
+2023
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('SoCO Research Forum'); return false;">
+SoCO Research Forum
+</div>
+</div>
+<a href="./slides/soco_research_forum/icarus_03_31_2023/index.html">
+<div class="listing-description">
+<p>We discuss the concept of a immunoprevention trial for CSCC</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./slides/soco_research_forum/icarus_03_31_2023/index.html">
+<div class="listing-date">
+Invalid Date
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
 <section id="aad-annual-meeting-2023" class="level2">
 <h2 class="anchored" data-anchor-id="aad-annual-meeting-2023">AAD Annual Meeting 2023</h2>
 <div id="listing-AAD_2023" class="quarto-listing quarto-listing-container-default">

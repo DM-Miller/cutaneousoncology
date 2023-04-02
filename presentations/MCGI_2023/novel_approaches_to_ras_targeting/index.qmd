@@ -1,0 +1,18 @@
+---
+title: "Novel Approaches to RAS Targeting"
+author: Ryan J. Sullivan
+date: "2023-04-01T11:20:00Z"
+image: ryan_sullivan.jpg
+description: Discussion of novel approaches to targeting the RAS pathway
+tags: 
+  - RAS
+categories: [2023, MCGI]
+---
+
+# Event
+2023 MCGI Forum
+
+# Overview & Learning Objectives
+- Discussion of novel approaches to targeting RAS 
+
+

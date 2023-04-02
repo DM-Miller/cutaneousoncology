@@ -9,6 +9,14 @@ listing:
   sort-ui: true
   filter-ui: true
   feed: true 
+- id: soco_research_forum
+  contents: slides/soco_research_forum  
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  feed: true   
 page-layout: full
 title-block-banner: false
 ---
@@ -16,6 +24,9 @@ title-block-banner: false
 
 ------------------------------------------------------------------------
 
+## SoCO Research Forum
+:::{#soco_research_forum}
+:::
 
 
 ## AAD Annual Meeting 2023
