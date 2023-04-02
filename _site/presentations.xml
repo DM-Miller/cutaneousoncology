@@ -10,7 +10,38 @@
 <atom:link href="https://cutaneousoncology.io/presentations.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.2.269</generator>
-<lastBuildDate>Sat, 01 Apr 2023 11:20:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 01 Apr 2023 13:45:00 GMT</lastBuildDate>
+<item>
+  <title>Integrating Novel Treatment Approaches for Cutaneous Squamous Cell Carcinoma</title>
+  <dc:creator>David M. Miller</dc:creator>
+  <link>https://cutaneousoncology.io/presentations/RME_Collaborative_2023/CSCC/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="event" class="level1">
+<h1>Event</h1>
+<p>RME Collaborative Oncology Congress</p>
+</section>
+<section id="overview-learning-objectives" class="level1">
+<h1>Overview &amp; Learning Objectives</h1>
+<ul>
+<li>Summarize the clinical evidence for the efficacy and safety of new and emerging therapeutic options and treatment strategies for cutaneous squamous cell carcinoma (CSCC)</li>
+<li>Develop individualized management plans for advanced and metastatic CSCC, incorporating current guideline recommendations, clinical data, and best practices</li>
+<li>Implement evidence-based strategies for reducing disparities in CSCC care and treatment in rural and underserved settings</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>2023</category>
+  <category>Oncology Congress</category>
+  <category>CSCC</category>
+  <guid>https://cutaneousoncology.io/presentations/RME_Collaborative_2023/CSCC/index.html</guid>
+  <pubDate>Sat, 01 Apr 2023 13:45:00 GMT</pubDate>
+  <media:content url="https://cutaneousoncology.io/presentations/RME_Collaborative_2023/CSCC/DMM_pic_cropped.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Novel Approaches to RAS Targeting</title>
   <dc:creator>Ryan J. Sullivan</dc:creator>
@@ -73,6 +104,38 @@
   <guid>https://cutaneousoncology.io/presentations/SoCO_Research_Forum/ICARUS/index.html</guid>
   <pubDate>Fri, 31 Mar 2023 16:00:00 GMT</pubDate>
   <media:content url="https://cutaneousoncology.io/presentations/SoCO_Research_Forum/ICARUS/DMM_pic_cropped.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Integrating the Latest Evidence on Management of Basal Cell Carcinoma</title>
+  <dc:creator>David M. Miller</dc:creator>
+  <link>https://cutaneousoncology.io/presentations/RME_Collaborative_2023/BCC/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="event" class="level1">
+<h1>Event</h1>
+<p>RME Collaborative Oncology Congress</p>
+</section>
+<section id="overview-learning-objectives" class="level1">
+<h1>Overview &amp; Learning Objectives</h1>
+<ul>
+<li>Implement evidence-based strategies for reducing disparities in basal cell carcinoma (BCC) care in rural and underserved settings</li>
+<li>Differentiate treatment options for BCC based on clinical efficacy and safety data</li>
+<li>Integrate clinical evidence and current guideline recommendations into treatment plans for patients with BCC</li>
+<li>Recognize adverse events associated with therapies for BCC to improve adherence to therapy</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>2023</category>
+  <category>Oncology Congress</category>
+  <category>BCC</category>
+  <guid>https://cutaneousoncology.io/presentations/RME_Collaborative_2023/BCC/index.html</guid>
+  <pubDate>Fri, 31 Mar 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://cutaneousoncology.io/presentations/RME_Collaborative_2023/BCC/DMM_pic_cropped.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Intralesional Treatments for Cancer</title>

@@ -10,7 +10,17 @@
 <atom:link href="https://cutaneousoncology.io/slides.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.2.269</generator>
-<lastBuildDate>Sat, 18 Mar 2023 13:30:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 31 Mar 2023 16:00:00 GMT</lastBuildDate>
+<item>
+  <title></title>
+  <link>https://cutaneousoncology.io/slides/soco_research_forum/icarus_03_31_2023/index.html</link>
+  <description><![CDATA[ undefined ]]></description>
+  <category>2023</category>
+  <category>SoCO Research Forum</category>
+  <guid>https://cutaneousoncology.io/slides/soco_research_forum/icarus_03_31_2023/index.html</guid>
+  <pubDate>Fri, 31 Mar 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://cutaneousoncology.io/slides/soco_research_forum/icarus_03_31_2023/figures/title_slide.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title></title>
   <link>https://cutaneousoncology.io/slides/aad_annual_meeting_2023/updates_in_mcc/index.html</link>
@@ -55,16 +65,6 @@
   <guid>https://cutaneousoncology.io/slides/aad_annual_meeting_2023/perioperative_systemic_therapy_for_melanoma/index.html</guid>
   <pubDate>Fri, 17 Mar 2023 10:45:00 GMT</pubDate>
   <media:content url="https://cutaneousoncology.io/slides/aad_annual_meeting_2023/perioperative_systemic_therapy_for_melanoma/Slides/Slides_1.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title></title>
-  <link>https://cutaneousoncology.io/slides/soco_research_forum/icarus_03_31_2023/index.html</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>2023</category>
-  <category>SoCO Research Forum</category>
-  <guid>https://cutaneousoncology.io/slides/soco_research_forum/icarus_03_31_2023/index.html</guid>
-  <pubDate>Invalid Date</pubDate>
-  <media:content url="https://cutaneousoncology.io/slides/soco_research_forum/icarus_03_31_2023/figures/title_slide.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

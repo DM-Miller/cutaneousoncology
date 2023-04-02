@@ -172,6 +172,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-RME_Collaborative_2023 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-RME_Collaborative_2023'] = new List('listing-RME_Collaborative_2023', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 <style>
     .quarto-title-block .quarto-title-banner {
@@ -246,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(16)</span></div><div class="category" data-category="2023">2023 <span class="quarto-category-count">(16)</span></div><div class="category" data-category="AAD Meeting">AAD Meeting <span class="quarto-category-count">(12)</span></div><div class="category" data-category="BCC">BCC <span class="quarto-category-count">(1)</span></div><div class="category" data-category="CSCC">CSCC <span class="quarto-category-count">(4)</span></div><div class="category" data-category="MCGI">MCGI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Melanoma">Melanoma <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Merkel Cell Carcinoma">Merkel Cell Carcinoma <span class="quarto-category-count">(3)</span></div><div class="category" data-category="SSO">SSO <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SoCO Reserach Forum">SoCO Reserach Forum <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(18)</span></div><div class="category" data-category="2023">2023 <span class="quarto-category-count">(18)</span></div><div class="category" data-category="AAD Meeting">AAD Meeting <span class="quarto-category-count">(12)</span></div><div class="category" data-category="BCC">BCC <span class="quarto-category-count">(2)</span></div><div class="category" data-category="CSCC">CSCC <span class="quarto-category-count">(5)</span></div><div class="category" data-category="MCGI">MCGI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Melanoma">Melanoma <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Merkel Cell Carcinoma">Merkel Cell Carcinoma <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Oncology Congress">Oncology Congress <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SSO">SSO <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SoCO Reserach Forum">SoCO Reserach Forum <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -320,6 +348,123 @@ Apr 1, 2023
 </div>
 <div class="listing-author">
 Ryan J. Sullivan
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="rmei-collaborative-oncology-congress" class="level2">
+<h2 class="anchored" data-anchor-id="rmei-collaborative-oncology-congress">RMEI Collaborative Oncology Congress</h2>
+<div id="listing-RME_Collaborative_2023" class="quarto-listing quarto-listing-container-default">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-RME_Collaborative_2023-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-RME_Collaborative_2023'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="2023,Oncology Congress,CSCC" data-listing-date-sort="1680356700000" data-listing-file-modified-sort="1680398079800" data-listing-reading-time-sort="0.335">
+<div class="thumbnail">
+<p><a href="./presentations/RME_Collaborative_2023/CSCC/index.html"> <img src="./presentations/RME_Collaborative_2023/CSCC/DMM_pic_cropped.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./presentations/RME_Collaborative_2023/CSCC/index.html">
+<h3 class="no-anchor listing-title">
+Integrating Novel Treatment Approaches for Cutaneous Squamous Cell Carcinoma
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('2023'); return false;">
+2023
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Oncology Congress'); return false;">
+Oncology Congress
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('CSCC'); return false;">
+CSCC
+</div>
+</div>
+<a href="./presentations/RME_Collaborative_2023/CSCC/index.html">
+<div class="listing-description">
+<p>We summarize the clinical evidence for the efficacy and safety of new and emerging therapeutic options and treatment strategies for cutaneous squamous cell carcinoma</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./presentations/RME_Collaborative_2023/CSCC/index.html">
+<div class="listing-date">
+Apr 1, 2023
+</div>
+<div class="listing-author">
+David M. Miller
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="2023,Oncology Congress,BCC" data-listing-date-sort="1680278400000" data-listing-file-modified-sort="1680398234291" data-listing-reading-time-sort="0.34">
+<div class="thumbnail">
+<p><a href="./presentations/RME_Collaborative_2023/BCC/index.html"> <img src="./presentations/RME_Collaborative_2023/BCC/DMM_pic_cropped.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./presentations/RME_Collaborative_2023/BCC/index.html">
+<h3 class="no-anchor listing-title">
+Integrating the Latest Evidence on Management of Basal Cell Carcinoma
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('2023'); return false;">
+2023
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Oncology Congress'); return false;">
+Oncology Congress
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('BCC'); return false;">
+BCC
+</div>
+</div>
+<a href="./presentations/RME_Collaborative_2023/BCC/index.html">
+<div class="listing-description">
+<p>We discuss implementation of evidence-based strategies for reducing disparities in basal cell carcinoma (BCC) care in rural and underserved settings</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./presentations/RME_Collaborative_2023/BCC/index.html">
+<div class="listing-date">
+Mar 31, 2023
+</div>
+<div class="listing-author">
+David M. Miller
 </div>
 </a>
 </div>
