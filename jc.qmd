@@ -22,11 +22,19 @@ Click [here](https://cutaneousoncology.shinyapps.io/coig_journal_club_timeline/)
 ## 2023 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## January - March 2023
+## January - May 2023
+
+### May
+
+Drobni, Zsofia D., Raza M. Alvi, Jana Taron, Amna Zafar, Sean P. Murphy, Paula K. Rambarat, Rayma C. Mosarla, et al. 2020. "Association Between Immune Checkpoint Inhibitors With Cardiovascular Events and Atherosclerotic Plaque." Circulation 142 (24): 2299--2311. https://doi.org/10.1161/circulationaha.120.049981.
+
+### April
+
+Patel, Sapna P., Megan Othus, Yuanbin Chen, G. Paul Wright, Kathleen J. Yost, John R. Hyngstrom, Siwen Hu-Lieskovan, et al. 2023. Neoadjuvant--Adjuvant or Adjuvant-Only Pembrolizumab in Advanced Melanoma. New England Journal of Medicine 388 (9): 813--23.
 
 ### March
 
-Allen, Nicholas C., Andrew J. Martin, Victoria A. Snaidr, Renee Eggins, Alvin H. Chong, Pablo Fernandéz-Peñas, Douglas Gin, et al. 2023. \"Nicotinamide for Skin-Cancer Chemoprevention in Transplant Recipients.\" *New England Journal of Medicine* 388 (9): 804--12. <https://doi.org/10.1056/nejmoa2203086>.
+Allen, Nicholas C., Andrew J. Martin, Victoria A. Snaidr, Renee Eggins, Alvin H. Chong, Pablo Fernandéz-Peñas, Douglas Gin, et al. 2023. "Nicotinamide for Skin-Cancer Chemoprevention in Transplant Recipients." *New England Journal of Medicine* 388 (9): 804--12. <https://doi.org/10.1056/nejmoa2203086>.
 
 ### February
 

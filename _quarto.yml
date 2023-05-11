@@ -7,6 +7,9 @@ website:
   site-url: https://cutaneousoncology.io
   page-navigation: true
   reader-mode: true
+  open-graph: true
+  twitter-card: 
+    site: "@SocCutaneousOnc"
   navbar:
     background: primary
     search: true
@@ -15,6 +18,8 @@ website:
         href: joco.qmd
       - text: "SoCO Journal Club"
         href: jc.qmd
+      - text: "Research Forum"
+        href: research_forum.qmd
       - text: "Presentations"
         href: presentations.qmd
 

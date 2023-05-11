@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/research_forum.html",
+    "items": [
+      "/research_forum/Art of the Review/index.html",
+      "/research_forum/ICARUS/index.html"
+    ]
+  },
+  {
     "listing": "/slides.html",
     "items": [
       "/slides/aad_annual_meeting_2023/updates_in_mcc/index.html",
@@ -26,7 +33,6 @@
       "/presentations/AAD_Annual_Meeting_2023/perioperative_systemic_therapy_for_melanoma/index.html",
       "/presentations/AAD_Annual_Meeting_2023/how_can_we_improve_detection_and_reduce_unnecessary_biopsies_in_melanoma/index.html",
       "/presentations/SSO_2023/Intralesional_Treatments_for_Cancer/index.html",
-      "/presentations/SoCO_Research_Forum/ICARUS/index.html",
       "/presentations/MCGI_2023/novel_approaches_to_ras_targeting/index.html",
       "/presentations/RME_Collaborative_2023/CSCC/index.html",
       "/presentations/RME_Collaborative_2023/BCC/index.html"

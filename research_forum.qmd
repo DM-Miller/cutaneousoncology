@@ -1,0 +1,21 @@
+---
+title: "Research Forum"
+page-layout: full
+title-block-banner: "#0F2A59"
+listing: 
+- id: SoCO_Research_Forum
+  contents: research_forum  
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  feed: true
+---
+
+## Overview
+In an effort to fulfill our missions of 1) supporting SoCO members in producing high-quality, reproducible science and 2) educating future generations of clinical oncologists and scientific investigators dedicated to skin cancer, the Society of Cutaneous Oncology supports an open forum for research discussions and presentations that convenes several times per year.
+
+## SoCO Research Forum Presentations
+:::{#SoCO_Research_Forum}
+:::
