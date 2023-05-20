@@ -23,8 +23,6 @@ website:
       - text: "Presentations"
         href: presentations.qmd
 
-
-    
 #format:
 #  html:
 #    theme: 

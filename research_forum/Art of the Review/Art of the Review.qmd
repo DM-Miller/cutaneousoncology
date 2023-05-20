@@ -1,0 +1,925 @@
+---
+title: ""
+format:
+  revealjs: 
+    scrollable: true
+    slide-number: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+css: styles.css
+bibliography: bibliography.bibtex
+---
+
+
+## 
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+library(tidyverse)
+library(plotly)
+library(gt)
+library(glue)
+
+
+```
+
+[**To Accept, Revise or Reject**]{style="font-size:60px"}
+
+[**The Art of the Review**]{style="color:red" style="font-size:100px"}
+
+```{r load redcap data, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+library(REDCapR)
+
+# Load Data
+
+dt <- readRDS(file = "Art of the Review Data.rds")
+```
+
+::: footer
+SoCO
+:::
+
+## Role
+
+```{r , echo=FALSE}
+role <- dt |> 
+  select(role___author, role___reviewer, role___editor) |> 
+  pivot_longer(starts_with("role")) |> 
+  drop_na(value) |> 
+  group_by(name) 
+  
+role$value <- as.double(role$value)
+
+role <- role |> 
+  dplyr::summarise(
+    n = sum(value)
+  )
+
+role$name[role$name == "role___author"] <- "Author"
+role$name[role$name == "role___reviewer"] <- "Reviewer"
+role$name[role$name == "role___editor"] <- "Editor"
+
+role <- role |>   
+  mutate(name = fct_reorder(name, n, .desc = TRUE)
+  )
+
+
+
+
+role |> 
+  ggplot(
+    aes(x = name,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = name,
+        y = n,
+        label = paste(n,"", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Which of the following roles have you played in the scientific review process?",
+    45)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(role$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+::: footer
+SoCO
+:::
+
+## Formal Training
+
+```{r , echo=FALSE}
+course <- dt |> 
+  drop_na(course) |> 
+  count(course) |> 
+  mutate(prop = round(n/sum(n)*100)) |> 
+  mutate(course = fct_reorder(course, n, .desc = TRUE)
+  )
+
+course |> 
+  ggplot(
+    aes(x = course,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = course,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Have you taken a course on how to review a scientific manuscript?",
+    45)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(course$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+
+## Training in the review process
+
+- Program in clinical effectiveness (Harvard Catalyst)
+- [Springer Nature](https://www.springernature.com/gp/authors/campaigns/how-to-peer-review)
+
+## Scale of the committment
+
+## Invitations to Review
+
+```{r , echo=FALSE}
+review_asked <- dt |> 
+  drop_na(review_asked) |> 
+  count(review_asked) |> 
+  mutate(prop = round(n/sum(n)*100))
+  
+review_asked <- review_asked |>   
+  mutate(review_asked = ifelse(review_asked == "Atleast 10", "≥10", review_asked)) |> 
+  mutate(review_asked = fct_reorder(review_asked, n, .desc = TRUE)
+  )
+
+review_asked |> 
+  ggplot(
+    aes(x = review_asked,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = review_asked,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "How many papers are you invited to review each year?",
+    45)
+    ) +
+  xlab("Number of Manuscripts") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(review_asked$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+::: footer
+SoCO
+:::
+
+
+## Invitations Accepted
+
+```{r , echo=FALSE}
+papers_reviewed <- dt |> 
+  drop_na(papers_reviewed) |> 
+  count(papers_reviewed) |> 
+  mutate(prop = round(n/sum(n)*100))
+  
+papers_reviewed <- papers_reviewed |>   
+  mutate(papers_reviewed = ifelse(papers_reviewed == "Atleast 10", "≥10", papers_reviewed)) |> 
+  mutate(papers_reviewed = fct_reorder(papers_reviewed, n, .desc = TRUE)
+  )
+
+papers_reviewed |> 
+  ggplot(
+    aes(x = papers_reviewed,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = papers_reviewed,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "How many papers do you accept to review per year?",
+    45)
+    ) +
+  xlab("Number of Manuscripts") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(papers_reviewed$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+
+::: footer
+SoCO
+:::
+
+
+## Time Burden of the Review Process
+
+```{r , echo=FALSE}
+time <- dt |> 
+  drop_na(time) |> 
+  count(time) |> 
+  mutate(prop = round(n/sum(n)*100))
+  
+time <- time |>   
+  mutate(time = ifelse(time == "Atleast 120", "≥120", time)) |> 
+  mutate(time = fct_reorder(time, n, .desc = TRUE)
+  )
+
+time |> 
+  ggplot(
+    aes(x = time,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = time,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "How long do you spend, on average, to review a typical manuscript (minutes)?",
+    45)
+    ) +
+  xlab("Minutes") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(time$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+
+::: footer
+SoCO
+:::
+
+
+## Why do we participate?
+
+- Serving as a peer reviewer looks good on your CV as it shows that your expertise is recognized by other scientists 
+
+- You will get to read some of the latest science in your field well before it is in the public domain
+
+- The critical thinking skills needed during peer review will help you in your own research and writing
+
+::: footer
+source: https://www.springernature.com/gp/authors/campaigns/how-to-peer-review
+:::
+
+## Reasons To Review
+
+```{r , echo=FALSE}
+reason_why <- dt |> 
+  drop_na(reason_why) |> 
+  count(reason_why) |> 
+  mutate(prop = round(n/sum(n)*100)) |> 
+  mutate(reason_why = fct_reorder(reason_why, n, .desc = TRUE)
+  )
+
+reason_why |> 
+  ggplot(
+    aes(x = reason_why,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = reason_why,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "In general, what is the most common reason you agree to review an article?",
+    45)
+    ) +
+  xlab("Reason to Review") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(reason_why$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+::: footer
+SoCO
+:::
+
+
+## Incetives 
+
+::: footer
+SoCO
+:::
+
+
+## Incentivization
+
+```{r , echo=FALSE}
+incentivized <- dt |> 
+  drop_na(incentivized) |> 
+  count(incentivized) |> 
+  mutate(prop = round(n/sum(n)*100)) |> 
+  mutate(incentivized = fct_reorder(incentivized, n, .desc = TRUE)
+  )
+
+incentivized |> 
+  ggplot(
+    aes(x = incentivized,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = incentivized,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Do you feel sufficiently incentivized to review articles in our current system?",
+    45)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(incentivized$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+::: footer
+SoCO
+:::
+
+
+## Compensation
+
+```{r , echo=FALSE}
+compensation <- dt |> 
+  drop_na(compensation) |> 
+  count(compensation) |> 
+  mutate(prop = round(n/sum(n)*100)) |> 
+  mutate(compensation = fct_reorder(compensation, n, .desc = TRUE)
+  )
+
+compensation |> 
+  ggplot(
+    aes(x = compensation,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = compensation,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Do you think reviewers should be compensated for their time and effort?",
+    45)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(compensation$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+::: footer
+SoCO
+:::
+
+
+## Financial Compensation
+
+```{r , echo=FALSE}
+paid <- dt |> 
+  drop_na(paid) |> 
+  count(paid) |> 
+  mutate(prop = round(n/sum(n)*100)) |> 
+  mutate(paid = fct_reorder(paid, n, .desc = TRUE)
+  )
+
+paid |> 
+  ggplot(
+    aes(x = paid,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = paid,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Do you think reviewers should be compensated financially for their time and effort?",
+    45)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(paid$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+::: footer
+SoCO
+:::
+
+## Conflict of Interests 
+
+- Potential conflicts of interest include:
+    - The reported results could cause you to make or lose money, e.g., the authors are developing a drug that could compete with a drug you are working on.
+    - The manuscript concerns a controversial question that you have strong feelings about (either agreeing or disagreeing with the authors).
+    - You have strong positive or negative feelings about one of the authors, e.g., a former teacher who you admire greatly.
+    - You have published papers or collaborated with one of the co-authors in recent years.
+    
+
+::: footer
+SoCO
+:::
+
+## COI
+
+```{r , echo=FALSE}
+coi_1 <- dt |> 
+  drop_na(coi_1) |> 
+  count(coi_1) |> 
+  mutate(prop = round(n/sum(n)*100)) |> 
+  mutate(coi_1 = fct_reorder(coi_1, n, .desc = TRUE)
+  )
+
+coi_1 |> 
+  ggplot(
+    aes(x = coi_1,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = coi_1,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "You are invited to review a manuscript. An investigator who you've published with before is listed as first author. Do you accept the invitation to review?",
+    60)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(coi_1$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+::: footer
+SoCO
+:::
+
+## COI
+
+```{r , echo=FALSE}
+coi_2 <- dt |> 
+  drop_na(coi_2) |> 
+  count(coi_2) |> 
+  mutate(prop = round(n/sum(n)*100)) |> 
+  mutate(coi_2 = fct_reorder(coi_2, n, .desc = TRUE)
+  )
+
+coi_2 |> 
+  ggplot(
+    aes(x = coi_2,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = coi_2,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "You are invited to review a manuscript. An investigator who you've published with before is listed as middle author. Do you accept the invitation to review?",
+    60)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(coi_2$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+::: footer
+SoCO
+:::
+
+## Peer Review Process
+
+- Peer review is commonly conducted via what is referred to as a “closed” process, where the editor and the reviewers knew who the authors were, but the authors did not know who the reviewers were
+- Various approaches are now employed:  
+    - Closed peer review—where the reviewers are aware of the authors’ identities but the authors’ are never informed of the reviewers’ identities
+    - Double-blind peer review—where neither author nor reviewer is aware of each other’s identities 
+    - Open peer review—where authors and reviewers are aware of each other’s identity
+        - In some journals with open peer review the reviewers’ reports are published alongside the article.
+
+## Preference on the Process
+
+```{r , echo=FALSE}
+approach <- dt |> 
+  drop_na(approach) |> 
+  count(approach) |> 
+  mutate(prop = round(n/sum(n)*100)) |> 
+  mutate(approach = fct_reorder(approach, n, .desc = TRUE)
+  )
+
+approach |> 
+  ggplot(
+    aes(x = approach,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = approach,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Which of the following review approach do you prefer?",
+    60)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(approach$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+
+
+::: footer
+SoCO
+:::
+
+
+
+
+## To Accept, Revise or Reject
+
+## Important Study, But Do You Accept?
+
+```{r , echo=FALSE, eval=FALSE}
+trial_1 <- dt |> 
+  drop_na(trial_1) |> 
+  count(trial_1) |> 
+  mutate(prop = round(n/sum(n)*100)) |> 
+  mutate(trial_1 = fct_reorder(trial_1, n, .desc = TRUE)
+  )
+
+trial_1 |> 
+  ggplot(
+    aes(x = trial_1,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = trial_1,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "You are asked to review a manuscript from an editor at a top-tier clinical journal. The trial is novel & appropriately conducted. The authors argue the results should become the standard of care. It is small (n< 15), non-randomized, non-comparative and from a single institution.  Although you think it is an important contribution to the field, its impact doesn't seem consistent with other studies published in this journal. What would you decide?",
+    60)
+    ) +
+  xlab("Decision") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(trial_1$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+```{r , echo=FALSE}
+trial_1 <- dt |> 
+  drop_na(trial_1) |> 
+  count(trial_1) |> 
+  mutate(prop = round(n/sum(n)*100)) |> 
+  mutate(trial_1 = fct_reorder(trial_1, n, .desc = TRUE)
+  )
+
+trial_1 |> 
+  ggplot(
+    aes(x = trial_1,
+        y = n)
+  ) + 
+  geom_col(fill = "steelblue4") + 
+  geom_text(
+    aes(x = trial_1,
+        y = n,
+        label = paste(prop,"%", sep = ""),
+        hjust= -0.1)
+    ) +
+  ggtitle(str_wrap(
+    "Would you recommend `reject` for a manuscript of a well conducted study that was a worthwhile contribution to the field, but could not be revised (e.g. a completed clinically trial) simply because you didn't believe it met the impact standards of the selected journal (e.g. the study was small and was not necessarily `practice changing`)?",
+    60)
+    ) +
+  xlab("") +
+  ylab("Number of Respondents") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")
+  ) +
+  theme(title = element_text(face = "bold", size = 18)) +
+  theme(axis.title.x = element_text(face = "bold", size = 16)) +
+  theme(axis.text.x = element_text(face = "bold", size = 14)) +
+  theme(axis.title.y = element_text(face = "bold", size = 16)) +
+  theme(axis.text.y = element_text(face = "bold", size = 14)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line()) +
+  theme(plot.margin = margin(
+    t = 0.2, r = 0, b = 0.2, l = 0, 
+    "cm")) +
+ scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(
+   breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1)))),
+   limits = c(0, max(trial_1$n + 0.1))
+   ) +
+  coord_flip() 
+
+
+```
+
+
+
+::: footer
+SoCO
+:::
+
