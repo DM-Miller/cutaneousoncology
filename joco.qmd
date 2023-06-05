@@ -39,11 +39,11 @@ volume <- case_when(
 
 [`r year`, Volume: `r volume`, Issue `r issue`](https://journalofcutaneousoncology.io)
 
-![](./files/img/Volume_1_Issue_1.jpg)
+![](./files/img/Joco_Issue_1_Cover_Times.jpg)
 
 
 # About the Journal
 
-The `Journal of Cutaneous Oncology (JoCO)` is an open access journal whose scope is specific to skin cancer. Currently we publish a regular "Perspectives on the Science", in which we provide commentary on publications reviewed in our multi-institutional SoCO Journal Club. The comments in this article represent the views of the authors of this Perspectives on the Science piece. It does not represent views of any other members of SoCO or the affiliated institutions.
+The Journal of Cutaneous Oncology (JoCO) is an open access journal whose scope is specific to skin cancer. Currently we publish a regular "Perspectives on the Science", in which we provide commentary on publications reviewed in our multi-institutional SoCO Journal Club. The comments in this article represent the views of the authors of this Perspectives on the Science piece. It does not represent views of any other members of SoCO or the affiliated institutions.
 
 
