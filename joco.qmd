@@ -39,7 +39,7 @@ volume <- case_when(
 
 [`r year`, Volume: `r volume`, Issue `r issue`](https://journalofcutaneousoncology.io)
 
-![](./files/img/Joco_Issue_1_Cover_Times.jpg)
+![](./files/img/Volume_1_Issue_2_Cover.jpg)
 
 
 # About the Journal

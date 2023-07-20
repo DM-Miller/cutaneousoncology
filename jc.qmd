@@ -22,7 +22,19 @@ Click [here](https://cutaneousoncology.shinyapps.io/coig_journal_club_timeline/)
 ## 2023 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## January - May 2023
+## January - August 2023
+
+### August
+
+Becker, Jürgen C, Selma Ugurel, Ulrike Leiter, Friedegund Meier, Ralf Gutzmer, Sebastian Haferkamp, Lisa Zimmer, et al. 2023. \"Adjuvant Immunotherapy with Nivolumab Versus Observation in Completely Resected Merkel Cell Carcinoma (ADMEC-O): Disease-Free Survival Results from a Randomised, Open-Label, Phase 2 Trial.\" The Lancet, July. https://doi.org/10.1016/s0140-6736(23)00769-9.
+
+### July
+
+Dieng, Mbathio, Sarah J. Lord, Robin M. Turner, Omgo E. Nieweg, Alexander M. Menzies, Robyn P. M. Saw, Andrew J. Einstein, et al. 2022. \"The Impact of Surveillance Imaging Frequency on the Detection of Distant Disease for Patients with Resected Stage III Melanoma.\" Annals of Surgical Oncology 29 (5): 2871--81. https://doi.org/10.1245/s10434-021-11231-3.
+
+### June
+
+Mangione, Carol M., Michael J. Barry, Wanda K. Nicholson, David Chelmow, Tumaini Rucker Coker, Esa M. Davis, Katrina E. Donahue, et al. 2023. \"Screening for Skin Cancer.\" JAMA 329 (15): 1290. https://doi.org/10.1001/jama.2023.4342.
 
 ### May
 
