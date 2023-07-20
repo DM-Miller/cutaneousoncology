@@ -2,7 +2,7 @@
 title: "To Accept, Revise or Reject - The Art of the Review"
 author: David M. Miller
 date: "2023-05-12T16:00:00Z"
-image: devil_129a.png
+image: discs_black_.2.png
 description: We discuss approaces to the scientific review process
 tags: 
   - Scientific Review
