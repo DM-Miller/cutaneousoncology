@@ -1,0 +1,17 @@
+---
+title: "Prognostic Significance of AMERK Serostatus in MCC"
+author: David M. Miller
+date: "2023-08-18T16:00:00Z"
+image: DMM_pic_cropped.jpg
+description: We discuss results from a dual-institution observational study
+tags: 
+  - Merkel Cell Carcinoma
+categories: [2023, SoCO Reserach Forum, MCC]
+---
+
+# Event
+Society of Cutaneous Oncology Research Forum
+
+# Overview & Learning Objectives
+- We review results from a dual-institutional observation study of patients with Merkel Cell Carcinoma who underwent Merkel Cell Polyoma Virus antibody testing within 90 days of diagnosis.  
+

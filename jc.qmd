@@ -15,26 +15,30 @@ The following are the archive of the articles covered to date.
 
 # Shiny App
 
-Click [here](https://cutaneousoncology.shinyapps.io/coig_journal_club_timeline/) to visualize an interactive Shiny application of all of the articles covered hitherto.
+Click [here](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/) to visualize an interactive Shiny application of all of the articles covered hitherto.
 
 # Articles
 
 ## 2023 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## January - August 2023
+## January - September 2023
+
+## September
+
+VanderWalde, Ari, Shay L. Bellasea, Kari L. Kendra, Nikhil I. Khushalani, Katie M. Campbell, Philip O. Scumpia, Lawrence F. Kuklinski, et al. 2023. \"Ipilimumab with or Without Nivolumab in PD-1 or PD-L1 Blockade Refractory Metastatic Melanoma: A Randomized Phase 2 Trial.\" Nature Medicine, August. https://doi.org/10.1038/s41591-023-02498-y.
 
 ### August
 
-Becker, Jürgen C, Selma Ugurel, Ulrike Leiter, Friedegund Meier, Ralf Gutzmer, Sebastian Haferkamp, Lisa Zimmer, et al. 2023. \"Adjuvant Immunotherapy with Nivolumab Versus Observation in Completely Resected Merkel Cell Carcinoma (ADMEC-O): Disease-Free Survival Results from a Randomised, Open-Label, Phase 2 Trial.\" The Lancet, July. https://doi.org/10.1016/s0140-6736(23)00769-9.
+Becker, Jürgen C, Selma Ugurel, Ulrike Leiter, Friedegund Meier, Ralf Gutzmer, Sebastian Haferkamp, Lisa Zimmer, et al. 2023. "Adjuvant Immunotherapy with Nivolumab Versus Observation in Completely Resected Merkel Cell Carcinoma (ADMEC-O): Disease-Free Survival Results from a Randomised, Open-Label, Phase 2 Trial." The Lancet, July. https://doi.org/10.1016/s0140-6736(23)00769-9.
 
 ### July
 
-Dieng, Mbathio, Sarah J. Lord, Robin M. Turner, Omgo E. Nieweg, Alexander M. Menzies, Robyn P. M. Saw, Andrew J. Einstein, et al. 2022. \"The Impact of Surveillance Imaging Frequency on the Detection of Distant Disease for Patients with Resected Stage III Melanoma.\" Annals of Surgical Oncology 29 (5): 2871--81. https://doi.org/10.1245/s10434-021-11231-3.
+Dieng, Mbathio, Sarah J. Lord, Robin M. Turner, Omgo E. Nieweg, Alexander M. Menzies, Robyn P. M. Saw, Andrew J. Einstein, et al. 2022. "The Impact of Surveillance Imaging Frequency on the Detection of Distant Disease for Patients with Resected Stage III Melanoma." Annals of Surgical Oncology 29 (5): 2871--81. https://doi.org/10.1245/s10434-021-11231-3.
 
 ### June
 
-Mangione, Carol M., Michael J. Barry, Wanda K. Nicholson, David Chelmow, Tumaini Rucker Coker, Esa M. Davis, Katrina E. Donahue, et al. 2023. \"Screening for Skin Cancer.\" JAMA 329 (15): 1290. https://doi.org/10.1001/jama.2023.4342.
+Mangione, Carol M., Michael J. Barry, Wanda K. Nicholson, David Chelmow, Tumaini Rucker Coker, Esa M. Davis, Katrina E. Donahue, et al. 2023. "Screening for Skin Cancer." JAMA 329 (15): 1290. https://doi.org/10.1001/jama.2023.4342.
 
 ### May
 
