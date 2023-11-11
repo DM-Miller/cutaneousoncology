@@ -24,9 +24,13 @@ Click [here](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/)
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - September 2023
 
-## September
+### November
 
-VanderWalde, Ari, Shay L. Bellasea, Kari L. Kendra, Nikhil I. Khushalani, Katie M. Campbell, Philip O. Scumpia, Lawrence F. Kuklinski, et al. 2023. \"Ipilimumab with or Without Nivolumab in PD-1 or PD-L1 Blockade Refractory Metastatic Melanoma: A Randomized Phase 2 Trial.\" Nature Medicine, August. https://doi.org/10.1038/s41591-023-02498-y.
+Beal, Brandon T., Jeremy Udkoff, Leora Aizman, Jeremy Etzkorn, John A. Zitelli, Christopher J. Miller, Thuzar M. Shin, Joseph F. Sobanko, and David G. Brodland. 2023. “Outcomes of Invasive Melanoma of the Head and Neck Treated with Mohs Micrographic Surgery A Multicenter Study.” Journal of the American Academy of Dermatology 89 (3): 544–50. https://doi.org/10.1016/j.jaad.2022.12.038.
+
+### September
+
+VanderWalde, Ari, Shay L. Bellasea, Kari L. Kendra, Nikhil I. Khushalani, Katie M. Campbell, Philip O. Scumpia, Lawrence F. Kuklinski, et al. 2023. "Ipilimumab with or Without Nivolumab in PD-1 or PD-L1 Blockade Refractory Metastatic Melanoma: A Randomized Phase 2 Trial." Nature Medicine, August. https://doi.org/10.1038/s41591-023-02498-y.
 
 ### August
 
