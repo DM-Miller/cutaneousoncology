@@ -19,10 +19,24 @@ Click [here](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/)
 
 # Articles
 
+## 2024 Articles
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## January - 2024
+
+### January
+
+McEvoy, Aubriana M., Daniel S. Hippe, Kristina Lachance, Song Park, Kelsey Cahill, Mary Redman, Ted Gooley, Michael W. Kattan, and Paul Nghiem. 2023. “Merkel Cell Carcinoma Recurrence Risk Estimation Is Improved by Integrating Factors Beyond Cancer Stage: A Multivariable Model and Web-Based Calculator.” Journal of the American Academy of Dermatology, November. https://doi.org/10.1016/j.jaad.2023.11.020.
+:::
+
 ## 2023 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## January - September 2023
+## January - December 2023
+
+### December
+
+Gross, Neil D, David M Miller, Nikhil I Khushalani, Vasu Divi, Emily S Ruiz, Evan J Lipson, Friedegund Meier, et al. 2023. “Neoadjuvant Cemiplimab and Surgery for Stage IIIV Cutaneous Squamous-Cell Carcinoma: Follow-up and Survival Outcomes of a Single-Arm, Multicentre, Phase 2 Study.” The Lancet Oncology 24 (11): 1196–1205. https://doi.org/10.1016/s1470-2045(23)00459-x.
 
 ### November
 
