@@ -5,6 +5,7 @@ bibliography: bibliography.bibtex
 title-block-banner: "#0F2A59"
 ---
 
+
 ![](files/journal.jpg)
 
 # Overview
@@ -22,11 +23,31 @@ Click [here](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/)
 ## 2024 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## January - February 2024
+## January - November 2024
+
+## November
+
+[@long2024]
+
+## August
+
+[@Blank2024]
+
+## May
+
+[@Miller2024]
+
+## April
+
+[@Weber2024]
+
+## March
+
+[@Marron2020]
 
 ## February
 
-DeCamp, Matthew, Julie Ressalam, Hillary D. Lum, Elizabeth R. Kessler, Dragana Bolcic-Jankovic, Vinay Kini, and Eric G. Campbell. 2023. "Ethics and Medical Aid in Dying: Physicians’ Perspectives on Disclosure, Presence, and Eligibility." Journal of Law, Medicine & Ethics 51 (3): 641–50. DOI: 10.1017/jme.2023.1001 
+DeCamp, Matthew, Julie Ressalam, Hillary D. Lum, Elizabeth R. Kessler, Dragana Bolcic-Jankovic, Vinay Kini, and Eric G. Campbell. 2023. "Ethics and Medical Aid in Dying: Physicians’ Perspectives on Disclosure, Presence, and Eligibility." Journal of Law, Medicine & Ethics 51 (3): 641–50. DOI: 10.1017/jme.2023.1001
 
 ### January
 
