@@ -5,7 +5,6 @@ bibliography: bibliography.bibtex
 title-block-banner: "#0F2A59"
 ---
 
-
 ![](files/journal.jpg)
 
 # Overview
@@ -23,27 +22,31 @@ Click [here](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/)
 ## 2024 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## January - November 2024
+## January - December 2024
+
+### December
+
+Arron, Sarah T., Javier Cañueto, Jennifer Siegel, Alison Fitzgerald, Anesh Prasai, Shlomo A. Koyfman, and Sue S. Yom. 2024. “Association of a 40-Gene Expression Profile With Risk of Metastatic Disease Progression of Cutaneous Squamous Cell Carcinoma and Specification of Benefit of Adjuvant Radiation Therapy.” International Journal of Radiation Oncology\*Biology\*Physics 120 (3): 760–71. https://doi.org/10.1016/j.ijrobp.2024.05.022.
 
 ## November
 
-[@long2024]
+Long, Georgina V., Evan J. Lipson, F. Stephen Hodi, Paolo A. Ascierto, James Larkin, Christopher Lao, Jean-Jacques Grob, et al. 2024. “First-Line Nivolumab Plus Relatlimab Versus Nivolumab Plus Ipilimumab in Advanced Melanoma: An Indirect Treatment Comparison Using RELATIVITY-047 and CheckMate 067 Trial Data.” Journal of Clinical Oncology, August. https://doi.org/10.1200/jco.24.01125.
 
 ## August
 
-[@Blank2024]
+Blank, Christian U., Minke W. Lucas, Richard A. Scolyer, Bart A. van de Wiel, Alexander M. Menzies, Marta Lopez-Yurda, Lotte L. Hoeijmakers, et al. 2024. “Neoadjuvant Nivolumab and Ipilimumab in Resectable Stage III Melanoma.” New England Journal of Medicine, June. https://doi.org/10.1056/nejmoa2402604.
 
 ## May
 
-[@Miller2024]
+Miller, David M., Sophia Z. Shalhout, Kayla M. Wright, Matt A. Miller, Howard L. Kaufman, Kevin S. Emerick, Harrison T. Reeder, Ann W. Silk, and Manisha Thakuria. 2024. “The Prognostic Value of the Merkel Cell Polyomavirus Serum Antibody Test: A Dual Institutional Observational Study.” Cancer 130 (15): 2670–82. https://doi.org/10.1002/cncr.35314.
 
 ## April
 
-[@Weber2024]
+Weber, Jeffrey S, Matteo S Carlino, Adnan Khattak, Tarek Meniawy, George Ansstas, Matthew H Taylor, Kevin B Kim, et al. 2024. “Individualised Neoantigen Therapy mRNA-4157 (V940) Plus Pembrolizumab Versus Pembrolizumab Monotherapy in Resected Melanoma (KEYNOTE-942): A Randomised, Phase 2b Study.” The Lancet 403 (10427): 632–44. https://doi.org/10.1016/s0140-6736(23)02268-7.
 
 ## March
 
-[@Marron2020]
+Marron, Jonathan M., Kaitlin Kyi, Paul S. Appelbaum, and Allison Magnuson. 2020. “Medical Decision-Making in Oncology for Patients Lacking Capacity.” American Society of Clinical Oncology Educational Book, no. 40 (May): e186–96. https://doi.org/10.1200/edbk_280279.
 
 ## February
 
