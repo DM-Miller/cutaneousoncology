@@ -1,0 +1,17 @@
+---
+title: "Updates on GEP in Melanoma"
+author: David M. Miller
+date: "2024-12-16T16:00:00Z"
+image: SondakVernon_2995.jpg
+description: We discuss results from the MERLIN study.
+tags: 
+  - Melanoma
+categories: [2024, SoCO Reserach Forum, Melanoma]
+---
+
+# Event
+Society of Cutaneous Oncology Research Forum
+
+# Overview & Learning Objectives
+- We discuss the results of MERLIN_001: A prospective registry study of a primary melanoma gene-signature to predict sentinel node (SN) status and determine its prognostic value for more accurate staging of patients with SN-negative melanoma.  
+
