@@ -1,6 +1,6 @@
 ---
 title: "Updates on GEP in Melanoma"
-author: David M. Miller
+author: Vernon Sondak
 date: "2024-12-16T16:00:00Z"
 image: SondakVernon_2995.jpg
 description: We discuss results from the MERLIN study.

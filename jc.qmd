@@ -19,6 +19,26 @@ Click [here](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/)
 
 # Articles
 
+## 2025 Articles
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## January - March 2025
+
+### March
+
+Akaike, Tomoko, Manisha Thakuria, Ann W. Silk, Daniel S. Hippe, Song Youn Park, Naomi A. So, Nolan J. Maloney, et al. 2024. “Circulating Tumor DNA Assay Detects Merkel Cell Carcinoma Recurrence, Disease Progression, and Minimal Residual Disease: Surveillance and Prognostic Implications.” Journal of Clinical Oncology 42 (26): 3151–61. https://doi.org/10.1200/jco.23.02054.
+
+
+### February
+
+Hanna, Glenn J., Harita Dharanesswaran, Anita Giobbie-Hurder, John J. Harran, Zixi Liao, Lori Pai, Vatche Tchekmedyian, et al. 2024. “Cemiplimab for Kidney Transplant Recipients With Advanced Cutaneous Squamous Cell Carcinoma.” Journal of Clinical Oncology 42 (9): 1021–30. https://doi.org/10.1200/jco.23.01498.
+
+### January
+
+Barker, Christopher A., Suzanne Dufault, Sarah T. Arron, Alan L. Ho, Alain P. Algazi, Lara A. Dunn, Audrey A. Humphries, et al. 2024. “Phase II, Single-Arm Trial of Induction and Concurrent Vismodegib With Curative-Intent Radiation Therapy for Locally Advanced, Unresectable Basal Cell Carcinoma.” Journal of Clinical Oncology 42 (19): 2327–35. https://doi.org/10.1200/jco.23.01708.
+
+:::
+
 ## 2024 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
