@@ -20,8 +20,8 @@ website:
         href: jc.qmd
       - text: "Research Forum"
         href: research_forum.qmd
-      - text: "Presentations"
-        href: presentations.qmd
+#      - text: "Presentations"
+#        href: presentations.qmd
 
 #format:
 #  html:
