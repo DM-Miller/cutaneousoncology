@@ -22,7 +22,11 @@ Click [here](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/)
 ## 2025 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## January - May 2025
+## January - July 2025
+
+### July
+
+Rischin, Danny, Sandro Porceddu, Fiona Day, Daniel P. Brungs, Hayden Christie, James E. Jackson, Brian N. Stein, et al. 2025. “Adjuvant Cemiplimab or Placebo in High-Risk Cutaneous Squamous-Cell Carcinoma.” New England Journal of Medicine 393 (8): 774–85. https://doi.org/10.1056/nejmoa2502449.
 
 ### May
 
