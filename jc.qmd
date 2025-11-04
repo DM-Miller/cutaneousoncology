@@ -22,7 +22,11 @@ Click [here](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/)
 ## 2025 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## January - July 2025
+## January - November 2025
+
+### November
+
+Breukers, Sabine E., Joleen J. H. Traets, Stan W. van Dijk, Mercedes Machuca Ostos, Itske Fraterman, Robert D. Crommelin, Hedda van der Hulst, et al. 2025. “Neoadjuvant Ipilimumab and Nivolumab in Resectable Cutaneous Squamous Cell Carcinoma: A Randomized Phase 2 Trial.” Nature Medicine, October. https://doi.org/10.1038/s41591-025-03943-w.
 
 ### July
 
