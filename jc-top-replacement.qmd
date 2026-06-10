@@ -1,0 +1,33 @@
+---
+title: "SoCO Journal Club"
+editor: visual
+bibliography: bibliography.bibtex
+page-layout: full
+title-block-banner: false
+toc: true
+---
+
+::: {.soco-jc-hero}
+::: {.soco-jc-hero-inner}
+<div class="soco-eyebrow">Monthly multidisciplinary literature review</div>
+
+# SoCO Journal Club
+
+Each month, the Society of Cutaneous Oncology reviews recent articles describing new insights germane to cutaneous oncology.
+
+::: {.soco-actions}
+[Open the interactive timeline](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/){.btn .btn-primary}
+[View article archive](#articles){.btn .btn-outline-primary}
+:::
+:::
+:::
+
+::: {.soco-section}
+## Overview
+
+The SoCO Journal Club is a multi-institutional and multidisciplinary forum for discussing practice-changing and practice-informing literature in skin cancer.
+
+## Articles
+
+Keep the existing article archive below this line.
+:::

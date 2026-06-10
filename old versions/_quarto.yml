@@ -1,0 +1,39 @@
+project:
+  type: website
+
+website:
+  title: "Society of Cutaneous Oncology"
+    # Add site-url (without trailing / at the end)
+  site-url: https://cutaneousoncology.io
+  page-navigation: true
+  reader-mode: true
+  open-graph: true
+  twitter-card: 
+    site: "@SocCutaneousOnc"
+  navbar:
+    background: primary
+    search: true
+    right:
+      - text: "Journal of Cutaneous Oncology"
+        href: joco.qmd
+      - text: "SoCO Journal Club"
+        href: jc.qmd
+      - text: "Research Forum"
+        href: research_forum.qmd
+#      - text: "Presentations"
+#        href: presentations.qmd
+
+#format:
+#  html:
+#    theme: 
+#      light: cosmo
+#      dark: slate
+#    css: styles.css
+#    toc: true
+
+format:
+  html:
+    theme: theme.scss
+
+editor: source
+

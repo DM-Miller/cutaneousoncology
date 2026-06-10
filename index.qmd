@@ -1,13 +1,98 @@
 ---
-title: "About SoCO"
+pagetitle: "About SoCO | Society of Cutaneous Oncology"
 editor: visual
-title-block-banner: "#0F2A59"
+page-layout: full
+toc: false
 ---
 
-```{r}
-#| include: false
-#| echo: false
-#![](files/soco%20example1.webp)
-```
+::: {.soco-hero}
+::: {.soco-hero-inner}
 
-The Society of Cutaneous Oncology (SoCO) is a collective of clinicians and investigators committed to improving outcomes in patients with skin cancer. Our mission is threefold: 1) to interpret evidence to help shape best practices, 2) to support members in producing high-quality reproducible science, and 3) educate future generations of clinical oncologists and scientific investigators dedicated to skin cancer. To fulfill those objectives the SoCO: 1) is the publisher of [Journal of Cutaneous Oncology (JoCO)](https://journalofcutaneousoncology.io), an open access journal whose scope is specific to skin cancer, 2) hosts a recurring monthly journal club and 3) supports an open forum for research discussions and presentations that convenes several times per year.
+::: {.soco-hero-mark}
+![](img/soco-logo-stacked-transparent.png){alt="Society of Cutaneous Oncology logo" .soco-hero-logo}
+:::
+
+::: {.soco-hero-copy}
+<div class="soco-eyebrow">Evidence • Collaboration • Reproducible Science</div>
+
+<h1 class="soco-mission-headline">
+  <span>Interpreting evidence.</span>
+  <span>Building community.</span>
+  <span>Advancing care.</span>
+</h1>
+
+<p class="soco-dek">
+The Society of Cutaneous Oncology is a multidisciplinary community of clinicians and investigators committed to improving outcomes for patients with skin cancer through evidence interpretation, collaborative science, and education.
+</p>
+
+::: {.soco-actions}
+[Explore the Journal](joco.qmd){.btn .btn-primary}
+[Journal Club](jc.qmd){.btn .btn-outline-primary}
+[Research Forum](research_forum.qmd){.btn .btn-outline-primary}
+:::
+:::
+
+:::
+:::
+
+[Scroll](#our-mission){.soco-scroll-cue}
+
+::: {.soco-section #our-mission}
+## Our mission
+
+The Society of Cutaneous Oncology brings together clinicians, scientists, trainees, and allied professionals dedicated to advancing the care of patients with skin cancer.
+
+::: {.soco-card-grid}
+
+::: {.soco-card}
+### Interpret evidence
+
+We review emerging data in cutaneous oncology and help translate evidence into thoughtful clinical practice.
+:::
+
+::: {.soco-card}
+### Support reproducible science
+
+We create forums for investigators to share methods, refine ideas, and develop collaborative projects.
+:::
+
+::: {.soco-card}
+### Educate the field
+
+We support clinicians, scientists, and trainees committed to the future of cutaneous oncology.
+:::
+
+:::
+:::
+
+::: {.soco-section .soco-platforms}
+## SoCO programs
+
+::: {.soco-card-grid}
+
+::: {.soco-card}
+### Journal of Cutaneous Oncology
+
+An open-access journal focused on skin cancer, evidence interpretation, and perspectives from the cutaneous oncology community.
+
+[Visit the journal](joco.qmd){.soco-card-link}
+:::
+
+::: {.soco-card}
+### SoCO Journal Club
+
+A recurring multidisciplinary forum for discussion of recent articles and emerging evidence in skin cancer.
+
+[View Journal Club](jc.qmd){.soco-card-link}
+:::
+
+::: {.soco-card}
+### Research Forum
+
+A collaborative space for investigators to present ideas, share work in progress, and develop multicenter projects.
+
+[Visit Research Forum](research_forum.qmd){.soco-card-link}
+:::
+
+:::
+:::
