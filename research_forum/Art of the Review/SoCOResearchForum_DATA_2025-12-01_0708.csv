@@ -1,0 +1,13 @@
+record_id,redcap_survey_identifier,the_art_of_the_review_timestamp,role___author,role___reviewer,role___editor,course,review_asked,papers_reviewed,reason_why,time,incentivized,compensation,paid,coi_1,coi_2,approach,trial_1,the_art_of_the_review_complete
+1,,,1,1,0,no,7_9,4_6,invitation_came_from_a_colleague_or_mentor,60_89,no,yes,yes,no,yes,open__peer__review,yes,2
+2,,"2023-05-12 16:10:14",1,1,0,no,4_6,4_6,improve_critical_thinking_skills,30_59,no,no,no,yes,yes,open__peer__review,no,2
+3,,"2023-05-12 16:10:20",1,1,1,no,atleast__10,atleast__10,opportunity_to_read_latest_science,60_89,no,no,no,yes,yes,open__peer__review,yes,2
+4,,"2023-05-12 16:10:35",1,1,0,no,1_3,1_3,honored_that_you_were_asked,30_59,no,yes,yes,no,no,double_blind__peer__review,no,2
+5,,"2023-05-12 16:10:37",1,1,1,no,atleast__10,4_6,improve_critical_thinking_skills,90_119,no,yes,no,no,yes,closed__peer__review,no,2
+6,,"2023-05-12 16:10:45",1,1,0,no,1_3,1_3,invitation_came_from_a_colleague_or_mentor,90_119,yes,no,no,no,no,double_blind__peer__review,no,2
+7,,"2023-05-12 16:10:50",1,1,1,no,atleast__10,7_9,opportunity_to_read_latest_science,60_89,no,yes,yes,yes,no,closed__peer__review,no,2
+8,,"2023-05-12 16:10:59",1,1,0,no,1_3,1_3,improve_critical_thinking_skills,90_119,yes,no,no,no,no,double_blind__peer__review,no,2
+9,,"2023-05-12 16:11:08",1,1,1,no,atleast__10,4_6,sense_of_academic_duty,atleast__120,no,yes,no,yes,yes,double_blind__peer__review,no,2
+10,,"2023-05-12 16:11:30",1,1,1,no,atleast__10,atleast__10,desire_to_better_the_field,atleast__120,no,yes,yes,no,yes,closed__peer__review,yes,2
+11,,"2023-05-12 16:11:42",1,1,0,no,atleast__10,1_3,desire_to_better_the_field,atleast__120,no,yes,yes,no,yes,double_blind__peer__review,yes,2
+12,,"2023-05-12 16:12:22",1,1,0,no,7_9,4_6,desire_to_improve_your_CV,90_119,no,yes,no,,,,,2
