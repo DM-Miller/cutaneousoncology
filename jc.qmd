@@ -13,8 +13,6 @@ toc: true
 Monthly multidisciplinary literature review
 :::
 
-# SoCO Journal Club
-
 Each month, the Society of Cutaneous Oncology reviews recent articles describing new insights germane to cutaneous oncology.
 
 ::: soco-actions
@@ -24,13 +22,32 @@ Each month, the Society of Cutaneous Oncology reviews recent articles describing
 ::::::
 
 ::: soco-section
-## Overview
+# Overview
 
 The SoCO Journal Club is a multi-institutional and multidisciplinary forum for discussing practice-changing and practice-informing literature in skin cancer.
 
-## Articles {#articles}
+# Articles {#articles}
 
-## 2025 Articles
+# 2026 Articles
+
+::: {.callout-note appearance="minimal" collapse="true"}
+## February - June 2026
+
+### June
+
+Kavanagh, Fergal G., Hannah L. Kalvin, Edmund K. Bartlett, Christopher A. Barker, Charlotte E. Ariyan, Mary S. Brady, Danielle M. Bello, Klaus J. Busam, Katherine S. Panageas, and Daniel G. Coit. 2025. “Local Recurrence Following Complete Surgical Excision of Primary Merkel Cell Carcinoma.” *Annals of Surgical Oncology*, October. https://doi.org/10.1245/s10434-025-18670-2.
+
+### April
+
+Wong, Michael K., Mohammed M. Milhem, Joseph J. Sacco, Judith Michels, Gino K. In, Eva Muñoz Couselo, Dirk Schadendorf, Georgia M. Beasley, Jiaxin Niu, Bartosz Chmielowski, et al. 2025. “RP1 Combined With Nivolumab in Advanced Anti–PD-1–Failed Melanoma (IGNYTE).” *Journal of Clinical Oncology* 43 (33): 3589–99. https://doi.org/10.1200/JCO-25-01346.
+
+### February
+
+Miller, David M., James W. Smithy, Jennell Palaia, Divya Patel, Anthony Salvatore, David D’Adamo, Matthew Mattera, Zheng-Yi Zhou, Viviana Garcia-Horton, and Ahmad A. Tarhini. 2025. “Efficacy of Nivolumab Plus Relatlimab Versus BRAF/MEK Inhibitors for First-Line Treatment of BRAF-Mutant Advanced Melanoma: A Matching-Adjusted Indirect Comparison.” *BMJ Oncology* 4: e000912. https://doi.org/10.1136/bmjonc-2025-000912.
+
+:::
+
+# 2025 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - November 2025
@@ -45,7 +62,6 @@ Rischin, Danny, Sandro Porceddu, Fiona Day, Daniel P. Brungs, Hayden Christie, J
 
 ### May
 
-\
 Hartman, Rebecca I., Nicole Trepanowski, Michael S. Chang, Kelly Tepedino, Christopher Gianacas, Jennifer M. McNiff, Maxwell Fung, Naiara Fraga Braghiroli, and Jane M. Grant-Kels. 2024. “Multicenter Prospective Blinded Melanoma Detection Study with a Handheld Elastic Scattering Spectroscopy Device.” *JAAD International* 15 (June): 24–31. <https://doi.org/10.1016/j.jdin.2023.10.011>.
 
 ### April
@@ -65,7 +81,7 @@ Hanna, Glenn J., Harita Dharanesswaran, Anita Giobbie-Hurder, John J. Harran, Zi
 Barker, Christopher A., Suzanne Dufault, Sarah T. Arron, Alan L. Ho, Alain P. Algazi, Lara A. Dunn, Audrey A. Humphries, et al. 2024. “Phase II, Single-Arm Trial of Induction and Concurrent Vismodegib With Curative-Intent Radiation Therapy for Locally Advanced, Unresectable Basal Cell Carcinoma.” Journal of Clinical Oncology 42 (19): 2327–35. https://doi.org/10.1200/jco.23.01708.
 :::
 
-## 2024 Articles
+# 2024 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - December 2024
@@ -74,27 +90,27 @@ Barker, Christopher A., Suzanne Dufault, Sarah T. Arron, Alan L. Ho, Alain P. Al
 
 Arron, Sarah T., Javier Cañueto, Jennifer Siegel, Alison Fitzgerald, Anesh Prasai, Shlomo A. Koyfman, and Sue S. Yom. 2024. “Association of a 40-Gene Expression Profile With Risk of Metastatic Disease Progression of Cutaneous Squamous Cell Carcinoma and Specification of Benefit of Adjuvant Radiation Therapy.” International Journal of Radiation Oncology\*Biology\*Physics 120 (3): 760–71. https://doi.org/10.1016/j.ijrobp.2024.05.022.
 
-## November
+### November
 
 Long, Georgina V., Evan J. Lipson, F. Stephen Hodi, Paolo A. Ascierto, James Larkin, Christopher Lao, Jean-Jacques Grob, et al. 2024. “First-Line Nivolumab Plus Relatlimab Versus Nivolumab Plus Ipilimumab in Advanced Melanoma: An Indirect Treatment Comparison Using RELATIVITY-047 and CheckMate 067 Trial Data.” Journal of Clinical Oncology, August. https://doi.org/10.1200/jco.24.01125.
 
-## August
+### August
 
 Blank, Christian U., Minke W. Lucas, Richard A. Scolyer, Bart A. van de Wiel, Alexander M. Menzies, Marta Lopez-Yurda, Lotte L. Hoeijmakers, et al. 2024. “Neoadjuvant Nivolumab and Ipilimumab in Resectable Stage III Melanoma.” New England Journal of Medicine, June. https://doi.org/10.1056/nejmoa2402604.
 
-## May
+### May
 
 Miller, David M., Sophia Z. Shalhout, Kayla M. Wright, Matt A. Miller, Howard L. Kaufman, Kevin S. Emerick, Harrison T. Reeder, Ann W. Silk, and Manisha Thakuria. 2024. “The Prognostic Value of the Merkel Cell Polyomavirus Serum Antibody Test: A Dual Institutional Observational Study.” Cancer 130 (15): 2670–82. https://doi.org/10.1002/cncr.35314.
 
-## April
+### April
 
 Weber, Jeffrey S, Matteo S Carlino, Adnan Khattak, Tarek Meniawy, George Ansstas, Matthew H Taylor, Kevin B Kim, et al. 2024. “Individualised Neoantigen Therapy mRNA-4157 (V940) Plus Pembrolizumab Versus Pembrolizumab Monotherapy in Resected Melanoma (KEYNOTE-942): A Randomised, Phase 2b Study.” The Lancet 403 (10427): 632–44. https://doi.org/10.1016/s0140-6736(23)02268-7.
 
-## March
+### March
 
 Marron, Jonathan M., Kaitlin Kyi, Paul S. Appelbaum, and Allison Magnuson. 2020. “Medical Decision-Making in Oncology for Patients Lacking Capacity.” American Society of Clinical Oncology Educational Book, no. 40 (May): e186–96. https://doi.org/10.1200/edbk_280279.
 
-## February
+### February
 
 DeCamp, Matthew, Julie Ressalam, Hillary D. Lum, Elizabeth R. Kessler, Dragana Bolcic-Jankovic, Vinay Kini, and Eric G. Campbell. 2023. "Ethics and Medical Aid in Dying: Physicians’ Perspectives on Disclosure, Presence, and Eligibility." Journal of Law, Medicine & Ethics 51 (3): 641–50. DOI: 10.1017/jme.2023.1001
 
@@ -103,10 +119,10 @@ DeCamp, Matthew, Julie Ressalam, Hillary D. Lum, Elizabeth R. Kessler, Dragana B
 McEvoy, Aubriana M., Daniel S. Hippe, Kristina Lachance, Song Park, Kelsey Cahill, Mary Redman, Ted Gooley, Michael W. Kattan, and Paul Nghiem. 2023. “Merkel Cell Carcinoma Recurrence Risk Estimation Is Improved by Integrating Factors Beyond Cancer Stage: A Multivariable Model and Web-Based Calculator.” Journal of the American Academy of Dermatology, November. https://doi.org/10.1016/j.jaad.2023.11.020.
 :::
 
-## 2023 Articles
+# 2023 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## January - December 2023
+### January - December 2023
 
 ### December
 
@@ -153,7 +169,7 @@ Ascierto, Paolo A, Daniil Stroyakovskiy, Helen Gogas, Caroline Robert, Karl Lewi
 Rohaan, Maartje W., Troels H. Borch, Joost H. van den Berg, Özcan Met, Rob Kessels, Marnix H. Geukes Foppen, Joachim Stoltenborg Granhøj, et al. 2022. "Tumor-Infiltrating Lymphocyte Therapy or Ipilimumab in Advanced Melanoma." New England Journal of Medicine 387 (23): 2113--25. https://doi.org/10.1056/nejmoa2210233.
 :::
 
-## 2022 Articles
+# 2022 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - December 2022
@@ -203,7 +219,7 @@ Tawbi, Hussein A., Dirk Schadendorf, Evan J. Lipson, Paolo A. Ascierto, Luis Mat
 Postow, Michael A., Debra A. Goldman, Alexander N. Shoushtari, Allison Betof Warner, Margaret K. Callahan, Parisa Momtaz, James W. Smithy, et al. 2022. "Adaptive Dosing of Nivolumab + Ipilimumab Immunotherapy Based Upon Early, Interim Radiographic Assessment in Advanced Melanoma (The ADAPT-IT Study)." Journal of Clinical Oncology40 (10): 1059--67. https://doi.org/10.1200/jco.21.01570.
 :::
 
-## 2021 Articles
+# 2021 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - December 2021
@@ -257,7 +273,7 @@ Morgan, Frederick C., Emily Stamell Ruiz, Pritesh S. Karia, Robert J. Besaw, Vic
 Danesh, Melissa J., Tyler D. Menge, Lydia Helliwell, Meera Mahalingam, and Abigail Waldman. 2020. "Adherence to the National Comprehensive Cancer Network Criteria of Complete Circumferential Peripheral and Deep Margin Assessment in Treatment of High-Risk Basal and Squamous Cell Carcinoma." Dermatologic Surgery 46 (12): 1473--80. https://doi.org/10.1097/dss.0000000000002354.
 :::
 
-## 2020 Articles
+# 2020 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - December 2020
@@ -305,7 +321,7 @@ Ruiz, Emily Stamell, Shlomo A. Koyfman, Syril Keena T. Que, Jason Kass, and Chry
 ### 
 :::
 
-## 2019 Articles
+# 2019 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## April - December 2019
