@@ -1,52 +1,65 @@
 ---
 title: "Journal of Cutaneous Oncology"
+pagetitle: "Journal of Cutaneous Oncology | Society of Cutaneous Oncology"
 page-layout: full
-title-block-banner: "#0F2A59"
+title-block-banner: false
+toc: true
 ---
 
-------------------------------------------------------------------------
+:::::: {.soco-jc-hero}
+::::: {.soco-jc-hero-inner}
+::: {.soco-eyebrow}
+Open access • Skin cancer • Perspectives on the science
+:::
 
+# 
 
-```{r}
-#| message: false
-#| warning: false
-#| echo: false
-library(lubridate)
-library(tidyverse)
+The Journal of Cutaneous Oncology (JoCO) is an open-access journal focused on skin cancer and published by the Society of Cutaneous Oncology.
 
-date <- Sys.Date()
+::: {.soco-actions}
+[Visit the current issue](https://journalofcutaneousoncology.io){.btn .btn-primary}
+[Perspectives on the Science](https://journalofcutaneousoncology.io/perspectives-on-the-science.html){.btn .btn-outline-primary}
+[Journal Club](jc.qmd){.btn .btn-outline-primary}
+:::
+:::::
+::::::
 
-month <- month(date)
-year <- year(date)
-
-month_label <- month(month, label = TRUE, abbr = FALSE)
-
-issue <- case_when(
-  month <= 6 ~ 1,
-  month >= 7 ~ 2
-)
-
-
-volume <- case_when(
-  year == "2023" ~ 1,
-  year == "2024" ~ 2,
-  year == "2025" ~ 3,
-  year == "2026" ~ 4,
-)
-
-```
-
-
+::: {.soco-section}
 # About the Journal
 
-The Journal of Cutaneous Oncology (JoCO) is an open access journal whose scope is specific to skin cancer. Currently we publish a regular "Perspectives on the Science", in which we provide commentary on publications reviewed in our multi-institutional SoCO Journal Club. The comments in this article represent the views of the authors of this Perspectives on the Science piece. It does not represent views of any other members of SoCO or the affiliated institutions.
+The Journal of Cutaneous Oncology (JoCO) is an open-access journal whose scope is specific to skin cancer. JoCO publishes **Perspectives on the Science**, a regular commentary series based on publications reviewed in the multi-institutional SoCO Journal Club.
+
+These perspectives are intended to interpret emerging data, highlight clinical and scientific context, and support thoughtful discussion across the cutaneous oncology community. The comments in each article represent the views of the authors of that Perspectives on the Science piece and do not necessarily represent the views of other SoCO members or affiliated institutions.
 
 # Current Issue
 
-Please see our [latest issue](https://journalofcutaneousoncology.io).
+The current issue is available on the JoCO website.
 
+::: {.soco-card-grid}
 
+::: {.soco-card}
+### Current issue
 
+Read the latest issue of the Journal of Cutaneous Oncology.
 
+[Visit the current issue](https://journalofcutaneousoncology.io){.soco-card-link}
+:::
 
+::: {.soco-card}
+### Perspectives on the Science
 
+Read commentary connected to articles discussed in SoCO Journal Club.
+
+[Read perspectives](https://journalofcutaneousoncology.io/perspectives-on-the-science.html){.soco-card-link}
+:::
+
+::: {.soco-card}
+### SoCO Journal Club
+
+Explore the multidisciplinary literature discussions that inform the Perspectives series.
+
+[View Journal Club](jc.qmd){.soco-card-link}
+:::
+
+:::
+:::
