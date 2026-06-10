@@ -431,7 +431,7 @@
     "href": "research_forum.html",
     "title": "Research Forum",
     "section": "",
-    "text": "In an effort to fulfill our missions of 1) supporting SoCO members in producing high-quality, reproducible science and 2) educating future generations of clinical oncologists and scientific investigators dedicated to skin cancer, the Society of Cutaneous Oncology supports an open forum for research discussions and presentations that convenes several times per year."
+    "text": "Open research discussion and collaboration\n\n\nSoCO Research Forum\nThe Society of Cutaneous Oncology Research Forum is a recurring venue for investigators to present work in progress, refine study concepts, and develop collaborative projects in skin cancer.\n\nView presentation archive Journal Club Journal\n\n\n\n\n\n\nOverview\nIn an effort to fulfill our missions of supporting SoCO members in producing high-quality, reproducible science and educating future generations of clinical oncologists and scientific investigators dedicated to skin cancer, the Society of Cutaneous Oncology supports an open forum for research discussions and presentations that convenes several times per year.\nThe Research Forum is intended to be informal, constructive, and collaborative. Presentations may include early research concepts, preliminary analyses, trial designs, methodological questions, data-sharing opportunities, or mature projects seeking multidisciplinary feedback.\n\n\nSoCO Research Forum Presentations\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nFrontline Immunotherapy with Response-Guided Subsequent Treatment in Cutaneous Squamous Cell Carcinoma\n\n\n\nCutaneous Squamous Cell Carcinoma\n\nImmunotherapy\n\nResponse-Guided Treatment\n\nTreatment De-escalation\n\nBayesian Methods\n\n\n\nA SoCO Research Forum presentation on the FIRST analysis, including dose intensity, early benefit, Bayesian causal inference, and treatment de-escalation in cutaneous squamous cell carcinoma.\n\n\n\n\n\nMar 9, 2026\n\n\nDavid M. Miller\n\n\n\n\n\n\n\n\n\n\n\n\nUpdates on GEP in Melanoma\n\n\n\n2024\n\nSoCO Reserach Forum\n\nMelanoma\n\n\n\nWe discuss results from the MERLIN study.\n\n\n\n\n\nDec 16, 2024\n\n\nVernon Sondak\n\n\n\n\n\n\n\n\n\n\n\n\nPrognostic Significance of Initial AMERK Serostatus\n\n\n\n2023\n\nSoCO Reserach Forum\n\nMCC\n\n\n\nWe discuss results from a dual-institution observational study\n\n\n\n\n\nAug 18, 2023\n\n\nDavid M. Miller\n\n\n\n\n\n\n\n\n\n\n\n\nTo Accept, Revise or Reject - The Art of the Review\n\n\n\n2023\n\n\n\nWe discuss approaces to the scientific review process\n\n\n\n\n\nMay 12, 2023\n\n\nDavid M. Miller\n\n\n\n\n\n\n\n\n\n\n\n\nICARUS\n\n\n\n2023\n\nSoCO Reserach Forum\n\nCSCC\n\n\n\nWe discuss a trial concept for high-risk CSCC\n\n\n\n\n\nMar 31, 2023\n\n\nDavid M. Miller\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research_forum.html#overview",
@@ -684,5 +684,19 @@
     "title": "SoCO Journal Club",
     "section": "Articles",
     "text": "Articles"
+  },
+  {
+    "objectID": "research_forum/FIRST/index.html#presentation",
+    "href": "research_forum/FIRST/index.html#presentation",
+    "title": "Frontline Immunotherapy with Response-Guided Subsequent Treatment in Cutaneous Squamous Cell Carcinoma",
+    "section": "Presentation",
+    "text": "Presentation\nFrontline Immunotherapy with Response-Guided Subsequent Treatment (FIRST) in Cutaneous Squamous Cell Carcinoma\nA Bayesian Causal Analysis of Dose Intensity, Early Benefit, and Treatment De-escalation\nPresented at the Society of Cutaneous Oncology Research Forum in April 2026."
+  },
+  {
+    "objectID": "research_forum/FIRST/index.html#summary",
+    "href": "research_forum/FIRST/index.html#summary",
+    "title": "Frontline Immunotherapy with Response-Guided Subsequent Treatment in Cutaneous Squamous Cell Carcinoma",
+    "section": "Summary",
+    "text": "Summary\nThis Research Forum session reviewed the FIRST analysis in cutaneous squamous cell carcinoma, focusing on response-guided treatment, dose intensity, early clinical benefit, and the possibility of treatment de-escalation after frontline immunotherapy.\nThe discussion emphasized how Bayesian causal methods may help interpret non-randomized treatment patterns and generate clinically meaningful hypotheses about treatment duration, dose intensity, and response-adapted care."
   }
 ]
