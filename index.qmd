@@ -5,72 +5,69 @@ page-layout: full
 toc: false
 ---
 
-::: {.soco-hero}
-::: {.soco-hero-inner}
-
-::: {.soco-hero-mark}
-![](img/soco-logo-stacked-transparent.png){alt="Society of Cutaneous Oncology logo" .soco-hero-logo}
+:::::::: soco-hero
+::::::: soco-hero-inner
+::: soco-hero-mark
+![](img/soco-logo-stacked-transparent.png){.soco-hero-logo alt="Society of Cutaneous Oncology logo"}
 :::
 
-::: {.soco-hero-copy}
-<div class="soco-eyebrow">Evidence • Collaboration • Reproducible Science</div>
+::::: soco-hero-copy
+::: soco-eyebrow
+Evidence • Collaboration • Reproducible Science
+:::
 
 <h1 class="soco-mission-headline">
-  <span>Interpreting evidence.</span>
-  <span>Building community.</span>
-  <span>Advancing care.</span>
+
+Interpreting evidence. Building community. Advancing care.
+
 </h1>
 
 <p class="soco-dek">
+
 The Society of Cutaneous Oncology is a multidisciplinary community of clinicians and investigators committed to improving outcomes for patients with skin cancer through evidence interpretation, collaborative science, and education.
+
 </p>
 
-::: {.soco-actions}
-[Explore the Journal](joco.qmd){.btn .btn-primary}
-[Journal Club](jc.qmd){.btn .btn-outline-primary}
-[Research Forum](research_forum.qmd){.btn .btn-outline-primary}
+::: soco-actions
+[Explore the Journal](joco.qmd){.btn .btn-primary} [Journal Club](jc.qmd){.btn .btn-outline-primary} [Research Forum](research_forum.qmd){.btn .btn-outline-primary}
 :::
-:::
-
-:::
-:::
+:::::
+:::::::
+::::::::
 
 [Scroll](#our-mission){.soco-scroll-cue}
 
-::: {.soco-section #our-mission}
-## Our mission
+::::::: {#our-mission .soco-section}
+## Our mission {#our-mission}
 
 The Society of Cutaneous Oncology brings together clinicians, scientists, trainees, and allied professionals dedicated to advancing the care of patients with skin cancer.
 
-::: {.soco-card-grid}
-
-::: {.soco-card}
+:::::: soco-card-grid
+::: soco-card
 ### Interpret evidence
 
 We review emerging data in cutaneous oncology and help translate evidence into thoughtful clinical practice.
 :::
 
-::: {.soco-card}
+::: soco-card
 ### Support reproducible science
 
 We create forums for investigators to share methods, refine ideas, and develop collaborative projects.
 :::
 
-::: {.soco-card}
+::: soco-card
 ### Educate the field
 
 We support clinicians, scientists, and trainees committed to the future of cutaneous oncology.
 :::
+::::::
+:::::::
 
-:::
-:::
-
-::: {.soco-section .soco-platforms}
+::::::: {.soco-section .soco-platforms}
 ## SoCO programs
 
-::: {.soco-card-grid}
-
-::: {.soco-card}
+:::::: soco-card-grid
+::: soco-card
 ### Journal of Cutaneous Oncology
 
 An open-access journal focused on skin cancer, evidence interpretation, and perspectives from the cutaneous oncology community.
@@ -78,7 +75,7 @@ An open-access journal focused on skin cancer, evidence interpretation, and pers
 [Visit the journal](joco.qmd){.soco-card-link}
 :::
 
-::: {.soco-card}
+::: soco-card
 ### SoCO Journal Club
 
 A recurring multidisciplinary forum for discussion of recent articles and emerging evidence in skin cancer.
@@ -86,13 +83,12 @@ A recurring multidisciplinary forum for discussion of recent articles and emergi
 [View Journal Club](jc.qmd){.soco-card-link}
 :::
 
-::: {.soco-card}
+::: soco-card
 ### Research Forum
 
 A collaborative space for investigators to present ideas, share work in progress, and develop multicenter projects.
 
 [Visit Research Forum](research_forum.qmd){.soco-card-link}
 :::
-
-:::
-:::
+::::::
+:::::::
