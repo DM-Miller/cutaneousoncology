@@ -1,0 +1,120 @@
+---
+pagetitle: "Our Philosophy | Society of Cutaneous Oncology"
+editor: visual
+page-layout: full
+toc: false
+---
+
+:::::::: soco-philosophy-hero
+::::::: soco-philosophy-hero-inner
+::::: soco-philosophy-hero-copy
+::: soco-eyebrow
+Critical Inquiry • Intellectual Humility • Scientific Progress
+:::
+
+<h1 class="soco-philosophy-headline">
+
+Our philosophy of scientific inquiry
+
+</h1>
+
+<p class="soco-dek">
+
+The Society of Cutaneous Oncology was created to support a culture in which evidence is interpreted carefully, uncertainty is acknowledged openly, and scientific ideas are strengthened through rigorous, respectful criticism.
+
+</p>
+:::::
+:::::::
+::::::::
+
+::::::: {.soco-section .soco-philosophy-intro}
+## Science advances through criticism
+
+Scientific progress depends on more than new data. It depends on how we interpret data, how openly we examine our assumptions, and how willing we are to revise our conclusions when better evidence or better arguments emerge.
+
+The Society of Cutaneous Oncology is grounded in the belief that criticism is not a threat to science. It is one of science's essential tools. Thoughtful criticism helps clarify uncertainty, reveal hidden assumptions, identify alternative explanations, and improve the quality of scientific inference.
+
+This philosophy is informed by a broad tradition of critical rationality, transparent reasoning, reproducible science, and calibrated interpretation. It is not a doctrine or allegiance to any single thinker. Rather, it reflects a practical commitment: scientific ideas should be welcomed, examined, challenged, refined, and improved.
+:::::::
+
+::::::: {.soco-section .soco-principles}
+## Guiding principles
+
+:::::: soco-card-grid
+::: soco-card
+### Criticism is a gift
+
+Thoughtful criticism is an act of respect. It signals that an idea is worth engaging with carefully, not merely accepting, dismissing, or ignoring.
+:::
+
+::: soco-card
+### Ideas are not identities
+
+Scientific disagreement should focus on claims, assumptions, methods, and interpretations—not on the worth of the people who advance them.
+:::
+
+::: soco-card
+### Uncertainty should be visible
+
+Clinical and scientific conclusions should be calibrated to the strength of the evidence. Acknowledging uncertainty is not weakness; it is intellectual honesty.
+:::
+
+::: soco-card
+### Methods deserve scrutiny
+
+How we arrive at a conclusion matters. Analytic choices, definitions, assumptions, and limitations should be made as transparent as possible.
+:::
+
+::: soco-card
+### Disagreement advances science
+
+Respectful debate is not an obstacle to progress. It is one of the mechanisms by which scientific communities improve their understanding.
+:::
+
+::: soco-card
+### Better questions matter
+
+The goal is not only to ask whether a study changes practice, but also what assumptions it requires, what uncertainties remain, and what evidence would change our minds.
+:::
+::::::
+:::::::
+
+::::::: {.soco-section .soco-philosophy-application}
+## How this philosophy shapes SoCO
+
+The Society of Cutaneous Oncology expresses this philosophy through its programs and community.
+
+:::::: soco-card-grid
+::: soco-card
+### Journal Club
+
+SoCO Journal Club creates a forum for multidisciplinary interpretation of emerging evidence. The goal is not simply to summarize papers, but to examine their assumptions, strengths, limitations, and implications for patient care.
+
+[View Journal Club](jc.qmd){.soco-card-link}
+:::
+
+::: soco-card
+### Research Forum
+
+The Research Forum gives investigators a place to present work while it can still improve. Feedback is most valuable when it can shape study design, analytic choices, collaboration, and interpretation.
+
+[Visit Research Forum](research_forum.qmd){.soco-card-link}
+:::
+
+::: soco-card
+### Journal of Cutaneous Oncology
+
+The Journal of Cutaneous Oncology provides a home for evidence interpretation, scientific perspective, and transparent discussion of important questions in skin cancer.
+
+[Visit the journal](joco.qmd){.soco-card-link}
+:::
+::::::
+:::::::
+
+::::::: {.soco-section .soco-philosophy-callout}
+## A culture of rigorous generosity
+
+We believe the strongest scientific communities combine rigor with generosity: rigor in how evidence is evaluated, and generosity in how colleagues engage with one another.
+
+The aim is not criticism for its own sake. The aim is better reasoning, better evidence, better collaboration, and ultimately better care for patients with skin cancer.
+:::::::

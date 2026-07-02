@@ -13,7 +13,7 @@ toc: false
 
 ::::: soco-hero-copy
 ::: soco-eyebrow
-Evidence • Collaboration • Reproducible Science
+Evidence • Collaboration • Critical Inquiry • Reproducible Science
 :::
 
 <h1 class="soco-mission-headline">
@@ -24,7 +24,7 @@ Interpreting evidence. Building community. Advancing care.
 
 <p class="soco-dek">
 
-The Society of Cutaneous Oncology is a multidisciplinary community of clinicians and investigators committed to improving outcomes for patients with skin cancer through evidence interpretation, collaborative science, and education.
+The Society of Cutaneous Oncology is a multidisciplinary community of clinicians and investigators committed to improving outcomes for patients with skin cancer through evidence interpretation, constructive criticism, collaborative science, and education.
 
 </p>
 
@@ -61,6 +61,16 @@ We create forums for investigators to share methods, refine ideas, and develop c
 We support clinicians, scientists, and trainees committed to the future of cutaneous oncology.
 :::
 ::::::
+:::::::
+
+::::::: {.soco-section .soco-philosophy-preview}
+## Our philosophy
+
+Scientific progress depends on more than new data. It requires a culture in which evidence is interpreted carefully, assumptions are made visible, uncertainty is acknowledged, and ideas are strengthened through rigorous, respectful criticism.
+
+The Society of Cutaneous Oncology was created to support that culture across cutaneous oncology.
+
+[Read our philosophy →](philosophy.qmd){.soco-philosophy-link}
 :::::::
 
 ::::::: {.soco-section .soco-platforms}

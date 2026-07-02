@@ -564,7 +564,7 @@
     "href": "index.html",
     "title": "\nInterpreting evidence. Building community. Advancing care.\n",
     "section": "",
-    "text": "Evidence • Collaboration • Reproducible Science\n\n\n\nThe Society of Cutaneous Oncology is a multidisciplinary community of clinicians and investigators committed to improving outcomes for patients with skin cancer through evidence interpretation, collaborative science, and education.\n\n\nExplore the Journal Journal Club Research Forum\nScroll"
+    "text": "Evidence • Collaboration • Critical Inquiry • Reproducible Science\n\n\n\nThe Society of Cutaneous Oncology is a multidisciplinary community of clinicians and investigators committed to improving outcomes for patients with skin cancer through evidence interpretation, constructive criticism, collaborative science, and education.\n\n\nExplore the Journal Journal Club Research Forum\nScroll"
   },
   {
     "objectID": "jc.html#march-1",
@@ -698,5 +698,47 @@
     "title": "Frontline Immunotherapy with Response-Guided Subsequent Treatment in Cutaneous Squamous Cell Carcinoma",
     "section": "Summary",
     "text": "Summary\nThis Research Forum session reviewed the FIRST analysis in cutaneous squamous cell carcinoma, focusing on response-guided treatment, dose intensity, early clinical benefit, and the possibility of treatment de-escalation after frontline immunotherapy.\nThe discussion emphasized how Bayesian causal methods may help interpret non-randomized treatment patterns and generate clinically meaningful hypotheses about treatment duration, dose intensity, and response-adapted care."
+  },
+  {
+    "objectID": "philosophy.html",
+    "href": "philosophy.html",
+    "title": "\nOur philosophy of scientific inquiry\n",
+    "section": "",
+    "text": "Critical Inquiry • Intellectual Humility • Scientific Progress\n\n\n\nThe Society of Cutaneous Oncology was created to support a culture in which evidence is interpreted carefully, uncertainty is acknowledged openly, and scientific ideas are strengthened through rigorous, respectful criticism."
+  },
+  {
+    "objectID": "philosophy.html#science-advances-through-criticism",
+    "href": "philosophy.html#science-advances-through-criticism",
+    "title": "\nOur philosophy of scientific inquiry\n",
+    "section": "Science advances through criticism",
+    "text": "Science advances through criticism\nScientific progress depends on more than new data. It depends on how we interpret data, how openly we examine our assumptions, and how willing we are to revise our conclusions when better evidence or better arguments emerge.\nThe Society of Cutaneous Oncology is grounded in the belief that criticism is not a threat to science. It is one of science’s essential tools. Thoughtful criticism helps clarify uncertainty, reveal hidden assumptions, identify alternative explanations, and improve the quality of scientific inference.\nThis philosophy is informed by a broad tradition of critical rationality, transparent reasoning, reproducible science, and calibrated interpretation. It is not a doctrine or allegiance to any single thinker. Rather, it reflects a practical commitment: scientific ideas should be welcomed, examined, challenged, refined, and improved."
+  },
+  {
+    "objectID": "philosophy.html#guiding-principles",
+    "href": "philosophy.html#guiding-principles",
+    "title": "\nOur philosophy of scientific inquiry\n",
+    "section": "Guiding principles",
+    "text": "Guiding principles\n\n\nCriticism is a gift\nThoughtful criticism is an act of respect. It signals that an idea is worth engaging with carefully, not merely accepting, dismissing, or ignoring.\n\n\nIdeas are not identities\nScientific disagreement should focus on claims, assumptions, methods, and interpretations—not on the worth of the people who advance them.\n\n\nUncertainty should be visible\nClinical and scientific conclusions should be calibrated to the strength of the evidence. Acknowledging uncertainty is not weakness; it is intellectual honesty.\n\n\nMethods deserve scrutiny\nHow we arrive at a conclusion matters. Analytic choices, definitions, assumptions, and limitations should be made as transparent as possible.\n\n\nDisagreement advances science\nRespectful debate is not an obstacle to progress. It is one of the mechanisms by which scientific communities improve their understanding.\n\n\nBetter questions matter\nThe goal is not only to ask whether a study changes practice, but also what assumptions it requires, what uncertainties remain, and what evidence would change our minds."
+  },
+  {
+    "objectID": "philosophy.html#how-this-philosophy-shapes-soco",
+    "href": "philosophy.html#how-this-philosophy-shapes-soco",
+    "title": "\nOur philosophy of scientific inquiry\n",
+    "section": "How this philosophy shapes SoCO",
+    "text": "How this philosophy shapes SoCO\nThe Society of Cutaneous Oncology expresses this philosophy through its programs and community.\n\n\nJournal Club\nSoCO Journal Club creates a forum for multidisciplinary interpretation of emerging evidence. The goal is not simply to summarize papers, but to examine their assumptions, strengths, limitations, and implications for patient care.\nView Journal Club\n\n\nResearch Forum\nThe Research Forum gives investigators a place to present work while it can still improve. Feedback is most valuable when it can shape study design, analytic choices, collaboration, and interpretation.\nVisit Research Forum\n\n\nJournal of Cutaneous Oncology\nThe Journal of Cutaneous Oncology provides a home for evidence interpretation, scientific perspective, and transparent discussion of important questions in skin cancer.\nVisit the journal"
+  },
+  {
+    "objectID": "philosophy.html#a-culture-of-rigorous-generosity",
+    "href": "philosophy.html#a-culture-of-rigorous-generosity",
+    "title": "\nOur philosophy of scientific inquiry\n",
+    "section": "A culture of rigorous generosity",
+    "text": "A culture of rigorous generosity\nWe believe the strongest scientific communities combine rigor with generosity: rigor in how evidence is evaluated, and generosity in how colleagues engage with one another.\nThe aim is not criticism for its own sake. The aim is better reasoning, better evidence, better collaboration, and ultimately better care for patients with skin cancer."
+  },
+  {
+    "objectID": "index.html#our-philosophy",
+    "href": "index.html#our-philosophy",
+    "title": "\nInterpreting evidence. Building community. Advancing care.\n",
+    "section": "Our philosophy",
+    "text": "Our philosophy\nScientific progress depends on more than new data. It requires a culture in which evidence is interpreted carefully, assumptions are made visible, uncertainty is acknowledged, and ideas are strengthened through rigorous, respectful criticism.\nThe Society of Cutaneous Oncology was created to support that culture across cutaneous oncology.\nRead our philosophy →"
   }
 ]
