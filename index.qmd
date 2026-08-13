@@ -1,41 +1,19 @@
 ---
 pagetitle: "About SoCO | Society of Cutaneous Oncology"
-editor: visual
 page-layout: full
 toc: false
 ---
 
 <style>
-/* Homepage community CTA
-   Uses the existing SoCO design system while giving the final
-   invitation a slightly stronger call-to-action treatment. */
-
-.soco-community-preview {
-  position: relative;
-  overflow: hidden;
-}
-
+.soco-community-preview { position: relative; overflow: hidden; }
 .soco-community-preview::after {
-  content: "";
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  right: -95px;
-  bottom: -145px;
-  border-radius: 50%;
-  background: rgba(40, 169, 162, 0.08);
-  pointer-events: none;
+  content: ""; position: absolute; width: 240px; height: 240px;
+  right: -95px; bottom: -145px; border-radius: 50%;
+  background: rgba(40,169,162,.08); pointer-events: none;
 }
-
-.soco-community-preview > * {
-  position: relative;
-  z-index: 1;
-}
-
-.soco-community-preview .soco-community-link {
-  display: inline-block;
-  margin-top: 0.35rem;
-}
+.soco-community-preview > * { position: relative; z-index: 1; }
+.soco-community-preview .soco-community-link { display: inline-block; margin-top: .35rem; }
+#soco-community-returning { display: none; }
 </style>
 
 :::::::: soco-hero
@@ -43,24 +21,16 @@ toc: false
 ::: soco-hero-mark
 ![](img/soco-logo-stacked-transparent.png){.soco-hero-logo alt="Society of Cutaneous Oncology logo"}
 :::
-
 ::::: soco-hero-copy
 ::: soco-eyebrow
 Evidence • Collaboration • Critical Inquiry • Reproducible Science
 :::
-
 <h1 class="soco-mission-headline">
-
 Interpreting evidence. Building community. Advancing care.
-
 </h1>
-
 <p class="soco-dek">
-
 The Society of Cutaneous Oncology is a multidisciplinary community of clinicians and investigators committed to improving outcomes for patients with skin cancer through evidence interpretation, constructive criticism, collaborative science, and education.
-
 </p>
-
 ::: soco-actions
 [Explore the Journal](joco.qmd){.btn .btn-primary} [Journal Club](jc.qmd){.btn .btn-outline-primary} [Research Forum](research_forum.qmd){.btn .btn-outline-primary}
 :::
@@ -72,25 +42,19 @@ The Society of Cutaneous Oncology is a multidisciplinary community of clinicians
 
 ::::::: {#our-mission .soco-section}
 ## Our mission {#our-mission}
-
 The Society of Cutaneous Oncology brings together clinicians, scientists, trainees, and allied professionals dedicated to advancing the care of patients with skin cancer.
 
 :::::: soco-card-grid
 ::: soco-card
 ### Interpret evidence
-
 We review emerging data in cutaneous oncology and help translate evidence into thoughtful clinical practice.
 :::
-
 ::: soco-card
 ### Support reproducible science
-
 We create forums for investigators to share methods, refine ideas, and develop collaborative projects.
 :::
-
 ::: soco-card
 ### Educate the field
-
 We support clinicians, scientists, and trainees committed to the future of cutaneous oncology.
 :::
 ::::::
@@ -98,7 +62,6 @@ We support clinicians, scientists, and trainees committed to the future of cutan
 
 ::: {.soco-section .soco-philosophy-preview}
 ## Our philosophy
-
 Scientific progress depends on more than new data. It requires a culture in which evidence is interpreted carefully, assumptions are made visible, uncertainty is acknowledged, and ideas are strengthened through rigorous, respectful criticism.
 
 The Society of Cutaneous Oncology was created to support that culture across cutaneous oncology.
@@ -108,27 +71,21 @@ The Society of Cutaneous Oncology was created to support that culture across cut
 
 ::::::: {.soco-section .soco-platforms}
 ## SoCO programs
-
 :::::: soco-card-grid
 ::: soco-card
 ### Journal of Cutaneous Oncology
-
 An open-access journal focused on skin cancer, evidence interpretation, and perspectives from the cutaneous oncology community.
 
 [Visit the journal](joco.qmd){.soco-card-link}
 :::
-
 ::: soco-card
 ### SoCO Journal Club
-
 A recurring multidisciplinary forum for discussion of recent articles and emerging evidence in skin cancer.
 
 [View Journal Club](jc.qmd){.soco-card-link}
 :::
-
 ::: soco-card
 ### Research Forum
-
 A collaborative space for investigators to present ideas, share work in progress, and develop multicenter projects.
 
 [Visit Research Forum](research_forum.qmd){.soco-card-link}
@@ -136,7 +93,8 @@ A collaborative space for investigators to present ideas, share work in progress
 ::::::
 :::::::
 
-::: {.soco-section .soco-philosophy-preview .soco-community-preview}
+<div id="soco-community-new" class="soco-section soco-philosophy-preview soco-community-preview">
+
 ## Join our community
 
 Connect with colleagues across disciplines and institutions who share an interest in advancing the care of patients with skin cancer.
@@ -144,4 +102,40 @@ Connect with colleagues across disciplines and institutions who share an interes
 Join the SoCO community to receive invitations to Journal Club and Research Forum, along with announcements about educational programs, collaborative initiatives, and other Society activities.
 
 [Join the SoCO community →](join.qmd){.soco-philosophy-link .soco-community-link}
-:::
+
+</div>
+
+<div id="soco-community-returning" class="soco-section soco-philosophy-preview soco-community-preview">
+
+## <span id="soco-returning-heading">Welcome back.</span>
+
+You're part of the SoCO community. Explore what's happening across Journal Club, Research Forum, the Journal of Cutaneous Oncology, and the broader Society.
+
+[Explore Journal Club →](jc.qmd){.soco-philosophy-link .soco-community-link}
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  try {
+    const joined = localStorage.getItem("socoJoined") === "true";
+    const fullName = localStorage.getItem("socoName");
+    if (!joined) return;
+
+    const joinCTA = document.getElementById("soco-community-new");
+    const returningCTA = document.getElementById("soco-community-returning");
+    const heading = document.getElementById("soco-returning-heading");
+
+    if (joinCTA) joinCTA.style.display = "none";
+    if (returningCTA) returningCTA.style.display = "block";
+
+    if (fullName && heading) {
+      const firstName = fullName.trim().split(/\s+/)[0];
+      if (firstName) heading.textContent = "Welcome back, " + firstName + ".";
+    }
+  } catch (e) {}
+});
+</script>
+
+
+========================

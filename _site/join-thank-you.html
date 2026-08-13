@@ -143,69 +143,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-.soco-thanks {
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  background:
-    radial-gradient(circle at 82% 22%, rgba(40,169,162,.22), transparent 30%),
-    radial-gradient(circle at 92% 85%, rgba(233,120,99,.12), transparent 25%),
-    linear-gradient(135deg, #062A46 0%, #083754 55%, #0B4657 100%);
-  color: #fff;
-}
-
-.soco-thanks-inner {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: clamp(5rem, 10vw, 8rem) 2rem;
-}
-
-.soco-thanks .soco-eyebrow {
-  color: #7ED8D2;
-}
-
-.soco-thanks-headline {
-  margin: .65rem 0 1.4rem;
-  max-width: 850px;
-  color: #fff !important;
-  font-size: clamp(3.3rem, 6.4vw, 6rem);
-  line-height: .98;
-  letter-spacing: -.05em;
-  font-weight: 750;
-}
-
-.soco-thanks-dek {
-  max-width: 760px;
-  margin: 0 0 2rem;
-  color: rgba(255,255,255,.84);
-  font-size: clamp(1.15rem, 2vw, 1.35rem);
-  line-height: 1.65;
-}
-
-.soco-thanks-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .8rem;
-  margin-top: 2rem;
-}
-
-.soco-thanks-actions .btn-outline-light {
-  border-color: rgba(255,255,255,.55);
-  color: #fff;
-}
-
-.soco-thanks-actions .btn-outline-light:hover {
-  background: #fff;
-  color: #062A46;
-}
-
-@media (max-width: 700px) {
-  .soco-thanks-inner {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-}
+.soco-thanks { min-height:70vh; display:flex; align-items:center; background:radial-gradient(circle at 82% 22%,rgba(40,169,162,.22),transparent 30%),radial-gradient(circle at 92% 85%,rgba(233,120,99,.12),transparent 25%),linear-gradient(135deg,#062A46 0%,#083754 55%,#0B4657 100%); color:#fff; }
+.soco-thanks-inner { width:100%; max-width:900px; margin:0 auto; padding:clamp(5rem,10vw,8rem) 2rem; }
+.soco-thanks .soco-eyebrow { color:#7ED8D2; }
+.soco-thanks-headline { margin:.65rem 0 1.4rem; max-width:850px; color:#fff!important; font-size:clamp(3.3rem,6.4vw,6rem); line-height:.98; letter-spacing:-.05em; font-weight:750; }
+.soco-thanks-dek { max-width:760px; margin:0 0 2rem; color:rgba(255,255,255,.84); font-size:clamp(1.15rem,2vw,1.35rem); line-height:1.65; }
+.soco-thanks-actions { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:2rem; }
+.soco-thanks-actions .btn-outline-light { border-color:rgba(255,255,255,.55); color:#fff; }
+.soco-thanks-actions .btn-outline-light:hover { background:#fff; color:#062A46; }
+@media(max-width:700px){.soco-thanks-inner{padding-left:1.25rem;padding-right:1.25rem;}}
 </style>
 <div class="soco-thanks">
 <div class="soco-thanks-inner">
@@ -213,8 +159,11 @@ ul.task-list li input[type="checkbox"] {
 Society of Cutaneous Oncology
 </div>
 <h1 class="soco-thanks-headline" id="soco-welcome">
-<p>Welcome to the community.</p>
+Welcome to the community.
 </h1>
+<p class="soco-thanks-dek" id="soco-welcome-message">
+Thank you for joining SoCO. Your information has been received. We built SoCO for people who are curious, collaborative, and willing to ask hard questions. We look forward to having you in the conversation.
+</p>
 <div class="soco-thanks-actions">
 <p><a href="./index.html" class="btn btn-primary">Return to SoCO</a> <a href="./philosophy.html" class="btn btn-outline-light">Explore our philosophy</a></p>
 </div>
@@ -222,20 +171,23 @@ Society of Cutaneous Oncology
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const fullName = sessionStorage.getItem("socoName");
-  const headline = document.getElementById("soco-welcome");
-  const message = document.getElementById("soco-welcome-message");
+  try {
+    const fullName = sessionStorage.getItem("socoName") || localStorage.getItem("socoName");
 
-  if (fullName && headline) {
-    headline.textContent = "Welcome, " + fullName + ".";
-  }
+    /* This page is reached after a successful Netlify form POST. */
+    localStorage.setItem("socoJoined", "true");
+    if (fullName) localStorage.setItem("socoName", fullName);
 
-  if (fullName && message) {
-    message.textContent =
-      "Great to have you aboard. We built SoCO for people who are curious, collaborative, and willing to ask hard questions. We look forward to having you in the conversation.";
-  }
+    const headline = document.getElementById("soco-welcome");
+    const message = document.getElementById("soco-welcome-message");
 
-  sessionStorage.removeItem("socoName");
+    if (fullName && headline) headline.textContent = "Welcome, " + fullName + ".";
+    if (fullName && message) {
+      message.textContent = "Great to have you aboard. We built SoCO for people who are curious, collaborative, and willing to ask hard questions. We look forward to having you in the conversation.";
+    }
+
+    sessionStorage.removeItem("socoName");
+  } catch (e) {}
 });
 </script>
 

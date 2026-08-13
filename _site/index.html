@@ -153,36 +153,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-/* Homepage community CTA
-   Uses the existing SoCO design system while giving the final
-   invitation a slightly stronger call-to-action treatment. */
-
-.soco-community-preview {
-  position: relative;
-  overflow: hidden;
-}
-
+.soco-community-preview { position: relative; overflow: hidden; }
 .soco-community-preview::after {
-  content: "";
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  right: -95px;
-  bottom: -145px;
-  border-radius: 50%;
-  background: rgba(40, 169, 162, 0.08);
-  pointer-events: none;
+  content: ""; position: absolute; width: 240px; height: 240px;
+  right: -95px; bottom: -145px; border-radius: 50%;
+  background: rgba(40,169,162,.08); pointer-events: none;
 }
-
-.soco-community-preview > * {
-  position: relative;
-  z-index: 1;
-}
-
-.soco-community-preview .soco-community-link {
-  display: inline-block;
-  margin-top: 0.35rem;
-}
+.soco-community-preview > * { position: relative; z-index: 1; }
+.soco-community-preview .soco-community-link { display: inline-block; margin-top: .35rem; }
+#soco-community-returning { display: none; }
 </style>
 <div class="soco-hero">
 <div class="soco-hero-inner">
@@ -194,11 +173,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Evidence • Collaboration • Critical Inquiry • Reproducible Science</p>
 </div>
 <h1 class="soco-mission-headline">
-<p>Interpreting evidence. Building community. Advancing care.</p>
+Interpreting evidence. Building community. Advancing care.
 </h1>
 <p class="soco-dek">
-</p><p>The Society of Cutaneous Oncology is a multidisciplinary community of clinicians and investigators committed to improving outcomes for patients with skin cancer through evidence interpretation, constructive criticism, collaborative science, and education.</p>
-<p></p>
+The Society of Cutaneous Oncology is a multidisciplinary community of clinicians and investigators committed to improving outcomes for patients with skin cancer through evidence interpretation, constructive criticism, collaborative science, and education.
+</p>
 <div class="soco-actions">
 <p><a href="./joco.html" class="btn btn-primary">Explore the Journal</a> <a href="./jc.html" class="btn btn-outline-primary">Journal Club</a> <a href="./research_forum.html" class="btn btn-outline-primary">Research Forum</a></p>
 </div>
@@ -250,12 +229,43 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </div>
 </section>
-<section id="join-our-community" class="level2 soco-section soco-philosophy-preview soco-community-preview">
+<div id="soco-community-new" class="soco-section soco-philosophy-preview soco-community-preview">
+<section id="join-our-community" class="level2">
 <h2 class="anchored" data-anchor-id="join-our-community">Join our community</h2>
 <p>Connect with colleagues across disciplines and institutions who share an interest in advancing the care of patients with skin cancer.</p>
 <p>Join the SoCO community to receive invitations to Journal Club and Research Forum, along with announcements about educational programs, collaborative initiatives, and other Society activities.</p>
 <p><a href="./join.html" class="soco-philosophy-link soco-community-link">Join the SoCO community →</a></p>
 </section>
+</div>
+<div id="soco-community-returning" class="soco-section soco-philosophy-preview soco-community-preview">
+<section id="welcome-back." class="level2">
+<h2 class="anchored" data-anchor-id="welcome-back."><span id="soco-returning-heading">Welcome back.</span></h2>
+<p>You’re part of the SoCO community. Explore what’s happening across Journal Club, Research Forum, the Journal of Cutaneous Oncology, and the broader Society.</p>
+<p><a href="./jc.html" class="soco-philosophy-link soco-community-link">Explore Journal Club →</a></p>
+</section>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  try {
+    const joined = localStorage.getItem("socoJoined") === "true";
+    const fullName = localStorage.getItem("socoName");
+    if (!joined) return;
+
+    const joinCTA = document.getElementById("soco-community-new");
+    const returningCTA = document.getElementById("soco-community-returning");
+    const heading = document.getElementById("soco-returning-heading");
+
+    if (joinCTA) joinCTA.style.display = "none";
+    if (returningCTA) returningCTA.style.display = "block";
+
+    if (fullName && heading) {
+      const firstName = fullName.trim().split(/\s+/)[0];
+      if (firstName) heading.textContent = "Welcome back, " + firstName + ".";
+    }
+  } catch (e) {}
+});
+</script>
+<p>========================</p>
 
 
 
