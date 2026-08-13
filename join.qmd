@@ -236,7 +236,9 @@ toc: false
   font-weight: 700;
 }
 
-.soco-form-field input {
+.soco-form-field input,
+.soco-form-field select,
+.soco-form-field textarea {
   width: 100%;
   box-sizing: border-box;
   padding: .88rem 1rem;
@@ -248,10 +250,30 @@ toc: false
   transition: border-color .15s ease, box-shadow .15s ease;
 }
 
-.soco-form-field input:focus {
+.soco-form-field select {
+  cursor: pointer;
+}
+
+.soco-form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.soco-form-field input:focus,
+.soco-form-field select:focus,
+.soco-form-field textarea:focus {
   outline: none;
   border-color: #28A9A2;
   box-shadow: 0 0 0 3px rgba(40,169,162,.14);
+}
+
+.soco-form-help {
+  display: block;
+  margin-top: .4rem;
+  color: #78858D;
+  font-size: .8rem;
+  line-height: 1.45;
 }
 
 .soco-community-form .btn {
@@ -439,12 +461,49 @@ Don't fill this out if you're human:
 <input type="email" id="email" name="email" autocomplete="email" required>
 </div>
 
+<div class="soco-form-field">
+<label for="role">Your role</label>
+<select id="role" name="role" required>
+<option value="" selected disabled>Select one</option>
+<option value="Physician / Clinician">Physician / Clinician</option>
+<option value="Researcher / Scientist">Researcher / Scientist</option>
+<option value="Trainee">Trainee</option>
+<option value="Allied Health Professional">Allied Health Professional</option>
+<option value="Industry">Industry</option>
+<option value="Patient / Advocate">Patient / Advocate</option>
+<option value="Other">Other</option>
+</select>
+</div>
+
+<div class="soco-form-field">
+<label for="interest">What interests you about SoCO?</label>
+<textarea id="interest" name="interest" rows="4" maxlength="300" required placeholder="Briefly tell us about your interest in cutaneous oncology."></textarea>
+<span class="soco-form-help">A sentence or two is plenty.</span>
+</div>
+
 <button type="submit" class="btn btn-primary">Join our community</button>
 
 <p class="soco-form-privacy">
 Your information will be used only to communicate about Society of Cutaneous Oncology activities.
 </p>
 </form>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector('form[name="soco-community"]');
+  const nameInput = document.getElementById("name");
+
+  if (form && nameInput) {
+    form.addEventListener("submit", function () {
+      const fullName = nameInput.value.trim();
+
+      if (fullName) {
+        sessionStorage.setItem("socoName", fullName);
+      }
+    });
+  }
+});
+</script>
 
 </div>
 </div>
