@@ -21,7 +21,7 @@ Each month, the Society of Cutaneous Oncology reviews recent articles describing
 :::::
 ::::::
 
-::: soco-section
+::::::::::: soco-section
 # Overview
 
 The SoCO Journal Club is a multi-institutional and multidisciplinary forum for discussing practice-changing and practice-informing literature in skin cancer.
@@ -44,7 +44,6 @@ Wong, Michael K., Mohammed M. Milhem, Joseph J. Sacco, Judith Michels, Gino K. I
 ### February
 
 Miller, David M., James W. Smithy, Jennell Palaia, Divya Patel, Anthony Salvatore, David D’Adamo, Matthew Mattera, Zheng-Yi Zhou, Viviana Garcia-Horton, and Ahmad A. Tarhini. 2025. “Efficacy of Nivolumab Plus Relatlimab Versus BRAF/MEK Inhibitors for First-Line Treatment of BRAF-Mutant Advanced Melanoma: A Matching-Adjusted Indirect Comparison.” *BMJ Oncology* 4: e000912. https://doi.org/10.1136/bmjonc-2025-000912.
-
 :::
 
 # 2025 Articles
@@ -366,3 +365,4 @@ Porceddu, Sandro Virgilio, Mathias Bressel, Michael Geoffrey Poulsen, Adam Stone
 
 ### 
 :::
+:::::::::::
