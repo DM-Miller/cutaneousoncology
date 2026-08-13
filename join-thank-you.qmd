@@ -82,12 +82,6 @@ Welcome to the community.
 
 </h1>
 
-<p class="soco-thanks-dek" id="soco-welcome-message">
-
-Thank you for joining SoCO. Your information has been received, and we look forward to keeping you informed about upcoming programs, meetings, and opportunities to participate.
-
-</p>
-
 <div class="soco-thanks-actions">
 
 [Return to SoCO](index.qmd){.btn .btn-primary}
