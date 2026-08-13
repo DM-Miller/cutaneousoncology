@@ -5,9 +5,9 @@ page-layout: full
 toc: false
 ---
 
-:::::::: soco-philosophy-hero
-::::::: soco-philosophy-hero-inner
-::::: soco-philosophy-hero-copy
+:::::: soco-philosophy-hero
+::::: soco-philosophy-hero-inner
+:::: soco-philosophy-hero-copy
 ::: soco-eyebrow
 Critical Inquiry • Intellectual Humility • Scientific Progress
 :::
@@ -23,11 +23,11 @@ Our philosophy of scientific inquiry
 The Society of Cutaneous Oncology was created to support a culture in which evidence is interpreted carefully, uncertainty is acknowledged openly, and scientific ideas are strengthened through rigorous, respectful criticism.
 
 </p>
+::::
 :::::
-:::::::
-::::::::
+::::::
 
-::::::: {.soco-section .soco-philosophy-intro}
+::: {.soco-section .soco-philosophy-intro}
 ## Science advances through criticism
 
 Scientific progress depends on more than new data. It depends on how we interpret data, how openly we examine our assumptions, and how willing we are to revise our conclusions when better evidence or better arguments emerge.
@@ -35,12 +35,12 @@ Scientific progress depends on more than new data. It depends on how we interpre
 The Society of Cutaneous Oncology is grounded in the belief that criticism is not a threat to science. It is one of science's essential tools. Thoughtful criticism helps clarify uncertainty, reveal hidden assumptions, identify alternative explanations, and improve the quality of scientific inference.
 
 This philosophy is informed by a broad tradition of critical rationality, transparent reasoning, reproducible science, and calibrated interpretation. It is not a doctrine or allegiance to any single thinker. Rather, it reflects a practical commitment: scientific ideas should be welcomed, examined, challenged, refined, and improved.
-:::::::
+:::
 
-::::::: {.soco-section .soco-principles}
+:::::::::: {.soco-section .soco-principles}
 ## Guiding principles
 
-:::::: soco-card-grid
+::::::::: soco-card-grid
 ::: soco-card
 ### Criticism is a gift
 
@@ -76,8 +76,8 @@ Respectful debate is not an obstacle to progress. It is one of the mechanisms by
 
 The goal is not only to ask whether a study changes practice, but also what assumptions it requires, what uncertainties remain, and what evidence would change our minds.
 :::
-::::::
-:::::::
+:::::::::
+::::::::::
 
 ::::::: {.soco-section .soco-philosophy-application}
 ## How this philosophy shapes SoCO
@@ -111,10 +111,10 @@ The Journal of Cutaneous Oncology provides a home for evidence interpretation, s
 ::::::
 :::::::
 
-::::::: {.soco-section .soco-philosophy-callout}
+::: {.soco-section .soco-philosophy-callout}
 ## A culture of rigorous generosity
 
 We believe the strongest scientific communities combine rigor with generosity: rigor in how evidence is evaluated, and generosity in how colleagues engage with one another.
 
 The aim is not criticism for its own sake. The aim is better reasoning, better evidence, better collaboration, and ultimately better care for patients with skin cancer.
-:::::::
+:::

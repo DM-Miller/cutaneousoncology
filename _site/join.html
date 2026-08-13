@@ -578,18 +578,22 @@ Your information will be used only to communicate about Society of Cutaneous Onc
 </form>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector('form[name="soco-community"]');
   const nameInput = document.getElementById("name");
 
-  if (form && nameInput) {
-    form.addEventListener("submit", function () {
-      const fullName = nameInput.value.trim();
+  if (!nameInput) return;
 
-      if (fullName) {
-        sessionStorage.setItem("socoName", fullName);
-      }
-    });
-  }
+  const saveName = function () {
+    const fullName = nameInput.value.trim();
+
+    if (fullName) {
+      sessionStorage.setItem("socoName", fullName);
+    } else {
+      sessionStorage.removeItem("socoName");
+    }
+  };
+
+  nameInput.addEventListener("input", saveName);
+  nameInput.addEventListener("change", saveName);
 });
 </script>
 </div>
@@ -629,61 +633,6 @@ Join us to receive invitations and announcements for Journal Club, Research Foru
 
      I am intentionally NOT fabricating the surrounding _quarto.yml
      because that file has not been provided.
-     ============================================================ -->
-<!-- ============================================================
-     THANK-YOU PAGE: join-thank-you.qmd
-
----
-pagetitle: "Welcome to SoCO | Society of Cutaneous Oncology"
-editor: visual
-page-layout: full
-toc: false
----
-
-<style>
-.soco-thanks {
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  background:
-    radial-gradient(circle at 82% 22%, rgba(40,169,162,.22), transparent 30%),
-    linear-gradient(135deg, #062A46 0%, #083754 55%, #0B4657 100%);
-  color: #fff;
-}
-.soco-thanks-inner {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 6rem 2rem;
-}
-.soco-thanks h1 {
-  color: #fff !important;
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  line-height: 1;
-  letter-spacing: -.045em;
-}
-.soco-thanks p {
-  max-width: 720px;
-  color: rgba(255,255,255,.82);
-  font-size: 1.2rem;
-  line-height: 1.65;
-}
-</style>
-
-<div class="soco-thanks">
-<div class="soco-thanks-inner">
-
-<div class="soco-eyebrow">Society of Cutaneous Oncology</div>
-
-# Welcome to the community.
-
-Thank you for joining SoCO. Your information has been received, and we look forward to keeping you informed about upcoming programs and opportunities to participate.
-
-[Return to SoCO](index.qmd){.btn .btn-primary}
-
-</div>
-</div>
-
      ============================================================ -->
 <!-- ============================================================
      NETLIFY

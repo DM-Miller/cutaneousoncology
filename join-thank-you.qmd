@@ -84,7 +84,7 @@ Welcome to the community.
 
 <p class="soco-thanks-dek" id="soco-welcome-message">
 
-Thank you for joining SoCO. Your information has been received. We built SoCO for people who are curious, collaborative, and willing to ask hard questions. We look forward to having you in the conversation.
+Thank you for joining SoCO. Your information has been received, and we look forward to keeping you informed about upcoming programs, meetings, and opportunities to participate.
 
 </p>
 
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const message = document.getElementById("soco-welcome-message");
 
   if (fullName && headline) {
-    headline.textContent = `Welcome, ${fullName}.`;
+    headline.textContent = "Welcome, " + fullName + ".";
   }
 
   if (fullName && message) {
