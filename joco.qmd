@@ -3,63 +3,461 @@ title: "Journal of Cutaneous Oncology"
 pagetitle: "Journal of Cutaneous Oncology | Society of Cutaneous Oncology"
 page-layout: full
 title-block-banner: false
-toc: true
+toc: false
 ---
 
-:::::: {.soco-jc-hero}
-::::: {.soco-jc-hero-inner}
-::: {.soco-eyebrow}
-Open access • Skin cancer • Perspectives on the science
-:::
+<style>
+/* ============================================================
+   JOCO LANDING PAGE
+   ============================================================ */
 
-# 
+.soco-joco-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(40,169,162,.18), transparent 30%),
+    radial-gradient(circle at 92% 88%, rgba(233,120,99,.11), transparent 26%),
+    linear-gradient(135deg, #062A46 0%, #083754 58%, #0B4657 100%);
+  color: #fff;
+}
 
-The Journal of Cutaneous Oncology (JoCO) is an open-access journal focused on skin cancer and published by the Society of Cutaneous Oncology.
+.soco-joco-hero-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(5rem, 9vw, 8rem) 2rem;
+}
 
-::: {.soco-actions}
-[Visit the current issue](https://journalofcutaneousoncology.io){.btn .btn-primary}
-[Perspectives on the Science](https://journalofcutaneousoncology.io/perspectives-on-the-science.html){.btn .btn-outline-primary}
-[Journal Club](jc.qmd){.btn .btn-outline-primary}
-:::
-:::::
-::::::
+.soco-joco-hero .soco-eyebrow {
+  margin-bottom: 1rem;
+  color: #7ED8D2;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
 
-::: {.soco-section}
-# About the Journal
+.soco-joco-headline {
+  max-width: 950px;
+  margin: 0 0 1.35rem;
+  color: #fff !important;
+  font-size: clamp(3.25rem, 6.3vw, 6rem);
+  font-weight: 760;
+  line-height: .98;
+  letter-spacing: -.05em;
+}
 
-The Journal of Cutaneous Oncology (JoCO) is an open-access journal whose scope is specific to skin cancer. JoCO publishes **Perspectives on the Science**, a regular commentary series based on publications reviewed in the multi-institutional SoCO Journal Club.
+.soco-joco-dek {
+  max-width: 790px;
+  margin: 0;
+  color: rgba(255,255,255,.84);
+  font-size: clamp(1.15rem, 2vw, 1.38rem);
+  line-height: 1.65;
+}
 
-These perspectives are intended to interpret emerging data, highlight clinical and scientific context, and support thoughtful discussion across the cutaneous oncology community. The comments in each article represent the views of the authors of that Perspectives on the Science piece and do not necessarily represent the views of other SoCO members or affiliated institutions.
+.soco-joco-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 2rem;
+}
 
-# Current Issue
+.soco-joco-actions .btn-primary {
+  border-color: #fff;
+  background: #fff;
+  color: #062A46;
+}
 
-The current issue is available on the JoCO website.
+.soco-joco-actions .btn-primary:hover {
+  border-color: #f2f6f8;
+  background: #f2f6f8;
+  color: #062A46;
+}
 
-::: {.soco-card-grid}
+.soco-joco-actions .btn-outline-light {
+  border-color: rgba(255,255,255,.55);
+  color: #fff;
+}
 
-::: {.soco-card}
-### Current issue
+.soco-joco-actions .btn-outline-light:hover {
+  border-color: #fff;
+  background: #fff;
+  color: #062A46;
+}
 
-Read the latest issue of the Journal of Cutaneous Oncology.
 
-[Visit the current issue](https://journalofcutaneousoncology.io){.soco-card-link}
-:::
+/* ============================================================
+   INTRO
+   ============================================================ */
 
-::: {.soco-card}
+.soco-joco-intro {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(4.5rem, 8vw, 7rem) 2rem 2rem;
+}
+
+.soco-joco-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: clamp(2.5rem, 7vw, 6rem);
+  align-items: start;
+}
+
+.soco-joco-section-label {
+  color: #28A9A2;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.soco-joco-intro h2 {
+  margin: .65rem 0 0;
+  color: #062A46;
+  font-size: clamp(2.35rem, 4.5vw, 4.1rem);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+}
+
+.soco-joco-intro-copy {
+  color: #526574;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.soco-joco-intro-copy p:first-child {
+  margin-top: 0;
+}
+
+
+/* ============================================================
+   EXPLORE
+   ============================================================ */
+
+.soco-joco-explore {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem clamp(5rem, 9vw, 8rem);
+}
+
+.soco-joco-explore-header {
+  margin-bottom: 1.75rem;
+}
+
+.soco-joco-explore-header h2 {
+  margin: .5rem 0 0;
+  color: #062A46;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  letter-spacing: -.04em;
+}
+
+.soco-joco-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.soco-joco-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 285px;
+  padding: 1.75rem;
+  border: 1px solid rgba(6,42,70,.11);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(6,42,70,.055);
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.soco-joco-card::before {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  left: 1.5rem;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: linear-gradient(90deg, #28A9A2, #E97863);
+  content: "";
+}
+
+.soco-joco-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(40,169,162,.28);
+  box-shadow: 0 18px 45px rgba(6,42,70,.09);
+}
+
+.soco-joco-card-number {
+  margin-bottom: 2.25rem;
+  color: #28A9A2;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.soco-joco-card h3 {
+  margin: 0 0 .8rem;
+  color: #062A46;
+  font-size: 1.4rem;
+  letter-spacing: -.02em;
+}
+
+.soco-joco-card p {
+  margin: 0 0 1.5rem;
+  color: #5a6c79;
+  line-height: 1.65;
+}
+
+.soco-joco-card-link {
+  margin-top: auto;
+  color: #0E5688;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.soco-joco-card-link:hover {
+  color: #28A9A2;
+}
+
+
+/* ============================================================
+   JOURNAL CLUB CONNECTION
+   ============================================================ */
+
+.soco-joco-connection {
+  background: #f4f8f9;
+  border-top: 1px solid rgba(6,42,70,.07);
+  border-bottom: 1px solid rgba(6,42,70,.07);
+}
+
+.soco-joco-connection-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, .55fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 2rem;
+}
+
+.soco-joco-connection h2 {
+  margin: .5rem 0 1rem;
+  color: #062A46;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -.04em;
+}
+
+.soco-joco-connection p {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: #536574;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.soco-joco-connection-action {
+  text-align: right;
+}
+
+.soco-joco-connection-action .btn {
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 850px) {
+  .soco-joco-intro-grid,
+  .soco-joco-connection-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .soco-joco-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .soco-joco-card {
+    min-height: auto;
+  }
+
+  .soco-joco-connection-action {
+    text-align: left;
+  }
+}
+
+@media (max-width: 700px) {
+  .soco-joco-hero-inner,
+  .soco-joco-intro,
+  .soco-joco-explore,
+  .soco-joco-connection-inner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+</style>
+
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+
+<div class="soco-joco-hero">
+<div class="soco-joco-hero-inner">
+
+<div class="soco-eyebrow">
+Open access • Skin cancer • Evidence • Perspective
+</div>
+
+<h1 class="soco-joco-headline">
+Journal of Cutaneous Oncology
+</h1>
+
+<p class="soco-joco-dek">
+An open-access journal dedicated to advancing the understanding and care of patients with skin cancer through original scholarship, evidence interpretation, scientific perspective, and thoughtful discussion.
+</p>
+
+<div class="soco-joco-actions">
+
+[Explore the Journal](https://journalofcutaneousoncology.io){.btn .btn-primary}
+[Perspectives on the Science](https://journalofcutaneousoncology.io/perspectives-on-the-science.html){.btn .btn-outline-light}
+
+</div>
+
+</div>
+</div>
+
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+
+<div class="soco-joco-intro">
+
+<div class="soco-joco-intro-grid">
+
+<div>
+
+<div class="soco-joco-section-label">
+About the Journal
+</div>
+
+<h2>
+A journal for the cutaneous oncology community.
+</h2>
+
+</div>
+
+<div class="soco-joco-intro-copy">
+
+The **Journal of Cutaneous Oncology (JoCO)** is an open-access journal published by the Society of Cutaneous Oncology and dedicated specifically to skin cancer.
+
+JoCO provides a home for scholarship, evidence interpretation, scientific perspective, and discussion across the multidisciplinary cutaneous oncology community.
+
+A central feature of the Journal is **Perspectives on the Science**, a commentary series that examines important publications in their broader clinical and scientific context. Many of these perspectives emerge from discussions in the multi-institutional SoCO Journal Club.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ============================================================
+     EXPLORE
+     ============================================================ -->
+
+<div class="soco-joco-explore">
+
+<div class="soco-joco-explore-header">
+
+<div class="soco-joco-section-label">
+Explore JoCO
+</div>
+
+<h2>
+Read. Question. Discuss.
+</h2>
+
+</div>
+
+<div class="soco-joco-grid">
+
+<div class="soco-joco-card">
+
+<div class="soco-joco-card-number">01</div>
+
+### Current Journal
+
+Explore the latest publications, editorials, perspectives, and other content from the Journal of Cutaneous Oncology.
+
+[Visit the Journal →](https://journalofcutaneousoncology.io){.soco-joco-card-link}
+
+</div>
+
+
+<div class="soco-joco-card">
+
+<div class="soco-joco-card-number">02</div>
+
 ### Perspectives on the Science
 
-Read commentary connected to articles discussed in SoCO Journal Club.
+Read critical commentary placing emerging studies into their broader scientific, methodological, and clinical context.
 
-[Read perspectives](https://journalofcutaneousoncology.io/perspectives-on-the-science.html){.soco-card-link}
-:::
+[Read Perspectives →](https://journalofcutaneousoncology.io/perspectives-on-the-science.html){.soco-joco-card-link}
 
-::: {.soco-card}
+</div>
+
+
+<div class="soco-joco-card">
+
+<div class="soco-joco-card-number">03</div>
+
 ### SoCO Journal Club
 
-Explore the multidisciplinary literature discussions that inform the Perspectives series.
+Join the multidisciplinary discussions of emerging evidence that help generate questions, critique, and scientific perspective.
 
-[View Journal Club](jc.qmd){.soco-card-link}
-:::
+[Explore Journal Club →](jc.qmd){.soco-joco-card-link}
 
-:::
-:::
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ============================================================
+     JOURNAL CLUB CONNECTION
+     ============================================================ -->
+
+<div class="soco-joco-connection">
+<div class="soco-joco-connection-inner">
+
+<div>
+
+<div class="soco-joco-section-label">
+From discussion to scholarship
+</div>
+
+<h2>
+Scientific conversation should continue after the paper is published.
+</h2>
+
+<p>
+SoCO Journal Club brings clinicians and investigators together to examine emerging evidence, challenge assumptions, and identify the questions that remain. The Journal of Cutaneous Oncology provides a platform for carrying those conversations forward through durable scientific scholarship and perspective.
+</p>
+
+</div>
+
+<div class="soco-joco-connection-action">
+
+[Explore SoCO Journal Club](jc.qmd){.btn .btn-outline-primary}
+
+</div>
+
+</div>
+</div>
