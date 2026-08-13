@@ -414,8 +414,15 @@ Tell us who you are and where you work. We will keep you informed about upcoming
 
 <div class="soco-join-form-panel">
 
-<form name="soco-community" method="POST" data-netlify="true" action="/join-thank-you.html" class="soco-community-form">
+<form name="soco-community" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/join-thank-you.html" class="soco-community-form">
 <input type="hidden" name="form-name" value="soco-community">
+
+<p hidden>
+<label>
+Don't fill this out if you're human:
+<input name="bot-field">
+</label>
+</p>
 
 <div class="soco-form-field">
 <label for="name">Name</label>
@@ -550,6 +557,12 @@ Thank you for joining SoCO. Your information has been received, and we look forw
 
      After deploying, Netlify should detect:
        Form name: soco-community
+
+     Spam protection is enabled with:
+       netlify-honeypot="bot-field"
+
+     The hidden bot-field is invisible to human visitors. Netlify can
+     identify submissions that populate it as likely spam.
 
      Then:
        Project → Forms → soco-community → Form notifications
