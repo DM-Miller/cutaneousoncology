@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About SoCO | Society of Cutaneous Oncology – Society of Cutaneous Oncology</title>
+<title>Join Our Community | Society of Cutaneous Oncology – Society of Cutaneous Oncology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,21 +74,13 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta property="og:title" content="About SoCO | Society of Cutaneous Oncology">
+<meta property="og:title" content="Join Our Community | Society of Cutaneous Oncology">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://cutaneousoncology.io/img/soco-logo-stacked-transparent.png">
 <meta property="og:site_name" content="Society of Cutaneous Oncology">
-<meta property="og:image:alt" content="Society of Cutaneous Oncology logo">
-<meta property="og:image:height" content="899">
-<meta property="og:image:width" content="917">
-<meta name="twitter:title" content="About SoCO | Society of Cutaneous Oncology">
+<meta name="twitter:title" content="Join Our Community | Society of Cutaneous Oncology">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://cutaneousoncology.io/img/soco-logo-stacked-transparent.png">
 <meta name="twitter:site" content="@SocCutaneousOnc">
-<meta name="twitter:image:alt" content="Society of Cutaneous Oncology logo">
-<meta name="twitter:image-height" content="899">
-<meta name="twitter:image-width" content="917">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -126,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Our Philosophy</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./join.html"> 
+    <a class="nav-link active" href="./join.html" aria-current="page"> 
 <span class="menu-text">Join Our Community</span></a>
   </li>  
 </ul>
@@ -153,109 +145,509 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-/* Homepage community CTA
-   Uses the existing SoCO design system while giving the final
-   invitation a slightly stronger call-to-action treatment. */
+/* ============================================================
+   SoCO — Join Our Community
+   Page-specific styles built to complement the existing
+   SoCO classes and visual language.
+   ============================================================ */
 
-.soco-community-preview {
+.soco-join-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 22%, rgba(40,169,162,.22), transparent 30%),
+    radial-gradient(circle at 92% 85%, rgba(233,120,99,.12), transparent 25%),
+    linear-gradient(135deg, #062A46 0%, #083754 55%, #0B4657 100%);
+  color: #fff;
+}
+
+.soco-join-hero::after {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 50%;
+  right: -120px;
+  top: -165px;
+}
+
+.soco-join-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(5rem, 9vw, 8rem) 2rem clamp(4.5rem, 8vw, 7rem);
+}
+
+.soco-join-hero-copy {
+  max-width: 900px;
+}
+
+.soco-join-hero .soco-eyebrow {
+  color: #7ED8D2;
+}
+
+.soco-join-headline {
+  margin: .65rem 0 1.4rem;
+  max-width: 850px;
+  color: #fff !important;
+  font-size: clamp(3.3rem, 6.4vw, 6rem);
+  line-height: .98;
+  letter-spacing: -.05em;
+  font-weight: 750;
+}
+
+.soco-join-hero .soco-dek {
+  max-width: 810px;
+  color: rgba(255,255,255,.84);
+  font-size: clamp(1.15rem, 2vw, 1.42rem);
+  line-height: 1.62;
+}
+
+.soco-join-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 2rem;
+}
+
+.soco-join-actions .btn {
+  padding: .72rem 1.15rem;
+}
+
+.soco-join-actions .btn-outline-light {
+  border-color: rgba(255,255,255,.55);
+  color: #fff;
+}
+
+.soco-join-actions .btn-outline-light:hover {
+  background: #fff;
+  color: #062A46;
+}
+
+.soco-join-intro {
+  max-width: 900px;
+}
+
+.soco-join-intro .soco-join-lead {
+  color: #062A46;
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  line-height: 1.55;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.soco-join-free {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  margin-top: 1rem;
+  padding: .55rem .8rem;
+  border-radius: 999px;
+  background: rgba(40,169,162,.10);
+  color: #126D69;
+  font-size: .92rem;
+  font-weight: 700;
+}
+
+.soco-join-free::before {
+  content: "✓";
+  font-weight: 800;
+}
+
+.soco-join-reasons {
+  background: #F5F8F8;
+  border-top: 1px solid rgba(48,57,68,.08);
+  border-bottom: 1px solid rgba(48,57,68,.08);
+}
+
+.soco-join-reasons-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.soco-join-reasons-inner > h2 {
+  color: #062A46;
+  margin-bottom: .75rem;
+}
+
+.soco-join-reasons-dek {
+  max-width: 720px;
+  color: #66737D;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 2.2rem;
+}
+
+.soco-join-reasons .soco-card {
   position: relative;
   overflow: hidden;
 }
 
-.soco-community-preview::after {
+.soco-join-reasons .soco-card::before {
   content: "";
   position: absolute;
-  width: 240px;
-  height: 240px;
-  right: -95px;
-  bottom: -145px;
-  border-radius: 50%;
-  background: rgba(40, 169, 162, 0.08);
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #28A9A2;
 }
 
-.soco-community-preview > * {
+.soco-join-reasons .soco-card:nth-child(2)::before {
+  background: #E97863;
+}
+
+.soco-join-reasons .soco-card:nth-child(3)::before {
+  background: #062A46;
+}
+
+.soco-join-form-section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(5rem, 8vw, 7rem) 2rem;
+}
+
+.soco-join-form-layout {
+  display: grid;
+  grid-template-columns: minmax(0,.78fr) minmax(420px,1.22fr);
+  gap: clamp(3rem, 7vw, 6rem);
+  align-items: start;
+}
+
+.soco-join-form-copy {
+  padding-top: 1rem;
+}
+
+.soco-join-form-copy .soco-eyebrow {
+  color: #28A9A2;
+}
+
+.soco-join-form-copy h2 {
+  color: #062A46;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  margin: .7rem 0 1.2rem;
+}
+
+.soco-join-form-copy p {
+  color: #56646E;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.soco-join-form-panel {
+  position: relative;
+  background: #fff;
+  border: 1px solid #DCE5E8;
+  border-radius: 16px;
+  padding: clamp(1.6rem, 4vw, 2.6rem);
+  box-shadow: 0 18px 50px rgba(6,42,70,.09);
+}
+
+.soco-join-form-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 4px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, #28A9A2, #E97863);
+}
+
+.soco-community-form {
+  margin: 0;
+}
+
+.soco-form-field {
+  margin-bottom: 1.25rem;
+}
+
+.soco-form-field label {
+  display: block;
+  margin-bottom: .45rem;
+  color: #233744;
+  font-size: .93rem;
+  font-weight: 700;
+}
+
+.soco-form-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: .88rem 1rem;
+  border: 1px solid #C9D5DA;
+  border-radius: 7px;
+  background: #fff;
+  color: #303944;
+  font: inherit;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.soco-form-field input:focus {
+  outline: none;
+  border-color: #28A9A2;
+  box-shadow: 0 0 0 3px rgba(40,169,162,.14);
+}
+
+.soco-community-form .btn {
+  margin-top: .35rem;
+  padding: .78rem 1.2rem;
+}
+
+.soco-form-privacy {
+  margin: 1rem 0 0;
+  color: #78858D;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+.soco-join-closing {
+  position: relative;
+  overflow: hidden;
+  background: #062A46;
+  color: #fff;
+}
+
+.soco-join-closing::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -100px;
+  bottom: -230px;
+  border-radius: 50%;
+  background: rgba(40,169,162,.13);
+}
+
+.soco-join-closing-inner {
   position: relative;
   z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4.5rem 2rem;
 }
 
-.soco-community-preview .soco-community-link {
-  display: inline-block;
-  margin-top: 0.35rem;
+.soco-join-closing h2 {
+  color: #fff !important;
+  max-width: 750px;
+}
+
+.soco-join-closing p {
+  max-width: 800px;
+  color: rgba(255,255,255,.78);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.soco-join-closing a {
+  color: #7ED8D2;
+  font-weight: 700;
+}
+
+@media (max-width: 850px) {
+  .soco-join-form-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .soco-join-hero-inner,
+  .soco-join-reasons-inner,
+  .soco-join-form-section,
+  .soco-join-closing-inner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 </style>
-<div class="soco-hero">
-<div class="soco-hero-inner">
-<div class="soco-hero-mark">
-<p><img src="img/soco-logo-stacked-transparent.png" class="soco-hero-logo img-fluid" alt="Society of Cutaneous Oncology logo"></p>
-</div>
-<div class="soco-hero-copy">
+<div class="soco-join-hero">
+<div class="soco-join-hero-inner">
+<div class="soco-join-hero-copy">
 <div class="soco-eyebrow">
-<p>Evidence • Collaboration • Critical Inquiry • Reproducible Science</p>
+<p>Connect • Participate • Collaborate</p>
 </div>
-<h1 class="soco-mission-headline">
-<p>Interpreting evidence. Building community. Advancing care.</p>
+<h1 class="soco-join-headline">
+<p>Join our community.</p>
 </h1>
 <p class="soco-dek">
-</p><p>The Society of Cutaneous Oncology is a multidisciplinary community of clinicians and investigators committed to improving outcomes for patients with skin cancer through evidence interpretation, constructive criticism, collaborative science, and education.</p>
+</p><p>The Society of Cutaneous Oncology brings together clinicians, scientists, trainees, and allied professionals who want to think carefully about evidence, learn from one another, and advance the care of patients with skin cancer.</p>
 <p></p>
-<div class="soco-actions">
-<p><a href="./joco.html" class="btn btn-primary">Explore the Journal</a> <a href="./jc.html" class="btn btn-outline-primary">Journal Club</a> <a href="./research_forum.html" class="btn btn-outline-primary">Research Forum</a></p>
+<div class="soco-join-actions">
+<p><a href="#join-soco" class="btn btn-primary">Join SoCO</a> <a href="./philosophy.html" class="btn btn-outline-light">Explore our philosophy</a></p>
 </div>
 </div>
 </div>
 </div>
-<p><a href="#our-mission" class="soco-scroll-cue">Scroll</a></p>
-<section id="our-mission" class="level2 soco-section">
-<h2 class="anchored" data-anchor-id="our-mission">Our mission</h2>
-<p>The Society of Cutaneous Oncology brings together clinicians, scientists, trainees, and allied professionals dedicated to advancing the care of patients with skin cancer.</p>
+<section id="a-community-for-cutaneous-oncology" class="level2 soco-section soco-join-intro">
+<h2 class="anchored" data-anchor-id="a-community-for-cutaneous-oncology">A community for cutaneous oncology</h2>
+<p class="soco-join-lead">
+</p><p>SoCO is an open, multidisciplinary community built around evidence interpretation, constructive scientific discussion, education, and collaboration.</p>
+<p></p>
+<p>Join to receive invitations and announcements for <strong>SoCO Journal Club, Research Forum, educational programs, collaborative initiatives, and other Society activities.</strong></p>
+<div class="soco-join-free">
+Membership and participation are free
+</div>
+</section>
+<div class="soco-join-reasons">
+<section id="why-join-soco" class="level2 soco-join-reasons-inner">
+<h2 class="anchored" data-anchor-id="why-join-soco">Why join SoCO?</h2>
+<p class="soco-join-reasons-dek">
+</p><p>A place to engage with the evidence, the science, and the people shaping the future of cutaneous oncology.</p>
+<p></p>
 <div class="soco-card-grid">
-<section id="interpret-evidence" class="level3 soco-card">
-<h3 class="anchored" data-anchor-id="interpret-evidence">Interpret evidence</h3>
-<p>We review emerging data in cutaneous oncology and help translate evidence into thoughtful clinical practice.</p>
+<section id="join-the-conversation" class="level3 soco-card">
+<h3 class="anchored" data-anchor-id="join-the-conversation">Join the conversation</h3>
+<p>Participate in multidisciplinary discussions of emerging evidence, with an emphasis on careful interpretation, uncertainty, and implications for patient care.</p>
 </section>
-<section id="support-reproducible-science" class="level3 soco-card">
-<h3 class="anchored" data-anchor-id="support-reproducible-science">Support reproducible science</h3>
-<p>We create forums for investigators to share methods, refine ideas, and develop collaborative projects.</p>
+<section id="connect-across-disciplines" class="level3 soco-card">
+<h3 class="anchored" data-anchor-id="connect-across-disciplines">Connect across disciplines</h3>
+<p>Engage with clinicians and investigators across specialties and institutions who share an interest in advancing the field.</p>
 </section>
-<section id="educate-the-field" class="level3 soco-card">
-<h3 class="anchored" data-anchor-id="educate-the-field">Educate the field</h3>
-<p>We support clinicians, scientists, and trainees committed to the future of cutaneous oncology.</p>
-</section>
-</div>
-</section>
-<section id="our-philosophy" class="level2 soco-section soco-philosophy-preview">
-<h2 class="anchored" data-anchor-id="our-philosophy">Our philosophy</h2>
-<p>Scientific progress depends on more than new data. It requires a culture in which evidence is interpreted carefully, assumptions are made visible, uncertainty is acknowledged, and ideas are strengthened through rigorous, respectful criticism.</p>
-<p>The Society of Cutaneous Oncology was created to support that culture across cutaneous oncology.</p>
-<p><a href="./philosophy.html" class="soco-philosophy-link">Read our philosophy →</a></p>
-</section>
-<section id="soco-programs" class="level2 soco-section soco-platforms">
-<h2 class="anchored" data-anchor-id="soco-programs">SoCO programs</h2>
-<div class="soco-card-grid">
-<section id="journal-of-cutaneous-oncology" class="level3 soco-card">
-<h3 class="anchored" data-anchor-id="journal-of-cutaneous-oncology">Journal of Cutaneous Oncology</h3>
-<p>An open-access journal focused on skin cancer, evidence interpretation, and perspectives from the cutaneous oncology community.</p>
-<p><a href="./joco.html" class="soco-card-link">Visit the journal</a></p>
-</section>
-<section id="soco-journal-club" class="level3 soco-card">
-<h3 class="anchored" data-anchor-id="soco-journal-club">SoCO Journal Club</h3>
-<p>A recurring multidisciplinary forum for discussion of recent articles and emerging evidence in skin cancer.</p>
-<p><a href="./jc.html" class="soco-card-link">View Journal Club</a></p>
-</section>
-<section id="research-forum" class="level3 soco-card">
-<h3 class="anchored" data-anchor-id="research-forum">Research Forum</h3>
-<p>A collaborative space for investigators to present ideas, share work in progress, and develop multicenter projects.</p>
-<p><a href="./research_forum.html" class="soco-card-link">Visit Research Forum</a></p>
+<section id="build-better-science" class="level3 soco-card">
+<h3 class="anchored" data-anchor-id="build-better-science">Build better science</h3>
+<p>Learn about Research Forums, collaborative projects, and opportunities to share ideas and work in progress with the broader SoCO community.</p>
 </section>
 </div>
 </section>
-<section id="join-our-community" class="level2 soco-section soco-philosophy-preview soco-community-preview">
-<h2 class="anchored" data-anchor-id="join-our-community">Join our community</h2>
-<p>Connect with colleagues across disciplines and institutions who share an interest in advancing the care of patients with skin cancer.</p>
-<p>Join the SoCO community to receive invitations to Journal Club and Research Forum, along with announcements about educational programs, collaborative initiatives, and other Society activities.</p>
-<p><a href="./join.html" class="soco-philosophy-link soco-community-link">Join the SoCO community →</a></p>
+</div>
+<div id="join-soco" class="soco-join-form-section">
+<div class="soco-join-form-layout">
+<div class="soco-join-form-copy">
+<div class="soco-eyebrow">
+Join SoCO
+</div>
+<section id="stay-connected." class="level2">
+<h2 class="anchored" data-anchor-id="stay-connected.">Stay connected.</h2>
+<p>Tell us who you are and where you work. We will keep you informed about upcoming Society of Cutaneous Oncology programs and opportunities to participate.</p>
 </section>
+</div>
+<div class="soco-join-form-panel">
+<form name="soco-community" method="POST" data-netlify="true" action="/join-thank-you.html" class="soco-community-form">
+<p><input type="hidden" name="form-name" value="soco-community"></p>
+<div class="soco-form-field">
+<p><label for="name">Name</label> <input type="text" id="name" name="name" autocomplete="name" required=""></p>
+</div>
+<div class="soco-form-field">
+<p><label for="institution">Institution</label> <input type="text" id="institution" name="institution" autocomplete="organization" required=""></p>
+</div>
+<div class="soco-form-field">
+<p><label for="email">Email address</label> <input type="email" id="email" name="email" autocomplete="email" required=""></p>
+</div>
+<button type="submit" class="btn btn-primary">
+Join our community
+</button>
+<p class="soco-form-privacy">
+Your information will be used only to communicate about Society of Cutaneous Oncology activities.
+</p>
+</form>
+</div>
+</div>
+</div>
+<div class="soco-join-closing">
+<section id="rigorous-science.-generous-community." class="level2 soco-join-closing-inner">
+<h2 class="anchored" data-anchor-id="rigorous-science.-generous-community.">Rigorous science. Generous community.</h2>
+<p>SoCO is building a multidisciplinary home for people who want to interpret evidence carefully, strengthen scientific ideas through constructive criticism, and work together to improve care for patients with skin cancer.</p>
+<p><a href="./philosophy.html">Read our philosophy →</a></p>
+</section>
+</div>
+<!-- ============================================================
+     HOMEPAGE ADDITION
+     Paste this AFTER the existing "SoCO programs" section
+     in index.qmd.
+     ============================================================
+
+::: {.soco-section .soco-philosophy-preview}
+## Join our community
+
+The Society of Cutaneous Oncology is an open, multidisciplinary community for clinicians, scientists, trainees, and allied professionals interested in advancing the care of patients with skin cancer.
+
+Join us to receive invitations and announcements for Journal Club, Research Forum, educational programs, collaborative initiatives, and other SoCO activities.
+
+[Join the SoCO community →](join.qmd){.soco-philosophy-link}
+:::
+
+-->
+<!-- ============================================================
+     NAVBAR
+     Add this item to the EXISTING navbar structure in _quarto.yml,
+     at the far right with the other site links:
+
+     - text: "Join Our Community"
+       href: join.qmd
+
+     I am intentionally NOT fabricating the surrounding _quarto.yml
+     because that file has not been provided.
+     ============================================================ -->
+<!-- ============================================================
+     THANK-YOU PAGE: join-thank-you.qmd
+
+---
+pagetitle: "Welcome to SoCO | Society of Cutaneous Oncology"
+editor: visual
+page-layout: full
+toc: false
+---
+
+<style>
+.soco-thanks {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 82% 22%, rgba(40,169,162,.22), transparent 30%),
+    linear-gradient(135deg, #062A46 0%, #083754 55%, #0B4657 100%);
+  color: #fff;
+}
+.soco-thanks-inner {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+.soco-thanks h1 {
+  color: #fff !important;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+.soco-thanks p {
+  max-width: 720px;
+  color: rgba(255,255,255,.82);
+  font-size: 1.2rem;
+  line-height: 1.65;
+}
+</style>
+
+<div class="soco-thanks">
+<div class="soco-thanks-inner">
+
+<div class="soco-eyebrow">Society of Cutaneous Oncology</div>
+
+# Welcome to the community.
+
+Thank you for joining SoCO. Your information has been received, and we look forward to keeping you informed about upcoming programs and opportunities to participate.
+
+[Return to SoCO](index.qmd){.btn .btn-primary}
+
+</div>
+</div>
+
+     ============================================================ -->
+<!-- ============================================================
+     NETLIFY
+
+     After deploying, Netlify should detect:
+       Form name: soco-community
+
+     Then:
+       Project → Forms → soco-community → Form notifications
+       Add email notification:
+       societyofcutaneousoncology@gmail.com
+
+     ============================================================ -->
 
 
 

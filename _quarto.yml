@@ -26,6 +26,8 @@ website:
         href: research_forum.qmd
       - text: "Our Philosophy"
         href: philosophy.qmd
+      - text: "Join Our Community"
+        href: join.qmd
   page-footer:
     left: "© Society of Cutaneous Oncology"
     right:

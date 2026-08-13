@@ -5,6 +5,39 @@ page-layout: full
 toc: false
 ---
 
+<style>
+/* Homepage community CTA
+   Uses the existing SoCO design system while giving the final
+   invitation a slightly stronger call-to-action treatment. */
+
+.soco-community-preview {
+  position: relative;
+  overflow: hidden;
+}
+
+.soco-community-preview::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  right: -95px;
+  bottom: -145px;
+  border-radius: 50%;
+  background: rgba(40, 169, 162, 0.08);
+  pointer-events: none;
+}
+
+.soco-community-preview > * {
+  position: relative;
+  z-index: 1;
+}
+
+.soco-community-preview .soco-community-link {
+  display: inline-block;
+  margin-top: 0.35rem;
+}
+</style>
+
 :::::::: soco-hero
 ::::::: soco-hero-inner
 ::: soco-hero-mark
@@ -63,7 +96,7 @@ We support clinicians, scientists, and trainees committed to the future of cutan
 ::::::
 :::::::
 
-::::::: {.soco-section .soco-philosophy-preview}
+::: {.soco-section .soco-philosophy-preview}
 ## Our philosophy
 
 Scientific progress depends on more than new data. It requires a culture in which evidence is interpreted carefully, assumptions are made visible, uncertainty is acknowledged, and ideas are strengthened through rigorous, respectful criticism.
@@ -71,7 +104,7 @@ Scientific progress depends on more than new data. It requires a culture in whic
 The Society of Cutaneous Oncology was created to support that culture across cutaneous oncology.
 
 [Read our philosophy →](philosophy.qmd){.soco-philosophy-link}
-:::::::
+:::
 
 ::::::: {.soco-section .soco-platforms}
 ## SoCO programs
@@ -102,3 +135,13 @@ A collaborative space for investigators to present ideas, share work in progress
 :::
 ::::::
 :::::::
+
+::: {.soco-section .soco-philosophy-preview .soco-community-preview}
+## Join our community
+
+Connect with colleagues across disciplines and institutions who share an interest in advancing the care of patients with skin cancer.
+
+Join the SoCO community to receive invitations to Journal Club and Research Forum, along with announcements about educational programs, collaborative initiatives, and other Society activities.
+
+[Join the SoCO community →](join.qmd){.soco-philosophy-link .soco-community-link}
+:::
