@@ -1,368 +1,765 @@
 ---
 title: "SoCO Journal Club"
-editor: visual
+pagetitle: "Journal Club | Society of Cutaneous Oncology"
 bibliography: bibliography.bibtex
 page-layout: full
 title-block-banner: false
-toc: true
+toc: false
 ---
 
-:::::: soco-jc-hero
-::::: soco-jc-hero-inner
-::: soco-eyebrow
-Monthly multidisciplinary literature review
+<style>
+  /* =========================================================
+     Journal Club — editorial refresh
+     Uses the established SoCO palette from theme.scss
+     ========================================================= */
+
+  .soco-jc-hero {
+    max-width: 1320px;
+    margin: 3rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  .soco-jc-hero-inner {
+    position: relative;
+    overflow: hidden;
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    padding: clamp(2.75rem, 5vw, 4.5rem);
+    border: 1px solid var(--soco-line);
+    background:
+      radial-gradient(circle at 86% 14%, rgba(15, 127, 134, 0.12), transparent 29%),
+      radial-gradient(circle at 12% 86%, rgba(255, 59, 63, 0.07), transparent 30%),
+      linear-gradient(135deg, #ffffff 0%, #f7fafb 100%);
+    box-shadow: 0 22px 60px rgba(4, 27, 51, 0.07);
+  }
+
+  .soco-jc-hero-inner::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    top: -100px;
+    right: -65px;
+    opacity: 0.22;
+    background-image:
+      radial-gradient(circle, rgba(15,127,134,0.72) 0 1.4px, transparent 2px);
+    background-size: 30px 30px;
+    mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    pointer-events: none;
+  }
+
+  .soco-jc-hero-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+  }
+
+  .soco-jc-hero-copy h1 {
+    max-width: 920px;
+    margin: 0 0 1.3rem;
+    color: var(--soco-navy);
+    font-size: clamp(2.8rem, 5vw, 4.6rem);
+    font-weight: 700;
+    line-height: 0.99;
+    letter-spacing: -0.055em;
+    text-wrap: balance;
+  }
+
+  .soco-jc-dek {
+    max-width: 780px;
+    margin-bottom: 1.8rem;
+    color: var(--soco-ink);
+    font-size: clamp(1.05rem, 1.5vw, 1.18rem);
+    line-height: 1.68;
+  }
+
+  .soco-jc-intro {
+    max-width: 930px;
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .soco-jc-intro h2 {
+    max-width: 820px;
+  }
+
+  .soco-jc-intro > p {
+    max-width: 860px;
+  }
+
+  /* =========================================================
+     Current discussion
+     ========================================================= */
+
+  .soco-jc-current {
+    max-width: 1120px;
+    margin: 4rem auto 5rem;
+    padding: 0 1.5rem;
+  }
+
+  .soco-jc-current-card {
+    overflow: hidden;
+    border: 1px solid var(--soco-line);
+    border-radius: 1.1rem;
+    background: #ffffff;
+    box-shadow: 0 18px 50px rgba(4, 27, 51, 0.08);
+  }
+
+  .soco-jc-current-top {
+    padding: clamp(2.2rem, 4vw, 3.4rem);
+    background:
+      radial-gradient(circle at 92% 10%, rgba(15,127,134,0.11), transparent 28%),
+      linear-gradient(135deg, #ffffff 0%, var(--soco-surface) 100%);
+  }
+
+  .soco-jc-current-top h2 {
+    max-width: 900px;
+    margin: 0 0 1rem;
+    color: var(--soco-navy);
+    font-size: clamp(2rem, 3.4vw, 3.15rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+
+  .soco-jc-citation {
+    max-width: 900px;
+    margin: 0;
+    color: var(--soco-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .soco-jc-current-body {
+    padding: clamp(2rem, 4vw, 3rem);
+    border-top: 1px solid var(--soco-line);
+  }
+
+  .soco-jc-current-body > p {
+    max-width: 880px;
+    color: #495b69;
+    font-size: 1.06rem;
+    line-height: 1.75;
+  }
+
+  .soco-jc-question {
+    margin: 2rem 0;
+    padding: 1.8rem 2rem;
+    border-left: 5px solid var(--soco-coral);
+    border-radius: 0.9rem;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 59, 63, 0.045),
+        rgba(15, 127, 134, 0.05)
+      );
+  }
+
+  .soco-jc-question-label {
+    display: block;
+    margin-bottom: 0.55rem;
+    color: var(--soco-coral);
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .soco-jc-question p {
+    margin: 0;
+    color: var(--soco-navy);
+    font-size: 1.16rem;
+    line-height: 1.72;
+  }
+
+  .soco-jc-discussion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .soco-jc-discussion-card {
+    padding: 1.4rem;
+    border: 1px solid var(--soco-line);
+    border-radius: 0.85rem;
+    background: var(--soco-surface);
+  }
+
+  .soco-jc-discussion-card::before {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 0.2rem;
+    margin-bottom: 1rem;
+    border-radius: 999px;
+    background: var(--soco-teal);
+  }
+
+  .soco-jc-discussion-card:nth-child(2)::before {
+    background: var(--soco-blue);
+  }
+
+  .soco-jc-discussion-card:nth-child(3)::before {
+    background: var(--soco-coral);
+  }
+
+  .soco-jc-discussion-card h3 {
+    margin: 0 0 0.65rem;
+    color: var(--soco-navy);
+    font-size: 1.05rem;
+  }
+
+  .soco-jc-discussion-card p {
+    margin: 0;
+    color: var(--soco-muted);
+    font-size: 0.92rem;
+    line-height: 1.58;
+  }
+
+  .soco-jc-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.8rem;
+  }
+
+  .soco-jc-link {
+    display: inline-flex;
+    padding: 0.68rem 1rem;
+    border-radius: 999px;
+    background: var(--soco-blue);
+    color: #ffffff !important;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .soco-jc-link:hover {
+    background: var(--soco-navy);
+  }
+
+  .soco-jc-link.secondary {
+    border: 1px solid #bfd4df;
+    background: #ffffff;
+    color: var(--soco-blue) !important;
+  }
+
+  .soco-jc-link.secondary:hover {
+    border-color: var(--soco-blue);
+    background: var(--soco-blue);
+    color: #ffffff !important;
+  }
+
+  /* =========================================================
+     Archive
+     ========================================================= */
+
+  .soco-jc-archive {
+    max-width: 1120px;
+    margin: 5rem auto;
+    padding: 0 1.5rem;
+  }
+
+  .soco-jc-archive-head {
+    max-width: 850px;
+    margin-bottom: 2.4rem;
+  }
+
+  .soco-jc-archive-head h2 {
+    margin-bottom: 0.8rem;
+  }
+
+  .soco-jc-archive-head p {
+    max-width: 780px;
+    color: var(--soco-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .soco-jc-archive .callout {
+    margin-bottom: 1rem;
+    border: 1px solid var(--soco-line);
+    border-radius: 0.9rem;
+    box-shadow: none;
+  }
+
+  .soco-jc-archive .callout-header {
+    background: #ffffff;
+  }
+
+  @media (max-width: 900px) {
+    .soco-jc-discussion-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .soco-jc-hero {
+      margin-top: 1.25rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .soco-jc-hero-inner {
+      min-height: auto;
+      padding: 1.5rem;
+    }
+
+    .soco-jc-current,
+    .soco-jc-archive {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .soco-jc-hero-copy h1 {
+      font-size: clamp(2.35rem, 11vw, 3.1rem);
+    }
+  }
+</style>
+
+:::::: {.soco-jc-hero}
+::::: {.soco-jc-hero-inner}
+:::: {.soco-jc-hero-copy}
+
+::: {.soco-eyebrow}
+SoCO Journal Club
 :::
 
-Each month, the Society of Cutaneous Oncology reviews recent articles describing new insights germane to cutaneous oncology.
+# Read the paper. Interrogate the evidence.
 
-::: soco-actions
-[Open the interactive timeline](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/){.btn .btn-primary} [View article archive](#articles){.btn .btn-outline-primary}
+::: {.soco-jc-dek}
+A multidisciplinary forum for examining practice-changing and practice-informing literature in cutaneous oncology—with attention to what the data show, what they do not show, and how strongly they should change what we believe or do.
 :::
+
+::: {.soco-actions}
+[Open the interactive timeline](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/){.btn .btn-primary}
+[View article archive](#articles){.btn .btn-outline-primary}
+:::
+
+::::
 :::::
 ::::::
 
-::::::::::: soco-section
-# Overview
+::: {.soco-section .soco-jc-intro}
 
-The SoCO Journal Club is a multi-institutional and multidisciplinary forum for discussing practice-changing and practice-informing literature in skin cancer.
+::: {.soco-eyebrow}
+How we approach the literature
+:::
 
-# Articles {#articles}
+## Persuaded by evidence. Rarely certain.
+
+The SoCO Journal Club is a multi-institutional and multidisciplinary forum for discussing important literature in skin cancer.
+
+The aim is not simply to summarize a paper or decide whether it is “positive.” We examine the question, design, assumptions, analyses, uncertainty, clinical relevance, and the degree to which the evidence should alter practice or generate the next question.
+
+:::
+
+::: {.soco-jc-current}
+
+::: {.soco-jc-current-card}
+
+::: {.soco-jc-current-top}
+
+::: {.soco-eyebrow}
+August 2026 · Current discussion
+:::
+
+## Frontline Immunotherapy with Response-Guided Subsequent Treatment (FIRST) in Cutaneous Squamous Cell Carcinoma
+
+::: {.soco-jc-citation}
+Miller DM, Merkin RD, Kaufman HL, Gupta SG, Wolkow N, Adelaja A, Sullivan RJ, Patel C, Sorrentino A, Cohen S, Cimoch C, Emerick KS. *Journal for ImmunoTherapy of Cancer.* 2026;14(7):e015029. doi:10.1136/jitc-2026-015029.
+:::
+
+:::
+
+::: {.soco-jc-current-body}
+
+This retrospective cohort study evaluated 189 patients with resectable, borderline-resectable, locally advanced, or limited metastatic cutaneous squamous cell carcinoma treated with immune checkpoint inhibition between 2019 and 2025. The analysis focused on a deceptively simple clinical question: **how much immunotherapy is enough, and what should happen after a deep response?**
+
+::: {.soco-jc-question}
+[The question beneath the paper]{.soco-jc-question-label}
+
+Can early response help determine how much additional systemic therapy—or local consolidation—a patient actually needs?
+:::
+
+::: {.soco-jc-discussion-grid}
+
+::: {.soco-jc-discussion-card}
+Dose intensity
+
+How should we interpret outcomes when the number of doses received is not randomly assigned and is itself influenced by response, toxicity, and clinical circumstance?
+:::
+
+::: {.soco-jc-discussion-card}
+Causal inference
+
+What do Bayesian adjustment and posterior probabilities add when trying to learn from response-guided treatment patterns in observational data?
+:::
+
+::: {.soco-jc-discussion-card}
+De-escalation
+
+When a patient has already achieved a deep response, how persuasive is the evidence that additional treatment or consolidation changes outcome?
+:::
+
+:::
+
+::: {.soco-jc-links}
+[Read the article](https://jitc.bmj.com/content/14/7/e015029){.soco-jc-link}
+[PubMed](https://pubmed.ncbi.nlm.nih.gov/42476726/){.soco-jc-link .secondary}
+[Methods & reproducible workflow](https://themillerlab.github.io/FIRST/){.soco-jc-link .secondary}
+:::
+
+:::
+
+:::
+
+:::
+
+::: {.soco-jc-archive}
+
+::: {.soco-jc-archive-head}
+
+::: {.soco-eyebrow}
+Journal Club archive
+:::
+
+## Articles {#articles}
+
+Browse the papers discussed by the Society of Cutaneous Oncology, organized by year and meeting month.
+
+:::
 
 # 2026 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## February - June 2026
+## February – June 2026
 
-### June
+February
 
-Kavanagh, Fergal G., Hannah L. Kalvin, Edmund K. Bartlett, Christopher A. Barker, Charlotte E. Ariyan, Mary S. Brady, Danielle M. Bello, Klaus J. Busam, Katherine S. Panageas, and Daniel G. Coit. 2025. “Local Recurrence Following Complete Surgical Excision of Primary Merkel Cell Carcinoma.” *Annals of Surgical Oncology*, October. https://doi.org/10.1245/s10434-025-18670-2.
+Miller, David M., James W. Smithy, Jennell Palaia, Divya Patel, Anthony Salvatore, David D’Adamo, Matthew Mattera, Zheng-Yi Zhou, Viviana Garcia-Horton, and Ahmad A. Tarhini. 2025. “Efficacy of Nivolumab Plus Relatlimab Versus BRAF/MEK Inhibitors for First-Line Treatment of BRAF-Mutant Advanced Melanoma: A Matching-Adjusted Indirect Comparison.” *BMJ Oncology* 4: e000912. https://doi.org/10.1136/bmjonc-2025-000912.
 
-### April
+April
 
 Wong, Michael K., Mohammed M. Milhem, Joseph J. Sacco, Judith Michels, Gino K. In, Eva Muñoz Couselo, Dirk Schadendorf, Georgia M. Beasley, Jiaxin Niu, Bartosz Chmielowski, et al. 2025. “RP1 Combined With Nivolumab in Advanced Anti–PD-1–Failed Melanoma (IGNYTE).” *Journal of Clinical Oncology* 43 (33): 3589–99. https://doi.org/10.1200/JCO-25-01346.
 
-### February
+June
 
-Miller, David M., James W. Smithy, Jennell Palaia, Divya Patel, Anthony Salvatore, David D’Adamo, Matthew Mattera, Zheng-Yi Zhou, Viviana Garcia-Horton, and Ahmad A. Tarhini. 2025. “Efficacy of Nivolumab Plus Relatlimab Versus BRAF/MEK Inhibitors for First-Line Treatment of BRAF-Mutant Advanced Melanoma: A Matching-Adjusted Indirect Comparison.” *BMJ Oncology* 4: e000912. https://doi.org/10.1136/bmjonc-2025-000912.
+Kavanagh, Fergal G., Hannah L. Kalvin, Edmund K. Bartlett, Christopher A. Barker, Charlotte E. Ariyan, Mary S. Brady, Danielle M. Bello, Klaus J. Busam, Katherine S. Panageas, and Daniel G. Coit. 2025. “Local Recurrence Following Complete Surgical Excision of Primary Merkel Cell Carcinoma.” *Annals of Surgical Oncology*, October. https://doi.org/10.1245/s10434-025-18670-2.
 :::
-
 # 2025 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - November 2025
 
-### November
+January
 
-Breukers, Sabine E., Joleen J. H. Traets, Stan W. van Dijk, Mercedes Machuca Ostos, Itske Fraterman, Robert D. Crommelin, Hedda van der Hulst, et al. 2025. “Neoadjuvant Ipilimumab and Nivolumab in Resectable Cutaneous Squamous Cell Carcinoma: A Randomized Phase 2 Trial.” Nature Medicine, October. https://doi.org/10.1038/s41591-025-03943-w.
+Barker, Christopher A., Suzanne Dufault, Sarah T. Arron, Alan L. Ho, Alain P. Algazi, Lara A. Dunn, Audrey A. Humphries, et al. 2024. “Phase II, Single-Arm Trial of Induction and Concurrent Vismodegib With Curative-Intent Radiation Therapy for Locally Advanced, Unresectable Basal Cell Carcinoma.” Journal of Clinical Oncology 42 (19): 2327–35. https://doi.org/10.1200/jco.23.01708.
 
-### July
-
-Rischin, Danny, Sandro Porceddu, Fiona Day, Daniel P. Brungs, Hayden Christie, James E. Jackson, Brian N. Stein, et al. 2025. “Adjuvant Cemiplimab or Placebo in High-Risk Cutaneous Squamous-Cell Carcinoma.” New England Journal of Medicine 393 (8): 774–85. https://doi.org/10.1056/nejmoa2502449.
-
-### May
-
-Hartman, Rebecca I., Nicole Trepanowski, Michael S. Chang, Kelly Tepedino, Christopher Gianacas, Jennifer M. McNiff, Maxwell Fung, Naiara Fraga Braghiroli, and Jane M. Grant-Kels. 2024. “Multicenter Prospective Blinded Melanoma Detection Study with a Handheld Elastic Scattering Spectroscopy Device.” *JAAD International* 15 (June): 24–31. <https://doi.org/10.1016/j.jdin.2023.10.011>.
-
-### April
-
-Bhatia, Shailender, Suzanne L. Topalian, William Sharfman, Tim Meyer, Neil Steven, Christopher D. Lao, Lorena Fariñas-Madrid, et al. 2025. “Nivolumab With or Without Ipilimumab in Patients With Recurrent or Metastatic Merkel Cell Carcinoma: A Nonrandomized, Open-Label, International, Multicenter Phase I/II Study.” Journal of Clinical Oncology 43 (9): 1137–47. https://doi.org/10.1200/jco-24-02138.
-
-### March
-
-Akaike, Tomoko, Manisha Thakuria, Ann W. Silk, Daniel S. Hippe, Song Youn Park, Naomi A. So, Nolan J. Maloney, et al. 2024. “Circulating Tumor DNA Assay Detects Merkel Cell Carcinoma Recurrence, Disease Progression, and Minimal Residual Disease: Surveillance and Prognostic Implications.” Journal of Clinical Oncology 42 (26): 3151–61. https://doi.org/10.1200/jco.23.02054.
-
-### February
+February
 
 Hanna, Glenn J., Harita Dharanesswaran, Anita Giobbie-Hurder, John J. Harran, Zixi Liao, Lori Pai, Vatche Tchekmedyian, et al. 2024. “Cemiplimab for Kidney Transplant Recipients With Advanced Cutaneous Squamous Cell Carcinoma.” Journal of Clinical Oncology 42 (9): 1021–30. https://doi.org/10.1200/jco.23.01498.
 
-### January
+March
 
-Barker, Christopher A., Suzanne Dufault, Sarah T. Arron, Alan L. Ho, Alain P. Algazi, Lara A. Dunn, Audrey A. Humphries, et al. 2024. “Phase II, Single-Arm Trial of Induction and Concurrent Vismodegib With Curative-Intent Radiation Therapy for Locally Advanced, Unresectable Basal Cell Carcinoma.” Journal of Clinical Oncology 42 (19): 2327–35. https://doi.org/10.1200/jco.23.01708.
+Akaike, Tomoko, Manisha Thakuria, Ann W. Silk, Daniel S. Hippe, Song Youn Park, Naomi A. So, Nolan J. Maloney, et al. 2024. “Circulating Tumor DNA Assay Detects Merkel Cell Carcinoma Recurrence, Disease Progression, and Minimal Residual Disease: Surveillance and Prognostic Implications.” Journal of Clinical Oncology 42 (26): 3151–61. https://doi.org/10.1200/jco.23.02054.
+
+April
+
+Bhatia, Shailender, Suzanne L. Topalian, William Sharfman, Tim Meyer, Neil Steven, Christopher D. Lao, Lorena Fariñas-Madrid, et al. 2025. “Nivolumab With or Without Ipilimumab in Patients With Recurrent or Metastatic Merkel Cell Carcinoma: A Nonrandomized, Open-Label, International, Multicenter Phase I/II Study.” Journal of Clinical Oncology 43 (9): 1137–47. https://doi.org/10.1200/jco-24-02138.
+
+May
+
+Hartman, Rebecca I., Nicole Trepanowski, Michael S. Chang, Kelly Tepedino, Christopher Gianacas, Jennifer M. McNiff, Maxwell Fung, Naiara Fraga Braghiroli, and Jane M. Grant-Kels. 2024. “Multicenter Prospective Blinded Melanoma Detection Study with a Handheld Elastic Scattering Spectroscopy Device.” *JAAD International* 15 (June): 24–31. <https://doi.org/10.1016/j.jdin.2023.10.011>.
+
+July
+
+Rischin, Danny, Sandro Porceddu, Fiona Day, Daniel P. Brungs, Hayden Christie, James E. Jackson, Brian N. Stein, et al. 2025. “Adjuvant Cemiplimab or Placebo in High-Risk Cutaneous Squamous-Cell Carcinoma.” New England Journal of Medicine 393 (8): 774–85. https://doi.org/10.1056/nejmoa2502449.
+
+November
+
+Breukers, Sabine E., Joleen J. H. Traets, Stan W. van Dijk, Mercedes Machuca Ostos, Itske Fraterman, Robert D. Crommelin, Hedda van der Hulst, et al. 2025. “Neoadjuvant Ipilimumab and Nivolumab in Resectable Cutaneous Squamous Cell Carcinoma: A Randomized Phase 2 Trial.” Nature Medicine, October. https://doi.org/10.1038/s41591-025-03943-w.
 :::
-
 # 2024 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - December 2024
 
-### December
+January
 
-Arron, Sarah T., Javier Cañueto, Jennifer Siegel, Alison Fitzgerald, Anesh Prasai, Shlomo A. Koyfman, and Sue S. Yom. 2024. “Association of a 40-Gene Expression Profile With Risk of Metastatic Disease Progression of Cutaneous Squamous Cell Carcinoma and Specification of Benefit of Adjuvant Radiation Therapy.” International Journal of Radiation Oncology\*Biology\*Physics 120 (3): 760–71. https://doi.org/10.1016/j.ijrobp.2024.05.022.
+McEvoy, Aubriana M., Daniel S. Hippe, Kristina Lachance, Song Park, Kelsey Cahill, Mary Redman, Ted Gooley, Michael W. Kattan, and Paul Nghiem. 2023. “Merkel Cell Carcinoma Recurrence Risk Estimation Is Improved by Integrating Factors Beyond Cancer Stage: A Multivariable Model and Web-Based Calculator.” Journal of the American Academy of Dermatology, November. https://doi.org/10.1016/j.jaad.2023.11.020.
 
-### November
-
-Long, Georgina V., Evan J. Lipson, F. Stephen Hodi, Paolo A. Ascierto, James Larkin, Christopher Lao, Jean-Jacques Grob, et al. 2024. “First-Line Nivolumab Plus Relatlimab Versus Nivolumab Plus Ipilimumab in Advanced Melanoma: An Indirect Treatment Comparison Using RELATIVITY-047 and CheckMate 067 Trial Data.” Journal of Clinical Oncology, August. https://doi.org/10.1200/jco.24.01125.
-
-### August
-
-Blank, Christian U., Minke W. Lucas, Richard A. Scolyer, Bart A. van de Wiel, Alexander M. Menzies, Marta Lopez-Yurda, Lotte L. Hoeijmakers, et al. 2024. “Neoadjuvant Nivolumab and Ipilimumab in Resectable Stage III Melanoma.” New England Journal of Medicine, June. https://doi.org/10.1056/nejmoa2402604.
-
-### May
-
-Miller, David M., Sophia Z. Shalhout, Kayla M. Wright, Matt A. Miller, Howard L. Kaufman, Kevin S. Emerick, Harrison T. Reeder, Ann W. Silk, and Manisha Thakuria. 2024. “The Prognostic Value of the Merkel Cell Polyomavirus Serum Antibody Test: A Dual Institutional Observational Study.” Cancer 130 (15): 2670–82. https://doi.org/10.1002/cncr.35314.
-
-### April
-
-Weber, Jeffrey S, Matteo S Carlino, Adnan Khattak, Tarek Meniawy, George Ansstas, Matthew H Taylor, Kevin B Kim, et al. 2024. “Individualised Neoantigen Therapy mRNA-4157 (V940) Plus Pembrolizumab Versus Pembrolizumab Monotherapy in Resected Melanoma (KEYNOTE-942): A Randomised, Phase 2b Study.” The Lancet 403 (10427): 632–44. https://doi.org/10.1016/s0140-6736(23)02268-7.
-
-### March
-
-Marron, Jonathan M., Kaitlin Kyi, Paul S. Appelbaum, and Allison Magnuson. 2020. “Medical Decision-Making in Oncology for Patients Lacking Capacity.” American Society of Clinical Oncology Educational Book, no. 40 (May): e186–96. https://doi.org/10.1200/edbk_280279.
-
-### February
+February
 
 DeCamp, Matthew, Julie Ressalam, Hillary D. Lum, Elizabeth R. Kessler, Dragana Bolcic-Jankovic, Vinay Kini, and Eric G. Campbell. 2023. "Ethics and Medical Aid in Dying: Physicians’ Perspectives on Disclosure, Presence, and Eligibility." Journal of Law, Medicine & Ethics 51 (3): 641–50. DOI: 10.1017/jme.2023.1001
 
-### January
+March
 
-McEvoy, Aubriana M., Daniel S. Hippe, Kristina Lachance, Song Park, Kelsey Cahill, Mary Redman, Ted Gooley, Michael W. Kattan, and Paul Nghiem. 2023. “Merkel Cell Carcinoma Recurrence Risk Estimation Is Improved by Integrating Factors Beyond Cancer Stage: A Multivariable Model and Web-Based Calculator.” Journal of the American Academy of Dermatology, November. https://doi.org/10.1016/j.jaad.2023.11.020.
+Marron, Jonathan M., Kaitlin Kyi, Paul S. Appelbaum, and Allison Magnuson. 2020. “Medical Decision-Making in Oncology for Patients Lacking Capacity.” American Society of Clinical Oncology Educational Book, no. 40 (May): e186–96. https://doi.org/10.1200/edbk_280279.
+
+April
+
+Weber, Jeffrey S, Matteo S Carlino, Adnan Khattak, Tarek Meniawy, George Ansstas, Matthew H Taylor, Kevin B Kim, et al. 2024. “Individualised Neoantigen Therapy mRNA-4157 (V940) Plus Pembrolizumab Versus Pembrolizumab Monotherapy in Resected Melanoma (KEYNOTE-942): A Randomised, Phase 2b Study.” The Lancet 403 (10427): 632–44. https://doi.org/10.1016/s0140-6736(23)02268-7.
+
+May
+
+Miller, David M., Sophia Z. Shalhout, Kayla M. Wright, Matt A. Miller, Howard L. Kaufman, Kevin S. Emerick, Harrison T. Reeder, Ann W. Silk, and Manisha Thakuria. 2024. “The Prognostic Value of the Merkel Cell Polyomavirus Serum Antibody Test: A Dual Institutional Observational Study.” Cancer 130 (15): 2670–82. https://doi.org/10.1002/cncr.35314.
+
+August
+
+Blank, Christian U., Minke W. Lucas, Richard A. Scolyer, Bart A. van de Wiel, Alexander M. Menzies, Marta Lopez-Yurda, Lotte L. Hoeijmakers, et al. 2024. “Neoadjuvant Nivolumab and Ipilimumab in Resectable Stage III Melanoma.” New England Journal of Medicine, June. https://doi.org/10.1056/nejmoa2402604.
+
+November
+
+Long, Georgina V., Evan J. Lipson, F. Stephen Hodi, Paolo A. Ascierto, James Larkin, Christopher Lao, Jean-Jacques Grob, et al. 2024. “First-Line Nivolumab Plus Relatlimab Versus Nivolumab Plus Ipilimumab in Advanced Melanoma: An Indirect Treatment Comparison Using RELATIVITY-047 and CheckMate 067 Trial Data.” Journal of Clinical Oncology, August. https://doi.org/10.1200/jco.24.01125.
+
+December
+
+Arron, Sarah T., Javier Cañueto, Jennifer Siegel, Alison Fitzgerald, Anesh Prasai, Shlomo A. Koyfman, and Sue S. Yom. 2024. “Association of a 40-Gene Expression Profile With Risk of Metastatic Disease Progression of Cutaneous Squamous Cell Carcinoma and Specification of Benefit of Adjuvant Radiation Therapy.” International Journal of Radiation Oncology\*Biology\*Physics 120 (3): 760–71. https://doi.org/10.1016/j.ijrobp.2024.05.022.
 :::
 
 # 2023 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-### January - December 2023
+## January - December 2023
 
-### December
+January
 
-Gross, Neil D, David M Miller, Nikhil I Khushalani, Vasu Divi, Emily S Ruiz, Evan J Lipson, Friedegund Meier, et al. 2023. “Neoadjuvant Cemiplimab and Surgery for Stage IIIV Cutaneous Squamous-Cell Carcinoma: Follow-up and Survival Outcomes of a Single-Arm, Multicentre, Phase 2 Study.” The Lancet Oncology 24 (11): 1196–1205. https://doi.org/10.1016/s1470-2045(23)00459-x.
+Rohaan, Maartje W., Troels H. Borch, Joost H. van den Berg, Özcan Met, Rob Kessels, Marnix H. Geukes Foppen, Joachim Stoltenborg Granhøj, et al. 2022. "Tumor-Infiltrating Lymphocyte Therapy or Ipilimumab in Advanced Melanoma." New England Journal of Medicine 387 (23): 2113--25. https://doi.org/10.1056/nejmoa2210233.
 
-### November
-
-Beal, Brandon T., Jeremy Udkoff, Leora Aizman, Jeremy Etzkorn, John A. Zitelli, Christopher J. Miller, Thuzar M. Shin, Joseph F. Sobanko, and David G. Brodland. 2023. “Outcomes of Invasive Melanoma of the Head and Neck Treated with Mohs Micrographic Surgery A Multicenter Study.” Journal of the American Academy of Dermatology 89 (3): 544–50. https://doi.org/10.1016/j.jaad.2022.12.038.
-
-### September
-
-VanderWalde, Ari, Shay L. Bellasea, Kari L. Kendra, Nikhil I. Khushalani, Katie M. Campbell, Philip O. Scumpia, Lawrence F. Kuklinski, et al. 2023. "Ipilimumab with or Without Nivolumab in PD-1 or PD-L1 Blockade Refractory Metastatic Melanoma: A Randomized Phase 2 Trial." Nature Medicine, August. https://doi.org/10.1038/s41591-023-02498-y.
-
-### August
-
-Becker, Jürgen C, Selma Ugurel, Ulrike Leiter, Friedegund Meier, Ralf Gutzmer, Sebastian Haferkamp, Lisa Zimmer, et al. 2023. "Adjuvant Immunotherapy with Nivolumab Versus Observation in Completely Resected Merkel Cell Carcinoma (ADMEC-O): Disease-Free Survival Results from a Randomised, Open-Label, Phase 2 Trial." The Lancet, July. https://doi.org/10.1016/s0140-6736(23)00769-9.
-
-### July
-
-Dieng, Mbathio, Sarah J. Lord, Robin M. Turner, Omgo E. Nieweg, Alexander M. Menzies, Robyn P. M. Saw, Andrew J. Einstein, et al. 2022. "The Impact of Surveillance Imaging Frequency on the Detection of Distant Disease for Patients with Resected Stage III Melanoma." Annals of Surgical Oncology 29 (5): 2871--81. https://doi.org/10.1245/s10434-021-11231-3.
-
-### June
-
-Mangione, Carol M., Michael J. Barry, Wanda K. Nicholson, David Chelmow, Tumaini Rucker Coker, Esa M. Davis, Katrina E. Donahue, et al. 2023. "Screening for Skin Cancer." JAMA 329 (15): 1290. https://doi.org/10.1001/jama.2023.4342.
-
-### May
-
-Drobni, Zsofia D., Raza M. Alvi, Jana Taron, Amna Zafar, Sean P. Murphy, Paula K. Rambarat, Rayma C. Mosarla, et al. 2020. "Association Between Immune Checkpoint Inhibitors With Cardiovascular Events and Atherosclerotic Plaque." Circulation 142 (24): 2299--2311. https://doi.org/10.1161/circulationaha.120.049981.
-
-### April
-
-Patel, Sapna P., Megan Othus, Yuanbin Chen, G. Paul Wright, Kathleen J. Yost, John R. Hyngstrom, Siwen Hu-Lieskovan, et al. 2023. Neoadjuvant--Adjuvant or Adjuvant-Only Pembrolizumab in Advanced Melanoma. New England Journal of Medicine 388 (9): 813--23.
-
-### March
-
-Allen, Nicholas C., Andrew J. Martin, Victoria A. Snaidr, Renee Eggins, Alvin H. Chong, Pablo Fernandéz-Peñas, Douglas Gin, et al. 2023. "Nicotinamide for Skin-Cancer Chemoprevention in Transplant Recipients." *New England Journal of Medicine* 388 (9): 804--12. <https://doi.org/10.1056/nejmoa2203086>.
-
-### February
+February
 
 Ascierto, Paolo A, Daniil Stroyakovskiy, Helen Gogas, Caroline Robert, Karl Lewis, Svetlana Protsenko, Rodrigo P Pereira, et al. 2023. "Overall Survival with First-Line Atezolizumab in Combination with Vemurafenib and Cobimetinib in BRAFV600 Mutation-Positive Advanced Melanoma (IMspire150): Second Interim Analysis of a Multicentre, Randomised, Phase 3 Study." The Lancet Oncology 24 (1): 33--44. https://doi.org/10.1016/s1470-2045(22)00687-8.
 
-### January
+March
 
-Rohaan, Maartje W., Troels H. Borch, Joost H. van den Berg, Özcan Met, Rob Kessels, Marnix H. Geukes Foppen, Joachim Stoltenborg Granhøj, et al. 2022. "Tumor-Infiltrating Lymphocyte Therapy or Ipilimumab in Advanced Melanoma." New England Journal of Medicine 387 (23): 2113--25. https://doi.org/10.1056/nejmoa2210233.
+Allen, Nicholas C., Andrew J. Martin, Victoria A. Snaidr, Renee Eggins, Alvin H. Chong, Pablo Fernandéz-Peñas, Douglas Gin, et al. 2023. "Nicotinamide for Skin-Cancer Chemoprevention in Transplant Recipients." *New England Journal of Medicine* 388 (9): 804--12. <https://doi.org/10.1056/nejmoa2203086>.
+
+April
+
+Patel, Sapna P., Megan Othus, Yuanbin Chen, G. Paul Wright, Kathleen J. Yost, John R. Hyngstrom, Siwen Hu-Lieskovan, et al. 2023. Neoadjuvant--Adjuvant or Adjuvant-Only Pembrolizumab in Advanced Melanoma. New England Journal of Medicine 388 (9): 813--23.
+
+May
+
+Drobni, Zsofia D., Raza M. Alvi, Jana Taron, Amna Zafar, Sean P. Murphy, Paula K. Rambarat, Rayma C. Mosarla, et al. 2020. "Association Between Immune Checkpoint Inhibitors With Cardiovascular Events and Atherosclerotic Plaque." Circulation 142 (24): 2299--2311. https://doi.org/10.1161/circulationaha.120.049981.
+
+June
+
+Mangione, Carol M., Michael J. Barry, Wanda K. Nicholson, David Chelmow, Tumaini Rucker Coker, Esa M. Davis, Katrina E. Donahue, et al. 2023. "Screening for Skin Cancer." JAMA 329 (15): 1290. https://doi.org/10.1001/jama.2023.4342.
+
+July
+
+Dieng, Mbathio, Sarah J. Lord, Robin M. Turner, Omgo E. Nieweg, Alexander M. Menzies, Robyn P. M. Saw, Andrew J. Einstein, et al. 2022. "The Impact of Surveillance Imaging Frequency on the Detection of Distant Disease for Patients with Resected Stage III Melanoma." Annals of Surgical Oncology 29 (5): 2871--81. https://doi.org/10.1245/s10434-021-11231-3.
+
+August
+
+Becker, Jürgen C, Selma Ugurel, Ulrike Leiter, Friedegund Meier, Ralf Gutzmer, Sebastian Haferkamp, Lisa Zimmer, et al. 2023. "Adjuvant Immunotherapy with Nivolumab Versus Observation in Completely Resected Merkel Cell Carcinoma (ADMEC-O): Disease-Free Survival Results from a Randomised, Open-Label, Phase 2 Trial." The Lancet, July. https://doi.org/10.1016/s0140-6736(23)00769-9.
+
+September
+
+VanderWalde, Ari, Shay L. Bellasea, Kari L. Kendra, Nikhil I. Khushalani, Katie M. Campbell, Philip O. Scumpia, Lawrence F. Kuklinski, et al. 2023. "Ipilimumab with or Without Nivolumab in PD-1 or PD-L1 Blockade Refractory Metastatic Melanoma: A Randomized Phase 2 Trial." Nature Medicine, August. https://doi.org/10.1038/s41591-023-02498-y.
+
+November
+
+Beal, Brandon T., Jeremy Udkoff, Leora Aizman, Jeremy Etzkorn, John A. Zitelli, Christopher J. Miller, Thuzar M. Shin, Joseph F. Sobanko, and David G. Brodland. 2023. “Outcomes of Invasive Melanoma of the Head and Neck Treated with Mohs Micrographic Surgery A Multicenter Study.” Journal of the American Academy of Dermatology 89 (3): 544–50. https://doi.org/10.1016/j.jaad.2022.12.038.
+
+December
+
+Gross, Neil D, David M Miller, Nikhil I Khushalani, Vasu Divi, Emily S Ruiz, Evan J Lipson, Friedegund Meier, et al. 2023. “Neoadjuvant Cemiplimab and Surgery for Stage IIIV Cutaneous Squamous-Cell Carcinoma: Follow-up and Survival Outcomes of a Single-Arm, Multicentre, Phase 2 Study.” The Lancet Oncology 24 (11): 1196–1205. https://doi.org/10.1016/s1470-2045(23)00459-x.
 :::
-
 # 2022 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - December 2022
 
-### December
+January
 
-Amaria, Rodabe N., Michael Postow, Elizabeth M. Burton, Michael T. Tezlaff, Merrick I. Ross, Carlos Torres-Cabala, Isabella C. Glitza, et al. 2022. "Neoadjuvant Relatlimab and Nivolumab in Resectable Melanoma." Nature 611 (7934): 155--60. https://doi.org/10.1038/s41586-022-05368-8.
+Postow, Michael A., Debra A. Goldman, Alexander N. Shoushtari, Allison Betof Warner, Margaret K. Callahan, Parisa Momtaz, James W. Smithy, et al. 2022. "Adaptive Dosing of Nivolumab + Ipilimumab Immunotherapy Based Upon Early, Interim Radiographic Assessment in Advanced Melanoma (The ADAPT-IT Study)." Journal of Clinical Oncology40 (10): 1059--67. https://doi.org/10.1200/jco.21.01570.
 
-### November
-
-Kim, Sungjune, Evan Wuthrick, Dukagjin Blakaj, Zeynep Eroglu, Claire Verschraegen, Ram Thapa, Matthew Mills, et al. 2022. "Combined Nivolumab and Ipilimumab with or Without Stereotactic Body Radiation Therapy for Advanced Merkel Cell Carcinoma: A Randomised, Open Label, Phase 2 Trial." The Lancet 400 (10357): 1008--19. https://doi.org/10.1016/s0140-6736(22)01659-2.
-
-### October
-
-Gross, Neil D., David M. Miller, Nikhil I. Khushalani, Vasu Divi, Emily S. Ruiz, Evan J. Lipson, Friedegund Meier, et al. 2022. "Neoadjuvant Cemiplimab for Stage II to IV Cutaneous Squamous-Cell Carcinoma." *New England Journal of Medicine*387 (17): 1557--68. <https://doi.org/10.1056/nejmoa2209813>.
-
-### August
-
-Reijers, Irene L. M., Alexander M. Menzies, Alexander C. J. van Akkooi, Judith M. Versluis, Noëlle M. J. van den Heuvel, Robyn P. M. Saw, Thomas E. Pennington, et al. 2022. "Personalized Response-Directed Surgery and Adjuvant Therapy After Neoadjuvant Ipilimumab and Nivolumab in High-Risk Stage III Melanoma: The PRADO Trial." Nature Medicine 28 (6): 1178--88. https://doi.org/10.1038/s41591-022-01851-x.
-
-### July
-
-Ruiz, Emily S., Kylee J. B. Kus, Timothy D. Smile, Fadi Murad, Guohai Zhou, Evelyn O. Ilori, Jonathan D. Schoenfeld, et al. 2022. "Adjuvant Radiation Following Clear Margin Resection of High T-Stage Cutaneous Squamous Cell Carcinoma Halves the Risk of Local and Locoregional Recurrence: A Dual-Center Retrospective Study." Journal of the American Academy of Dermatology 87 (1): 87--94. https://doi.org/10.1016/j.jaad.2022.03.044.
-
-### June
-
-Liu, Kevin X., Michael G. Milligan, Jonathan D. Schoenfeld, Roy B. Tishler, Andrea K. Ng, Phillip M. Devlin, Elliott Fite, et al. 2022. "Characterization of Clinical Outcomes After Shorter Course Hypofractionated and Standard-Course Radiotherapy for Stage I-III Curatively-Treated Merkel Cell Carcinoma." Radiotherapy and Oncology 173 (August): 32--40. https://doi.org/10.1016/j.radonc.2022.05.012.
-
-### May
-
-Luke, Jason J, Piotr Rutkowski, Paola Queirolo, Michele Del Vecchio, Jacek Mackiewicz, Vanna Chiarion-Sileni, Luis de la Cruz Merino, et al. 2022. "Pembrolizumab Versus Placebo as Adjuvant Therapy in Completely Resected Stage IIB or IIC Melanoma (KEYNOTE-716): A Randomised, Double-Blind, Phase 3 Trial." The Lancet 399 (10336): 1718--29. https://doi.org/10.1016/s0140-6736(22)00562-1.
-
-### April
-
-Qian, David C, Troy Kleber, Brianna Brammer, Karen M Xu, Jeffrey M Switchenko, James R Janopaul-Naylor, Jim Zhong, et al. 2021. "Effect of Immunotherapy Time-of-Day Infusion on Overall Survival Among Patients with Advanced Melanoma in the USA (MEMOIR): A Propensity Score-Matched Analysis of a Single-Centre, Longitudinal Study." The Lancet Oncology 22 (12): 1777--86. https://doi.org/10.1016/s1470-2045(21)00546-5.
-
-### March
-
-McEvoy, Aubriana M., Kristina Lachance, Daniel S. Hippe, Kelsey Cahill, Yasman Moshiri, Christopher W. Lewis, Neha Singh, et al. 2022. "Recurrence and Mortality Risk of Merkel Cell Carcinoma by Cancer Stage and Time From Diagnosis." JAMA Dermatology 158 (4): 382. https://doi.org/10.1001/jamadermatol.2021.6096.
-
-### February
+February
 
 Tawbi, Hussein A., Dirk Schadendorf, Evan J. Lipson, Paolo A. Ascierto, Luis Matamala, Erika Castillo Gutiérrez, Piotr Rutkowski, et al. 2022. "Relatlimab and Nivolumab Versus Nivolumab in Untreated Advanced Melanoma." New England Journal of Medicine 386 (1): 24--34. https://doi.org/10.1056/nejmoa2109970.
 
-### January
+March
 
-Postow, Michael A., Debra A. Goldman, Alexander N. Shoushtari, Allison Betof Warner, Margaret K. Callahan, Parisa Momtaz, James W. Smithy, et al. 2022. "Adaptive Dosing of Nivolumab + Ipilimumab Immunotherapy Based Upon Early, Interim Radiographic Assessment in Advanced Melanoma (The ADAPT-IT Study)." Journal of Clinical Oncology40 (10): 1059--67. https://doi.org/10.1200/jco.21.01570.
+McEvoy, Aubriana M., Kristina Lachance, Daniel S. Hippe, Kelsey Cahill, Yasman Moshiri, Christopher W. Lewis, Neha Singh, et al. 2022. "Recurrence and Mortality Risk of Merkel Cell Carcinoma by Cancer Stage and Time From Diagnosis." JAMA Dermatology 158 (4): 382. https://doi.org/10.1001/jamadermatol.2021.6096.
+
+April
+
+Qian, David C, Troy Kleber, Brianna Brammer, Karen M Xu, Jeffrey M Switchenko, James R Janopaul-Naylor, Jim Zhong, et al. 2021. "Effect of Immunotherapy Time-of-Day Infusion on Overall Survival Among Patients with Advanced Melanoma in the USA (MEMOIR): A Propensity Score-Matched Analysis of a Single-Centre, Longitudinal Study." The Lancet Oncology 22 (12): 1777--86. https://doi.org/10.1016/s1470-2045(21)00546-5.
+
+May
+
+Luke, Jason J, Piotr Rutkowski, Paola Queirolo, Michele Del Vecchio, Jacek Mackiewicz, Vanna Chiarion-Sileni, Luis de la Cruz Merino, et al. 2022. "Pembrolizumab Versus Placebo as Adjuvant Therapy in Completely Resected Stage IIB or IIC Melanoma (KEYNOTE-716): A Randomised, Double-Blind, Phase 3 Trial." The Lancet 399 (10336): 1718--29. https://doi.org/10.1016/s0140-6736(22)00562-1.
+
+June
+
+Liu, Kevin X., Michael G. Milligan, Jonathan D. Schoenfeld, Roy B. Tishler, Andrea K. Ng, Phillip M. Devlin, Elliott Fite, et al. 2022. "Characterization of Clinical Outcomes After Shorter Course Hypofractionated and Standard-Course Radiotherapy for Stage I-III Curatively-Treated Merkel Cell Carcinoma." Radiotherapy and Oncology 173 (August): 32--40. https://doi.org/10.1016/j.radonc.2022.05.012.
+
+July
+
+Ruiz, Emily S., Kylee J. B. Kus, Timothy D. Smile, Fadi Murad, Guohai Zhou, Evelyn O. Ilori, Jonathan D. Schoenfeld, et al. 2022. "Adjuvant Radiation Following Clear Margin Resection of High T-Stage Cutaneous Squamous Cell Carcinoma Halves the Risk of Local and Locoregional Recurrence: A Dual-Center Retrospective Study." Journal of the American Academy of Dermatology 87 (1): 87--94. https://doi.org/10.1016/j.jaad.2022.03.044.
+
+August
+
+Reijers, Irene L. M., Alexander M. Menzies, Alexander C. J. van Akkooi, Judith M. Versluis, Noëlle M. J. van den Heuvel, Robyn P. M. Saw, Thomas E. Pennington, et al. 2022. "Personalized Response-Directed Surgery and Adjuvant Therapy After Neoadjuvant Ipilimumab and Nivolumab in High-Risk Stage III Melanoma: The PRADO Trial." Nature Medicine 28 (6): 1178--88. https://doi.org/10.1038/s41591-022-01851-x.
+
+October
+
+Gross, Neil D., David M. Miller, Nikhil I. Khushalani, Vasu Divi, Emily S. Ruiz, Evan J. Lipson, Friedegund Meier, et al. 2022. "Neoadjuvant Cemiplimab for Stage II to IV Cutaneous Squamous-Cell Carcinoma." *New England Journal of Medicine*387 (17): 1557--68. <https://doi.org/10.1056/nejmoa2209813>.
+
+November
+
+Kim, Sungjune, Evan Wuthrick, Dukagjin Blakaj, Zeynep Eroglu, Claire Verschraegen, Ram Thapa, Matthew Mills, et al. 2022. "Combined Nivolumab and Ipilimumab with or Without Stereotactic Body Radiation Therapy for Advanced Merkel Cell Carcinoma: A Randomised, Open Label, Phase 2 Trial." The Lancet 400 (10357): 1008--19. https://doi.org/10.1016/s0140-6736(22)01659-2.
+
+December
+
+Amaria, Rodabe N., Michael Postow, Elizabeth M. Burton, Michael T. Tezlaff, Merrick I. Ross, Carlos Torres-Cabala, Isabella C. Glitza, et al. 2022. "Neoadjuvant Relatlimab and Nivolumab in Resectable Melanoma." Nature 611 (7934): 155--60. https://doi.org/10.1038/s41586-022-05368-8.
 :::
-
 # 2021 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - December 2021
 
-### December
+January
 
-Harms, Paul W., Monique E. Verhaegen, Kevin Hu, Steven M. Hrycaj, May P. Chan, Chia-Jen Liu, Marina Grachtchouk, Rajiv M. Patel, Aaron M. Udager, and Andrzej A. Dlugosz. 2021. "Genomic Evidence Suggests That Cutaneous Neuroendocrine Carcinomas Can Arise from Squamous Dysplastic Precursors." Modern Pathology 35 (4): 506--14. https://doi.org/10.1038/s41379-021-00928-1.
+Danesh, Melissa J., Tyler D. Menge, Lydia Helliwell, Meera Mahalingam, and Abigail Waldman. 2020. "Adherence to the National Comprehensive Cancer Network Criteria of Complete Circumferential Peripheral and Deep Margin Assessment in Treatment of High-Risk Basal and Squamous Cell Carcinoma." Dermatologic Surgery 46 (12): 1473--80. https://doi.org/10.1097/dss.0000000000002354.
 
-### November
-
-Tawbi, Hussein A, Peter A Forsyth, F Stephen Hodi, Christopher D Lao, Stergios J Moschos, Omid Hamid, Michael B Atkins, et al. 2021. "Safety and Efficacy of the Combination of Nivolumab Plus Ipilimumab in Patients with Melanoma and Asymptomatic or Symptomatic Brain Metastases (CheckMate 204)." Neuro-Oncology 23 (11): 1961--73. https://doi.org/10.1093/neuonc/noab094.
-
-### October
-
-Hsueh, Eddy C., James R. DeBloom, Jonathan H. Lee, Jeffrey J. Sussman, Kyle R. Covington, Hillary G. Caruso, Ann P. Quick, Robert W. Cook, Craig L. Slingluff, and Kelly M. McMasters. 2021. "Long-Term Outcomes in a Multicenter, Prospective Cohort Evaluating the Prognostic 31-Gene Expression Profile for Cutaneous Melanoma." JCO Precision Oncology, no. 5 (November): 589--601. https://doi.org/10.1200/po.20.00119.
-
-### September
-
-Wilmas, Kelly M., Wesley B. Garner, Matthew T. Ballo, Susan L. McGovern, and Deborah F. MacFarlane. 2021a. "The Role of Radiation Therapy in the Management of Cutaneous Malignancies. Part I: Diagnostic Modalities and Applications." Journal of the American Academy of Dermatology 85 (3): 539--48. https://doi.org/10.1016/j.jaad.2021.05.058. ---------. 2021b. "The Role of Radiation Therapy in the Management of Cutaneous Malignancies. Part II: When Is Radiation Therapy Indicated?" Journal of the American Academy of Dermatology 85 (3): 551--62. https://doi.org/10.1016/j.jaad.2021.05.057.
-
-### August
-
-Puebla-Tornero, Laura, Luis Antonio Corchete-Sánchez, Alberto Conde-Ferreirós, Natalia García-Sancha, Roberto Corchado-Cobos, Concepción Román-Curto, and Javier Cañueto. 2021. "Performance of Salamanca Refinement of the T3-AJCC8 Versus the Brigham and Women's Hospital and Tübingen Alternative Staging Systems for High-Risk Cutaneous Squamous Cell Carcinoma." Journal of the American Academy of Dermatology 84 (4): 938--45. https://doi.org/10.1016/j.jaad.2020.12.020.
-
-### July
-
-Farberg, Aaron S., Mary A. Hall, Leah Douglas, Kyle R. Covington, Sarah J. Kurley, Robert W. Cook, and Scott M. Dinehart. 2020. "Integrating Gene Expression Profiling into NCCN High-Risk Cutaneous Squamous Cell Carcinoma Management Recommendations: Impact on Patient Management." Current Medical Research and Opinion 36 (8): 1301--7. https://doi.org/10.1080/03007995.2020.1763284.
-
-### June
-
-Stratigos, Alexander J, Aleksandar Sekulic, Ketty Peris, Oliver Bechter, Sorilla Prey, Martin Kaatz, Karl D Lewis, et al. 2021. "Cemiplimab in Locally Advanced Basal Cell Carcinoma After Hedgehog Inhibitor Therapy: An Open-Label, Multi-Centre, Single-Arm, Phase 2 Trial." The Lancet Oncology 22 (6): 848--57. https://doi.org/10.1016/s1470-2045(21)00126-1.
-
-### May
-
-Andruska, Neal, Benjamin W. Fischer-Valuck, Lily Mahapatra, Randall J. Brenneman, Hiram A. Gay, Wade L. Thorstad, Ryan C. Fields, Kelly M. MacArthur, and Brian C. Baumann. 2021. "Association Between Surgical Margins Larger Than 1 Cm and Overall Survival in Patients With Merkel Cell Carcinoma." JAMA Dermatology 157 (5): 540. https://doi.org/10.1001/jamadermatol.2021.0247.
-
-### April
-
-Cho, Hyunje G., Karen Y. Kuo, Shufeng Li, Irene Bailey, Sumaira Aasi, Anne Lynn S. Chang, Anthony E. Oro, Jean Y. Tang, and Kavita Y. Sarin. 2018. "Frequent Basal Cell Cancer Development Is a Clinical Marker for Inherited Cancer Susceptibility." JCI Insight 3 (15). https://doi.org/10.1172/jci.insight.122744.
-
-### March
-
-Morgan, Frederick C., Emily Stamell Ruiz, Pritesh S. Karia, Robert J. Besaw, Victor A. Neel, and Chrysalyne D. Schmults. 2021. "Brigham and Women's Hospital Tumor Classification System for Basal Cell Carcinoma Identifies Patients with Risk of Metastasis and Death." Journal of the American Academy of Dermatology 85 (3): 582--87. https://doi.org/10.1016/j.jaad.2021.01.052.
-
-### February
+February
 
 Morgan, Frederick C., Emily Stamell Ruiz, Pritesh S. Karia, Robert J. Besaw, Victor A. Neel, and Chrysalyne D. Schmults. 2020. "Factors Predictive of Recurrence, Metastasis, and Death from Primary Basal Cell Carcinoma 2 Cm or Larger in Diameter." Journal of the American Academy of Dermatology 83 (3): 832--38.
 
-### January
+March
 
-Danesh, Melissa J., Tyler D. Menge, Lydia Helliwell, Meera Mahalingam, and Abigail Waldman. 2020. "Adherence to the National Comprehensive Cancer Network Criteria of Complete Circumferential Peripheral and Deep Margin Assessment in Treatment of High-Risk Basal and Squamous Cell Carcinoma." Dermatologic Surgery 46 (12): 1473--80. https://doi.org/10.1097/dss.0000000000002354.
+Morgan, Frederick C., Emily Stamell Ruiz, Pritesh S. Karia, Robert J. Besaw, Victor A. Neel, and Chrysalyne D. Schmults. 2021. "Brigham and Women's Hospital Tumor Classification System for Basal Cell Carcinoma Identifies Patients with Risk of Metastasis and Death." Journal of the American Academy of Dermatology 85 (3): 582--87. https://doi.org/10.1016/j.jaad.2021.01.052.
+
+April
+
+Cho, Hyunje G., Karen Y. Kuo, Shufeng Li, Irene Bailey, Sumaira Aasi, Anne Lynn S. Chang, Anthony E. Oro, Jean Y. Tang, and Kavita Y. Sarin. 2018. "Frequent Basal Cell Cancer Development Is a Clinical Marker for Inherited Cancer Susceptibility." JCI Insight 3 (15). https://doi.org/10.1172/jci.insight.122744.
+
+May
+
+Andruska, Neal, Benjamin W. Fischer-Valuck, Lily Mahapatra, Randall J. Brenneman, Hiram A. Gay, Wade L. Thorstad, Ryan C. Fields, Kelly M. MacArthur, and Brian C. Baumann. 2021. "Association Between Surgical Margins Larger Than 1 Cm and Overall Survival in Patients With Merkel Cell Carcinoma." JAMA Dermatology 157 (5): 540. https://doi.org/10.1001/jamadermatol.2021.0247.
+
+June
+
+Stratigos, Alexander J, Aleksandar Sekulic, Ketty Peris, Oliver Bechter, Sorilla Prey, Martin Kaatz, Karl D Lewis, et al. 2021. "Cemiplimab in Locally Advanced Basal Cell Carcinoma After Hedgehog Inhibitor Therapy: An Open-Label, Multi-Centre, Single-Arm, Phase 2 Trial." The Lancet Oncology 22 (6): 848--57. https://doi.org/10.1016/s1470-2045(21)00126-1.
+
+July
+
+Farberg, Aaron S., Mary A. Hall, Leah Douglas, Kyle R. Covington, Sarah J. Kurley, Robert W. Cook, and Scott M. Dinehart. 2020. "Integrating Gene Expression Profiling into NCCN High-Risk Cutaneous Squamous Cell Carcinoma Management Recommendations: Impact on Patient Management." Current Medical Research and Opinion 36 (8): 1301--7. https://doi.org/10.1080/03007995.2020.1763284.
+
+August
+
+Puebla-Tornero, Laura, Luis Antonio Corchete-Sánchez, Alberto Conde-Ferreirós, Natalia García-Sancha, Roberto Corchado-Cobos, Concepción Román-Curto, and Javier Cañueto. 2021. "Performance of Salamanca Refinement of the T3-AJCC8 Versus the Brigham and Women's Hospital and Tübingen Alternative Staging Systems for High-Risk Cutaneous Squamous Cell Carcinoma." Journal of the American Academy of Dermatology 84 (4): 938--45. https://doi.org/10.1016/j.jaad.2020.12.020.
+
+September
+
+Wilmas, Kelly M., Wesley B. Garner, Matthew T. Ballo, Susan L. McGovern, and Deborah F. MacFarlane. 2021a. "The Role of Radiation Therapy in the Management of Cutaneous Malignancies. Part I: Diagnostic Modalities and Applications." Journal of the American Academy of Dermatology 85 (3): 539--48. https://doi.org/10.1016/j.jaad.2021.05.058. ---------. 2021b. "The Role of Radiation Therapy in the Management of Cutaneous Malignancies. Part II: When Is Radiation Therapy Indicated?" Journal of the American Academy of Dermatology 85 (3): 551--62. https://doi.org/10.1016/j.jaad.2021.05.057.
+
+October
+
+Hsueh, Eddy C., James R. DeBloom, Jonathan H. Lee, Jeffrey J. Sussman, Kyle R. Covington, Hillary G. Caruso, Ann P. Quick, Robert W. Cook, Craig L. Slingluff, and Kelly M. McMasters. 2021. "Long-Term Outcomes in a Multicenter, Prospective Cohort Evaluating the Prognostic 31-Gene Expression Profile for Cutaneous Melanoma." JCO Precision Oncology, no. 5 (November): 589--601. https://doi.org/10.1200/po.20.00119.
+
+November
+
+Tawbi, Hussein A, Peter A Forsyth, F Stephen Hodi, Christopher D Lao, Stergios J Moschos, Omid Hamid, Michael B Atkins, et al. 2021. "Safety and Efficacy of the Combination of Nivolumab Plus Ipilimumab in Patients with Melanoma and Asymptomatic or Symptomatic Brain Metastases (CheckMate 204)." Neuro-Oncology 23 (11): 1961--73. https://doi.org/10.1093/neuonc/noab094.
+
+December
+
+Harms, Paul W., Monique E. Verhaegen, Kevin Hu, Steven M. Hrycaj, May P. Chan, Chia-Jen Liu, Marina Grachtchouk, Rajiv M. Patel, Aaron M. Udager, and Andrzej A. Dlugosz. 2021. "Genomic Evidence Suggests That Cutaneous Neuroendocrine Carcinomas Can Arise from Squamous Dysplastic Precursors." Modern Pathology 35 (4): 506--14. https://doi.org/10.1038/s41379-021-00928-1.
 :::
-
 # 2020 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## January - December 2020
 
-### December
-
-Tarabadkar, Erica S., Teresa Fu, Kristina Lachance, Daniel S. Hippe, Thomas Pulliam, Hannah Thomas, Janet Y. Li, et al. 2021. "Narrow Excision Margins Are Appropriate for Merkel Cell Carcinoma When Combined with Adjuvant Radiation: Analysis of 188 Cases of Localized Disease and Proposed Management Algorithm." Journal of the American Academy of Dermatology 84 (2): 340--47. https://doi.org/10.1016/j.jaad.2020.07.079.
-
-### November
-
-Owen, Joshua L, Nour Kibbi, Brandon Worley, Ryan C Kelm, Jordan V Wang, Christopher A Barker, Ramona Behshad, et al. 2019. "Sebaceous Carcinoma: Evidence-Based Clinical Practice Guidelines." The Lancet Oncology 20 (12): e699--714. https://doi.org/10.1016/s1470-2045(19)30673-4.
-
-### October
-
-Singh, Neha, Nora A. Alexander, Kristina Lachance, Christopher W. Lewis, Aubriana McEvoy, Gensuke Akaike, David Byrd, et al. 2021. "Clinical Benefit of Baseline Imaging in Merkel Cell Carcinoma: Analysis of 584 Patients." Journal of the American Academy of Dermatology 84 (2): 330--39. https://doi.org/10.1016/j.jaad.2020.07.065.
-
-### September
-
-D'Arcy, Monica E, David Castenson, Charles F Lynch, Amy R Kahn, Lindsay M Morton, Meredith S Shiels, Ruth M Pfeiffer, and Eric A Engels. 2020. "Risk of Rare Cancers Among Solid Organ Transplant Recipients." *JNCI: Journal of the National Cancer Institute*, May. <https://doi.org/10.1093/jnci/djaa078>.
-
-### August
-
-Schauder, David M., Jinwan Kim, and Rajiv I. Nijhawan. 2020. "Evaluation of the Use of Capecitabine for the Treatment and Prevention of Actinic Keratoses, Squamous Cell Carcinoma, and Basal Cell Carcinoma." JAMA Dermatology 156 (10): 1117. https://doi.org/10.1001/jamadermatol.2020.2327.
-
-### July
-
-Lobl, Marissa B., Dillon Clarey, Shauna Higgins, Adam Sutton, Laura Hansen, and Ashley Wysong. 2020. "Targeted Next-Generation Sequencing of Matched Localized and Metastatic Primary High-Risk SCCs Identifies Driver and Co-Occurring Mutations and Novel Therapeutic Targets." Journal of Dermatological Science 99 (1): 30--43. https://doi.org/10.1016/j.jdermsci.2020.05.007.
-
-### June
-
-Wysong, Ashley, Jason G. Newman, Kyle R. Covington, Sarah J. Kurley, Sherrif F. Ibrahim, Aaron S. Farberg, Anna Bar, et al. 2021. "Validation of a 40-Gene Expression Profile Test to Predict Metastatic Risk in Localized High-Risk Cutaneous Squamous Cell Carcinoma." Journal of the American Academy of Dermatology 84 (2): 361--69. https://doi.org/10.1016/j.jaad.2020.04.088.
-
-### May
-
-Topalian, Suzanne L., Shailender Bhatia, Asim Amin, Ragini R. Kudchadkar, William H. Sharfman, Celeste Lebbé, Jean-Pierre Delord, et al. 2020. "Neoadjuvant Nivolumab for Patients With Resectable Merkel Cell Carcinoma in the CheckMate 358 Trial." Journal of Clinical Oncology 38 (22): 2476--87. https://doi.org/10.1200/jco.20.00201.
-
-### March
-
-Sekulic, Aleksandar, Michael R. Migden, Nicole Basset-Seguin, Claus Garbe, Anja Gesierich, Christopher D. Lao, Chris Miller, et al. 2017. "Long-Term Safety and Efficacy of Vismodegib in Patients with Advanced Basal Cell Carcinoma: Final Update of the Pivotal ERIVANCE BCC Study." BMC Cancer 17 (1). https://doi.org/10.1186/s12885-017-3286-5.
-
-### February
+February
 
 Ruiz, Emily Stamell, Shlomo A. Koyfman, Syril Keena T. Que, Jason Kass, and Chrysalyne D. Schmults. 2020. "Evaluation of the Utility of Localized Adjuvant Radiation for Node-Negative Primary Cutaneous Squamous Cell Carcinoma with Clear Histologic Margins." Journal of the American Academy of Dermatology 82 (2): 420--29. https://doi.org/10.1016/j.jaad.2019.07.048.
 
-### 
-:::
 
+March
+
+Sekulic, Aleksandar, Michael R. Migden, Nicole Basset-Seguin, Claus Garbe, Anja Gesierich, Christopher D. Lao, Chris Miller, et al. 2017. "Long-Term Safety and Efficacy of Vismodegib in Patients with Advanced Basal Cell Carcinoma: Final Update of the Pivotal ERIVANCE BCC Study." BMC Cancer 17 (1). https://doi.org/10.1186/s12885-017-3286-5.
+
+May
+
+Topalian, Suzanne L., Shailender Bhatia, Asim Amin, Ragini R. Kudchadkar, William H. Sharfman, Celeste Lebbé, Jean-Pierre Delord, et al. 2020. "Neoadjuvant Nivolumab for Patients With Resectable Merkel Cell Carcinoma in the CheckMate 358 Trial." Journal of Clinical Oncology 38 (22): 2476--87. https://doi.org/10.1200/jco.20.00201.
+
+June
+
+Wysong, Ashley, Jason G. Newman, Kyle R. Covington, Sarah J. Kurley, Sherrif F. Ibrahim, Aaron S. Farberg, Anna Bar, et al. 2021. "Validation of a 40-Gene Expression Profile Test to Predict Metastatic Risk in Localized High-Risk Cutaneous Squamous Cell Carcinoma." Journal of the American Academy of Dermatology 84 (2): 361--69. https://doi.org/10.1016/j.jaad.2020.04.088.
+
+July
+
+Lobl, Marissa B., Dillon Clarey, Shauna Higgins, Adam Sutton, Laura Hansen, and Ashley Wysong. 2020. "Targeted Next-Generation Sequencing of Matched Localized and Metastatic Primary High-Risk SCCs Identifies Driver and Co-Occurring Mutations and Novel Therapeutic Targets." Journal of Dermatological Science 99 (1): 30--43. https://doi.org/10.1016/j.jdermsci.2020.05.007.
+
+August
+
+Schauder, David M., Jinwan Kim, and Rajiv I. Nijhawan. 2020. "Evaluation of the Use of Capecitabine for the Treatment and Prevention of Actinic Keratoses, Squamous Cell Carcinoma, and Basal Cell Carcinoma." JAMA Dermatology 156 (10): 1117. https://doi.org/10.1001/jamadermatol.2020.2327.
+
+September
+
+D'Arcy, Monica E, David Castenson, Charles F Lynch, Amy R Kahn, Lindsay M Morton, Meredith S Shiels, Ruth M Pfeiffer, and Eric A Engels. 2020. "Risk of Rare Cancers Among Solid Organ Transplant Recipients." *JNCI: Journal of the National Cancer Institute*, May. <https://doi.org/10.1093/jnci/djaa078>.
+
+October
+
+Singh, Neha, Nora A. Alexander, Kristina Lachance, Christopher W. Lewis, Aubriana McEvoy, Gensuke Akaike, David Byrd, et al. 2021. "Clinical Benefit of Baseline Imaging in Merkel Cell Carcinoma: Analysis of 584 Patients." Journal of the American Academy of Dermatology 84 (2): 330--39. https://doi.org/10.1016/j.jaad.2020.07.065.
+
+November
+
+Owen, Joshua L, Nour Kibbi, Brandon Worley, Ryan C Kelm, Jordan V Wang, Christopher A Barker, Ramona Behshad, et al. 2019. "Sebaceous Carcinoma: Evidence-Based Clinical Practice Guidelines." The Lancet Oncology 20 (12): e699--714. https://doi.org/10.1016/s1470-2045(19)30673-4.
+
+December
+
+Tarabadkar, Erica S., Teresa Fu, Kristina Lachance, Daniel S. Hippe, Thomas Pulliam, Hannah Thomas, Janet Y. Li, et al. 2021. "Narrow Excision Margins Are Appropriate for Merkel Cell Carcinoma When Combined with Adjuvant Radiation: Analysis of 188 Cases of Localized Disease and Proposed Management Algorithm." Journal of the American Academy of Dermatology 84 (2): 340--47. https://doi.org/10.1016/j.jaad.2020.07.079.
+:::
 # 2019 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
 ## April - December 2019
 
-### December
+April
 
-Knepper, Todd C., Meagan Montesion, Jeffery S. Russell, Ethan S. Sokol, Garrett M. Frampton, Vincent A. Miller, Lee A. Albacker, et al. 2019. "The Genomic Landscape of Merkel Cell Carcinoma and Clinicogenomic Biomarkers of Response to Immune Checkpoint Inhibitor Therapy." Clinical Cancer Research 25 (19): 5961--71. https://doi.org/10.1158/1078-0432.ccr-18-4159.
+Porceddu, Sandro Virgilio, Mathias Bressel, Michael Geoffrey Poulsen, Adam Stoneley, Michael John Veness, Lizbeth Moira Kenny, Chris Wratten, et al. 2018. "Postoperative Concurrent Chemoradiotherapy Versus Postoperative Radiotherapy in High-Risk Cutaneous Squamous Cell Carcinoma of the Head and Neck: The Randomized Phase III TROG 05.01 Trial." Journal of Clinical Oncology 36 (13): 1275--83. https://doi.org/10.1200/jco.2017.77.0941.
 
-### November
+
+May
+
+Rosenberg, Abby R., Mary Tabacchi, Kenneth H. Ngo, Michael Wallendorf, Ilana S. Rosman, Lynn A. Cornelius, and Shadmehr Demehri. 2019. "Skin Cancer Precursor Immunotherapy for Squamous Cell Carcinoma Prevention." JCI Insight 4 (6). https://doi.org/10.1172/jci.insight.125476.
+
+June
+
+Miller, Natalie J., Candice D. Church, Steven P. Fling, Rima Kulikauskas, Nirasha Ramchurren, Michi M. Shinohara, Harriet M. Kluger, et al. 2018. "Merkel Cell Polyomavirus-Specific Immune Responses in Patients with Merkel Cell Carcinoma Receiving Anti-PD-1 Therapy." Journal for ImmunoTherapy of Cancer 6 (1). https://doi.org/10.1186/s40425-018-0450-7.
+
+July
+
+Gore, Sinclair M., Douglas Shaw, Richard C. W. Martin, Wendy Kelder, Kathryn Roth, Roger Uren, Kan Gao, et al. 2015. "Prospective Study of Sentinel Node Biopsy for High-Risk Cutaneous Squamous Cell Carcinoma of the Head and Neck." Head & Neck 38 (S1): E884--89. https://doi.org/10.1002/hed.24120.
+
+August
+
+Ruiz, Emily Stamell, Pritesh S. Karia, Robert Besaw, and Chrysalyne D. Schmults. 2019. "Performance of the American Joint Committee on Cancer Staging Manual, 8th Edition Vs the Brigham and Women's Hospital Tumor Classification System for Cutaneous Squamous Cell Carcinoma." JAMA Dermatology 155 (7): 819. https://doi.org/10.1001/jamadermatol.2019.0032.
+
+September
+
+Fox, Matthew, Marc Brown, Nicholas Golda, Dori Goldberg, Christopher Miller, Melissa Pugliano-Mauro, Chrysalyne Schmults, et al. 2019. "Nodal Staging of High-Risk Cutaneous Squamous Cell Carcinoma." Journal of the American Academy of Dermatology 81 (2): 548--57. https://doi.org/10.1016/j.jaad.2018.09.006.
+
+October
+
+Migden, Michael R., Danny Rischin, Chrysalyne D. Schmults, Alexander Guminski, Axel Hauschild, Karl D. Lewis, Christine H. Chung, et al. 2018. "PD-1 Blockade with Cemiplimab in Advanced Cutaneous Squamous-Cell Carcinoma." New England Journal of Medicine 379 (4): 341--51. https://doi.org/10.1056/nejmoa1805131.
+
+November
 
 Harris, Brianna N., Patrik Pipkorn, Ky Nam Bai Nguyen, Ryan S. Jackson, Shyam Rao, Michael G. Moore, D. Gregory Farwell, and Arnaud F. Bewley. 2019. "Association of Adjuvant Radiation Therapy With Survival in Patients With Advanced Cutaneous Squamous Cell Carcinoma of the Head and Neck." JAMA OtolaryngologyHead & Neck Surgery145 (2): 153. https://doi.org/10.1001/jamaoto.2018.3650.
 
 Strassen, Ulrich, Benedikt Hofauer, Christian Jacobi, and Andreas Knopf. 2016. "Management of Locoregional Recurrence in Cutaneous Squamous Cell Carcinoma of the Head and Neck." European Archives of Oto-Rhino-Laryngology 274 (1): 501--6. https://doi.org/10.1007/s00405-016-4243-7.
 
-### October
+December
 
-Migden, Michael R., Danny Rischin, Chrysalyne D. Schmults, Alexander Guminski, Axel Hauschild, Karl D. Lewis, Christine H. Chung, et al. 2018. "PD-1 Blockade with Cemiplimab in Advanced Cutaneous Squamous-Cell Carcinoma." New England Journal of Medicine 379 (4): 341--51. https://doi.org/10.1056/nejmoa1805131.
-
-### September
-
-Fox, Matthew, Marc Brown, Nicholas Golda, Dori Goldberg, Christopher Miller, Melissa Pugliano-Mauro, Chrysalyne Schmults, et al. 2019. "Nodal Staging of High-Risk Cutaneous Squamous Cell Carcinoma." Journal of the American Academy of Dermatology 81 (2): 548--57. https://doi.org/10.1016/j.jaad.2018.09.006.
-
-### August
-
-Ruiz, Emily Stamell, Pritesh S. Karia, Robert Besaw, and Chrysalyne D. Schmults. 2019. "Performance of the American Joint Committee on Cancer Staging Manual, 8th Edition Vs the Brigham and Women's Hospital Tumor Classification System for Cutaneous Squamous Cell Carcinoma." JAMA Dermatology 155 (7): 819. https://doi.org/10.1001/jamadermatol.2019.0032.
-
-### July
-
-Gore, Sinclair M., Douglas Shaw, Richard C. W. Martin, Wendy Kelder, Kathryn Roth, Roger Uren, Kan Gao, et al. 2015. "Prospective Study of Sentinel Node Biopsy for High-Risk Cutaneous Squamous Cell Carcinoma of the Head and Neck." Head & Neck 38 (S1): E884--89. https://doi.org/10.1002/hed.24120.
-
-### June
-
-Miller, Natalie J., Candice D. Church, Steven P. Fling, Rima Kulikauskas, Nirasha Ramchurren, Michi M. Shinohara, Harriet M. Kluger, et al. 2018. "Merkel Cell Polyomavirus-Specific Immune Responses in Patients with Merkel Cell Carcinoma Receiving Anti-PD-1 Therapy." Journal for ImmunoTherapy of Cancer 6 (1). https://doi.org/10.1186/s40425-018-0450-7.
-
-### May
-
-Rosenberg, Abby R., Mary Tabacchi, Kenneth H. Ngo, Michael Wallendorf, Ilana S. Rosman, Lynn A. Cornelius, and Shadmehr Demehri. 2019. "Skin Cancer Precursor Immunotherapy for Squamous Cell Carcinoma Prevention." JCI Insight 4 (6). https://doi.org/10.1172/jci.insight.125476.
-
-### April
-
-Porceddu, Sandro Virgilio, Mathias Bressel, Michael Geoffrey Poulsen, Adam Stoneley, Michael John Veness, Lizbeth Moira Kenny, Chris Wratten, et al. 2018. "Postoperative Concurrent Chemoradiotherapy Versus Postoperative Radiotherapy in High-Risk Cutaneous Squamous Cell Carcinoma of the Head and Neck: The Randomized Phase III TROG 05.01 Trial." Journal of Clinical Oncology 36 (13): 1275--83. https://doi.org/10.1200/jco.2017.77.0941.
-
-### 
+Knepper, Todd C., Meagan Montesion, Jeffery S. Russell, Ethan S. Sokol, Garrett M. Frampton, Vincent A. Miller, Lee A. Albacker, et al. 2019. "The Genomic Landscape of Merkel Cell Carcinoma and Clinicogenomic Biomarkers of Response to Immune Checkpoint Inhibitor Therapy." Clinical Cancer Research 25 (19): 5961--71. https://doi.org/10.1158/1078-0432.ccr-18-4159.
 :::
-:::::::::::
+
+:::
