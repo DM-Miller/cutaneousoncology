@@ -11,7 +11,7 @@ categories:
   - Open Science
   - Analytic Search Space
   - Open Inference Project
-image: ../../img/open_inference_logo.png
+image: open_inference_logo.png
 page-layout: full
 title-block-style: none
 toc: false
@@ -509,336 +509,221 @@ toc: false
   }
 </style>
 
-```{=html}
-<section class="forum-entry-hero">
-  <div class="forum-entry-hero-inner">
-
-    <div class="forum-entry-eyebrow">
-      SoCO Research Forum · Metascience
-    </div>
-
-    <h1>
-      The Hidden Problem in Dermatology Research
-    </h1>
-
-    <p class="forum-entry-subtitle">
-      And what we can do about it: analytic search space, statistical
-      inference, and a systems-level effort to make the analytic context
-      of evidence visible.
-    </p>
-
-    <div class="forum-entry-tags">
-      <span class="forum-entry-tag">Analytic Search Space</span>
-      <span class="forum-entry-tag">Statistical Inference</span>
-      <span class="forum-entry-tag">Reproducibility</span>
-      <span class="forum-entry-tag">Open Science</span>
-      <span class="forum-entry-tag">Open Inference Project</span>
-    </div>
-
-  </div>
-</section>
-
-<main class="forum-entry-shell">
-  <article class="forum-entry-card">
-
-    <div class="forum-entry-meta">
-
-      <div class="forum-entry-meta-item">
-        <span class="forum-entry-meta-label">Program</span>
-        <span class="forum-entry-meta-value">SoCO Research Forum</span>
-      </div>
-
-      <div class="forum-entry-meta-item">
-        <span class="forum-entry-meta-label">Presenter</span>
-        <span class="forum-entry-meta-value">David M. Miller</span>
-      </div>
-
-      <div class="forum-entry-meta-item">
-        <span class="forum-entry-meta-label">Date</span>
-        <span class="forum-entry-meta-value">July 24, 2026</span>
-      </div>
-
-    </div>
-
-    <div class="forum-entry-content">
-
-      <div class="forum-entry-image fade-in">
-        <img
-          src="../../img/open_inference_logo.png"
-          alt="Open Inference Project logo"
-        >
-        <div class="forum-entry-image-title">
-          The Open Inference Project
-        </div>
-        <div class="forum-entry-image-subtitle">
-          Making the analytic context of evidence visible
-        </div>
-      </div>
-
-      <section class="forum-entry-section fade-in">
-
-        <h2>The conjecture</h2>
-
-        <p>
-          Scientific results do not arrive without context. Their meaning
-          depends on the questions asked, the populations and outcomes examined,
-          the models that were fit, and the alternative analytic paths that were
-          available.
-        </p>
-
-        <p>
-          This Research Forum presentation began with a simple conjecture:
-          <strong>the analytic context of evidence is systematically
-          underappreciated.</strong> Published results are highly visible, while
-          much of the analytic process that produced them can be difficult for
-          readers to reconstruct.
-        </p>
-
-      </section>
-
-      <div class="forum-entry-takeaway fade-in">
-
-        <span class="forum-entry-takeaway-label">Central Idea</span>
-
-        <p>
-          The problem is not analytic complexity. The problem is analytic
-          complexity that readers cannot see.
-        </p>
-
-      </div>
-
-      <section class="forum-entry-section fade-in">
-
-        <h2>Where analytic search space comes from</h2>
-
-        <div class="forum-entry-grid">
-
-          <div class="forum-entry-mini-card">
-            <h3>Multiple outcomes</h3>
-            <p>
-              Primary, secondary, exploratory, and time-dependent outcomes
-              create multiple reasonable questions within the same study.
-            </p>
-          </div>
-
-          <div class="forum-entry-mini-card">
-            <h3>Multiple models</h3>
-            <p>
-              Covariate sets, functional forms, model specifications, and
-              variable definitions can each change the analysis.
-            </p>
-          </div>
+::::: {.forum-entry-hero}
+:::: {.forum-entry-hero-inner}
 
-          <div class="forum-entry-mini-card">
-            <h3>Multiple subgroups</h3>
-            <p>
-              Age, disease severity, biomarkers, and other patient
-              characteristics create additional analytic pathways.
-            </p>
-          </div>
-
-          <div class="forum-entry-mini-card">
-            <h3>Multiple decisions</h3>
-            <p>
-              Inclusion criteria, missing-data handling, transformations, and
-              other defensible choices expand the space of possible analyses.
-            </p>
-          </div>
-
-        </div>
-
-      </section>
-
-      <section class="forum-entry-section fade-in">
-
-        <h2>Studying the analytic structure of a literature</h2>
-
-        <p>
-          Rather than treating analytic flexibility and multiplicity as purely
-          theoretical concerns, the project asked an empirical question:
-          <strong>how large is the analytic search space in contemporary
-          dermatology research?</strong>
-        </p>
-
-        <p>
-          An initial manual review suggested a substantial analytic search
-          space. The work was then expanded into a structured, reproducible
-          pipeline designed to characterize statistical reporting patterns
-          across a much larger corpus of articles from the
-          <em>Journal of the American Academy of Dermatology</em>.
-        </p>
+::: {.forum-entry-eyebrow}
+SoCO Research Forum · Metascience
+:::
 
-      </section>
+# The Hidden Problem in Dermatology Research
 
-      <div class="forum-entry-takeaway fade-in">
+::: {.forum-entry-subtitle}
+And what we can do about it: analytic search space, statistical inference, and a systems-level effort to make the analytic context of evidence visible.
+:::
 
-        <span class="forum-entry-takeaway-label">Early Signal</span>
+::: {.forum-entry-tags}
+[Analytic Search Space]{.forum-entry-tag}
+[Statistical Inference]{.forum-entry-tag}
+[Reproducibility]{.forum-entry-tag}
+[Open Science]{.forum-entry-tag}
+[Open Inference Project]{.forum-entry-tag}
+:::
 
-        <p>
-          Across the JAAD corpus, statistical testing is highly visible, while
-          multiplicity adjustment, preregistration, and alternative inferential
-          frameworks appear far less often.
-        </p>
-
-      </div>
+::::
+:::::
 
-      <section class="forum-entry-section fade-in">
+::::: {.forum-entry-shell}
+:::: {.forum-entry-card}
 
-        <h2>What the review suggests</h2>
+::: {.forum-entry-meta}
 
-        <div class="forum-entry-topics">
+::: {.forum-entry-meta-item}
+[Program]{.forum-entry-meta-label}
 
-          <ul>
-            <li>
-              Researchers often have many reasonable ways to analyze the same
-              data.
-            </li>
+[SoCO Research Forum]{.forum-entry-meta-value}
+:::
 
-            <li>
-              P-values are extremely common in the published dermatology
-              literature.
-            </li>
+::: {.forum-entry-meta-item}
+[Presenter]{.forum-entry-meta-label}
 
-            <li>
-              Adjustments for multiple hypothesis testing are comparatively
-              uncommon.
-            </li>
+[David M. Miller]{.forum-entry-meta-value}
+:::
 
-            <li>
-              Preregistration is rare outside clinical trials.
-            </li>
+::: {.forum-entry-meta-item}
+[Date]{.forum-entry-meta-label}
 
-            <li>
-              Bayesian approaches are rarely used.
-            </li>
+[July 24, 2026]{.forum-entry-meta-value}
+:::
 
-            <li>
-              Analytic flexibility frequently remains implicit rather than
-              directly visible to the reader.
-            </li>
-          </ul>
+:::
 
-        </div>
+:::: {.forum-entry-content}
 
-      </section>
+::: {.forum-entry-image .fade-in}
 
-      <section class="forum-entry-section fade-in">
+![](open_inference_logo.png){alt="Open Inference Project logo"}
 
-        <h2>What can we do about it?</h2>
+[The Open Inference Project]{.forum-entry-image-title}
 
-        <div class="forum-entry-grid">
+::: {.forum-entry-image-subtitle}
+Making the analytic context of evidence visible
+:::
 
-          <div class="forum-entry-mini-card">
-            <h3>Investigator level</h3>
-            <p>
-              Improve how individual studies are designed, analyzed,
-              interpreted, and shared. Define questions clearly, distinguish
-              confirmation from exploration, prespecify consequential choices
-              when feasible, and communicate uncertainty.
-            </p>
-          </div>
+:::
 
-          <div class="forum-entry-mini-card">
-            <h3>Systems level</h3>
-            <p>
-              Move beyond transparency within one paper and make the analytic
-              structure of an entire evidence base easier to discover,
-              examine, compare, and interpret.
-            </p>
-          </div>
+::: {.forum-entry-section .fade-in}
 
-        </div>
+## The conjecture
 
-      </section>
+Scientific results do not arrive without context. Their meaning depends on the questions asked, the populations and outcomes examined, the models that were fit, and the alternative analytic paths that were available.
 
-      <div class="forum-entry-takeaway fade-in">
+This Research Forum presentation began with a simple conjecture: **the analytic context of evidence is systematically underappreciated.** Published results are highly visible, while much of the analytic process that produced them can be difficult for readers to reconstruct.
 
-        <span class="forum-entry-takeaway-label">A Two-Level Response</span>
+:::
 
-        <p>
-          Transparent individual studies are necessary, but they do not by
-          themselves make the structure of a literature visible.
-        </p>
+::: {.forum-entry-takeaway .fade-in}
+[Central Idea]{.forum-entry-takeaway-label}
 
-      </div>
+The problem is not analytic complexity. The problem is analytic complexity that readers cannot see.
+:::
 
-      <section class="forum-entry-section fade-in">
+::: {.forum-entry-section .fade-in}
 
-        <h2>The Open Inference Project</h2>
+## Where analytic search space comes from
 
-        <p>
-          The Open Inference Project is a research program focused on the
-          structure behind published evidence. It shifts attention from an
-          isolated reported result to the larger analytic context that produced
-          it.
-        </p>
+::: {.forum-entry-grid}
 
-        <p>
-          The goal is to make features such as <strong>analytic flexibility,
-          multiplicity, preregistration, robustness, and interpretability</strong>
-          more visible across the scientific literature—and ultimately to help
-          readers understand not only what a study found, but the analytic
-          context in which that result should be interpreted.
-        </p>
+::: {.forum-entry-mini-card}
+### Multiple outcomes
 
-      </section>
+Primary, secondary, exploratory, and time-dependent outcomes create multiple reasonable questions within the same study.
+:::
 
-      <div class="forum-entry-takeaway fade-in">
+::: {.forum-entry-mini-card}
+### Multiple models
 
-        <span class="forum-entry-takeaway-label">The Open Inference Project</span>
+Covariate sets, functional forms, model specifications, and variable definitions can each change the analysis.
+:::
 
-        <p>
-          Better inference requires making the analytic context of evidence
-          visible.
-        </p>
+::: {.forum-entry-mini-card}
+### Multiple subgroups
 
-      </div>
+Age, disease severity, biomarkers, and other patient characteristics create additional analytic pathways.
+:::
 
-      <section class="forum-entry-section fade-in">
+::: {.forum-entry-mini-card}
+### Multiple decisions
 
-        <h2>Why bring this to the Research Forum?</h2>
+Inclusion criteria, missing-data handling, transformations, and other defensible choices expand the space of possible analyses.
+:::
 
-        <p>
-          The presentation was intentionally framed as work in progress. The
-          empirical analysis, measurement strategy, and broader Open Inference
-          framework were presented while they were still open to criticism and
-          revision.
-        </p>
+:::
 
-        <p>
-          That reflects the purpose of the SoCO Research Forum itself:
-          bringing ideas forward early enough that colleagues can challenge
-          assumptions, expose weaknesses, and improve the work before the story
-          becomes fixed.
-        </p>
+:::
 
-        <div class="forum-entry-links">
-          <a class="forum-entry-link" href="../../research_forum.qmd">
-            Research Forum
-          </a>
+::: {.forum-entry-section .fade-in}
 
-          <a class="forum-entry-link secondary" href="../../research_forum.qmd#presentations">
-            Presentation Archive
-          </a>
-        </div>
+## Studying the analytic structure of a literature
 
-      </section>
+Rather than treating analytic flexibility and multiplicity as purely theoretical concerns, the project asked an empirical question: **how large is the analytic search space in contemporary dermatology research?**
 
-      <div class="forum-entry-note">
-        Society of Cutaneous Oncology Research Forum. Research discussions
-        presented through the Forum may include work in progress and should be
-        interpreted in that context.
-      </div>
+An initial manual review suggested a substantial analytic search space. The work was then expanded into a structured, reproducible pipeline designed to characterize statistical reporting patterns across a much larger corpus of articles from the *Journal of the American Academy of Dermatology*.
 
-    </div>
+:::
 
-  </article>
-</main>
-```
+::: {.forum-entry-takeaway .fade-in}
+[Early Signal]{.forum-entry-takeaway-label}
+
+Across the JAAD corpus, statistical testing is highly visible, while multiplicity adjustment, preregistration, and alternative inferential frameworks appear far less often.
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## What the review suggests
+
+::: {.forum-entry-topics}
+
+- Researchers often have many reasonable ways to analyze the same data.
+- P-values are extremely common in the published dermatology literature.
+- Adjustments for multiple hypothesis testing are comparatively uncommon.
+- Preregistration is rare outside clinical trials.
+- Bayesian approaches are rarely used.
+- Analytic flexibility frequently remains implicit rather than directly visible to the reader.
+
+:::
+
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## What can we do about it?
+
+::: {.forum-entry-grid}
+
+::: {.forum-entry-mini-card}
+### Investigator level
+
+Improve how individual studies are designed, analyzed, interpreted, and shared. Define questions clearly, distinguish confirmation from exploration, prespecify consequential choices when feasible, and communicate uncertainty.
+:::
+
+::: {.forum-entry-mini-card}
+### Systems level
+
+Move beyond transparency within one paper and make the analytic structure of an entire evidence base easier to discover, examine, compare, and interpret.
+:::
+
+:::
+
+:::
+
+::: {.forum-entry-takeaway .fade-in}
+[A Two-Level Response]{.forum-entry-takeaway-label}
+
+Transparent individual studies are necessary, but they do not by themselves make the structure of a literature visible.
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## The Open Inference Project
+
+The Open Inference Project is a research program focused on the structure behind published evidence. It shifts attention from an isolated reported result to the larger analytic context that produced it.
+
+The goal is to make features such as **analytic flexibility, multiplicity, preregistration, robustness, and interpretability** more visible across the scientific literature—and ultimately to help readers understand not only what a study found, but the analytic context in which that result should be interpreted.
+
+:::
+
+::: {.forum-entry-takeaway .fade-in}
+[The Open Inference Project]{.forum-entry-takeaway-label}
+
+Better inference requires making the analytic context of evidence visible.
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## Why bring this to the Research Forum?
+
+The presentation was intentionally framed as work in progress. The empirical analysis, measurement strategy, and broader Open Inference framework were presented while they were still open to criticism and revision.
+
+That reflects the purpose of the SoCO Research Forum itself: bringing ideas forward early enough that colleagues can challenge assumptions, expose weaknesses, and improve the work before the story becomes fixed.
+
+::: {.forum-entry-links}
+[Research Forum](../../research_forum.qmd){.forum-entry-link}
+[Presentation Archive](../../research_forum.qmd#presentations){.forum-entry-link .secondary}
+:::
+
+:::
+
+::: {.forum-entry-note}
+Society of Cutaneous Oncology Research Forum. Research discussions presented through the Forum may include work in progress and should be interpreted in that context.
+:::
+
+::::
+::::
+:::::
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-
     const elements = document.querySelectorAll(".fade-in");
 
     if (!("IntersectionObserver" in window)) {
@@ -849,18 +734,15 @@ toc: false
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
             observer.unobserve(entry.target);
           }
-
         });
       },
       { threshold: 0.12 }
     );
 
     elements.forEach(el => observer.observe(el));
-
   });
 </script>
