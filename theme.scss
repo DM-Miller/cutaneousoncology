@@ -754,3 +754,429 @@ div.quarto-post .listing-categories .listing-category {
     margin-bottom: 1rem;
   }
 }
+
+
+/* =========================================================
+   Research Forum
+   ========================================================= */
+
+.soco-forum-hero {
+  max-width: 1320px;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.soco-forum-hero-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 465px;
+  padding: clamp(2.75rem, 5vw, 4.75rem);
+  overflow: hidden;
+  border: 1px solid var(--soco-line);
+  background:
+    radial-gradient(
+      circle at 88% 14%,
+      rgba(15, 127, 134, 0.13),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(255, 59, 63, 0.07),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #ffffff 0%, #f6fafb 100%);
+  box-shadow: 0 22px 60px rgba(4, 27, 51, 0.07);
+}
+
+/* Subtle "research network" motif */
+.soco-forum-hero-inner::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -60px;
+  top: -80px;
+  border-radius: 50%;
+  opacity: 0.42;
+  background-image:
+    radial-gradient(circle, var(--soco-teal) 0 2px, transparent 2.5px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle, #000 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.soco-forum-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.soco-forum-hero-copy h1 {
+  max-width: 850px;
+  margin: 0 0 1.35rem;
+  color: var(--soco-navy);
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.soco-forum-hero-copy > p {
+  max-width: 760px;
+  margin-bottom: 1.85rem;
+  color: var(--soco-ink);
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.65;
+}
+
+
+/* Intro */
+
+.soco-forum-intro {
+  max-width: 960px;
+  margin-top: 5rem;
+  margin-bottom: 3.5rem;
+}
+
+.soco-forum-intro h2 {
+  max-width: 780px;
+}
+
+.soco-forum-intro > p {
+  max-width: 860px;
+}
+
+.soco-forum-intro > p:first-of-type {
+  color: var(--soco-navy);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+
+/* Three principles */
+
+.soco-forum-principles {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.soco-forum-principles .soco-card {
+  min-height: 220px;
+}
+
+.soco-forum-principles .soco-card h3 {
+  font-size: 1.3rem;
+}
+
+
+/* Full-width conceptual callout */
+
+.soco-forum-callout {
+  max-width: 1320px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+}
+
+.soco-forum-callout-inner {
+  padding: clamp(2.5rem, 5vw, 4rem);
+  border-top: 1px solid var(--soco-line);
+  border-bottom: 1px solid var(--soco-line);
+  background:
+    radial-gradient(
+      circle at 92% 50%,
+      rgba(15, 127, 134, 0.10),
+      transparent 32%
+    ),
+    linear-gradient(90deg, #f8fbfc 0%, #ffffff 100%);
+}
+
+.soco-forum-callout-inner h2 {
+  max-width: 820px;
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.15rem, 3.6vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.soco-forum-callout-inner > p {
+  max-width: 900px;
+  margin-bottom: 0;
+  color: var(--soco-muted);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+
+/* Archive */
+
+.soco-forum-archive {
+  margin-top: 5.5rem;
+}
+
+.soco-archive-heading {
+  max-width: 850px;
+  margin-bottom: 2.5rem;
+}
+
+.soco-archive-heading h2 {
+  margin-bottom: 0.85rem;
+}
+
+.soco-archive-heading p {
+  max-width: 760px;
+  color: var(--soco-muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+
+/* Give the Quarto listing a little more breathing room */
+
+#SoCO_Research_Forum {
+  margin-top: 1.5rem;
+}
+
+#SoCO_Research_Forum .quarto-listing {
+  border-top: 1px solid var(--soco-line);
+  padding-top: 2rem;
+}
+
+#SoCO_Research_Forum .quarto-post {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom-color: var(--soco-line);
+}
+
+#SoCO_Research_Forum .listing-title {
+  color: var(--soco-navy);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+#SoCO_Research_Forum .listing-description {
+  color: var(--soco-muted);
+  line-height: 1.6;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+  .soco-forum-hero {
+    margin-top: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .soco-forum-hero-inner {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .soco-forum-hero-inner::after {
+    width: 240px;
+    height: 240px;
+    right: -90px;
+    top: -70px;
+    opacity: 0.24;
+  }
+
+  .soco-forum-hero-copy h1 {
+    max-width: 100%;
+    font-size: clamp(2.35rem, 12vw, 3.15rem);
+    line-height: 1;
+  }
+
+  .soco-forum-callout {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .soco-forum-callout-inner {
+    padding: 1.5rem;
+  }
+
+}
+
+
+/* =========================================================
+   Research Forum presentation pages
+   ========================================================= */
+
+.soco-presentation-hero {
+  max-width: 1320px;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.soco-presentation-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border: 1px solid var(--soco-line);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(15, 127, 134, 0.11), transparent 30%),
+    linear-gradient(135deg, #ffffff 0%, #f7fafb 100%);
+  box-shadow: 0 22px 60px rgba(4, 27, 51, 0.07);
+}
+
+.soco-presentation-hero-image {
+  min-width: 0;
+}
+
+.soco-presentation-hero-image p {
+  margin: 0;
+}
+
+.soco-presentation-hero-image img {
+  display: block;
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+  border: 1px solid var(--soco-line);
+  box-shadow: 0 18px 42px rgba(4, 27, 51, 0.12);
+}
+
+.soco-presentation-hero-copy {
+  min-width: 0;
+}
+
+.soco-presentation-hero-copy h1 {
+  margin: 0 0 1rem;
+  color: var(--soco-navy);
+  font-size: clamp(2.35rem, 4vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.03;
+  letter-spacing: -0.05em;
+}
+
+.soco-presentation-subtitle {
+  max-width: 700px;
+  margin-bottom: 1.25rem;
+  color: var(--soco-ink);
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.soco-presentation-meta {
+  margin-bottom: 1.75rem;
+  color: var(--soco-muted);
+  font-size: 0.96rem;
+  font-weight: 600;
+}
+
+.soco-presentation-intro {
+  max-width: 960px;
+  margin-top: 5rem;
+}
+
+.soco-presentation-intro h2,
+.soco-presentation-takeaway h2 {
+  max-width: 850px;
+}
+
+.soco-presentation-intro > p,
+.soco-presentation-takeaway > p {
+  max-width: 880px;
+}
+
+.soco-presentation-themes {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.soco-presentation-themes .soco-card {
+  min-height: 205px;
+}
+
+.soco-presentation-callout {
+  max-width: 1320px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+}
+
+.soco-presentation-callout-inner {
+  padding: clamp(2.5rem, 5vw, 4rem);
+  border-top: 1px solid var(--soco-line);
+  border-bottom: 1px solid var(--soco-line);
+  background:
+    radial-gradient(circle at 90% 18%, rgba(15, 127, 134, 0.10), transparent 30%),
+    linear-gradient(90deg, #f8fbfc 0%, #ffffff 100%);
+}
+
+.soco-presentation-callout-inner h2 {
+  max-width: 900px;
+  margin-bottom: 1.2rem;
+  font-size: clamp(2.1rem, 3.5vw, 3.35rem);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+.soco-presentation-callout-inner > p {
+  max-width: 900px;
+  color: var(--soco-muted);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.soco-presentation-takeaway {
+  max-width: 960px;
+}
+
+.soco-presentation-footer {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--soco-line);
+}
+
+@media (max-width: 900px) {
+
+  .soco-presentation-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .soco-presentation-hero-image img {
+    max-height: none;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .soco-presentation-hero {
+    margin-top: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .soco-presentation-hero-inner {
+    padding: 1.35rem;
+    gap: 1.75rem;
+  }
+
+  .soco-presentation-hero-copy h1 {
+    font-size: clamp(2.15rem, 10vw, 2.85rem);
+    line-height: 1.02;
+  }
+
+  .soco-presentation-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .soco-presentation-callout {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .soco-presentation-callout-inner {
+    padding: 1.5rem;
+  }
+}

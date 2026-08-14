@@ -3,10 +3,11 @@ title: "Research Forum"
 pagetitle: "Research Forum | Society of Cutaneous Oncology"
 page-layout: full
 title-block-banner: false
-toc: true
+toc: false
 listing:
   - id: SoCO_Research_Forum
-    contents: research_forum
+    contents:
+      - "research_forum/**/index.qmd"
     sort: "date desc"
     type: default
     categories: true
@@ -14,34 +15,97 @@ listing:
     filter-ui: true
 ---
 
-:::::: {.soco-jc-hero}
-::::: {.soco-jc-hero-inner}
+:::::: {.soco-forum-hero}
+::::: {.soco-forum-hero-inner}
+:::: {.soco-forum-hero-copy}
+
 ::: {.soco-eyebrow}
-Open research discussion and collaboration
+Open research discussion · collaborative science
 :::
 
-# SoCO Research Forum
+# Bring the work before it’s finished.
 
-The Society of Cutaneous Oncology Research Forum is a recurring venue for investigators to present work in progress, refine study concepts, and develop collaborative projects in skin cancer.
+The SoCO Research Forum is a recurring multidisciplinary space for investigators to share work in progress, test ideas, refine methods, and develop collaborative projects across cutaneous oncology.
 
 ::: {.soco-actions}
-[View presentation archive](#presentations){.btn .btn-primary}
+[Explore presentations](#presentations){.btn .btn-primary}
 [Journal Club](jc.qmd){.btn .btn-outline-primary}
 [Journal](joco.qmd){.btn .btn-outline-primary}
 :::
+
+::::
 :::::
 ::::::
 
-::: {.soco-section}
-# Overview
+::: {.soco-section .soco-forum-intro}
 
-In an effort to fulfill our missions of supporting SoCO members in producing high-quality, reproducible science and educating future generations of clinical oncologists and scientific investigators dedicated to skin cancer, the Society of Cutaneous Oncology supports an open forum for research discussions and presentations that convenes several times per year.
+## A forum for ideas in motion
 
-The Research Forum is intended to be informal, constructive, and collaborative. Presentations may include early research concepts, preliminary analyses, trial designs, methodological questions, data-sharing opportunities, or mature projects seeking multidisciplinary feedback.
+Good research gets better through discussion.
 
-# SoCO Research Forum Presentations {#presentations}
+The Research Forum creates space to bring forward projects **while there is still time to change them**—from an early clinical question or trial concept to preliminary analyses, methodological problems, and mature projects seeking broader multidisciplinary input.
 
-:::{#SoCO_Research_Forum}
+Presentations are informal, constructive, and discussion-driven.
+
+:::
+
+::: {.soco-section .soco-forum-principles}
+
+<div class="soco-card-grid">
+
+::: {.soco-card}
+### Share early
+
+Bring a research question, study concept, trial design, or analysis before every decision has been made.
+:::
+
+::: {.soco-card}
+### Invite criticism
+
+Make assumptions visible, identify uncertainty, and use multidisciplinary discussion to strengthen the work.
+:::
+
+::: {.soco-card}
+### Build together
+
+Find collaborators, connect complementary expertise, and create opportunities for multicenter science.
+:::
+
+</div>
+
+:::
+
+::: {.soco-forum-callout}
+
+::: {.soco-forum-callout-inner}
+
+::: {.soco-eyebrow}
+What belongs here?
+:::
+
+## From first question to final analysis.
+
+Research Forum discussions may include **new study concepts, clinical trial designs, preliminary data, statistical or methodological questions, data-sharing opportunities, reproducibility challenges, and collaborative projects** across the spectrum of skin cancer research.
+
+:::
+
+:::
+
+::: {.soco-section .soco-forum-archive}
+
+::: {.soco-archive-heading}
+
+::: {.soco-eyebrow}
+Research Forum archive
+:::
+
+## Presentations {#presentations}
+
+Explore prior Research Forum discussions, methods sessions, trial concepts, and collaborative projects.
+
+:::
+
+::: {#SoCO_Research_Forum}
 :::
 
 :::

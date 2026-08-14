@@ -431,7 +431,7 @@
     "href": "research_forum.html",
     "title": "Research Forum",
     "section": "",
-    "text": "Open research discussion and collaboration\n\n\nSoCO Research Forum\nThe Society of Cutaneous Oncology Research Forum is a recurring venue for investigators to present work in progress, refine study concepts, and develop collaborative projects in skin cancer.\n\nView presentation archive Journal Club Journal\n\n\n\n\n\n\nOverview\nIn an effort to fulfill our missions of supporting SoCO members in producing high-quality, reproducible science and educating future generations of clinical oncologists and scientific investigators dedicated to skin cancer, the Society of Cutaneous Oncology supports an open forum for research discussions and presentations that convenes several times per year.\nThe Research Forum is intended to be informal, constructive, and collaborative. Presentations may include early research concepts, preliminary analyses, trial designs, methodological questions, data-sharing opportunities, or mature projects seeking multidisciplinary feedback.\n\n\nSoCO Research Forum Presentations\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nFrontline Immunotherapy with Response-Guided Subsequent Treatment in Cutaneous Squamous Cell Carcinoma\n\n\n\nCutaneous Squamous Cell Carcinoma\n\nImmunotherapy\n\nResponse-Guided Treatment\n\nTreatment De-escalation\n\nBayesian Methods\n\n\n\nA SoCO Research Forum presentation on the FIRST analysis, including dose intensity, early benefit, Bayesian causal inference, and treatment de-escalation in cutaneous squamous cell carcinoma.\n\n\n\n\n\nMar 9, 2026\n\n\nDavid M. Miller\n\n\n\n\n\n\n\n\n\n\n\n\nUpdates on GEP in Melanoma\n\n\n\n2024\n\nSoCO Reserach Forum\n\nMelanoma\n\n\n\nWe discuss results from the MERLIN study.\n\n\n\n\n\nDec 16, 2024\n\n\nVernon Sondak\n\n\n\n\n\n\n\n\n\n\n\n\nPrognostic Significance of Initial AMERK Serostatus\n\n\n\n2023\n\nSoCO Reserach Forum\n\nMCC\n\n\n\nWe discuss results from a dual-institution observational study\n\n\n\n\n\nAug 18, 2023\n\n\nDavid M. Miller\n\n\n\n\n\n\n\n\n\n\n\n\nTo Accept, Revise or Reject - The Art of the Review\n\n\n\n2023\n\n\n\nWe discuss approaces to the scientific review process\n\n\n\n\n\nMay 12, 2023\n\n\nDavid M. Miller\n\n\n\n\n\n\n\n\n\n\n\n\nICARUS\n\n\n\n2023\n\nSoCO Reserach Forum\n\nCSCC\n\n\n\nWe discuss a trial concept for high-risk CSCC\n\n\n\n\n\nMar 31, 2023\n\n\nDavid M. Miller\n\n\n\n\n\nNo matching items"
+    "text": "Open research discussion · collaborative science\n\n\n\nThe SoCO Research Forum is a recurring multidisciplinary space for investigators to share work in progress, test ideas, refine methods, and develop collaborative projects across cutaneous oncology.\n\nExplore presentations Journal Club Journal"
   },
   {
     "objectID": "research_forum.html#overview",
@@ -459,21 +459,21 @@
     "href": "research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html",
     "title": "Prognostic Significance of Initial AMERK Serostatus",
     "section": "",
-    "text": "Event\nSociety of Cutaneous Oncology Research Forum\n\n\nOverview & Learning Objectives\n\nWe review results from a dual-institutional observation study of patients with Merkel Cell Carcinoma who underwent Merkel Cell Polyoma Virus antibody testing within 90 days of diagnosis."
+    "text": "David M. Miller\n\n2023-08-18"
   },
   {
     "objectID": "research_forum/ICARUS/index.html",
     "href": "research_forum/ICARUS/index.html",
-    "title": "ICARUS",
+    "title": "ICARUS: Immunoprevention for High-Risk Cutaneous Squamous Cell Carcinoma",
     "section": "",
-    "text": "Event\nSociety of Cutaneous Oncology Research Forum\n\n\nOverview & Learning Objectives\n\nWe review the hypothesis, rationale and schema for ICARUS, an immunoprevention trial for patients with high-risk CSCC\n\n\n\nPresentation Slides\n\nTo view the slides for this presentation, please click here"
+    "text": "David M. Miller\n\n2023-03-31"
   },
   {
     "objectID": "research_forum/Art of the Review/index.html",
     "href": "research_forum/Art of the Review/index.html",
-    "title": "To Accept, Revise or Reject - The Art of the Review",
+    "title": "To Accept, Revise, or Reject: The Art of the Review",
     "section": "",
-    "text": "Event\nSociety of Cutaneous Oncology Research Forum\n\n\nOverview & Learning Objectives\n\nWe review different approaches to the scientific review process"
+    "text": "David M. Miller\n\n2023-05-12"
   },
   {
     "objectID": "slides.html#soco-research-forum",
@@ -555,9 +555,9 @@
   {
     "objectID": "research_forum/MERLIN/index.html",
     "href": "research_forum/MERLIN/index.html",
-    "title": "Updates on GEP in Melanoma",
+    "title": "Updates on Gene Expression Profiling in Melanoma",
     "section": "",
-    "text": "Event\nSociety of Cutaneous Oncology Research Forum\n\n\nOverview & Learning Objectives\n\nWe discuss the results of MERLIN_001: A prospective registry study of a primary melanoma gene-signature to predict sentinel node (SN) status and determine its prognostic value for more accurate staging of patients with SN-negative melanoma."
+    "text": "Vernon Sondak\n\n2024-12-16"
   },
   {
     "objectID": "index.html",
@@ -796,5 +796,208 @@
     "title": "\nInterpreting evidence. Building community. Advancing care.\n",
     "section": "Welcome back.",
     "text": "Welcome back.\nYou’re part of the SoCO community. Explore what’s happening across Journal Club, Research Forum, the Journal of Cutaneous Oncology, and the broader Society.\nExplore Journal Club →"
+  },
+  {
+    "objectID": "research_forum.html#a-forum-for-ideas-in-motion",
+    "href": "research_forum.html#a-forum-for-ideas-in-motion",
+    "title": "Research Forum",
+    "section": "A forum for ideas in motion",
+    "text": "A forum for ideas in motion\nGood research gets better through discussion.\nThe Research Forum creates space to bring forward projects while there is still time to change them—from an early clinical question or trial concept to preliminary analyses, methodological problems, and mature projects seeking broader multidisciplinary input.\nPresentations are informal, constructive, and discussion-driven."
+  },
+  {
+    "objectID": "research_forum.html#from-first-question-to-final-analysis.",
+    "href": "research_forum.html#from-first-question-to-final-analysis.",
+    "title": "Research Forum",
+    "section": "From first question to final analysis.",
+    "text": "From first question to final analysis.\nResearch Forum discussions may include new study concepts, clinical trial designs, preliminary data, statistical or methodological questions, data-sharing opportunities, reproducibility challenges, and collaborative projects across the spectrum of skin cancer research."
+  },
+  {
+    "objectID": "research_forum.html#presentations",
+    "href": "research_forum.html#presentations",
+    "title": "Research Forum",
+    "section": "Presentations",
+    "text": "Presentations\nExplore prior Research Forum discussions, methods sessions, trial concepts, and collaborative projects."
+  },
+  {
+    "objectID": "research_forum/FIRST/index.html",
+    "href": "research_forum/FIRST/index.html",
+    "title": "Frontline Immunotherapy with Response-Guided Subsequent Treatment in Cutaneous Squamous Cell Carcinoma",
+    "section": "",
+    "text": "David M. Miller\n\n2026-03-09\n\n\n\n\n\n  \n\n    \n      SoCO Research Forum · Cutaneous Squamous Cell Carcinoma\n    \n\n    \n      Frontline Immunotherapy with Response-Guided Subsequent Treatment\n    \n\n    \n      A Bayesian causal analysis of dose intensity, early benefit,\n      and treatment de-escalation in cutaneous squamous cell carcinoma.\n    \n\n    \n      Immunotherapy\n      Response-Guided Treatment\n      Treatment De-escalation\n      Bayesian Methods\n    \n\n  \n\n\n\n  \n\n    \n\n      \n        Program\n        SoCO Research Forum\n      \n\n      \n        Presenter\n        David M. Miller\n      \n\n      \n        Date\n        March 9, 2026\n      \n\n    \n\n    \n\n      \n        \n      \n\n      \n\n        The clinical question\n\n        \n          Frontline immunotherapy can produce rapid and clinically meaningful\n          responses in cutaneous squamous cell carcinoma. But once that response\n          has occurred, an important question remains: how much additional\n          treatment is necessary?\n        \n\n        \n          The FIRST analysis examines whether early treatment response can help\n          guide subsequent management, including the possibility of reducing\n          treatment intensity rather than continuing therapy according to a\n          fixed duration.\n        \n\n      \n\n      \n\n        Central Question\n\n        \n          Can the response already achieved after frontline immunotherapy help\n          determine what treatment a patient actually needs next?\n        \n\n      \n\n      \n\n        Questions explored\n\n        \n\n          \n            Early benefit\n            \n              How much information about subsequent outcome is already present\n              after the earliest doses of immunotherapy?\n            \n          \n\n          \n            Dose intensity\n            \n              Does additional treatment meaningfully improve outcomes once an\n              early clinical benefit has been achieved?\n            \n          \n\n          \n            Response-guided treatment\n            \n              Can subsequent management be adapted to observed response rather\n              than determined by a fixed treatment duration?\n            \n          \n\n          \n            Treatment de-escalation\n            \n              Could selected patients receive less systemic therapy without\n              compromising meaningful clinical benefit?\n            \n          \n\n        \n\n      \n\n      \n\n        Why causal inference matters\n\n        \n          Treatment intensity in FIRST was not randomly assigned. Patients who\n          received fewer versus more doses therefore cannot be compared as if\n          they had been randomized to those treatment strategies.\n        \n\n        \n          The analysis used Bayesian causal methods to address measured\n          differences between treatment groups and to estimate clinically\n          interpretable relationships between dose intensity, early benefit,\n          and subsequent outcomes.\n        \n\n      \n\n      \n\n        Methodological Principle\n\n        \n          The relevant question is not simply whether patients who received\n          less treatment did well. It is whether the observed data support a\n          credible estimate of what might have happened under different\n          treatment intensities.\n        \n\n      \n\n      \n\n        Discussion themes\n\n        \n\n          \n            Early response as a potential treatment-decision landmark.\n\n            \n              The relationship between cumulative dose intensity and subsequent\n              clinical outcomes.\n            \n\n            \n              Confounding created by non-random treatment continuation and\n              discontinuation.\n            \n\n            \n              Bayesian approaches to estimating treatment effects in\n              observational treatment patterns.\n            \n\n            \n              The clinical rationale for response-adapted treatment\n              de-escalation.\n            \n\n            \n              How these findings might inform future prospective trials of\n              individualized treatment duration.\n            \n          \n\n        \n\n      \n\n      \n\n        The Broader Idea\n\n        \n          Instead of asking every patient to complete the same predetermined\n          course of therapy, response-guided treatment asks whether subsequent\n          management can reflect the benefit that an individual patient has\n          already achieved.\n        \n\n      \n\n      \n\n        Toward response-guided care\n\n        \n          The broader goal of FIRST is not simply shorter treatment. It is a\n          more adaptive treatment strategy: initiate effective systemic\n          therapy, measure early benefit, and allow subsequent management to\n          respond to the biology and clinical response of the individual\n          patient.\n        \n\n        \n          \n            Research Forum\n          \n\n          \n            Presentation Archive\n          \n        \n\n      \n\n      \n        Society of Cutaneous Oncology Research Forum. Research discussions\n        presented through the Forum may include work in progress and should be\n        interpreted in that context."
+  },
+  {
+    "objectID": "research_forum/FIRST/index.html#how-much-treatment-is-enough",
+    "href": "research_forum/FIRST/index.html#how-much-treatment-is-enough",
+    "title": "Frontline Immunotherapy with Response-Guided Subsequent Treatment in Cutaneous Squamous Cell Carcinoma",
+    "section": "How much treatment is enough?",
+    "text": "How much treatment is enough?\nThe FIRST analysis examines a clinically important question in cutaneous squamous cell carcinoma: after frontline immunotherapy produces an early response, can subsequent treatment be safely reduced or redirected?\nThis Research Forum session explored response-guided treatment, dose intensity, early clinical benefit, and the possibility of treatment de-escalation following frontline immunotherapy.\nThe discussion also considered how Bayesian causal methods can help interpret non-randomized treatment patterns and generate clinically meaningful hypotheses about treatment duration and response-adapted care."
+  },
+  {
+    "objectID": "research_forum/FIRST/index.html#learning-from-treatment-patterns-that-were-not-randomized.",
+    "href": "research_forum/FIRST/index.html#learning-from-treatment-patterns-that-were-not-randomized.",
+    "title": "Frontline Immunotherapy with Response-Guided Subsequent Treatment in Cutaneous Squamous Cell Carcinoma",
+    "section": "Learning from treatment patterns that were not randomized.",
+    "text": "Learning from treatment patterns that were not randomized.\nBecause treatment intensity in FIRST was not randomly assigned, simple comparisons between patients receiving fewer versus more doses can be misleading.\nThe analysis therefore used Bayesian causal inference to address measured differences between treatment groups and to estimate clinically interpretable relationships between dose intensity, early benefit, and subsequent outcomes.\nThe goal was not simply to ask whether shorter treatment appeared effective, but whether the observed data could support a credible causal interpretation of treatment de-escalation."
+  },
+  {
+    "objectID": "research_forum/FIRST/index.html#toward-treatment-that-responds-to-the-patient.",
+    "href": "research_forum/FIRST/index.html#toward-treatment-that-responds-to-the-patient.",
+    "title": "Frontline Immunotherapy with Response-Guided Subsequent Treatment in Cutaneous Squamous Cell Carcinoma",
+    "section": "Toward treatment that responds to the patient.",
+    "text": "Toward treatment that responds to the patient.\nThe broader question raised by FIRST is whether immunotherapy in cutaneous squamous cell carcinoma should always be delivered according to a predetermined duration—or whether treatment can increasingly be guided by the response already achieved.\nThat framework could ultimately support a more individualized approach: deliver enough therapy to obtain meaningful benefit, reassess, and allow subsequent treatment to reflect the biology and response of the individual patient."
+  },
+  {
+    "objectID": "research_forum/The Open Inference Project/index.html",
+    "href": "research_forum/The Open Inference Project/index.html",
+    "title": "The Hidden Problem in Dermatology Research",
+    "section": "",
+    "text": "David M. Miller\n\n2026-07-24\n\n\n\n\n\n  \n\n    \n      SoCO Research Forum · Metascience\n    \n\n    \n      The Hidden Problem in Dermatology Research\n    \n\n    \n      And what we can do about it: analytic search space, statistical\n      inference, and a systems-level effort to make the analytic context\n      of evidence visible.\n    \n\n    \n      Analytic Search Space\n      Statistical Inference\n      Reproducibility\n      Open Science\n      Open Inference Project\n    \n\n  \n\n\n\n  \n\n    \n\n      \n        Program\n        SoCO Research Forum\n      \n\n      \n        Presenter\n        David M. Miller\n      \n\n      \n        Date\n        July 24, 2026\n      \n\n    \n\n    \n\n      \n        \n        \n          The Open Inference Project\n        \n        \n          Making the analytic context of evidence visible\n        \n      \n\n      \n\n        The conjecture\n\n        \n          Scientific results do not arrive without context. Their meaning\n          depends on the questions asked, the populations and outcomes examined,\n          the models that were fit, and the alternative analytic paths that were\n          available.\n        \n\n        \n          This Research Forum presentation began with a simple conjecture:\n          the analytic context of evidence is systematically\n          underappreciated. Published results are highly visible, while\n          much of the analytic process that produced them can be difficult for\n          readers to reconstruct.\n        \n\n      \n\n      \n\n        Central Idea\n\n        \n          The problem is not analytic complexity. The problem is analytic\n          complexity that readers cannot see.\n        \n\n      \n\n      \n\n        Where analytic search space comes from\n\n        \n\n          \n            Multiple outcomes\n            \n              Primary, secondary, exploratory, and time-dependent outcomes\n              create multiple reasonable questions within the same study.\n            \n          \n\n          \n            Multiple models\n            \n              Covariate sets, functional forms, model specifications, and\n              variable definitions can each change the analysis.\n            \n          \n\n          \n            Multiple subgroups\n            \n              Age, disease severity, biomarkers, and other patient\n              characteristics create additional analytic pathways.\n            \n          \n\n          \n            Multiple decisions\n            \n              Inclusion criteria, missing-data handling, transformations, and\n              other defensible choices expand the space of possible analyses.\n            \n          \n\n        \n\n      \n\n      \n\n        Studying the analytic structure of a literature\n\n        \n          Rather than treating analytic flexibility and multiplicity as purely\n          theoretical concerns, the project asked an empirical question:\n          how large is the analytic search space in contemporary\n          dermatology research?\n        \n\n        \n          An initial manual review suggested a substantial analytic search\n          space. The work was then expanded into a structured, reproducible\n          pipeline designed to characterize statistical reporting patterns\n          across a much larger corpus of articles from the\n          Journal of the American Academy of Dermatology.\n        \n\n      \n\n      \n\n        Early Signal\n\n        \n          Across the JAAD corpus, statistical testing is highly visible, while\n          multiplicity adjustment, preregistration, and alternative inferential\n          frameworks appear far less often.\n        \n\n      \n\n      \n\n        What the review suggests\n\n        \n\n          \n            \n              Researchers often have many reasonable ways to analyze the same\n              data.\n            \n\n            \n              P-values are extremely common in the published dermatology\n              literature.\n            \n\n            \n              Adjustments for multiple hypothesis testing are comparatively\n              uncommon.\n            \n\n            \n              Preregistration is rare outside clinical trials.\n            \n\n            \n              Bayesian approaches are rarely used.\n            \n\n            \n              Analytic flexibility frequently remains implicit rather than\n              directly visible to the reader.\n            \n          \n\n        \n\n      \n\n      \n\n        What can we do about it?\n\n        \n\n          \n            Investigator level\n            \n              Improve how individual studies are designed, analyzed,\n              interpreted, and shared. Define questions clearly, distinguish\n              confirmation from exploration, prespecify consequential choices\n              when feasible, and communicate uncertainty.\n            \n          \n\n          \n            Systems level\n            \n              Move beyond transparency within one paper and make the analytic\n              structure of an entire evidence base easier to discover,\n              examine, compare, and interpret.\n            \n          \n\n        \n\n      \n\n      \n\n        A Two-Level Response\n\n        \n          Transparent individual studies are necessary, but they do not by\n          themselves make the structure of a literature visible.\n        \n\n      \n\n      \n\n        The Open Inference Project\n\n        \n          The Open Inference Project is a research program focused on the\n          structure behind published evidence. It shifts attention from an\n          isolated reported result to the larger analytic context that produced\n          it.\n        \n\n        \n          The goal is to make features such as analytic flexibility,\n          multiplicity, preregistration, robustness, and interpretability\n          more visible across the scientific literature—and ultimately to help\n          readers understand not only what a study found, but the analytic\n          context in which that result should be interpreted.\n        \n\n      \n\n      \n\n        The Open Inference Project\n\n        \n          Better inference requires making the analytic context of evidence\n          visible.\n        \n\n      \n\n      \n\n        Why bring this to the Research Forum?\n\n        \n          The presentation was intentionally framed as work in progress. The\n          empirical analysis, measurement strategy, and broader Open Inference\n          framework were presented while they were still open to criticism and\n          revision.\n        \n\n        \n          That reflects the purpose of the SoCO Research Forum itself:\n          bringing ideas forward early enough that colleagues can challenge\n          assumptions, expose weaknesses, and improve the work before the story\n          becomes fixed.\n        \n\n        \n          \n            Research Forum\n          \n\n          \n            Presentation Archive\n          \n        \n\n      \n\n      \n        Society of Cutaneous Oncology Research Forum. Research discussions\n        presented through the Forum may include work in progress and should be\n        interpreted in that context."
+  },
+  {
+    "objectID": "research_forum/MERLIN/index.html#the-clinical-question",
+    "href": "research_forum/MERLIN/index.html#the-clinical-question",
+    "title": "Updates on Gene Expression Profiling in Melanoma",
+    "section": "The clinical question",
+    "text": "The clinical question\nGene expression profiling has been proposed as a way to add biologic information to conventional clinicopathologic risk assessment in melanoma.\nThis Research Forum session focused on the MERLIN_001 study and its evaluation of a primary melanoma gene signature designed to predict sentinel node status and refine prognostic assessment in patients with sentinel node-negative disease."
+  },
+  {
+    "objectID": "research_forum/MERLIN/index.html#questions-explored",
+    "href": "research_forum/MERLIN/index.html#questions-explored",
+    "title": "Updates on Gene Expression Profiling in Melanoma",
+    "section": "Questions explored",
+    "text": "Questions explored\n\n\nSentinel node prediction\nCan a melanoma gene signature identify patients with a lower or higher probability of sentinel lymph node positivity?\n\n\nPrognostic value\nAmong patients with a negative sentinel node, can molecular profiling further distinguish clinically meaningful differences in risk?"
+  },
+  {
+    "objectID": "research_forum/MERLIN/index.html#the-merlin_001-study",
+    "href": "research_forum/MERLIN/index.html#the-merlin_001-study",
+    "title": "Updates on Gene Expression Profiling in Melanoma",
+    "section": "The MERLIN_001 study",
+    "text": "The MERLIN_001 study\nMERLIN_001 was presented as a prospective registry study evaluating a primary melanoma gene signature for two related purposes: predicting sentinel node status and determining whether the signature provides additional prognostic information for patients with sentinel node-negative melanoma.\nThe broader discussion centered on how such molecular information should be interpreted alongside established clinical and pathologic features rather than in isolation."
+  },
+  {
+    "objectID": "research_forum/MERLIN/index.html#research-forum-focus",
+    "href": "research_forum/MERLIN/index.html#research-forum-focus",
+    "title": "Updates on Gene Expression Profiling in Melanoma",
+    "section": "Research Forum focus",
+    "text": "Research Forum focus\nThe session provided an opportunity to examine the MERLIN results in the broader context of melanoma staging, sentinel lymph node biopsy, prognostic biomarkers, and the appropriate role of molecular testing in clinical decision-making.\n\nResearch Forum Presentation Archive"
+  },
+  {
+    "objectID": "research_forum/ICARUS/index.html#the-clinical-problem",
+    "href": "research_forum/ICARUS/index.html#the-clinical-problem",
+    "title": "ICARUS: Immunoprevention for High-Risk Cutaneous Squamous Cell Carcinoma",
+    "section": "The clinical problem",
+    "text": "The clinical problem\nA subset of patients with cutaneous squamous cell carcinoma develop repeated new tumors over time and remain at substantial risk despite treatment of each individual lesion.\nICARUS was developed around a different therapeutic question: rather than waiting for each subsequent tumor to emerge, could immunotherapy be used proactively to reduce the rate of future cutaneous squamous cell carcinomas in a high-risk population?"
+  },
+  {
+    "objectID": "research_forum/ICARUS/index.html#questions-explored",
+    "href": "research_forum/ICARUS/index.html#questions-explored",
+    "title": "ICARUS: Immunoprevention for High-Risk Cutaneous Squamous Cell Carcinoma",
+    "section": "Questions explored",
+    "text": "Questions explored\n\n\nWho is high risk?\nHow should a population with sufficiently high baseline CSCC incidence be defined so that a prevention strategy can be studied meaningfully?\n\n\nWhat should prevention mean?\nShould success be measured by fewer tumors, a lower rate of tumor development, delayed recurrence, or another clinically meaningful endpoint?"
+  },
+  {
+    "objectID": "research_forum/ICARUS/index.html#the-icarus-concept",
+    "href": "research_forum/ICARUS/index.html#the-icarus-concept",
+    "title": "ICARUS: Immunoprevention for High-Risk Cutaneous Squamous Cell Carcinoma",
+    "section": "The ICARUS concept",
+    "text": "The ICARUS concept\nThe Research Forum session reviewed the hypothesis, scientific rationale, and proposed schema for ICARUS.\nThe central concept was to evaluate immunotherapy not as treatment for an existing advanced cancer, but as a preventive strategy in patients with a demonstrated propensity to develop repeated high-risk cutaneous squamous cell carcinomas.\nThis framing shifts the therapeutic objective from treating an individual tumor to altering the patient’s future disease trajectory."
+  },
+  {
+    "objectID": "research_forum/ICARUS/index.html#research-forum-focus",
+    "href": "research_forum/ICARUS/index.html#research-forum-focus",
+    "title": "ICARUS: Immunoprevention for High-Risk Cutaneous Squamous Cell Carcinoma",
+    "section": "Research Forum focus",
+    "text": "Research Forum focus\nThe presentation was structured around early trial development: the biologic rationale for immunoprevention, identification of an appropriate high-risk population, selection of clinically meaningful endpoints, and construction of a feasible prospective study.\nThe Forum provided an opportunity to challenge the assumptions behind the concept before the trial design was fixed.\n\nView Presentation Slides Research Forum Presentation Archive"
+  },
+  {
+    "objectID": "research_forum/Art of the Review/index.html#the-central-question",
+    "href": "research_forum/Art of the Review/index.html#the-central-question",
+    "title": "To Accept, Revise, or Reject: The Art of the Review",
+    "section": "The central question",
+    "text": "The central question\nPeer review sits at the center of scientific publishing, yet most investigators learn how to review manuscripts informally—through experience, mentorship, and exposure to reviews written by others.\nThis Research Forum session examined different approaches to the review process and asked what makes a review rigorous, constructive, fair, and genuinely useful to authors and editors."
+  },
+  {
+    "objectID": "research_forum/Art of the Review/index.html#the-reviewers-task",
+    "href": "research_forum/Art of the Review/index.html#the-reviewers-task",
+    "title": "To Accept, Revise, or Reject: The Art of the Review",
+    "section": "The reviewer’s task",
+    "text": "The reviewer’s task\n\n\nEvaluate the science\nIs the question meaningful, the design appropriate, the analysis credible, and the interpretation proportional to the evidence?\n\n\nSeparate major from minor\nDistinguish issues that threaten validity or interpretation from changes that would merely improve presentation.\n\n\nBe constructive\nCriticism should help the author understand both what is wrong and, where possible, how the work could be improved.\n\n\nAdvise the editor\nThe review is not only a message to the authors. It is also an assessment for the editor about whether the manuscript is suitable for publication."
+  },
+  {
+    "objectID": "research_forum/Art of the Review/index.html#a-snapshot-from-the-room",
+    "href": "research_forum/Art of the Review/index.html#a-snapshot-from-the-room",
+    "title": "To Accept, Revise, or Reject: The Art of the Review",
+    "section": "A snapshot from the room",
+    "text": "A snapshot from the room\nA brief audience survey during the session captured how participants experienced the peer-review process. Twelve responses were recorded. These results are descriptive and represent this small group rather than the broader scientific community.\n\n\n12 / 12 Authors + Reviewers\nEvery respondent identified as both an author and a reviewer.\n\n\n5 / 12 Editors\nFive participants also reported serving in an editorial role.\n\n\n6 / 12 ≥10 Invitations\nHalf reported having been asked to review at least 10 manuscripts.\n\n\n7 / 12 ≥90 Minutes\nSeven respondents reported typically spending at least 90 minutes completing a review.\n\n\n8 / 12 Support Compensation\nEight respondents indicated that reviewers should receive compensation.\n\n\n5 / 11 Double-Blind Preferred\nAmong the 11 who answered, double-blind review was the most frequently selected approach; open and closed review each received three selections."
+  },
+  {
+    "objectID": "research_forum/Art of the Review/index.html#review-experience-and-incentives",
+    "href": "research_forum/Art of the Review/index.html#review-experience-and-incentives",
+    "title": "To Accept, Revise, or Reject: The Art of the Review",
+    "section": "Review experience and incentives",
+    "text": "Review experience and incentives\nThe survey suggested a group with meaningful experience but mixed views about how the review system should recognize that work.\n\n\nReview volume\nTwo respondents reported reviewing at least 10 papers, one reported 7–9, five reported 4–6, and four reported 1–3.\n\n\nTime commitment\nThree reported 60–89 minutes per review, four reported 90–119 minutes, and three reported 120 minutes or more. Only two reported 30–59 minutes.\n\n\nIncentives\nOnly 2 of 12 respondents described themselves as currently incentivized to review.\n\n\nPaid review\nFive respondents said reviewers should be paid, while eight supported some form of compensation more broadly."
+  },
+  {
+    "objectID": "research_forum/Art of the Review/index.html#why-do-reviewers-say-yes",
+    "href": "research_forum/Art of the Review/index.html#why-do-reviewers-say-yes",
+    "title": "To Accept, Revise, or Reject: The Art of the Review",
+    "section": "Why do reviewers say yes?",
+    "text": "Why do reviewers say yes?\nThe survey responses reflected several different motivations for accepting review invitations.\n\n\nA desire to improve the field.\nThe opportunity to read emerging science.\nA sense of academic duty.\nThe chance to improve critical-thinking skills.\nInvitations from colleagues or mentors.\nFeeling honored to be asked.\nProfessional recognition and CV development.\n\n\nThe responses reinforce that peer review can simultaneously function as scientific service, intellectual engagement, professional development, and quality control."
+  },
+  {
+    "objectID": "research_forum/Art of the Review/index.html#conflicts-anonymity-and-trial-review",
+    "href": "research_forum/Art of the Review/index.html#conflicts-anonymity-and-trial-review",
+    "title": "To Accept, Revise, or Reject: The Art of the Review",
+    "section": "Conflicts, anonymity, and trial review",
+    "text": "Conflicts, anonymity, and trial review\nThe survey also surfaced some of the less visible judgments reviewers routinely make.\n\n\nConflict of interest\nFour of 11 respondents with available data answered “yes” to one conflict-of-interest scenario, while seven answered “yes” to a second scenario—illustrating that perceived conflicts can depend heavily on context.\n\n\nReview model\nPreferences were divided: five selected double-blind review, three open review, and three closed review.\n\n\nTrial review\nFour of 11 respondents with available data reported prior experience reviewing a clinical trial manuscript.\n\n\nFormal training\nNone of the 12 respondents reported having completed a formal course in peer review."
+  },
+  {
+    "objectID": "research_forum/Art of the Review/index.html#questions-explored",
+    "href": "research_forum/Art of the Review/index.html#questions-explored",
+    "title": "To Accept, Revise, or Reject: The Art of the Review",
+    "section": "Questions explored",
+    "text": "Questions explored\nThe discussion extended beyond how to critique a manuscript and into the structure of peer review itself.\n\n\nOpen or anonymous?\nWhat are the tradeoffs among open, closed, single-blind, and double-blind approaches to peer review?\n\n\nIncentives\nShould reviewers be compensated, formally recognized, or otherwise rewarded for the time and expertise that peer review requires?\n\n\nConflicts of interest\nWhen does scientific proximity become a conflict, and when is subject-matter expertise precisely why a reviewer should be selected?\n\n\nAccept, revise, or reject?\nHow should reviewers distinguish work that is fundamentally flawed from work that can become publishable through revision?"
+  },
+  {
+    "objectID": "research_forum/Art of the Review/index.html#research-forum-focus",
+    "href": "research_forum/Art of the Review/index.html#research-forum-focus",
+    "title": "To Accept, Revise, or Reject: The Art of the Review",
+    "section": "Research Forum focus",
+    "text": "Research Forum focus\nThe session approached peer review as a scientific skill rather than an administrative task. The aim was to make the review process more explicit: how to read a paper critically, how to structure comments, how to calibrate recommendations, and how to provide criticism that is rigorous without becoming performative or unnecessarily adversarial.\nFor authors, reviewers, and editors alike, the broader goal is the same: improve the quality, clarity, and interpretability of the scientific record.\n\nResearch Forum Presentation Archive"
+  },
+  {
+    "objectID": "research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html#the-clinical-question",
+    "href": "research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html#the-clinical-question",
+    "title": "Prognostic Significance of Initial AMERK Serostatus",
+    "section": "The clinical question",
+    "text": "The clinical question\nAMERK testing is commonly used longitudinally in patients with Merkel cell carcinoma who produce antibodies against Merkel cell polyomavirus oncoproteins.\nThis study asked a related but distinct question: does the initial AMERK result itself provide prognostic information near the time of diagnosis?\nThe Research Forum presentation reviewed a dual-institutional observational cohort of patients with Merkel cell carcinoma who underwent AMERK testing within 90 days of diagnosis."
+  },
+  {
+    "objectID": "research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html#questions-explored",
+    "href": "research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html#questions-explored",
+    "title": "Prognostic Significance of Initial AMERK Serostatus",
+    "section": "Questions explored",
+    "text": "Questions explored\n\n\nSerostatus and outcomes\nDo patients who are AMERK seropositive at diagnosis have different recurrence or survival outcomes than patients who are seronegative?\n\n\nAntibody titer\nAmong seropositive patients, does the magnitude of the initial antibody titer correlate with tumor burden or disease extent?\n\n\nStage-specific prognosis\nDoes the prognostic significance of baseline serostatus differ according to the clinical stage at presentation?\n\n\nBaseline versus surveillance\nWhat information does the first AMERK result provide that is distinct from the role of serial AMERK testing during follow-up?"
+  },
+  {
+    "objectID": "research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html#the-study-presented",
+    "href": "research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html#the-study-presented",
+    "title": "Prognostic Significance of Initial AMERK Serostatus",
+    "section": "The study presented",
+    "text": "The study presented\nThe analysis included patients from two academic institutions with Merkel cell carcinoma who underwent Merkel cell polyomavirus oncoprotein antibody testing near diagnosis.\nThe primary focus was the relationship between initial AMERK serostatus and subsequent clinical outcomes. Secondary analyses examined the relationship between initial antibody titer and measures of disease burden.\nAt the time of this Research Forum presentation, the study had not yet been published and was presented as work in progress for discussion and critique."
+  },
+  {
+    "objectID": "research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html#from-research-forum-to-publication",
+    "href": "research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html#from-research-forum-to-publication",
+    "title": "Prognostic Significance of Initial AMERK Serostatus",
+    "section": "From Research Forum to publication",
+    "text": "From Research Forum to publication\nThe work presented at the August 2023 Research Forum subsequently developed into a peer-reviewed publication in Cancer:\nMiller DM, Shalhout SZ, Wright KM, et al. The prognostic value of the Merkel cell polyomavirus serum antibody test: A dual institutional observational study. Cancer. 2024;130(15):2670–2682.\nThe publication evaluated the association between baseline AMERK serostatus and clinical outcomes and further examined how initial antibody titer relates to tumor burden.\n\nRead the Published Article View on PubMed"
+  },
+  {
+    "objectID": "research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html#research-forum-focus",
+    "href": "research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html#research-forum-focus",
+    "title": "Prognostic Significance of Initial AMERK Serostatus",
+    "section": "Research Forum focus",
+    "text": "Research Forum focus\nThe discussion centered on the interpretation of AMERK as both a biologic and clinical biomarker: what seropositivity may represent, how titer relates to disease burden, whether prognostic information differs across stages, and how baseline risk stratification should be distinguished from longitudinal surveillance.\n\nResearch Forum Presentation Archive"
   }
 ]

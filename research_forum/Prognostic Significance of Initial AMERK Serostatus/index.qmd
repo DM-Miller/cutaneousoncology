@@ -1,17 +1,652 @@
 ---
 title: "Prognostic Significance of Initial AMERK Serostatus"
-author: David M. Miller
-date: "2023-08-18T16:00:00Z"
-image: DMM_pic_cropped.jpg
-description: We discuss results from a dual-institution observational study
-tags: 
+pagetitle: "Prognostic Significance of Initial AMERK Serostatus | SoCO Research Forum"
+description: "A Society of Cutaneous Oncology Research Forum presentation examining the prognostic significance of baseline Merkel cell polyomavirus oncoprotein antibody serostatus and titer in Merkel cell carcinoma."
+date: 2023-08-18
+author: "David M. Miller"
+categories:
+  - 2023
+  - SoCO Research Forum
   - Merkel Cell Carcinoma
-categories: [2023, SoCO Reserach Forum, MCC]
+  - AMERK
+  - Prognostic Biomarkers
+tags:
+  - Merkel Cell Carcinoma
+  - AMERK
+  - Merkel Cell Polyomavirus
+  - Prognosis
+  - Biomarkers
+image: DMM_pic_cropped.jpg
+page-layout: full
+title-block-style: none
+toc: false
 ---
 
-# Event
-Society of Cutaneous Oncology Research Forum
+<style>
+  :root {
+    --soco-navy: #041b33;
+    --soco-blue: #06436e;
+    --soco-deep-blue: #0f2a59;
+    --soco-teal: #0f7f86;
+    --soco-coral: #ff3b3f;
+    --soco-ink: #18293d;
+    --soco-muted: #5c6f82;
+    --soco-surface: #f6fafb;
+    --soco-line: #dbe8ee;
+  }
 
-# Overview & Learning Objectives
-- We review results from a dual-institutional observation study of patients with Merkel Cell Carcinoma who underwent Merkel Cell Polyoma Virus antibody testing within 90 days of diagnosis.  
+  #title-block-header,
+  .quarto-title-block,
+  .quarto-title,
+  .quarto-title-meta {
+    display: none !important;
+  }
 
+  main.content {
+    padding-top: 0 !important;
+  }
+
+  body {
+    background: var(--soco-surface);
+  }
+
+  .forum-entry-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4.8rem 2rem 7.2rem;
+    background:
+      radial-gradient(circle at 84% 18%, rgba(15, 127, 134, 0.28), transparent 29%),
+      radial-gradient(circle at 14% 24%, rgba(255, 59, 63, 0.12), transparent 30%),
+      linear-gradient(135deg, var(--soco-navy) 0%, var(--soco-blue) 58%, #0b6570 100%);
+    color: #ffffff;
+  }
+
+  .forum-entry-hero::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    top: -120px;
+    right: -80px;
+    opacity: 0.20;
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,0.82) 0 1.4px, transparent 2px);
+    background-size: 30px 30px;
+    mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    pointer-events: none;
+  }
+
+  .forum-entry-hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1120px, 92vw);
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: forumFadeUp 0.85s ease-out forwards;
+  }
+
+  .forum-entry-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1.45rem;
+    color: rgba(255,255,255,0.80);
+    font-size: 0.80rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .forum-entry-eyebrow::before {
+    content: "";
+    width: 2.6rem;
+    height: 2px;
+    background: var(--soco-coral);
+  }
+
+  .forum-entry-hero h1 {
+    max-width: 1060px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2.7rem, 5.2vw, 4.9rem);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.052em;
+    text-wrap: balance;
+  }
+
+  .forum-entry-subtitle {
+    max-width: 900px;
+    margin: 1.65rem 0 0;
+    color: rgba(255,255,255,0.84);
+    font-size: clamp(1.08rem, 1.65vw, 1.28rem);
+    line-height: 1.72;
+  }
+
+  .forum-entry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 2.2rem;
+  }
+
+  .forum-entry-tag {
+    display: inline-flex;
+    padding: 0.45rem 0.82rem;
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    color: #ffffff;
+    font-size: 0.77rem;
+    font-weight: 700;
+  }
+
+  .forum-entry-shell {
+    position: relative;
+    z-index: 2;
+    width: min(1120px, 94vw);
+    margin: -3.1rem auto 5rem;
+  }
+
+  .forum-entry-card {
+    overflow: hidden;
+    border: 1px solid rgba(4, 27, 51, 0.07);
+    border-radius: 1.15rem;
+    background: #ffffff;
+    box-shadow: 0 20px 54px rgba(4, 27, 51, 0.10);
+  }
+
+  .forum-entry-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--soco-line);
+    background:
+      linear-gradient(135deg, rgba(15, 127, 134, 0.035), rgba(255, 59, 63, 0.018)),
+      #ffffff;
+  }
+
+  .forum-entry-meta-item {
+    padding: 1.4rem 1.6rem;
+  }
+
+  .forum-entry-meta-item + .forum-entry-meta-item {
+    border-left: 1px solid var(--soco-line);
+  }
+
+  .forum-entry-meta-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--soco-muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .forum-entry-meta-value {
+    color: var(--soco-navy);
+    font-size: 1rem;
+    font-weight: 650;
+    line-height: 1.45;
+  }
+
+  .forum-entry-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 3rem 4.5rem;
+  }
+
+  .forum-entry-section {
+    margin-bottom: 3.2rem;
+  }
+
+  .forum-entry-section h2 {
+    margin: 0 0 1.2rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--soco-line);
+    color: var(--soco-navy);
+    font-size: clamp(1.9rem, 3vw, 2.55rem);
+    line-height: 1.12;
+  }
+
+  .forum-entry-section p,
+  .forum-entry-section li {
+    color: #495b69;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .forum-entry-profile {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 0 0 3.5rem;
+    padding: 2rem;
+    border: 1px solid var(--soco-line);
+    border-radius: 0.9rem;
+    background:
+      radial-gradient(circle at 88% 18%, rgba(15, 127, 134, 0.09), transparent 30%),
+      linear-gradient(135deg, #ffffff 0%, var(--soco-surface) 100%);
+    box-shadow: 0 14px 38px rgba(4, 27, 51, 0.07);
+  }
+
+  .forum-entry-profile img {
+    display: block;
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+
+  .forum-entry-profile-title {
+    color: var(--soco-navy);
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    font-weight: 750;
+    letter-spacing: -0.035em;
+  }
+
+  .forum-entry-profile-subtitle {
+    margin-top: 0.55rem;
+    color: var(--soco-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .forum-entry-takeaway {
+    margin: 2.75rem 0;
+    padding: 2rem 2.1rem;
+    border-left: 5px solid var(--soco-coral);
+    border-radius: 0.9rem;
+    background:
+      linear-gradient(135deg, rgba(255, 59, 63, 0.05), rgba(15, 127, 134, 0.05));
+  }
+
+  .forum-entry-takeaway-label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: var(--soco-coral);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .forum-entry-takeaway p {
+    margin: 0;
+    color: var(--soco-navy);
+    font-size: 1.16rem;
+    line-height: 1.8;
+  }
+
+  .forum-entry-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .forum-entry-mini-card {
+    padding: 1.45rem;
+    border: 1px solid var(--soco-line);
+    border-radius: 0.9rem;
+    background: var(--soco-surface);
+  }
+
+  .forum-entry-mini-card::before {
+    content: "";
+    display: block;
+    width: 2.6rem;
+    height: 0.2rem;
+    margin-bottom: 1rem;
+    border-radius: 999px;
+    background: var(--soco-teal);
+  }
+
+  .forum-entry-mini-card:nth-child(2)::before {
+    background: var(--soco-blue);
+  }
+
+  .forum-entry-mini-card:nth-child(3)::before {
+    background: var(--soco-coral);
+  }
+
+  .forum-entry-mini-card:nth-child(4)::before {
+    background: var(--soco-teal);
+  }
+
+  .forum-entry-mini-card h3 {
+    margin: 0 0 0.7rem;
+    color: var(--soco-navy);
+    font-size: 1.08rem;
+  }
+
+  .forum-entry-mini-card p {
+    margin: 0 !important;
+    color: var(--soco-muted) !important;
+    font-size: 0.94rem !important;
+    line-height: 1.62 !important;
+  }
+
+  .forum-entry-topics {
+    padding: 1.8rem 2rem;
+    border: 1px solid var(--soco-line);
+    border-radius: 0.9rem;
+    background: var(--soco-surface);
+  }
+
+  .forum-entry-topics ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .forum-entry-topics li + li {
+    margin-top: 0.75rem;
+  }
+
+  .forum-entry-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.7rem;
+  }
+
+  .forum-entry-link {
+    display: inline-flex;
+    padding: 0.68rem 1rem;
+    border-radius: 999px;
+    background: var(--soco-blue);
+    color: #ffffff !important;
+    font-size: 0.89rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .forum-entry-link:hover {
+    background: var(--soco-navy);
+  }
+
+  .forum-entry-link.secondary {
+    border: 1px solid #bfd4df;
+    background: #ffffff;
+    color: var(--soco-blue) !important;
+  }
+
+  .forum-entry-link.secondary:hover {
+    border-color: var(--soco-blue);
+    background: var(--soco-blue);
+    color: #ffffff !important;
+  }
+
+  .forum-entry-note {
+    margin-top: 3rem;
+    padding-top: 1.35rem;
+    border-top: 1px solid var(--soco-line);
+    color: var(--soco-muted);
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes forumFadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 760px) {
+
+    .forum-entry-hero {
+      padding: 4.25rem 1.25rem 6rem;
+    }
+
+    .forum-entry-meta,
+    .forum-entry-grid,
+    .forum-entry-profile {
+      grid-template-columns: 1fr;
+    }
+
+    .forum-entry-profile img {
+      max-width: 220px;
+    }
+
+    .forum-entry-meta-item + .forum-entry-meta-item {
+      border-top: 1px solid var(--soco-line);
+      border-left: 0;
+    }
+
+    .forum-entry-content {
+      padding: 3rem 1.35rem 3.5rem;
+    }
+
+    .forum-entry-hero h1 {
+      font-size: clamp(2.4rem, 11vw, 3.25rem);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .forum-entry-hero-inner,
+    .fade-in {
+      opacity: 1;
+      transform: none;
+      animation: none;
+      transition: none;
+    }
+  }
+</style>
+
+::::: {.forum-entry-hero}
+:::: {.forum-entry-hero-inner}
+
+::: {.forum-entry-eyebrow}
+SoCO Research Forum · Merkel Cell Carcinoma
+:::
+
+# Prognostic Significance of Initial AMERK Serostatus
+
+::: {.forum-entry-subtitle}
+A prepublication discussion of a dual-institutional observational study examining whether baseline Merkel cell polyomavirus oncoprotein antibody serostatus and titer provide prognostic information in Merkel cell carcinoma.
+:::
+
+::: {.forum-entry-tags}
+[Merkel Cell Carcinoma]{.forum-entry-tag}
+[AMERK]{.forum-entry-tag}
+[Prognostic Biomarkers]{.forum-entry-tag}
+[Merkel Cell Polyomavirus]{.forum-entry-tag}
+:::
+
+::::
+:::::
+
+::::: {.forum-entry-shell}
+:::: {.forum-entry-card}
+
+::: {.forum-entry-meta}
+
+::: {.forum-entry-meta-item}
+[Program]{.forum-entry-meta-label}
+
+[SoCO Research Forum]{.forum-entry-meta-value}
+:::
+
+::: {.forum-entry-meta-item}
+[Presenter]{.forum-entry-meta-label}
+
+[David M. Miller]{.forum-entry-meta-value}
+:::
+
+::: {.forum-entry-meta-item}
+[Date]{.forum-entry-meta-label}
+
+[August 18, 2023]{.forum-entry-meta-value}
+:::
+
+:::
+
+:::: {.forum-entry-content}
+
+::: {.forum-entry-profile .fade-in}
+
+![](DMM_pic_cropped.jpg){alt="David M. Miller"}
+
+::: {.forum-entry-profile-copy}
+[Initial AMERK Serostatus]{.forum-entry-profile-title}
+
+::: {.forum-entry-profile-subtitle}
+A dual-institutional analysis of baseline Merkel cell polyomavirus oncoprotein antibody testing and clinical outcomes in Merkel cell carcinoma.
+:::
+:::
+
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## The clinical question
+
+AMERK testing is commonly used longitudinally in patients with Merkel cell carcinoma who produce antibodies against Merkel cell polyomavirus oncoproteins.
+
+This study asked a related but distinct question: <strong>does the initial AMERK result itself provide prognostic information near the time of diagnosis?</strong>
+
+The Research Forum presentation reviewed a dual-institutional observational cohort of patients with Merkel cell carcinoma who underwent AMERK testing within 90 days of diagnosis.
+
+:::
+
+::: {.forum-entry-takeaway .fade-in}
+[Central Question]{.forum-entry-takeaway-label}
+
+Does baseline AMERK serostatus—and, among seropositive patients, the initial antibody titer—capture prognostic information beyond conventional clinical staging?
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## Questions explored
+
+::: {.forum-entry-grid}
+
+::: {.forum-entry-mini-card}
+### Serostatus and outcomes
+
+Do patients who are AMERK seropositive at diagnosis have different recurrence or survival outcomes than patients who are seronegative?
+:::
+
+::: {.forum-entry-mini-card}
+### Antibody titer
+
+Among seropositive patients, does the magnitude of the initial antibody titer correlate with tumor burden or disease extent?
+:::
+
+::: {.forum-entry-mini-card}
+### Stage-specific prognosis
+
+Does the prognostic significance of baseline serostatus differ according to the clinical stage at presentation?
+:::
+
+::: {.forum-entry-mini-card}
+### Baseline versus surveillance
+
+What information does the first AMERK result provide that is distinct from the role of serial AMERK testing during follow-up?
+:::
+
+:::
+
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## The study presented
+
+The analysis included patients from two academic institutions with Merkel cell carcinoma who underwent Merkel cell polyomavirus oncoprotein antibody testing near diagnosis.
+
+The primary focus was the relationship between initial AMERK serostatus and subsequent clinical outcomes. Secondary analyses examined the relationship between initial antibody titer and measures of disease burden.
+
+At the time of this Research Forum presentation, the study had not yet been published and was presented as work in progress for discussion and critique.
+
+:::
+
+::: {.forum-entry-takeaway .fade-in}
+[Why It Matters]{.forum-entry-takeaway-label}
+
+A biomarker already obtained for future surveillance may also contain useful information at the moment it is first measured—potentially helping refine prognostic context at diagnosis.
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## From Research Forum to publication
+
+The work presented at the August 2023 Research Forum subsequently developed into a peer-reviewed publication in <em>Cancer</em>:
+
+**Miller DM, Shalhout SZ, Wright KM, et al. The prognostic value of the Merkel cell polyomavirus serum antibody test: A dual institutional observational study. Cancer. 2024;130(15):2670–2682.**
+
+The publication evaluated the association between baseline AMERK serostatus and clinical outcomes and further examined how initial antibody titer relates to tumor burden.
+
+::: {.forum-entry-links}
+[Read the Published Article](https://acsjournals.onlinelibrary.wiley.com/doi/full/10.1002/cncr.35314){.forum-entry-link}
+[View on PubMed](https://pubmed.ncbi.nlm.nih.gov/38696121/){.forum-entry-link .secondary}
+:::
+
+:::
+
+::: {.forum-entry-takeaway .fade-in}
+[Research in Motion]{.forum-entry-takeaway-label}
+
+This session illustrates the purpose of the Research Forum: presenting an analysis before publication, while its framing, interpretation, and communication can still benefit from multidisciplinary criticism.
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## Research Forum focus
+
+The discussion centered on the interpretation of AMERK as both a biologic and clinical biomarker: what seropositivity may represent, how titer relates to disease burden, whether prognostic information differs across stages, and how baseline risk stratification should be distinguished from longitudinal surveillance.
+
+::: {.forum-entry-links}
+[Research Forum](../../research_forum.qmd){.forum-entry-link}
+[Presentation Archive](../../research_forum.qmd#presentations){.forum-entry-link .secondary}
+:::
+
+:::
+
+::: {.forum-entry-note}
+This page describes the August 18, 2023 SoCO Research Forum presentation. The analysis was prepublication at the time of the session. The subsequently published manuscript should be consulted for the final cohort, methods, statistical analyses, effect estimates, sensitivity analyses, and conclusions.
+:::
+
+::::
+::::
+:::::
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in");
+
+    if (!("IntersectionObserver" in window)) {
+      elements.forEach(el => el.classList.add("visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    elements.forEach(el => observer.observe(el));
+  });
+</script>

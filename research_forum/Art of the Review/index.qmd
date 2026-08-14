@@ -1,17 +1,874 @@
 ---
-title: "To Accept, Revise or Reject - The Art of the Review"
-author: David M. Miller
-date: "2023-05-12T16:00:00Z"
-image: discs_black_.2.png
-description: We discuss approaces to the scientific review process
-tags: 
+title: "To Accept, Revise, or Reject: The Art of the Review"
+pagetitle: "The Art of the Review | SoCO Research Forum"
+description: "A Society of Cutaneous Oncology Research Forum session on the scientific peer-review process, including reviewer roles, motivations, time burden, incentives, conflicts of interest, and approaches to open, closed, and double-blind review."
+date: 2023-05-12
+author: "David M. Miller"
+categories:
+  - 2023
+  - SoCO Research Forum
   - Scientific Review
-categories: [2023]
+  - Peer Review
+  - Scientific Publishing
+tags:
+  - Scientific Review
+  - Peer Review
+  - Scientific Publishing
+  - Editorial Process
+image: discs_black_.2.png
+page-layout: full
+title-block-style: none
+toc: false
 ---
 
-# Event
-Society of Cutaneous Oncology Research Forum
+<style>
+  :root {
+    --soco-navy: #041b33;
+    --soco-blue: #06436e;
+    --soco-deep-blue: #0f2a59;
+    --soco-teal: #0f7f86;
+    --soco-coral: #ff3b3f;
+    --soco-ink: #18293d;
+    --soco-muted: #5c6f82;
+    --soco-surface: #f6fafb;
+    --soco-line: #dbe8ee;
+  }
 
-# Overview & Learning Objectives
-- We review different approaches to the scientific review process  
+  #title-block-header,
+  .quarto-title-block,
+  .quarto-title,
+  .quarto-title-meta {
+    display: none !important;
+  }
 
+  main.content {
+    padding-top: 0 !important;
+  }
+
+  body {
+    background: var(--soco-surface);
+  }
+
+  .forum-entry-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4.8rem 2rem 7.2rem;
+    background:
+      radial-gradient(circle at 84% 18%, rgba(15, 127, 134, 0.28), transparent 29%),
+      radial-gradient(circle at 14% 24%, rgba(255, 59, 63, 0.12), transparent 30%),
+      linear-gradient(135deg, var(--soco-navy) 0%, var(--soco-blue) 58%, #0b6570 100%);
+    color: #ffffff;
+  }
+
+  .forum-entry-hero::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    top: -120px;
+    right: -80px;
+    opacity: 0.20;
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,0.82) 0 1.4px, transparent 2px);
+    background-size: 30px 30px;
+    mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    pointer-events: none;
+  }
+
+  .forum-entry-hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1120px, 92vw);
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: forumFadeUp 0.85s ease-out forwards;
+  }
+
+  .forum-entry-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1.45rem;
+    color: rgba(255,255,255,0.80);
+    font-size: 0.80rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .forum-entry-eyebrow::before {
+    content: "";
+    width: 2.6rem;
+    height: 2px;
+    background: var(--soco-coral);
+  }
+
+  .forum-entry-hero h1 {
+    max-width: 1060px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2.7rem, 5.2vw, 4.9rem);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.052em;
+    text-wrap: balance;
+  }
+
+  .forum-entry-subtitle {
+    max-width: 900px;
+    margin: 1.65rem 0 0;
+    color: rgba(255,255,255,0.84);
+    font-size: clamp(1.08rem, 1.65vw, 1.28rem);
+    line-height: 1.72;
+  }
+
+  .forum-entry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 2.2rem;
+  }
+
+  .forum-entry-tag {
+    display: inline-flex;
+    padding: 0.45rem 0.82rem;
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    color: #ffffff;
+    font-size: 0.77rem;
+    font-weight: 700;
+  }
+
+  .forum-entry-shell {
+    position: relative;
+    z-index: 2;
+    width: min(1120px, 94vw);
+    margin: -3.1rem auto 5rem;
+  }
+
+  .forum-entry-card {
+    overflow: hidden;
+    border: 1px solid rgba(4, 27, 51, 0.07);
+    border-radius: 1.15rem;
+    background: #ffffff;
+    box-shadow: 0 20px 54px rgba(4, 27, 51, 0.10);
+  }
+
+  .forum-entry-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--soco-line);
+    background:
+      linear-gradient(135deg, rgba(15, 127, 134, 0.035), rgba(255, 59, 63, 0.018)),
+      #ffffff;
+  }
+
+  .forum-entry-meta-item {
+    padding: 1.4rem 1.6rem;
+  }
+
+  .forum-entry-meta-item + .forum-entry-meta-item {
+    border-left: 1px solid var(--soco-line);
+  }
+
+  .forum-entry-meta-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--soco-muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .forum-entry-meta-value {
+    color: var(--soco-navy);
+    font-size: 1rem;
+    font-weight: 650;
+    line-height: 1.45;
+  }
+
+  .forum-entry-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 3rem 4.5rem;
+  }
+
+  .forum-entry-section {
+    margin-bottom: 3.2rem;
+  }
+
+  .forum-entry-section h2 {
+    margin: 0 0 1.2rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--soco-line);
+    color: var(--soco-navy);
+    font-size: clamp(1.9rem, 3vw, 2.55rem);
+    line-height: 1.12;
+  }
+
+  .forum-entry-section p,
+  .forum-entry-section li {
+    color: #495b69;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .forum-entry-profile {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 0 0 3.5rem;
+    padding: 2rem;
+    border: 1px solid var(--soco-line);
+    border-radius: 0.9rem;
+    background:
+      radial-gradient(circle at 88% 18%, rgba(15, 127, 134, 0.09), transparent 30%),
+      linear-gradient(135deg, #ffffff 0%, var(--soco-surface) 100%);
+    box-shadow: 0 14px 38px rgba(4, 27, 51, 0.07);
+  }
+
+  .forum-entry-profile img {
+    display: block;
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+
+  .forum-entry-profile-title {
+    color: var(--soco-navy);
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    font-weight: 750;
+    letter-spacing: -0.035em;
+  }
+
+  .forum-entry-profile-subtitle {
+    margin-top: 0.55rem;
+    color: var(--soco-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .forum-entry-takeaway {
+    margin: 2.75rem 0;
+    padding: 2rem 2.1rem;
+    border-left: 5px solid var(--soco-coral);
+    border-radius: 0.9rem;
+    background:
+      linear-gradient(135deg, rgba(255, 59, 63, 0.05), rgba(15, 127, 134, 0.05));
+  }
+
+  .forum-entry-takeaway-label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: var(--soco-coral);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .forum-entry-takeaway p {
+    margin: 0;
+    color: var(--soco-navy);
+    font-size: 1.16rem;
+    line-height: 1.8;
+  }
+
+  .forum-entry-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .forum-entry-mini-card {
+    padding: 1.45rem;
+    border: 1px solid var(--soco-line);
+    border-radius: 0.9rem;
+    background: var(--soco-surface);
+  }
+
+  .forum-entry-mini-card::before {
+    content: "";
+    display: block;
+    width: 2.6rem;
+    height: 0.2rem;
+    margin-bottom: 1rem;
+    border-radius: 999px;
+    background: var(--soco-teal);
+  }
+
+  .forum-entry-mini-card:nth-child(2)::before {
+    background: var(--soco-blue);
+  }
+
+  .forum-entry-mini-card:nth-child(3)::before {
+    background: var(--soco-coral);
+  }
+
+  .forum-entry-mini-card:nth-child(4)::before {
+    background: var(--soco-teal);
+  }
+
+  .forum-entry-mini-card h3 {
+    margin: 0 0 0.7rem;
+    color: var(--soco-navy);
+    font-size: 1.08rem;
+  }
+
+  .forum-entry-mini-card p {
+    margin: 0 !important;
+    color: var(--soco-muted) !important;
+    font-size: 0.94rem !important;
+    line-height: 1.62 !important;
+  }
+
+  .survey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .survey-card {
+    padding: 1.45rem;
+    border: 1px solid var(--soco-line);
+    border-radius: 0.9rem;
+    background: var(--soco-surface);
+  }
+
+  .survey-card::before {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 0.2rem;
+    margin-bottom: 0.95rem;
+    border-radius: 999px;
+    background: var(--soco-teal);
+  }
+
+  .survey-card:nth-child(2)::before,
+  .survey-card:nth-child(5)::before {
+    background: var(--soco-blue);
+  }
+
+  .survey-card:nth-child(3)::before,
+  .survey-card:nth-child(6)::before {
+    background: var(--soco-coral);
+  }
+
+  .survey-value {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: var(--soco-navy);
+    font-size: 2.05rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.045em;
+  }
+
+  .survey-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--soco-teal);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .survey-card p {
+    margin: 0 !important;
+    color: var(--soco-muted) !important;
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .forum-entry-topics {
+    padding: 1.8rem 2rem;
+    border: 1px solid var(--soco-line);
+    border-radius: 0.9rem;
+    background: var(--soco-surface);
+  }
+
+  .forum-entry-topics ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .forum-entry-topics li + li {
+    margin-top: 0.75rem;
+  }
+
+  .forum-entry-note {
+    margin-top: 3rem;
+    padding-top: 1.35rem;
+    border-top: 1px solid var(--soco-line);
+    color: var(--soco-muted);
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+
+  .forum-entry-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.7rem;
+  }
+
+  .forum-entry-link {
+    display: inline-flex;
+    padding: 0.68rem 1rem;
+    border-radius: 999px;
+    background: var(--soco-blue);
+    color: #ffffff !important;
+    font-size: 0.89rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .forum-entry-link:hover {
+    background: var(--soco-navy);
+  }
+
+  .forum-entry-link.secondary {
+    border: 1px solid #bfd4df;
+    background: #ffffff;
+    color: var(--soco-blue) !important;
+  }
+
+  .forum-entry-link.secondary:hover {
+    border-color: var(--soco-blue);
+    background: var(--soco-blue);
+    color: #ffffff !important;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes forumFadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .survey-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 760px) {
+
+    .forum-entry-hero {
+      padding: 4.25rem 1.25rem 6rem;
+    }
+
+    .forum-entry-meta,
+    .forum-entry-grid,
+    .forum-entry-profile,
+    .survey-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .forum-entry-profile img {
+      max-width: 220px;
+    }
+
+    .forum-entry-meta-item + .forum-entry-meta-item {
+      border-top: 1px solid var(--soco-line);
+      border-left: 0;
+    }
+
+    .forum-entry-content {
+      padding: 3rem 1.35rem 3.5rem;
+    }
+
+    .forum-entry-hero h1 {
+      font-size: clamp(2.4rem, 11vw, 3.25rem);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .forum-entry-hero-inner,
+    .fade-in {
+      opacity: 1;
+      transform: none;
+      animation: none;
+      transition: none;
+    }
+  }
+</style>
+
+::::: {.forum-entry-hero}
+:::: {.forum-entry-hero-inner}
+
+::: {.forum-entry-eyebrow}
+SoCO Research Forum · Scientific Review
+:::
+
+# To Accept, Revise, or Reject: The Art of the Review
+
+::: {.forum-entry-subtitle}
+A discussion of how scientists approach peer review—from why we agree to review, to how we evaluate a manuscript, communicate criticism, manage conflicts, and decide what recommendation to make.
+:::
+
+::: {.forum-entry-tags}
+[Scientific Review]{.forum-entry-tag}
+[Peer Review]{.forum-entry-tag}
+[Scientific Publishing]{.forum-entry-tag}
+[Editorial Process]{.forum-entry-tag}
+:::
+
+::::
+:::::
+
+::::: {.forum-entry-shell}
+:::: {.forum-entry-card}
+
+::: {.forum-entry-meta}
+
+::: {.forum-entry-meta-item}
+[Program]{.forum-entry-meta-label}
+
+[SoCO Research Forum]{.forum-entry-meta-value}
+:::
+
+::: {.forum-entry-meta-item}
+[Presenter]{.forum-entry-meta-label}
+
+[David M. Miller]{.forum-entry-meta-value}
+:::
+
+::: {.forum-entry-meta-item}
+[Date]{.forum-entry-meta-label}
+
+[May 12, 2023]{.forum-entry-meta-value}
+:::
+
+:::
+
+:::: {.forum-entry-content}
+
+::: {.forum-entry-profile .fade-in}
+
+![](discs_black_.2.png){alt="The Art of the Review presentation graphic"}
+
+::: {.forum-entry-profile-copy}
+[The Art of the Review]{.forum-entry-profile-title}
+
+::: {.forum-entry-profile-subtitle}
+A practical discussion of the scientific review process from the perspectives of authors, reviewers, and editors.
+:::
+:::
+
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## The central question
+
+Peer review sits at the center of scientific publishing, yet most investigators learn how to review manuscripts informally—through experience, mentorship, and exposure to reviews written by others.
+
+This Research Forum session examined different approaches to the review process and asked what makes a review rigorous, constructive, fair, and genuinely useful to authors and editors.
+
+:::
+
+::: {.forum-entry-takeaway .fade-in}
+[Central Idea]{.forum-entry-takeaway-label}
+
+A good review does more than identify flaws. It helps determine whether the scientific question is important, whether the evidence supports the claims being made, and what would be required to make the work stronger.
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## The reviewer’s task
+
+::: {.forum-entry-grid}
+
+::: {.forum-entry-mini-card}
+### Evaluate the science
+
+Is the question meaningful, the design appropriate, the analysis credible, and the interpretation proportional to the evidence?
+:::
+
+::: {.forum-entry-mini-card}
+### Separate major from minor
+
+Distinguish issues that threaten validity or interpretation from changes that would merely improve presentation.
+:::
+
+::: {.forum-entry-mini-card}
+### Be constructive
+
+Criticism should help the author understand both what is wrong and, where possible, how the work could be improved.
+:::
+
+::: {.forum-entry-mini-card}
+### Advise the editor
+
+The review is not only a message to the authors. It is also an assessment for the editor about whether the manuscript is suitable for publication.
+:::
+
+:::
+
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## A snapshot from the room
+
+A brief audience survey during the session captured how participants experienced the peer-review process. Twelve responses were recorded. These results are descriptive and represent this small group rather than the broader scientific community.
+
+::: {.survey-grid}
+
+::: {.survey-card}
+[12 / 12]{.survey-value}
+[Authors + Reviewers]{.survey-label}
+
+Every respondent identified as both an author and a reviewer.
+:::
+
+::: {.survey-card}
+[5 / 12]{.survey-value}
+[Editors]{.survey-label}
+
+Five participants also reported serving in an editorial role.
+:::
+
+::: {.survey-card}
+[6 / 12]{.survey-value}
+[≥10 Invitations]{.survey-label}
+
+Half reported having been asked to review at least 10 manuscripts.
+:::
+
+::: {.survey-card}
+[7 / 12]{.survey-value}
+[≥90 Minutes]{.survey-label}
+
+Seven respondents reported typically spending at least 90 minutes completing a review.
+:::
+
+::: {.survey-card}
+[8 / 12]{.survey-value}
+[Support Compensation]{.survey-label}
+
+Eight respondents indicated that reviewers should receive compensation.
+:::
+
+::: {.survey-card}
+[5 / 11]{.survey-value}
+[Double-Blind Preferred]{.survey-label}
+
+Among the 11 who answered, double-blind review was the most frequently selected approach; open and closed review each received three selections.
+:::
+
+:::
+
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## Review experience and incentives
+
+The survey suggested a group with meaningful experience but mixed views about how the review system should recognize that work.
+
+::: {.forum-entry-grid}
+
+::: {.forum-entry-mini-card}
+### Review volume
+
+Two respondents reported reviewing at least 10 papers, one reported 7–9, five reported 4–6, and four reported 1–3.
+:::
+
+::: {.forum-entry-mini-card}
+### Time commitment
+
+Three reported 60–89 minutes per review, four reported 90–119 minutes, and three reported 120 minutes or more. Only two reported 30–59 minutes.
+:::
+
+::: {.forum-entry-mini-card}
+### Incentives
+
+Only 2 of 12 respondents described themselves as currently incentivized to review.
+:::
+
+::: {.forum-entry-mini-card}
+### Paid review
+
+Five respondents said reviewers should be paid, while eight supported some form of compensation more broadly.
+:::
+
+:::
+
+:::
+
+::: {.forum-entry-takeaway .fade-in}
+[The Time Burden]{.forum-entry-takeaway-label}
+
+In this small group, peer review was rarely a quick task: 10 of 12 respondents reported spending at least an hour on a typical review, and 7 of 12 reported spending 90 minutes or longer.
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## Why do reviewers say yes?
+
+The survey responses reflected several different motivations for accepting review invitations.
+
+::: {.forum-entry-topics}
+
+- A desire to improve the field.
+- The opportunity to read emerging science.
+- A sense of academic duty.
+- The chance to improve critical-thinking skills.
+- Invitations from colleagues or mentors.
+- Feeling honored to be asked.
+- Professional recognition and CV development.
+
+:::
+
+The responses reinforce that peer review can simultaneously function as scientific service, intellectual engagement, professional development, and quality control.
+
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## Conflicts, anonymity, and trial review
+
+The survey also surfaced some of the less visible judgments reviewers routinely make.
+
+::: {.forum-entry-grid}
+
+::: {.forum-entry-mini-card}
+### Conflict of interest
+
+Four of 11 respondents with available data answered “yes” to one conflict-of-interest scenario, while seven answered “yes” to a second scenario—illustrating that perceived conflicts can depend heavily on context.
+:::
+
+::: {.forum-entry-mini-card}
+### Review model
+
+Preferences were divided: five selected double-blind review, three open review, and three closed review.
+:::
+
+::: {.forum-entry-mini-card}
+### Trial review
+
+Four of 11 respondents with available data reported prior experience reviewing a clinical trial manuscript.
+:::
+
+::: {.forum-entry-mini-card}
+### Formal training
+
+None of the 12 respondents reported having completed a formal course in peer review.
+:::
+
+:::
+
+:::
+
+::: {.forum-entry-takeaway .fade-in}
+[An Informal Apprenticeship]{.forum-entry-takeaway-label}
+
+Everyone in the room had reviewed manuscripts, but no respondent reported formal coursework in how to do it. Peer review remains, for many scientists, a skill learned largely by apprenticeship.
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## Questions explored
+
+The discussion extended beyond how to critique a manuscript and into the structure of peer review itself.
+
+::: {.forum-entry-grid}
+
+::: {.forum-entry-mini-card}
+### Open or anonymous?
+
+What are the tradeoffs among open, closed, single-blind, and double-blind approaches to peer review?
+:::
+
+::: {.forum-entry-mini-card}
+### Incentives
+
+Should reviewers be compensated, formally recognized, or otherwise rewarded for the time and expertise that peer review requires?
+:::
+
+::: {.forum-entry-mini-card}
+### Conflicts of interest
+
+When does scientific proximity become a conflict, and when is subject-matter expertise precisely why a reviewer should be selected?
+:::
+
+::: {.forum-entry-mini-card}
+### Accept, revise, or reject?
+
+How should reviewers distinguish work that is fundamentally flawed from work that can become publishable through revision?
+:::
+
+:::
+
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## Research Forum focus
+
+The session approached peer review as a scientific skill rather than an administrative task. The aim was to make the review process more explicit: how to read a paper critically, how to structure comments, how to calibrate recommendations, and how to provide criticism that is rigorous without becoming performative or unnecessarily adversarial.
+
+For authors, reviewers, and editors alike, the broader goal is the same: improve the quality, clarity, and interpretability of the scientific record.
+
+::: {.forum-entry-links}
+[Research Forum](../../research_forum.qmd){.forum-entry-link}
+[Presentation Archive](../../research_forum.qmd#presentations){.forum-entry-link .secondary}
+:::
+
+:::
+
+::: {.forum-entry-note}
+Audience survey results shown here are descriptive summaries of 12 responses collected during the May 12, 2023 Research Forum session. Some individual survey items had one missing response; denominators are shown where relevant.
+:::
+
+::::
+::::
+:::::
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in");
+
+    if (!("IntersectionObserver" in window)) {
+      elements.forEach(el => el.classList.add("visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    elements.forEach(el => observer.observe(el));
+  });
+</script>

@@ -1,17 +1,588 @@
 ---
-title: "Updates on GEP in Melanoma"
-author: Vernon Sondak
-date: "2024-12-16T16:00:00Z"
-image: SondakVernon_2995.jpg
-description: We discuss results from the MERLIN study.
-tags: 
+title: "Updates on Gene Expression Profiling in Melanoma"
+pagetitle: "Updates on GEP in Melanoma | SoCO Research Forum"
+description: "A Society of Cutaneous Oncology Research Forum presentation reviewing MERLIN_001 and the evolving role of gene expression profiling in melanoma risk stratification."
+date: 2024-12-16
+author: "Vernon Sondak"
+categories:
+  - 2024
+  - SoCO Research Forum
   - Melanoma
-categories: [2024, SoCO Reserach Forum, Melanoma]
+  - Gene Expression Profiling
+  - Sentinel Lymph Node
+tags:
+  - Melanoma
+  - Gene Expression Profiling
+  - MERLIN
+  - Sentinel Lymph Node Biopsy
+image: SondakVernon_2995.jpg
+page-layout: full
+title-block-style: none
+toc: false
 ---
 
-# Event
-Society of Cutaneous Oncology Research Forum
+<style>
+  :root {
+    --soco-navy: #041b33;
+    --soco-blue: #06436e;
+    --soco-deep-blue: #0f2a59;
+    --soco-teal: #0f7f86;
+    --soco-coral: #ff3b3f;
+    --soco-ink: #18293d;
+    --soco-muted: #5c6f82;
+    --soco-surface: #f6fafb;
+    --soco-line: #dbe8ee;
+  }
 
-# Overview & Learning Objectives
-- We discuss the results of MERLIN_001: A prospective registry study of a primary melanoma gene-signature to predict sentinel node (SN) status and determine its prognostic value for more accurate staging of patients with SN-negative melanoma.  
+  #title-block-header,
+  .quarto-title-block,
+  .quarto-title,
+  .quarto-title-meta {
+    display: none !important;
+  }
 
+  main.content {
+    padding-top: 0 !important;
+  }
+
+  body {
+    background: var(--soco-surface);
+  }
+
+  .forum-entry-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4.8rem 2rem 7.2rem;
+    background:
+      radial-gradient(circle at 84% 18%, rgba(15, 127, 134, 0.28), transparent 29%),
+      radial-gradient(circle at 14% 24%, rgba(255, 59, 63, 0.12), transparent 30%),
+      linear-gradient(135deg, var(--soco-navy) 0%, var(--soco-blue) 58%, #0b6570 100%);
+    color: #ffffff;
+  }
+
+  .forum-entry-hero::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    top: -120px;
+    right: -80px;
+    opacity: 0.20;
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,0.82) 0 1.4px, transparent 2px);
+    background-size: 30px 30px;
+    mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    pointer-events: none;
+  }
+
+  .forum-entry-hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1120px, 92vw);
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: forumFadeUp 0.85s ease-out forwards;
+  }
+
+  .forum-entry-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1.45rem;
+    color: rgba(255,255,255,0.80);
+    font-size: 0.80rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .forum-entry-eyebrow::before {
+    content: "";
+    width: 2.6rem;
+    height: 2px;
+    background: var(--soco-coral);
+  }
+
+  .forum-entry-hero h1 {
+    max-width: 1060px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2.7rem, 5.2vw, 4.9rem);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.052em;
+    text-wrap: balance;
+  }
+
+  .forum-entry-subtitle {
+    max-width: 900px;
+    margin: 1.65rem 0 0;
+    color: rgba(255,255,255,0.84);
+    font-size: clamp(1.08rem, 1.65vw, 1.28rem);
+    line-height: 1.72;
+  }
+
+  .forum-entry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 2.2rem;
+  }
+
+  .forum-entry-tag {
+    display: inline-flex;
+    padding: 0.45rem 0.82rem;
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    color: #ffffff;
+    font-size: 0.77rem;
+    font-weight: 700;
+  }
+
+  .forum-entry-shell {
+    position: relative;
+    z-index: 2;
+    width: min(1120px, 94vw);
+    margin: -3.1rem auto 5rem;
+  }
+
+  .forum-entry-card {
+    overflow: hidden;
+    border: 1px solid rgba(4, 27, 51, 0.07);
+    border-radius: 1.15rem;
+    background: #ffffff;
+    box-shadow: 0 20px 54px rgba(4, 27, 51, 0.10);
+  }
+
+  .forum-entry-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--soco-line);
+    background:
+      linear-gradient(135deg, rgba(15, 127, 134, 0.035), rgba(255, 59, 63, 0.018)),
+      #ffffff;
+  }
+
+  .forum-entry-meta-item {
+    padding: 1.4rem 1.6rem;
+  }
+
+  .forum-entry-meta-item + .forum-entry-meta-item {
+    border-left: 1px solid var(--soco-line);
+  }
+
+  .forum-entry-meta-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--soco-muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .forum-entry-meta-value {
+    color: var(--soco-navy);
+    font-size: 1rem;
+    font-weight: 650;
+    line-height: 1.45;
+  }
+
+  .forum-entry-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 3rem 4.5rem;
+  }
+
+  .forum-entry-section {
+    margin-bottom: 3.2rem;
+  }
+
+  .forum-entry-section h2 {
+    margin: 0 0 1.2rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--soco-line);
+    color: var(--soco-navy);
+    font-size: clamp(1.9rem, 3vw, 2.55rem);
+    line-height: 1.12;
+  }
+
+  .forum-entry-section p,
+  .forum-entry-section li {
+    color: #495b69;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .forum-entry-profile {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 0 0 3.5rem;
+    padding: 2rem;
+    border: 1px solid var(--soco-line);
+    border-radius: 0.9rem;
+    background:
+      radial-gradient(circle at 88% 18%, rgba(15, 127, 134, 0.09), transparent 30%),
+      linear-gradient(135deg, #ffffff 0%, var(--soco-surface) 100%);
+    box-shadow: 0 14px 38px rgba(4, 27, 51, 0.07);
+  }
+
+  .forum-entry-profile img {
+    display: block;
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+
+  .forum-entry-profile-title {
+    color: var(--soco-navy);
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    font-weight: 750;
+    letter-spacing: -0.035em;
+  }
+
+  .forum-entry-profile-subtitle {
+    margin-top: 0.55rem;
+    color: var(--soco-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .forum-entry-takeaway {
+    margin: 2.75rem 0;
+    padding: 2rem 2.1rem;
+    border-left: 5px solid var(--soco-coral);
+    border-radius: 0.9rem;
+    background:
+      linear-gradient(135deg, rgba(255, 59, 63, 0.05), rgba(15, 127, 134, 0.05));
+  }
+
+  .forum-entry-takeaway-label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: var(--soco-coral);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .forum-entry-takeaway p {
+    margin: 0;
+    color: var(--soco-navy);
+    font-size: 1.16rem;
+    line-height: 1.8;
+  }
+
+  .forum-entry-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .forum-entry-mini-card {
+    padding: 1.45rem;
+    border: 1px solid var(--soco-line);
+    border-radius: 0.9rem;
+    background: var(--soco-surface);
+  }
+
+  .forum-entry-mini-card::before {
+    content: "";
+    display: block;
+    width: 2.6rem;
+    height: 0.2rem;
+    margin-bottom: 1rem;
+    border-radius: 999px;
+    background: var(--soco-teal);
+  }
+
+  .forum-entry-mini-card:nth-child(2)::before {
+    background: var(--soco-blue);
+  }
+
+  .forum-entry-mini-card h3 {
+    margin: 0 0 0.7rem;
+    color: var(--soco-navy);
+    font-size: 1.08rem;
+  }
+
+  .forum-entry-mini-card p {
+    margin: 0 !important;
+    color: var(--soco-muted) !important;
+    font-size: 0.94rem !important;
+    line-height: 1.62 !important;
+  }
+
+  .forum-entry-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.7rem;
+  }
+
+  .forum-entry-link {
+    display: inline-flex;
+    padding: 0.68rem 1rem;
+    border-radius: 999px;
+    background: var(--soco-blue);
+    color: #ffffff !important;
+    font-size: 0.89rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .forum-entry-link:hover {
+    background: var(--soco-navy);
+  }
+
+  .forum-entry-link.secondary {
+    border: 1px solid #bfd4df;
+    background: #ffffff;
+    color: var(--soco-blue) !important;
+  }
+
+  .forum-entry-link.secondary:hover {
+    border-color: var(--soco-blue);
+    background: var(--soco-blue);
+    color: #ffffff !important;
+  }
+
+  .forum-entry-note {
+    margin-top: 3rem;
+    padding-top: 1.35rem;
+    border-top: 1px solid var(--soco-line);
+    color: var(--soco-muted);
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes forumFadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 760px) {
+
+    .forum-entry-hero {
+      padding: 4.25rem 1.25rem 6rem;
+    }
+
+    .forum-entry-meta,
+    .forum-entry-grid,
+    .forum-entry-profile {
+      grid-template-columns: 1fr;
+    }
+
+    .forum-entry-profile img {
+      max-width: 220px;
+    }
+
+    .forum-entry-meta-item + .forum-entry-meta-item {
+      border-top: 1px solid var(--soco-line);
+      border-left: 0;
+    }
+
+    .forum-entry-content {
+      padding: 3rem 1.35rem 3.5rem;
+    }
+
+    .forum-entry-hero h1 {
+      font-size: clamp(2.4rem, 11vw, 3.25rem);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .forum-entry-hero-inner,
+    .fade-in {
+      opacity: 1;
+      transform: none;
+      animation: none;
+      transition: none;
+    }
+  }
+</style>
+
+::::: {.forum-entry-hero}
+:::: {.forum-entry-hero-inner}
+
+::: {.forum-entry-eyebrow}
+SoCO Research Forum · Melanoma
+:::
+
+# Updates on Gene Expression Profiling in Melanoma
+
+::: {.forum-entry-subtitle}
+A discussion of MERLIN_001 and the evolving role of gene expression profiling in sentinel node risk assessment and prognostic stratification.
+:::
+
+::: {.forum-entry-tags}
+[Melanoma]{.forum-entry-tag}
+[Gene Expression Profiling]{.forum-entry-tag}
+[MERLIN]{.forum-entry-tag}
+[Sentinel Lymph Node]{.forum-entry-tag}
+:::
+
+::::
+:::::
+
+::::: {.forum-entry-shell}
+:::: {.forum-entry-card}
+
+::: {.forum-entry-meta}
+
+::: {.forum-entry-meta-item}
+[Program]{.forum-entry-meta-label}
+
+[SoCO Research Forum]{.forum-entry-meta-value}
+:::
+
+::: {.forum-entry-meta-item}
+[Presenter]{.forum-entry-meta-label}
+
+[Vernon Sondak]{.forum-entry-meta-value}
+:::
+
+::: {.forum-entry-meta-item}
+[Date]{.forum-entry-meta-label}
+
+[December 16, 2024]{.forum-entry-meta-value}
+:::
+
+:::
+
+:::: {.forum-entry-content}
+
+::: {.forum-entry-profile .fade-in}
+
+![](SondakVernon_2995.jpg){alt="Vernon Sondak"}
+
+::: {.forum-entry-profile-copy}
+[MERLIN_001]{.forum-entry-profile-title}
+
+::: {.forum-entry-profile-subtitle}
+A prospective registry study evaluating a primary melanoma gene signature for sentinel node prediction and prognostic stratification.
+:::
+:::
+
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## The clinical question
+
+Gene expression profiling has been proposed as a way to add biologic information to conventional clinicopathologic risk assessment in melanoma.
+
+This Research Forum session focused on the MERLIN_001 study and its evaluation of a primary melanoma gene signature designed to predict sentinel node status and refine prognostic assessment in patients with sentinel node-negative disease.
+
+:::
+
+::: {.forum-entry-takeaway .fade-in}
+[Central Question]{.forum-entry-takeaway-label}
+
+Can molecular information from the primary melanoma meaningfully improve prediction of sentinel node status and subsequent prognosis?
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## Questions explored
+
+::: {.forum-entry-grid}
+
+::: {.forum-entry-mini-card}
+### Sentinel node prediction
+
+Can a melanoma gene signature identify patients with a lower or higher probability of sentinel lymph node positivity?
+:::
+
+::: {.forum-entry-mini-card}
+### Prognostic value
+
+Among patients with a negative sentinel node, can molecular profiling further distinguish clinically meaningful differences in risk?
+:::
+
+:::
+
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## The MERLIN_001 study
+
+MERLIN_001 was presented as a prospective registry study evaluating a primary melanoma gene signature for two related purposes: predicting sentinel node status and determining whether the signature provides additional prognostic information for patients with sentinel node-negative melanoma.
+
+The broader discussion centered on how such molecular information should be interpreted alongside established clinical and pathologic features rather than in isolation.
+
+:::
+
+::: {.forum-entry-takeaway .fade-in}
+[Why It Matters]{.forum-entry-takeaway-label}
+
+The clinical value of gene expression profiling depends not simply on whether it is prognostic, but on whether it meaningfully improves decisions beyond information already available from conventional staging and clinicopathologic risk factors.
+:::
+
+::: {.forum-entry-section .fade-in}
+
+## Research Forum focus
+
+The session provided an opportunity to examine the MERLIN results in the broader context of melanoma staging, sentinel lymph node biopsy, prognostic biomarkers, and the appropriate role of molecular testing in clinical decision-making.
+
+::: {.forum-entry-links}
+[Research Forum](../../research_forum.qmd){.forum-entry-link}
+[Presentation Archive](../../research_forum.qmd#presentations){.forum-entry-link .secondary}
+:::
+
+:::
+
+::: {.forum-entry-note}
+Society of Cutaneous Oncology Research Forum. Research discussions presented through the Forum may include evolving evidence and should be interpreted in that context.
+:::
+
+::::
+::::
+:::::
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in");
+
+    if (!("IntersectionObserver" in window)) {
+      elements.forEach(el => el.classList.add("visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
