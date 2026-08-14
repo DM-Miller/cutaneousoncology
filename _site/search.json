@@ -431,7 +431,7 @@
     "href": "research_forum.html",
     "title": "Research Forum",
     "section": "",
-    "text": "Open research discussion · collaborative science\n\n\n\nThe SoCO Research Forum is a recurring multidisciplinary space for investigators to share work in progress, test ideas, refine methods, and develop collaborative projects across cutaneous oncology.\n\nExplore presentations Journal Club Journal"
+    "text": "SoCO Research Forum\n\n\n\nThe Research Forum is a recurring multidisciplinary space for investigators to present work in progress, challenge assumptions, refine methods, and develop collaborative projects across cutaneous oncology.\n\nExplore presentations Journal Club Journal"
   },
   {
     "objectID": "research_forum.html#overview",
@@ -816,7 +816,7 @@
     "href": "research_forum.html#presentations",
     "title": "Research Forum",
     "section": "Presentations",
-    "text": "Presentations\nExplore prior Research Forum discussions, methods sessions, trial concepts, and collaborative projects."
+    "text": "Presentations\nExplore prior discussions, methods sessions, trial concepts, preliminary analyses, and projects that were brought to the Forum while still in motion."
   },
   {
     "objectID": "research_forum/FIRST/index.html",
@@ -1048,5 +1048,19 @@
     "title": "The Hidden Problem in Dermatology Research",
     "section": "Why bring this to the Research Forum?",
     "text": "Why bring this to the Research Forum?\nThe presentation was intentionally framed as work in progress. The empirical analysis, measurement strategy, and broader Open Inference framework were presented while they were still open to criticism and revision.\nThat reflects the purpose of the SoCO Research Forum itself: bringing ideas forward early enough that colleagues can challenge assumptions, expose weaknesses, and improve the work before the story becomes fixed.\n\nResearch Forum Presentation Archive"
+  },
+  {
+    "objectID": "research_forum.html#good-science-gets-better-through-criticism.",
+    "href": "research_forum.html#good-science-gets-better-through-criticism.",
+    "title": "Research Forum",
+    "section": "Good science gets better through criticism.",
+    "text": "Good science gets better through criticism.\nMany clinical investigators first receive sustained criticism only after a study has been designed, analyzed, and written.\nThe Research Forum creates space to bring ideas forward while there is still time to change them—from an early clinical question or trial concept to preliminary analyses, methodological problems, and mature projects seeking broader multidisciplinary input.\nThe goal is not simply to present work. It is to make the work better."
+  },
+  {
+    "objectID": "research_forum.html#our-best-ideas-deserve-our-colleagues-best-criticism.",
+    "href": "research_forum.html#our-best-ideas-deserve-our-colleagues-best-criticism.",
+    "title": "Research Forum",
+    "section": "Our best ideas deserve our colleagues’ best criticism.",
+    "text": "Our best ideas deserve our colleagues’ best criticism.\nResearch Forum presentations may include new study concepts, trial designs, preliminary data, statistical or methodological questions, reproducibility challenges, data-sharing opportunities, and collaborative projects across the spectrum of cutaneous oncology.\nThe work may be early. It may be incomplete. That is the point."
   }
 ]

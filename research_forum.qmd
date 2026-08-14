@@ -20,12 +20,12 @@ listing:
 :::: {.soco-forum-hero-copy}
 
 ::: {.soco-eyebrow}
-Open research discussion · collaborative science
+SoCO Research Forum
 :::
 
 # Bring the work before it’s finished.
 
-The SoCO Research Forum is a recurring multidisciplinary space for investigators to share work in progress, test ideas, refine methods, and develop collaborative projects across cutaneous oncology.
+The Research Forum is a recurring multidisciplinary space for investigators to present work in progress, challenge assumptions, refine methods, and develop collaborative projects across cutaneous oncology.
 
 ::: {.soco-actions}
 [Explore presentations](#presentations){.btn .btn-primary}
@@ -39,39 +39,43 @@ The SoCO Research Forum is a recurring multidisciplinary space for investigators
 
 ::: {.soco-section .soco-forum-intro}
 
-## A forum for ideas in motion
+::: {.soco-eyebrow}
+Why the Forum exists
+:::
 
-Good research gets better through discussion.
+## Good science gets better through criticism.
 
-The Research Forum creates space to bring forward projects **while there is still time to change them**—from an early clinical question or trial concept to preliminary analyses, methodological problems, and mature projects seeking broader multidisciplinary input.
+Many clinical investigators first receive sustained criticism only after a study has been designed, analyzed, and written.
 
-Presentations are informal, constructive, and discussion-driven.
+The Research Forum creates space to bring ideas forward **while there is still time to change them**—from an early clinical question or trial concept to preliminary analyses, methodological problems, and mature projects seeking broader multidisciplinary input.
+
+The goal is not simply to present work. It is to make the work better.
 
 :::
 
 ::: {.soco-section .soco-forum-principles}
 
-<div class="soco-card-grid">
+::: {.soco-card-grid}
 
 ::: {.soco-card}
 ### Share early
 
-Bring a research question, study concept, trial design, or analysis before every decision has been made.
+Bring forward the question, design, or analysis before every consequential decision has been made.
 :::
 
 ::: {.soco-card}
 ### Invite criticism
 
-Make assumptions visible, identify uncertainty, and use multidisciplinary discussion to strengthen the work.
+Make assumptions visible and give colleagues room to challenge the framing, methods, and interpretation.
 :::
 
 ::: {.soco-card}
 ### Build together
 
-Find collaborators, connect complementary expertise, and create opportunities for multicenter science.
+Use discussion to identify collaborators, complementary expertise, and opportunities for multicenter science.
 :::
 
-</div>
+:::
 
 :::
 
@@ -80,12 +84,14 @@ Find collaborators, connect complementary expertise, and create opportunities fo
 ::: {.soco-forum-callout-inner}
 
 ::: {.soco-eyebrow}
-What belongs here?
+The working principle
 :::
 
-## From first question to final analysis.
+## Our best ideas deserve our colleagues’ best criticism.
 
-Research Forum discussions may include **new study concepts, clinical trial designs, preliminary data, statistical or methodological questions, data-sharing opportunities, reproducibility challenges, and collaborative projects** across the spectrum of skin cancer research.
+Research Forum presentations may include **new study concepts, trial designs, preliminary data, statistical or methodological questions, reproducibility challenges, data-sharing opportunities, and collaborative projects** across the spectrum of cutaneous oncology.
+
+The work may be early. It may be incomplete. That is the point.
 
 :::
 
@@ -101,7 +107,7 @@ Research Forum archive
 
 ## Presentations {#presentations}
 
-Explore prior Research Forum discussions, methods sessions, trial concepts, and collaborative projects.
+Explore prior discussions, methods sessions, trial concepts, preliminary analyses, and projects that were brought to the Forum while still in motion.
 
 :::
 
@@ -109,3 +115,42 @@ Explore prior Research Forum discussions, methods sessions, trial concepts, and 
 :::
 
 :::
+
+
+<!-- =========================================================
+     OPTIONAL SCSS ADDITIONS
+     Add these rules to theme.scss if they are not already present.
+     ========================================================= -->
+
+<style>
+  .soco-forum-hero-inner {
+    min-height: 430px;
+  }
+
+  .soco-forum-intro {
+    max-width: 900px;
+  }
+
+  .soco-forum-principles .soco-card {
+    min-height: 190px;
+    padding: 1.5rem;
+  }
+
+  .soco-forum-callout-inner {
+    background:
+      radial-gradient(
+        circle at 90% 16%,
+        rgba(15, 127, 134, 0.09),
+        transparent 30%
+      ),
+      linear-gradient(135deg, #ffffff 0%, #f7fafb 100%);
+  }
+
+  .soco-forum-callout-inner h2 {
+    max-width: 880px;
+  }
+
+  .soco-forum-archive {
+    margin-top: 6rem;
+  }
+</style>
