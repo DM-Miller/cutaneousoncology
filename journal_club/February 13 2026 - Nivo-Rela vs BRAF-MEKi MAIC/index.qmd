@@ -1,0 +1,989 @@
+---
+title: "Nivolumab + Relatlimab vs BRAF/MEK Inhibitors"
+pagetitle: "MAIC in BRAF-Mutant Melanoma | SoCO Journal Club"
+description: "Meeting recap from the February 13, 2026 Society of Cutaneous Oncology Journal Club discussing matching-adjusted indirect comparisons, nivolumab plus relatlimab, and BRAF/MEK inhibitors in BRAF-mutant advanced melanoma."
+date: 2026-02-13
+author: "Society of Cutaneous Oncology"
+categories:
+  - 2026
+  - Journal Club
+  - Melanoma
+  - Indirect Comparisons
+  - MAIC
+tags:
+  - Melanoma
+  - MAIC
+  - Nivolumab
+  - Relatlimab
+  - BRAF
+  - MEK
+image: card.svg
+page-layout: full
+title-block-style: none
+toc: false
+---
+
+<style>
+:root {
+  --navy:#082D4D;
+  --teal:#28A9A2;
+  --coral:#E25A4E;
+  --ink:#31424E;
+  --muted:#6B747B;
+  --pale:#F3F8F8;
+  --line:#D9E8E8;
+  --white:#FFFFFF;
+}
+
+#title-block-header,
+.quarto-title-block,
+.quarto-title,
+.quarto-title-meta {
+  display:none !important;
+}
+
+body {
+  color:var(--ink);
+  background:#fff;
+}
+
+main.content {
+  max-width:1120px;
+  margin:auto;
+  padding-top:0 !important;
+}
+
+h1,h2,h3 {
+  color:var(--navy);
+  font-weight:800;
+}
+
+.hero {
+  position:relative;
+  overflow:hidden;
+  margin:2rem 0 2.4rem;
+  padding:2.8rem 3rem;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(40,169,162,.11), transparent 31%),
+    linear-gradient(135deg,#F3F8F8 0%,#FFFFFF 72%);
+  box-shadow:0 10px 30px rgba(8,45,77,.07);
+}
+
+.hero::after {
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  top:-80px;
+  right:-50px;
+  opacity:.18;
+  background-image:radial-gradient(circle,rgba(40,169,162,.7) 0 1.2px,transparent 1.8px);
+  background-size:26px 26px;
+  mask-image:radial-gradient(circle,#000 0%,transparent 72%);
+  -webkit-mask-image:radial-gradient(circle,#000 0%,transparent 72%);
+  pointer-events:none;
+}
+
+.kicker,.section-kicker {
+  color:var(--teal);
+  font-weight:800;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  font-size:.8rem;
+}
+
+.hero h1 {
+  position:relative;
+  z-index:1;
+  max-width:940px;
+  margin:.55rem 0 .8rem;
+  color:var(--navy);
+  font-size:clamp(2.7rem,5vw,4.1rem);
+  line-height:1.02;
+  letter-spacing:-.04em;
+}
+
+.hero-copy {
+  position:relative;
+  z-index:1;
+  max-width:850px;
+  color:#56636D;
+  font-size:1.2rem;
+  line-height:1.65;
+}
+
+.accent {
+  width:94px;
+  height:5px;
+  margin-top:1.4rem;
+  border-radius:4px;
+  background:linear-gradient(90deg,var(--teal) 0 68%,var(--coral) 68%);
+}
+
+.link-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.7rem;
+  margin-top:1.25rem;
+}
+
+.soco-link {
+  display:inline-flex;
+  padding:.58rem .9rem;
+  border-radius:999px;
+  background:var(--navy);
+  color:#fff !important;
+  text-decoration:none;
+  font-size:.88rem;
+  font-weight:750;
+}
+
+.soco-link.secondary {
+  background:rgba(255,255,255,.85);
+  border:1px solid rgba(40,169,162,.42);
+  color:var(--navy) !important;
+}
+
+.metric-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+  margin:1.4rem 0 2rem;
+}
+
+.metric-card {
+  padding:1.35rem 1.4rem;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(8,45,77,.05);
+}
+
+.metric-label {
+  display:block;
+  color:var(--muted);
+  font-size:.8rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.09em;
+}
+
+.metric-value {
+  display:block;
+  margin:.35rem 0;
+  color:var(--navy);
+  font-size:2.35rem;
+  font-weight:850;
+  line-height:1.05;
+}
+
+.metric-note {
+  color:var(--muted);
+  font-size:.92rem;
+  line-height:1.45;
+}
+
+.section-kicker {
+  margin-top:2.8rem;
+}
+
+.section-intro {
+  max-width:880px;
+  margin-bottom:1.2rem;
+  color:#56636D;
+  font-size:1.05rem;
+  line-height:1.7;
+}
+
+.paper-card {
+  max-width:980px;
+  margin:1.2rem auto 0;
+  padding:1.75rem 2rem 1.7rem;
+  border-left:7px solid var(--teal);
+  border-radius:0 20px 20px 0;
+  background:linear-gradient(135deg,rgba(40,169,162,.085),rgba(8,45,77,.035));
+  box-shadow:0 12px 30px rgba(8,45,77,.08);
+}
+
+.paper-eyebrow {
+  margin-bottom:.65rem;
+  color:var(--teal);
+  font-size:.78rem;
+  font-weight:850;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.paper-title {
+  margin:0 0 .85rem;
+  color:var(--navy);
+  font-size:1.62rem;
+  font-weight:850;
+  line-height:1.22;
+  letter-spacing:-.015em;
+}
+
+.paper-citation {
+  color:#52616D;
+  font-size:.98rem;
+  line-height:1.45;
+}
+
+.question-card {
+  margin:1.35rem 0 2rem;
+  padding:1.3rem 1.45rem;
+  border-left:6px solid var(--coral);
+  border-radius:0 16px 16px 0;
+  background:#FFF7F5;
+  color:#5B423D;
+  font-size:1.08rem;
+  font-weight:700;
+  line-height:1.55;
+}
+
+.maic-primer {
+  margin:1.4rem 0 2.2rem;
+  padding:1.5rem;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 92% 12%,rgba(40,169,162,.10),transparent 28%),
+    linear-gradient(135deg,#F7FBFB 0%,#FFFFFF 72%);
+  box-shadow:0 8px 24px rgba(8,45,77,.05);
+}
+
+.maic-flow {
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr;
+  gap:.6rem;
+  align-items:stretch;
+  margin:1rem 0 1.2rem;
+}
+
+.maic-step {
+  padding:1rem 1.05rem;
+  border:1px solid var(--line);
+  border-radius:15px;
+  background:#fff;
+}
+
+.maic-step strong {
+  display:block;
+  margin-bottom:.35rem;
+  color:var(--teal);
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+.maic-step span {
+  color:var(--navy);
+  font-size:.94rem;
+  font-weight:750;
+  line-height:1.45;
+}
+
+.maic-arrow {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--coral);
+  font-size:1.35rem;
+  font-weight:900;
+}
+
+.maic-insight-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:.75rem;
+  margin-top:1rem;
+}
+
+.maic-insight {
+  padding:.95rem;
+  border-top:4px solid var(--teal);
+  border-radius:12px;
+  background:#F4FAF9;
+}
+
+.maic-insight strong {
+  display:block;
+  color:var(--navy);
+  font-size:.9rem;
+  margin-bottom:.3rem;
+}
+
+.maic-insight span {
+  color:#526574;
+  font-size:.84rem;
+  line-height:1.45;
+}
+
+.highlight-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+  margin:1.2rem 0 1.5rem;
+}
+
+.highlight-card {
+  padding:1.2rem 1.25rem;
+  border:1px solid #DCE8EB;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 5px 18px rgba(8,45,77,.045);
+}
+
+.highlight-num {
+  color:var(--coral);
+  font-weight:900;
+  font-size:.8rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.highlight-card h3 {
+  margin:.25rem 0 .55rem;
+  font-size:1.08rem;
+}
+
+.highlight-card p {
+  margin:0;
+  color:#405463;
+  font-size:.94rem;
+  line-height:1.5;
+}
+
+.caution-note {
+  margin:1rem 0 1.5rem;
+  padding:1rem 1.15rem;
+  border-left:5px solid #E6A34A;
+  border-radius:0 12px 12px 0;
+  background:#FFF8F0;
+  color:#59462E;
+  font-size:.92rem;
+  line-height:1.55;
+}
+
+.standout-card {
+  position:relative;
+  overflow:hidden;
+  margin:1.15rem 0 1.65rem;
+  padding:1.35rem 1.45rem 1.25rem;
+  border:1px solid #E9C85F;
+  border-left:7px solid #D7A400;
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 92% 18%,rgba(255,255,255,.58),transparent 28%),
+    linear-gradient(135deg,#FFF8D8 0%,#FDE9A9 100%);
+  box-shadow:0 10px 28px rgba(116,83,0,.10);
+}
+
+.standout-title {
+  margin:0 0 .35rem;
+  color:#765308;
+  font-size:1.1rem;
+  font-weight:850;
+}
+
+.standout-copy {
+  max-width:900px;
+  margin:0;
+  color:#735F2C;
+  font-size:.94rem;
+  line-height:1.55;
+}
+
+.standout-pills {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.55rem;
+  margin-top:.95rem;
+}
+
+.standout-pill {
+  display:inline-flex;
+  padding:.5rem .72rem;
+  border:1px solid rgba(118,83,8,.18);
+  border-radius:999px;
+  background:rgba(255,255,255,.82);
+  color:#57420D;
+  font-size:.86rem;
+  font-weight:780;
+  box-shadow:0 2px 7px rgba(116,83,0,.08);
+}
+
+.roster-summary {
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:1rem;
+  margin:0 0 .8rem;
+  padding:.95rem 1.05rem;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#F9FBFB;
+}
+
+.roster-summary strong {
+  color:var(--navy);
+  font-size:1rem;
+}
+
+.roster-summary span {
+  color:var(--muted);
+  font-size:.84rem;
+}
+
+.attendance-scroll {
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  border-radius:16px;
+}
+
+.attendance-table {
+  width:100%;
+  min-width:690px;
+  border-collapse:separate;
+  border-spacing:0;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(8,45,77,.045);
+}
+
+.attendance-table thead th {
+  padding:.72rem .75rem;
+  background:var(--navy);
+  color:#fff;
+  border:0;
+  font-size:.78rem;
+  font-weight:800;
+  text-align:center;
+}
+
+.attendance-table thead th:first-child {
+  text-align:left;
+}
+
+.attendance-table tbody td {
+  padding:.66rem .75rem;
+  border-top:1px solid #E9EFF1;
+  color:#334857;
+  font-size:.88rem;
+  text-align:center;
+}
+
+.attendance-table tbody tr:nth-child(even) td:not(.minutes-cell) {
+  background:#FBFDFD;
+}
+
+.attendance-table .name-cell {
+  color:var(--navy);
+  font-weight:750;
+  text-align:left;
+}
+
+.attendance-table .minutes-cell {
+  color:#17384C;
+  font-variant-numeric:tabular-nums;
+}
+
+.attendance-table .signal-cell {
+  color:#7A868E;
+}
+
+.attendance-table .signal-on {
+  color:var(--teal);
+  font-weight:900;
+}
+
+.footer-card {
+  margin:3rem 0 1rem;
+  padding:1.8rem 2rem;
+  background:var(--navy);
+  color:#fff;
+  border-radius:20px;
+}
+
+.footer-card h2 {
+  color:#fff;
+  margin-top:0;
+}
+
+.footer-card p {
+  margin-bottom:0;
+  color:#EAF2F5;
+}
+
+@media(max-width:760px) {
+  main.content {
+    width:100%;
+    max-width:100%;
+    padding-left:.85rem !important;
+    padding-right:.85rem !important;
+    overflow-x:hidden;
+  }
+
+  .metric-grid,
+  .highlight-grid,
+  .maic-insight-grid {
+    grid-template-columns:1fr;
+  }
+
+  .hero {
+    margin-top:1rem;
+    padding:1.55rem 1.15rem;
+    border-radius:18px;
+  }
+
+  .hero h1 {
+    font-size:clamp(2rem,10vw,2.55rem);
+  }
+
+  .hero-copy {
+    font-size:1rem;
+    line-height:1.55;
+  }
+
+  .link-row {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .soco-link {
+    justify-content:center;
+    width:100%;
+  }
+
+  .paper-card {
+    padding:1.2rem 1rem;
+  }
+
+  .maic-primer {
+    padding:1.05rem;
+  }
+
+  .maic-flow {
+    grid-template-columns:1fr;
+  }
+
+  .maic-arrow {
+    transform:rotate(90deg);
+    min-height:18px;
+  }
+
+  .standout-card {
+    padding:1.1rem 1rem;
+  }
+
+  .standout-pills {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .standout-pill {
+    width:100%;
+  }
+
+  .roster-summary {
+    display:block;
+  }
+
+  .roster-summary span {
+    display:block;
+    margin-top:.3rem;
+  }
+
+  .attendance-table {
+    min-width:690px;
+  }
+
+  .footer-card {
+    padding:1.3rem 1.15rem;
+    border-radius:16px;
+  }
+}
+</style>
+
+```{r}
+#| label: setup-attendance
+#| echo: false
+#| message: false
+#| warning: false
+
+resolve_meeting_dir <- function() {
+
+  if (exists("meeting_dir", inherits = TRUE)) {
+    candidate <- get("meeting_dir", inherits = TRUE)
+    if (dir.exists(candidate)) {
+      return(normalizePath(candidate, winslash = "/", mustWork = TRUE))
+    }
+  }
+
+  qmd_candidate <- tryCatch(
+    knitr::current_input(dir = TRUE),
+    error = function(e) NULL
+  )
+
+  if (!is.null(qmd_candidate) && length(qmd_candidate) == 1 && nzchar(qmd_candidate)) {
+    qmd_candidate <- normalizePath(qmd_candidate, winslash = "/", mustWork = TRUE)
+    return(dirname(qmd_candidate))
+  }
+
+  if (interactive() && requireNamespace("rstudioapi", quietly = TRUE)) {
+    ctx <- tryCatch(rstudioapi::getSourceEditorContext(), error = function(e) NULL)
+    if (!is.null(ctx) && nzchar(ctx$path)) {
+      current <- normalizePath(ctx$path, winslash = "/", mustWork = TRUE)
+      if (basename(current) == "index.qmd") return(dirname(current))
+      if (basename(dirname(current)) == "scripts") return(dirname(dirname(current)))
+    }
+  }
+
+  stop("Could not resolve the February 13 meeting directory.")
+}
+
+meeting_dir <- resolve_meeting_dir()
+
+attendance_dir <- file.path(
+  meeting_dir,
+  "files",
+  "meeting recap-attendance"
+)
+
+clean_path <- file.path(attendance_dir, "attendance_clean.csv")
+summary_path <- file.path(attendance_dir, "attendance_summary.csv")
+
+if (!file.exists(clean_path) || !file.exists(summary_path)) {
+  source(
+    file.path(meeting_dir, "scripts", "process_attendance.R"),
+    local = TRUE
+  )
+}
+
+people <- readr::read_csv(clean_path, show_col_types = FALSE)
+headline <- readr::read_csv(summary_path, show_col_types = FALSE)
+```
+
+<div class="hero">
+
+<div class="kicker">SoCO Journal Club · February 13, 2026</div>
+
+# How much can reweighting really buy us?
+
+<p class="hero-copy">
+A Journal Club on nivolumab plus relatlimab versus BRAF/MEK inhibitors in BRAF-mutant advanced melanoma — and, more fundamentally, on how matching-adjusted indirect comparisons try to answer a treatment question when the randomized comparison does not exist.
+</p>
+
+<div class="accent"></div>
+
+<div class="link-row">
+<a class="soco-link" href="https://doi.org/10.1136/bmjonc-2025-000912">Read the article</a>
+<a class="soco-link secondary" href="../../jc.qmd">Back to Journal Club</a>
+</div>
+
+</div>
+
+
+<div class="section-kicker">Meeting pulse</div>
+
+## Thirty people joined — and the methods kept us there
+
+<div class="metric-grid">
+
+<div class="metric-card">
+<span class="metric-label">People represented</span>
+<span class="metric-value">30</span>
+<span class="metric-note">Unique Teams connections in the attendance export</span>
+</div>
+
+<div class="metric-card">
+<span class="metric-label">Median time together</span>
+<span class="metric-value">82 min</span>
+<span class="metric-note">Half the room stayed at least this long</span>
+</div>
+
+<div class="metric-card">
+<span class="metric-label">Stayed ≥ 60 minutes</span>
+<span class="metric-value">57%</span>
+<span class="metric-note">The meeting ran just over two hours</span>
+</div>
+
+</div>
+
+
+<div class="section-kicker">The paper</div>
+
+## NIVO + RELA versus BRAF/MEK inhibitors
+
+<div class="paper-card">
+
+<div class="paper-eyebrow">Primary article · BMJ Oncology</div>
+
+<div class="paper-title">
+Efficacy of nivolumab plus relatlimab versus BRAF/MEK inhibitors for first-line treatment of BRAF-mutant advanced melanoma: a matching-adjusted indirect comparison
+</div>
+
+<div class="paper-citation">
+<strong>Miller DM, et al.</strong> <em>BMJ Oncology.</em> 2025;4:e000912.<br>
+doi: 10.1136/bmjonc-2025-000912
+</div>
+
+<div class="link-row">
+<a class="soco-link" href="https://doi.org/10.1136/bmjonc-2025-000912">Read the article</a>
+</div>
+
+</div>
+
+<div class="question-card">
+The clinical question was straightforward. The evidentiary problem was not: <strong>what can we infer about NIVO + RELA versus BRAF/MEK therapy when no head-to-head randomized trial exists?</strong>
+</div>
+
+
+<div class="section-kicker">MAIC primer</div>
+
+## The meeting spent real time opening the black box
+
+<div class="section-intro">
+Much of the session was devoted not simply to the paper's result, but to the mechanics of the method itself. A matching-adjusted indirect comparison starts with individual patient data from one trial and reweights those patients until their weighted baseline characteristics resemble the published aggregate population from another trial.
+</div>
+
+<div class="maic-primer">
+
+<div class="maic-flow">
+
+<div class="maic-step">
+<strong>01 · Start with IPD</strong>
+<span>RELATIVITY-047 provided patient-level data for the BRAF-mutant NIVO + RELA cohort.</span>
+</div>
+
+<div class="maic-arrow">→</div>
+
+<div class="maic-step">
+<strong>02 · Match what is observable</strong>
+<span>Weights are chosen so the weighted NIVO + RELA cohort matches baseline characteristics reported in each comparator trial.</span>
+</div>
+
+<div class="maic-arrow">→</div>
+
+<div class="maic-step">
+<strong>03 · Compare outcomes</strong>
+<span>Weighted outcome models then compare OS, PFS, ORR, and safety across the reweighted populations.</span>
+</div>
+
+</div>
+
+<div class="maic-insight-grid">
+
+<div class="maic-insight">
+<strong>The overlap constraint</strong>
+<span>You can only adjust for characteristics measured in the IPD trial and actually reported by the comparator publication.</span>
+</div>
+
+<div class="maic-insight">
+<strong>The weights matter</strong>
+<span>Patients who resemble the target comparator population contribute more; patients who resemble it less contribute less.</span>
+</div>
+
+<div class="maic-insight">
+<strong>ESS is the price</strong>
+<span>Reweighting can reduce effective sample size, revealing how much information remains after forcing the populations to look alike.</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="caution-note">
+<strong>What MAIC cannot do:</strong> an unanchored MAIC can only adjust for measured and reported cross-trial differences. Unmeasured prognostic factors, treatment-effect modifiers, eligibility differences, assessment schedules, subsequent therapies, and censoring conventions can still bias the comparison.
+</div>
+
+
+<div class="section-kicker">What the paper found</div>
+
+## A clinically familiar pattern emerged
+
+<div class="highlight-grid">
+
+<div class="highlight-card">
+<div class="highlight-num">01 · Overall survival</div>
+<h3>Longer-term OS favored NIVO + RELA</h3>
+<p>After matching, NIVO + RELA was associated with better longer-term OS versus the BRAF/MEK doublets; the comparison with the atezolizumab-containing triplet also favored NIVO + RELA overall.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">02 · Progression-free survival</div>
+<h3>Early and late effects were different</h3>
+<p>The proportional-hazards assumption did not hold cleanly. Early PFS was similar or sometimes favored targeted therapy, while later PFS tended to favor NIVO + RELA. That motivated interval Cox models rather than one global hazard ratio.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">03 · Response rate</div>
+<h3>BRAF/MEK therapy still won on ORR</h3>
+<p>Objective response rate was lower with NIVO + RELA than with each comparator — an important reminder that early tumor shrinkage and long-term survival are not interchangeable treatment attributes.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">04 · Toxicity</div>
+<h3>Severe adverse events favored NIVO + RELA</h3>
+<p>After matching, grade 3/4 adverse events were less frequent with NIVO + RELA than with the BRAF/MEK doublets, with a similarly favorable comparison against the atezolizumab-containing triplet.</p>
+</div>
+
+</div>
+
+
+<div class="section-kicker">What stuck with us</div>
+
+## The methodological lesson was at least as important as the treatment comparison
+
+<div class="highlight-grid">
+
+<div class="highlight-card">
+<div class="highlight-num">01 · Transparency</div>
+<h3>Show the analytic machinery</h3>
+<p>The presentation deliberately walked through synthetic data, Kaplan–Meier reconstruction, variable matching, patient weights, rescaling, and weighted outcome models. The goal was to make MAIC feel traceable rather than magical.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">02 · Covariate availability</div>
+<h3>The comparison is limited by what both studies tell you</h3>
+<p>A clinically important variable cannot be adjusted for if it was not measured in the IPD source or not reported in the comparator publication. The apparent precision of a weighted estimate does not remove that structural limitation.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">03 · Effective sample size</div>
+<h3>Balance can cost information</h3>
+<p>The original BRAF-mutant NIVO + RELA cohort contained 136 patients, but effective sample sizes after matching varied substantially across comparisons. ESS is therefore not a decorative diagnostic; it helps show how aggressive the reweighting had to become.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">04 · Interpretation</div>
+<h3>Association after adjustment is not randomization</h3>
+<p>The final comparison may be more credible than a naïve cross-trial contrast, but it remains an unanchored observational comparison across trials. Residual confounding should stay visible in the conclusion.</p>
+</div>
+
+</div>
+
+
+<div class="section-kicker">Our community</div>
+
+## Discussion standouts
+
+<div class="standout-card">
+
+<div class="standout-title">🏅 Thanks for helping us unpack MAIC</div>
+
+<p class="standout-copy">
+A special thank-you to five colleagues whose questions, explanations, and perspectives helped make an unusually methods-heavy Journal Club accessible and useful.
+</p>
+
+<div class="standout-pills">
+<span class="standout-pill">Adewunmi O. Adelaja</span>
+<span class="standout-pill">Sameer Gupta</span>
+<span class="standout-pill">Frank Worden</span>
+<span class="standout-pill">David M. Miller</span>
+</div>
+
+</div>
+
+<div class="section-intro">
+The Teams record is retained with the meeting materials. There was no archived community-tenure survey available for this recap, so the table below sticks to the attendance record itself.
+</div>
+
+```{r}
+#| label: attendance-table
+#| results: asis
+#| echo: false
+
+roster <- people |>
+  dplyr::transmute(
+    Name,
+    Minutes = round(duration_min),
+    Camera = dplyr::if_else(any_camera, "●", "—"),
+    Unmuted = dplyr::if_else(any_unmute, "●", "—"),
+    `Raised hand` = dplyr::if_else(any_hand_raise, "●", "—")
+  ) |>
+  dplyr::arrange(desc(Minutes), Name)
+
+cat(
+  paste0(
+    '<div class="roster-summary">',
+      '<strong>', nrow(roster), ' people represented</strong>',
+      '<span>Sorted by time in meeting · ● indicates the Teams signal was recorded at least once</span>',
+    '</div>'
+  )
+)
+
+min_minutes <- min(roster$Minutes, na.rm = TRUE)
+max_minutes <- max(roster$Minutes, na.rm = TRUE)
+
+minute_fill <- function(x) {
+  if (max_minutes == min_minutes) return("rgba(40,169,162,.18)")
+  alpha <- 0.06 + 0.28 * ((x - min_minutes) / (max_minutes - min_minutes))
+  sprintf("rgba(40,169,162,%.3f)", alpha)
+}
+
+html_escape <- function(x) {
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  x <- gsub(">", "&gt;", x, fixed = TRUE)
+  x
+}
+
+cat('<div class="attendance-scroll">')
+cat('<table class="attendance-table">')
+cat(
+  '<thead><tr>',
+  '<th>Name</th>',
+  '<th>Minutes</th>',
+  '<th>Camera</th>',
+  '<th>Unmuted</th>',
+  '<th>Raised hand</th>',
+  '</tr></thead><tbody>'
+)
+
+for (i in seq_len(nrow(roster))) {
+
+  row <- roster[i, ]
+
+  signal_cell <- function(value) {
+    cls <- if (identical(value, "●")) " signal-on" else ""
+    paste0('<td class="signal-cell', cls, '">', value, '</td>')
+  }
+
+  cat(
+    '<tr>',
+      '<td class="name-cell">', html_escape(row$Name), '</td>',
+      '<td class="minutes-cell" style="background:', minute_fill(row$Minutes), ';">',
+        row$Minutes,
+      '</td>',
+      signal_cell(row$Camera),
+      signal_cell(row$Unmuted),
+      signal_cell(row$`Raised hand`),
+    '</tr>'
+  )
+}
+
+cat('</tbody></table></div>')
+```
+
+
+<div class="footer-card">
+
+## The comparison improved. The uncertainty did not disappear.
+
+<p>
+That may be the most useful way to think about an unanchored MAIC. Reweighting can make two trial populations more comparable on the characteristics we can see. It cannot create the randomized comparison we wish had been done — and it cannot balance what was never measured or reported.
+</p>
+
+</div>
+
+<div class="link-row">
+<a class="soco-link" href="../../jc.qmd">Back to Journal Club</a>
+<a class="soco-link secondary" href="https://doi.org/10.1136/bmjonc-2025-000912">Read the article</a>
+</div>
