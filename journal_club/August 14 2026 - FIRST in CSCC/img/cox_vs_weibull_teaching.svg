@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+
+  <!-- =========================================================
+       COX VERSUS WEIBULL — ANNOTATED TEACHING SVG SOURCE
+
+       SVG = XML-based vector graphics.
+       <text> draws text, <rect> draws rectangles, <path> draws
+       curves/lines, and <g> groups related objects.
+
+       ANIMATION:
+       Every major teaching beat below is wrapped in:
+         <g id="meaningful-name" class="fragment"> ... </g>
+
+       When this SVG is included INLINE in Quarto:
+         {{< include img/cox_vs_weibull_teaching.svg >}}
+
+       Reveal.js can see class="fragment" and reveal those groups
+       sequentially. XML comments like this never appear on screen.
+       ========================================================= -->
+
+  <!-- =========================================================
+       CSS — reusable visual styles
+       ========================================================= -->
+  <style>
+    text {
+      font-family: Arial, sans-serif;
+      fill: #172033;
+    }
+
+    .h1 {
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    .h2 {
+      font-size: 27px;
+      font-weight: 700;
+    }
+
+    .h3 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .body {
+      font-size: 18px;
+    }
+
+    .small {
+      font-size: 15px;
+      fill: #667085;
+    }
+
+    .box {
+      fill: #ffffff;
+      stroke: #cfd6df;
+      stroke-width: 2;
+    }
+
+    /* Keep the standalone SVG visible.
+       Quarto/Reveal CSS overrides this during the presentation. */
+    .fragment {
+      opacity: 1;
+    }
+  </style>
+
+  <!-- =========================================================
+       DEFINITIONS — reusable arrowhead
+       ========================================================= -->
+  <defs>
+    <marker
+      id="arrowhead"
+      markerWidth="10"
+      markerHeight="10"
+      refX="8"
+      refY="3"
+      orient="auto"
+    >
+      <path d="M0 0 L0 6 L9 3 z" fill="#98a2b3"/>
+    </marker>
+  </defs>
+
+  <!-- =========================================================
+       FRAGMENT 1 — INTRODUCTION
+       Title, same landmark cohort, and branching arrows.
+       ========================================================= -->
+
+  <g id="intro" class="fragment">
+    <text x="800" y="58" text-anchor="middle" class="h1">Why Weibull rather than Cox?</text>
+    <text x="800" y="92" text-anchor="middle" class="body">Same survival data • different modeling trade-offs • model choice follows the analytic goal</text>
+    <rect x="620" y="115" width="360" height="62" rx="14" class="box"/>
+    <text x="800" y="143" text-anchor="middle" class="h3">Same landmark cohort</text>
+    <text x="800" y="166" text-anchor="middle" class="small">time-to-event + censoring + covariates</text>
+    <path d="M800 177L430 220M800 177L1170 220" stroke="#98a2b3" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    </g>
+
+  <!-- =========================================================
+       FRAGMENT 2 — COX MODEL
+       Cox parameterizes covariate effects while leaving the baseline hazard unspecified.
+       ========================================================= -->
+
+  <g id="cox-model" class="fragment">
+    <rect x="90" y="220" width="650" height="410" rx="22" fill="#fff" stroke="#496a91" stroke-width="2"/>
+    <text x="415" y="258" text-anchor="middle" class="h2">COX PROPORTIONAL HAZARDS</text>
+    <text x="415" y="287" text-anchor="middle" class="body">Let the baseline hazard be whatever it wants</text>
+    <text x="415" y="333" text-anchor="middle" class="h3">h(t|X) = h₀(t) × exp(Xβ)</text>
+    <text x="415" y="360" text-anchor="middle" class="small">h₀(t) is left unspecified</text>
+    <path d="M155 450C185 390 205 448 230 405S275 450 325 400" fill="none" stroke="#496a91" stroke-width="4"/>
+    <text x="390" y="406" class="body">✓ Flexible baseline hazard</text>
+    <text x="390" y="444" class="body">✓ Excellent for adjusted relative effects</text>
+    <text x="390" y="482" class="body">✓ Fewer distributional assumptions</text>
+    <rect x="250" y="520" width="330" height="72" rx="14" fill="#edf3f8" stroke="#496a91"/>
+    <text x="415" y="550" text-anchor="middle" class="h3">Natural emphasis</text>
+    <text x="415" y="578" text-anchor="middle" class="body">Adjusted hazard ratio</text>
+    </g>
+
+  <!-- =========================================================
+       FRAGMENT 3 — WEIBULL MODEL
+       Weibull explicitly parameterizes the baseline hazard and supports a fully specified survival distribution.
+       ========================================================= -->
+
+  <g id="weibull-model" class="fragment">
+    <rect x="860" y="220" width="650" height="410" rx="22" fill="#fff" stroke="#9b4f6f" stroke-width="2"/>
+    <text x="1185" y="258" text-anchor="middle" class="h2">BAYESIAN WEIBULL</text>
+    <text x="1185" y="287" text-anchor="middle" class="body">Explicitly model the baseline hazard</text>
+    <text x="1185" y="333" text-anchor="middle" class="h3">h₀(t) = λ k t^(k−1)</text>
+    <text x="1185" y="360" text-anchor="middle" class="small">shape k is estimated from prior + data</text>
+    <path d="M905 450C970 430 1040 400 1115 385" fill="none" stroke="#9b4f6f" stroke-width="3"/>
+    <path d="M905 420L1115 420" fill="none" stroke="#667085" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="1165" y="406" class="body">✓ Fully specified survival distribution</text>
+    <text x="1165" y="444" class="body">✓ Natural posterior prediction</text>
+    <text x="1165" y="482" class="body">✓ Relative + absolute effects</text>
+    <rect x="1010" y="520" width="350" height="72" rx="14" fill="#fbf0f4" stroke="#9b4f6f"/>
+    <text x="1185" y="550" text-anchor="middle" class="h3">Two outputs</text>
+    <text x="1185" y="578" text-anchor="middle" class="body">HR + predicted EFS over time</text>
+    </g>
+
+  <!-- =========================================================
+       FRAGMENT 4 — WHAT COX BUYS YOU
+       The Cox-side summary/trade-off box.
+       ========================================================= -->
+
+  <g id="cox-tradeoff" class="fragment">
+    <rect x="90" y="650" width="650" height="92" rx="16" fill="#eff7f4" stroke="#8db5a8"/>
+    <text x="415" y="681" text-anchor="middle" class="h3">What Cox buys you</text>
+    <text x="415" y="710" text-anchor="middle" class="body">Robust relative effects without choosing a baseline hazard shape</text>
+    <text x="415" y="733" text-anchor="middle" class="small">Cox can also estimate adjusted survival after estimating baseline cumulative hazard.</text>
+    </g>
+
+  <!-- =========================================================
+       FRAGMENT 5 — WHAT WEIBULL BUYS YOU — AND COSTS YOU
+       Absolute posterior prediction plus the Weibull functional-form trade-off.
+       ========================================================= -->
+
+  <g id="weibull-tradeoff" class="fragment">
+    <rect x="860" y="650" width="650" height="92" rx="16" fill="#fff8e9" stroke="#d8bb7c"/>
+    <text x="1185" y="681" text-anchor="middle" class="h3">What Weibull buys you — and costs you</text>
+    <text x="1185" y="710" text-anchor="middle" class="body">Smooth, fully parametric posterior survival predictions</text>
+    <text x="1185" y="733" text-anchor="middle" class="small">Trade-off: predictions depend on adequacy of the Weibull shape assumption.</text>
+    </g>
+
+  <!-- =========================================================
+       FRAGMENT 6 — TAKE-HOME MESSAGE
+       Why Weibull matched this analysis without claiming Cox would have been wrong.
+       ========================================================= -->
+
+  <g id="why-we-chose-weibull" class="fragment">
+    <rect x="180" y="770" width="1240" height="102" rx="22" fill="#172033"/>
+    <text x="800" y="804" text-anchor="middle" style="font:700 23px Arial;fill:white">WHY WE USED WEIBULL</text>
+    <text x="800" y="836" text-anchor="middle" style="font:19px Arial;fill:white">Our goal was not only an adjusted relative hazard, but posterior absolute EFS under each dosing strategy.</text>
+    <text x="800" y="860" text-anchor="middle" style="font:15px Arial;fill:#d0d5dd">Cox was reasonable; Weibull was a parsimonious choice aligned with the estimands and posterior-prediction workflow.</text>
+    </g>
+
+  <!-- =========================================================
+       QUICK EDITING GUIDE
+
+       Change words:
+         Edit text between <text> ... </text>.
+
+       Move something:
+         Change x="" and y="".
+
+       Resize a rectangle:
+         Change width="" and height="".
+
+       Rounded corners:
+         Change rx="".
+
+       Change color:
+         Change fill="" or stroke="".
+
+       Change reveal order:
+         Move complete <g class="fragment"> groups up/down.
+
+       Add a new animation beat:
+         Wrap objects in:
+           <g id="descriptive-name" class="fragment">
+             ...
+           </g>
+
+       TIP:
+       Keep semantic IDs such as "cox-model" instead of "step2".
+       The source then doubles as the storyboard for the slide.
+       ========================================================= -->
+
+</svg>

@@ -1,0 +1,1024 @@
+---
+title: "FIRST in Cutaneous Squamous Cell Carcinoma"
+pagetitle: "FIRST in CSCC | SoCO Journal Club"
+description: "Meeting recap from the August 14, 2026 Society of Cutaneous Oncology Journal Club discussing FIRST in cutaneous squamous cell carcinoma, response-guided treatment, dose intensity, causal inference, and treatment de-escalation."
+date: 2026-08-14
+author: "Society of Cutaneous Oncology"
+categories:
+  - 2026
+  - Journal Club
+  - Cutaneous Squamous Cell Carcinoma
+  - Immunotherapy
+  - Causal Inference
+  - Bayesian Analysis
+tags:
+  - CSCC
+  - FIRST
+  - Immunotherapy
+  - Treatment De-escalation
+  - Causal Inference
+image: card.svg
+page-layout: full
+title-block-style: none
+toc: false
+---
+
+<style>
+  :root {
+    --navy: #082D4D;
+    --teal: #28A9A2;
+    --coral: #E25A4E;
+    --ink: #31424E;
+    --muted: #6B747B;
+    --pale: #F3F8F8;
+    --line: #D9E8E8;
+    --white: #FFFFFF;
+  }
+
+  #title-block-header,
+  .quarto-title-block,
+  .quarto-title,
+  .quarto-title-meta {
+    display: none !important;
+  }
+
+  body {
+    color: var(--ink);
+    background: #fff;
+  }
+
+  main.content {
+    max-width: 1120px;
+    margin: auto;
+    padding-top: 0 !important;
+  }
+
+  h1, h2, h3 {
+    color: var(--navy);
+    font-weight: 800;
+  }
+
+  .hero {
+    margin: 2rem 0 2.4rem;
+    padding: 2.8rem 3rem;
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 88% 12%, rgba(40,169,162,.11), transparent 31%),
+      linear-gradient(135deg, #F3F8F8 0%, #FFFFFF 72%);
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgba(8,45,77,.07);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: -80px;
+    right: -50px;
+    opacity: .18;
+    background-image:
+      radial-gradient(circle, rgba(40,169,162,.7) 0 1.2px, transparent 1.8px);
+    background-size: 26px 26px;
+    mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    pointer-events: none;
+  }
+
+  .kicker,
+  .section-kicker {
+    color: var(--teal);
+    font-weight: 800;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    font-size: .8rem;
+  }
+
+  .hero h1 {
+    max-width: 920px;
+    font-size: clamp(2.7rem, 5vw, 4.1rem);
+    line-height: 1.02;
+    margin: .55rem 0 .8rem;
+    letter-spacing: -.04em;
+  }
+
+  .hero-copy {
+    font-size: 1.2rem;
+    max-width: 850px;
+    color: #56636D;
+    line-height: 1.65;
+  }
+
+  .accent {
+    width: 94px;
+    height: 5px;
+    border-radius: 4px;
+    background: linear-gradient(90deg,var(--teal) 0 68%,var(--coral) 68%);
+    margin-top: 1.4rem;
+  }
+
+  .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem;
+    margin-top: 1.25rem;
+  }
+
+  .soco-link {
+    display: inline-flex;
+    padding: .58rem .9rem;
+    border-radius: 999px;
+    background: var(--navy);
+    color: #fff !important;
+    text-decoration: none;
+    font-size: .88rem;
+    font-weight: 750;
+  }
+
+  .soco-link.secondary {
+    background: rgba(255,255,255,.8);
+    border: 1px solid rgba(40,169,162,.42);
+    color: var(--navy) !important;
+  }
+
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    margin: 1.4rem 0 2rem;
+  }
+
+  .metric-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1.35rem 1.4rem;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(8,45,77,.05);
+  }
+
+  .metric-label {
+    display: block;
+    color: var(--muted);
+    font-size: .8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+  }
+
+  .metric-value {
+    display: block;
+    color: var(--navy);
+    font-size: 2.35rem;
+    font-weight: 850;
+    line-height: 1.05;
+    margin: .35rem 0;
+  }
+
+  .metric-note {
+    color: var(--muted);
+    font-size: .92rem;
+    line-height: 1.45;
+  }
+
+  .section-kicker {
+    margin-top: 2.8rem;
+  }
+
+  .section-intro {
+    font-size: 1.05rem;
+    color: #56636D;
+    max-width: 850px;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .participation-card {
+    margin: 1.3rem 0 2.4rem;
+    padding: 1.6rem 1.7rem 1.3rem;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 7px 22px rgba(8,45,77,.05);
+  }
+
+  .participation-row {
+    display: grid;
+    grid-template-columns: 190px 1fr 58px;
+    gap: 1rem;
+    align-items: center;
+    margin: 1.15rem 0;
+  }
+
+  .participation-label {
+    color: var(--muted);
+    font-size: .98rem;
+    text-align: right;
+  }
+
+  .participation-track {
+    height: 24px;
+    border-radius: 999px;
+    background: #EEF3F4;
+    overflow: hidden;
+  }
+
+  .participation-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: var(--teal);
+  }
+
+  .w73 { width: 73%; }
+  .w69 { width: 69%; }
+  .w08 { width: 8%; }
+
+  .participation-value {
+    color: var(--navy);
+    font-weight: 850;
+    font-size: 1rem;
+  }
+
+  .participation-caption {
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: .84rem;
+  }
+
+  .paper-section {
+    margin: 3.2rem 0 2.5rem;
+  }
+
+  .paper-card {
+    max-width: 980px;
+    margin: 1.2rem auto 0;
+    padding: 1.75rem 2rem 1.7rem;
+    border-left: 7px solid var(--teal);
+    border-radius: 0 20px 20px 0;
+    background: linear-gradient(135deg,rgba(40,169,162,.085),rgba(8,45,77,.035));
+    box-shadow: 0 12px 30px rgba(8,45,77,.08);
+  }
+
+  .paper-eyebrow {
+    color: var(--teal);
+    font-size: .78rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: .65rem;
+  }
+
+  .paper-title {
+    color: var(--navy);
+    font-size: 1.62rem;
+    line-height: 1.22;
+    font-weight: 850;
+    letter-spacing: -.015em;
+    margin: 0 0 .85rem;
+  }
+
+  .paper-citation {
+    color: #52616D;
+    font-size: .98rem;
+    line-height: 1.45;
+  }
+
+  .paper-citation strong {
+    color: var(--navy);
+  }
+
+  .study-frame {
+    margin: 1.25rem 0 1.7rem;
+    padding: 1.35rem;
+    border: 1px solid #D8E7EA;
+    border-radius: 18px;
+    background: linear-gradient(135deg,#F7FBFB 0%,#FFFFFF 68%);
+    box-shadow: 0 8px 24px rgba(8,45,77,.06);
+  }
+
+  .study-frame-kicker {
+    color: var(--teal);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: .76rem;
+    margin-bottom: .35rem;
+  }
+
+  .study-frame-title {
+    color: var(--navy);
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .study-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1.15fr;
+    gap: .65rem;
+    align-items: stretch;
+  }
+
+  .study-step {
+    background: #fff;
+    border: 1px solid #DCE9EC;
+    border-radius: 14px;
+    padding: 1rem;
+  }
+
+  .study-step-num {
+    color: var(--coral);
+    font-weight: 900;
+    font-size: .76rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+
+  .study-step-title {
+    display: block;
+    color: var(--navy);
+    font-size: 1.02rem;
+    font-weight: 800;
+    margin: .2rem 0 .35rem;
+  }
+
+  .study-step-copy {
+    color: var(--muted);
+    font-size: .9rem;
+    line-height: 1.35;
+  }
+
+  .study-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--teal);
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+
+  .study-stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: .75rem;
+    margin-top: 1rem;
+  }
+
+  .study-stat {
+    text-align: center;
+    padding: .85rem .65rem;
+    background: var(--navy);
+    color: white;
+    border-radius: 12px;
+  }
+
+  .study-stat-value {
+    display: block;
+    font-size: 1.45rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: .25rem;
+  }
+
+  .study-stat-label {
+    font-size: .78rem;
+    opacity: .9;
+  }
+
+  .caution-note {
+    background: #FFF8F0;
+    border-left: 5px solid #E6A34A;
+    padding: 1rem 1.15rem;
+    border-radius: 0 12px 12px 0;
+    color: #59462E;
+    margin: 1rem 0 1.5rem;
+    font-size: .92rem;
+    line-height: 1.5;
+  }
+
+  .highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 1rem;
+    margin: 1.2rem 0 1.5rem;
+  }
+
+  .highlight-card {
+    border: 1px solid #DCE8EB;
+    border-radius: 16px;
+    padding: 1.2rem 1.25rem;
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(8,45,77,.045);
+  }
+
+  .highlight-num {
+    color: var(--coral);
+    font-weight: 900;
+    font-size: .8rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .highlight-card h3 {
+    color: var(--navy);
+    font-size: 1.08rem;
+    margin: .25rem 0 .55rem;
+  }
+
+  .highlight-card p {
+    color: #405463;
+    font-size: .94rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .discussion-quote {
+    margin: 1.4rem 0;
+    padding: 1.1rem 1.25rem;
+    border-left: 5px solid var(--teal);
+    background: #EFF8F7;
+    border-radius: 0 12px 12px 0;
+    color: var(--navy);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .community-note {
+    background: #FFF4F1;
+    border-left: 5px solid var(--coral);
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    margin: 1rem 0 1.4rem;
+    color: #5A3430;
+  }
+
+  .roster-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 0 .85rem;
+    padding: .85rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+  }
+
+  .roster-summary strong { color: var(--navy); }
+  .roster-summary span { color: var(--muted); font-size: .92rem; }
+
+  .attendance-group {
+    margin: 1rem 0 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .attendance-group-title {
+    padding: .72rem .9rem;
+    font-weight: 800;
+    font-size: .83rem;
+    color: var(--navy);
+    background: var(--pale);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .attendance-group.first .attendance-group-title {
+    background: #FBE7E4;
+    color: #A63F36;
+  }
+
+  .attendance-group.new .attendance-group-title {
+    background: #EAF7F5;
+    color: #187B75;
+  }
+
+  .attendance-group.mid .attendance-group-title {
+    background: #DDF2EF;
+    color: #146C68;
+  }
+
+  .attendance-group.long .attendance-group-title {
+    background: #E8EEF3;
+    color: var(--navy);
+  }
+
+  .attendance-group.originals .attendance-group-title {
+    background: #FFF4D9;
+    color: #8A5A00;
+  }
+
+  .attendance-group table {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .attendance-group th {
+    background: var(--navy);
+    color: white;
+    font-size: .78rem;
+    padding: .55rem .65rem;
+  }
+
+  .attendance-group td {
+    font-size: .88rem;
+    padding: .55rem .65rem;
+    color: #405463;
+  }
+
+  .attendance-group td:first-child {
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .footer-card {
+    margin: 3rem 0 1rem;
+    padding: 1.8rem 2rem;
+    background: var(--navy);
+    color: #fff;
+    border-radius: 20px;
+  }
+
+  .footer-card h2 {
+    color: #fff;
+    margin-top: 0;
+  }
+
+  .footer-card p {
+    margin-bottom: 0;
+    color: #EAF2F5;
+  }
+
+  @media (max-width:760px) {
+    .metric-grid,
+    .study-stats,
+    .highlight-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      padding: 2rem 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.45rem;
+    }
+
+    .study-flow {
+      grid-template-columns: 1fr;
+    }
+
+    .study-arrow {
+      transform: rotate(90deg);
+      min-height: 18px;
+    }
+
+    .participation-row {
+      grid-template-columns: 1fr;
+      gap: .4rem;
+    }
+
+    .participation-label {
+      text-align: left;
+    }
+
+    .roster-summary {
+      display: block;
+    }
+
+    .roster-summary span {
+      display: block;
+      margin-top: .25rem;
+    }
+
+    .attendance-group {
+      overflow-x: auto;
+    }
+
+    .attendance-group table {
+      min-width: 720px;
+    }
+
+    .paper-card {
+      padding: 1.35rem 1.25rem;
+    }
+
+    .paper-title {
+      font-size: 1.35rem;
+    }
+  }
+</style>
+
+:::: {.hero}
+
+::: {.kicker}
+SoCO Journal Club · August 14, 2026
+:::
+
+# Thanks for showing up.
+
+::: {.hero-copy}
+Thanks to everyone who joined us on August 14. Here’s a look back at the paper, the questions that drove the discussion, how people participated, and who was in the room.
+:::
+
+::: {.accent}
+:::
+
+::: {.link-row}
+[Read the article](https://jitc.bmj.com/content/14/7/e015029){.soco-link}
+[Meeting slides](<files/FIRST Approach in CSCC.pdf>){.soco-link .secondary}
+[Back to Journal Club](../../jc.qmd){.soco-link .secondary}
+:::
+
+::::
+
+::: {.section-kicker}
+Meeting pulse
+:::
+
+## A good turnout — and people stuck around
+
+::: {.metric-grid}
+
+::: {.metric-card}
+[People who joined]{.metric-label}
+
+[26]{.metric-value}
+
+[Unique cleaned names in the Teams attendance record]{.metric-note}
+:::
+
+::: {.metric-card}
+[Median time together]{.metric-label}
+
+[87 min]{.metric-value}
+
+[Half the room stayed at least this long]{.metric-note}
+:::
+
+::: {.metric-card}
+[Stayed at least an hour]{.metric-label}
+
+[73%]{.metric-value}
+
+[Joined for at least 60 minutes]{.metric-note}
+:::
+
+:::
+
+::: {.section-kicker}
+Participation
+:::
+
+## A few ways people participated
+
+::: {.section-intro}
+Teams records a few simple signals — time in the meeting, unmuting, hand raises, and camera use. They do not tell the whole story, but they give us a quick sense of how people took part.
+:::
+
+:::: {.participation-card}
+
+::: {.participation-row}
+[Stayed ≥ 60 minutes]{.participation-label}
+
+::: {.participation-track}
+::: {.participation-fill .w73}
+:::
+:::
+
+[73%]{.participation-value}
+:::
+
+::: {.participation-row}
+[Camera on]{.participation-label}
+
+::: {.participation-track}
+::: {.participation-fill .w73}
+:::
+:::
+
+[73%]{.participation-value}
+:::
+
+::: {.participation-row}
+[Unmuted]{.participation-label}
+
+::: {.participation-track}
+::: {.participation-fill .w69}
+:::
+:::
+
+[69%]{.participation-value}
+:::
+
+::: {.participation-row}
+[Raised a hand]{.participation-label}
+
+::: {.participation-track}
+::: {.participation-fill .w08}
+:::
+:::
+
+[8%]{.participation-value}
+:::
+
+::: {.participation-caption}
+Recorded Teams signals; these do not measure the quality or depth of participation.
+:::
+
+::::
+
+::: {.paper-section}
+
+::: {.section-kicker}
+The paper we discussed
+:::
+
+## FIRST in cutaneous squamous cell carcinoma
+
+:::: {.paper-card}
+
+::: {.paper-eyebrow}
+Primary article · Journal for ImmunoTherapy of Cancer
+:::
+
+::: {.paper-title}
+Frontline immunotherapy with response-guided subsequent treatment (FIRST) in cutaneous squamous cell carcinoma: a Bayesian causal analysis of dose intensity, early benefit, and treatment de-escalation
+:::
+
+::: {.paper-citation}
+**Miller DM, et al.** *J Immunother Cancer.* 2026;14(7):e015029.  
+doi: 10.1136/jitc-2026-015029
+:::
+
+::: {.link-row}
+[Read the article](https://jitc.bmj.com/content/14/7/e015029){.soco-link}
+[DOI](https://doi.org/10.1136/jitc-2026-015029){.soco-link .secondary}
+[Methods & reproducible workflow](https://themillerlab.github.io/FIRST/){.soco-link .secondary}
+:::
+
+::::
+
+### From a real-world cohort to an inference question
+
+::: {.section-intro}
+Because treatment evolved over time, patients received different amounts of immunotherapy. That gave us an opportunity to first describe what happened across 189 patients, then ask the harder question: **what does another dose actually buy us?**
+:::
+
+:::: {.study-frame}
+
+::: {.study-frame-kicker}
+From cohort to inference
+:::
+
+::: {.study-frame-title}
+The analysis moved from describing what happened to asking what additional treatment may have contributed.
+:::
+
+:::: {.study-flow}
+
+::: {.study-step}
+[01 · Observe]{.study-step-num}
+
+[189-patient real-world cohort]{.study-step-title}
+
+[Patients received different amounts of immunotherapy during an evolving period of practice.]{.study-step-copy}
+:::
+
+[→]{.study-arrow}
+
+::: {.study-step}
+[02 · Describe]{.study-step-num}
+
+[What happened?]{.study-step-title}
+
+[Characterize dose exposure, response, surgery, recurrence, and event-free survival.]{.study-step-copy}
+:::
+
+[→]{.study-arrow}
+
+::: {.study-step}
+[03 · Infer]{.study-step-num}
+
+[What might another dose buy us?]{.study-step-title}
+
+[Use causal assumptions and Bayesian models to estimate dose–response and dose–EFS relationships.]{.study-step-copy}
+:::
+
+::::
+
+::: {.study-stats}
+
+::: {.study-stat}
+[189]{.study-stat-value}
+
+[patients]{.study-stat-label}
+:::
+
+::: {.study-stat}
+[Dose → Response]{.study-stat-value}
+
+[one inferential target]{.study-stat-label}
+:::
+
+::: {.study-stat}
+[Dose → EFS]{.study-stat-value}
+
+[second inferential target]{.study-stat-label}
+:::
+
+:::
+
+::::
+
+The study moved from describing the observed cohort to estimating the relationship between **dose and response** and between **dose and event-free survival**. Bayesian models allowed uncertainty to be carried forward rather than reducing the analysis to a single point estimate.
+
+::: {.caution-note}
+**An important caveat:** this was an observational experience during an evolving period of practice—not a randomized comparison. Treatment selection and confounding by indication matter, and the results should be interpreted in that context.
+:::
+
+::: {.section-kicker}
+Discussion highlights
+:::
+
+## What stuck with us from the conversation
+
+::: {.section-intro}
+The paper was the starting point, but a lot of the discussion was really about how we treat these patients now, how we decide when enough treatment may be enough, and how we make causal claims from observational data.
+:::
+
+::: {.highlight-grid}
+
+::: {.highlight-card}
+[01 · The landscape]{.highlight-num}
+
+### Practice is changing faster than consensus
+
+Vishal opened by placing FIRST in the rapidly evolving treatment landscape for high-risk resectable CSCC. Christine and Howard then walked through the study schema and descriptive results, including the heterogeneity in real-world treatment exposure. That set up one of the central questions for discussion: with substantial variation in the number of doses patients received, what can these observational data actually tell us about how much treatment is necessary?
+:::
+
+::: {.highlight-card}
+[02 · The clinical question]{.highlight-num}
+
+### Once a patient responds, how much more treatment is actually necessary?
+
+Our current response-guided approach generally starts with early immunotherapy and reassessment. Patients with a deep clinical response may be observed without additional immunotherapy, surgery, or radiation; patients without that response retain additional treatment options. The clinical appeal is obvious. The harder question is what level of evidence should be required before treatment is safely omitted.
+:::
+
+::: {.highlight-card}
+[03 · Causal inference]{.highlight-num}
+
+### The DAG made the assumptions visible
+
+Isaac walked us through the directed acyclic graph for the dose–response question. Rather than simply adding another statistical graphic, the DAG forces us to make our causal assumptions explicit: **what might confound the relationship, and what downstream variables should we avoid automatically adjusting for?**
+:::
+
+::: {.highlight-card}
+[04 · Clinicians + statisticians]{.highlight-num}
+
+### Are we already doing this — and do we really need a DAG?
+
+Paul raised an important practical question: aren’t we already thinking about these relationships when we build our models, and what is the added value of formalizing them in a DAG? Dan and Isaac highlighted why formalization can be useful. Defining how disease, treatment decisions, patient characteristics, and outcomes relate to one another requires clinical domain expertise, while the DAG makes those assumptions explicit and open to scrutiny.
+:::
+
+:::
+
+::: {.discussion-quote}
+If a paper is making a causal claim from observational data, ask to see the causal assumptions—not just the regression model.
+:::
+
+The group also talked about how unfamiliar DAGs still are in much of clinical research. Ade shared the perspective of having encountered this approach in editorial work—albeit rarely—while for many others it was relatively new. That led to a broader challenge for authors and reviewers: make causal assumptions explicit, discuss them with the clinical and statistical teams early, and expect more than a list of variables entered into a multivariable model.
+
+### Where the discussion landed
+
+There was real enthusiasm for the response-guided treatment concept and for getting these data in front of a broader audience.
+
+The most useful framing, though, was a careful one: **this may represent an important shift in how we think about treatment intensity, but the observational findings need prospective confirmation.**
+
+The signal is compelling enough to ask the next question well.
+
+:::
+
+::: {.section-kicker}
+Our community
+:::
+
+## Who joined us?
+
+::: {.section-intro}
+Below is the full Teams roster. Where we could match someone to the SoCO community survey, we also included their role, institution, and how long they have been part of SoCO.
+:::
+
+::: {.community-note}
+**We appreciate the whole mix:** people who had just recently found SoCO, those who have been with us for a while, and the originals who have been here since the beginning.
+:::
+
+::: {.roster-summary}
+**26 colleagues joined the meeting**
+
+[Community details available for 25; “—” means not reported in the survey.]{.roster-summary-note}
+:::
+
+::: {.attendance-group .first}
+
+::: {.attendance-group-title}
+👋 First SoCO Meeting
+:::
+
+| Name | Professional role | Institution |
+|---|---|---|
+| Elizabeth J. Lilley | Clinical Faculty / Practicing Clinician | Brigham and Women's Hospital |
+| Mina Bakhtiar | Clinical Faculty / Practicing Clinician | Massachusetts General Hospital |
+| Tatyana Sharova | Other | MGH |
+
+:::
+
+::: {.attendance-group .new}
+
+::: {.attendance-group-title}
+Less Than 1 Year
+:::
+
+| Name | Professional role | Institution |
+|---|---|---|
+| Ade Adamson | Clinical Faculty / Practicing Clinician | University of Texas |
+| Ajay N. Sharma | Clinical Faculty / Practicing Clinician | Massachusetts General Hospital |
+| David J. Savage | Clinical Faculty / Practicing Clinician | University of New Mexico |
+| Elizabeth I. Buchbinder | Clinical Faculty / Practicing Clinician | Mass General Brigham Cancer Institute |
+| Mehran Behruj Yusuf | Clinical Faculty / Practicing Clinician | UAB |
+| Rhoda Alani | Clinical Faculty / Practicing Clinician | MGH — Visiting Professor |
+| Rima Kulikauskas | Other | University of Washington |
+
+:::
+
+::: {.attendance-group .mid}
+
+::: {.attendance-group-title}
+1–2 Years
+:::
+
+| Name | Professional role | Institution |
+|---|---|---|
+| Dan Hippe | Other | Fred Hutch Cancer Center |
+| Frances Collichio | Clinical Faculty / Practicing Clinician | University of North Carolina |
+| Jennifer Desimone | Clinical Faculty / Practicing Clinician | INOVA Schar Cancer Institute |
+| Peter Ch'en | Postgraduate Trainee — Resident or Fellow | University of Washington |
+| Song Park | — | University of Washington |
+
+:::
+
+::: {.attendance-group .long}
+
+::: {.attendance-group-title}
+More Than 2 Years
+:::
+
+| Name | Professional role | Institution |
+|---|---|---|
+| Alex Sorrentino | Clinical Faculty / Practicing Clinician | Massachusetts General Hospital |
+| Christine C. Cimoch | Advanced Practice Provider | MEEI |
+| Jessica L. Fewkes | Clinical Faculty / Practicing Clinician | Mass Eye and Ear |
+| Krista M. Rubin | Clinical Faculty / Practicing Clinician | Massachusetts General Hospital |
+| Paul Nghiem | Clinical Faculty / Practicing Clinician | University of Washington |
+| Samir Gupta | Clinical Faculty / Practicing Clinician | Mass Eye and Ear |
+| Vern Sondak | Clinical Faculty / Practicing Clinician | Moffitt |
+
+:::
+
+::: {.attendance-group .originals}
+
+::: {.attendance-group-title}
+🏆 Since the Beginning — SoCO Originals
+:::
+
+| Name | Professional role | Institution |
+|---|---|---|
+| David M. Miller | Clinical Faculty / Practicing Clinician | MGH |
+| Howard L. Kaufman | Clinical Faculty / Practicing Clinician | MGB |
+| Isaac Brownell | Clinical Faculty / Practicing Clinician | National Institute of Arthritis and Musculoskeletal and Skin Diseases Dermatology Branch |
+| Vishal Patel | Clinical Faculty / Practicing Clinician | George Washington University |
+
+:::
+
+::: {.community-note}
+**About the roster.** Everyone listed above appears in the Teams attendance record. Role, institution, and SoCO tenure come from the community survey when we could match the name. A dash means we did not have survey information to add.
+:::
+
+::: {.footer-card}
+
+## Thanks for joining us.
+
+We had a great group on August 14. Thanks for spending part of your afternoon with us — and especially to everyone who asked a question, shared a perspective, or helped move the discussion along.
+
+:::
+
+::: {.link-row}
+[Back to Journal Club](../../jc.qmd){.soco-link}
+[Read the article](https://jitc.bmj.com/content/14/7/e015029){.soco-link .secondary}
+[Meeting slides](<files/FIRST Approach in CSCC.pdf>){.soco-link .secondary}
+[Research Forum](../../research_forum.qmd){.soco-link .secondary}
+:::

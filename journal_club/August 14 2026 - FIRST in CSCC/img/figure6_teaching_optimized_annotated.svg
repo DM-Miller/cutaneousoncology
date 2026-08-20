@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Figure 6 teaching slide: two outputs from one Bayesian Weibull model</title>
+<desc id="desc">Two-row workflow. Panel A shows population-averaged posterior predicted event-free survival under two versus three or more doses. Panel B shows the posterior distribution of the hazard ratio from the same model.</desc>
+<style>
+:root{--navy:#173b6c;--purple:#673a91;--blue:#2f6fbb;--lav:#8a62b5;--ink:#172033;--muted:#5d6878;--line:#cfd6df;--pale:#f6f8fb;--bluep:#eef5ff;--purpp:#f5effa;--warn:#fff7e6}
+*{box-sizing:border-box} text{font-family:Arial,Helvetica,sans-serif;fill:var(--ink)} .small{font-size:13px}.tiny{font-size:11px}.body{font-size:15px}.head{font-size:19px;font-weight:700}.cardtitle{font-size:17px;font-weight:700}.rowtitle{font-size:24px;font-weight:700;fill:#fff}.step{font-size:15px;font-weight:700}.muted{fill:var(--muted)} .card{fill:#fff;stroke:var(--line);stroke-width:1.5}.aTint{fill:var(--bluep)}.bTint{fill:var(--purpp)}.arrow{stroke:#34527e;stroke-width:4;fill:none;marker-end:url(#arrow)}.thin{stroke-width:2}.axis{stroke:#657184;stroke-width:1.4}.grid{stroke:#e3e7ed;stroke-width:1}.blue{stroke:var(--blue);fill:none}.purple{stroke:var(--purple);fill:none}.dash{stroke-dasharray:7 6}.labelA{fill:var(--navy);font-weight:700}.labelB{fill:var(--purple);font-weight:700}.chipA{fill:var(--bluep);stroke:#aac7ea}.chipB{fill:var(--purpp);stroke:#cdb6df}.numA{fill:var(--navy)}.numB{fill:var(--purple)}
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#34527e"/></marker></defs>
+
+<!-- PANEL A HEADER -->
+<g id="panel-a-header" class="fragment">
+  <rect x="20" y="18" width="1560" height="48" rx="7" fill="#173b6c"/>
+  <text x="42" y="49" class="rowtitle">PANEL A</text>
+  <text x="185" y="49" class="rowtitle" style="font-size:19px;font-weight:600">Posterior predicted event-free survival</text>
+  <text x="1555" y="49" text-anchor="end" style="font-size:14px;font-weight:700;fill:#dce9f8;letter-spacing:.25px">ABSOLUTE EFS • ADJUSTED • OVER TIME</text>
+</g>
+
+<!-- A1 -->
+<g id="a-observed-cohort" class="fragment"><rect class="card" x="20" y="78" width="290" height="335" rx="10"/><circle cx="50" cy="105" r="15" fill="#173b6c"/><text x="50" y="110" text-anchor="middle" style="font-size:15px;font-weight:800;fill:#ffffff">1</text><text x="75" y="104" class="cardtitle">Observed landmark</text><text x="75" y="124" class="cardtitle">cohort</text>
+<rect x="38" y="145" width="254" height="148" fill="#fff" stroke="#9aa6b5"/><path d="M38 174H292M38 204H292M38 234H292M38 264H292M82 145V293M126 145V293M174 145V293M230 145V293" stroke="#c5ccd5"/>
+<text x="45" y="164" class="tiny">Pt</text><text x="91" y="164" class="tiny">Age</text><text x="136" y="164" class="tiny">Stage</text><text x="181" y="164" class="tiny">Immune</text><text x="240" y="164" class="tiny">Dose</text>
+<text x="52" y="187" class="small">1</text><text x="93" y="187" class="small">56</text><text x="141" y="187" class="small">II</text><text x="182" y="187" class="small">No</text><text x="248" y="187" class="small">2</text>
+<text x="52" y="219" class="small">2</text><text x="93" y="219" class="small">68</text><text x="138" y="219" class="small">III</text><text x="182" y="219" class="small">Yes</text><text x="244" y="219" class="small">3+</text>
+<text x="52" y="251" class="small">3</text><text x="93" y="251" class="small">61</text><text x="141" y="251" class="small">IV</text><text x="182" y="251" class="small">No</text><text x="248" y="251" class="small">2</text>
+<text x="52" y="282" class="small">…</text><text x="95" y="282" class="small">…</text><text x="142" y="282" class="small">…</text><text x="190" y="282" class="small">…</text><text x="248" y="282" class="small">…</text>
+<text x="48" y="324" class="body">Observed covariates + time-to-event</text><text x="48" y="347" class="body">information from each patient.</text><text x="48" y="381" class="small muted">Dose is observed here; no counterfactual</text><text x="48" y="399" class="small muted">prediction has happened yet.</text></g>
+
+
+<!-- A2 -->
+<g id="a-fit-weibull" class="fragment">
+  <!-- Connector appears with this destination step -->
+  <path class="arrow" d="M312 245H334"/><rect class="card" x="338" y="78" width="290" height="335" rx="10"/><circle cx="368" cy="105" r="15" fill="#173b6c"/><text x="368" y="110" text-anchor="middle" style="font-size:15px;font-weight:800;fill:#ffffff">2</text><text x="393" y="104" class="head">Fit Bayesian</text><text x="393" y="126" class="head">Weibull model</text>
+<rect x="360" y="145" width="246" height="100" rx="8" class="aTint" stroke="#aac7ea"/><text x="483" y="170" text-anchor="middle" class="step">Bayesian Weibull survival model</text><text x="383" y="203" class="small">Patient covariates X</text><text x="515" y="203" class="small">+ dose</text><text x="483" y="230" text-anchor="middle" class="body">hᵢ(t) = h₀(t) × exp(Xᵢβ)</text>
+<text x="365" y="274" class="step">Underlying Weibull baseline hazard h₀(t)</text><path class="axis" d="M385 355V300M385 355H585"/><path class="blue" stroke-width="3" d="M390 316 C430 350,470 350,510 330 S560 310,580 300"/><text x="390" y="374" class="tiny muted">time</text><text x="363" y="309" class="tiny muted" transform="rotate(-90 363 309)">hazard</text><text x="365" y="397" class="small muted">Baseline hazard is under the hood —</text><text x="365" y="412" class="small muted">it is not the final Figure 6A curve.</text></g>
+
+
+<!-- A3 -->
+<g id="a-counterfactual-standardization" class="fragment">
+  <!-- Connector appears with this destination step -->
+  <path class="arrow" d="M630 245H652"/><rect class="card" x="656" y="78" width="290" height="335" rx="10"/><circle cx="686" cy="105" r="15" fill="#173b6c"/><text x="686" y="110" text-anchor="middle" style="font-size:15px;font-weight:800;fill:#ffffff">3</text><text x="711" y="104" class="cardtitle">Counterfactual</text><text x="711" y="124" class="cardtitle">prediction</text><text x="801" y="137" text-anchor="middle" class="step">SAME PATIENT — TWO SCENARIOS</text><text x="801" y="159" text-anchor="middle" class="small">Hold covariates fixed; change only dose.</text>
+<text x="688" y="190" class="labelA small">Set dose = 2</text><text x="826" y="190" class="labelB small">Set dose = 3+</text>
+<g class="small"><text x="682" y="222">Pt 1</text><circle cx="748" cy="216" r="9" fill="#2f6fbb"/><path d="M760 216H840" class="blue dash" stroke-width="2"/><circle cx="856" cy="216" r="9" fill="#673a91"/><text x="682" y="259">Pt 2</text><circle cx="748" cy="253" r="9" fill="#2f6fbb"/><path d="M760 253H840" class="blue dash" stroke-width="2"/><circle cx="856" cy="253" r="9" fill="#673a91"/><text x="682" y="296">Pt 3</text><circle cx="748" cy="290" r="9" fill="#2f6fbb"/><path d="M760 290H840" class="blue dash" stroke-width="2"/><circle cx="856" cy="290" r="9" fill="#673a91"/></g>
+<rect x="680" y="326" width="242" height="64" rx="8" fill="#fff7e6" stroke="#e3c16d"/><text x="801" y="349" text-anchor="middle" class="small">Model-based standardization:</text><text x="801" y="369" text-anchor="middle" class="small">not actual reassignment or randomization.</text></g>
+
+
+<!-- A4 -->
+<g id="a-individual-predictions" class="fragment">
+  <!-- Connector appears with this destination step -->
+  <path class="arrow" d="M948 245H970"/><rect class="card" x="974" y="78" width="290" height="335" rx="10"/><circle cx="1004" cy="105" r="15" fill="#173b6c"/><text x="1004" y="110" text-anchor="middle" style="font-size:15px;font-weight:800;fill:#ffffff">4</text><text x="1029" y="104" class="head">Individual predicted</text><text x="1029" y="126" class="head">survival curves</text>
+<text x="1035" y="155" class="labelA small">If 2 doses</text><text x="1160" y="155" class="labelB small">If 3+ doses</text><path class="axis" d="M1010 255V175M1010 255H1110M1135 255V175M1135 255H1235"/>
+<path class="blue" opacity=".35" d="M1012 178C1040 188 1060 220 1108 242"/><path class="blue" opacity=".55" d="M1012 178C1045 195 1070 210 1108 225"/><path class="blue" opacity=".75" d="M1012 178C1035 200 1065 235 1108 248"/><path class="purple" opacity=".35" d="M1137 178C1160 188 1190 210 1233 226"/><path class="purple" opacity=".55" d="M1137 178C1165 194 1195 220 1233 238"/><path class="purple" opacity=".75" d="M1137 178C1165 186 1190 202 1233 216"/>
+<text x="1119" y="290" text-anchor="middle" class="small">Hazard → cumulative hazard → survival</text><text x="1119" y="315" text-anchor="middle" class="body">Sᵢ(t) = exp[−Hᵢ(t)]</text><rect x="1003" y="338" width="232" height="55" rx="8" class="chipA"/><text x="1119" y="360" text-anchor="middle" class="small">Average posterior predictions</text><text x="1119" y="380" text-anchor="middle" class="small">across the observed population</text></g>
+
+
+<!-- A5 -->
+<g id="a-population-efs-output" class="fragment">
+  <!-- Connector appears with this destination step -->
+  <path class="arrow" d="M1266 245H1288"/><rect class="card" x="1292" y="78" width="288" height="335" rx="10"/><circle cx="1322" cy="105" r="15" fill="#173b6c"/><text x="1322" y="110" text-anchor="middle" style="font-size:15px;font-weight:800;fill:#ffffff">5</text><text x="1347" y="111" class="head">Figure 6A output</text><path class="axis" d="M1335 270V160M1335 270H1540"/><path class="grid" d="M1335 215H1540"/><path class="blue" stroke-width="4" d="M1338 164C1380 180 1425 215 1538 252"/><path class="purple" stroke-width="4" d="M1338 164C1380 175 1425 198 1538 224"/><text x="1435" y="290" text-anchor="middle" class="tiny muted">time</text><text x="1310" y="220" class="tiny muted" transform="rotate(-90 1310 220)">EFS probability</text><text x="1350" y="316" class="labelA small">2 doses</text><text x="1445" y="316" class="labelB small">3+ doses</text><rect x="1325" y="332" width="230" height="45" rx="8" class="chipA"/><text x="1440" y="351" text-anchor="middle" class="step">ABSOLUTE OUTCOME</text><text x="1440" y="369" text-anchor="middle" class="small">Predicted EFS over time</text><text x="1325" y="399" class="tiny muted">Not Kaplan–Meier. Not baseline hazard.</text></g>
+
+<!-- PANEL B HEADER -->
+<g id="panel-b-header" class="fragment">
+  <rect x="20" y="428" width="1560" height="48" rx="7" fill="#673a91"/>
+  <text x="42" y="459" class="rowtitle">PANEL B</text>
+  <text x="185" y="459" class="rowtitle" style="font-size:19px;font-weight:600">Posterior distribution of the treatment hazard ratio</text>
+  <text x="1555" y="459" text-anchor="end" style="font-size:14px;font-weight:700;fill:#eee3f6;letter-spacing:.25px">RELATIVE EFFECT • HR + UNCERTAINTY</text>
+</g>
+
+<!-- B1 -->
+<g id="b-same-cohort" class="fragment"><rect class="card" x="20" y="488" width="290" height="260" rx="10"/><circle cx="50" cy="515" r="15" fill="#673a91"/><text x="50" y="520" text-anchor="middle" style="font-size:15px;font-weight:800;fill:#ffffff">1</text><text x="75" y="521" class="head">Same landmark cohort</text><use href="#miniTable"/><rect x="55" y="555" width="220" height="115" fill="#fff" stroke="#9aa6b5"/><path d="M55 585H275M55 615H275M55 645H275M100 555V670M155 555V670M215 555V670" stroke="#c5ccd5"/><text x="65" y="575" class="tiny">Pt</text><text x="112" y="575" class="tiny">Age</text><text x="166" y="575" class="tiny">Stage</text><text x="229" y="575" class="tiny">Dose</text><text x="65" y="605" class="small">1</text><text x="112" y="605" class="small">56</text><text x="168" y="605" class="small">II</text><text x="235" y="605" class="small">2</text><text x="65" y="635" class="small">2</text><text x="112" y="635" class="small">68</text><text x="165" y="635" class="small">III</text><text x="231" y="635" class="small">3+</text><text x="65" y="663" class="small">…</text><text x="112" y="663" class="small">…</text><text x="168" y="663" class="small">…</text><text x="235" y="663" class="small">…</text><text x="165" y="710" text-anchor="middle" class="body">Same observed data used to fit model.</text></g>
+
+<!-- B2 -->
+<g id="b-same-fitted-model" class="fragment">
+  <!-- Connector appears with this destination step -->
+  <path class="arrow" d="M312 620H334"/><rect class="card" x="338" y="488" width="290" height="260" rx="10"/><circle cx="368" cy="515" r="15" fill="#673a91"/><text x="368" y="520" text-anchor="middle" style="font-size:15px;font-weight:800;fill:#ffffff">2</text><text x="393" y="508" class="cardtitle">Same Bayesian</text><text x="393" y="528" class="cardtitle">Weibull model</text><rect x="370" y="555" width="225" height="70" rx="8" class="bTint" stroke="#cdb6df"/><text x="482" y="578" text-anchor="middle" class="labelB small">SAME FITTED MODEL</text><text x="482" y="608" text-anchor="middle" class="body">hᵢ(t) = h₀(t) × exp(Xᵢβ)</text><text x="482" y="654" text-anchor="middle" class="small">Focus on treatment coefficient</text><text x="482" y="684" text-anchor="middle" class="head labelB">β_dose</text><text x="482" y="720" text-anchor="middle" class="tiny muted">Posterior estimated while adjusting for covariates.</text></g>
+
+<!-- B3 -->
+<g id="b-posterior-beta-draws" class="fragment">
+  <!-- Connector appears with this destination step -->
+  <path class="arrow" d="M630 620H652"/><rect class="card" x="656" y="488" width="290" height="260" rx="10"/><circle cx="686" cy="515" r="15" fill="#673a91"/><text x="686" y="520" text-anchor="middle" style="font-size:15px;font-weight:800;fill:#ffffff">3</text><text x="711" y="508" class="cardtitle">Posterior draws of</text><text x="711" y="528" class="cardtitle">treatment effect</text><g fill="#673a91" opacity=".8"><circle cx="720" cy="570" r="4"/><circle cx="735" cy="585" r="4"/><circle cx="713" cy="602" r="4"/><circle cx="748" cy="615" r="4"/><circle cx="726" cy="632" r="4"/><circle cx="755" cy="650" r="4"/><circle cx="715" cy="666" r="4"/><circle cx="744" cy="684" r="4"/></g><text x="790" y="577" class="small">Each dot is a posterior draw</text><text x="790" y="597" class="small">for β_dose.</text><rect x="785" y="625" width="130" height="70" rx="8" class="bTint" stroke="#cdb6df"/><text x="850" y="648" text-anchor="middle" class="small">Exponentiate</text><text x="850" y="675" text-anchor="middle" class="body">HR = exp(β_dose*)</text><text x="801" y="722" text-anchor="middle" class="tiny muted">Each draw implies one plausible HR.</text></g>
+
+<!-- B4 -->
+<g id="b-posterior-hr-distribution" class="fragment">
+  <!-- Connector appears with this destination step -->
+  <path class="arrow" d="M948 620H970"/><rect class="card" x="974" y="488" width="290" height="260" rx="10"/><circle cx="1004" cy="515" r="15" fill="#673a91"/><text x="1004" y="520" text-anchor="middle" style="font-size:15px;font-weight:800;fill:#ffffff">4</text><text x="1029" y="508" class="cardtitle">Posterior distribution</text><text x="1029" y="528" class="cardtitle">of hazard ratio</text><path class="axis" d="M1008 675H1235M1008 675V565"/><path class="purple" stroke-width="3" fill="#f5effa" d="M1010 674 C1040 673,1050 650,1075 625 C1100 600,1125 585,1150 610 C1175 635,1190 660,1232 674 Z"/><path class="dash" stroke="#172033" d="M1145 560V680"/><text x="1145" y="553" text-anchor="middle" class="small">HR = 1</text><text x="1045" y="590" class="small" fill="#277342">HR &lt; 1</text><text x="1175" y="590" class="small" fill="#9a2d2d">HR &gt; 1</text><text x="1120" y="710" text-anchor="middle" class="small">Hazard ratio: 3+ vs 2 doses</text><text x="1120" y="735" text-anchor="middle" class="tiny muted">Area below 1 = posterior probability of lower hazard.</text></g>
+
+<!-- B5 -->
+<g id="b-relative-effect-output" class="fragment">
+  <!-- Connector appears with this destination step -->
+  <path class="arrow" d="M1266 620H1288"/><rect class="card" x="1292" y="488" width="288" height="260" rx="10"/><circle cx="1322" cy="515" r="15" fill="#673a91"/><text x="1322" y="520" text-anchor="middle" style="font-size:15px;font-weight:800;fill:#ffffff">5</text><text x="1347" y="514" class="cardtitle">Figure 6B</text><text x="1347" y="534" class="cardtitle">interpretation</text><rect x="1325" y="560" width="230" height="58" rx="8" class="chipB"/><text x="1440" y="584" text-anchor="middle" class="step">RELATIVE EFFECT</text><text x="1440" y="605" text-anchor="middle" class="small">Hazard ratio + uncertainty</text><text x="1440" y="652" text-anchor="middle" class="body">How strongly does dose modify</text><text x="1440" y="674" text-anchor="middle" class="body">the instantaneous event hazard?</text><line x1="1330" y1="702" x2="1550" y2="702" stroke="#d8dce3"/><text x="1440" y="730" text-anchor="middle" class="small muted">Same posterior; different summary.</text></g>
+
+<!-- SUMMARY -->
+<g id="take-home-summary" class="fragment">
+  <rect x="20" y="766" width="1560" height="116" rx="10" fill="#fffaf0" stroke="#d9b96e"/>
+
+  <text x="48" y="798" class="head">ONE MODEL → TWO SUMMARIES</text>
+
+  <!-- Shared fitted model -->
+  <rect x="48" y="812" width="245" height="52" rx="8" class="aTint" stroke="#aac7ea"/>
+  <text x="170" y="833" text-anchor="middle" class="step">SAME FITTED BAYESIAN</text>
+  <text x="170" y="853" text-anchor="middle" class="step">WEIBULL MODEL</text>
+
+  <!-- Branch to absolute predictions -->
+  
+  <text x="470" y="817" text-anchor="middle" class="labelA step">Posterior predictions</text>
+  <text x="470" y="839" text-anchor="middle" class="small">standardize over patients</text>
+  <text x="470" y="860" text-anchor="middle" class="labelA body">Figure 6A → absolute EFS</text>
+
+  <!-- Branch to relative effect -->
+  
+  <text x="765" y="817" text-anchor="middle" class="labelB step">Treatment coefficient</text>
+  <text x="765" y="839" text-anchor="middle" class="small">exponentiate β_dose draws</text>
+  <text x="765" y="860" text-anchor="middle" class="labelB body">Figure 6B → relative HR</text>
+
+  <!-- Take-home statement -->
+  <rect x="930" y="803" width="610" height="62" rx="8" fill="#fff" stroke="#d9b96e" stroke-dasharray="5 4"/>
+  <text x="1235" y="827" text-anchor="middle" class="step">NOT TWO ANALYSES</text>
+  <text x="1235" y="849" text-anchor="middle" class="body">Two complementary summaries from the same fitted model.</text>
+</g>
+<!-- =========================================================
+FIGURE 6 TEACHING SVG — ANIMATION / EDITING NOTES
+
+REVEAL ORDER
+Panel A:
+  panel-a-header
+  a-observed-cohort
+  a-fit-weibull                  [includes arrow leading into card 2]
+  a-counterfactual-standardization [includes arrow leading into card 3]
+  a-individual-predictions       [includes arrow leading into card 4]
+  a-population-efs-output        [includes arrow leading into card 5]
+
+Panel B:
+  panel-b-header
+  b-same-cohort
+  b-same-fitted-model            [includes arrow leading into card 2]
+  b-posterior-beta-draws         [includes arrow leading into card 3]
+  b-posterior-hr-distribution    [includes arrow leading into card 4]
+  b-relative-effect-output       [includes arrow leading into card 5]
+
+Final:
+  take-home-summary
+
+WHY THE ARROWS NOW ANIMATE CORRECTLY
+Each connector arrow is physically INSIDE the destination
+<g class="fragment"> group. Therefore Reveal.js hides the arrow
+until the destination card itself is revealed.
+
+NUMBER BADGES
+Badge numerals use:
+  x = exact circle center
+  y = circle center + 5 px optical offset
+  text-anchor="middle"
+  font-size="15px"
+  fill="#ffffff"
+This avoids browser inconsistencies with dominant-baseline and gives strong contrast.
+
+QUARTO / REVEAL
+Load this SVG into the slide DOM using the JavaScript fetch method
+we established. Do not use a Quarto {{< include ... >}} directive
+for this annotated source.
+
+XML comments like these do not render in the figure.
+========================================================= -->
+
+</svg>

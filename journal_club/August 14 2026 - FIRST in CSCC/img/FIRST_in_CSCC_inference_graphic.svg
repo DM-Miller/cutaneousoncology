@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 920" width="1600" height="920">
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#082D4D}
+.h1{font-size:38px;font-weight:700}.h2{font-size:24px;font-weight:700}.body{font-size:17px}.small{font-size:14px}
+.card{fill:#fff;stroke-width:2}.round{stroke-linecap:round;stroke-linejoin:round}
+</style>
+<linearGradient id="rt" x1="0" x2="1"><stop offset="0" stop-color="#28A9A2" stop-opacity=".18"/><stop offset="1" stop-color="#28A9A2" stop-opacity=".62"/></linearGradient>
+<linearGradient id="rn" x1="1" x2="0"><stop offset="0" stop-color="#082D4D" stop-opacity=".16"/><stop offset="1" stop-color="#082D4D" stop-opacity=".54"/></linearGradient>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#082D4D" flood-opacity=".16"/></filter>
+<marker id="at" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#28A9A2"/></marker>
+<marker id="an" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#082D4D"/></marker>
+<g id="person"><circle cy="-7" r="5"/><path d="M-8 1Q0-4 8 1L9 15H-9z"/></g>
+</defs>
+<rect width="1600" height="900" fill="white"/>
+
+<!-- ALWAYS VISIBLE -->
+<text x="800" y="31" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="6">FIRST IN CSCC</text>
+<text x="800" y="75" text-anchor="middle" class="h1">From a real-world cohort to an inference question</text>
+<text x="800" y="108" text-anchor="middle" font-size="20" font-style="italic">189 patients • heterogeneous treatment exposure • observed clinical outcomes</text>
+
+<!-- 1: COHORT + DOSE EXPOSURE -->
+<g id="cohort" class="fragment" data-fragment-index="1">
+  <text x="35" y="150" font-size="18" font-weight="700">AUG 2019</text>
+  <text x="1565" y="150" text-anchor="end" font-size="18" font-weight="700">SEP 2025</text>
+  <line x1="65" y1="169" x2="1530" y2="169" stroke="#082D4D" stroke-width="3"/>
+  <circle cx="65" cy="169" r="7" fill="#082D4D"/><path d="M1530 169l-19-10v20z" fill="#082D4D"/>
+  <g fill="#8CA0B3">
+    <use href="#person" x="245" y="167"/><use href="#person" x="282" y="167"/><use href="#person" x="319" y="167"/><use href="#person" x="356" y="167"/>
+    <use href="#person" x="393" y="167"/><use href="#person" x="430" y="167"/><use href="#person" x="467" y="167"/><use href="#person" x="504" y="167"/>
+    <use href="#person" x="1096" y="167"/><use href="#person" x="1133" y="167"/><use href="#person" x="1170" y="167"/><use href="#person" x="1207" y="167"/>
+    <use href="#person" x="1244" y="167"/><use href="#person" x="1281" y="167"/><use href="#person" x="1318" y="167"/><use href="#person" x="1355" y="167"/>
+  </g>
+  <circle cx="800" cy="204" r="100" fill="#28A9A2" opacity=".14"/>
+  <circle cx="800" cy="204" r="95" fill="#062D4D" stroke="#25B7B0" stroke-width="7" filter="url(#shadow)"/>
+  <text x="800" y="192" text-anchor="middle" font-size="55" font-weight="700" style="fill:white">189</text>
+  <text x="800" y="225" text-anchor="middle" font-size="25" font-weight="700" style="fill:white">PATIENTS</text>
+  <text x="800" y="251" text-anchor="middle" font-size="16" style="fill:white">advanced CSCC</text>
+
+  <text x="800" y="330" text-anchor="middle" font-size="22" font-weight="700" letter-spacing="3" fill="#28A9A2">VARYING DOSE EXPOSURE</text>
+  <line x1="350" y1="375" x2="1250" y2="375" stroke="#28A9A2" stroke-width="3"/>
+  <g fill="white" stroke="#28A9A2" stroke-width="3">
+    <circle cx="365" cy="375" r="22"/><circle cx="575" cy="375" r="22"/><circle cx="800" cy="375" r="22"/><circle cx="1025" cy="375" r="22"/><circle cx="1235" cy="375" r="22"/>
+  </g>
+  <g text-anchor="middle" font-size="19" font-weight="700"><text x="365" y="382">1</text><text x="575" y="382">2</text><text x="800" y="382">3</text><text x="1025" y="382">4</text><text x="1235" y="382">n</text></g>
+  <rect x="1090" y="363" width="85" height="24" fill="white"/><text x="1132" y="381" text-anchor="middle" font-size="24">•••••</text>
+</g>
+
+<!-- 2: DESCRIBE -->
+<g id="describe" class="fragment" data-fragment-index="2">
+  <text x="800" y="432" text-anchor="middle" font-size="21" font-weight="700" letter-spacing="3">FIRST: DESCRIBE WHAT HAPPENED</text>
+
+  <!-- balanced three-column descriptive row -->
+  <rect x="130" y="458" width="390" height="118" rx="18" class="card" stroke="#28A9A2"/>
+  <circle cx="190" cy="526" r="31" fill="#F4FAFA" stroke="#28A9A2" stroke-width="2"/>
+  <circle cx="190" cy="516" r="8" fill="#28A9A2"/>
+  <path d="M176 532 Q190 523 204 532 L207 554 H173 Z" fill="#28A9A2"/>
+  <text x="325" y="493" text-anchor="middle" class="h2">COHORT CHARACTERISTICS</text>
+  <text x="240" y="535" class="body">Who were the patients?</text>
+  <text x="240" y="559" class="body">Disease • treatment • follow-up</text>
+
+  <rect x="605" y="458" width="390" height="118" rx="18" fill="#F7FAFC" stroke="#AFC1D0" stroke-width="2"/>
+  <circle cx="665" cy="526" r="31" fill="white" stroke="#AFC1D0" stroke-width="2"/>
+  <path d="M645 539 H685 M650 531 L659 519 L668 527 L681 505" fill="none" stroke="#082D4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="800" y="493" text-anchor="middle" class="h2">UNADJUSTED ANALYSES</text>
+  <text x="715" y="535" class="body">Dose–outcome associations</text>
+  <text x="715" y="559" class="body">Observed ORR • EFS</text>
+
+  <rect x="1080" y="458" width="390" height="118" rx="18" class="card" stroke="#082D4D"/>
+  <circle cx="1140" cy="526" r="31" fill="#F6F8FA" stroke="#082D4D" stroke-width="2"/>
+  <path d="M1121 541 L1134 524 L1145 531 L1160 505" fill="none" stroke="#082D4D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1275" y="493" text-anchor="middle" class="h2">OBSERVED OUTCOMES</text>
+  <text x="1190" y="535" class="body">Response (ORR)</text>
+  <text x="1190" y="559" class="body">Event-free survival (EFS)</text>
+
+  <!-- clean directional flow -->
+  <path d="M520 517 H590" fill="none" stroke="#28A9A2" stroke-width="2.5" marker-end="url(#at)"/>
+  <path d="M995 517 H1065" fill="none" stroke="#082D4D" stroke-width="2.5" marker-end="url(#an)"/>
+</g>
+
+<!-- 3: UNADJUSTED emphasis -->
+<g id="unadjusted" class="fragment" data-fragment-index="3">
+  <rect x="596" y="449" width="408" height="136" rx="22" fill="none" stroke="#28A9A2" stroke-width="4" opacity=".85"/>
+  <text x="800" y="615" text-anchor="middle" font-size="16" font-style="italic" fill="#60788D">descriptive association ≠ adjusted dose effect</text>
+</g>
+
+<!-- 4: QUESTION / PIVOT -->
+<g id="question" class="fragment" data-fragment-index="4" transform="translate(0,10)">
+  <path d="M800 616 V632" stroke="#082D4D" stroke-width="3" marker-end="url(#an)"/>
+  <rect x="300" y="628" width="1000" height="76" rx="22" fill="#062D4D"/>
+  <circle cx="375" cy="666" r="43" fill="#062D4D" stroke="#28A9A2" stroke-width="3"/>
+  <text x="375" y="683" text-anchor="middle" font-size="58" font-weight="700" style="fill:white">?</text>
+  <text x="445" y="660" font-size="34" font-weight="700" style="fill:white">WHAT DOES ANOTHER DOSE BUY US?</text>
+  <text x="445" y="686" font-size="17" style="fill:#58D4CE">Move from description toward adjusted estimation</text>
+</g>
+
+<!-- 5: BAYESIAN MODELING -->
+<g id="bayesian" class="fragment" data-fragment-index="5" transform="translate(0,10)">
+  <!-- ribbons emerge from question -->
+  <path d="M650 704 C590 730 500 746 410 770 L410 810 C515 790 600 765 700 726 Z" fill="url(#rt)"/>
+  <path d="M950 704 C1010 730 1100 746 1190 770 L1190 810 C1085 790 1000 765 900 726 Z" fill="url(#rn)"/>
+  <text x="800" y="744" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="3" fill="#28A9A2">BAYESIAN MODELING</text>
+
+  <rect x="145" y="770" width="410" height="105" rx="18" class="card" stroke="#28A9A2"/>
+  <line x1="175" y1="850" x2="265" y2="850" stroke="#8296AA" stroke-width="2"/><line x1="175" y1="850" x2="175" y2="795" stroke="#8296AA" stroke-width="2"/>
+  <path d="M181 841 C201 837 212 820 232 811 S253 800 262 800" fill="none" stroke="#28A9A2" stroke-width="4"/>
+  <text x="290" y="806" class="h2">DOSE → RESPONSE</text>
+  <text x="290" y="835" class="body">Bayesian logistic model</text><text x="290" y="858" class="small">adjusted dose–response estimate</text>
+
+  <rect x="1045" y="770" width="410" height="105" rx="18" class="card" stroke="#082D4D"/>
+  <line x1="1075" y1="850" x2="1165" y2="850" stroke="#8296AA" stroke-width="2"/><line x1="1075" y1="850" x2="1075" y2="795" stroke="#8296AA" stroke-width="2"/>
+  <path d="M1082 802H1104V814H1123V826H1145V838H1158" fill="none" stroke="#082D4D" stroke-width="3"/>
+  <text x="1190" y="806" class="h2">DOSE → EFS</text>
+  <text x="1190" y="835" class="body">Bayesian survival model</text><text x="1190" y="858" class="small">landmark analysis after dose 2</text>
+</g>
+</svg>

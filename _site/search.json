@@ -669,7 +669,7 @@
     "href": "jc.html",
     "title": "SoCO Journal Club",
     "section": "",
-    "text": "SoCO Journal Club\n\n\n\n\nA multidisciplinary forum for examining practice-changing and practice-informing literature in cutaneous oncology—with attention to what the data show, what they do not show, and how strongly they should change what we believe or do.\n\n\nOpen the interactive timeline View article archive"
+    "text": "SoCO Journal Club\n\n\n\n\nA multidisciplinary forum for examining practice-changing and practice-informing literature in cutaneous oncology—with attention to what the data show, what they do not show, and how strongly they should change what we believe or do.\n\n\nCurrent discussion Meeting recaps Article archive Interactive timeline"
   },
   {
     "objectID": "jc.html#overview",
@@ -1068,7 +1068,7 @@
     "href": "jc.html#persuaded-by-evidence.-rarely-certain.",
     "title": "SoCO Journal Club",
     "section": "Persuaded by evidence. Rarely certain.",
-    "text": "Persuaded by evidence. Rarely certain.\nThe SoCO Journal Club is a multi-institutional and multidisciplinary forum for discussing important literature in skin cancer.\nThe aim is not simply to summarize a paper or decide whether it is “positive.” We examine the question, design, assumptions, analyses, uncertainty, clinical relevance, and the degree to which the evidence should alter practice or generate the next question."
+    "text": "Persuaded by evidence. Rarely certain.\nThe SoCO Journal Club is a multi-institutional and multidisciplinary forum for discussing important literature in skin cancer.\nThe aim is not simply to summarize a paper or decide whether it is “positive.” We examine the question, design, assumptions, analyses, uncertainty, clinical relevance, and the degree to which the evidence should alter practice—or generate the next question.\nBeginning in 2026, we are also preserving more of the meeting itself: the questions that animated the discussion, the perspectives that changed our thinking, and the people who were in the room."
   },
   {
     "objectID": "jc.html#frontline-immunotherapy-with-response-guided-subsequent-treatment-first-in-cutaneous-squamous-cell-carcinoma",
@@ -1076,5 +1076,110 @@
     "title": "SoCO Journal Club",
     "section": "Frontline Immunotherapy with Response-Guided Subsequent Treatment (FIRST) in Cutaneous Squamous Cell Carcinoma",
     "text": "Frontline Immunotherapy with Response-Guided Subsequent Treatment (FIRST) in Cutaneous Squamous Cell Carcinoma\n\nMiller DM, Merkin RD, Kaufman HL, Gupta SG, Wolkow N, Adelaja A, Sullivan RJ, Patel C, Sorrentino A, Cohen S, Cimoch C, Emerick KS. Journal for ImmunoTherapy of Cancer. 2026;14(7):e015029. doi:10.1136/jitc-2026-015029."
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "",
+    "text": "Society of Cutaneous Oncology\n\n2026-08-14"
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#meeting-pulse",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#meeting-pulse",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "Meeting pulse",
+    "text": "Meeting pulse\nThanks to everyone who joined us. The August meeting brought together a broad multidisciplinary group and, importantly, people stayed for the discussion.\n\n\n26 People who joined\nUnique cleaned names in the Teams attendance record.\n\n\n87 min Median time together\nHalf the room stayed at least this long.\n\n\n73% Stayed ≥ 1 hour\nNearly three quarters joined for at least 60 minutes."
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#from-a-real-world-cohort-to-an-inference-question",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#from-a-real-world-cohort-to-an-inference-question",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "From a real-world cohort to an inference question",
+    "text": "From a real-world cohort to an inference question\nBecause treatment evolved over time, patients received different amounts of immunotherapy. That created an opportunity to first describe what happened across 189 patients and then ask the harder question: what does another dose actually buy us?\nThe study moved from descriptive analyses of the observed cohort to estimation of the relationship between dose and response and between dose and event-free survival. Bayesian models allowed uncertainty to be carried forward rather than reducing the analysis to a single point estimate.\n\nAn important caveat: this was an observational experience during an evolving period of practice—not a randomized comparison. Treatment selection and confounding by indication matter, and the findings need to be interpreted in that context."
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#what-stuck-with-us-from-the-conversation",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#what-stuck-with-us-from-the-conversation",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "What stuck with us from the conversation",
+    "text": "What stuck with us from the conversation\n\nThe paper was the starting point, but a lot of the discussion was really about how we treat these patients now, how we decide when enough treatment may be enough, and how we make causal claims from observational data.\n\n\n\n01 · The landscape\n\nPractice is changing faster than consensus\nVishal opened by placing FIRST in the rapidly evolving treatment landscape for high-risk resectable CSCC. Christine and Howard then walked through the study schema and descriptive results, including the heterogeneity in real-world treatment exposure. That set up one of the central questions for discussion: with substantial variation in the number of doses patients received, what can these observational data actually tell us about how much treatment is necessary?\n\n\n\n02 · The clinical question\n\nOnce a patient responds, how much more treatment is actually necessary?\nOur current response-guided approach generally starts with early immunotherapy and reassessment. Patients with a deep clinical response may be observed without additional immunotherapy, surgery, or radiation; patients without that response retain additional treatment options. The clinical appeal is obvious. The harder question is what level of evidence should be required before treatment is safely omitted.\n\n\n\n03 · Causal inference\n\nThe DAG made the assumptions visible\nIsaac walked us through the directed acyclic graph for the dose–response question. Rather than simply adding another statistical graphic, the DAG forces us to make our causal assumptions explicit: what might confound the relationship, and what downstream variables should we avoid automatically adjusting for?\n\n\n\n04 · Clinicians + statisticians\n\nAre we already doing this — and do we really need a DAG?\nPaul raised an important practical question: aren’t we already thinking about these relationships when we build our models, and what is the added value of formalizing them in a DAG? Dan and Isaac highlighted why formalization can be useful. Defining how disease, treatment decisions, patient characteristics, and outcomes relate to one another requires clinical domain expertise, while the DAG makes those assumptions explicit and open to scrutiny.\n\n\n\n\nIf a paper is making a causal claim from observational data, ask to see the causal assumptions—not just the regression model.\n\nThe group also talked about how unfamiliar DAGs still are in much of clinical research. Ade shared the perspective of having encountered this approach in editorial work—albeit rarely—while for many others it was relatively new. That led to a broader challenge for authors and reviewers: make causal assumptions explicit, discuss them with the clinical and statistical teams early, and expect more than a list of variables entered into a multivariable model.\n\nWhere the discussion landed\nThere was real enthusiasm for the response-guided treatment concept and for getting these data in front of a broader audience.\nThe most useful framing, though, was a careful one: this may represent an important shift in how we think about treatment intensity, but the observational findings need prospective confirmation.\nThe signal is compelling enough to ask the next question well."
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#where-the-discussion-landed",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#where-the-discussion-landed",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "Where the discussion landed",
+    "text": "Where the discussion landed\nThere was real enthusiasm for the response-guided treatment concept and for getting these data in front of a broader audience.\nThe most useful framing was also the most careful: this may represent an important shift in how we think about treatment intensity, but the observational findings need prospective confirmation.\nThe signal is compelling enough to ask the next question well."
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#our-community",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#our-community",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "Our community",
+    "text": "Our community\nTwenty-six colleagues joined the meeting. The mix included people who had only recently found SoCO, members who had been participating for some time, and colleagues who have been part of the community from the beginning.\nThat mix is part of what makes Journal Club useful: the paper brings people into the same room, but the value comes from the range of clinical, methodological, editorial, and research perspectives applied to it."
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#continue-exploring",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#continue-exploring",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "Continue exploring",
+    "text": "Continue exploring\n\nBack to Journal Club Read the article Meeting slides Research Forum"
+  },
+  {
+    "objectID": "jc.html#first-in-cutaneous-squamous-cell-carcinoma",
+    "href": "jc.html#first-in-cutaneous-squamous-cell-carcinoma",
+    "title": "SoCO Journal Club",
+    "section": "FIRST in cutaneous squamous cell carcinoma",
+    "text": "FIRST in cutaneous squamous cell carcinoma\n\nMiller DM, et al. Frontline immunotherapy with response-guided subsequent treatment (FIRST) in cutaneous squamous cell carcinoma: a Bayesian causal analysis of dose intensity, early benefit, and treatment de-escalation. J Immunother Cancer. 2026;14(7):e015029."
+  },
+  {
+    "objectID": "jc.html#meeting-recaps",
+    "href": "jc.html#meeting-recaps",
+    "title": "SoCO Journal Club",
+    "section": "Meeting recaps",
+    "text": "Meeting recaps\nFor selected Journal Clubs, we preserve the conversation behind the paper: the central question, the discussion it generated, who was in the room, and where the group landed."
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#who-joined-us",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#who-joined-us",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "Who joined us?",
+    "text": "Who joined us?\n\nBelow is the full Teams roster. Where we could match someone to the SoCO community survey, we also included their role, institution, and how long they have been part of SoCO.\n\n\nWe appreciate the whole mix: people who had just recently found SoCO, those who have been with us for a while, and the originals who have been here since the beginning.\n\n\n26 colleagues joined the meeting\nCommunity details available for 25; “—” means not reported in the survey.\n\n\n\n👋 First SoCO Meeting\n\n\n\n\n\n\n\n\n\nName\nProfessional role\nInstitution\n\n\n\n\nElizabeth J. Lilley\nClinical Faculty / Practicing Clinician\nBrigham and Women’s Hospital\n\n\nMina Bakhtiar\nClinical Faculty / Practicing Clinician\nMassachusetts General Hospital\n\n\nTatyana Sharova\nOther\nMGH\n\n\n\n\n\n\nLess Than 1 Year\n\n\n\n\n\n\n\n\n\nName\nProfessional role\nInstitution\n\n\n\n\nAde Adamson\nClinical Faculty / Practicing Clinician\nUniversity of Texas\n\n\nAjay N. Sharma\nClinical Faculty / Practicing Clinician\nMassachusetts General Hospital\n\n\nDavid J. Savage\nClinical Faculty / Practicing Clinician\nUniversity of New Mexico\n\n\nElizabeth I. Buchbinder\nClinical Faculty / Practicing Clinician\nMass General Brigham Cancer Institute\n\n\nMehran Behruj Yusuf\nClinical Faculty / Practicing Clinician\nUAB\n\n\nRhoda Alani\nClinical Faculty / Practicing Clinician\nMGH — Visiting Professor\n\n\nRima Kulikauskas\nOther\nUniversity of Washington\n\n\n\n\n\n\n1–2 Years\n\n\n\n\n\n\n\n\n\nName\nProfessional role\nInstitution\n\n\n\n\nDan Hippe\nOther\nFred Hutch Cancer Center\n\n\nFrances Collichio\nClinical Faculty / Practicing Clinician\nUniversity of North Carolina\n\n\nJennifer Desimone\nClinical Faculty / Practicing Clinician\nINOVA Schar Cancer Institute\n\n\nPeter Ch’en\nPostgraduate Trainee — Resident or Fellow\nUniversity of Washington\n\n\nSong Park\n—\nUniversity of Washington\n\n\n\n\n\n\nMore Than 2 Years\n\n\n\n\n\n\n\n\n\nName\nProfessional role\nInstitution\n\n\n\n\nAlex Sorrentino\nClinical Faculty / Practicing Clinician\nMassachusetts General Hospital\n\n\nChristine C. Cimoch\nAdvanced Practice Provider\nMEEI\n\n\nJessica L. Fewkes\nClinical Faculty / Practicing Clinician\nMass Eye and Ear\n\n\nKrista M. Rubin\nClinical Faculty / Practicing Clinician\nMassachusetts General Hospital\n\n\nPaul Nghiem\nClinical Faculty / Practicing Clinician\nUniversity of Washington\n\n\nSamir Gupta\nClinical Faculty / Practicing Clinician\nMass Eye and Ear\n\n\nVern Sondak\nClinical Faculty / Practicing Clinician\nMoffitt\n\n\n\n\n\n\n🏆 Since the Beginning — SoCO Originals\n\n\n\n\n\n\n\n\n\nName\nProfessional role\nInstitution\n\n\n\n\nDavid M. Miller\nClinical Faculty / Practicing Clinician\nMGH\n\n\nHoward L. Kaufman\nClinical Faculty / Practicing Clinician\nMGB\n\n\nIsaac Brownell\nClinical Faculty / Practicing Clinician\nNational Institute of Arthritis and Musculoskeletal and Skin Diseases Dermatology Branch\n\n\nVishal Patel\nClinical Faculty / Practicing Clinician\nGeorge Washington University\n\n\n\n\n\nAbout the roster. Everyone listed above appears in the Teams attendance record. Role, institution, and SoCO tenure come from the community survey when we could match the name. A dash means we did not have survey information to add."
+  },
+  {
+    "objectID": "jc.html#article-archive",
+    "href": "jc.html#article-archive",
+    "title": "SoCO Journal Club",
+    "section": "Article archive",
+    "text": "Article archive\nNot every prior meeting has a full recap—and that is fine. The citation archive below preserves the papers discussed across the history of SoCO Journal Club.\nWhen a richer meeting recap exists, the recap above should be considered the preferred record of the discussion; the article remains here as part of the complete reading history."
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#a-good-turnout-and-people-stuck-around",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#a-good-turnout-and-people-stuck-around",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "A good turnout — and people stuck around",
+    "text": "A good turnout — and people stuck around\n\n\nPeople who joined\n26\nUnique cleaned names in the Teams attendance record\n\n\nMedian time together\n87 min\nHalf the room stayed at least this long\n\n\nStayed at least an hour\n73%\nJoined for at least 60 minutes\n\n\n\nParticipation"
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#a-few-ways-people-participated",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#a-few-ways-people-participated",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "A few ways people participated",
+    "text": "A few ways people participated\n\nTeams records a few simple signals — time in the meeting, unmuting, hand raises, and camera use. They do not tell the whole story, but they give us a quick sense of how people took part.\n\n\n\nStayed ≥ 60 minutes\n\n\n\n\n\n73%\n\n\nCamera on\n\n\n\n\n\n73%\n\n\nUnmuted\n\n\n\n\n\n69%\n\n\nRaised a hand\n\n\n\n\n\n8%\n\n\nRecorded Teams signals; these do not measure the quality or depth of participation.\n\n\n\n\nThe paper we discussed\n\n\nFIRST in cutaneous squamous cell carcinoma\n\n\nPrimary article · Journal for ImmunoTherapy of Cancer\n\n\nFrontline immunotherapy with response-guided subsequent treatment (FIRST) in cutaneous squamous cell carcinoma: a Bayesian causal analysis of dose intensity, early benefit, and treatment de-escalation\n\n\nMiller DM, et al. J Immunother Cancer. 2026;14(7):e015029.\ndoi: 10.1136/jitc-2026-015029\n\n\nRead the article DOI Methods & reproducible workflow\n\n\n\nFrom a real-world cohort to an inference question\n\nBecause treatment evolved over time, patients received different amounts of immunotherapy. That gave us an opportunity to first describe what happened across 189 patients, then ask the harder question: what does another dose actually buy us?\n\n\n\nFrom cohort to inference\n\n\nThe analysis moved from describing what happened to asking what additional treatment may have contributed.\n\n\n\n01 · Observe\n189-patient real-world cohort\nPatients received different amounts of immunotherapy during an evolving period of practice.\n\n→\n\n02 · Describe\nWhat happened?\nCharacterize dose exposure, response, surgery, recurrence, and event-free survival.\n\n→\n\n03 · Infer\nWhat might another dose buy us?\nUse causal assumptions and Bayesian models to estimate dose–response and dose–EFS relationships.\n\n\n\n\n189\npatients\n\n\nDose → Response\none inferential target\n\n\nDose → EFS\nsecond inferential target\n\n\n\nThe study moved from describing the observed cohort to estimating the relationship between dose and response and between dose and event-free survival. Bayesian models allowed uncertainty to be carried forward rather than reducing the analysis to a single point estimate.\n\nAn important caveat: this was an observational experience during an evolving period of practice—not a randomized comparison. Treatment selection and confounding by indication matter, and the results should be interpreted in that context.\n\n\nDiscussion highlights\n\n\n\n\nWhat stuck with us from the conversation\n\nThe paper was the starting point, but a lot of the discussion was really about how we treat these patients now, how we decide when enough treatment may be enough, and how we make causal claims from observational data.\n\n\n\n01 · The landscape\n\nPractice is changing faster than consensus\nVishal opened by placing FIRST in the rapidly evolving treatment landscape for high-risk resectable CSCC. Christine and Howard then walked through the study schema and descriptive results, including the heterogeneity in real-world treatment exposure. That set up one of the central questions for discussion: with substantial variation in the number of doses patients received, what can these observational data actually tell us about how much treatment is necessary?\n\n\n\n02 · The clinical question\n\nOnce a patient responds, how much more treatment is actually necessary?\nOur current response-guided approach generally starts with early immunotherapy and reassessment. Patients with a deep clinical response may be observed without additional immunotherapy, surgery, or radiation; patients without that response retain additional treatment options. The clinical appeal is obvious. The harder question is what level of evidence should be required before treatment is safely omitted.\n\n\n\n03 · Causal inference\n\nThe DAG made the assumptions visible\nIsaac walked us through the directed acyclic graph for the dose–response question. Rather than simply adding another statistical graphic, the DAG forces us to make our causal assumptions explicit: what might confound the relationship, and what downstream variables should we avoid automatically adjusting for?\n\n\n\n04 · Clinicians + statisticians\n\nAre we already doing this — and do we really need a DAG?\nPaul raised an important practical question: aren’t we already thinking about these relationships when we build our models, and what is the added value of formalizing them in a DAG? Dan and Isaac highlighted why formalization can be useful. Defining how disease, treatment decisions, patient characteristics, and outcomes relate to one another requires clinical domain expertise, while the DAG makes those assumptions explicit and open to scrutiny.\n\n\n\n\nIf a paper is making a causal claim from observational data, ask to see the causal assumptions—not just the regression model.\n\nThe group also talked about how unfamiliar DAGs still are in much of clinical research. Ade shared the perspective of having encountered this approach in editorial work—albeit rarely—while for many others it was relatively new. That led to a broader challenge for authors and reviewers: make causal assumptions explicit, discuss them with the clinical and statistical teams early, and expect more than a list of variables entered into a multivariable model.\n\nWhere the discussion landed\nThere was real enthusiasm for the response-guided treatment concept and for getting these data in front of a broader audience.\nThe most useful framing, though, was a careful one: this may represent an important shift in how we think about treatment intensity, but the observational findings need prospective confirmation.\nThe signal is compelling enough to ask the next question well.\n\n\n\n\nOur community"
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#first-in-cutaneous-squamous-cell-carcinoma",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#first-in-cutaneous-squamous-cell-carcinoma",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "FIRST in cutaneous squamous cell carcinoma",
+    "text": "FIRST in cutaneous squamous cell carcinoma\n\n\nPrimary article · Journal for ImmunoTherapy of Cancer\n\n\nFrontline immunotherapy with response-guided subsequent treatment (FIRST) in cutaneous squamous cell carcinoma: a Bayesian causal analysis of dose intensity, early benefit, and treatment de-escalation\n\n\nMiller DM, et al. J Immunother Cancer. 2026;14(7):e015029.\ndoi: 10.1136/jitc-2026-015029\n\n\nRead the article DOI Methods & reproducible workflow\n\n\n\nFrom a real-world cohort to an inference question\n\nBecause treatment evolved over time, patients received different amounts of immunotherapy. That gave us an opportunity to first describe what happened across 189 patients, then ask the harder question: what does another dose actually buy us?\n\n\n\nFrom cohort to inference\n\n\nThe analysis moved from describing what happened to asking what additional treatment may have contributed.\n\n\n\n01 · Observe\n189-patient real-world cohort\nPatients received different amounts of immunotherapy during an evolving period of practice.\n\n→\n\n02 · Describe\nWhat happened?\nCharacterize dose exposure, response, surgery, recurrence, and event-free survival.\n\n→\n\n03 · Infer\nWhat might another dose buy us?\nUse causal assumptions and Bayesian models to estimate dose–response and dose–EFS relationships.\n\n\n\n\n189\npatients\n\n\nDose → Response\none inferential target\n\n\nDose → EFS\nsecond inferential target\n\n\n\nThe study moved from describing the observed cohort to estimating the relationship between dose and response and between dose and event-free survival. Bayesian models allowed uncertainty to be carried forward rather than reducing the analysis to a single point estimate.\n\nAn important caveat: this was an observational experience during an evolving period of practice—not a randomized comparison. Treatment selection and confounding by indication matter, and the results should be interpreted in that context.\n\n\nDiscussion highlights"
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#thanks-for-joining-us.",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#thanks-for-joining-us.",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "Thanks for joining us.",
+    "text": "Thanks for joining us.\nWe had a great group on August 14. Thanks for spending part of your afternoon with us — and especially to everyone who asked a question, shared a perspective, or helped move the discussion along."
   }
 ]
