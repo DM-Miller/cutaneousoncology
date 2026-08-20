@@ -535,6 +535,70 @@ toc: false
     font-weight: 700;
   }
 
+  /* =========================================================
+     ENGAGEMENT STANDOUTS
+     ========================================================= */
+
+  .standout-card {
+    position: relative;
+    overflow: hidden;
+    margin: 1.15rem 0 1.65rem;
+    padding: 1.35rem 1.45rem 1.25rem;
+    border: 1px solid #E9C85F;
+    border-left: 7px solid #D7A400;
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 92% 18%, rgba(255,255,255,.58), transparent 28%),
+      linear-gradient(135deg, #FFF8D8 0%, #FDE9A9 100%);
+    box-shadow: 0 10px 28px rgba(116,83,0,.10);
+  }
+
+  .standout-title {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin: 0 0 .35rem;
+    color: #765308;
+    font-size: 1.1rem;
+    font-weight: 850;
+    letter-spacing: -.01em;
+  }
+
+  .standout-copy {
+    max-width: 900px;
+    margin: 0;
+    color: #735F2C;
+    font-size: .94rem;
+    line-height: 1.55;
+  }
+
+  .standout-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin-top: .95rem;
+  }
+
+  .standout-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem .72rem;
+    border: 1px solid rgba(118,83,8,.18);
+    border-radius: 999px;
+    background: rgba(255,255,255,.82);
+    color: #57420D;
+    font-size: .86rem;
+    font-weight: 780;
+    box-shadow: 0 2px 7px rgba(116,83,0,.08);
+  }
+
+  .standout-note {
+    margin: .75rem 0 0;
+    color: #7C6B42;
+    font-size: .78rem;
+    line-height: 1.5;
+  }
+
   .footer-card {
     margin: 3rem 0 1rem;
     padding: 1.8rem 2rem;
@@ -601,6 +665,20 @@ toc: false
 
     .attendance-group table {
       min-width: 720px;
+    }
+
+    .standout-card {
+      padding: 1.1rem 1rem;
+    }
+
+    .standout-pills {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .standout-pill {
+      width: 100%;
+      justify-content: flex-start;
     }
 
     .paper-card {
@@ -908,6 +986,28 @@ Our community
 :::
 
 ## Who joined us?
+
+<div class="standout-card">
+
+<div class="standout-title">🏅 Discussion standouts</div>
+
+<p class="standout-copy">
+A special thank-you to five colleagues whose questions, explanations, and perspectives helped move the August conversation forward.
+</p>
+
+<div class="standout-pills">
+  <span class="standout-pill">Vern Sondak</span>
+  <span class="standout-pill">David M. Miller</span>
+  <span class="standout-pill">Isaac Brownell</span>
+  <span class="standout-pill">Dan Hippe</span>
+  <span class="standout-pill">Howard L. Kaufman</span>
+</div>
+
+<p class="standout-note">
+These recognitions reflect the substance of the live discussion rather than a formal participation score.
+</p>
+
+</div>
 
 ::: {.section-intro}
 Below is the full Teams roster. Where we could match someone to the SoCO community survey, we also included their role, institution, and how long they have been part of SoCO.
