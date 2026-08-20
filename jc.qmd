@@ -577,26 +577,147 @@ toc: false
   }
 
   @media (max-width: 700px) {
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    main.content {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      overflow-x: hidden;
+    }
+
     .soco-jc-hero {
-      margin-top: 1.25rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      margin-top: 1.1rem;
+      padding-left: 0.85rem;
+      padding-right: 0.85rem;
     }
 
     .soco-jc-hero-inner {
       min-height: auto;
-      padding: 1.5rem;
-    }
-
-    .soco-jc-current,
-    .soco-jc-recaps,
-    .soco-jc-archive {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding: 1.35rem 1.15rem;
     }
 
     .soco-jc-hero-copy h1 {
-      font-size: clamp(2.35rem, 11vw, 3.1rem);
+      font-size: clamp(2.15rem, 10vw, 2.85rem);
+      line-height: 1.01;
+    }
+
+    .soco-jc-dek {
+      font-size: 1rem;
+      line-height: 1.58;
+    }
+
+    .soco-actions,
+    .soco-jc-links,
+    .soco-jc-recap-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+
+    .soco-actions .btn,
+    .soco-jc-link,
+    .soco-jc-recap-link {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .soco-jc-intro,
+    .soco-jc-current,
+    .soco-jc-recaps,
+    .soco-jc-archive {
+      padding-left: 0.85rem;
+      padding-right: 0.85rem;
+    }
+
+    .soco-jc-intro {
+      margin-top: 3.3rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .soco-jc-current {
+      margin-top: 2.8rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .soco-jc-current-top,
+    .soco-jc-current-body {
+      padding: 1.35rem 1.15rem;
+    }
+
+    .soco-jc-current-top h2 {
+      font-size: clamp(1.75rem, 8vw, 2.3rem);
+    }
+
+    .soco-jc-question {
+      margin: 1.4rem 0;
+      padding: 1rem 1.05rem;
+    }
+
+    .soco-jc-recaps {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .soco-jc-recap-list {
+      gap: 1.1rem;
+    }
+
+    .soco-jc-recap-card {
+      border-radius: 0.9rem;
+    }
+
+    .soco-jc-recap-art {
+      padding: 0.9rem 0.85rem;
+    }
+
+    .soco-jc-recap-art img {
+      width: 100%;
+      max-width: 100%;
+      max-height: 210px;
+    }
+
+    .soco-jc-recap-copy {
+      padding: 1.2rem 1.05rem 1.25rem;
+    }
+
+    .soco-jc-recap-title {
+      font-size: clamp(1.45rem, 7vw, 1.9rem);
+    }
+
+    .soco-jc-recap-question {
+      font-size: 0.98rem;
+    }
+
+    .soco-jc-recap-description {
+      font-size: 0.91rem;
+    }
+
+    .soco-jc-recap-footer {
+      display: block;
+    }
+
+    .soco-jc-recap-actions {
+      margin-bottom: 0.8rem;
+    }
+
+    .soco-jc-recap-meta {
+      white-space: normal;
+      font-size: 0.74rem;
+    }
+
+    .soco-jc-archive {
+      margin-top: 4rem;
+    }
+
+    .soco-jc-archive-divider {
+      margin-bottom: 3rem;
     }
   }
 </style>
@@ -642,11 +763,11 @@ Beginning in 2026, we are also preserving more of the **meeting itself**: the qu
 
 :::
 
-::: {.soco-jc-current #current-discussion}
+:::::::: {.soco-jc-current #current-discussion}
 
-::: {.soco-jc-current-card}
+::::::: {.soco-jc-current-card}
 
-::: {.soco-jc-current-top}
+:::::: {.soco-jc-current-top}
 
 ::: {.soco-eyebrow}
 August 14, 2026 · Current discussion
@@ -658,9 +779,9 @@ August 14, 2026 · Current discussion
 **Miller DM, et al.** Frontline immunotherapy with response-guided subsequent treatment (FIRST) in cutaneous squamous cell carcinoma: a Bayesian causal analysis of dose intensity, early benefit, and treatment de-escalation. *J Immunother Cancer.* 2026;14(7):e015029.
 :::
 
-:::
+::::::
 
-::: {.soco-jc-current-body}
+:::::: {.soco-jc-current-body}
 
 The paper was the starting point. The larger conversation was about **how much immunotherapy is enough, what a deep response should allow us to omit, and how confidently observational data can answer a causal treatment question.**
 
@@ -670,7 +791,7 @@ The paper was the starting point. The larger conversation was about **how much i
 What does another dose actually buy us?
 :::
 
-::: {.soco-jc-discussion-grid}
+::::: {.soco-jc-discussion-grid}
 
 ::: {.soco-jc-discussion-card}
 ### Treatment intensity
@@ -690,7 +811,7 @@ If dose is shaped by response, toxicity, frailty, and clinician judgment, what a
 The signal is provocative. The challenge is deciding what is sufficiently persuasive to change practice and what still requires prospective confirmation.
 :::
 
-:::
+:::::
 
 ::: {.soco-jc-links}
 [Read the meeting recap](<journal_club/August 14 2026 - FIRST in CSCC/index.qmd>){.soco-jc-link}
@@ -698,15 +819,16 @@ The signal is provocative. The challenge is deciding what is sufficiently persua
 [Methods & reproducible workflow](https://themillerlab.github.io/FIRST/){.soco-jc-link .secondary}
 :::
 
-:::
+::::::
 
-:::
+:::::::
 
-:::
+::::::::
 
-::: {.soco-jc-recaps #meeting-recaps}
 
-::: {.soco-jc-recaps-head}
+:::::::: {.soco-jc-recaps #meeting-recaps}
+
+::::::: {.soco-jc-recaps-head}
 
 ::: {.soco-eyebrow}
 The conversations behind the papers
@@ -716,11 +838,12 @@ The conversations behind the papers
 
 For selected Journal Clubs, we preserve the conversation behind the paper: the central question, the discussion it generated, who was in the room, and where the group landed.
 
-:::
+:::::::
 
-::: {.soco-jc-recap-list}
+:::::: {.soco-jc-recap-list}
 
-:::: {.soco-jc-recap-card}
+
+::::: {.soco-jc-recap-card}
 
 ::: {.soco-jc-recap-art}
 ![](<journal_club/August 14 2026 - FIRST in CSCC/card.svg>){alt="Primary article card for the August 14, 2026 SoCO Journal Club discussion of FIRST in cutaneous squamous cell carcinoma"}
@@ -762,10 +885,10 @@ Response-guided immunotherapy, treatment intensity, Bayesian causal inference, a
 
 ::::
 
-::::
+:::::
 
 
-:::: {.soco-jc-recap-card}
+::::: {.soco-jc-recap-card}
 
 ::: {.soco-jc-recap-art}
 ![](<journal_club/June 12 2026 - Local Recurrence in MCC/MCC_June12_card.svg>){alt="Primary article card for the June 12, 2026 SoCO Journal Club discussion of local recurrence after complete excision of Merkel cell carcinoma"}
@@ -807,10 +930,10 @@ A multidisciplinary discussion of modern local-recurrence risk, confounding by i
 
 ::::
 
-::::
+:::::
 
 
-:::: {.soco-jc-recap-card}
+::::: {.soco-jc-recap-card}
 
 ::: {.soco-jc-recap-art}
 ![](<journal_club/April 6 2026 - IGNYTE/IGNYTE_April6_card.svg>){alt="Primary article card for the April 6, 2026 SoCO Journal Club discussion of IGNYTE and RP1 plus nivolumab in anti-PD-1-failed melanoma"}
@@ -852,9 +975,58 @@ A discussion of a compelling clinical signal—and the harder inferential questi
 
 ::::
 
-::::
+:::::
+
+
+::::: {.soco-jc-recap-card}
+
+::: {.soco-jc-recap-art}
+![](<journal_club/February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC/MAIC_Feb13_card.svg>){alt="Primary article card for the February 13, 2026 SoCO Journal Club discussion of a matching-adjusted indirect comparison of nivolumab plus relatlimab versus BRAF/MEK inhibitors in BRAF-mutant advanced melanoma"}
+:::
+
+:::: {.soco-jc-recap-copy}
+
+::: {.soco-jc-recap-date}
+February 13, 2026 · SoCO Journal Club
+:::
+
+::: {.soco-jc-recap-title}
+MAIC in BRAF-Mutant Advanced Melanoma
+:::
+
+::: {.soco-jc-recap-divider}
+:::
+
+::: {.soco-jc-recap-question}
+How much can reweighting really buy us when the randomized comparison does not exist?
+:::
+
+::: {.soco-jc-recap-description}
+Nivolumab plus relatlimab versus BRAF/MEK inhibitors—and a deeper discussion of matching-adjusted indirect comparisons, covariate balance, effective sample size, residual confounding, and how much confidence an unanchored MAIC should earn.
+:::
+
+::: {.soco-jc-recap-footer}
+
+::: {.soco-jc-recap-actions}
+[Read meeting recap](<journal_club/February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC/index.qmd>){.soco-jc-recap-link}
+[Read the article](https://doi.org/10.1136/bmjonc-2025-000912){.soco-jc-recap-link .secondary}
+:::
+
+::: {.soco-jc-recap-meta}
+30 attendees · 82-minute median meeting time
+:::
 
 :::
+
+::::
+
+:::::
+
+
+::::::
+
+::::::::
+
 
 ::: {.soco-jc-archive #article-archive}
 
@@ -878,7 +1050,7 @@ When a richer meeting recap exists, the recap above should be considered the pre
 # 2026 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## February – June 2026
+## February – August 2026
 
 ### February
 
@@ -891,6 +1063,10 @@ Wong, Michael K., Mohammed M. Milhem, Joseph J. Sacco, Judith Michels, Gino K. I
 ### June
 
 Kavanagh, Fergal G., Hannah L. Kalvin, Edmund K. Bartlett, Christopher A. Barker, Charlotte E. Ariyan, Mary S. Brady, Danielle M. Bello, Klaus J. Busam, Katherine S. Panageas, and Daniel G. Coit. 2025. “Local Recurrence Following Complete Surgical Excision of Primary Merkel Cell Carcinoma.” *Annals of Surgical Oncology*, October. https://doi.org/10.1245/s10434-025-18670-2.
+
+### August
+
+Miller, David M., Ross D. Merkin, Howard L. Kaufman, Sameer G. Gupta, Natalie Wolkow, Adewunmi Adelaja, Ryan J. Sullivan, Chirayu Patel, Alexandra Sorrentino, Sonia Cohen, Christine Cimoch, and Kevin S. Emerick. 2026. “Frontline Immunotherapy With Response-Guided Subsequent Treatment (FIRST) in Cutaneous Squamous Cell Carcinoma: A Bayesian Causal Analysis of Dose Intensity, Early Benefit, and Treatment De-Escalation.” *Journal for ImmunoTherapy of Cancer* 14 (7): e015029. https://doi.org/10.1136/jitc-2026-015029.
 :::
 
 # 2025 Articles

@@ -732,26 +732,147 @@ ul.task-list li input[type="checkbox"] {
   }
 
   @media (max-width: 700px) {
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    main.content {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      overflow-x: hidden;
+    }
+
     .soco-jc-hero {
-      margin-top: 1.25rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      margin-top: 1.1rem;
+      padding-left: 0.85rem;
+      padding-right: 0.85rem;
     }
 
     .soco-jc-hero-inner {
       min-height: auto;
-      padding: 1.5rem;
-    }
-
-    .soco-jc-current,
-    .soco-jc-recaps,
-    .soco-jc-archive {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding: 1.35rem 1.15rem;
     }
 
     .soco-jc-hero-copy h1 {
-      font-size: clamp(2.35rem, 11vw, 3.1rem);
+      font-size: clamp(2.15rem, 10vw, 2.85rem);
+      line-height: 1.01;
+    }
+
+    .soco-jc-dek {
+      font-size: 1rem;
+      line-height: 1.58;
+    }
+
+    .soco-actions,
+    .soco-jc-links,
+    .soco-jc-recap-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+
+    .soco-actions .btn,
+    .soco-jc-link,
+    .soco-jc-recap-link {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .soco-jc-intro,
+    .soco-jc-current,
+    .soco-jc-recaps,
+    .soco-jc-archive {
+      padding-left: 0.85rem;
+      padding-right: 0.85rem;
+    }
+
+    .soco-jc-intro {
+      margin-top: 3.3rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .soco-jc-current {
+      margin-top: 2.8rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .soco-jc-current-top,
+    .soco-jc-current-body {
+      padding: 1.35rem 1.15rem;
+    }
+
+    .soco-jc-current-top h2 {
+      font-size: clamp(1.75rem, 8vw, 2.3rem);
+    }
+
+    .soco-jc-question {
+      margin: 1.4rem 0;
+      padding: 1rem 1.05rem;
+    }
+
+    .soco-jc-recaps {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .soco-jc-recap-list {
+      gap: 1.1rem;
+    }
+
+    .soco-jc-recap-card {
+      border-radius: 0.9rem;
+    }
+
+    .soco-jc-recap-art {
+      padding: 0.9rem 0.85rem;
+    }
+
+    .soco-jc-recap-art img {
+      width: 100%;
+      max-width: 100%;
+      max-height: 210px;
+    }
+
+    .soco-jc-recap-copy {
+      padding: 1.2rem 1.05rem 1.25rem;
+    }
+
+    .soco-jc-recap-title {
+      font-size: clamp(1.45rem, 7vw, 1.9rem);
+    }
+
+    .soco-jc-recap-question {
+      font-size: 0.98rem;
+    }
+
+    .soco-jc-recap-description {
+      font-size: 0.91rem;
+    }
+
+    .soco-jc-recap-footer {
+      display: block;
+    }
+
+    .soco-jc-recap-actions {
+      margin-bottom: 0.8rem;
+    }
+
+    .soco-jc-recap-meta {
+      white-space: normal;
+      font-size: 0.74rem;
+    }
+
+    .soco-jc-archive {
+      margin-top: 4rem;
+    }
+
+    .soco-jc-archive-divider {
+      margin-bottom: 3rem;
     }
   }
 </style>
@@ -924,6 +1045,37 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<div class="soco-jc-recap-card">
+<div class="soco-jc-recap-art">
+<p><img src="journal_club/February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC/MAIC_Feb13_card.svg" class="img-fluid" alt="Primary article card for the February 13, 2026 SoCO Journal Club discussion of a matching-adjusted indirect comparison of nivolumab plus relatlimab versus BRAF/MEK inhibitors in BRAF-mutant advanced melanoma"></p>
+</div>
+<div class="soco-jc-recap-copy">
+<div class="soco-jc-recap-date">
+<p>February 13, 2026 · SoCO Journal Club</p>
+</div>
+<div class="soco-jc-recap-title">
+<p>MAIC in BRAF-Mutant Advanced Melanoma</p>
+</div>
+<div class="soco-jc-recap-divider">
+
+</div>
+<div class="soco-jc-recap-question">
+<p>How much can reweighting really buy us when the randomized comparison does not exist?</p>
+</div>
+<div class="soco-jc-recap-description">
+<p>Nivolumab plus relatlimab versus BRAF/MEK inhibitors—and a deeper discussion of matching-adjusted indirect comparisons, covariate balance, effective sample size, residual confounding, and how much confidence an unanchored MAIC should earn.</p>
+</div>
+<div class="soco-jc-recap-footer">
+<div class="soco-jc-recap-actions">
+<p><a href="./journal_club/February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC/index.html" class="soco-jc-recap-link">Read meeting recap</a> <a href="https://doi.org/10.1136/bmjonc-2025-000912" class="soco-jc-recap-link secondary">Read the article</a></p>
+</div>
+<div class="soco-jc-recap-meta">
+<p>30 attendees · 82-minute median meeting time</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="article-archive" class="soco-jc-archive">
 <div class="soco-jc-archive-divider">
@@ -947,7 +1099,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>February – June 2026
+<span class="screen-reader-only">Note</span>February – August 2026
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -964,6 +1116,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="june" class="level3">
 <h3 class="anchored" data-anchor-id="june">June</h3>
 <p>Kavanagh, Fergal G., Hannah L. Kalvin, Edmund K. Bartlett, Christopher A. Barker, Charlotte E. Ariyan, Mary S. Brady, Danielle M. Bello, Klaus J. Busam, Katherine S. Panageas, and Daniel G. Coit. 2025. “Local Recurrence Following Complete Surgical Excision of Primary Merkel Cell Carcinoma.” <em>Annals of Surgical Oncology</em>, October. https://doi.org/10.1245/s10434-025-18670-2.</p>
+</section>
+<section id="august" class="level3">
+<h3 class="anchored" data-anchor-id="august">August</h3>
+<p>Miller, David M., Ross D. Merkin, Howard L. Kaufman, Sameer G. Gupta, Natalie Wolkow, Adewunmi Adelaja, Ryan J. Sullivan, Chirayu Patel, Alexandra Sorrentino, Sonia Cohen, Christine Cimoch, and Kevin S. Emerick. 2026. “Frontline Immunotherapy With Response-Guided Subsequent Treatment (FIRST) in Cutaneous Squamous Cell Carcinoma: A Bayesian Causal Analysis of Dose Intensity, Early Benefit, and Treatment De-Escalation.” <em>Journal for ImmunoTherapy of Cancer</em> 14 (7): e015029. https://doi.org/10.1136/jitc-2026-015029.</p>
 </section>
 </div>
 </div>
@@ -1049,8 +1205,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="may-1">May</h3>
 <p>Miller, David M., Sophia Z. Shalhout, Kayla M. Wright, Matt A. Miller, Howard L. Kaufman, Kevin S. Emerick, Harrison T. Reeder, Ann W. Silk, and Manisha Thakuria. 2024.&nbsp;“The Prognostic Value of the Merkel Cell Polyomavirus Serum Antibody Test: A Dual Institutional Observational Study.”&nbsp;Cancer&nbsp;130 (15): 2670–82.&nbsp;https://doi.org/10.1002/cncr.35314.</p>
 </section>
-<section id="august" class="level3">
-<h3 class="anchored" data-anchor-id="august">August</h3>
+<section id="august-1" class="level3">
+<h3 class="anchored" data-anchor-id="august-1">August</h3>
 <p>Blank, Christian U., Minke W. Lucas, Richard A. Scolyer, Bart A. van de Wiel, Alexander M. Menzies, Marta Lopez-Yurda, Lotte L. Hoeijmakers, et al.&nbsp;2024.&nbsp;“Neoadjuvant Nivolumab and Ipilimumab in Resectable Stage III Melanoma.”&nbsp;New England Journal of Medicine, June.&nbsp;https://doi.org/10.1056/nejmoa2402604.</p>
 </section>
 <section id="november-1" class="level3">
@@ -1107,8 +1263,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="july-1">July</h3>
 <p>Dieng, Mbathio, Sarah J. Lord, Robin M. Turner, Omgo E. Nieweg, Alexander M. Menzies, Robyn P. M. Saw, Andrew J. Einstein, et al.&nbsp;2022.&nbsp;“The Impact of Surveillance Imaging Frequency on the Detection of Distant Disease for Patients with Resected Stage III Melanoma.”&nbsp;Annals of Surgical Oncology&nbsp;29 (5): 2871–81.&nbsp;https://doi.org/10.1245/s10434-021-11231-3.</p>
 </section>
-<section id="august-1" class="level3">
-<h3 class="anchored" data-anchor-id="august-1">August</h3>
+<section id="august-2" class="level3">
+<h3 class="anchored" data-anchor-id="august-2">August</h3>
 <p>Becker, Jürgen C, Selma Ugurel, Ulrike Leiter, Friedegund Meier, Ralf Gutzmer, Sebastian Haferkamp, Lisa Zimmer, et al.&nbsp;2023.&nbsp;“Adjuvant Immunotherapy with Nivolumab Versus Observation in Completely Resected Merkel Cell Carcinoma (ADMEC-O): Disease-Free Survival Results from a Randomised, Open-Label, Phase 2 Trial.”&nbsp;The Lancet, July.&nbsp;https://doi.org/10.1016/s0140-6736(23)00769-9.</p>
 </section>
 <section id="september" class="level3">
@@ -1169,8 +1325,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="july-2">July</h3>
 <p>Ruiz, Emily S., Kylee J. B. Kus, Timothy D. Smile, Fadi Murad, Guohai Zhou, Evelyn O. Ilori, Jonathan D. Schoenfeld, et al.&nbsp;2022.&nbsp;“Adjuvant Radiation Following Clear Margin Resection of High T-Stage Cutaneous Squamous Cell Carcinoma Halves the Risk of Local and Locoregional Recurrence: A Dual-Center Retrospective Study.”&nbsp;Journal of the American Academy of Dermatology&nbsp;87 (1): 87–94.&nbsp;https://doi.org/10.1016/j.jaad.2022.03.044.</p>
 </section>
-<section id="august-2" class="level3">
-<h3 class="anchored" data-anchor-id="august-2">August</h3>
+<section id="august-3" class="level3">
+<h3 class="anchored" data-anchor-id="august-3">August</h3>
 <p>Reijers, Irene L. M., Alexander M. Menzies, Alexander C. J. van Akkooi, Judith M. Versluis, Noëlle M. J. van den Heuvel, Robyn P. M. Saw, Thomas E. Pennington, et al.&nbsp;2022.&nbsp;“Personalized Response-Directed Surgery and Adjuvant Therapy After Neoadjuvant Ipilimumab and Nivolumab in High-Risk Stage III Melanoma: The PRADO Trial.”&nbsp;Nature Medicine&nbsp;28 (6): 1178–88.&nbsp;https://doi.org/10.1038/s41591-022-01851-x.</p>
 </section>
 <section id="october" class="level3">
@@ -1231,8 +1387,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="july-3">July</h3>
 <p>Farberg, Aaron S., Mary A. Hall, Leah Douglas, Kyle R. Covington, Sarah J. Kurley, Robert W. Cook, and Scott M. Dinehart. 2020. “Integrating Gene Expression Profiling into NCCN High-Risk Cutaneous Squamous Cell Carcinoma Management Recommendations: Impact on Patient Management.” Current Medical Research and Opinion 36 (8): 1301–7. https://doi.org/10.1080/03007995.2020.1763284.</p>
 </section>
-<section id="august-3" class="level3">
-<h3 class="anchored" data-anchor-id="august-3">August</h3>
+<section id="august-4" class="level3">
+<h3 class="anchored" data-anchor-id="august-4">August</h3>
 <p>Puebla-Tornero, Laura, Luis Antonio Corchete-Sánchez, Alberto Conde-Ferreirós, Natalia García-Sancha, Roberto Corchado-Cobos, Concepción Román-Curto, and Javier Cañueto. 2021. “Performance of Salamanca Refinement of the T3-AJCC8 Versus the Brigham and Women’s Hospital and Tübingen Alternative Staging Systems for High-Risk Cutaneous Squamous Cell Carcinoma.” Journal of the American Academy of Dermatology 84 (4): 938–45. https://doi.org/10.1016/j.jaad.2020.12.020.</p>
 </section>
 <section id="september-1" class="level3">
@@ -1289,8 +1445,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="july-4">July</h3>
 <p>Lobl, Marissa B., Dillon Clarey, Shauna Higgins, Adam Sutton, Laura Hansen, and Ashley Wysong. 2020.&nbsp;“Targeted Next-Generation Sequencing of Matched Localized and Metastatic Primary High-Risk SCCs Identifies Driver and Co-Occurring Mutations and Novel Therapeutic Targets.”&nbsp;Journal of Dermatological Science&nbsp;99 (1): 30–43.&nbsp;https://doi.org/10.1016/j.jdermsci.2020.05.007.</p>
 </section>
-<section id="august-4" class="level3">
-<h3 class="anchored" data-anchor-id="august-4">August</h3>
+<section id="august-5" class="level3">
+<h3 class="anchored" data-anchor-id="august-5">August</h3>
 <p>Schauder, David M., Jinwan Kim, and Rajiv I. Nijhawan. 2020.&nbsp;“Evaluation of the Use of Capecitabine for the Treatment and Prevention of Actinic Keratoses, Squamous Cell Carcinoma, and Basal Cell Carcinoma.”&nbsp;JAMA Dermatology&nbsp;156 (10): 1117.&nbsp;https://doi.org/10.1001/jamadermatol.2020.2327.</p>
 </section>
 <section id="september-2" class="level3">
@@ -1343,8 +1499,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="july-5">July</h3>
 <p>Gore, Sinclair M., Douglas Shaw, Richard C. W. Martin, Wendy Kelder, Kathryn Roth, Roger Uren, Kan Gao, et al.&nbsp;2015.&nbsp;“Prospective Study of Sentinel Node Biopsy for High-Risk Cutaneous Squamous Cell Carcinoma of the Head and Neck.”&nbsp;Head &amp; Neck&nbsp;38 (S1): E884–89.&nbsp;https://doi.org/10.1002/hed.24120.</p>
 </section>
-<section id="august-5" class="level3">
-<h3 class="anchored" data-anchor-id="august-5">August</h3>
+<section id="august-6" class="level3">
+<h3 class="anchored" data-anchor-id="august-6">August</h3>
 <p>Ruiz, Emily Stamell, Pritesh S. Karia, Robert Besaw, and Chrysalyne D. Schmults. 2019.&nbsp;“Performance of the American Joint Committee on Cancer Staging Manual, 8th Edition Vs the Brigham and Women’s Hospital Tumor Classification System for Cutaneous Squamous Cell Carcinoma.”&nbsp;JAMA Dermatology&nbsp;155 (7): 819.&nbsp;https://doi.org/10.1001/jamadermatol.2019.0032.</p>
 </section>
 <section id="september-3" class="level3">
@@ -1371,7 +1527,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

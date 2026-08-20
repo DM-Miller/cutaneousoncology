@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F3F8F8"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#082D4D" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect x="42" y="42" width="1116" height="616" rx="28" fill="url(#bg)" filter="url(#shadow)"/>
+  <rect x="42" y="42" width="9" height="616" rx="4.5" fill="#28A9A2"/>
+  <text x="108" y="118" fill="#28A9A2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="3.2">
+    PRIMARY ARTICLE · BMJ ONCOLOGY
+  </text>
+  <text x="108" y="220" fill="#082D4D" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="700">
+    Nivolumab + Relatlimab versus
+  </text>
+  <text x="108" y="282" fill="#082D4D" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="700">
+    BRAF/MEK Inhibitors in BRAF-Mutant
+  </text>
+  <text x="108" y="344" fill="#082D4D" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="700">
+    Advanced Melanoma
+  </text>
+  <text x="108" y="407" fill="#31424E" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700">
+    A matching-adjusted indirect comparison
+  </text>
+  <text x="108" y="492" fill="#082D4D" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">
+    Miller DM, et al.
+  </text>
+  <text x="306" y="492" fill="#52616D" font-family="Georgia, Times New Roman, serif" font-size="22" font-style="italic">
+    BMJ Oncology.
+  </text>
+  <text x="463" y="492" fill="#52616D" font-family="Arial, Helvetica, sans-serif" font-size="22">
+    2025;4:e000912.
+  </text>
+  <text x="108" y="548" fill="#31424E" font-family="Arial, Helvetica, sans-serif" font-size="20">
+    doi: 10.1136/bmjonc-2025-000912
+  </text>
+  <rect x="108" y="603" width="108" height="6" rx="3" fill="#28A9A2"/>
+  <rect x="216" y="603" width="48" height="6" rx="3" fill="#E25A4E"/>
+</svg>

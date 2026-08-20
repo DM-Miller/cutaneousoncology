@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
   }
 
   body {
-    background: var(--soco-surface);
+    background: #ffffff;
   }
 
   /* =========================================================
@@ -197,21 +197,22 @@ ul.task-list li input[type="checkbox"] {
     background:
       radial-gradient(
         circle at 84% 18%,
-        rgba(15, 127, 134, 0.28),
+        rgba(15, 127, 134, 0.14),
         transparent 29%
       ),
       radial-gradient(
         circle at 14% 24%,
-        rgba(255, 59, 63, 0.12),
+        rgba(255, 59, 63, 0.055),
         transparent 30%
       ),
       linear-gradient(
         135deg,
-        var(--soco-navy) 0%,
-        var(--soco-blue) 58%,
-        #0b6570 100%
+        #eef8f7 0%,
+        #f8fbfb 58%,
+        #ffffff 100%
       );
-    color: #ffffff;
+    color: var(--soco-navy);
+    border-bottom: 1px solid var(--soco-line);
   }
 
   .forum-entry-hero::after {
@@ -249,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
     align-items: center;
     gap: 0.7rem;
     margin-bottom: 1.45rem;
-    color: rgba(255,255,255,0.80);
+    color: var(--soco-teal);
     font-size: 0.80rem;
     font-weight: 800;
     letter-spacing: 0.15em;
@@ -266,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
   .forum-entry-hero h1 {
     max-width: 1060px;
     margin: 0;
-    color: #ffffff;
+    color: var(--soco-navy);
     font-size: clamp(2.7rem, 5.2vw, 4.9rem);
     font-weight: 700;
     line-height: 1.02;
@@ -277,7 +278,7 @@ ul.task-list li input[type="checkbox"] {
   .forum-entry-subtitle {
     max-width: 920px;
     margin: 1.65rem 0 0;
-    color: rgba(255,255,255,0.84);
+    color: #4f6574;
     font-size: clamp(1.08rem, 1.65vw, 1.28rem);
     line-height: 1.72;
   }
@@ -292,10 +293,10 @@ ul.task-list li input[type="checkbox"] {
   .forum-entry-tag {
     display: inline-flex;
     padding: 0.45rem 0.82rem;
-    border: 1px solid rgba(255,255,255,0.22);
+    border: 1px solid rgba(15,127,134,0.22);
     border-radius: 999px;
-    background: rgba(255,255,255,0.08);
-    color: #ffffff;
+    background: rgba(255,255,255,0.72);
+    color: var(--soco-navy);
     font-size: 0.77rem;
     font-weight: 700;
   }
@@ -539,6 +540,179 @@ ul.task-list li input[type="checkbox"] {
   }
 
   /* =========================================================
+     Meeting recap / attendance
+     ========================================================= */
+
+  .forum-meeting-pulse {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 1rem;
+    margin: 1.4rem 0 3rem;
+  }
+
+  .forum-pulse-card {
+    padding: 1.25rem 1.3rem;
+    border: 1px solid var(--soco-line);
+    border-radius: .95rem;
+    background:
+      linear-gradient(135deg, rgba(15,127,134,.055), rgba(255,255,255,.98));
+    box-shadow: 0 7px 22px rgba(4,27,51,.045);
+  }
+
+  .forum-pulse-label {
+    display:block;
+    color:var(--soco-muted);
+    font-size:.73rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.09em;
+  }
+
+  .forum-pulse-value {
+    display:block;
+    margin:.32rem 0;
+    color:var(--soco-navy);
+    font-size:2rem;
+    font-weight:850;
+    line-height:1.05;
+  }
+
+  .forum-pulse-note {
+    color:var(--soco-muted);
+    font-size:.86rem;
+    line-height:1.45;
+  }
+
+  .forum-standout-card {
+    margin: 1.2rem 0 2rem;
+    padding: 1.35rem 1.45rem 1.25rem;
+    border: 1px solid rgba(15,127,134,.28);
+    border-left: 7px solid var(--soco-teal);
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 92% 18%,rgba(255,255,255,.72),transparent 28%),
+      linear-gradient(135deg,#E9F7F5 0%,#F8FCFC 100%);
+    box-shadow:0 10px 28px rgba(15,127,134,.08);
+  }
+
+  .forum-standout-title {
+    margin:0 0 .35rem;
+    color:var(--soco-navy);
+    font-size:1.08rem;
+    font-weight:850;
+  }
+
+  .forum-standout-copy {
+    max-width:860px;
+    margin:0;
+    color:#526574;
+    font-size:.93rem;
+    line-height:1.55;
+  }
+
+  .forum-standout-pills {
+    display:flex;
+    flex-wrap:wrap;
+    gap:.55rem;
+    margin-top:.9rem;
+  }
+
+  .forum-standout-pill {
+    display:inline-flex;
+    padding:.5rem .72rem;
+    border:1px solid rgba(15,127,134,.20);
+    border-radius:999px;
+    background:#ffffff;
+    color:var(--soco-navy);
+    font-size:.85rem;
+    font-weight:780;
+  }
+
+  .forum-roster-summary {
+    display:flex;
+    justify-content:space-between;
+    gap:1rem;
+    margin:0 0 .8rem;
+    padding:.9rem 1rem;
+    border:1px solid var(--soco-line);
+    border-radius:14px;
+    background:#F7FBFB;
+  }
+
+  .forum-roster-summary strong {
+    color:var(--soco-navy);
+  }
+
+  .forum-roster-summary span {
+    color:var(--soco-muted);
+    font-size:.84rem;
+  }
+
+  .forum-attendance-scroll {
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    border-radius:16px;
+  }
+
+  .forum-attendance-table {
+    width:100%;
+    min-width:690px;
+    border-collapse:separate;
+    border-spacing:0;
+    overflow:hidden;
+    border:1px solid var(--soco-line);
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 8px 24px rgba(4,27,51,.045);
+  }
+
+  .forum-attendance-table thead th {
+    padding:.7rem .72rem;
+    background:var(--soco-teal);
+    color:#fff;
+    border:0;
+    font-size:.76rem;
+    font-weight:800;
+    text-align:center;
+  }
+
+  .forum-attendance-table thead th:first-child {
+    text-align:left;
+  }
+
+  .forum-attendance-table tbody td {
+    padding:.64rem .72rem;
+    border-top:1px solid #E9EFF1;
+    color:#334857;
+    font-size:.86rem;
+    text-align:center;
+  }
+
+  .forum-attendance-table .name-cell {
+    color:var(--soco-navy);
+    font-weight:750;
+    text-align:left;
+  }
+
+  .forum-attendance-table .minutes-cell {
+    color:#17384C;
+    font-variant-numeric:tabular-nums;
+  }
+
+  .forum-attendance-table .signal-on {
+    color:var(--soco-teal);
+    font-weight:900;
+  }
+
+  .forum-attendance-note {
+    margin-top:.8rem;
+    color:var(--soco-muted);
+    font-size:.78rem;
+    line-height:1.5;
+  }
+
+  /* =========================================================
      Navigation
      ========================================================= */
 
@@ -615,12 +789,61 @@ ul.task-list li input[type="checkbox"] {
 
   @media (max-width: 760px) {
 
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    main.content {
+      width:100%;
+      max-width:100%;
+      padding-left:0 !important;
+      padding-right:0 !important;
+      overflow-x:hidden;
+    }
+
     .forum-entry-hero {
-      padding: 4.25rem 1.25rem 6rem;
+      padding: 2.5rem .9rem 4.6rem;
+    }
+
+    .forum-entry-hero-inner {
+      width:100%;
+      max-width:100%;
+    }
+
+    .forum-entry-hero h1 {
+      font-size: clamp(2.15rem, 10vw, 2.85rem);
+      line-height:1.01;
+    }
+
+    .forum-entry-subtitle {
+      font-size:1rem;
+      line-height:1.58;
+    }
+
+    .forum-entry-tags {
+      gap:.45rem;
+    }
+
+    .forum-entry-tag {
+      font-size:.72rem;
+      padding:.4rem .66rem;
+    }
+
+    .forum-entry-shell {
+      width:calc(100% - 1.4rem);
+      margin-top:-2.4rem;
+      margin-bottom:3rem;
+    }
+
+    .forum-entry-card {
+      border-radius:.95rem;
     }
 
     .forum-entry-meta,
-    .forum-entry-grid {
+    .forum-entry-grid,
+    .forum-meeting-pulse {
       grid-template-columns: 1fr;
     }
 
@@ -630,11 +853,68 @@ ul.task-list li input[type="checkbox"] {
     }
 
     .forum-entry-content {
-      padding: 3rem 1.35rem 3.5rem;
+      padding: 2rem 1rem 2.75rem;
     }
 
-    .forum-entry-hero h1 {
-      font-size: clamp(2.4rem, 11vw, 3.25rem);
+    .forum-entry-section {
+      margin-bottom:2.5rem;
+    }
+
+    .forum-entry-section h2 {
+      font-size:clamp(1.65rem,8vw,2.1rem);
+    }
+
+    .forum-entry-section p,
+    .forum-entry-section li {
+      font-size:1rem;
+      line-height:1.68;
+    }
+
+    .forum-entry-image {
+      margin-bottom:2.5rem;
+      padding:1.35rem 1rem;
+    }
+
+    .forum-entry-takeaway,
+    .forum-entry-topics {
+      padding:1.15rem 1rem;
+    }
+
+    .forum-entry-links {
+      display:grid;
+      grid-template-columns:1fr;
+    }
+
+    .forum-entry-link {
+      width:100%;
+      justify-content:center;
+      text-align:center;
+    }
+
+    .forum-standout-card {
+      padding:1.05rem .95rem;
+    }
+
+    .forum-standout-pills {
+      display:grid;
+      grid-template-columns:1fr;
+    }
+
+    .forum-standout-pill {
+      width:100%;
+    }
+
+    .forum-roster-summary {
+      display:block;
+    }
+
+    .forum-roster-summary span {
+      display:block;
+      margin-top:.3rem;
+    }
+
+    .forum-attendance-table {
+      min-width:690px;
     }
   }
 
@@ -682,6 +962,32 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="forum-entry-content">
+<section id="meeting-recap" class="level2 forum-entry-section fade-in">
+<h2 class="anchored" data-anchor-id="meeting-recap">Meeting recap</h2>
+<div class="forum-meeting-pulse">
+<div class="forum-pulse-card">
+<span class="forum-pulse-label">People represented</span> <span class="forum-pulse-value"> 38 </span> <span class="forum-pulse-note">Cleaned Teams attendance record</span>
+</div>
+<div class="forum-pulse-card">
+<span class="forum-pulse-label">Median time together</span> <span class="forum-pulse-value"> 92 min</span> <span class="forum-pulse-note">Half the room stayed at least this long</span>
+</div>
+<div class="forum-pulse-card">
+<span class="forum-pulse-label">Stayed ≥ 60 minutes</span> <span class="forum-pulse-value"> 79% </span> <span class="forum-pulse-note">A sustained Research Forum conversation</span>
+</div>
+</div>
+<p>The July Research Forum was intentionally exploratory. The point was not to present a finished project, but to expose the Open Inference Project early enough that colleagues could challenge the premise, the measurement strategy, and the path from a dermatology corpus to a broader research program.</p>
+</section>
+<div class="forum-standout-card fade-in">
+<div class="forum-standout-title">
+🏅 Discussion standouts
+</div>
+<p class="forum-standout-copy">
+A special thank-you to colleagues whose questions, critiques, and perspectives helped shape the conversation around analytic search space and the Open Inference Project.
+</p>
+<div class="forum-standout-pills">
+<p><span class="forum-standout-pill">David M. Miller</span> <span class="forum-standout-pill">Lisa Zaba</span> <span class="forum-standout-pill">Vishal Patel</span> <span class="forum-standout-pill">Isaac Brownell</span></p>
+</div>
+</div>
 <div class="forum-entry-image fade-in">
 <p><img src="open_inference_logo.png" class="img-fluid" alt="Open Inference Project logo"></p>
 <p><span class="forum-entry-image-title">The Open Inference Project</span></p>
@@ -775,6 +1081,687 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="../../research_forum.html" class="forum-entry-link">Research Forum</a> <a href="../../research_forum.html#presentations" class="forum-entry-link secondary">Presentation Archive</a></p>
 </div>
 </section>
+<section id="who-joined-us" class="level2 forum-entry-section fade-in">
+<h2 class="anchored" data-anchor-id="who-joined-us">Who joined us?</h2>
+<p>The attendance record is preserved as part of the meeting recap. Teams participation signals are included only as a descriptive record; they are not a measure of the quality of anyone’s contribution.</p>
+<div class="forum-roster-summary">
+<strong> 38 people represented</strong> <span>Sorted by time in meeting · ● = signal recorded at least once</span>
+</div>
+<div class="forum-attendance-scroll">
+<table class="forum-attendance-table">
+<thead>
+<tr>
+<th>
+Name
+</th>
+<th>
+Minutes
+</th>
+<th>
+Camera
+</th>
+<th>
+Unmuted
+</th>
+<th>
+Raised hand
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="name-cell">
+David M. Miller
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.300) ;">
+114
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Adewunmi O. Adelaja
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.295) ;">
+112
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Ajay N. Sharma
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.284) ;">
+108
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Michael Povelaitis
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.284) ;">
+108
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Haroutyun Joulfayan
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.282) ;">
+107
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Kathryn Bollin
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.282) ;">
+107
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Ray Cheever
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.276) ;">
+105
+</td>
+<td class="">
+—
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Sameer Gupta
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.274) ;">
+104
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Charlie Li
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.271) ;">
+103
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Dan Hippe
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.271) ;">
+103
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Jessica L. Fewkes
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.266) ;">
+101
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Laura Ferris
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.258) ;">
+98
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Aleigha R. Lawless
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.253) ;">
+96
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Shailender Bhatia
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.253) ;">
+96
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Isaac Brownell
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.250) ;">
+95
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Rhoda Myra M.D.&nbsp;Alani
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.250) ;">
+95
+</td>
+<td class="">
+—
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Krista Lachance
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.247) ;">
+94
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Lisa Zaba
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.247) ;">
+94
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Mehran Behruj Yusuf
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.247) ;">
+94
+</td>
+<td class="">
+—
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Vishal Patel
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.237) ;">
+90
+</td>
+<td class="">
+—
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Emily Godwin Summers
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.232) ;">
+88
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Sonia Cohen
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.224) ;">
+85
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Juliane Andrade Czapla
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.221) ;">
+84
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Todd Franklin Pearson
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.205) ;">
+78
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+David J Savage
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.203) ;">
+77
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Howard L. Kaufman
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.189) ;">
+72
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Song Park
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.176) ;">
+67
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Ross D. Merkin
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.171) ;">
+65
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Ben Gratz
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.168) ;">
+64
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Adewole S Adamson
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.161) ;">
+61
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Vern Sondak
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.158) ;">
+60
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Frances Collichio
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.150) ;">
+57
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Itai M. Pashtan
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.113) ;">
+43
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Peter Ch’en
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.097) ;">
+37
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Bailey Claire Smith
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.095) ;">
+36
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Jack Kollings
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.087) ;">
+33
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Paul Nghiem
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.068) ;">
+26
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+<td class="">
+—
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Justine V. Cohen
+</td>
+<td class="minutes-cell" style="background: rgba(15,127,134,0.050) ;">
+19
+</td>
+<td class="">
+—
+</td>
+<td class=" signal-on">
+●
+</td>
+<td class="">
+—
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="forum-attendance-note">
+<p>Automated meeting-note bots and the non-person entry D237 are excluded from the cleaned roster. Reconnects are reconciled in the attendance-processing script.</p>
+</div>
+</section>
 <div class="forum-entry-note">
 <p>Society of Cutaneous Oncology Research Forum. Research discussions presented through the Forum may include work in progress and should be interpreted in that context.</p>
 </div>
@@ -807,8 +1794,9 @@ ul.task-list li input[type="checkbox"] {
 </script>
 
 
+</main></div>
 
-</main> <!-- /main -->
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1209,7 +2197,7 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-</div> <!-- /content -->
+ <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
