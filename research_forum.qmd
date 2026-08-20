@@ -10,9 +10,9 @@ listing:
       - "research_forum/**/index.qmd"
     sort: "date desc"
     type: default
-    categories: true
-    sort-ui: true
-    filter-ui: true
+    categories: false
+    sort-ui: false
+    filter-ui: false
 ---
 
 :::::: {.soco-forum-hero}
@@ -28,9 +28,9 @@ SoCO Research Forum
 The Research Forum is a recurring multidisciplinary space for investigators to present work in progress, challenge assumptions, refine methods, and develop collaborative projects across cutaneous oncology.
 
 ::: {.soco-actions}
-[Explore presentations](#presentations){.btn .btn-primary}
+[Proposed meetings](#proposed-meetings){.btn .btn-primary}
+[Explore presentations](#presentations){.btn .btn-outline-primary}
 [Journal Club](jc.qmd){.btn .btn-outline-primary}
-[Journal](joco.qmd){.btn .btn-outline-primary}
 :::
 
 ::::
@@ -97,6 +97,43 @@ The work may be early. It may be incomplete. That is the point.
 
 :::
 
+::: {.soco-section .soco-forum-proposed}
+
+::: {.soco-archive-heading}
+
+::: {.soco-eyebrow}
+In development
+:::
+
+## Proposed Meetings {#proposed-meetings}
+
+Some Forum conversations begin as working concepts. These pages make the proposed format, agenda, and questions visible while there is still time to refine them with the people who will shape the discussion.
+
+:::
+
+::: {.soco-proposed-meeting-card}
+
+::: {.soco-proposed-meeting-kicker}
+Proposed Meeting · Fall 2026
+:::
+
+### Inside the Review Room
+
+**From Patient-Level Data to FDA Regulatory Decision-Making**
+
+A proposed 90-minute, moderator-led panel exploring how oncology applications are reviewed inside FDA, how patient-level evidence is interrogated and reconstructed, and when advisory committees become part of the regulatory process.
+
+::: {.soco-proposed-meeting-meta}
+**Format:** Conversational, moderator-led panel  
+**Proposed panel:** FDA regulatory medicine colleagues with a SoCO moderator
+:::
+
+[View proposed meeting →](brainstorms/regulatory meeting/index.qmd){.soco-card-link}
+
+:::
+
+:::
+
 ::: {.soco-section .soco-forum-archive}
 
 ::: {.soco-archive-heading}
@@ -150,7 +187,63 @@ Explore prior discussions, methods sessions, trial concepts, preliminary analyse
     max-width: 880px;
   }
 
+  .soco-forum-proposed {
+    margin-top: 6rem;
+  }
+
+  .soco-proposed-meeting-card {
+    position: relative;
+    overflow: hidden;
+    margin-top: 1.6rem;
+    padding: 2rem 2.1rem;
+    border: 1px solid #dbe8ee;
+    border-top: 4px solid #ff3b3f;
+    border-radius: 1rem;
+    background:
+      radial-gradient(
+        circle at 90% 12%,
+        rgba(15, 127, 134, 0.09),
+        transparent 28%
+      ),
+      linear-gradient(135deg, #ffffff 0%, #f3f9f9 100%);
+    box-shadow: 0 8px 24px rgba(4, 27, 51, 0.055);
+  }
+
+  .soco-proposed-meeting-kicker {
+    margin-bottom: 0.55rem;
+    color: #0f7f86;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .soco-proposed-meeting-card h3 {
+    margin: 0 0 0.45rem;
+    color: #041b33;
+    font-size: 1.65rem;
+  }
+
+  .soco-proposed-meeting-card > p {
+    max-width: 900px;
+  }
+
+  .soco-proposed-meeting-meta {
+    margin: 1.2rem 0 1.35rem;
+    padding: 1rem 1.15rem;
+    border-left: 4px solid #0f7f86;
+    border-radius: 0.65rem;
+    background: rgba(255, 255, 255, 0.72);
+    color: #425f70;
+  }
+
   .soco-forum-archive {
     margin-top: 6rem;
+  }
+
+  @media (max-width: 760px) {
+    .soco-proposed-meeting-card {
+      padding: 1.5rem 1.35rem;
+    }
   }
 </style>

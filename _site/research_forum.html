@@ -83,9 +83,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -201,10 +201,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="MjAyMw==">2023 <span class="quarto-category-count">(3)</span></div><div class="category" data-category="MjAyNA==">2024 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QU1FUks=">AMERK <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QW5hbHl0aWMlMjBTZWFyY2glMjBTcGFjZQ==">Analytic Search Space <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmF5ZXNpYW4lMjBNZXRob2Rz">Bayesian Methods <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2xpbmljYWwlMjBUcmlhbHM=">Clinical Trials <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3V0YW5lb3VzJTIwU3F1YW1vdXMlMjBDZWxsJTIwQ2FyY2lub21h">Cutaneous Squamous Cell Carcinoma <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2VuZSUyMEV4cHJlc3Npb24lMjBQcm9maWxpbmc=">Gene Expression Profiling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW1tdW5vcHJldmVudGlvbg==">Immunoprevention <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW1tdW5vdGhlcmFweQ==">Immunotherapy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWVsYW5vbWE=">Melanoma <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWVya2VsJTIwQ2VsbCUyMENhcmNpbm9tYQ==">Merkel Cell Carcinoma <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWV0YXNjaWVuY2U=">Metascience <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T3BlbiUyMEluZmVyZW5jZSUyMFByb2plY3Q=">Open Inference Project <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T3BlbiUyMFNjaWVuY2U=">Open Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGVlciUyMFJldmlldw==">Peer Review <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHJvZ25vc3RpYyUyMEJpb21hcmtlcnM=">Prognostic Biomarkers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVwcm9kdWNpYmlsaXR5">Reproducibility <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVzcG9uc2UtR3VpZGVkJTIwVHJlYXRtZW50">Response-Guided Treatment <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2NpZW50aWZpYyUyMFB1Ymxpc2hpbmc=">Scientific Publishing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2NpZW50aWZpYyUyMFJldmlldw==">Scientific Review <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2VudGluZWwlMjBMeW1waCUyME5vZGU=">Sentinel Lymph Node <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29DTyUyMFJlc2VhcmNoJTIwRm9ydW0=">SoCO Research Forum <span class="quarto-category-count">(4)</span></div><div class="category" data-category="U3RhdGlzdGljYWwlMjBJbmZlcmVuY2U=">Statistical Inference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJlYXRtZW50JTIwRGUtZXNjYWxhdGlvbg==">Treatment De-escalation <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -213,7 +212,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -235,7 +234,7 @@ window.Quarto = {
 <h1>Bring the work before it’s finished.</h1>
 <p>The Research Forum is a recurring multidisciplinary space for investigators to present work in progress, challenge assumptions, refine methods, and develop collaborative projects across cutaneous oncology.</p>
 <div class="soco-actions">
-<p><a href="#presentations" class="btn btn-primary">Explore presentations</a> <a href="./jc.html" class="btn btn-outline-primary">Journal Club</a> <a href="./joco.html" class="btn btn-outline-primary">Journal</a></p>
+<p><a href="#proposed-meetings" class="btn btn-primary">Proposed meetings</a> <a href="#presentations" class="btn btn-outline-primary">Explore presentations</a> <a href="./jc.html" class="btn btn-outline-primary">Journal Club</a></p>
 </div>
 </section>
 </div>
@@ -280,6 +279,32 @@ window.Quarto = {
 </section>
 </div>
 </div>
+<div class="soco-section soco-forum-proposed">
+<div class="soco-archive-heading">
+<div class="soco-eyebrow">
+<p>In development</p>
+</div>
+<section id="proposed-meetings" class="level2">
+<h2 class="anchored" data-anchor-id="proposed-meetings">Proposed Meetings</h2>
+<p>Some Forum conversations begin as working concepts. These pages make the proposed format, agenda, and questions visible while there is still time to refine them with the people who will shape the discussion.</p>
+</section>
+</div>
+<div class="soco-proposed-meeting-card">
+<div class="soco-proposed-meeting-kicker">
+<p>Proposed Meeting · Fall 2026</p>
+</div>
+<section id="inside-the-review-room" class="level3">
+<h3 class="anchored" data-anchor-id="inside-the-review-room">Inside the Review Room</h3>
+<p><strong>From Patient-Level Data to FDA Regulatory Decision-Making</strong></p>
+<p>A proposed 90-minute, moderator-led panel exploring how oncology applications are reviewed inside FDA, how patient-level evidence is interrogated and reconstructed, and when advisory committees become part of the regulatory process.</p>
+<div class="soco-proposed-meeting-meta">
+<p><strong>Format:</strong> Conversational, moderator-led panel<br>
+<strong>Proposed panel:</strong> FDA regulatory medicine colleagues with a SoCO moderator</p>
+</div>
+<p><a href="brainstorms/regulatory meeting/index.qmd" class="soco-card-link">View proposed meeting →</a></p>
+</section>
+</div>
+</div>
 <div class="soco-section soco-forum-archive">
 <div class="soco-archive-heading">
 <div class="soco-eyebrow">
@@ -291,33 +316,27 @@ window.Quarto = {
 </section>
 </div>
 <div id="listing-SoCO_Research_Forum" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-SoCO_Research_Forum-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-SoCO_Research_Forum'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TWV0YXNjaWVuY2UlMkNTdGF0aXN0aWNhbCUyMEluZmVyZW5jZSUyQ1JlcHJvZHVjaWJpbGl0eSUyQ09wZW4lMjBTY2llbmNlJTJDQW5hbHl0aWMlMjBTZWFyY2glMjBTcGFjZSUyQ09wZW4lMjBJbmZlcmVuY2UlMjBQcm9qZWN0" data-listing-date-sort="1784865600000" data-listing-file-modified-sort="1787227873572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4673">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1787230632908" data-listing-reading-time-sort="10" data-listing-word-count-sort="1940">
+<div class="thumbnail"><a href="./research_forum/Inside The Review Room/index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./research_forum/Inside The Review Room/index.html" class="no-external"></a>
+</h3>
+<div class="delink listing-description"><a href="./research_forum/Inside The Review Room/index.html" class="no-external">
+Society of Cutaneous Oncology · Proposed Meeting · Fall 2026
+</a></div>
+</div>
+<div class="metadata">
+<a href="./research_forum/Inside The Review Room/index.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="TWV0YXNjaWVuY2UlMkNTdGF0aXN0aWNhbCUyMEluZmVyZW5jZSUyQ1JlcHJvZHVjaWJpbGl0eSUyQ09wZW4lMjBTY2llbmNlJTJDQW5hbHl0aWMlMjBTZWFyY2glMjBTcGFjZSUyQ09wZW4lMjBJbmZlcmVuY2UlMjBQcm9qZWN0" data-listing-date-sort="1784865600000" data-listing-file-modified-sort="1787227873572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4673">
 <div class="thumbnail"><a href="./research_forum/The Open Inference Project/index.html" class="no-external">
 
 <img loading="lazy" src="./research_forum/The Open Inference Project/open_inference_logo.png" class="thumbnail-image">
@@ -327,21 +346,6 @@ window.Quarto = {
 <h3 class="no-anchor listing-title">
 <a href="./research_forum/The Open Inference Project/index.html" class="no-external">The Hidden Problem in Dermatology Research</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWV0YXNjaWVuY2U='); return false;">Metascience</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljYWwlMjBJbmZlcmVuY2U='); return false;">Statistical Inference</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVwcm9kdWNpYmlsaXR5'); return false;">Reproducibility</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T3BlbiUyMFNjaWVuY2U='); return false;">Open Science</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QW5hbHl0aWMlMjBTZWFyY2glMjBTcGFjZQ=='); return false;">Analytic Search Space</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T3BlbiUyMEluZmVyZW5jZSUyMFByb2plY3Q='); return false;">Open Inference Project</div>
-
-</div>
 <div class="delink listing-description"><a href="./research_forum/The Open Inference Project/index.html" class="no-external">
 <p>A Society of Cutaneous Oncology Research Forum presentation examining analytic search space, multiplicity, statistical inference, transparency, and the Open Inference Project.</p>
 </a></div>
@@ -357,7 +361,7 @@ David M. Miller
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Q3V0YW5lb3VzJTIwU3F1YW1vdXMlMjBDZWxsJTIwQ2FyY2lub21hJTJDSW1tdW5vdGhlcmFweSUyQ1Jlc3BvbnNlLUd1aWRlZCUyMFRyZWF0bWVudCUyQ1RyZWF0bWVudCUyMERlLWVzY2FsYXRpb24lMkNCYXllc2lhbiUyME1ldGhvZHM=" data-listing-date-sort="1773028800000" data-listing-file-modified-sort="1787228988566" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="31" data-listing-word-count-sort="6040">
+<div class="quarto-post image-right" data-index="2" data-categories="Q3V0YW5lb3VzJTIwU3F1YW1vdXMlMjBDZWxsJTIwQ2FyY2lub21hJTJDSW1tdW5vdGhlcmFweSUyQ1Jlc3BvbnNlLUd1aWRlZCUyMFRyZWF0bWVudCUyQ1RyZWF0bWVudCUyMERlLWVzY2FsYXRpb24lMkNCYXllc2lhbiUyME1ldGhvZHM=" data-listing-date-sort="1773028800000" data-listing-file-modified-sort="1787229930297" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="35" data-listing-word-count-sort="6909">
 <div class="thumbnail"><a href="./research_forum/FIRST/index.html" class="no-external">
 
 <img loading="lazy" src="./img/first-research-forum-2026.png" class="thumbnail-image">
@@ -367,19 +371,6 @@ David M. Miller
 <h3 class="no-anchor listing-title">
 <a href="./research_forum/FIRST/index.html" class="no-external">Frontline Immunotherapy with Response-Guided Subsequent Treatment in Cutaneous Squamous Cell Carcinoma</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q3V0YW5lb3VzJTIwU3F1YW1vdXMlMjBDZWxsJTIwQ2FyY2lub21h'); return false;">Cutaneous Squamous Cell Carcinoma</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW1tdW5vdGhlcmFweQ=='); return false;">Immunotherapy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVzcG9uc2UtR3VpZGVkJTIwVHJlYXRtZW50'); return false;">Response-Guided Treatment</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VHJlYXRtZW50JTIwRGUtZXNjYWxhdGlvbg=='); return false;">Treatment De-escalation</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QmF5ZXNpYW4lMjBNZXRob2Rz'); return false;">Bayesian Methods</div>
-
-</div>
 <div class="delink listing-description"><a href="./research_forum/FIRST/index.html" class="no-external">
 <p>A SoCO Research Forum presentation on the FIRST analysis, including dose intensity, early benefit, Bayesian causal inference, and treatment de-escalation in cutaneous squamous cell carcinoma.</p>
 </a></div>
@@ -395,7 +386,7 @@ David M. Miller
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="MjAyNCUyQ1NvQ08lMjBSZXNlYXJjaCUyMEZvcnVtJTJDTWVsYW5vbWElMkNHZW5lJTIwRXhwcmVzc2lvbiUyMFByb2ZpbGluZyUyQ1NlbnRpbmVsJTIwTHltcGglMjBOb2Rl" data-listing-date-sort="1734325200000" data-listing-file-modified-sort="1786718912893" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2169">
+<div class="quarto-post image-right" data-index="3" data-categories="MjAyNCUyQ1NvQ08lMjBSZXNlYXJjaCUyMEZvcnVtJTJDTWVsYW5vbWElMkNHZW5lJTIwRXhwcmVzc2lvbiUyMFByb2ZpbGluZyUyQ1NlbnRpbmVsJTIwTHltcGglMjBOb2Rl" data-listing-date-sort="1734325200000" data-listing-file-modified-sort="1786718912893" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2169">
 <div class="thumbnail"><a href="./research_forum/MERLIN/index.html" class="no-external">
 
 <img loading="lazy" src="./research_forum/MERLIN/SondakVernon_2995.jpg" class="thumbnail-image">
@@ -405,19 +396,6 @@ David M. Miller
 <h3 class="no-anchor listing-title">
 <a href="./research_forum/MERLIN/index.html" class="no-external">Updates on Gene Expression Profiling in Melanoma</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('MjAyNA=='); return false;">2024</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29DTyUyMFJlc2VhcmNoJTIwRm9ydW0='); return false;">SoCO Research Forum</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWVsYW5vbWE='); return false;">Melanoma</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2VuZSUyMEV4cHJlc3Npb24lMjBQcm9maWxpbmc='); return false;">Gene Expression Profiling</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2VudGluZWwlMjBMeW1waCUyME5vZGU='); return false;">Sentinel Lymph Node</div>
-
-</div>
 <div class="delink listing-description"><a href="./research_forum/MERLIN/index.html" class="no-external">
 <p>A Society of Cutaneous Oncology Research Forum presentation reviewing MERLIN_001 and the evolving role of gene expression profiling in melanoma risk stratification.</p>
 </a></div>
@@ -433,7 +411,7 @@ Vernon Sondak
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="MjAyMyUyQ1NvQ08lMjBSZXNlYXJjaCUyMEZvcnVtJTJDTWVya2VsJTIwQ2VsbCUyMENhcmNpbm9tYSUyQ0FNRVJLJTJDUHJvZ25vc3RpYyUyMEJpb21hcmtlcnM=" data-listing-date-sort="1692331200000" data-listing-file-modified-sort="1786719425048" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2454">
+<div class="quarto-post image-right" data-index="4" data-categories="MjAyMyUyQ1NvQ08lMjBSZXNlYXJjaCUyMEZvcnVtJTJDTWVya2VsJTIwQ2VsbCUyMENhcmNpbm9tYSUyQ0FNRVJLJTJDUHJvZ25vc3RpYyUyMEJpb21hcmtlcnM=" data-listing-date-sort="1692331200000" data-listing-file-modified-sort="1786719425048" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2454">
 <div class="thumbnail"><a href="./research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html" class="no-external">
 
 <img loading="lazy" src="./research_forum/Prognostic Significance of Initial AMERK Serostatus/DMM_pic_cropped.jpg" class="thumbnail-image">
@@ -443,19 +421,6 @@ Vernon Sondak
 <h3 class="no-anchor listing-title">
 <a href="./research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html" class="no-external">Prognostic Significance of Initial AMERK Serostatus</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('MjAyMw=='); return false;">2023</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29DTyUyMFJlc2VhcmNoJTIwRm9ydW0='); return false;">SoCO Research Forum</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWVya2VsJTIwQ2VsbCUyMENhcmNpbm9tYQ=='); return false;">Merkel Cell Carcinoma</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QU1FUks='); return false;">AMERK</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvZ25vc3RpYyUyMEJpb21hcmtlcnM='); return false;">Prognostic Biomarkers</div>
-
-</div>
 <div class="delink listing-description"><a href="./research_forum/Prognostic Significance of Initial AMERK Serostatus/index.html" class="no-external">
 <p>A Society of Cutaneous Oncology Research Forum presentation examining the prognostic significance of baseline Merkel cell polyomavirus oncoprotein antibody serostatus and titer in Merkel cell carcinoma.</p>
 </a></div>
@@ -471,7 +436,7 @@ David M. Miller
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="MjAyMyUyQ1NvQ08lMjBSZXNlYXJjaCUyMEZvcnVtJTJDU2NpZW50aWZpYyUyMFJldmlldyUyQ1BlZXIlMjBSZXZpZXclMkNTY2llbnRpZmljJTIwUHVibGlzaGluZw==" data-listing-date-sort="1683864000000" data-listing-file-modified-sort="1786719250540" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3117">
+<div class="quarto-post image-right" data-index="5" data-categories="MjAyMyUyQ1NvQ08lMjBSZXNlYXJjaCUyMEZvcnVtJTJDU2NpZW50aWZpYyUyMFJldmlldyUyQ1BlZXIlMjBSZXZpZXclMkNTY2llbnRpZmljJTIwUHVibGlzaGluZw==" data-listing-date-sort="1683864000000" data-listing-file-modified-sort="1786719250540" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3117">
 <div class="thumbnail"><a href="./research_forum/Art of the Review/index.html" class="no-external">
 
 <img loading="lazy" src="./research_forum/Art of the Review/discs_black_.2.png" class="thumbnail-image">
@@ -481,19 +446,6 @@ David M. Miller
 <h3 class="no-anchor listing-title">
 <a href="./research_forum/Art of the Review/index.html" class="no-external">To Accept, Revise, or Reject: The Art of the Review</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('MjAyMw=='); return false;">2023</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29DTyUyMFJlc2VhcmNoJTIwRm9ydW0='); return false;">SoCO Research Forum</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2NpZW50aWZpYyUyMFJldmlldw=='); return false;">Scientific Review</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGVlciUyMFJldmlldw=='); return false;">Peer Review</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2NpZW50aWZpYyUyMFB1Ymxpc2hpbmc='); return false;">Scientific Publishing</div>
-
-</div>
 <div class="delink listing-description"><a href="./research_forum/Art of the Review/index.html" class="no-external">
 <p>A Society of Cutaneous Oncology Research Forum session on the scientific peer-review process, including reviewer roles, motivations, time burden, incentives, conflicts of interest, and approaches to open, closed, and double-blind review.</p>
 </a></div>
@@ -509,7 +461,7 @@ David M. Miller
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="MjAyMyUyQ1NvQ08lMjBSZXNlYXJjaCUyMEZvcnVtJTJDQ3V0YW5lb3VzJTIwU3F1YW1vdXMlMjBDZWxsJTIwQ2FyY2lub21hJTJDSW1tdW5vcHJldmVudGlvbiUyQ0NsaW5pY2FsJTIwVHJpYWxz" data-listing-date-sort="1680235200000" data-listing-file-modified-sort="1786719014300" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2220">
+<div class="quarto-post image-right" data-index="6" data-categories="MjAyMyUyQ1NvQ08lMjBSZXNlYXJjaCUyMEZvcnVtJTJDQ3V0YW5lb3VzJTIwU3F1YW1vdXMlMjBDZWxsJTIwQ2FyY2lub21hJTJDSW1tdW5vcHJldmVudGlvbiUyQ0NsaW5pY2FsJTIwVHJpYWxz" data-listing-date-sort="1680235200000" data-listing-file-modified-sort="1786719014300" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2220">
 <div class="thumbnail"><a href="./research_forum/ICARUS/index.html" class="no-external">
 
 <img loading="lazy" src="./research_forum/ICARUS/DMM_pic_cropped.jpg" class="thumbnail-image">
@@ -519,19 +471,6 @@ David M. Miller
 <h3 class="no-anchor listing-title">
 <a href="./research_forum/ICARUS/index.html" class="no-external">ICARUS: Immunoprevention for High-Risk Cutaneous Squamous Cell Carcinoma</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('MjAyMw=='); return false;">2023</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29DTyUyMFJlc2VhcmNoJTIwRm9ydW0='); return false;">SoCO Research Forum</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q3V0YW5lb3VzJTIwU3F1YW1vdXMlMjBDZWxsJTIwQ2FyY2lub21h'); return false;">Cutaneous Squamous Cell Carcinoma</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW1tdW5vcHJldmVudGlvbg=='); return false;">Immunoprevention</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xpbmljYWwlMjBUcmlhbHM='); return false;">Clinical Trials</div>
-
-</div>
 <div class="delink listing-description"><a href="./research_forum/ICARUS/index.html" class="no-external">
 <p>A Society of Cutaneous Oncology Research Forum presentation reviewing the hypothesis, rationale, and study schema for ICARUS, an immunoprevention trial for patients with high-risk cutaneous squamous cell carcinoma.</p>
 </a></div>
@@ -583,8 +522,64 @@ David M. Miller
     max-width: 880px;
   }
 
+  .soco-forum-proposed {
+    margin-top: 6rem;
+  }
+
+  .soco-proposed-meeting-card {
+    position: relative;
+    overflow: hidden;
+    margin-top: 1.6rem;
+    padding: 2rem 2.1rem;
+    border: 1px solid #dbe8ee;
+    border-top: 4px solid #ff3b3f;
+    border-radius: 1rem;
+    background:
+      radial-gradient(
+        circle at 90% 12%,
+        rgba(15, 127, 134, 0.09),
+        transparent 28%
+      ),
+      linear-gradient(135deg, #ffffff 0%, #f3f9f9 100%);
+    box-shadow: 0 8px 24px rgba(4, 27, 51, 0.055);
+  }
+
+  .soco-proposed-meeting-kicker {
+    margin-bottom: 0.55rem;
+    color: #0f7f86;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .soco-proposed-meeting-card h3 {
+    margin: 0 0 0.45rem;
+    color: #041b33;
+    font-size: 1.65rem;
+  }
+
+  .soco-proposed-meeting-card > p {
+    max-width: 900px;
+  }
+
+  .soco-proposed-meeting-meta {
+    margin: 1.2rem 0 1.35rem;
+    padding: 1rem 1.15rem;
+    border-left: 4px solid #0f7f86;
+    border-radius: 0.65rem;
+    background: rgba(255, 255, 255, 0.72);
+    color: #425f70;
+  }
+
   .soco-forum-archive {
     margin-top: 6rem;
+  }
+
+  @media (max-width: 760px) {
+    .soco-proposed-meeting-card {
+      padding: 1.5rem 1.35rem;
+    }
   }
 </style>
 

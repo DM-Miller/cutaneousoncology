@@ -1,6 +1,6 @@
 ---
 title: ""
-pagetitle: "Inside the Review Room | Society of Cutaneous Oncology"
+pagetitle: "Proposed Meeting: Inside the Review Room | Society of Cutaneous Oncology"
 format:
   html:
     page-layout: full
@@ -68,13 +68,17 @@ padding-top: 0 !important;
 position: relative;
 overflow: hidden;
 padding: 3.9rem 2.2rem 4.2rem;
-margin: 0 0 2.2rem;
-border-radius: 0 0 1.6rem 1.6rem;
+margin: 1.2rem auto 2.2rem;
+width: min(1180px, calc(100% - 2rem));
+border: 1px solid var(--soco-line);
+border-top: 5px solid var(--soco-coral);
+border-radius: 1.25rem;
 background:
-radial-gradient(circle at 84% 18%, rgba(15,127,134,.30), transparent 29%),
-radial-gradient(circle at 14% 24%, rgba(255,59,63,.12), transparent 30%),
-linear-gradient(135deg, var(--soco-navy) 0%, var(--soco-blue) 58%, #0b6570 100%);
-color: var(--soco-white);
+radial-gradient(circle at 84% 18%, rgba(15,127,134,.10), transparent 30%),
+radial-gradient(circle at 12% 20%, rgba(255,59,63,.055), transparent 29%),
+linear-gradient(135deg, #fbfefe 0%, #f2f9f8 56%, #f8fbfc 100%);
+box-shadow: 0 10px 30px rgba(4,27,51,.06);
+color: var(--soco-navy);
 }
 .soco-reg-hero::after {
 content: "";
@@ -83,8 +87,8 @@ width: 420px;
 height: 420px;
 top: -120px;
 right: -80px;
-opacity: .18;
-background-image: radial-gradient(circle, rgba(255,255,255,.82) 0 1.4px, transparent 2px);
+opacity: .10;
+background-image: radial-gradient(circle, rgba(4,67,110,.45) 0 1.3px, transparent 2px);
 background-size: 30px 30px;
 mask-image: radial-gradient(circle, #000 0%, transparent 72%);
 -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
@@ -99,7 +103,7 @@ margin: 0 auto;
 }
 .soco-reg-eyebrow {
 margin-bottom: .8rem;
-color: #a9e3dd !important;
+color: var(--soco-teal) !important;
 font-size: .78rem;
 font-weight: 800;
 letter-spacing: .14em;
@@ -107,7 +111,7 @@ text-transform: uppercase;
 }
 .soco-reg-eyebrow p {
 margin: 0 !important;
-color: #a9e3dd !important;
+color: var(--soco-teal) !important;
 }
 .soco-reg-hero h1 {
 margin: 0 !important;
@@ -115,7 +119,7 @@ max-width: 900px;
 padding: 0 !important;
 border: 0 !important;
 background: transparent !important;
-color: #ffffff !important;
+color: var(--soco-navy) !important;
 font-size: clamp(2.35rem, 5vw, 4.15rem) !important;
 font-weight: 850 !important;
 line-height: 1.02 !important;
@@ -125,14 +129,14 @@ text-shadow: none !important;
 .soco-reg-subtitle {
 max-width: 850px;
 margin-top: 1.15rem;
-color: #e7f1f4 !important;
+color: #425f70 !important;
 font-size: 1.12rem;
 line-height: 1.58;
 }
 .soco-reg-subtitle p,
 .soco-reg-subtitle strong {
 margin: 0 !important;
-color: #e7f1f4 !important;
+color: #425f70 !important;
 }
 .soco-reg-tags {
 margin-top: 1.45rem;
@@ -146,10 +150,10 @@ margin: 0 !important;
 .soco-reg-tag {
 display: inline-flex;
 padding: .42rem .75rem;
-border: 1px solid rgba(255,255,255,.28);
+border: 1px solid #c8e1e1;
 border-radius: 999px;
-background: rgba(255,255,255,.08);
-color: #fff !important;
+background: rgba(255,255,255,.82);
+color: var(--soco-blue) !important;
 font-size: .78rem;
 font-weight: 700;
 }
@@ -313,7 +317,7 @@ line-height: 1.6;
 @media (max-width: 800px) {
 .soco-reg-grid-2,
 .soco-reg-grid-3 { grid-template-columns: 1fr; }
-.soco-reg-hero { padding: 3.5rem 1.25rem 3.8rem; }
+.soco-reg-hero { width: calc(100% - 1rem); margin-top: .6rem; padding: 3.2rem 1.25rem 3.4rem; }
 .soco-reg-card { padding: 1.3rem 1.2rem; }
 }
 </style>
@@ -321,15 +325,14 @@ line-height: 1.6;
 <div class="soco-reg-hero">
 <div class="soco-reg-hero-inner">
 <div class="soco-reg-eyebrow">
-<p>Society of Cutaneous Oncology · Proposed Fall 2026 Special
-Session</p>
+<p>Society of Cutaneous Oncology · Proposed Meeting · Fall 2026</p>
 </div>
 <h1 id="inside-the-review-room">Inside the Review Room</h1>
 <div class="soco-reg-subtitle">
 <p><strong>From patient-level data to FDA regulatory
-decision-making</strong> — a 90-minute moderated conversation about how
-oncology evidence is reviewed, reconstructed, debated, and ultimately
-translated into regulatory action.</p>
+decision-making</strong> — a proposed 90-minute, moderator-led panel on
+how oncology evidence is reviewed, reconstructed, debated, and
+ultimately translated into regulatory action.</p>
 </div>
 <div class="soco-reg-tags">
 <p><span class="soco-reg-tag">Regulatory medicine</span> <span class="soco-reg-tag">Patient-level data</span> <span class="soco-reg-tag">Benefit–risk</span> <span class="soco-reg-tag">Advisory
@@ -339,7 +342,7 @@ committees</span> <span class="soco-reg-tag">Moderated discussion</span></p>
 </div>
 <div class="soco-reg-shell">
 <section id="the-idea" class="soco-reg-card">
-<h2>The idea</h2>
+<h2>Meeting concept</h2>
 <p>Recent regulatory discussions in cutaneous oncology have highlighted
 an important gap between how clinicians encounter clinical-trial
 evidence and how FDA reviewers evaluate the same evidence. A publication
@@ -347,7 +350,7 @@ may present a clean summary estimate; a regulatory review may involve
 reconstruction of patient-level efficacy and safety data, adjudication
 of discrepancies, sensitivity analyses, multidisciplinary debate, and a
 different evidentiary question altogether.</p>
-<p>The proposed session would <strong>not be a retrospective debate
+<p>The proposed meeting would <strong>not be a retrospective debate
 about a particular application</strong>. The RP1 experience is better
 used as the prompt for a broader educational question:</p>
 <div class="soco-reg-quote">
@@ -367,12 +370,12 @@ advisory committees.</strong></p>
 <p>Format</p>
 </div>
 <div class="soco-reg-mini-value">
-<p>Podcast-style moderated conversation</p>
+<p>Conversational, moderator-led panel</p>
 </div>
 </div>
 <div class="soco-reg-mini">
 <div class="soco-reg-mini-label">
-<p>Length</p>
+<p>Duration</p>
 </div>
 <div class="soco-reg-mini-value">
 <p>90 minutes</p>
@@ -380,27 +383,29 @@ advisory committees.</strong></p>
 </div>
 <div class="soco-reg-mini">
 <div class="soco-reg-mini-label">
-<p>Proposed guests</p>
+<p>Proposed panel</p>
 </div>
 <div class="soco-reg-mini-value">
-<p>Catherine + Sandeep, with David moderating</p>
+<p>FDA regulatory medicine colleagues, with a SoCO moderator</p>
 </div>
 </div>
 </div>
 <section id="proposed-format" class="soco-reg-card">
 <h2>Proposed format</h2>
-<p>The emphasis would be <strong>conversation rather than formal
-presentations</strong>. One or two simple orienting slides could be
-useful — for example, a schematic of the review pathway and a schematic
-of what an application contains — but the session would otherwise
-proceed through moderator questions and audience discussion.</p>
-<p>Questions would be shared in advance so the conversation can stay
-focused on <strong>process and general principles</strong>, without
-asking the speakers to discuss confidential deliberations or re-litigate
-a specific product decision.</p>
+<p>The session would be structured as a <strong>conversational,
+moderator-led panel rather than a series of formal presentations</strong>.
+One or two simple orienting slides could be useful — for example, a
+schematic of the review pathway and a schematic of what an application
+contains — but the discussion would otherwise move through moderator
+questions, dialogue between the panelists, and audience discussion.</p>
+<p>Moderator questions would be shared in advance so the discussion
+can stay focused on <strong>process and general principles</strong>,
+while still leaving room for give-and-take between the panelists and the
+audience. The intent would not be to ask the speakers to discuss
+confidential deliberations or re-litigate a specific product decision.</p>
 </section>
 <section id="minute-agenda" class="soco-reg-card">
-<h2>90-minute agenda</h2>
+<h2>Proposed 90-minute agenda</h2>
 <div class="soco-reg-act">
 <p><small>Act I · approximately 50 minutes</small> <strong>Inside the
 FDA Review Room</strong></p>

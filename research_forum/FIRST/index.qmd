@@ -546,6 +546,53 @@ toc: false
   }
 
   /* =========================================================
+     Follow-up / publication
+     ========================================================= */
+
+  .forum-followup-card {
+    margin: 1.5rem 0 2.5rem;
+    padding: 1.5rem 1.55rem;
+    border: 1px solid var(--soco-line);
+    border-left: 7px solid var(--soco-teal);
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 92% 12%, rgba(15,127,134,.10), transparent 30%),
+      linear-gradient(135deg, #F3FAF9 0%, #FFFFFF 100%);
+    box-shadow: 0 10px 28px rgba(4,27,51,.06);
+  }
+
+  .forum-followup-eyebrow {
+    color: var(--soco-teal);
+    font-size: .74rem;
+    font-weight: 850;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .forum-followup-card h3 {
+    margin: .4rem 0 .7rem;
+    color: var(--soco-navy);
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .forum-followup-card p {
+    margin: 0;
+    color: #4f6270;
+    font-size: .96rem;
+    line-height: 1.65;
+  }
+
+  .forum-followup-citation {
+    margin-top: 1rem;
+    padding-top: .95rem;
+    border-top: 1px solid var(--soco-line);
+    color: var(--soco-muted);
+    font-size: .88rem;
+    line-height: 1.55;
+  }
+
+  /* =========================================================
      Navigation
      ========================================================= */
 
@@ -723,7 +770,8 @@ toc: false
       text-align:center;
     }
 
-    .forum-standout-card {
+    .forum-standout-card,
+    .forum-followup-card {
       padding:1.05rem .95rem;
     }
 
@@ -1035,6 +1083,16 @@ cat(
             </li>
 
             <li>
+              <strong>Scheduled dose intensity versus delivered dose intensity.</strong>
+              Ann W. Silk raised an important limitation in the original analysis:
+              simply counting doses does not account for treatment delays or other
+              deviations from the expected dosing schedule. That discussion prompted
+              a regimen-adjusted dose-intensity sensitivity analysis that standardized
+              observed treatment exposure to the expected interval for each therapeutic
+              regimen.
+            </li>
+
+            <li>
               Confounding created by non-random treatment continuation and
               discontinuation.
             </li>
@@ -1093,6 +1151,50 @@ cat(
             Presentation Archive
           </a>
         </div>
+
+      </section>
+
+      <section class="forum-entry-section fade-in">
+
+        <h2>What happened next?</h2>
+
+        <div class="forum-followup-card">
+
+          <div class="forum-followup-eyebrow">From Research Forum to publication</div>
+
+          <h3>The discussion changed the analysis</h3>
+
+          <p>
+            The March Research Forum was not simply a presentation of work in progress.
+            Feedback from the group materially changed the manuscript. In particular,
+            Ann W. Silk's observation that dose counts alone could miss treatment delays
+            and other departures from the planned schedule led to the development of a
+            regimen-adjusted dose-intensity variable for sensitivity analyses. The final
+            paper explicitly acknowledges that contribution.
+          </p>
+
+          <div class="forum-followup-citation">
+            <strong>Published July 20, 2026:</strong> Miller DM, Merkin RD, Kaufman HL,
+            et al. Frontline immunotherapy with response-guided subsequent treatment
+            (FIRST) in cutaneous squamous cell carcinoma: a Bayesian causal analysis of
+            dose intensity, early benefit, and treatment de-escalation.
+            <em>J Immunother Cancer.</em> 2026;14(7):e015029.
+            doi: 10.1136/jitc-2026-015029
+          </div>
+
+          <div class="forum-entry-links">
+            <a class="forum-entry-link" href="https://doi.org/10.1136/jitc-2026-015029">
+              Read the publication
+            </a>
+          </div>
+
+        </div>
+
+        <p>
+          This is exactly why the Research Forum exists: putting unfinished work in front
+          of thoughtful colleagues early enough that their criticism can still alter the
+          analysis, improve the manuscript, and sharpen the scientific story.
+        </p>
 
       </section>
 
