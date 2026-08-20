@@ -456,6 +456,129 @@ ul.task-list li input[type="checkbox"] {
     line-height:1.6;
   }
 
+  /* =========================================================
+     FULL SURVEY DISCLOSURE
+     ========================================================= */
+
+  .survey-disclosure {
+    margin: 1.3rem 0 2.2rem;
+  }
+
+  .survey-toggle {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: .9rem;
+    align-items: center;
+    padding: 1rem 1.15rem;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background:
+      linear-gradient(135deg, #F3F8F8 0%, #FFFFFF 100%);
+    color: var(--navy);
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(8,45,77,.04);
+  }
+
+  .survey-toggle:hover {
+    border-color: rgba(40,169,162,.48);
+    box-shadow: 0 8px 24px rgba(8,45,77,.07);
+  }
+
+  .survey-toggle-badge {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(40,169,162,.12);
+    color: var(--navy);
+    font-size: 1.05rem;
+  }
+
+  .survey-toggle-copy strong {
+    display: block;
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 850;
+  }
+
+  .survey-toggle-copy span {
+    display: block;
+    margin-top: .15rem;
+    color: var(--muted);
+    font-size: .84rem;
+    line-height: 1.4;
+  }
+
+  .survey-toggle-icon {
+    color: var(--teal);
+    font-size: 1.3rem;
+    font-weight: 900;
+    transition: transform .2s ease;
+  }
+
+  .survey-toggle[aria-expanded="true"] .survey-toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .survey-panel {
+    display: none;
+    margin-top: .8rem;
+    padding: 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .survey-panel.is-open {
+    display: block;
+  }
+
+  .survey-panel-intro {
+    margin: 0 0 1.15rem;
+    padding: .85rem 1rem;
+    border-left: 4px solid var(--teal);
+    border-radius: 0 10px 10px 0;
+    background: #F5FAFA;
+    color: var(--muted);
+    font-size: .9rem;
+    line-height: 1.55;
+  }
+
+  .survey-question-label {
+    color: var(--teal);
+    font-size: .76rem;
+    font-weight: 850;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+    margin: 1rem 0 .35rem;
+  }
+
+  .survey-figure-separator {
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid #EDF2F4;
+  }
+
+  .survey-text-list {
+    display: grid;
+    gap: .55rem;
+    margin-top: .5rem;
+  }
+
+  .survey-text-item {
+    padding: .78rem .9rem;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #FAFCFC;
+    color: #4B5E6C;
+    font-size: .88rem;
+    line-height: 1.5;
+  }
+
   .footer-card {
     margin:3rem 0 1rem;
     padding:1.8rem 2rem;
@@ -467,11 +590,329 @@ ul.task-list li input[type="checkbox"] {
   .footer-card h2 { color:#fff; margin-top:0; }
   .footer-card p { margin-bottom:0; color:#EAF2F5; }
 
+  /* =========================================================
+     COMMUNITY / ENGAGEMENT / ATTENDANCE
+     ========================================================= */
+
+  .community-banner {
+    position: relative;
+    overflow: hidden;
+    margin: 1.2rem 0 1.3rem;
+    padding: 1.45rem 1.6rem;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 90% 15%, rgba(40,169,162,.12), transparent 30%),
+      linear-gradient(135deg, #F7FBFB 0%, #FFFFFF 78%);
+    box-shadow: 0 8px 24px rgba(8,45,77,.05);
+  }
+
+  .community-banner::after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    top: -70px;
+    right: -25px;
+    opacity: .18;
+    background-image:
+      radial-gradient(circle, rgba(40,169,162,.72) 0 1.2px, transparent 1.8px);
+    background-size: 20px 20px;
+    mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    pointer-events: none;
+  }
+
+  .community-banner-kicker {
+    position: relative;
+    z-index: 1;
+    color: var(--teal);
+    font-size: .76rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .community-banner-title {
+    position: relative;
+    z-index: 1;
+    margin: .28rem 0 .35rem;
+    color: var(--navy);
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    font-weight: 850;
+    letter-spacing: -.035em;
+    line-height: 1.05;
+  }
+
+  .community-banner-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    margin: 0;
+    color: var(--muted);
+    font-size: .97rem;
+    line-height: 1.6;
+  }
+
+  .engagement-spotlight {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 0 1.4rem;
+    padding: 1.35rem 1.45rem 1.25rem;
+    border: 1px solid #E9C85F;
+    border-left: 7px solid #D7A400;
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 92% 18%, rgba(255,255,255,.58), transparent 28%),
+      linear-gradient(135deg, #FFF8D8 0%, #FDE9A9 100%);
+    box-shadow: 0 10px 28px rgba(116,83,0,.10);
+  }
+
+  .engagement-spotlight-title {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin: 0 0 .35rem;
+    color: #765308;
+    font-size: 1.1rem;
+    font-weight: 850;
+    letter-spacing: -.01em;
+  }
+
+  .engagement-spotlight-copy {
+    max-width: 900px;
+    margin: 0;
+    color: #735F2C;
+    font-size: .94rem;
+    line-height: 1.55;
+  }
+
+  .engagement-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin-top: .95rem;
+  }
+
+  .engagement-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem .72rem;
+    border: 1px solid rgba(118,83,8,.18);
+    border-radius: 999px;
+    background: rgba(255,255,255,.82);
+    color: #57420D;
+    font-size: .86rem;
+    font-weight: 780;
+    box-shadow: 0 2px 7px rgba(116,83,0,.08);
+  }
+
+  .engagement-method {
+    margin: .75rem 0 0;
+    color: #7C6B42;
+    font-size: .78rem;
+    line-height: 1.5;
+  }
+
+  .roster-summary {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 0 .8rem;
+    padding: .95rem 1.05rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #F9FBFB;
+  }
+
+  .roster-summary strong {
+    color: var(--navy);
+    font-size: 1rem;
+  }
+
+  .roster-summary span {
+    color: var(--muted);
+    font-size: .84rem;
+  }
+
+  .attendance-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 16px;
+  }
+
+  .attendance-table {
+    width: 100%;
+    min-width: 690px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(8,45,77,.045);
+  }
+
+  .attendance-table thead th {
+    padding: .72rem .75rem;
+    background: var(--navy);
+    color: #fff;
+    border: 0;
+    font-size: .78rem;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .attendance-table thead th:first-child {
+    text-align: left;
+  }
+
+  .attendance-table tbody td {
+    padding: .66rem .75rem;
+    border-top: 1px solid #E9EFF1;
+    color: #334857;
+    font-size: .88rem;
+    text-align: center;
+  }
+
+  .attendance-table tbody tr:nth-child(even) td:not(.minutes-cell) {
+    background: #FBFDFD;
+  }
+
+  .attendance-table tbody tr:hover td:not(.minutes-cell) {
+    background: #F3F9F9;
+  }
+
+  .attendance-table .name-cell {
+    color: var(--navy);
+    font-weight: 750;
+    text-align: left;
+  }
+
+  .attendance-table .minutes-cell {
+    color: #17384C;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .attendance-table .signal-cell {
+    color: #7A868E;
+  }
+
+  .attendance-table .signal-on {
+    color: var(--teal);
+    font-weight: 900;
+  }
+
+  .attendance-note {
+    margin-top: .8rem;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.55;
+  }
+
   @media(max-width:760px){
+    main.content {
+      width:100%;
+      max-width:100%;
+      padding-left:.85rem !important;
+      padding-right:.85rem !important;
+      overflow-x:hidden;
+    }
+
     .metric-grid,.highlight-grid,.survey-grid{grid-template-columns:1fr;}
-    .hero{padding:2rem 1.5rem;}
-    .hero h1{font-size:2.45rem;}
-    .paper-card{padding:1.35rem 1.25rem;}
+
+    .hero {
+      margin-top:1rem;
+      padding:1.55rem 1.15rem;
+      border-radius:18px;
+    }
+
+    .hero h1 {
+      font-size:clamp(2rem,10vw,2.55rem);
+      line-height:1.02;
+    }
+
+    .hero-copy {
+      font-size:1rem;
+      line-height:1.55;
+    }
+
+    .paper-card {
+      margin-left:0;
+      margin-right:0;
+      padding:1.2rem 1rem;
+    }
+
+    .paper-title { font-size:1.3rem; }
+
+    .link-row {
+      display:grid;
+      grid-template-columns:1fr;
+      gap:.55rem;
+    }
+
+    .soco-link {
+      justify-content:center;
+      width:100%;
+      text-align:center;
+    }
+
+    .community-banner {
+      padding:1.1rem;
+    }
+
+    .engagement-spotlight {
+      padding:1.1rem 1rem;
+    }
+
+    .engagement-pill-row {
+      display:grid;
+      grid-template-columns:1fr;
+    }
+
+    .engagement-pill {
+      width:100%;
+      justify-content:flex-start;
+    }
+
+    .roster-summary {
+      display:block;
+    }
+
+    .roster-summary span {
+      display:block;
+      margin-top:.3rem;
+    }
+
+    .attendance-scroll {
+      margin-left:-.2rem;
+      margin-right:-.2rem;
+      padding-bottom:.25rem;
+    }
+
+    .attendance-table {
+      min-width:690px;
+    }
+
+    .survey-toggle {
+      padding:.9rem;
+    }
+
+    .survey-panel {
+      padding:.8rem;
+    }
+
+    .survey-toggle-badge {
+      width:34px;
+      height:34px;
+    }
+
+    .footer-card {
+      padding:1.3rem 1.15rem;
+      border-radius:16px;
+    }
   }
 </style>
 <div class="hero">
@@ -596,10 +1037,177 @@ doi: 10.1245/s10434-025-18670-2</p>
 <div class="survey-note">
 <p>The survey also showed that disagreement extends beyond whether to radiate. Respondents varied in preferred dose and fractionation, and the clinical scenarios revealed broad agreement at the lowest- and highest-risk extremes but substantially more variation in intermediate and preference-sensitive situations.</p>
 </div>
+<div class="survey-disclosure">
+<button type="button" class="survey-toggle" id="survey-toggle" aria-expanded="false" aria-controls="full-survey-panel">
+<p><span class="survey-toggle-badge">▤</span></p>
+<p><span class="survey-toggle-copy"> <strong>Explore the full pre-meeting survey</strong> <span>Open all archived survey figures, including practice patterns, risk estimates, radiation approaches, and clinical scenarios.</span> </span></p>
+<p><span class="survey-toggle-icon">+</span></p>
+</button>
+</div>
+<div id="full-survey-panel" class="survey-panel">
+<p class="survey-panel-intro">
+These are the archived <strong>pre-discussion</strong> responses from the June 12 Journal Club. The headline findings remain above; this panel preserves the complete survey record for readers who want to inspect the underlying distributions and clinical scenarios.
+</p>
+<div class="survey-question-label">
+Survey item 1
+</div>
+<img src="index_files/figure-html/full-survey-results-1.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 2
+</div>
+<img src="index_files/figure-html/full-survey-results-2.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 3
+</div>
+<img src="index_files/figure-html/full-survey-results-3.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 4
+</div>
+<img src="index_files/figure-html/full-survey-results-4.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 5
+</div>
+<img src="index_files/figure-html/full-survey-results-5.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 6
+</div>
+<img src="index_files/figure-html/full-survey-results-6.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 7
+</div>
+<img src="index_files/figure-html/full-survey-results-7.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 8
+</div>
+<img src="index_files/figure-html/full-survey-results-8.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 9
+</div>
+<img src="index_files/figure-html/full-survey-results-9.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 10
+</div>
+<img src="index_files/figure-html/full-survey-results-10.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 11
+</div>
+<img src="index_files/figure-html/full-survey-results-11.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 12
+</div>
+<img src="index_files/figure-html/full-survey-results-12.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 13
+</div>
+<img src="index_files/figure-html/full-survey-results-13.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 14
+</div>
+<img src="index_files/figure-html/full-survey-results-14.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 15
+</div>
+<img src="index_files/figure-html/full-survey-results-15.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 16
+</div>
+<img src="index_files/figure-html/full-survey-results-16.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 17
+</div>
+<img src="index_files/figure-html/full-survey-results-17.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 18
+</div>
+<img src="index_files/figure-html/full-survey-results-18.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Survey item 19
+</div>
+<img src="index_files/figure-html/full-survey-results-19.png" class="img-fluid" width="1200">
+<hr class="survey-figure-separator">
+<div class="survey-question-label">
+Open-text responses
+</div>
+<div class="survey-text-list">
+<div class="survey-text-item">
+How do we get consensus on the use of post-operative RT?
+</div>
+<div class="survey-text-item">
+To what extent are academic centers willing to collaborate to advance the field?
+</div>
+<div class="survey-text-item">
+Risk factors for LR after complete margin-negative excision
+</div>
+<div class="survey-text-item">
+How can we better measure radiation effect?
+</div>
+<div class="survey-text-item">
+Why is documented radiation use so low in SEER MCC data?
+</div>
+<div class="survey-text-item">
+<p>Of note, this is how I have been practicing with my radiation oncologist who has preferred conventional radiation dosing. With a prospective study that “allows” hypofractionation, I suspect we will hypofractionate the lower risk or frail patients which I personally would prefer.</p>
+I am curious about what people think about various hypofractionated protocols, and whether they would be more inclined to radiate if hypofractionation was an option (versus if they think adjuvant radiation isn’t helpful).
+</div>
+<div class="survey-text-item">
+If adj RT is eliminated, what are likeliest risk factors for LR and would adj RT reduce LR in that cohort. At what point/with which risk factors does omission of adj RT negatively impact MCC specific OS. is there a role for use of ctDNA in deciding about adj RT for MCC
+</div>
+<div class="survey-text-item">
+I’m Interested to discuss and hear about practice differences across institutions and the rationales for those decisions.
+</div>
+<div class="survey-text-item">
+Why wouldn’t you just wait and treat systemically if actual recurrence?
+</div>
+<div class="survey-text-item">
+Try to get the group to agree on the indications for post op RT.
+</div>
+<div class="survey-text-item">
+Role (or lack thereof) of adjuvant ICB for MCC.
+</div>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("survey-toggle");
+  const panel = document.getElementById("full-survey-panel");
+
+  if (!button || !panel) return;
+
+  button.addEventListener("click", function () {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute(
+      "aria-expanded",
+      isOpen ? "false" : "true"
+    );
+
+    panel.classList.toggle(
+      "is-open",
+      !isOpen
+    );
+  });
+});
+</script>
 <div class="section-kicker">
 <p>Discussion highlights</p>
 </div>
-</section>
 <section id="what-stuck-with-us-from-the-conversation" class="level2">
 <h2 class="anchored" data-anchor-id="what-stuck-with-us-from-the-conversation">What stuck with us from the conversation</h2>
 <div class="section-intro">
@@ -682,267 +1290,657 @@ doi: 10.1245/s10434-025-18670-2</p>
 </section>
 <section id="who-joined-us" class="level2">
 <h2 class="anchored" data-anchor-id="who-joined-us">Who joined us?</h2>
-<div class="section-intro">
-<p>The cleaned Teams attendance file is retained with the meeting materials. The table below is generated directly from that record, with duplicate display names reconciled and automated note-taking accounts removed.</p>
+<div class="community-banner">
+<div class="community-banner-kicker">
+Our community
 </div>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 31%">
-<col style="width: 25%">
-<col style="width: 14%">
-<col style="width: 11%">
-<col style="width: 17%">
-</colgroup>
+<div class="community-banner-title">
+Who’s in the room today?
+</div>
+<p class="community-banner-copy">
+The Teams record captures time present and a few coarse participation signals. For this meeting, we also have the transcript, which gives us a better sense of who materially advanced the discussion. The recognition below combines both sources, with a modest moderator adjustment for substantive contributions that Teams telemetry cannot measure.
+</p>
+</div>
+<div class="engagement-spotlight">
+<div class="engagement-spotlight-title">
+🏅 Engagement standouts
+</div>
+<p class="engagement-spotlight-copy">
+A small thank-you to five colleagues who stood out in this unusually substantive MCC discussion.
+</p>
+<div class="engagement-pill-row">
+<div class="engagement-pill">
+Paul Nghiem
+</div>
+<div class="engagement-pill">
+Daniel Coit
+</div>
+<div class="engagement-pill">
+Vern Sondak
+</div>
+<div class="engagement-pill">
+David M. Miller
+</div>
+<div class="engagement-pill">
+Kevin S. Emerick
+</div>
+</div>
+<p class="engagement-method">
+The ranking combines time present and recorded Teams signals with a moderator/transcript-informed discussion bonus. The four largest adjustments were moderator-confirmed; smaller transcript-informed adjustments recognize additional substantive discussion. This is meant as recognition, not as a formal measure of contribution quality.
+</p>
+</div>
+<div class="section-intro">
+<p>The cleaned Teams attendance record is retained with the meeting materials. Duplicate display names are reconciled and automated note-taking accounts are removed before the metrics below are calculated.</p>
+</div>
+<div class="roster-summary">
+<strong>34 people represented</strong><span>Sorted by time in meeting · ● indicates the Teams signal was recorded at least once</span>
+</div>
+<div class="attendance-scroll">
+<table class="attendance-table">
 <thead>
-<tr class="header">
-<th style="text-align: left;">Name</th>
-<th style="text-align: right;">Minutes in meeting</th>
-<th style="text-align: center;">Camera on</th>
-<th style="text-align: center;">Unmuted</th>
-<th style="text-align: center;">Raised hand</th>
+<tr>
+<th>
+Name
+</th>
+<th>
+Minutes
+</th>
+<th>
+Camera
+</th>
+<th>
+Unmuted
+</th>
+<th>
+Raised hand
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: left;">Adewunmi O. Adelaja</td>
-<td style="text-align: right;">98</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Tien Nguyen
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.340) ;">
+112
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Ajay N. Sharma</td>
-<td style="text-align: right;">77</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Isaac Brownell
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.337) ;">
+111
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Aleigha R. Lawless</td>
-<td style="text-align: right;">60</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Candice D Church
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.325) ;">
+107
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Ann W. Silk</td>
-<td style="text-align: right;">104</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
+<tr>
+<td class="name-cell">
+David M. Miller
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.325) ;">
+107
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Aubriana McEvoy</td>
-<td style="text-align: right;">94</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Daniel Coit
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.322) ;">
+106
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Candice D Church</td>
-<td style="text-align: right;">107</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Mehran Behruj Yusuf
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.319) ;">
+105
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Christine C. Cimoch</td>
-<td style="text-align: right;">86</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Ann W. Silk
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.316) ;">
+104
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Christopher Barker</td>
-<td style="text-align: right;">99</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Juliane Andrade Czapla
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.316) ;">
+104
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Daniel Coit</td>
-<td style="text-align: right;">106</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+James F. McIntyre
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.313) ;">
+103
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">David M. Miller</td>
-<td style="text-align: right;">107</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Lisa Zaba
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.313) ;">
+103
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Devarati Mitra</td>
-<td style="text-align: right;">33</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Paul Nghiem
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.313) ;">
+103
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Elizabeth I. Buchbinder</td>
-<td style="text-align: right;">87</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Krista M. Rubin
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.310) ;">
+102
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Howard L. Kaufman</td>
-<td style="text-align: right;">94</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Song Park
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.310) ;">
+102
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Isaac Brownell</td>
-<td style="text-align: right;">111</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Christopher Barker
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.301) ;">
+99
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Itai M. Pashtan</td>
-<td style="text-align: right;">89</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Adewunmi O. Adelaja
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.298) ;">
+98
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">James A. DeCaprio</td>
-<td style="text-align: right;">46</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Nikhil Khushalani
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.289) ;">
+95
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">James F. McIntyre</td>
-<td style="text-align: right;">103</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
+<tr>
+<td class="name-cell">
+Aubriana McEvoy
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.286) ;">
+94
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Jessica L. Fewkes</td>
-<td style="text-align: right;">51</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Howard L. Kaufman
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.286) ;">
+94
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Juliane Andrade Czapla</td>
-<td style="text-align: right;">104</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Itai M. Pashtan
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.271) ;">
+89
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Kevin S. Emerick</td>
-<td style="text-align: right;">80</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
+<tr>
+<td class="name-cell">
+Elizabeth I. Buchbinder
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.266) ;">
+87
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Krista M. Rubin</td>
-<td style="text-align: right;">102</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Christine C. Cimoch
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.263) ;">
+86
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Larisa Geskin</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Kevin S. Emerick
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.245) ;">
+80
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Lisa Zaba</td>
-<td style="text-align: right;">103</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Ajay N. Sharma
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.236) ;">
+77
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Manisha Thakuria</td>
-<td style="text-align: right;">32</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Vern Sondak
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.230) ;">
+75
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Meghan Mooradian</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Molly Yancovitz
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.224) ;">
+73
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Mehran Behruj Yusuf</td>
-<td style="text-align: right;">105</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
+<tr>
+<td class="name-cell">
+Suzanne Topalian
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.224) ;">
+73
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Molly Yancovitz</td>
-<td style="text-align: right;">73</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Aleigha R. Lawless
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.185) ;">
+60
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Nikhil Khushalani</td>
-<td style="text-align: right;">95</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
+<tr>
+<td class="name-cell">
+Jessica L. Fewkes
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.158) ;">
+51
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Paul Nghiem</td>
-<td style="text-align: right;">103</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
+<tr>
+<td class="name-cell">
+Samir Gupta
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.146) ;">
+47
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Samir Gupta</td>
-<td style="text-align: right;">47</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+James A. DeCaprio
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.143) ;">
+46
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Song Park</td>
-<td style="text-align: right;">102</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Devarati Mitra
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.105) ;">
+33
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Suzanne Topalian</td>
-<td style="text-align: right;">73</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Manisha Thakuria
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.102) ;">
+32
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Tien Nguyen</td>
-<td style="text-align: right;">112</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;"></td>
+<tr>
+<td class="name-cell">
+Larisa Geskin
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.069) ;">
+21
+</td>
+<td class="signal-cell signal-on">
+●
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Vern Sondak</td>
-<td style="text-align: right;">75</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
+<tr>
+<td class="name-cell">
+Meghan Mooradian
+</td>
+<td class="minutes-cell" style="background: rgba(40,169,162,0.060) ;">
+18
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
+<td class="signal-cell">
+—
+</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="attendance-note">
+<p>Participation signals are descriptive only. Camera use, unmuting, and hand raises do not measure the quality or depth of participation; the transcript-informed adjustment is included precisely because those platform signals miss substantive discussion.</p>
+</div>
 </section>
 <section id="thanks-for-joining-us." class="level2 footer-card">
 <h2 class="anchored" data-anchor-id="thanks-for-joining-us.">Thanks for joining us.</h2>
@@ -953,8 +1951,10 @@ doi: 10.1245/s10434-025-18670-2</p>
 </div>
 
 
+</section></main></div>
 
-</main> <!-- /main -->
+
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1355,7 +2355,7 @@ doi: 10.1245/s10434-025-18670-2</p>
     }
   });
   </script>
-</div> <!-- /content -->
+ <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">

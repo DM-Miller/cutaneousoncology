@@ -328,6 +328,129 @@ execute:
     line-height:1.6;
   }
 
+  /* =========================================================
+     FULL SURVEY DISCLOSURE
+     ========================================================= */
+
+  .survey-disclosure {
+    margin: 1.3rem 0 2.2rem;
+  }
+
+  .survey-toggle {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: .9rem;
+    align-items: center;
+    padding: 1rem 1.15rem;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background:
+      linear-gradient(135deg, #F3F8F8 0%, #FFFFFF 100%);
+    color: var(--navy);
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(8,45,77,.04);
+  }
+
+  .survey-toggle:hover {
+    border-color: rgba(40,169,162,.48);
+    box-shadow: 0 8px 24px rgba(8,45,77,.07);
+  }
+
+  .survey-toggle-badge {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(40,169,162,.12);
+    color: var(--navy);
+    font-size: 1.05rem;
+  }
+
+  .survey-toggle-copy strong {
+    display: block;
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 850;
+  }
+
+  .survey-toggle-copy span {
+    display: block;
+    margin-top: .15rem;
+    color: var(--muted);
+    font-size: .84rem;
+    line-height: 1.4;
+  }
+
+  .survey-toggle-icon {
+    color: var(--teal);
+    font-size: 1.3rem;
+    font-weight: 900;
+    transition: transform .2s ease;
+  }
+
+  .survey-toggle[aria-expanded="true"] .survey-toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .survey-panel {
+    display: none;
+    margin-top: .8rem;
+    padding: 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .survey-panel.is-open {
+    display: block;
+  }
+
+  .survey-panel-intro {
+    margin: 0 0 1.15rem;
+    padding: .85rem 1rem;
+    border-left: 4px solid var(--teal);
+    border-radius: 0 10px 10px 0;
+    background: #F5FAFA;
+    color: var(--muted);
+    font-size: .9rem;
+    line-height: 1.55;
+  }
+
+  .survey-question-label {
+    color: var(--teal);
+    font-size: .76rem;
+    font-weight: 850;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+    margin: 1rem 0 .35rem;
+  }
+
+  .survey-figure-separator {
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid #EDF2F4;
+  }
+
+  .survey-text-list {
+    display: grid;
+    gap: .55rem;
+    margin-top: .5rem;
+  }
+
+  .survey-text-item {
+    padding: .78rem .9rem;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #FAFCFC;
+    color: #4B5E6C;
+    font-size: .88rem;
+    line-height: 1.5;
+  }
+
   .footer-card {
     margin:3rem 0 1rem;
     padding:1.8rem 2rem;
@@ -339,11 +462,329 @@ execute:
   .footer-card h2 { color:#fff; margin-top:0; }
   .footer-card p { margin-bottom:0; color:#EAF2F5; }
 
+  /* =========================================================
+     COMMUNITY / ENGAGEMENT / ATTENDANCE
+     ========================================================= */
+
+  .community-banner {
+    position: relative;
+    overflow: hidden;
+    margin: 1.2rem 0 1.3rem;
+    padding: 1.45rem 1.6rem;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 90% 15%, rgba(40,169,162,.12), transparent 30%),
+      linear-gradient(135deg, #F7FBFB 0%, #FFFFFF 78%);
+    box-shadow: 0 8px 24px rgba(8,45,77,.05);
+  }
+
+  .community-banner::after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    top: -70px;
+    right: -25px;
+    opacity: .18;
+    background-image:
+      radial-gradient(circle, rgba(40,169,162,.72) 0 1.2px, transparent 1.8px);
+    background-size: 20px 20px;
+    mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+    pointer-events: none;
+  }
+
+  .community-banner-kicker {
+    position: relative;
+    z-index: 1;
+    color: var(--teal);
+    font-size: .76rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .community-banner-title {
+    position: relative;
+    z-index: 1;
+    margin: .28rem 0 .35rem;
+    color: var(--navy);
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    font-weight: 850;
+    letter-spacing: -.035em;
+    line-height: 1.05;
+  }
+
+  .community-banner-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    margin: 0;
+    color: var(--muted);
+    font-size: .97rem;
+    line-height: 1.6;
+  }
+
+  .engagement-spotlight {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 0 1.4rem;
+    padding: 1.35rem 1.45rem 1.25rem;
+    border: 1px solid #E9C85F;
+    border-left: 7px solid #D7A400;
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 92% 18%, rgba(255,255,255,.58), transparent 28%),
+      linear-gradient(135deg, #FFF8D8 0%, #FDE9A9 100%);
+    box-shadow: 0 10px 28px rgba(116,83,0,.10);
+  }
+
+  .engagement-spotlight-title {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin: 0 0 .35rem;
+    color: #765308;
+    font-size: 1.1rem;
+    font-weight: 850;
+    letter-spacing: -.01em;
+  }
+
+  .engagement-spotlight-copy {
+    max-width: 900px;
+    margin: 0;
+    color: #735F2C;
+    font-size: .94rem;
+    line-height: 1.55;
+  }
+
+  .engagement-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin-top: .95rem;
+  }
+
+  .engagement-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem .72rem;
+    border: 1px solid rgba(118,83,8,.18);
+    border-radius: 999px;
+    background: rgba(255,255,255,.82);
+    color: #57420D;
+    font-size: .86rem;
+    font-weight: 780;
+    box-shadow: 0 2px 7px rgba(116,83,0,.08);
+  }
+
+  .engagement-method {
+    margin: .75rem 0 0;
+    color: #7C6B42;
+    font-size: .78rem;
+    line-height: 1.5;
+  }
+
+  .roster-summary {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 0 .8rem;
+    padding: .95rem 1.05rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #F9FBFB;
+  }
+
+  .roster-summary strong {
+    color: var(--navy);
+    font-size: 1rem;
+  }
+
+  .roster-summary span {
+    color: var(--muted);
+    font-size: .84rem;
+  }
+
+  .attendance-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 16px;
+  }
+
+  .attendance-table {
+    width: 100%;
+    min-width: 690px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(8,45,77,.045);
+  }
+
+  .attendance-table thead th {
+    padding: .72rem .75rem;
+    background: var(--navy);
+    color: #fff;
+    border: 0;
+    font-size: .78rem;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .attendance-table thead th:first-child {
+    text-align: left;
+  }
+
+  .attendance-table tbody td {
+    padding: .66rem .75rem;
+    border-top: 1px solid #E9EFF1;
+    color: #334857;
+    font-size: .88rem;
+    text-align: center;
+  }
+
+  .attendance-table tbody tr:nth-child(even) td:not(.minutes-cell) {
+    background: #FBFDFD;
+  }
+
+  .attendance-table tbody tr:hover td:not(.minutes-cell) {
+    background: #F3F9F9;
+  }
+
+  .attendance-table .name-cell {
+    color: var(--navy);
+    font-weight: 750;
+    text-align: left;
+  }
+
+  .attendance-table .minutes-cell {
+    color: #17384C;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .attendance-table .signal-cell {
+    color: #7A868E;
+  }
+
+  .attendance-table .signal-on {
+    color: var(--teal);
+    font-weight: 900;
+  }
+
+  .attendance-note {
+    margin-top: .8rem;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.55;
+  }
+
   @media(max-width:760px){
+    main.content {
+      width:100%;
+      max-width:100%;
+      padding-left:.85rem !important;
+      padding-right:.85rem !important;
+      overflow-x:hidden;
+    }
+
     .metric-grid,.highlight-grid,.survey-grid{grid-template-columns:1fr;}
-    .hero{padding:2rem 1.5rem;}
-    .hero h1{font-size:2.45rem;}
-    .paper-card{padding:1.35rem 1.25rem;}
+
+    .hero {
+      margin-top:1rem;
+      padding:1.55rem 1.15rem;
+      border-radius:18px;
+    }
+
+    .hero h1 {
+      font-size:clamp(2rem,10vw,2.55rem);
+      line-height:1.02;
+    }
+
+    .hero-copy {
+      font-size:1rem;
+      line-height:1.55;
+    }
+
+    .paper-card {
+      margin-left:0;
+      margin-right:0;
+      padding:1.2rem 1rem;
+    }
+
+    .paper-title { font-size:1.3rem; }
+
+    .link-row {
+      display:grid;
+      grid-template-columns:1fr;
+      gap:.55rem;
+    }
+
+    .soco-link {
+      justify-content:center;
+      width:100%;
+      text-align:center;
+    }
+
+    .community-banner {
+      padding:1.1rem;
+    }
+
+    .engagement-spotlight {
+      padding:1.1rem 1rem;
+    }
+
+    .engagement-pill-row {
+      display:grid;
+      grid-template-columns:1fr;
+    }
+
+    .engagement-pill {
+      width:100%;
+      justify-content:flex-start;
+    }
+
+    .roster-summary {
+      display:block;
+    }
+
+    .roster-summary span {
+      display:block;
+      margin-top:.3rem;
+    }
+
+    .attendance-scroll {
+      margin-left:-.2rem;
+      margin-right:-.2rem;
+      padding-bottom:.25rem;
+    }
+
+    .attendance-table {
+      min-width:690px;
+    }
+
+    .survey-toggle {
+      padding:.9rem;
+    }
+
+    .survey-panel {
+      padding:.8rem;
+    }
+
+    .survey-toggle-badge {
+      width:34px;
+      height:34px;
+    }
+
+    .footer-card {
+      padding:1.3rem 1.15rem;
+      border-radius:16px;
+    }
   }
 </style>
 
@@ -488,6 +929,67 @@ headline <- readr::read_csv(
   ),
   show_col_types = FALSE
 )
+
+# -------------------------------------------------------------------------
+# Archived pre-meeting survey
+#
+# This recap reads the SAVED processed RDS only. It does not call REDCap.
+# That keeps the public-site build reproducible and credential-free.
+# -------------------------------------------------------------------------
+
+survey_processed_path <- file.path(
+  meeting_dir,
+  "files",
+  "JC_survey_processed",
+  "mcc_jc_survey_processed.rds"
+)
+
+survey_available <- file.exists(survey_processed_path)
+
+if (survey_available) {
+
+  survey_processed <- readRDS(survey_processed_path)
+
+  dt_clean <- survey_processed$dt_clean
+  checkbox_data <- survey_processed$checkbox_data
+  question_map <- survey_processed$question_map
+
+  # plot_question() needs the original REDCap data dictionary in order
+  # to recover the question labels. Resolve the newest archived dictionary
+  # inside this meeting folder rather than relying on the working directory.
+  survey_dict_candidates <- list.files(
+    file.path(
+      meeting_dir,
+      "files",
+      "data dictionary"
+    ),
+    pattern = "_DataDictionary_.*\\.csv$",
+    full.names = TRUE,
+    ignore.case = TRUE
+  )
+
+  if (length(survey_dict_candidates) > 0) {
+    survey_dict_path <- survey_dict_candidates[
+      which.max(file.info(survey_dict_candidates)$mtime)
+    ]
+  } else {
+    survey_dict_path <- NA_character_
+    survey_available <- FALSE
+  }
+
+  # plot_question() is defined in the archived REDCap helper file.
+  helper_path <- file.path(
+    meeting_dir,
+    "scripts",
+    "REDCap Helpers.R"
+  )
+
+  if (file.exists(helper_path)) {
+    source(helper_path, local = TRUE)
+  } else {
+    survey_available <- FALSE
+  }
+}
 ```
 
 :::: {.hero}
@@ -663,6 +1165,477 @@ A prospective registry or clinical trial was the evidence type respondents most 
 The survey also showed that disagreement extends beyond whether to radiate. Respondents varied in preferred dose and fractionation, and the clinical scenarios revealed broad agreement at the lowest- and highest-risk extremes but substantially more variation in intermediate and preference-sensitive situations.
 :::
 
+
+<div class="survey-disclosure">
+
+<button
+  type="button"
+  class="survey-toggle"
+  id="survey-toggle"
+  aria-expanded="false"
+  aria-controls="full-survey-panel">
+
+  <span class="survey-toggle-badge">▤</span>
+
+  <span class="survey-toggle-copy">
+    <strong>Explore the full pre-meeting survey</strong>
+    <span>Open all archived survey figures, including practice patterns, risk estimates, radiation approaches, and clinical scenarios.</span>
+  </span>
+
+  <span class="survey-toggle-icon">+</span>
+
+</button>
+
+</div>
+
+
+<div id="full-survey-panel" class="survey-panel">
+
+<p class="survey-panel-intro">
+These are the archived <strong>pre-discussion</strong> responses from the June 12 Journal Club. The headline findings remain above; this panel preserves the complete survey record for readers who want to inspect the underlying distributions and clinical scenarios.
+</p>
+
+```{r}
+#| label: full-survey-results
+#| echo: false
+#| message: false
+#| warning: false
+#| results: asis
+#| fig-width: 10
+#| fig-height: 5.6
+#| dpi: 120
+
+if (!survey_available) {
+
+  cat(
+    '<p style="color:#6B747B;">',
+    'Archived survey files were not found in the expected meeting folder.',
+    '</p>'
+  )
+
+} else {
+
+  # -----------------------------------------------------------------------
+  # IMPORTANT:
+  # Rebuild the same variable-keyed map used in the original June
+  # presentation. The presentation itself used question_map_by_var$<field>
+  # rather than iterating through raw question_map entries.
+  # -----------------------------------------------------------------------
+
+  question_map_by_var <- purrr::set_names(
+    question_map,
+    purrr::map_chr(question_map, "var")
+  )
+
+  # Exact plotting specifications carried over from the original
+  # June 12 Journal Club presentation.
+  survey_specs <- list(
+
+    list(
+      var = "primary_role",
+      order = rev(c(
+        "Medical Oncology",
+        "Medical Dermatology",
+        "Mohs Surgery",
+        "Surgical Oncology",
+        "ENT",
+        "Radiation Oncology",
+        "Pathology / Dermatopathology",
+        "Research",
+        "Trainee",
+        "App",
+        "Other"
+      )),
+      title_width = 45,
+      x_label_width = 35,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "mcc_patients_per_month",
+      order = c(
+        "Not Applicable To My Role",
+        "0",
+        "1-5",
+        "6-10",
+        ">10"
+      ),
+      title_width = 55,
+      x_label_width = 40,
+      y_breaks = 2
+    ),
+
+    list(
+      var = "primary_rt_frequency",
+      order = c(
+        "Not Sure / Not Applicable",
+        "Rarely Or Never",
+        "Sometimes",
+        "Often, Depending On Risk Factors",
+        "Almost Always"
+      ),
+      title_width = 60,
+      x_label_width = 45,
+      y_breaks = 2
+    ),
+
+    list(
+      var = "primary_rt_dose_fractionation",
+      order = c(
+        "Not Sure / Not Applicable",
+        "Other",
+        "My Approach Varies Substantially By Clinical Scenario",
+        "Single-Fraction 8 Gy",
+        "Moderate Hypofractionation, Such As 20-36 Gy Over Multiple Fractions",
+        "Conventional Fractionation, Approximately 50-56 Gy",
+        "I Generally Do Not Recommend Adjuvant Rt In This Setting"
+      ),
+      title_width = 55,
+      x_label_width = 35,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "rt_fractionation_varies_by_risk",
+      order = c(
+        "Not Sure / Not Applicable",
+        "I Generally Do Not Recommend Adjuvant Rt In This Setting",
+        "Minimally - I Generally Use The Same Dose/Fractionation When I Radiate",
+        "Somewhat - I Individualize, But Usually Within A Limited Range",
+        "Substantially - I Use Different Approaches For Lower- Versus Higher-Risk Cases"
+      ),
+      title_width = 58,
+      x_label_width = 38,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "rt_decision_factors",
+      order = c(
+        "Other",
+        "Confidence In Surveillance / Salvage If Local Recurrence Occurs",
+        "Patient Age, Frailty, Or Treatment Burden",
+        "Positive Sentinel Lymph Node Biopsy",
+        "Immunosuppression",
+        "Close Or Positive Margin",
+        "Lymphovascular Invasion",
+        "Head And Neck Location",
+        "Tumor Size >1 Cm"
+      ),
+      title_width = 58,
+      x_label_width = 52,
+      y_breaks = 2
+    ),
+
+    list(
+      var = "estimated_lr_risk",
+      order = c(
+        "Not Sure",
+        "<2%",
+        "2-5%",
+        "6-10%",
+        ">10%"
+      ),
+      title_width = 60,
+      x_label_width = 35,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "paper_familiarity",
+      order = c(
+        "Not Familiar At All",
+        "Minimally Familiar",
+        "Somewhat Familiar",
+        "Very Or Moderately Familiar"
+      ),
+      title_width = 58,
+      x_label_width = 42,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "evidence_to_change_rt",
+      order = c(
+        "Not Sure / Not Applicable",
+        "My Practice Is Unlikely To Change Based On Additional Evidence",
+        "Updated NCCN Or Other Guideline Recommendations",
+        "Prospective Registry Or Clinical Trial Data",
+        "Additional Multi-Institutional Retrospective Data",
+        "The Kavanagh Et Al. Data Are Already Practice-Informing"
+      ),
+      title_width = 55,
+      x_label_width = 37,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "guideline_vs_individualized",
+      order = c(
+        "Not Sure / Not Applicable",
+        "Often Discuss Omission Of RT In Selected Patients",
+        "Individualize Based On Overall Recurrence Risk And Treatment Burden",
+        "Generally Follow Guideline-Based Recommendation For RT"
+      ),
+      title_width = 55,
+      x_label_width = 40,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "scenario1_rt",
+      order = c(
+        "I Do Not Make Treatment Recommendations For MCC / Not Applicable To My Role",
+        "Not Enough Information / Depends On Details",
+        "Discuss RT But Generally Do Not Recommend It",
+        "Observation / No Adjuvant RT",
+        "Recommend Adjuvant RT"
+      ),
+      title_width = 50,
+      x_label_width = 40,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "scenario1_rt_regimen",
+      order = c(
+        "Other",
+        "Single-Fraction 8 Gy",
+        "Moderate Hypofractionation, Such As 20-36 Gy Over Multiple Fractions",
+        "Conventional Fractionation, Approximately 50-56 Gy"
+      ),
+      title_width = 60,
+      x_label_width = 40,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "scenario2_rt",
+      order = c(
+        "I Do Not Make Treatment Recommendations For MCC / Not Applicable To My Role",
+        "Discuss RT But Generally Do Not Recommend It",
+        "Observation / No Adjuvant RT",
+        "Recommend Adjuvant RT"
+      ),
+      title_width = 50,
+      x_label_width = 40,
+      y_breaks = 2
+    ),
+
+    list(
+      var = "scenario2_rt_regimen",
+      order = c(
+        "Other",
+        "Single-Fraction 8 Gy",
+        "Moderate Hypofractionation, Such As 20-36 Gy Over Multiple Fractions",
+        "Conventional Fractionation, Approximately 50-56 Gy"
+      ),
+      title_width = 60,
+      x_label_width = 40,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "scenario3_rt",
+      order = c(
+        "I Do Not Make Treatment Recommendations For MCC / Not Applicable To My Role",
+        "Discuss RT But Generally Do Not Recommend It",
+        "Observation / No Adjuvant RT",
+        "Recommend Adjuvant RT"
+      ),
+      title_width = 70,
+      x_label_width = 40,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "scenario3_rt_regimen",
+      order = c(
+        "Other",
+        "Single-Fraction 8 Gy",
+        "Moderate Hypofractionation, Such As 20-36 Gy Over Multiple Fractions",
+        "Conventional Fractionation, Approximately 50-56 Gy"
+      ),
+      title_width = 60,
+      x_label_width = 40,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "scenario4_rt_fractionation",
+      order = c(
+        "I Do Not Make Treatment Recommendations For MCC / Not Applicable To My Role",
+        "Single-Fraction 8 Gy",
+        "Moderate Hypofractionation Over Multiple Fractions",
+        "Conventional Fractionation, Approximately 50-56 Gy",
+        "Observation / No Adjuvant RT"
+      ),
+      title_width = 70,
+      x_label_width = 40,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "scenario5_sln_positive_rt",
+      order = c(
+        "I Do Not Make Treatment Recommendations For MCC / Not Applicable To My Role",
+        "Not Enough Information / Depends On Details",
+        "If RT Is Used: Other Abbreviated / Hypofractionated Approach",
+        "If RT Is Used: Single-Fraction 8 Gy",
+        "If RT Is Used: Conventional Fractionation",
+        "Nodal-Basin RT",
+        "Primary-Site RT",
+        "No Adjuvant RT"
+      ),
+      title_width = 62,
+      x_label_width = 42,
+      y_breaks = 1
+    ),
+
+    list(
+      var = "prospective_study_priority",
+      order = c(
+        "Not Sure / Not Applicable",
+        "Low Priority",
+        "Uncertain",
+        "Moderately Important",
+        "Very Important"
+      ),
+      title_width = 50,
+      x_label_width = 50,
+      y_breaks = 1
+    )
+  )
+
+  rendered_n <- 0
+
+  for (spec in survey_specs) {
+
+    if (!spec$var %in% names(question_map_by_var)) {
+      next
+    }
+
+    qinfo <- question_map_by_var[[spec$var]]
+
+    p <- tryCatch(
+      plot_question(
+        qinfo,
+        dt_clean,
+        checkbox_data,
+        custom_order = spec$order,
+        dict_path = survey_dict_path,
+        title_width = spec$title_width,
+        x_label_width = spec$x_label_width,
+        y_breaks = spec$y_breaks
+      ),
+      error = function(e) {
+        message(
+          "Survey plot skipped for ",
+          spec$var,
+          ": ",
+          conditionMessage(e)
+        )
+        NULL
+      }
+    )
+
+    if (!is.null(p)) {
+
+      rendered_n <- rendered_n + 1
+
+      cat(
+        paste0(
+          '<div class="survey-question-label">',
+          'Survey item ', rendered_n,
+          '</div>'
+        )
+      )
+
+      print(p)
+
+      cat('<hr class="survey-figure-separator">')
+    }
+  }
+
+  # -----------------------------------------------------------------------
+  # Final free-text question exactly as used in the original presentation.
+  # -----------------------------------------------------------------------
+
+  if ("key_uncertainty" %in% names(dt_clean)) {
+
+    free_text <- dt_clean |>
+      dplyr::filter(
+        !is.na(key_uncertainty),
+        stringr::str_squish(key_uncertainty) != ""
+      ) |>
+      dplyr::distinct(key_uncertainty) |>
+      dplyr::pull(key_uncertainty)
+
+    if (length(free_text) > 0) {
+
+      cat(
+        '<div class="survey-question-label">',
+        'Open-text responses',
+        '</div>',
+        '<div class="survey-text-list">'
+      )
+
+      html_escape <- function(x) {
+        x <- gsub("&", "&amp;", x, fixed = TRUE)
+        x <- gsub("<", "&lt;", x, fixed = TRUE)
+        x <- gsub(">", "&gt;", x, fixed = TRUE)
+        x
+      }
+
+      for (response in free_text) {
+        cat(
+          '<div class="survey-text-item">',
+          html_escape(response),
+          '</div>'
+        )
+      }
+
+      cat('</div>')
+    }
+  }
+
+  if (rendered_n == 0) {
+    cat(
+      '<p style="color:#B45309;font-weight:700;">',
+      'The archived survey loaded, but no quantitative survey figures rendered. ',
+      'Check the render log for the survey plot messages.',
+      '</p>'
+    )
+  }
+}
+```
+
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("survey-toggle");
+  const panel = document.getElementById("full-survey-panel");
+
+  if (!button || !panel) return;
+
+  button.addEventListener("click", function () {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute(
+      "aria-expanded",
+      isOpen ? "false" : "true"
+    );
+
+    panel.classList.toggle(
+      "is-open",
+      !isOpen
+    );
+  });
+});
+</script>
+
 ::: {.section-kicker}
 Discussion highlights
 :::
@@ -765,28 +1738,249 @@ Our community
 
 ## Who joined us?
 
+<div class="community-banner">
+
+<div class="community-banner-kicker">Our community</div>
+
+<div class="community-banner-title">Who’s in the room today?</div>
+
+<p class="community-banner-copy">
+The Teams record captures time present and a few coarse participation signals. For this meeting, we also have the transcript, which gives us a better sense of who materially advanced the discussion. The recognition below combines both sources, with a modest moderator adjustment for substantive contributions that Teams telemetry cannot measure.
+</p>
+
+</div>
+
+
+```{r}
+#| label: engagement-standouts
+#| results: asis
+
+meeting_max <- max(people$duration_min, na.rm = TRUE)
+
+# -------------------------------------------------------------------------
+# Discussion bonus
+#
+# The four 25-point adjustments below are moderator-confirmed.
+# Additional smaller adjustments are transcript-informed.
+#
+# Transcript review identified Kevin Emerick as a particularly substantive
+# additional discussant (19 speaking turns / ~1,100 words), with Howard
+# Kaufman, Ajay Sharma, and Adewunmi Adelaja also making meaningful
+# contributions. Their smaller bonuses are intentionally not large enough
+# to overwhelm the Teams-derived component.
+# -------------------------------------------------------------------------
+
+discussion_bonus_rules <- tibble::tribble(
+  ~pattern,                                      ~discussion_bonus,
+  "Coit",                                        25,
+  "Nghiem",                                      25,
+  "Sondak",                                      25,
+  "David.*Miller|Miller.*David",                 25,
+  "Emerick",                                     15,
+  "Howard.*Kaufman|Kaufman.*Howard",              8,
+  "Ajay.*Sharma|Sharma.*Ajay",                    8,
+  "Adewunmi.*Adelaja|Adelaja.*Adewunmi",          8
+)
+
+get_discussion_bonus <- function(person_name) {
+
+  matched <- discussion_bonus_rules |>
+    dplyr::filter(
+      stringr::str_detect(
+        person_name,
+        stringr::regex(
+          pattern,
+          ignore_case = TRUE
+        )
+      )
+    )
+
+  if (nrow(matched) == 0) return(0)
+
+  max(matched$discussion_bonus)
+}
+
+engagement <- people |>
+  mutate(
+    attendance_fraction = pmin(duration_min / meeting_max, 1),
+
+    # Objective Teams-derived component: maximum 100 points.
+    recorded_engagement =
+      55 * attendance_fraction +
+      15 * as.numeric(any_camera) +
+      20 * as.numeric(any_unmute) +
+      10 * as.numeric(any_hand_raise),
+
+    # Moderator / transcript-informed component.
+    discussion_bonus = purrr::map_dbl(
+      Name,
+      get_discussion_bonus
+    ),
+
+    engagement_score =
+      recorded_engagement +
+      discussion_bonus
+  ) |>
+  arrange(
+    desc(engagement_score),
+    desc(discussion_bonus),
+    desc(duration_min),
+    Name
+  )
+
+# The four moderator-confirmed discussion leaders should always be
+# represented in the recognition panel. Fill any remaining slot from the
+# overall engagement ranking so Teams-derived participation still matters.
+moderator_priority_patterns <- c(
+  "Coit",
+  "Nghiem",
+  "Sondak",
+  "David.*Miller|Miller.*David"
+)
+
+moderator_priority <- engagement |>
+  filter(
+    purrr::map_lgl(
+      Name,
+      ~ any(
+        stringr::str_detect(
+          .x,
+          stringr::regex(
+            moderator_priority_patterns,
+            ignore_case = TRUE
+          )
+        )
+      )
+    )
+  ) |>
+  arrange(desc(engagement_score))
+
+remaining_ranked <- engagement |>
+  filter(!Name %in% moderator_priority$Name) |>
+  arrange(desc(engagement_score))
+
+top_engagement <- dplyr::bind_rows(
+  moderator_priority,
+  remaining_ranked
+) |>
+  distinct(Name, .keep_all = TRUE) |>
+  slice_head(n = 5)
+
+pill_html <- paste0(
+  '<div class="engagement-pill">',
+  top_engagement$Name,
+  '</div>',
+  collapse = ""
+)
+
+cat(
+  paste0(
+    '<div class="engagement-spotlight">',
+      '<div class="engagement-spotlight-title">🏅 Engagement standouts</div>',
+      '<p class="engagement-spotlight-copy">',
+        'A small thank-you to five colleagues who stood out in this unusually substantive MCC discussion.',
+      '</p>',
+      '<div class="engagement-pill-row">',
+        pill_html,
+      '</div>',
+      '<p class="engagement-method">',
+        'The ranking combines time present and recorded Teams signals with a moderator/transcript-informed discussion bonus. ',
+        'The four largest adjustments were moderator-confirmed; smaller transcript-informed adjustments recognize additional substantive discussion. ',
+        'This is meant as recognition, not as a formal measure of contribution quality.',
+      '</p>',
+    '</div>'
+  )
+)
+```
+
+
 ::: {.section-intro}
-The cleaned Teams attendance file is retained with the meeting materials. The table below is generated directly from that record, with duplicate display names reconciled and automated note-taking accounts removed.
+The cleaned Teams attendance record is retained with the meeting materials. Duplicate display names are reconciled and automated note-taking accounts are removed before the metrics below are calculated.
 :::
+
 
 ```{r}
 #| label: attendance-table
 #| results: asis
 
+library(dplyr)
+
 roster <- people |>
   transmute(
     Name,
-    `Minutes in meeting` = round(duration_min),
-    `Camera on` = if_else(any_camera, "Yes", ""),
-    `Unmuted` = if_else(any_unmute, "Yes", ""),
-    `Raised hand` = if_else(any_hand_raise, "Yes", "")
-  )
+    Minutes = round(duration_min),
+    Camera = if_else(any_camera, "●", "—"),
+    Unmuted = if_else(any_unmute, "●", "—"),
+    `Raised hand` = if_else(any_hand_raise, "●", "—")
+  ) |>
+  arrange(desc(Minutes), Name)
 
-knitr::kable(
-  roster,
-  align = c("l", "r", "c", "c", "c")
+cat(
+  paste0(
+    '<div class="roster-summary">',
+      '<strong>', nrow(roster), ' people represented</strong>',
+      '<span>Sorted by time in meeting · ● indicates the Teams signal was recorded at least once</span>',
+    '</div>'
+  )
 )
+
+min_minutes <- min(roster$Minutes, na.rm = TRUE)
+max_minutes <- max(roster$Minutes, na.rm = TRUE)
+
+minute_fill <- function(x) {
+  if (max_minutes == min_minutes) return("rgba(40,169,162,.18)")
+  alpha <- 0.06 + 0.28 * ((x - min_minutes) / (max_minutes - min_minutes))
+  sprintf("rgba(40,169,162,%.3f)", alpha)
+}
+
+html_escape <- function(x) {
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  x <- gsub(">", "&gt;", x, fixed = TRUE)
+  x
+}
+
+cat('<div class="attendance-scroll">')
+cat('<table class="attendance-table">')
+cat(
+  '<thead><tr>',
+  '<th>Name</th>',
+  '<th>Minutes</th>',
+  '<th>Camera</th>',
+  '<th>Unmuted</th>',
+  '<th>Raised hand</th>',
+  '</tr></thead><tbody>'
+)
+
+for (i in seq_len(nrow(roster))) {
+
+  row <- roster[i, ]
+
+  signal_cell <- function(value) {
+    cls <- if (identical(value, "●")) " signal-on" else ""
+    paste0('<td class="signal-cell', cls, '">', value, '</td>')
+  }
+
+  cat(
+    '<tr>',
+      '<td class="name-cell">', html_escape(row$Name), '</td>',
+      '<td class="minutes-cell" style="background:', minute_fill(row$Minutes), ';">',
+        row$Minutes,
+      '</td>',
+      signal_cell(row$Camera),
+      signal_cell(row$Unmuted),
+      signal_cell(row$`Raised hand`),
+    '</tr>'
+  )
+}
+
+cat('</tbody></table></div>')
 ```
+
+<div class="attendance-note">
+Participation signals are descriptive only. Camera use, unmuting, and hand raises do not measure the quality or depth of participation; the transcript-informed adjustment is included precisely because those platform signals miss substantive discussion.
+</div>
+
 
 ::: {.footer-card}
 
