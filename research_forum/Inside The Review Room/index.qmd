@@ -7,9 +7,13 @@ format:
     toc: false
     smooth-scroll: true
     embed-resources: true
+    
 execute:
   echo: false
   warning: false
+  
+image: "img/inside_the_review_room.png"
+date: ""
 ---
 
 ```{=html}
