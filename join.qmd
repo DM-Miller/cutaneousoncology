@@ -5,104 +5,480 @@ toc: false
 ---
 
 <style>
-.soco-join-hero { position:relative; overflow:hidden; background:radial-gradient(circle at 82% 22%,rgba(40,169,162,.22),transparent 30%),radial-gradient(circle at 92% 85%,rgba(233,120,99,.12),transparent 25%),linear-gradient(135deg,#062A46 0%,#083754 55%,#0B4657 100%); color:#fff; }
-.soco-join-hero-inner { position:relative; z-index:1; max-width:1180px; margin:0 auto; padding:clamp(5rem,9vw,8rem) 2rem clamp(4.5rem,8vw,7rem); }
-.soco-join-hero-copy { max-width:900px; }
-.soco-join-hero .soco-eyebrow { color:#7ED8D2; }
-.soco-join-headline { margin:.65rem 0 1.4rem; max-width:850px; color:#fff!important; font-size:clamp(3.3rem,6.4vw,6rem); line-height:.98; letter-spacing:-.05em; font-weight:750; }
-.soco-join-hero .soco-dek { max-width:810px; color:rgba(255,255,255,.84); font-size:clamp(1.15rem,2vw,1.42rem); line-height:1.62; }
-.soco-join-actions { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:2rem; }
-.soco-join-actions .btn-outline-light { border-color:rgba(255,255,255,.55); color:#fff; }
-.soco-join-intro { max-width:900px; }
-.soco-join-intro .soco-join-lead { color:#062A46; font-size:clamp(1.3rem,2vw,1.65rem); line-height:1.55; font-weight:500; }
-.soco-join-free { display:inline-flex; align-items:center; gap:.55rem; margin-top:1rem; padding:.55rem .8rem; border-radius:999px; background:rgba(40,169,162,.10); color:#126D69; font-size:.92rem; font-weight:700; }
-.soco-join-free::before { content:"✓"; }
-.soco-join-reasons { background:#F5F8F8; border-top:1px solid rgba(48,57,68,.08); border-bottom:1px solid rgba(48,57,68,.08); }
-.soco-join-reasons-inner { max-width:1180px; margin:0 auto; padding:5rem 2rem; }
-.soco-join-reasons-dek { max-width:720px; color:#66737D; font-size:1.05rem; line-height:1.65; margin-bottom:2.2rem; }
-.soco-join-form-section { max-width:1180px; margin:0 auto; padding:clamp(5rem,8vw,7rem) 2rem; }
-.soco-join-form-layout { display:grid; grid-template-columns:minmax(0,.78fr) minmax(420px,1.22fr); gap:clamp(3rem,7vw,6rem); align-items:start; }
-.soco-join-form-copy { padding-top:1rem; }
-.soco-join-form-copy .soco-eyebrow { color:#28A9A2; }
-.soco-join-form-copy h2 { color:#062A46; font-size:clamp(2.2rem,4vw,3.5rem); line-height:1.05; letter-spacing:-.035em; }
-.soco-join-form-panel { position:relative; background:#fff; border:1px solid #DCE5E8; border-radius:16px; padding:clamp(1.6rem,4vw,2.6rem); box-shadow:0 18px 50px rgba(6,42,70,.09); }
-.soco-join-form-panel::before { content:""; position:absolute; top:0; left:18px; right:18px; height:4px; background:linear-gradient(90deg,#28A9A2,#E97863); }
-.soco-form-field { margin-bottom:1.25rem; }
-.soco-form-field label { display:block; margin-bottom:.45rem; color:#233744; font-size:.93rem; font-weight:700; }
-.soco-form-field input,.soco-form-field select,.soco-form-field textarea { width:100%; box-sizing:border-box; padding:.88rem 1rem; border:1px solid #C9D5DA; border-radius:7px; background:#fff; color:#303944; font:inherit; }
-.soco-form-field textarea { min-height:120px; resize:vertical; }
-.soco-form-field input:focus,.soco-form-field select:focus,.soco-form-field textarea:focus { outline:none; border-color:#28A9A2; box-shadow:0 0 0 3px rgba(40,169,162,.14); }
-.soco-form-help,.soco-form-privacy { color:#78858D; font-size:.82rem; line-height:1.5; }
-.soco-join-closing { background:#062A46; color:#fff; }
-.soco-join-closing-inner { max-width:1180px; margin:0 auto; padding:4.5rem 2rem; }
-.soco-join-closing h2 { color:#fff!important; }
-.soco-join-closing p { color:rgba(255,255,255,.78); }
-.soco-join-closing a { color:#7ED8D2; font-weight:700; }
-@media(max-width:850px){ .soco-join-form-layout{grid-template-columns:1fr;} .soco-join-hero-inner,.soco-join-reasons-inner,.soco-join-form-section,.soco-join-closing-inner{padding-left:1.25rem;padding-right:1.25rem;} }
+:root {
+  --soco-navy: #082D4D;
+  --soco-blue: #0E5688;
+  --soco-teal: #168A8F;
+  --soco-teal-bright: #28A9A2;
+  --soco-coral: #E25A4E;
+  --soco-ink: #31424E;
+  --soco-muted: #6B747B;
+  --soco-pale: #F3F8F8;
+  --soco-line: #D9E8E8;
+}
+
+/* ============================================================
+   HERO — aligned with current SoCO / Journal Club visual system
+   ============================================================ */
+
+.soco-join-hero {
+  max-width: 1180px;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.soco-join-hero-inner {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: clamp(3rem, 6vw, 5rem);
+  border: 1px solid var(--soco-line);
+  background:
+    radial-gradient(circle at 87% 15%, rgba(40,169,162,.14), transparent 31%),
+    radial-gradient(circle at 12% 88%, rgba(226,90,78,.055), transparent 29%),
+    linear-gradient(135deg, #FFFFFF 0%, #F5FAFA 100%);
+  box-shadow: 0 22px 60px rgba(8,45,77,.07);
+}
+
+.soco-join-hero-inner::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  top: -95px;
+  right: -55px;
+  opacity: .22;
+  background-image:
+    radial-gradient(circle, rgba(40,169,162,.75) 0 1.4px, transparent 2px);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+  pointer-events: none;
+}
+
+.soco-join-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.soco-join-hero .soco-eyebrow {
+  color: var(--soco-teal);
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.soco-join-headline {
+  margin: .65rem 0 1.4rem;
+  max-width: 850px;
+  color: var(--soco-navy) !important;
+  font-size: clamp(3.3rem,6.4vw,6rem);
+  line-height: .98;
+  letter-spacing: -.05em;
+  font-weight: 750;
+  text-wrap: balance;
+}
+
+.soco-join-hero .soco-dek {
+  max-width: 810px;
+  color: var(--soco-ink);
+  font-size: clamp(1.15rem,2vw,1.42rem);
+  line-height: 1.62;
+}
+
+.soco-join-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 2rem;
+}
+
+.soco-join-actions .btn-primary {
+  border-color: var(--soco-blue);
+  background: var(--soco-blue);
+  color: #fff;
+}
+
+.soco-join-actions .btn-primary:hover {
+  border-color: var(--soco-navy);
+  background: var(--soco-navy);
+  color: #fff;
+}
+
+.soco-join-actions .btn-outline-primary {
+  border-color: #BFD7DF;
+  background: rgba(255,255,255,.72);
+  color: var(--soco-blue);
+}
+
+.soco-join-actions .btn-outline-primary:hover {
+  border-color: var(--soco-blue);
+  background: var(--soco-blue);
+  color: #fff;
+}
+
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+
+.soco-join-intro {
+  max-width: 900px;
+}
+
+.soco-join-intro .soco-join-lead {
+  color: var(--soco-navy);
+  font-size: clamp(1.3rem,2vw,1.65rem);
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+.soco-join-free {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  margin-top: 1rem;
+  padding: .55rem .8rem;
+  border-radius: 999px;
+  background: rgba(40,169,162,.10);
+  color: #126D69;
+  font-size: .92rem;
+  font-weight: 700;
+}
+
+.soco-join-free::before {
+  content: "✓";
+}
+
+
+/* ============================================================
+   WHY JOIN
+   ============================================================ */
+
+.soco-join-reasons {
+  background: var(--soco-pale);
+  border-top: 1px solid rgba(48,57,68,.08);
+  border-bottom: 1px solid rgba(48,57,68,.08);
+}
+
+.soco-join-reasons-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.soco-join-reasons h2 {
+  color: var(--soco-navy);
+}
+
+.soco-join-reasons-dek {
+  max-width: 720px;
+  color: var(--soco-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 2.2rem;
+}
+
+.soco-join-reasons .soco-card {
+  border: 1px solid var(--soco-line);
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(8,45,77,.055);
+}
+
+.soco-join-reasons .soco-card h3 {
+  color: var(--soco-navy);
+}
+
+
+/* ============================================================
+   FORM
+   ============================================================ */
+
+.soco-join-form-section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(5rem,8vw,7rem) 2rem;
+}
+
+.soco-join-form-layout {
+  display: grid;
+  grid-template-columns: minmax(0,.78fr) minmax(420px,1.22fr);
+  gap: clamp(3rem,7vw,6rem);
+  align-items: start;
+}
+
+.soco-join-form-copy {
+  padding-top: 1rem;
+}
+
+.soco-join-form-copy .soco-eyebrow {
+  color: var(--soco-teal-bright);
+}
+
+.soco-join-form-copy h2 {
+  color: var(--soco-navy);
+  font-size: clamp(2.2rem,4vw,3.5rem);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+}
+
+.soco-join-form-panel {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--soco-line);
+  border-radius: 16px;
+  padding: clamp(1.6rem,4vw,2.6rem);
+  box-shadow: 0 18px 50px rgba(8,45,77,.09);
+  overflow: hidden;
+}
+
+.soco-join-form-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--soco-teal-bright),
+    var(--soco-coral)
+  );
+}
+
+.soco-form-field {
+  margin-bottom: 1.25rem;
+}
+
+.soco-form-field label {
+  display: block;
+  margin-bottom: .45rem;
+  color: var(--soco-navy);
+  font-size: .93rem;
+  font-weight: 700;
+}
+
+.soco-form-field input,
+.soco-form-field select,
+.soco-form-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: .88rem 1rem;
+  border: 1px solid #C9D5DA;
+  border-radius: 7px;
+  background: #fff;
+  color: var(--soco-ink);
+  font: inherit;
+}
+
+.soco-form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.soco-form-field input:focus,
+.soco-form-field select:focus,
+.soco-form-field textarea:focus {
+  outline: none;
+  border-color: var(--soco-teal-bright);
+  box-shadow: 0 0 0 3px rgba(40,169,162,.14);
+}
+
+.soco-form-help,
+.soco-form-privacy {
+  color: #78858D;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   CLOSING — light, not dark
+   ============================================================ */
+
+.soco-join-closing {
+  background:
+    radial-gradient(circle at 88% 18%, rgba(40,169,162,.11), transparent 28%),
+    linear-gradient(135deg, #F5FAFA 0%, #FFFFFF 100%);
+  border-top: 1px solid var(--soco-line);
+}
+
+.soco-join-closing-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4.5rem 2rem;
+}
+
+.soco-join-closing h2 {
+  color: var(--soco-navy) !important;
+}
+
+.soco-join-closing p {
+  color: var(--soco-ink);
+  max-width: 850px;
+}
+
+.soco-join-closing a {
+  color: var(--soco-teal);
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media(max-width:850px) {
+  .soco-join-form-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .soco-join-hero-inner,
+  .soco-join-reasons-inner,
+  .soco-join-form-section,
+  .soco-join-closing-inner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media(max-width:700px) {
+  .soco-join-hero {
+    margin-top: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .soco-join-hero-inner {
+    min-height: auto;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+  }
+}
 </style>
+
 
 :::::::: soco-join-hero
 ::::::: soco-join-hero-inner
 ::::: soco-join-hero-copy
+
 ::: soco-eyebrow
 Connect • Participate • Collaborate
 :::
+
 <h1 class="soco-join-headline">Join our community.</h1>
+
 <p class="soco-dek">The Society of Cutaneous Oncology brings together clinicians, scientists, trainees, and allied professionals who want to think carefully about evidence, learn from one another, and advance the care of patients with skin cancer.</p>
+
 ::: soco-join-actions
-[Join SoCO](#join-soco){.btn .btn-primary} [Explore our philosophy](philosophy.qmd){.btn .btn-outline-light}
+[Join SoCO](#join-soco){.btn .btn-primary}
+[Explore our philosophy](philosophy.qmd){.btn .btn-outline-primary}
 :::
+
 :::::
 :::::::
 ::::::::
 
+
 ::::::: {.soco-section .soco-join-intro}
+
 ## A community for cutaneous oncology
+
 <p class="soco-join-lead">SoCO is an open, multidisciplinary community built around evidence interpretation, constructive scientific discussion, education, and collaboration.</p>
+
 Join to receive invitations and announcements for **SoCO Journal Club, Research Forum, educational programs, collaborative initiatives, and other Society activities.**
+
 <div class="soco-join-free">Membership and participation are free</div>
+
 :::::::
 
-<div class="soco-join-reasons"><div class="soco-join-reasons-inner">
+
+<div class="soco-join-reasons">
+<div class="soco-join-reasons-inner">
 
 ## Why join SoCO?
+
 <p class="soco-join-reasons-dek">A place to engage with the evidence, the science, and the people shaping the future of cutaneous oncology.</p>
 
 :::::: soco-card-grid
-::: soco-card
-### Join the conversation
-Participate in multidisciplinary discussions of emerging evidence, with an emphasis on careful interpretation, uncertainty, and implications for patient care.
-:::
-::: soco-card
-### Connect across disciplines
-Engage with clinicians and investigators across specialties and institutions who share an interest in advancing the field.
-:::
-::: soco-card
-### Build better science
-Learn about Research Forums, collaborative projects, and opportunities to share ideas and work in progress with the broader SoCO community.
-:::
-::::::
-</div></div>
 
-<div id="join-soco" class="soco-join-form-section"><div class="soco-join-form-layout">
+::: soco-card
+
+### Join the conversation
+
+Participate in multidisciplinary discussions of emerging evidence, with an emphasis on careful interpretation, uncertainty, and implications for patient care.
+
+:::
+
+::: soco-card
+
+### Connect across disciplines
+
+Engage with clinicians and investigators across specialties and institutions who share an interest in advancing the field.
+
+:::
+
+::: soco-card
+
+### Build better science
+
+Learn about Research Forums, collaborative projects, and opportunities to share ideas and work in progress with the broader SoCO community.
+
+:::
+
+::::::
+
+</div>
+</div>
+
+
+<div id="join-soco" class="soco-join-form-section">
+<div class="soco-join-form-layout">
+
 <div class="soco-join-form-copy">
+
 <div class="soco-eyebrow">Join SoCO</div>
 
 ## Stay connected.
+
 Tell us who you are and where you work. We will keep you informed about upcoming Society of Cutaneous Oncology programs and opportunities to participate.
+
 </div>
 
-<div class="soco-join-form-panel">
-<form id="soco-community-form" name="soco-community" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/join-thank-you.html" class="soco-community-form">
-<input type="hidden" name="form-name" value="soco-community">
-<p hidden><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
 
-<div class="soco-form-field"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" required></div>
-<div class="soco-form-field"><label for="institution">Institution</label><input type="text" id="institution" name="institution" autocomplete="organization" required></div>
-<div class="soco-form-field"><label for="email">Email address</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+<div class="soco-join-form-panel">
+
+<form id="soco-community-form" name="soco-community" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/join-thank-you.html" class="soco-community-form">
+
+<input type="hidden" name="form-name" value="soco-community">
+
+<p hidden>
+<label>Don't fill this out if you're human: <input name="bot-field"></label>
+</p>
 
 <div class="soco-form-field">
+<label for="name">Name</label>
+<input type="text" id="name" name="name" autocomplete="name" required>
+</div>
+
+<div class="soco-form-field">
+<label for="institution">Institution</label>
+<input type="text" id="institution" name="institution" autocomplete="organization" required>
+</div>
+
+<div class="soco-form-field">
+<label for="email">Email address</label>
+<input type="email" id="email" name="email" autocomplete="email" required>
+</div>
+
+<div class="soco-form-field">
+
 <label for="role">Your role</label>
+
 <select id="role" name="role" required>
 <option value="" selected disabled>Select one</option>
 <option value="Physician / Clinician">Physician / Clinician</option>
@@ -113,26 +489,55 @@ Tell us who you are and where you work. We will keep you informed about upcoming
 <option value="Patient / Advocate">Patient / Advocate</option>
 <option value="Other">Other</option>
 </select>
+
 </div>
+
 
 <div class="soco-form-field">
+
 <label for="interest">What interests you about SoCO?</label>
-<textarea id="interest" name="interest" rows="4" maxlength="300" required placeholder="Briefly tell us about your interest in cutaneous oncology."></textarea>
+
+<textarea
+  id="interest"
+  name="interest"
+  rows="4"
+  maxlength="300"
+  required
+  placeholder="Briefly tell us about your interest in cutaneous oncology."></textarea>
+
 <span class="soco-form-help">A sentence or two is plenty.</span>
+
 </div>
 
-<button type="submit" class="btn btn-primary">Join our community</button>
-<p class="soco-form-privacy">Your information will be used only to communicate about Society of Cutaneous Oncology activities.</p>
-</form>
-</div></div></div>
 
-<div class="soco-join-closing"><div class="soco-join-closing-inner">
+<button type="submit" class="btn btn-primary">
+Join our community
+</button>
+
+<p class="soco-form-privacy">
+Your information will be used only to communicate about Society of Cutaneous Oncology activities.
+</p>
+
+</form>
+
+</div>
+
+</div>
+</div>
+
+
+<div class="soco-join-closing">
+<div class="soco-join-closing-inner">
 
 ## Rigorous science. Generous community.
+
 SoCO is building a multidisciplinary home for people who want to interpret evidence carefully, strengthen scientific ideas through constructive criticism, and work together to improve care for patients with skin cancer.
 
 [Read our philosophy →](philosophy.qmd)
-</div></div>
+
+</div>
+</div>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -143,6 +548,7 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function () {
     const fullName = nameInput.value.trim();
     if (!fullName) return;
+
     try {
       sessionStorage.setItem("socoName", fullName);
       localStorage.setItem("socoName", fullName);
@@ -150,4 +556,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-

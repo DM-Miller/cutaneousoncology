@@ -12,46 +12,75 @@ toc: false
    ============================================================ */
 
 .soco-joco-hero {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 82% 18%, rgba(40,169,162,.18), transparent 30%),
-    radial-gradient(circle at 92% 88%, rgba(233,120,99,.11), transparent 26%),
-    linear-gradient(135deg, #062A46 0%, #083754 58%, #0B4657 100%);
-  color: #fff;
+  max-width: 1180px;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem;
 }
 
 .soco-joco-hero-inner {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: clamp(5rem, 9vw, 8rem) 2rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: clamp(3rem, 6vw, 5rem);
+  border: 1px solid #D9E8E8;
+  border-radius: 0;
+  background:
+    radial-gradient(circle at 87% 15%, rgba(40,169,162,.14), transparent 31%),
+    radial-gradient(circle at 12% 88%, rgba(226,90,78,.055), transparent 29%),
+    linear-gradient(135deg, #FFFFFF 0%, #F5FAFA 100%);
+  box-shadow: 0 22px 60px rgba(8,45,77,.07);
+}
+
+.soco-joco-hero-inner::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  top: -95px;
+  right: -55px;
+  opacity: .22;
+  background-image:
+    radial-gradient(circle, rgba(40,169,162,.75) 0 1.4px, transparent 2px);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+  pointer-events: none;
+}
+
+.soco-joco-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 940px;
 }
 
 .soco-joco-hero .soco-eyebrow {
   margin-bottom: 1rem;
-  color: #7ED8D2;
+  color: #168A8F;
   font-size: .82rem;
   font-weight: 800;
-  letter-spacing: .13em;
+  letter-spacing: .14em;
   text-transform: uppercase;
 }
 
 .soco-joco-headline {
   max-width: 950px;
   margin: 0 0 1.35rem;
-  color: #fff !important;
-  font-size: clamp(3.25rem, 6.3vw, 6rem);
+  color: #082D4D !important;
+  font-size: clamp(3.25rem, 6.3vw, 5.9rem);
   font-weight: 760;
   line-height: .98;
   letter-spacing: -.05em;
+  text-wrap: balance;
 }
 
 .soco-joco-dek {
-  max-width: 790px;
+  max-width: 800px;
   margin: 0;
-  color: rgba(255,255,255,.84);
-  font-size: clamp(1.15rem, 2vw, 1.38rem);
-  line-height: 1.65;
+  color: #31424E;
+  font-size: clamp(1.12rem, 2vw, 1.33rem);
+  line-height: 1.68;
 }
 
 .soco-joco-actions {
@@ -62,26 +91,27 @@ toc: false
 }
 
 .soco-joco-actions .btn-primary {
-  border-color: #fff;
-  background: #fff;
-  color: #062A46;
-}
-
-.soco-joco-actions .btn-primary:hover {
-  border-color: #f2f6f8;
-  background: #f2f6f8;
-  color: #062A46;
-}
-
-.soco-joco-actions .btn-outline-light {
-  border-color: rgba(255,255,255,.55);
+  border-color: #0E5688;
+  background: #0E5688;
   color: #fff;
 }
 
-.soco-joco-actions .btn-outline-light:hover {
-  border-color: #fff;
-  background: #fff;
-  color: #062A46;
+.soco-joco-actions .btn-primary:hover {
+  border-color: #082D4D;
+  background: #082D4D;
+  color: #fff;
+}
+
+.soco-joco-actions .btn-outline-primary {
+  border-color: #BFD7DF;
+  background: rgba(255,255,255,.72);
+  color: #0E5688;
+}
+
+.soco-joco-actions .btn-outline-primary:hover {
+  border-color: #0E5688;
+  background: #0E5688;
+  color: #fff;
 }
 
 
@@ -103,7 +133,7 @@ toc: false
 }
 
 .soco-joco-section-label {
-  color: #28A9A2;
+  color: #168A8F;
   font-size: .8rem;
   font-weight: 800;
   letter-spacing: .13em;
@@ -112,7 +142,7 @@ toc: false
 
 .soco-joco-intro h2 {
   margin: .65rem 0 0;
-  color: #062A46;
+  color: #082D4D;
   font-size: clamp(2.35rem, 4.5vw, 4.1rem);
   line-height: 1.02;
   letter-spacing: -.045em;
@@ -145,7 +175,7 @@ toc: false
 
 .soco-joco-explore-header h2 {
   margin: .5rem 0 0;
-  color: #062A46;
+  color: #082D4D;
   font-size: clamp(2rem, 4vw, 3.25rem);
   letter-spacing: -.04em;
 }
@@ -162,10 +192,10 @@ toc: false
   flex-direction: column;
   min-height: 285px;
   padding: 1.75rem;
-  border: 1px solid rgba(6,42,70,.11);
+  border: 1px solid #D9E8E8;
   border-radius: 16px;
   background: #fff;
-  box-shadow: 0 12px 35px rgba(6,42,70,.055);
+  box-shadow: 0 12px 35px rgba(8,45,77,.055);
   transition:
     transform .2s ease,
     box-shadow .2s ease,
@@ -179,19 +209,19 @@ toc: false
   left: 1.5rem;
   height: 3px;
   border-radius: 0 0 3px 3px;
-  background: linear-gradient(90deg, #28A9A2, #E97863);
+  background: linear-gradient(90deg, #28A9A2, #E25A4E);
   content: "";
 }
 
 .soco-joco-card:hover {
   transform: translateY(-3px);
   border-color: rgba(40,169,162,.28);
-  box-shadow: 0 18px 45px rgba(6,42,70,.09);
+  box-shadow: 0 18px 45px rgba(8,45,77,.09);
 }
 
 .soco-joco-card-number {
   margin-bottom: 2.25rem;
-  color: #28A9A2;
+  color: #168A8F;
   font-size: .75rem;
   font-weight: 800;
   letter-spacing: .12em;
@@ -199,7 +229,7 @@ toc: false
 
 .soco-joco-card h3 {
   margin: 0 0 .8rem;
-  color: #062A46;
+  color: #082D4D;
   font-size: 1.4rem;
   letter-spacing: -.02em;
 }
@@ -218,7 +248,7 @@ toc: false
 }
 
 .soco-joco-card-link:hover {
-  color: #28A9A2;
+  color: #168A8F;
 }
 
 
@@ -227,7 +257,7 @@ toc: false
    ============================================================ */
 
 .soco-joco-connection {
-  background: #f4f8f9;
+  background: #F3F8F8;
   border-top: 1px solid rgba(6,42,70,.07);
   border-bottom: 1px solid rgba(6,42,70,.07);
 }
@@ -244,7 +274,7 @@ toc: false
 
 .soco-joco-connection h2 {
   margin: .5rem 0 1rem;
-  color: #062A46;
+  color: #082D4D;
   font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1.05;
   letter-spacing: -.04em;
@@ -291,12 +321,24 @@ toc: false
 }
 
 @media (max-width: 700px) {
+  .soco-joco-hero {
+    margin-top: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .soco-joco-hero-inner,
   .soco-joco-intro,
   .soco-joco-explore,
   .soco-joco-connection-inner {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .soco-joco-hero-inner {
+    min-height: auto;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
   }
 }
 </style>
@@ -308,6 +350,7 @@ toc: false
 
 <div class="soco-joco-hero">
 <div class="soco-joco-hero-inner">
+<div class="soco-joco-hero-copy">
 
 <div class="soco-eyebrow">
 Open access • Skin cancer • Evidence • Perspective
@@ -324,10 +367,11 @@ An open-access journal dedicated to advancing the understanding and care of pati
 <div class="soco-joco-actions">
 
 [Explore the Journal](https://journalofcutaneousoncology.io){.btn .btn-primary}
-[Perspectives on the Science](https://journalofcutaneousoncology.io/perspectives-on-the-science.html){.btn .btn-outline-light}
+[Perspectives on the Science](https://journalofcutaneousoncology.io/perspectives-on-the-science.html){.btn .btn-outline-primary}
 
 </div>
 
+</div>
 </div>
 </div>
 
