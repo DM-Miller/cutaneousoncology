@@ -1,0 +1,803 @@
+---
+title: "Local Recurrence After Excision of Merkel Cell Carcinoma"
+pagetitle: "Local Recurrence After Excision of MCC | SoCO Journal Club"
+description: "Meeting recap from the June 12, 2026 Society of Cutaneous Oncology Journal Club discussing local recurrence after complete excision of Merkel cell carcinoma and the role of postoperative radiation."
+date: 2026-06-12
+author: "Society of Cutaneous Oncology"
+categories:
+  - 2026
+  - Journal Club
+  - Merkel Cell Carcinoma
+  - Radiation Therapy
+  - Local Recurrence
+tags:
+  - MCC
+  - Local Recurrence
+  - Postoperative Radiation
+  - Surgery
+  - Causal Inference
+image: card.svg
+page-layout: full
+title-block-style: none
+toc: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+<style>
+  :root {
+    --navy: #082D4D;
+    --teal: #28A9A2;
+    --coral: #E25A4E;
+    --ink: #31424E;
+    --muted: #6B747B;
+    --pale: #F3F8F8;
+    --line: #D9E8E8;
+  }
+
+  #title-block-header,
+  .quarto-title-block,
+  .quarto-title,
+  .quarto-title-meta {
+    display: none !important;
+  }
+
+  body { color: var(--ink); background: #fff; }
+  main.content { max-width: 1120px; margin: auto; padding-top: 0 !important; }
+  h1,h2,h3 { color: var(--navy); font-weight: 800; }
+
+  .hero {
+    margin: 2rem 0 2.4rem;
+    padding: 2.8rem 3rem;
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 88% 12%, rgba(40,169,162,.11), transparent 31%),
+      linear-gradient(135deg,#F3F8F8 0%,#FFFFFF 72%);
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgba(8,45,77,.07);
+  }
+
+  .kicker,.section-kicker {
+    color: var(--teal);
+    font-weight: 800;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    font-size: .8rem;
+  }
+
+  .hero h1 {
+    max-width: 900px;
+    font-size: clamp(2.7rem,5vw,4.1rem);
+    line-height: 1.02;
+    margin: .55rem 0 .8rem;
+    letter-spacing: -.04em;
+  }
+
+  .hero-copy {
+    font-size: 1.2rem;
+    max-width: 850px;
+    color: #56636D;
+    line-height: 1.65;
+  }
+
+  .accent {
+    width: 94px;
+    height: 5px;
+    border-radius: 4px;
+    background: linear-gradient(90deg,var(--teal) 0 68%,var(--coral) 68%);
+    margin-top: 1.4rem;
+  }
+
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    margin: 1.4rem 0 2rem;
+  }
+
+  .metric-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1.35rem 1.4rem;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(8,45,77,.05);
+  }
+
+  .metric-label {
+    display: block;
+    color: var(--muted);
+    font-size: .8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+  }
+
+  .metric-value {
+    display: block;
+    color: var(--navy);
+    font-size: 2.35rem;
+    font-weight: 850;
+    line-height: 1.05;
+    margin: .35rem 0;
+  }
+
+  .metric-note { color: var(--muted); font-size: .92rem; line-height: 1.45; }
+
+  .section-kicker { margin-top: 2.8rem; }
+
+  .section-intro {
+    font-size: 1.05rem;
+    color: #56636D;
+    max-width: 860px;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .paper-card {
+    max-width: 980px;
+    margin: 1.2rem auto 2rem;
+    padding: 1.75rem 2rem 1.7rem;
+    border-left: 7px solid var(--teal);
+    border-radius: 0 20px 20px 0;
+    background: linear-gradient(135deg,rgba(40,169,162,.085),rgba(8,45,77,.035));
+    box-shadow: 0 12px 30px rgba(8,45,77,.08);
+  }
+
+  .paper-eyebrow {
+    color: var(--teal);
+    font-size: .78rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: .65rem;
+  }
+
+  .paper-title {
+    color: var(--navy);
+    font-size: 1.62rem;
+    line-height: 1.22;
+    font-weight: 850;
+    letter-spacing: -.015em;
+    margin: 0 0 .85rem;
+  }
+
+  .paper-citation { color: #52616D; font-size: .98rem; line-height: 1.45; }
+
+  .link-row {
+    display:flex;
+    flex-wrap:wrap;
+    gap:.7rem;
+    margin-top:1.2rem;
+  }
+
+  .soco-link {
+    display:inline-flex;
+    padding:.58rem .9rem;
+    border-radius:999px;
+    background:var(--navy);
+    color:#fff !important;
+    text-decoration:none;
+    font-size:.88rem;
+    font-weight:750;
+  }
+
+  .soco-link.secondary {
+    background:#fff;
+    border:1px solid rgba(40,169,162,.42);
+    color:var(--navy) !important;
+  }
+
+  .question-card {
+    margin: 1.6rem 0 2rem;
+    padding: 1.55rem 1.7rem;
+    border-left: 5px solid var(--coral);
+    border-radius: 0 14px 14px 0;
+    background: linear-gradient(135deg,rgba(226,90,78,.055),rgba(40,169,162,.045));
+  }
+
+  .question-card strong {
+    display:block;
+    color:var(--navy);
+    font-size:1.2rem;
+    line-height:1.55;
+  }
+
+  .highlight-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:1rem;
+    margin:1.2rem 0 1.5rem;
+  }
+
+  .highlight-card {
+    border:1px solid #DCE8EB;
+    border-radius:16px;
+    padding:1.2rem 1.25rem;
+    background:#fff;
+    box-shadow:0 5px 18px rgba(8,45,77,.045);
+  }
+
+  .highlight-num {
+    color:var(--coral);
+    font-weight:900;
+    font-size:.8rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+
+  .highlight-card h3 {
+    color:var(--navy);
+    font-size:1.08rem;
+    margin:.25rem 0 .55rem;
+  }
+
+  .highlight-card p {
+    color:#405463;
+    font-size:.94rem;
+    line-height:1.5;
+    margin:0;
+  }
+
+  .discussion-quote {
+    margin:1.4rem 0;
+    padding:1.1rem 1.25rem;
+    border-left:5px solid var(--teal);
+    background:#EFF8F7;
+    border-radius:0 12px 12px 0;
+    color:var(--navy);
+    font-size:1.05rem;
+    font-weight:700;
+    line-height:1.45;
+  }
+
+  .caution-note {
+    background:#FFF8F0;
+    border-left:5px solid #E6A34A;
+    padding:1rem 1.15rem;
+    border-radius:0 12px 12px 0;
+    color:#59462E;
+    margin:1rem 0 1.5rem;
+    font-size:.92rem;
+    line-height:1.5;
+  }
+
+  .perspective-card {
+    margin:2rem 0;
+    padding:1.5rem 1.6rem;
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:
+      radial-gradient(circle at 88% 12%,rgba(40,169,162,.10),transparent 28%),
+      linear-gradient(135deg,#F7FBFB,#fff);
+    box-shadow:0 8px 24px rgba(8,45,77,.05);
+  }
+
+  .perspective-card h3 { margin:.25rem 0 .65rem; }
+  .perspective-card p { color:#52616D; line-height:1.65; margin-bottom:0; }
+
+
+  .survey-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1rem;
+    margin:1.2rem 0 1.5rem;
+  }
+
+  .survey-card {
+    padding:1.25rem 1.3rem;
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 5px 18px rgba(8,45,77,.045);
+  }
+
+  .survey-value {
+    display:block;
+    color:var(--navy);
+    font-size:2rem;
+    font-weight:850;
+    line-height:1.05;
+    margin-bottom:.4rem;
+  }
+
+  .survey-label {
+    display:block;
+    color:var(--teal);
+    font-size:.76rem;
+    font-weight:850;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:.45rem;
+  }
+
+  .survey-copy {
+    color:#52616D;
+    font-size:.92rem;
+    line-height:1.5;
+  }
+
+  .survey-note {
+    margin:1.2rem 0 2rem;
+    padding:1.15rem 1.25rem;
+    border-left:5px solid var(--teal);
+    border-radius:0 12px 12px 0;
+    background:#EFF8F7;
+    color:var(--navy);
+    line-height:1.6;
+  }
+
+  .footer-card {
+    margin:3rem 0 1rem;
+    padding:1.8rem 2rem;
+    background:var(--navy);
+    color:#fff;
+    border-radius:20px;
+  }
+
+  .footer-card h2 { color:#fff; margin-top:0; }
+  .footer-card p { margin-bottom:0; color:#EAF2F5; }
+
+  @media(max-width:760px){
+    .metric-grid,.highlight-grid,.survey-grid{grid-template-columns:1fr;}
+    .hero{padding:2rem 1.5rem;}
+    .hero h1{font-size:2.45rem;}
+    .paper-card{padding:1.35rem 1.25rem;}
+  }
+</style>
+
+```{r}
+#| label: setup-attendance
+
+# -------------------------------------------------------------------------
+# Resolve the meeting folder robustly.
+#
+# During Quarto render:
+#   knitr::current_input() points to index.qmd.
+#
+# During interactive testing in RStudio:
+#   use the active document path.
+#
+# If meeting_dir already exists and points to a real folder, keep it.
+# -------------------------------------------------------------------------
+
+resolve_meeting_dir <- function() {
+
+  # 1. Reuse an already-valid meeting_dir, if present.
+  if (
+    exists("meeting_dir", inherits = TRUE) &&
+    is.character(meeting_dir) &&
+    length(meeting_dir) == 1 &&
+    nzchar(meeting_dir) &&
+    dir.exists(meeting_dir)
+  ) {
+    return(
+      normalizePath(
+        meeting_dir,
+        winslash = "/",
+        mustWork = TRUE
+      )
+    )
+  }
+
+  # 2. During a Quarto / knitr render, derive from index.qmd.
+  current_input <- tryCatch(
+    knitr::current_input(dir = TRUE),
+    error = function(e) NULL
+  )
+
+  if (
+    !is.null(current_input) &&
+    length(current_input) == 1 &&
+    !is.na(current_input) &&
+    nzchar(current_input) &&
+    file.exists(current_input)
+  ) {
+    return(
+      dirname(
+        normalizePath(
+          current_input,
+          winslash = "/",
+          mustWork = TRUE
+        )
+      )
+    )
+  }
+
+  # 3. During interactive RStudio testing, use the active document.
+  if (
+    interactive() &&
+    requireNamespace("rstudioapi", quietly = TRUE)
+  ) {
+
+    ctx <- tryCatch(
+      rstudioapi::getSourceEditorContext(),
+      error = function(e) NULL
+    )
+
+    if (
+      !is.null(ctx) &&
+      !is.null(ctx$path) &&
+      nzchar(ctx$path) &&
+      file.exists(ctx$path)
+    ) {
+
+      active_path <- normalizePath(
+        ctx$path,
+        winslash = "/",
+        mustWork = TRUE
+      )
+
+      active_dir <- dirname(active_path)
+
+      # If the active document is index.qmd, this is already the meeting dir.
+      if (basename(active_path) == "index.qmd") {
+        return(active_dir)
+      }
+
+      # If the active file lives in scripts/, move up one level.
+      if (basename(active_dir) == "scripts") {
+        return(dirname(active_dir))
+      }
+    }
+  }
+
+  stop(
+    paste0(
+      "Could not determine the Journal Club meeting directory.\n",
+      "Render index.qmd with Quarto, or open index.qmd / process_attendance.R ",
+      "in RStudio before running this chunk interactively."
+    )
+  )
+}
+
+meeting_dir <- resolve_meeting_dir()
+
+message("Meeting directory: ", meeting_dir)
+
+# Process the raw Teams export.
+source(
+  file.path(
+    meeting_dir,
+    "scripts",
+    "process_attendance.R"
+  ),
+  local = TRUE
+)
+
+attendance_dir <- file.path(
+  meeting_dir,
+  "files",
+  "meeting recap-attendance"
+)
+
+# Read the cleaned outputs generated above.
+people <- readr::read_csv(
+  file.path(
+    attendance_dir,
+    "attendance_clean.csv"
+  ),
+  show_col_types = FALSE
+)
+
+headline <- readr::read_csv(
+  file.path(
+    attendance_dir,
+    "attendance_summary.csv"
+  ),
+  show_col_types = FALSE
+)
+```
+
+:::: {.hero}
+
+::: {.kicker}
+SoCO Journal Club · June 12, 2026
+:::
+
+# Local recurrence after excision of Merkel cell carcinoma
+
+::: {.hero-copy}
+A discussion about what the baseline risk of true primary-site local recurrence actually is, how postoperative radiation changes that risk, and how much certainty we need before exposing every patient to additional treatment.
+:::
+
+::: {.accent}
+:::
+
+::::
+
+::: {.section-kicker}
+Meeting pulse
+:::
+
+## A large MCC group — and a long discussion
+
+::: {.metric-grid}
+
+::: {.metric-card}
+[People who joined]{.metric-label}
+
+[`r headline$people`]{.metric-value}
+
+[Unique cleaned people in the Teams attendance record]{.metric-note}
+:::
+
+::: {.metric-card}
+[Median time together]{.metric-label}
+
+[`r round(headline$median_minutes)` min]{.metric-value}
+
+[Half the group stayed at least this long]{.metric-note}
+:::
+
+::: {.metric-card}
+[Stayed at least an hour]{.metric-label}
+
+[`r scales::percent(headline$pct_60min_plus, accuracy = 1)`]{.metric-value}
+
+[Joined for at least 60 minutes]{.metric-note}
+:::
+
+:::
+
+::: {.section-kicker}
+Participation
+:::
+
+## A few ways people participated
+
+::: {.section-intro}
+Teams captures only a few coarse signals, but they give a useful sense of how actively the group engaged with a nearly two-hour discussion.
+:::
+
+::: {.metric-grid}
+
+::: {.metric-card}
+[Camera on]{.metric-label}
+
+[`r scales::percent(headline$pct_camera, accuracy = 1)`]{.metric-value}
+
+[Had the camera on at least once]{.metric-note}
+:::
+
+::: {.metric-card}
+[Unmuted]{.metric-label}
+
+[`r scales::percent(headline$pct_unmute, accuracy = 1)`]{.metric-value}
+
+[Unmuted at least once during the meeting]{.metric-note}
+:::
+
+::: {.metric-card}
+[Raised a hand]{.metric-label}
+
+[`r scales::percent(headline$pct_hand_raise, accuracy = 1)`]{.metric-value}
+
+[Used the Teams hand-raise signal]{.metric-note}
+:::
+
+:::
+
+::: {.section-kicker}
+The paper we discussed
+:::
+
+## Kavanagh et al. — local recurrence after complete excision
+
+:::: {.paper-card}
+
+::: {.paper-eyebrow}
+Primary article · Annals of Surgical Oncology
+:::
+
+::: {.paper-title}
+Local Recurrence Following Complete Surgical Excision of Primary Merkel Cell Carcinoma
+:::
+
+::: {.paper-citation}
+**Kavanagh FG, et al.** *Ann Surg Oncol.* 2026;33(7):6681–6690.  
+doi: 10.1245/s10434-025-18670-2
+:::
+
+::: {.link-row}
+[PubMed](https://pubmed.ncbi.nlm.nih.gov/41191307/){.soco-link}
+[DOI](https://doi.org/10.1245/s10434-025-18670-2){.soco-link .secondary}
+:::
+
+::::
+
+::: {.question-card}
+**The question beneath the paper:** After a negative-margin excision, how much risk of true primary-site local recurrence remains — and when is postoperative radiation worth using to prevent it?
+:::
+
+The study examined 447 patients with clinically localized MCC treated at Memorial Sloan Kettering Cancer Center. Among 393 patients treated with negative-margin surgery alone, seven local recurrences occurred within the first year, corresponding to an estimated **1-year local recurrence rate of 1.8%**. The rarity of the event also meant that conventional risk-factor modeling was inherently difficult.
+
+::: {.caution-note}
+**An important interpretive issue:** this was a natural-history study, not a randomized comparison of surgery versus postoperative radiation. Patients selected for radiation differed from those treated with surgery alone, so the study is highly informative about observed local recurrence after surgery but cannot by itself estimate the causal effect of radiation.
+:::
+
+
+::: {.section-kicker}
+Before the discussion
+:::
+
+## The survey showed why this question is still unsettled
+
+::: {.section-intro}
+The Journal Club survey, later incorporated into the SoCO *Perspectives on the Science* article, made the practice variation visible before the group debated the paper. Clinicians were not starting from a shared estimate of baseline risk or a shared threshold for postoperative radiation.
+:::
+
+::: {.survey-grid}
+
+::: {.survey-card}
+[6–10%]{.survey-value}
+[Most common baseline estimate]{.survey-label}
+
+::: {.survey-copy}
+Before the session, the largest group of respondents estimated local recurrence after margin-negative excision alone at 6–10%, even though estimates ranged from below 2% to above 10%.
+:::
+:::
+
+::: {.survey-card}
+[44%]{.survey-value}
+[Individualized RT]{.survey-label}
+
+::: {.survey-copy}
+The largest group reported individualizing postoperative RT according to patient- and tumor-specific risk factors; 20% routinely recommended RT for nearly all patients and 20% rarely recommended it.
+:::
+:::
+
+::: {.survey-card}
+[Prospective data]{.survey-value}
+[Most likely to change practice]{.survey-label}
+
+::: {.survey-copy}
+A prospective registry or clinical trial was the evidence type respondents most often selected as most likely to change current practice.
+:::
+:::
+
+:::
+
+::: {.survey-note}
+The survey also showed that disagreement extends beyond whether to radiate. Respondents varied in preferred dose and fractionation, and the clinical scenarios revealed broad agreement at the lowest- and highest-risk extremes but substantially more variation in intermediate and preference-sensitive situations.
+:::
+
+::: {.section-kicker}
+Discussion highlights
+:::
+
+## What stuck with us from the conversation
+
+::: {.section-intro}
+The debate quickly moved beyond the point estimate. The group spent most of its time on what constitutes a true local recurrence, whether existing “high-risk” features actually predict that event, how salvage changes the clinical meaning of recurrence, and what kind of study could finally move the field.
+:::
+
+::: {.highlight-grid}
+
+::: {.highlight-card}
+[01 · Define the event]{.highlight-num}
+
+### “High risk” is not necessarily high risk for local recurrence
+
+Dan Coit emphasized that many features used to guide postoperative radiation were originally linked to nodal disease, recurrence broadly, disease-specific survival, or overall survival — not specifically to primary-site local recurrence. The endpoint has to match the treatment question.
+:::
+
+::: {.highlight-card}
+[02 · The baseline risk]{.highlight-num}
+
+### The number everyone needs — and still disagrees about
+
+The MSK cohort places observed 1-year local recurrence after surgery alone at 1.8%. But the group debated whether treatment selection means the untreated risk in a broader population could be meaningfully higher. The argument was not simply about statistics; the baseline risk drives the absolute benefit radiation can plausibly provide.
+:::
+
+::: {.highlight-card}
+[03 · Salvage matters]{.highlight-num}
+
+### Preventing an event depends on what happens if the event occurs
+
+Dan pushed the group to consider local recurrence together with salvage. If true local recurrence is uncommon and usually controllable with surgery and/or radiation after it occurs, the value of routinely treating everyone up front changes substantially.
+:::
+
+::: {.highlight-card}
+[04 · Treatment burden]{.highlight-num}
+
+### Neither surgery nor radiation is one thing
+
+Paul Nghiem emphasized that wider surgery can carry meaningful morbidity, particularly in the head and neck, while contemporary radiation can sometimes be delivered with substantially less burden than historical courses. The real comparison is not “treatment versus no treatment,” but the absolute benefits and harms of specific strategies.
+:::
+
+::: {.highlight-card}
+[05 · Equipoise]{.highlight-num}
+
+### We may be radiating too many patients — but we still do not know whom to omit
+
+Vern Sondak captured the tension well: he worried that current practice may overtreat many patients, yet remained uncertain about which patients can safely avoid radiation. That uncertainty is exactly what makes prospective evidence generation necessary.
+:::
+
+::: {.highlight-card}
+[06 · The next study]{.highlight-num}
+
+### Better data need a better inferential framework
+
+The discussion moved toward multicenter data, explicit causal assumptions, absolute risk estimation, and Bayesian approaches that can represent uncertainty directly. In a rare disease with a rare endpoint, a future study has to ask a decision-relevant question rather than simply search for statistically significant predictors.
+:::
+
+:::
+
+::: {.discussion-quote}
+The practical question is not simply whether radiation reduces local recurrence. It is: **for this patient, how much absolute local-recurrence risk is being prevented, what happens if recurrence occurs, and what burden are we accepting to prevent it?**
+:::
+
+### Where the discussion landed
+
+The meeting did not end with consensus — and that was useful.
+
+The Kavanagh study provides unusually direct evidence that true primary-site local recurrence can be uncommon after complete negative-margin excision. At the same time, selection into postoperative radiation, variation in surgical and radiation strategies, and disagreement about the baseline untreated risk prevent the study from resolving the causal treatment question on its own.
+
+The group converged more clearly on what the next evidence should look like: **better-defined endpoints, curated multicenter data, explicit attention to salvage and treatment burden, and analyses that estimate absolute treatment benefit under uncertainty.**
+
+::: {.section-kicker}
+From Journal Club to Perspectives
+:::
+
+## The discussion became a paper
+
+::: {.perspective-card}
+
+::: {.paper-eyebrow}
+Perspectives on the Science · Journal of Cutaneous Oncology
+:::
+
+### Local Recurrence After Excision of Merkel Cell Carcinoma: What Do We Actually Know, and What Should We Do Next?
+
+The Journal Club discussion — together with the structured survey of participating clinicians — ultimately became a multidisciplinary *Perspectives on the Science* article. The published piece uses those survey results to document variation in baseline risk estimates, radiation practice, dose and fractionation, and responses to specific clinical scenarios, then expands the debate to how the field should generate better evidence.
+
+::: {.link-row}
+[Read the JoCO Perspective](https://journalofcutaneousoncology.io/perspectives/vol_4_issue_2/local_recurrence_after_excision_mcc/){.soco-link}
+:::
+
+:::
+
+::: {.section-kicker}
+Our community
+:::
+
+## Who joined us?
+
+::: {.section-intro}
+The cleaned Teams attendance file is retained with the meeting materials. The table below is generated directly from that record, with duplicate display names reconciled and automated note-taking accounts removed.
+:::
+
+```{r}
+#| label: attendance-table
+#| results: asis
+
+roster <- people |>
+  transmute(
+    Name,
+    `Minutes in meeting` = round(duration_min),
+    `Camera on` = if_else(any_camera, "Yes", ""),
+    `Unmuted` = if_else(any_unmute, "Yes", ""),
+    `Raised hand` = if_else(any_hand_raise, "Yes", "")
+  )
+
+knitr::kable(
+  roster,
+  align = c("l", "r", "c", "c", "c")
+)
+```
+
+::: {.footer-card}
+
+## Thanks for joining us.
+
+This was exactly the kind of Journal Club the community is meant to create: a focused paper review that opened into a substantive disagreement about evidence, clinical judgment, treatment burden, and what study the field should do next.
+
+:::
+
+::: {.link-row}
+[Back to Journal Club](../../jc.qmd){.soco-link}
+[Read the JoCO Perspective](https://journalofcutaneousoncology.io/perspectives/vol_4_issue_2/local_recurrence_after_excision_mcc/){.soco-link .secondary}
+[PubMed](https://pubmed.ncbi.nlm.nih.gov/41191307/){.soco-link .secondary}
+:::

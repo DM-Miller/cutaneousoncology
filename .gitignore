@@ -8,3 +8,4 @@
 .positai
 
 **/*.quarto_ipynb
+*.mp4
