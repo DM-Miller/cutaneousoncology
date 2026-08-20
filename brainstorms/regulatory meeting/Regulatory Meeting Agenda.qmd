@@ -1,0 +1,706 @@
+---
+title: ""
+pagetitle: "Inside the Review Room | Society of Cutaneous Oncology"
+format:
+  html:
+    page-layout: full
+    toc: false
+    smooth-scroll: true
+    embed-resources: true
+execute:
+  echo: false
+  warning: false
+---
+
+```{=html}
+<style type="text/css">:root {
+--soco-navy: #041b33;
+--soco-blue: #06436e;
+--soco-deep-blue: #0f2a59;
+--soco-teal: #0f7f86;
+--soco-coral: #ff3b3f;
+--soco-ink: #18293d;
+--soco-muted: #5c6f82;
+--soco-surface: #f6fafb;
+--soco-line: #dbe8ee;
+--soco-white: #ffffff;
+}
+body {
+background: var(--soco-surface);
+color: var(--soco-ink);
+font-family: Montserrat, "Segoe UI", Arial, sans-serif;
+}
+
+/* Keep this page isolated from the main SoCO site theme. */
+.soco-reg-hero,
+.soco-reg-hero *,
+.soco-reg-shell,
+.soco-reg-shell * {
+box-sizing: border-box;
+}
+
+.soco-reg-hero-inner {
+background: transparent !important;
+border: 0 !important;
+box-shadow: none !important;
+padding: 0 !important;
+}
+
+.soco-reg-hero p,
+.soco-reg-shell p {
+max-width: none;
+}
+
+.soco-reg-hero p:first-child,
+.soco-reg-shell p:first-child {
+margin-top: 0;
+}
+#title-block-header,
+.quarto-title-block,
+.quarto-title,
+.quarto-title-meta {
+display: none !important;
+}
+main.content {
+padding-top: 0 !important;
+}
+.soco-reg-hero {
+position: relative;
+overflow: hidden;
+padding: 3.9rem 2.2rem 4.2rem;
+margin: 0 0 2.2rem;
+border-radius: 0 0 1.6rem 1.6rem;
+background:
+radial-gradient(circle at 84% 18%, rgba(15,127,134,.30), transparent 29%),
+radial-gradient(circle at 14% 24%, rgba(255,59,63,.12), transparent 30%),
+linear-gradient(135deg, var(--soco-navy) 0%, var(--soco-blue) 58%, #0b6570 100%);
+color: var(--soco-white);
+}
+.soco-reg-hero::after {
+content: "";
+position: absolute;
+width: 420px;
+height: 420px;
+top: -120px;
+right: -80px;
+opacity: .18;
+background-image: radial-gradient(circle, rgba(255,255,255,.82) 0 1.4px, transparent 2px);
+background-size: 30px 30px;
+mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+-webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+pointer-events: none;
+}
+.soco-reg-hero-inner,
+.soco-reg-shell {
+position: relative;
+z-index: 1;
+width: min(1120px, 92vw);
+margin: 0 auto;
+}
+.soco-reg-eyebrow {
+margin-bottom: .8rem;
+color: #a9e3dd !important;
+font-size: .78rem;
+font-weight: 800;
+letter-spacing: .14em;
+text-transform: uppercase;
+}
+.soco-reg-eyebrow p {
+margin: 0 !important;
+color: #a9e3dd !important;
+}
+.soco-reg-hero h1 {
+margin: 0 !important;
+max-width: 900px;
+padding: 0 !important;
+border: 0 !important;
+background: transparent !important;
+color: #ffffff !important;
+font-size: clamp(2.35rem, 5vw, 4.15rem) !important;
+font-weight: 850 !important;
+line-height: 1.02 !important;
+letter-spacing: -.035em;
+text-shadow: none !important;
+}
+.soco-reg-subtitle {
+max-width: 850px;
+margin-top: 1.15rem;
+color: #e7f1f4 !important;
+font-size: 1.12rem;
+line-height: 1.58;
+}
+.soco-reg-subtitle p,
+.soco-reg-subtitle strong {
+margin: 0 !important;
+color: #e7f1f4 !important;
+}
+.soco-reg-tags {
+margin-top: 1.45rem;
+}
+.soco-reg-tags p {
+display: flex;
+flex-wrap: wrap;
+gap: .55rem;
+margin: 0 !important;
+}
+.soco-reg-tag {
+display: inline-flex;
+padding: .42rem .75rem;
+border: 1px solid rgba(255,255,255,.28);
+border-radius: 999px;
+background: rgba(255,255,255,.08);
+color: #fff !important;
+font-size: .78rem;
+font-weight: 700;
+}
+.soco-reg-shell {
+padding-bottom: 4rem;
+}
+.soco-reg-card {
+margin: 1.4rem 0 2rem;
+padding: 1.7rem 1.85rem;
+border: 1px solid var(--soco-line);
+border-radius: 1rem;
+background: #fff;
+box-shadow: 0 8px 24px rgba(4,27,51,.055);
+}
+.soco-reg-card h2,
+.soco-reg-card h3 {
+color: var(--soco-navy);
+}
+.soco-reg-card h2 {
+margin-top: 0;
+padding-bottom: .55rem;
+border-bottom: 3px solid var(--soco-coral);
+}
+.soco-reg-callout {
+margin: 1.5rem 0;
+padding: 1.25rem 1.45rem;
+border-left: 5px solid var(--soco-teal);
+border-radius: .8rem;
+background: linear-gradient(135deg, rgba(15,127,134,.06), rgba(4,67,110,.035));
+color: var(--soco-navy);
+}
+.soco-reg-callout strong {
+color: var(--soco-blue);
+}
+.soco-reg-grid-2,
+.soco-reg-grid-3 {
+display: grid;
+gap: 1rem;
+margin: 1.25rem 0;
+}
+.soco-reg-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.soco-reg-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.soco-reg-mini {
+padding: 1.2rem 1.25rem;
+border: 1px solid var(--soco-line);
+border-radius: .9rem;
+background: #fff;
+}
+.soco-reg-mini-label {
+margin-bottom: .35rem;
+color: var(--soco-teal);
+font-size: .72rem;
+font-weight: 850;
+letter-spacing: .09em;
+text-transform: uppercase;
+}
+.soco-reg-mini-value {
+color: var(--soco-navy);
+font-size: 1.03rem;
+font-weight: 800;
+line-height: 1.35;
+}
+.soco-reg-mini-label p,
+.soco-reg-mini-value p {
+margin: 0 !important;
+}
+.soco-reg-act {
+margin: 1.8rem 0 1rem;
+padding: 1rem 1.2rem;
+border-radius: .9rem;
+background: var(--soco-navy);
+color: #fff !important;
+}
+.soco-reg-act p,
+.soco-reg-act strong {
+margin: 0 !important;
+color: #fff !important;
+}
+.soco-reg-act small {
+display: block;
+margin-bottom: .2rem;
+color: #9edfd9;
+font-weight: 800;
+letter-spacing: .08em;
+text-transform: uppercase;
+}
+.soco-reg-act strong {
+font-size: 1.2rem;
+}
+.soco-reg-question-group {
+margin: 1.35rem 0;
+padding: 1.2rem 1.35rem;
+border: 1px solid var(--soco-line);
+border-radius: .9rem;
+background: #fff;
+}
+.soco-reg-question-group h3 {
+margin-top: 0;
+margin-bottom: .7rem;
+color: var(--soco-blue);
+}
+.soco-reg-question-group ul {
+margin-bottom: 0;
+}
+.soco-reg-question-group li {
+margin: .42rem 0;
+line-height: 1.55;
+}
+.soco-reg-time {
+display: inline-block;
+min-width: 4.8rem;
+margin-right: .45rem;
+color: var(--soco-teal);
+font-weight: 850;
+}
+.soco-reg-date-table {
+width: 100%;
+margin: 1rem 0 0;
+border-collapse: separate;
+border-spacing: 0;
+overflow: hidden;
+border: 1px solid var(--soco-line);
+border-radius: .9rem;
+background: #fff;
+}
+.soco-reg-date-table th {
+padding: .8rem 1rem;
+background: var(--soco-navy);
+color: #fff;
+text-align: left;
+font-size: .78rem;
+letter-spacing: .06em;
+text-transform: uppercase;
+}
+.soco-reg-date-table td {
+padding: .9rem 1rem;
+border-top: 1px solid var(--soco-line);
+vertical-align: top;
+}
+.soco-reg-date-table tr:first-child td { border-top: 0; }
+.soco-reg-date-table td:first-child { color: var(--soco-navy); font-weight: 800; }
+.soco-reg-quote {
+margin: 1.8rem 0;
+padding: 1.5rem 1.65rem;
+border-radius: .95rem;
+background: var(--soco-deep-blue);
+color: #fff !important;
+font-size: 1.08rem;
+font-weight: 700;
+line-height: 1.55;
+}
+.soco-reg-quote p {
+margin: 0 !important;
+color: #fff !important;
+}
+.soco-reg-note {
+color: var(--soco-muted);
+font-size: .9rem;
+line-height: 1.6;
+}
+@media (max-width: 800px) {
+.soco-reg-grid-2,
+.soco-reg-grid-3 { grid-template-columns: 1fr; }
+.soco-reg-hero { padding: 3.5rem 1.25rem 3.8rem; }
+.soco-reg-card { padding: 1.3rem 1.2rem; }
+}
+</style>
+
+<div class="soco-reg-hero">
+<div class="soco-reg-hero-inner">
+<div class="soco-reg-eyebrow">
+<p>Society of Cutaneous Oncology · Proposed Fall 2026 Special
+Session</p>
+</div>
+<h1 id="inside-the-review-room">Inside the Review Room</h1>
+<div class="soco-reg-subtitle">
+<p><strong>From patient-level data to FDA regulatory
+decision-making</strong> — a 90-minute moderated conversation about how
+oncology evidence is reviewed, reconstructed, debated, and ultimately
+translated into regulatory action.</p>
+</div>
+<div class="soco-reg-tags">
+<p><span class="soco-reg-tag">Regulatory medicine</span> <span class="soco-reg-tag">Patient-level data</span> <span class="soco-reg-tag">Benefit–risk</span> <span class="soco-reg-tag">Advisory
+committees</span> <span class="soco-reg-tag">Moderated discussion</span></p>
+</div>
+</div>
+</div>
+<div class="soco-reg-shell">
+<section id="the-idea" class="soco-reg-card">
+<h2>The idea</h2>
+<p>Recent regulatory discussions in cutaneous oncology have highlighted
+an important gap between how clinicians encounter clinical-trial
+evidence and how FDA reviewers evaluate the same evidence. A publication
+may present a clean summary estimate; a regulatory review may involve
+reconstruction of patient-level efficacy and safety data, adjudication
+of discrepancies, sensitivity analyses, multidisciplinary debate, and a
+different evidentiary question altogether.</p>
+<p>The proposed session would <strong>not be a retrospective debate
+about a particular application</strong>. The RP1 experience is better
+used as the prompt for a broader educational question:</p>
+<div class="soco-reg-quote">
+<p>What actually happens inside FDA between receipt of an oncology
+application and a regulatory decision — and when does an advisory
+committee become part of that process?</p>
+</div>
+<p>The goal would be to make the review process visible to practicing
+clinicians and investigators, with particular attention to the parts
+that are usually hidden from view: <strong>patient-level data review,
+independent analyses, multidisciplinary deliberation, and the role of
+advisory committees.</strong></p>
+</section>
+<div class="soco-reg-grid-3">
+<div class="soco-reg-mini">
+<div class="soco-reg-mini-label">
+<p>Format</p>
+</div>
+<div class="soco-reg-mini-value">
+<p>Podcast-style moderated conversation</p>
+</div>
+</div>
+<div class="soco-reg-mini">
+<div class="soco-reg-mini-label">
+<p>Length</p>
+</div>
+<div class="soco-reg-mini-value">
+<p>90 minutes</p>
+</div>
+</div>
+<div class="soco-reg-mini">
+<div class="soco-reg-mini-label">
+<p>Proposed guests</p>
+</div>
+<div class="soco-reg-mini-value">
+<p>Catherine + Sandeep, with David moderating</p>
+</div>
+</div>
+</div>
+<section id="proposed-format" class="soco-reg-card">
+<h2>Proposed format</h2>
+<p>The emphasis would be <strong>conversation rather than formal
+presentations</strong>. One or two simple orienting slides could be
+useful — for example, a schematic of the review pathway and a schematic
+of what an application contains — but the session would otherwise
+proceed through moderator questions and audience discussion.</p>
+<p>Questions would be shared in advance so the conversation can stay
+focused on <strong>process and general principles</strong>, without
+asking the speakers to discuss confidential deliberations or re-litigate
+a specific product decision.</p>
+</section>
+<section id="minute-agenda" class="soco-reg-card">
+<h2>90-minute agenda</h2>
+<div class="soco-reg-act">
+<p><small>Act I · approximately 50 minutes</small> <strong>Inside the
+FDA Review Room</strong></p>
+</div>
+<p><strong><span class="soco-reg-time">0–5 min</span> Opening and
+framing</strong><br />
+Why this matters to clinicians: the difference between reading a paper
+and reviewing an application.</p>
+<p><strong><span class="soco-reg-time">5–15 min</span> What actually arrives at
+FDA?</strong><br />
+What an oncology application contains, what is available at the patient
+level, and how regulatory evidence differs from the final
+manuscript.</p>
+<p><strong><span class="soco-reg-time">15–28 min</span> Who reviews the
+application?</strong><br />
+How the work moves from individual discipline review through
+multidisciplinary discussion, supervisory review, office-level
+deliberation, and Center-level decision-making.</p>
+<p><strong><span class="soco-reg-time">28–45 min</span> Reconstructing the
+evidence</strong><br />
+The centerpiece of the session: how efficacy and safety are
+independently interrogated, how reviewers work with patient-level data,
+and what happens when FDA and sponsor analyses do not align.</p>
+<p><strong><span class="soco-reg-time">45–55 min</span> From analysis to
+regulatory action</strong><br />
+How unresolved questions become information requests, additional
+analyses, labeling discussions, benefit–risk judgments, approval, or a
+complete response.</p>
+<div class="soco-reg-act">
+<p><small>Act II · approximately 25 minutes</small> <strong>When the
+Review Goes Public: Advisory Committees</strong></p>
+</div>
+<p><strong><span class="soco-reg-time">55–65 min</span> Why convene an advisory
+committee?</strong><br />
+Who initiates the process, what kinds of uncertainty lead to outside
+consultation, and how FDA decides what it wants the committee to
+address.</p>
+<p><strong><span class="soco-reg-time">65–77 min</span> Inside the
+meeting</strong><br />
+How questions are built, discussion versus voting questions, what the
+review team listens for, and how the public meeting fits into an already
+mature internal review.</p>
+<p><strong><span class="soco-reg-time">77–80 min</span> The morning
+after</strong><br />
+How the committee’s advice is interpreted and incorporated into the
+ongoing regulatory process.</p>
+<p><strong><span class="soco-reg-time">80–90 min</span> Audience discussion +
+closing question</strong><br />
+How should clinicians interpret an FDA review, a product label, and a
+peer-reviewed manuscript as different windows onto the same trial?</p>
+</section>
+<section id="moderator-question-bank" class="soco-reg-card">
+<h2>Moderator question bank</h2>
+<h3 id="act-i-inside-the-fda-review-room">Act I — Inside the FDA Review
+Room</h3>
+<section id="what-actually-comes-through-the-door" class="soco-reg-question-group">
+<h3>1 · What actually comes through the door?</h3>
+<ul>
+<li>When a sponsor submits a BLA or NDA, what does the clinical review
+team actually receive?</li>
+<li>At the patient level, what information is available beyond the
+sponsor’s tables and figures?</li>
+<li>How standardized are the submitted datasets, and how much work is
+required before a reviewer can interrogate them?</li>
+<li>What can a reviewer inspect when an individual patient looks unusual
+— dates, narratives, adverse events, concomitant therapy, imaging
+assessments, protocol deviations, or other source-level
+information?</li>
+<li>How different is the evidence package available to FDA from the
+evidence package that clinicians eventually encounter in a
+publication?</li>
+</ul>
+</section>
+<section id="who-actually-reviews-the-data" class="soco-reg-question-group">
+<h3>2 · Who actually reviews the data?</h3>
+<ul>
+<li>Who is responsible for the first-pass clinical review of efficacy
+and safety?</li>
+<li>What is the division of labor between clinical reviewers,
+statisticians, pharmacologists, safety reviewers, regulatory project
+managers, and other disciplines?</li>
+<li>Who is actually writing code or reproducing analyses, and who is
+looking at individual patients?</li>
+<li>How often do clinical and statistical reviewers arrive at different
+interpretations of the same signal?</li>
+<li>How are disagreements handled within the multidisciplinary review
+team?</li>
+<li>At what points does the review move from an individual reviewer to
+team-level, office-level, and Center-level discussion?</li>
+</ul>
+</section>
+<section id="what-does-fda-independently-reviewed-the-data-actually-mean" class="soco-reg-question-group">
+<h3>3 · What does “FDA independently reviewed the data” actually
+mean?</h3>
+<ul>
+<li>If a sponsor reports an objective response rate, progression-free
+survival estimate, or safety event rate, how independently does FDA
+reproduce that number?</li>
+<li>Does FDA effectively construct its own analytic version of the trial
+from the submitted patient-level data?</li>
+<li>Which analyses are routinely reproduced, and which are generally
+accepted from the sponsor unless a concern emerges?</li>
+<li>How are evaluability, missing assessments, censoring, progression
+dates, response confirmation, protocol deviations, and analysis
+populations handled?</li>
+<li>What happens when the sponsor’s estimate and FDA’s estimate
+differ?</li>
+<li>How large or consequential does a discrepancy need to be before it
+changes the regulatory conversation?</li>
+<li>Is the key issue usually the numerical difference itself, or what
+the discrepancy reveals about uncertainty in the underlying
+evidence?</li>
+</ul>
+</section>
+<section id="following-one-patient-down-the-rabbit-hole" class="soco-reg-question-group">
+<h3>4 · Following one patient down the rabbit hole</h3>
+<ul>
+<li>What makes a reviewer stop at an individual patient and investigate
+more deeply?</li>
+<li>How much manual patient-level review occurs in a modern
+application?</li>
+<li>Can a single patient materially change the interpretation of an
+efficacy endpoint or a safety signal?</li>
+<li>How are ambiguous cases adjudicated across clinical and statistical
+reviewers?</li>
+<li>When FDA asks the sponsor for clarification, what does that exchange
+look like in practice?</li>
+<li>How often does a patient-level discrepancy lead to a broader
+re-analysis of the dataset?</li>
+</ul>
+</section>
+<section id="from-analysis-to-a-regulatory-judgment" class="soco-reg-question-group">
+<h3>5 · From analysis to a regulatory judgment</h3>
+<ul>
+<li>At what point does the review move from “What does the dataset
+show?” to “Is the benefit–risk profile sufficient for approval?”</li>
+<li>How is uncertainty carried into that benefit–risk judgment?</li>
+<li>How are different disciplinary reviews synthesized into a single
+regulatory position?</li>
+<li>What kinds of unresolved issues can be addressed through labeling,
+postmarketing commitments, or additional analyses — and what kinds of
+issues are fundamental enough to prevent approval?</li>
+<li>How does a complete response letter fit into the broader review
+process?</li>
+<li>When an application returns after a complete response, what is
+effectively reopened and what prior work carries forward?</li>
+</ul>
+</section>
+<h3 id="act-ii-when-the-review-goes-public-advisory-committees">Act II —
+When the Review Goes Public: Advisory Committees</h3>
+<section id="why-does-an-application-go-to-an-advisory-committee" class="soco-reg-question-group">
+<h3>6 · Why does an application go to an advisory committee?</h3>
+<ul>
+<li>Who first raises the possibility of an advisory committee, and who
+ultimately decides to convene one?</li>
+<li>At what stage of the review is that decision usually made?</li>
+<li>What kinds of problems are best suited to outside expert advice:
+scientific uncertainty, disagreement about benefit–risk, novel
+technology, precedent-setting questions, or something else?</li>
+<li>Does referral to an advisory committee imply that the internal
+review team is divided, or can it occur even when the team has a fairly
+developed view?</li>
+<li>What does FDA hope to learn from an advisory committee that it
+cannot obtain from its internal review alone?</li>
+</ul>
+</section>
+<section id="how-are-the-committee-questions-created" class="soco-reg-question-group">
+<h3>7 · How are the committee questions created?</h3>
+<ul>
+<li>Who writes the questions that ultimately appear in the briefing
+documents and at the meeting?</li>
+<li>How does FDA decide whether it wants a discussion question, a formal
+vote, or both?</li>
+<li>What makes a good voting question from the regulatory team’s
+perspective?</li>
+<li>How much should observers infer from the wording of FDA’s
+questions?</li>
+<li>By the time the advisory committee meets, how mature is the internal
+review team’s thinking?</li>
+</ul>
+</section>
+<section id="what-does-the-review-team-hear-that-the-audience-may-miss" class="soco-reg-question-group">
+<h3>8 · What does the review team hear that the audience may miss?</h3>
+<ul>
+<li>Is the numerical vote the most important output, or is the
+discussion often more informative?</li>
+<li>How does the team interpret a strongly favorable vote with important
+reservations? A divided vote? A unanimous vote with substantial
+uncertainty?</li>
+<li>What kinds of comments from committee members can materially change
+the team’s thinking?</li>
+<li>How should clinicians understand the fact that the committee is
+advisory rather than determinative?</li>
+</ul>
+</section>
+<section id="what-happens-the-next-morning" class="soco-reg-question-group">
+<h3>9 · What happens the next morning?</h3>
+<ul>
+<li>Does the review team formally reconvene after the advisory
+committee?</li>
+<li>How is the committee’s advice incorporated into the remaining
+review?</li>
+<li>Can the meeting change the requested analyses, labeling discussions,
+postmarketing requirements, or ultimate regulatory recommendation?</li>
+<li>When FDA ultimately reaches a conclusion that differs from the
+committee vote, what is the best way for clinicians to understand that
+apparent divergence?</li>
+</ul>
+</section>
+</section>
+<section id="closing-discussion" class="soco-reg-card">
+<h2>Closing discussion</h2>
+<p>A final synthesis could return to the question that motivated the
+session:</p>
+<div class="soco-reg-quote">
+<p>Why might FDA and a peer-reviewed publication describe the same
+clinical trial differently without either necessarily being “wrong”?</p>
+</div>
+<p>Possible threads:</p>
+<ul>
+<li>different data cuts or analysis populations;</li>
+<li>independent reconstruction of efficacy or safety outcomes;</li>
+<li>different handling of missing data, censoring, evaluability, or
+protocol deviations;</li>
+<li>sensitivity analyses that matter more in a regulatory review than in
+a manuscript;</li>
+<li>regulatory benefit–risk questions that are not identical to the
+scientific question posed in a publication;</li>
+<li>the difference between summarizing a trial and deciding whether the
+evidence supports a particular regulatory action.</li>
+</ul>
+<p>The take-home message would be that the <strong>FDA review, product
+label, and peer-reviewed manuscript are related but distinct views of
+the evidence</strong> — each generated for a different purpose.</p>
+</section>
+<section id="candidate-fall-dates" class="soco-reg-card">
+<h2>Candidate fall dates</h2>
+<p>The fall scheduling survey identified the following 90-minute
+windows:</p>
+<table class="soco-reg-date-table">
+<thead>
+<tr>
+<th>
+Option
+</th>
+<th>
+Date
+</th>
+<th>
+Time
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+September
+</td>
+<td>
+Friday, September 25, 2026
+</td>
+<td>
+3:30–5:00 PM ET
+</td>
+</tr>
+<tr>
+<td>
+October
+</td>
+<td>
+Wednesday, October 28, 2026
+</td>
+<td>
+3:30–5:00 PM ET
+</td>
+</tr>
+<tr>
+<td>
+November
+</td>
+<td>
+Friday, November 20, 2026
+</td>
+<td>
+3:30–5:00 PM ET
+</td>
+</tr>
+</tbody>
+</table>
+<p class="soco-reg-note">
+These were selected through the SoCO fall scheduling survey to maximize
+broad participation across the three fall meetings.
+</p>
+</section>
+<section id="working-title-options" class="soco-reg-card">
+<h2>Working title options</h2>
+<p><strong>Preferred:</strong> <em>Inside the Review Room: From
+Patient-Level Data to FDA Regulatory Decision-Making</em></p>
+<p><strong>Alternative:</strong> <em>Inside the FDA Review: How Oncology
+Evidence Becomes a Regulatory Decision</em></p>
+</section>
+</div>
+```

@@ -1,0 +1,39 @@
+match_key,Name,duration_min,camera_on,hand_raise,unmute,any_camera,any_hand_raise,any_unmute
+adewoleadamson,Adewole S Adamson,60.93333333333333,1,0,0,TRUE,FALSE,FALSE
+adewunmiadelaja,Adewunmi O. Adelaja,111.73333333333333,4,1,2,TRUE,TRUE,TRUE
+ajaysharma,Ajay N. Sharma,108.36666666666666,10,1,4,TRUE,TRUE,TRUE
+aleighalawless,Aleigha R. Lawless,96.1,0,0,0,FALSE,FALSE,FALSE
+baileysmith,Bailey Claire Smith,36.333333333333336,0,0,0,FALSE,FALSE,FALSE
+bengratz,Ben Gratz,63.916666666666664,0,0,0,FALSE,FALSE,FALSE
+charlieli,Charlie Li,103.16666666666667,0,0,0,FALSE,FALSE,FALSE
+danhippe,Dan Hippe,102.75,0,0,0,FALSE,FALSE,FALSE
+davidsavage,David J Savage,76.81666666666666,1,0,0,TRUE,FALSE,FALSE
+davidmiller,David M. Miller,113.55,1,0,0,TRUE,FALSE,FALSE
+emilysummers,Emily Godwin Summers,87.75,0,0,0,FALSE,FALSE,FALSE
+francescollichio,Frances Collichio,56.666666666666664,1,0,0,TRUE,FALSE,FALSE
+haroutyunjoulfayan,Haroutyun Joulfayan,107.41666666666667,0,0,0,FALSE,FALSE,FALSE
+howardkaufman,Howard L. Kaufman,72.35,1,0,1,TRUE,FALSE,TRUE
+isaacbrownell,Isaac Brownell,94.93333333333334,1,1,1,TRUE,TRUE,TRUE
+itaipashtan,Itai M. Pashtan,42.733333333333334,1,0,0,TRUE,FALSE,FALSE
+jackkollings,Jack Kollings,32.85,0,0,0,FALSE,FALSE,FALSE
+jessicafewkes,Jessica L. Fewkes,101.35,1,0,0,TRUE,FALSE,FALSE
+julianeczapla,Juliane Andrade Czapla,83.85,0,0,0,FALSE,FALSE,FALSE
+justinecohen,Justine V. Cohen,19.266666666666666,0,0,2,FALSE,FALSE,TRUE
+kathrynbollin,Kathryn Bollin,106.98333333333333,0,0,0,FALSE,FALSE,FALSE
+kristalachance,Krista Lachance,93.65,1,0,0,TRUE,FALSE,FALSE
+lauraferris,Laura Ferris,97.83333333333333,1,0,1,TRUE,FALSE,TRUE
+lisazaba,Lisa Zaba,93.73333333333333,2,2,1,TRUE,TRUE,TRUE
+mehranyusuf,Mehran Behruj Yusuf,94.48333333333333,0,1,1,FALSE,TRUE,TRUE
+michaelpovelaitis,Michael Povelaitis,108.13333333333334,0,0,0,FALSE,FALSE,FALSE
+paulnghiem,Paul Nghiem,25.916666666666668,1,0,0,TRUE,FALSE,FALSE
+peterchen,Peter Ch'en,36.516666666666666,1,0,0,TRUE,FALSE,FALSE
+raycheever,Ray Cheever,104.56666666666666,0,0,1,FALSE,FALSE,TRUE
+rhodaalani,Rhoda Myra M.D. Alani,94.63333333333334,0,0,2,FALSE,FALSE,TRUE
+rossmerkin,Ross D. Merkin,64.9,2,5,2,TRUE,TRUE,TRUE
+sameergupta,Sameer Gupta,103.86666666666666,4,0,2,TRUE,FALSE,TRUE
+shailenderbhatia,Shailender Bhatia,96.01666666666667,0,0,0,FALSE,FALSE,FALSE
+songpark,Song Park,67.3,1,0,0,TRUE,FALSE,FALSE
+soniacohen,Sonia Cohen,84.73333333333333,1,0,0,TRUE,FALSE,FALSE
+toddpearson,Todd Franklin Pearson,77.5,0,0,0,FALSE,FALSE,FALSE
+vernsondak,Vern Sondak,59.88333333333333,1,0,3,TRUE,FALSE,TRUE
+vishalpatel,Vishal Patel,89.86666666666666,0,0,3,FALSE,FALSE,TRUE

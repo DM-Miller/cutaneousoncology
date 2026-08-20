@@ -1,0 +1,27 @@
+match_key,Name,duration_min,camera_on,hand_raise,unmute,any_camera,any_hand_raise,any_unmute
+aleighalawless,Aleigha R. Lawless,108.46666666666667,2,0,3,TRUE,FALSE,TRUE
+annsilk,Ann W. Silk,109.73333333333333,2,1,6,TRUE,TRUE,TRUE
+anniechang,Annie Chang,108.23333333333333,0,0,0,FALSE,FALSE,FALSE
+claireverschraegen,Claire Verschraegen,110.85,4,2,2,TRUE,TRUE,TRUE
+davidmiller,David M. Miller,112.2,2,0,2,TRUE,FALSE,TRUE
+elizabethbuchbinder,Elizabeth I. Buchbinder,78.13333333333334,2,0,0,TRUE,FALSE,FALSE
+howardkaufman,Howard Kaufman,78.03333333333333,1,0,0,TRUE,FALSE,FALSE
+isaacbrownell,Isaac Brownell,109.75,2,3,1,TRUE,TRUE,TRUE
+jacobchoi,Jacob Choi,26.416666666666668,0,0,0,FALSE,FALSE,FALSE
+kamanehmontazeri,Kamaneh Montazeri,72.81666666666666,0,0,1,FALSE,FALSE,TRUE
+karamkhaddour,Karam Khaddour,96.05,0,1,0,FALSE,TRUE,FALSE
+kentsai,Ken Tsai,108.31666666666666,0,0,3,FALSE,FALSE,TRUE
+manishathakuria,Manisha Thakuria,110.56666666666666,1,0,2,TRUE,FALSE,TRUE
+mariamelashmawy,Mariam El-Ashmawy,109.13333333333334,2,0,1,TRUE,FALSE,TRUE
+meghanmooradian,Meghan Mooradian,56,1,0,0,TRUE,FALSE,FALSE
+michaelwong,Michael Wong,26.666666666666668,1,0,1,TRUE,FALSE,TRUE
+rossmerkin,Ross D. Merkin,26.733333333333334,2,1,0,TRUE,TRUE,FALSE
+ryansullivan,Ryan J. Sullivan,40.916666666666664,1,0,0,TRUE,FALSE,FALSE
+sameergupta,Sameer Gupta,78.31666666666666,1,0,0,TRUE,FALSE,FALSE
+sanjaychandrasekaran,Sanjay Chandrasekaran,29.166666666666668,0,0,0,FALSE,FALSE,FALSE
+songpark,Song Park,25.766666666666666,0,0,0,FALSE,FALSE,FALSE
+suzannetopalian,Suzanne Topalian,97.75,2,2,3,TRUE,TRUE,TRUE
+vernsondak,Vern Sondak,107.03333333333333,1,1,5,TRUE,TRUE,TRUE
+vishalpatel,Vishal Patel,81.55,0,0,2,FALSE,FALSE,TRUE
+williambenjamin,William J. IV Benjamin,74.65,0,0,0,FALSE,FALSE,FALSE
+williamreed,William T Reed,31.7,0,0,0,FALSE,FALSE,FALSE
