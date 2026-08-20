@@ -764,6 +764,94 @@ Response-guided immunotherapy, treatment intensity, Bayesian causal inference, a
 
 ::::
 
+
+:::: {.soco-jc-recap-card}
+
+::: {.soco-jc-recap-art}
+![](<journal_club/June 12 2026 - Local Recurrence in MCC/MCC_June12_card.svg>){alt="Primary article card for the June 12, 2026 SoCO Journal Club discussion of local recurrence after complete excision of Merkel cell carcinoma"}
+:::
+
+:::: {.soco-jc-recap-copy}
+
+::: {.soco-jc-recap-date}
+June 12, 2026 · SoCO Journal Club
+:::
+
+::: {.soco-jc-recap-title}
+Local Recurrence After Excision of Merkel Cell Carcinoma
+:::
+
+::: {.soco-jc-recap-divider}
+:::
+
+::: {.soco-jc-recap-question}
+How common is true primary-site local recurrence after complete excision—and what does that mean for postoperative radiation?
+:::
+
+::: {.soco-jc-recap-description}
+A multidisciplinary discussion of modern local-recurrence risk, confounding by indication, salvageability, radiation burden, and whether contemporary evidence supports more selective use of postoperative primary-site radiation in MCC.
+:::
+
+::: {.soco-jc-recap-footer}
+
+::: {.soco-jc-recap-actions}
+[Read meeting recap](<journal_club/June 12 2026 - Local Recurrence in MCC/index.qmd>){.soco-jc-recap-link}
+[Read the article](https://doi.org/10.1245/s10434-025-18670-2){.soco-jc-recap-link .secondary}
+:::
+
+::: {.soco-jc-recap-meta}
+34 attendees · 94-minute median meeting time
+:::
+
+:::
+
+::::
+
+::::
+
+
+:::: {.soco-jc-recap-card}
+
+::: {.soco-jc-recap-art}
+![](<journal_club/April 6 2026 - IGNYTE/IGNYTE_April6_card.svg>){alt="Primary article card for the April 6, 2026 SoCO Journal Club discussion of IGNYTE and RP1 plus nivolumab in anti-PD-1-failed melanoma"}
+:::
+
+:::: {.soco-jc-recap-copy}
+
+::: {.soco-jc-recap-date}
+April 6, 2026 · SoCO Journal Club
+:::
+
+::: {.soco-jc-recap-title}
+IGNYTE: RP1 + Nivolumab in PD-1–Failed Melanoma
+:::
+
+::: {.soco-jc-recap-divider}
+:::
+
+::: {.soco-jc-recap-question}
+When an intratumoral agent is combined with continued PD-1 blockade in a single-arm trial, what treatment effect has actually been established?
+:::
+
+::: {.soco-jc-recap-description}
+A discussion of a compelling clinical signal—and the harder inferential questions beneath it: local versus systemic activity, contribution of components, historical controls, ORR, estimands, and what evidence should be required for regulatory and clinical adoption.
+:::
+
+::: {.soco-jc-recap-footer}
+
+::: {.soco-jc-recap-actions}
+[Read meeting recap](<journal_club/April 6 2026 - IGNYTE/index.qmd>){.soco-jc-recap-link}
+[Read the article](https://doi.org/10.1200/JCO-25-01346){.soco-jc-recap-link .secondary}
+:::
+
+::: {.soco-jc-recap-meta}
+30 Teams connections · 99-minute median meeting time
+:::
+
+:::
+
+::::
+
 ::::
 
 :::

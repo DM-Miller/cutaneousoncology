@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F3F8F8"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#082D4D" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect x="42" y="42" width="1116" height="616" rx="28" fill="url(#bg)" filter="url(#shadow)"/>
+  <rect x="42" y="42" width="9" height="616" rx="4.5" fill="#28A9A2"/>
+  <text x="108" y="118" fill="#28A9A2" font-family="Arial, Helvetica, sans-serif"
+        font-size="22" font-weight="700" letter-spacing="3.2">PRIMARY ARTICLE · ANNALS OF SURGICAL ONCOLOGY</text>
+  <text x="108" y="230" fill="#082D4D" font-family="Arial, Helvetica, sans-serif"
+        font-size="48" font-weight="700">Local Recurrence Following Complete</text>
+  <text x="108" y="292" fill="#082D4D" font-family="Arial, Helvetica, sans-serif"
+        font-size="48" font-weight="700">Surgical Excision of Primary</text>
+  <text x="108" y="354" fill="#082D4D" font-family="Arial, Helvetica, sans-serif"
+        font-size="48" font-weight="700">Merkel Cell Carcinoma</text>
+  <text x="108" y="465" fill="#082D4D" font-family="Arial, Helvetica, sans-serif"
+        font-size="23" font-weight="700">Kavanagh FG, et al.</text>
+  <text x="325" y="465" fill="#52616D" font-family="Georgia, Times New Roman, serif"
+        font-size="22" font-style="italic">Ann Surg Oncol.</text>
+  <text x="492" y="465" fill="#52616D" font-family="Arial, Helvetica, sans-serif"
+        font-size="22">2026;33(7):6681–6690.</text>
+  <text x="108" y="515" fill="#31424E" font-family="Arial, Helvetica, sans-serif"
+        font-size="20">doi: 10.1245/s10434-025-18670-2</text>
+  <rect x="108" y="575" width="108" height="6" rx="3" fill="#28A9A2"/>
+  <rect x="216" y="575" width="48" height="6" rx="3" fill="#E25A4E"/>
+</svg>
