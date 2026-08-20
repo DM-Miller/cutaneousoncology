@@ -1,0 +1,829 @@
+---
+title: "IGNYTE: RP1 + Nivolumab in PD-1–Failed Melanoma"
+pagetitle: "IGNYTE | SoCO Journal Club"
+description: "Meeting recap from the April 6, 2026 Society of Cutaneous Oncology Journal Club discussing IGNYTE, RP1 combined with nivolumab in anti–PD-1–failed melanoma."
+date: 2026-04-06
+author: "Society of Cutaneous Oncology"
+categories:
+  - 2026
+  - Journal Club
+  - Melanoma
+  - Intratumoral Therapy
+  - Oncolytic Immunotherapy
+tags:
+  - IGNYTE
+  - RP1
+  - Nivolumab
+  - Melanoma
+  - Regulatory Science
+  - Estimands
+image: card.svg
+page-layout: full
+title-block-style: none
+toc: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+<style>
+  :root {
+    --navy: #082D4D;
+    --teal: #28A9A2;
+    --coral: #E25A4E;
+    --ink: #31424E;
+    --muted: #6B747B;
+    --pale: #F3F8F8;
+    --line: #D9E8E8;
+  }
+
+  #title-block-header,
+  .quarto-title-block,
+  .quarto-title,
+  .quarto-title-meta {
+    display: none !important;
+  }
+
+  body {
+    color: var(--ink);
+    background: #fff;
+  }
+
+  main.content {
+    max-width: 1120px;
+    margin: auto;
+    padding-top: 0 !important;
+  }
+
+  h1,h2,h3 {
+    color: var(--navy);
+    font-weight: 800;
+  }
+
+  .hero {
+    margin: 2rem 0 2.4rem;
+    padding: 2.8rem 3rem;
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 88% 12%, rgba(40,169,162,.11), transparent 31%),
+      linear-gradient(135deg,#F3F8F8 0%,#FFFFFF 72%);
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgba(8,45,77,.07);
+  }
+
+  .kicker,
+  .section-kicker {
+    color: var(--teal);
+    font-weight: 800;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    font-size: .8rem;
+  }
+
+  .hero h1 {
+    max-width: 900px;
+    font-size: clamp(2.7rem,5vw,4.1rem);
+    line-height: 1.02;
+    margin: .55rem 0 .8rem;
+    letter-spacing: -.04em;
+  }
+
+  .hero-copy {
+    font-size: 1.2rem;
+    max-width: 860px;
+    color: #56636D;
+    line-height: 1.65;
+  }
+
+  .accent {
+    width: 94px;
+    height: 5px;
+    border-radius: 4px;
+    background:
+      linear-gradient(
+        90deg,
+        var(--teal) 0 68%,
+        var(--coral) 68%
+      );
+    margin-top: 1.4rem;
+  }
+
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    margin: 1.4rem 0 2rem;
+  }
+
+  .metric-card,
+  .survey-card,
+  .highlight-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1.3rem 1.4rem;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(8,45,77,.05);
+  }
+
+  .metric-label,
+  .survey-label {
+    display: block;
+    color: var(--muted);
+    font-size: .78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+  }
+
+  .metric-value,
+  .survey-value {
+    display: block;
+    color: var(--navy);
+    font-size: 2.25rem;
+    font-weight: 850;
+    line-height: 1.05;
+    margin: .35rem 0;
+  }
+
+  .metric-note,
+  .survey-copy {
+    color: var(--muted);
+    font-size: .92rem;
+    line-height: 1.5;
+  }
+
+  .section-kicker {
+    margin-top: 2.8rem;
+  }
+
+  .section-intro {
+    font-size: 1.05rem;
+    color: #56636D;
+    max-width: 880px;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .paper-card {
+    max-width: 980px;
+    margin: 1.2rem auto 2rem;
+    padding: 1.75rem 2rem 1.7rem;
+    border-left: 7px solid var(--teal);
+    border-radius: 0 20px 20px 0;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(40,169,162,.085),
+        rgba(8,45,77,.035)
+      );
+    box-shadow: 0 12px 30px rgba(8,45,77,.08);
+  }
+
+  .paper-eyebrow {
+    color: var(--teal);
+    font-size: .78rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: .65rem;
+  }
+
+  .paper-title {
+    color: var(--navy);
+    font-size: 1.62rem;
+    line-height: 1.22;
+    font-weight: 850;
+    letter-spacing: -.015em;
+    margin: 0 0 .85rem;
+  }
+
+  .paper-citation {
+    color: #52616D;
+    font-size: .98rem;
+    line-height: 1.45;
+  }
+
+  .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem;
+    margin-top: 1.2rem;
+  }
+
+  .soco-link {
+    display: inline-flex;
+    padding: .58rem .9rem;
+    border-radius: 999px;
+    background: var(--navy);
+    color: #fff !important;
+    text-decoration: none;
+    font-size: .88rem;
+    font-weight: 750;
+  }
+
+  .soco-link.secondary {
+    background: #fff;
+    border: 1px solid rgba(40,169,162,.42);
+    color: var(--navy) !important;
+  }
+
+  .question-card {
+    margin: 1.6rem 0 2rem;
+    padding: 1.55rem 1.7rem;
+    border-left: 5px solid var(--coral);
+    border-radius: 0 14px 14px 0;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(226,90,78,.055),
+        rgba(40,169,162,.045)
+      );
+  }
+
+  .question-card strong {
+    display: block;
+    color: var(--navy);
+    font-size: 1.2rem;
+    line-height: 1.55;
+  }
+
+  .survey-grid,
+  .highlight-grid {
+    display: grid;
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+    gap: 1rem;
+    margin: 1.2rem 0 1.5rem;
+  }
+
+  .survey-value {
+    color: var(--teal);
+  }
+
+  .survey-label {
+    color: var(--navy);
+    margin-bottom: .45rem;
+  }
+
+  .highlight-num {
+    color: var(--coral);
+    font-weight: 900;
+    font-size: .8rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .highlight-card h3 {
+    color: var(--navy);
+    font-size: 1.08rem;
+    margin: .25rem 0 .55rem;
+  }
+
+  .highlight-card p {
+    color: #405463;
+    font-size: .94rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .discussion-quote {
+    margin: 1.4rem 0;
+    padding: 1.1rem 1.25rem;
+    border-left: 5px solid var(--teal);
+    background: #EFF8F7;
+    border-radius: 0 12px 12px 0;
+    color: var(--navy);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .context-note {
+    margin: 1.1rem 0 1.6rem;
+    padding: 1.05rem 1.2rem;
+    border-left: 5px solid #E6A34A;
+    border-radius: 0 12px 12px 0;
+    background: #FFF8F0;
+    color: #59462E;
+    line-height: 1.55;
+  }
+
+  .source-note {
+    margin: 2rem 0;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #F9FBFB;
+    color: #5C6871;
+    font-size: .9rem;
+    line-height: 1.6;
+  }
+
+  .footer-card {
+    margin: 3rem 0 1rem;
+    padding: 1.8rem 2rem;
+    background: var(--navy);
+    color: #fff;
+    border-radius: 20px;
+  }
+
+  .footer-card h2 {
+    color: #fff;
+    margin-top: 0;
+  }
+
+  .footer-card p {
+    margin-bottom: 0;
+    color: #EAF2F5;
+  }
+
+  @media(max-width:760px) {
+    .metric-grid,
+    .survey-grid,
+    .highlight-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      padding: 2rem 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.45rem;
+    }
+
+    .paper-card {
+      padding: 1.35rem 1.25rem;
+    }
+  }
+</style>
+
+```{r}
+#| label: setup-attendance
+
+resolve_meeting_dir <- function() {
+
+  if (
+    exists("meeting_dir", inherits = TRUE) &&
+    is.character(meeting_dir) &&
+    length(meeting_dir) == 1 &&
+    nzchar(meeting_dir) &&
+    dir.exists(meeting_dir)
+  ) {
+    return(
+      normalizePath(
+        meeting_dir,
+        winslash = "/",
+        mustWork = TRUE
+      )
+    )
+  }
+
+  current_input <- tryCatch(
+    knitr::current_input(dir = TRUE),
+    error = function(e) NULL
+  )
+
+  if (
+    !is.null(current_input) &&
+    length(current_input) == 1 &&
+    !is.na(current_input) &&
+    nzchar(current_input) &&
+    file.exists(current_input)
+  ) {
+    return(
+      dirname(
+        normalizePath(
+          current_input,
+          winslash = "/",
+          mustWork = TRUE
+        )
+      )
+    )
+  }
+
+  if (
+    interactive() &&
+    requireNamespace("rstudioapi", quietly = TRUE)
+  ) {
+
+    ctx <- tryCatch(
+      rstudioapi::getSourceEditorContext(),
+      error = function(e) NULL
+    )
+
+    if (
+      !is.null(ctx) &&
+      !is.null(ctx$path) &&
+      nzchar(ctx$path) &&
+      file.exists(ctx$path)
+    ) {
+
+      active_path <- normalizePath(
+        ctx$path,
+        winslash = "/",
+        mustWork = TRUE
+      )
+
+      active_dir <- dirname(active_path)
+
+      if (basename(active_path) == "index.qmd") {
+        return(active_dir)
+      }
+
+      if (basename(active_dir) == "scripts") {
+        return(dirname(active_dir))
+      }
+    }
+  }
+
+  stop(
+    paste0(
+      "Could not determine the Journal Club meeting directory.\n",
+      "Render index.qmd with Quarto, or open index.qmd / process_attendance.R ",
+      "in RStudio before running this chunk interactively."
+    )
+  )
+}
+
+meeting_dir <- resolve_meeting_dir()
+
+source(
+  file.path(
+    meeting_dir,
+    "scripts",
+    "process_attendance.R"
+  ),
+  local = TRUE
+)
+
+attendance_dir <- file.path(
+  meeting_dir,
+  "files",
+  "meeting recap-attendance"
+)
+
+people <- readr::read_csv(
+  file.path(
+    attendance_dir,
+    "attendance_clean.csv"
+  ),
+  show_col_types = FALSE
+)
+
+headline <- readr::read_csv(
+  file.path(
+    attendance_dir,
+    "attendance_summary.csv"
+  ),
+  show_col_types = FALSE
+)
+```
+
+:::: {.hero}
+
+::: {.kicker}
+SoCO Journal Club · April 6, 2026
+:::
+
+# IGNYTE: when a compelling signal meets an inference problem
+
+::: {.hero-copy}
+RP1 plus nivolumab produced durable responses in anti–PD-1–failed melanoma. The harder question was not whether the signal was interesting. It was **what treatment effect the study had actually established — and whether that evidence was sufficient for regulatory or clinical adoption.**
+:::
+
+::: {.accent}
+:::
+
+::::
+
+
+::: {.section-kicker}
+Meeting pulse
+:::
+
+## A heavily engaged melanoma group
+
+::: {.metric-grid}
+
+::: {.metric-card}
+[Unique Teams connections]{.metric-label}
+
+[`r headline$connections`]{.metric-value}
+
+[`r ifelse(headline$room_connections > 0, paste0("Reconnects reconciled; includes ", headline$room_connections, " conference-room connection"), "Reconnects reconciled")`]{.metric-note}
+:::
+
+::: {.metric-card}
+[Median time together]{.metric-label}
+
+[`r round(headline$median_minutes)` min]{.metric-value}
+
+[Median attendance after reconnects were combined]{.metric-note}
+:::
+
+::: {.metric-card}
+[Stayed at least an hour]{.metric-label}
+
+[`r scales::percent(headline$pct_60min_plus, accuracy = 1)`]{.metric-value}
+
+[Present for at least 60 minutes]{.metric-note}
+:::
+
+:::
+
+
+::: {.section-kicker}
+Participation
+:::
+
+## A few ways people participated
+
+::: {.metric-grid}
+
+::: {.metric-card}
+[Camera on]{.metric-label}
+
+[`r scales::percent(headline$pct_camera, accuracy = 1)`]{.metric-value}
+
+[Had the camera on at least once]{.metric-note}
+:::
+
+::: {.metric-card}
+[Unmuted]{.metric-label}
+
+[`r scales::percent(headline$pct_unmute, accuracy = 1)`]{.metric-value}
+
+[Unmuted at least once during the meeting]{.metric-note}
+:::
+
+::: {.metric-card}
+[Raised a hand]{.metric-label}
+
+[`r scales::percent(headline$pct_hand_raise, accuracy = 1)`]{.metric-value}
+
+[Used the Teams hand-raise signal]{.metric-note}
+:::
+
+:::
+
+
+::: {.section-kicker}
+The paper we discussed
+:::
+
+## Wong et al. — RP1 + nivolumab after anti–PD-1 failure
+
+:::: {.paper-card}
+
+::: {.paper-eyebrow}
+Primary article · Journal of Clinical Oncology
+:::
+
+::: {.paper-title}
+RP1 Combined With Nivolumab in Advanced Anti–PD-1–Failed Melanoma (IGNYTE)
+:::
+
+::: {.paper-citation}
+**Wong MK, et al.** *J Clin Oncol.* 2025;43:3589–3599.  
+doi: 10.1200/JCO-25-01346
+:::
+
+::: {.link-row}
+[DOI](https://doi.org/10.1200/JCO-25-01346){.soco-link}
+:::
+
+::::
+
+IGNYTE enrolled 140 patients with advanced melanoma and confirmed progression on prior anti–PD-1 therapy. RP1 was administered intratumorally with nivolumab. By RECIST 1.1 independent central review, the confirmed objective response rate was **32.9%**, including **15.0% complete responses**. Median duration of response was **33.7 months**; 1- and 2-year overall survival were **75.3%** and **63.3%**, respectively. Responses were observed in both injected and noninjected lesions, including visceral sites.
+
+::: {.question-card}
+**The question beneath the paper:** When an intratumoral agent is combined with continued PD-1 blockade in a single-arm trial, what exactly has been demonstrated — local activity, systemic activity, contribution of RP1, activity of the combination, or some mixture of all four?
+:::
+
+
+::: {.context-note}
+**Regulatory context mattered.** The meeting took place during active uncertainty around RP1's regulatory path. The preserved Journal Club presentation reviewed the July 22, 2025 FDA complete response letter, including concerns about whether IGNYTE constituted an adequate and well-controlled investigation, heterogeneity of the study population, and contribution of components. No safety concern was identified in the sponsor's description of that letter.
+:::
+
+
+::: {.section-kicker}
+Before the discussion
+:::
+
+## The survey revealed a group that liked the signal — but not the certainty
+
+::: {.section-intro}
+There is no preserved transcript from this session, so the most durable record of the group's starting position is the pre-Journal Club survey. The responses were unusually useful because they separated biological plausibility from inferential and regulatory sufficiency.
+:::
+
+::: {.survey-grid}
+
+::: {.survey-card}
+[75%]{.survey-value}
+[Familiar with IGNYTE]{.survey-label}
+
+::: {.survey-copy}
+Three quarters of respondents were already moderately or very familiar with the IGNYTE study before the session, and 94% reported prior clinical use of an intratumoral melanoma therapy.
+:::
+:::
+
+::: {.survey-card}
+[56%]{.survey-value}
+[Single-arm evidence can persuade]{.survey-label}
+
+::: {.survey-copy}
+The most common view was that single-arm studies can be persuasive when results substantially exceed historical expectations. Only 12% said such evidence is often sufficient on its own for clinical decision-making.
+:::
+:::
+
+::: {.survey-card}
+[56%]{.survey-value}
+[ORR meaningful — but insufficient alone]{.survey-label}
+
+::: {.survey-copy}
+Most respondents considered objective response rate moderately clinically meaningful in PD-1–refractory melanoma but not sufficient by itself. Another 25% considered it highly meaningful when responses are durable.
+:::
+:::
+
+::: {.survey-card}
+[69%]{.survey-value}
+[Biology looked plausible]{.survey-label}
+
+::: {.survey-copy}
+Sixty-nine percent rated the proposed systemic immune mechanism as either highly plausible or plausible but still somewhat uncertain. The remaining 31% called it possible but not strongly supported.
+:::
+:::
+
+::: {.survey-card}
+[65%]{.survey-value}
+[Single-arm design was the leading limitation]{.survey-label}
+
+::: {.survey-copy}
+The single-arm design was the most commonly selected limitation, followed by uncertainty about the contribution of RP1 versus nivolumab (41%) and interpretation of injected versus noninjected lesions (29%).
+:::
+:::
+
+::: {.survey-card}
+[53%]{.survey-value}
+[Preferred randomized add-on design]{.survey-label}
+
+::: {.survey-copy}
+A majority selected randomization of RP1 plus nivolumab versus nivolumab alone as the most convincing confirmatory design. Another 27% preferred randomization against physician's choice.
+:::
+:::
+
+:::
+
+
+::: {.section-kicker}
+The inferential problem
+:::
+
+## Two questions were hiding inside one response rate
+
+::: {.highlight-grid}
+
+::: {.highlight-card}
+[01 · Where?]{.highlight-num}
+
+### Local effect or systemic effect?
+
+Injected lesions are directly exposed to the intervention. Their shrinkage can demonstrate local antitumor activity, but it does not by itself establish a systemic treatment effect. Noninjected lesions therefore carry special interpretive weight when the intended claim is systemic benefit.
+:::
+
+::: {.highlight-card}
+[02 · What caused it?]{.highlight-num}
+
+### RP1, nivolumab, or the combination?
+
+Because RP1 was administered with nivolumab and there was no randomized component comparison, the observed response cannot cleanly identify the contribution of RP1. The survey recognized this: 41% selected unclear contribution of components as a primary limitation.
+:::
+
+::: {.highlight-card}
+[03 · Compared with what?]{.highlight-num}
+
+### Historical expectations are useful — and fragile
+
+The paper contextualized the observed ORR against low expected activity from continued anti–PD-1 therapy. The survey showed clinicians are open to that logic when the observed result substantially exceeds historical expectations, while also worrying about population heterogeneity and external validity.
+:::
+
+::: {.highlight-card}
+[04 · What endpoint?]{.highlight-num}
+
+### ORR is informative, but its meaning depends on the question
+
+The study's 32.9% RECIST response rate was clinically interesting, particularly with a median DOR of 33.7 months. But the group entered the discussion largely unwilling to treat ORR alone as the whole evidentiary story.
+:::
+
+::: {.highlight-card}
+[05 · What estimand?]{.highlight-num}
+
+### The clinical question should precede the estimator
+
+The presentation used the ICH E9(R1) estimand framework to ask what treatment effect the trial was actually trying to learn. Notably, 69% of survey respondents reported no prior familiarity with the estimand framework — making the session partly a discussion of RP1 and partly a discussion of how trials define causal questions.
+:::
+
+::: {.highlight-card}
+[06 · What would settle it?]{.highlight-num}
+
+### Randomization was the clearest path forward
+
+When asked what confirmatory design would be most convincing, the strongest preference was an add-on comparison of nivolumab versus nivolumab + RP1. That design directly targets the contribution-of-components question that the single-arm study cannot resolve.
+:::
+
+:::
+
+
+::: {.discussion-quote}
+A response rate can be impressive and still leave the central causal question unresolved. For intratumoral combination therapy, **where the response occurs and what comparison generated it are part of the treatment effect — not merely details of the analysis.**
+:::
+
+
+### Where the discussion appears to have landed
+
+Without a transcript, we should be careful not to recreate individual comments that were not preserved. But the survey and presentation materials point to a clear intellectual center of gravity.
+
+The **clinical signal was taken seriously**. A 32.9% response rate, 15% complete-response rate, long duration of response, activity in noninjected and visceral lesions, and a comparatively favorable safety profile made RP1 + nivolumab difficult to dismiss as biologically uninteresting.
+
+At the same time, **interest in the therapy did not equal certainty about the inference**. The single-arm design, patient heterogeneity, lesion-level interpretation, and inability to isolate the contribution of RP1 remained central problems. The survey's open-text responses repeatedly returned to the same themes: attribution of systemic benefit, contribution of components, comparability with historical controls, and the limitations of the single-arm design.
+
+The most defensible landing point was therefore not “the study worked” or “the study failed.” It was that **IGNYTE generated a compelling therapeutic signal whose regulatory and causal interpretation depended on questions the study design could not fully answer.**
+
+
+::: {.section-kicker}
+Practice threshold
+:::
+
+## Regulatory sufficiency and clinical adoption were not the same question
+
+::: {.survey-grid}
+
+::: {.survey-card}
+[38%]{.survey-value}
+[Possibly approval-ready with postmarketing evidence]{.survey-label}
+
+::: {.survey-copy}
+The largest group thought IGNYTE could possibly support FDA approval if accompanied by postmarketing requirements. Another 25% were uncertain, 19% viewed the evidence as sufficient for accelerated approval, and 12% thought randomized data were probably still needed.
+:::
+:::
+
+::: {.survey-card}
+[40%]{.survey-value}
+[FDA approval would be enough for routine use]{.survey-label}
+
+::: {.survey-copy}
+When the question shifted from regulatory approval to personal practice, 40% said FDA approval would be sufficient, while only 13% said the current evidence was already enough for routine use.
+:::
+:::
+
+:::
+
+::: {.source-note}
+**About this recap:** no meeting transcript was available for the April 6 session. This page therefore summarizes the published IGNYTE paper, the preserved SoCO presentation, the pre-meeting survey, and the Teams attendance record. It intentionally avoids attributing discussion positions to individual attendees unless they are preserved in those materials.
+:::
+
+
+::: {.section-kicker}
+Our community
+:::
+
+## Who joined us?
+
+::: {.section-intro}
+The Teams report contains reconnects and one conference-room connection. Repeated display names are combined before the meeting-pulse metrics are calculated; the room connection is retained and flagged rather than treated as a named individual.
+:::
+
+```{r}
+#| label: attendance-table
+#| results: asis
+
+roster <- people |>
+  transmute(
+    Name,
+    `Minutes in meeting` = round(duration_min),
+    `Camera on` = if_else(any_camera, "Yes", ""),
+    `Unmuted` = if_else(any_unmute, "Yes", ""),
+    `Raised hand` = if_else(any_hand_raise, "Yes", "")
+  )
+
+knitr::kable(
+  roster,
+  align = c("l","r","c","c","c")
+)
+```
+
+
+::: {.footer-card}
+
+## A useful disagreement about evidence
+
+This Journal Club was less about deciding whether RP1 was interesting than about deciding **what evidence is necessary to know why a treatment appears to work, how broadly the result applies, and when a promising signal becomes an actionable treatment effect.**
+
+:::
+
+::: {.link-row}
+[Back to Journal Club](../../jc.qmd){.soco-link}
+[Read the article](https://doi.org/10.1200/JCO-25-01346){.soco-link .secondary}
+:::
