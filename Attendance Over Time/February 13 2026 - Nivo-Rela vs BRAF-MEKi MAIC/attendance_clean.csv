@@ -1,0 +1,31 @@
+match_key,Name,duration_min,camera_on,hand_raise,unmute,any_camera,any_hand_raise,any_unmute
+adeadamson,Ade Adamson,29.383333333333333,1,0,0,TRUE,FALSE,FALSE
+adewunmiadelaja,Adewunmi O. Adelaja,43.666666666666664,0,0,1,FALSE,FALSE,TRUE
+ajaysharma,Ajay N. Sharma,4.516666666666667,0,0,0,FALSE,FALSE,FALSE
+alexsorrentino,Alex Sorrentino,44.733333333333334,2,0,0,TRUE,FALSE,FALSE
+christinecimoch,Christine C. Cimoch,92.45,4,0,1,TRUE,FALSE,TRUE
+davidmiller,David M. Miller,97.8,1,0,1,TRUE,FALSE,TRUE
+elizabethbuchbinder,Elizabeth I. Buchbinder,90.35,1,0,3,TRUE,FALSE,TRUE
+frankworden,Frank Worden,97.05,1,0,5,TRUE,FALSE,TRUE
+isaacbrownell,Isaac Brownell,97.28333333333333,1,2,3,TRUE,TRUE,TRUE
+julianeczapla,Juliane Andrade Czapla,97.31666666666666,0,0,1,FALSE,FALSE,TRUE
+kamanehmontazeri,Kamaneh Montazeri,54.666666666666664,2,0,2,TRUE,FALSE,TRUE
+kristarubin,Krista M. Rubin,51.233333333333334,1,0,0,TRUE,FALSE,FALSE
+manishathakuria,Manisha Thakuria,75.18333333333334,0,0,1,FALSE,FALSE,TRUE
+nikhilkhushalani,NIkhil Khushalani,35.88333333333333,1,1,5,TRUE,TRUE,TRUE
+natashahill,Natasha Hill,69.48333333333333,0,0,0,FALSE,FALSE,FALSE
+rhodaalani,Rhoda Myra Alani,94.83333333333333,2,0,1,TRUE,FALSE,TRUE
+rileyfadden,Riley M. Fadden,45.3,0,0,1,FALSE,FALSE,TRUE
+rossmerkin,Ross D. Merkin,89.38333333333334,4,0,1,TRUE,FALSE,TRUE
+sameergupta,Sameer Gupta,92.1,2,0,3,TRUE,FALSE,TRUE
+sg,Sg,4.466666666666667,0,0,0,FALSE,FALSE,FALSE
+shailenderbhatia,Shailender Bhatia,93.05,1,0,5,TRUE,FALSE,TRUE
+shinyaamano,Shinya U Amano,96.68333333333334,3,0,1,TRUE,FALSE,TRUE
+songpark,Song Park,0.5666666666666667,0,0,0,FALSE,FALSE,FALSE
+soniacohen,Sonia Cohen,122,0,0,0,FALSE,FALSE,FALSE
+sunandanachandra,Sunandana Chandra,31.65,1,1,2,TRUE,TRUE,TRUE
+taylorharp,Taylor Harp,15.416666666666666,0,0,0,FALSE,FALSE,FALSE
+truelianyu,Truelian Yu,95.18333333333334,0,0,0,FALSE,FALSE,FALSE
+vatchetchekmedyian,Vatche Tchekmedyian,88.23333333333333,5,0,4,TRUE,FALSE,TRUE
+vernsondak,Vern Sondak,94.55,2,1,5,TRUE,TRUE,TRUE
+vishalpatel,Vishal Patel,24.4,0,0,1,FALSE,FALSE,TRUE

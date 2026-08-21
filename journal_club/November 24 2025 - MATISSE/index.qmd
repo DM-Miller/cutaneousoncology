@@ -1,0 +1,1900 @@
+---
+title: "MATISSE"
+pagetitle: "MATISSE | SoCO Journal Club"
+description: "Meeting recap from the November 24, 2025 Society of Cutaneous Oncology Journal Club discussing MATISSE: neoadjuvant nivolumab with or without ipilimumab in resectable cutaneous squamous cell carcinoma."
+date: 2025-11-24
+author: "Society of Cutaneous Oncology"
+categories:
+  - 2025
+  - Journal Club
+  - Cutaneous Squamous Cell Carcinoma
+  - Neoadjuvant Immunotherapy
+  - Treatment De-escalation
+tags:
+  - CSCC
+  - MATISSE
+  - Nivolumab
+  - Ipilimumab
+  - Neoadjuvant Therapy
+  - Surgery
+  - FDG-PET
+image: MATISSE_Nov24_card.svg
+page-layout: full
+title-block-style: none
+toc: false
+---
+
+<style>
+:root {
+  --navy:#082D4D;
+  --blue:#0E5688;
+  --teal:#28A9A2;
+  --teal-dark:#168A8F;
+  --coral:#E25A4E;
+  --ink:#31424E;
+  --muted:#6B747B;
+  --pale:#F3F8F8;
+  --line:#D9E8E8;
+  --white:#FFFFFF;
+}
+
+#title-block-header,
+.quarto-title-block,
+.quarto-title,
+.quarto-title-meta {
+  display:none !important;
+}
+
+body {
+  background:#fff;
+  color:var(--ink);
+}
+
+main.content {
+  max-width:1120px;
+  margin:auto;
+  padding-top:0 !important;
+}
+
+h1,h2,h3 {
+  color:var(--navy);
+  font-weight:800;
+}
+
+.hero {
+  position:relative;
+  overflow:hidden;
+  margin:2rem 0 2.4rem;
+  padding:2.8rem 3rem;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(40,169,162,.12),transparent 31%),
+    radial-gradient(circle at 12% 88%,rgba(226,90,78,.05),transparent 28%),
+    linear-gradient(135deg,#EEF8F7 0%,#FFFFFF 72%);
+  box-shadow:0 10px 30px rgba(8,45,77,.07);
+}
+
+.hero::after {
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  top:-80px;
+  right:-50px;
+  opacity:.18;
+  background-image:radial-gradient(circle,rgba(40,169,162,.7) 0 1.2px,transparent 1.8px);
+  background-size:26px 26px;
+  mask-image:radial-gradient(circle,#000 0%,transparent 72%);
+  -webkit-mask-image:radial-gradient(circle,#000 0%,transparent 72%);
+  pointer-events:none;
+}
+
+.kicker,.section-kicker {
+  color:var(--teal-dark);
+  font-weight:850;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:.79rem;
+}
+
+.hero h1 {
+  position:relative;
+  z-index:1;
+  max-width:900px;
+  margin:.55rem 0 .8rem;
+  color:var(--navy);
+  font-size:clamp(2.8rem,5vw,4.4rem);
+  line-height:1.01;
+  letter-spacing:-.045em;
+}
+
+.hero-copy {
+  position:relative;
+  z-index:1;
+  max-width:850px;
+  color:#526574;
+  font-size:1.18rem;
+  line-height:1.65;
+}
+
+.accent {
+  width:94px;
+  height:5px;
+  margin-top:1.4rem;
+  border-radius:4px;
+  background:linear-gradient(90deg,var(--teal) 0 68%,var(--coral) 68%);
+}
+
+.link-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.7rem;
+  margin-top:1.25rem;
+}
+
+.soco-link {
+  display:inline-flex;
+  padding:.58rem .9rem;
+  border-radius:999px;
+  background:var(--blue);
+  color:#fff !important;
+  text-decoration:none;
+  font-size:.88rem;
+  font-weight:750;
+}
+
+.soco-link.secondary {
+  background:rgba(255,255,255,.88);
+  border:1px solid rgba(40,169,162,.42);
+  color:var(--navy) !important;
+}
+
+.section-kicker {
+  margin-top:2.8rem;
+}
+
+.section-intro {
+  max-width:880px;
+  margin-bottom:1.2rem;
+  color:#56636D;
+  font-size:1.05rem;
+  line-height:1.7;
+}
+
+.metric-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+  margin:1.4rem 0 2rem;
+}
+
+.metric-card {
+  padding:1.35rem 1.4rem;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(8,45,77,.05);
+}
+
+.metric-label {
+  display:block;
+  color:var(--muted);
+  font-size:.79rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.metric-value {
+  display:block;
+  margin:.35rem 0;
+  color:var(--navy);
+  font-size:2.25rem;
+  font-weight:850;
+  line-height:1.05;
+}
+
+.metric-note {
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.45;
+}
+
+.paper-card {
+  max-width:980px;
+  margin:1.2rem auto 0;
+  padding:1.75rem 2rem 1.7rem;
+  border-left:7px solid var(--teal);
+  border-radius:0 20px 20px 0;
+  background:linear-gradient(135deg,rgba(40,169,162,.085),rgba(8,45,77,.035));
+  box-shadow:0 12px 30px rgba(8,45,77,.08);
+}
+
+.paper-eyebrow {
+  margin-bottom:.65rem;
+  color:var(--teal-dark);
+  font-size:.78rem;
+  font-weight:850;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.paper-title {
+  margin:0 0 .85rem;
+  color:var(--navy);
+  font-size:1.6rem;
+  font-weight:850;
+  line-height:1.22;
+}
+
+.paper-citation {
+  color:#52616D;
+  font-size:.98rem;
+  line-height:1.5;
+}
+
+.question-card {
+  margin:1.35rem 0 2rem;
+  padding:1.3rem 1.45rem;
+  border-left:6px solid var(--coral);
+  border-radius:0 16px 16px 0;
+  background:#FFF7F5;
+  color:#5B423D;
+  font-size:1.07rem;
+  font-weight:700;
+  line-height:1.55;
+}
+
+.highlight-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+  margin:1.2rem 0 1.5rem;
+}
+
+.highlight-card {
+  padding:1.2rem 1.25rem;
+  border:1px solid #DCE8EB;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 5px 18px rgba(8,45,77,.045);
+}
+
+.highlight-num {
+  color:var(--coral);
+  font-weight:900;
+  font-size:.79rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.highlight-card h3 {
+  margin:.25rem 0 .55rem;
+  font-size:1.07rem;
+}
+
+.highlight-card p {
+  margin:0;
+  color:#405463;
+  font-size:.94rem;
+  line-height:1.5;
+}
+
+.caution-note {
+  margin:1rem 0 1.5rem;
+  padding:1rem 1.15rem;
+  border-left:5px solid #E6A34A;
+  border-radius:0 12px 12px 0;
+  background:#FFF8F0;
+  color:#59462E;
+  font-size:.92rem;
+  line-height:1.55;
+}
+
+
+.partnership-card {
+  margin:1.25rem 0 2rem;
+  padding:1.35rem 1.45rem;
+  border:1px solid rgba(40,169,162,.28);
+  border-left:7px solid var(--teal);
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 92% 15%,rgba(40,169,162,.09),transparent 30%),
+    linear-gradient(135deg,#F1FAF9 0%,#FFFFFF 100%);
+  box-shadow:0 8px 24px rgba(8,45,77,.05);
+}
+
+.partnership-eyebrow {
+  color:var(--teal-dark);
+  font-size:.74rem;
+  font-weight:850;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.partnership-title {
+  margin:.35rem 0 .55rem;
+  color:var(--navy);
+  font-size:1.15rem;
+  font-weight:850;
+}
+
+.partnership-copy {
+  margin:0;
+  color:#526574;
+  font-size:.95rem;
+  line-height:1.6;
+}
+
+.survey-snapshot-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
+  margin:1.4rem 0 1.5rem;
+}
+
+.survey-insight-card {
+  position:relative;
+  overflow:hidden;
+  padding:1.25rem 1.2rem 1.15rem;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#FFFFFF;
+  box-shadow:0 7px 22px rgba(8,45,77,.05);
+}
+
+.survey-insight-card::before {
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:5px;
+  background:var(--teal);
+}
+
+.survey-insight-kicker {
+  color:var(--coral);
+  font-size:.72rem;
+  font-weight:850;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.survey-insight-card h3 {
+  margin:.35rem 0 .9rem;
+  color:var(--navy);
+  font-size:1.02rem;
+  line-height:1.3;
+}
+
+.survey-mini-row {
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) 2.2fr auto;
+  gap:.55rem;
+  align-items:center;
+  margin:.56rem 0;
+}
+
+.survey-mini-label {
+  color:#4E5F6C;
+  font-size:.78rem;
+  line-height:1.2;
+}
+
+.survey-mini-track {
+  height:8px;
+  overflow:hidden;
+  border-radius:99px;
+  background:#EAF2F2;
+  opacity:.92;
+}
+
+.survey-mini-fill {
+  height:100%;
+  border-radius:99px;
+  background:linear-gradient(90deg,var(--teal-dark),var(--blue));
+}
+
+.survey-mini-value {
+  min-width:2.5rem;
+  color:var(--navy);
+  font-size:.78rem;
+  font-weight:800;
+  text-align:right;
+}
+
+.survey-insight-note {
+  margin-top:.85rem;
+  padding-top:.75rem;
+  border-top:1px solid #E8EEEE;
+  color:var(--muted);
+  font-size:.75rem;
+  line-height:1.45;
+}
+
+.survey-feature {
+  margin:1rem 0 1.4rem;
+  padding:1.2rem 1.2rem .5rem;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#FBFDFD;
+}
+
+.survey-feature h3 {
+  margin:.1rem 0 .9rem;
+  font-size:1.02rem;
+}
+
+
+.survey-css-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+  margin-top:1rem;
+}
+
+.survey-css-card {
+  padding:1.2rem 1.2rem 1.05rem;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#FFFFFF;
+  box-shadow:0 6px 20px rgba(8,45,77,.045);
+}
+
+.survey-css-card.wide {
+  grid-column:1 / -1;
+}
+
+.survey-css-head {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:1rem;
+  margin-bottom:.9rem;
+  padding-bottom:.75rem;
+  border-bottom:1px solid #E7EFEF;
+}
+
+.survey-css-number {
+  color:var(--coral);
+  font-size:.71rem;
+  font-weight:850;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.survey-css-card h3 {
+  margin:.2rem 0 0;
+  color:var(--navy);
+  font-size:1.02rem;
+  line-height:1.28;
+}
+
+.survey-css-n {
+  flex:0 0 auto;
+  margin-top:.1rem;
+  padding:.34rem .55rem;
+  border-radius:999px;
+  background:#EEF8F7;
+  color:var(--teal-dark);
+  font-size:.72rem;
+  font-weight:800;
+}
+
+.survey-css-row {
+  display:grid;
+  grid-template-columns:minmax(0,1.55fr) minmax(90px,2.1fr) 3.7rem;
+  gap:.65rem;
+  align-items:center;
+  margin:.58rem 0;
+}
+
+.survey-css-card.wide .survey-css-row {
+  grid-template-columns:minmax(220px,2.35fr) minmax(140px,2fr) 3.9rem;
+}
+
+.survey-css-label {
+  color:#465A68;
+  font-size:.8rem;
+  line-height:1.22;
+}
+
+.survey-css-track {
+  height:8px;
+  overflow:hidden;
+  border-radius:999px;
+  background:#EAF2F2;
+  opacity:.92;
+}
+
+.survey-css-fill {
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--teal-dark),var(--blue));
+}
+
+.survey-css-value {
+  color:var(--navy);
+  font-size:.77rem;
+  font-weight:850;
+  text-align:right;
+  white-space:nowrap;
+}
+
+.survey-css-foot {
+  margin-top:.8rem;
+  padding-top:.75rem;
+  border-top:1px solid #E7EFEF;
+  color:var(--muted);
+  font-size:.74rem;
+  line-height:1.45;
+}
+
+.survey-disclosure {
+  margin:1.5rem 0 .5rem;
+}
+
+.survey-toggle {
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:1rem 1.1rem;
+  border:1px solid rgba(40,169,162,.35);
+  border-radius:15px;
+  background:linear-gradient(135deg,#EEF8F7,#FFFFFF);
+  color:var(--navy);
+  font-weight:800;
+  text-align:left;
+  cursor:pointer;
+}
+
+.survey-toggle:hover {
+  border-color:var(--teal-dark);
+}
+
+.survey-chevron {
+  font-size:1.15rem;
+  transition:transform .2s ease;
+}
+
+.survey-toggle[aria-expanded="true"] .survey-chevron {
+  transform:rotate(180deg);
+}
+
+.survey-panel {
+  display:none;
+  padding:1.25rem .2rem .2rem;
+}
+
+.survey-panel.open {
+  display:block;
+}
+
+.survey-question {
+  margin:0 0 1.8rem;
+  padding:1rem;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+}
+
+.attendance-scroll {
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  border-radius:16px;
+}
+
+.attendance-table {
+  width:100%;
+  min-width:690px;
+  border-collapse:separate;
+  border-spacing:0;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fff;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(8,45,77,.045);
+}
+
+.attendance-table thead th {
+  padding:.72rem .75rem;
+  background:var(--navy);
+  color:#fff;
+  border:0;
+  font-size:.78rem;
+  font-weight:800;
+  text-align:center;
+}
+
+.attendance-table thead th:first-child {
+  text-align:left;
+}
+
+.attendance-table tbody td {
+  padding:.66rem .75rem;
+  border-top:1px solid #E9EFF1;
+  color:#334857;
+  font-size:.88rem;
+  text-align:center;
+}
+
+.attendance-table .name-cell {
+  color:var(--navy);
+  font-weight:750;
+  text-align:left;
+}
+
+.attendance-table .minutes-cell {
+  color:#17384C;
+  font-variant-numeric:tabular-nums;
+}
+
+.signal-on {
+  color:var(--teal-dark);
+  font-weight:900;
+}
+
+.roster-summary {
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:1rem;
+  margin:0 0 .8rem;
+  padding:.95rem 1.05rem;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#F9FBFB;
+}
+
+.roster-summary strong {
+  color:var(--navy);
+}
+
+.roster-summary span {
+  color:var(--muted);
+  font-size:.84rem;
+}
+
+.footer-card {
+  margin:3rem 0 1rem;
+  padding:1.8rem 2rem;
+  background:var(--navy);
+  color:#fff;
+  border-radius:20px;
+}
+
+.footer-card h2 {
+  color:#fff;
+  margin-top:0;
+}
+
+.footer-card p {
+  margin-bottom:0;
+  color:#EAF2F5;
+}
+
+@media(max-width:760px) {
+  html, body {
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  main.content {
+    width:100%;
+    max-width:100%;
+    padding-left:.85rem !important;
+    padding-right:.85rem !important;
+    overflow-x:hidden;
+  }
+
+  .hero {
+    margin-top:1rem;
+    padding:1.55rem 1.15rem;
+    border-radius:18px;
+  }
+
+  .hero h1 {
+    font-size:clamp(2.05rem,10vw,2.6rem);
+  }
+
+  .hero-copy {
+    font-size:1rem;
+    line-height:1.55;
+  }
+
+  .metric-grid,
+  .highlight-grid,
+  .survey-snapshot-grid,
+  .survey-css-grid {
+    grid-template-columns:1fr;
+  }
+
+  .survey-css-card.wide {
+    grid-column:auto;
+  }
+
+  .survey-css-row,
+  .survey-css-card.wide .survey-css-row {
+    grid-template-columns:minmax(0,1.35fr) minmax(70px,1.65fr) 3.2rem;
+    gap:.45rem;
+  }
+
+  .survey-css-label {
+    font-size:.73rem;
+  }
+
+  .survey-css-value {
+    font-size:.72rem;
+  }
+
+  .link-row {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .soco-link {
+    width:100%;
+    justify-content:center;
+    text-align:center;
+  }
+
+  .paper-card {
+    padding:1.2rem 1rem;
+  }
+
+  .survey-toggle {
+    padding:.9rem .95rem;
+  }
+
+  .survey-question {
+    padding:.8rem .6rem;
+  }
+
+  .roster-summary {
+    display:block;
+  }
+
+  .roster-summary span {
+    display:block;
+    margin-top:.3rem;
+  }
+
+  .attendance-table {
+    min-width:690px;
+  }
+
+  .footer-card {
+    padding:1.3rem 1.15rem;
+    border-radius:16px;
+  }
+}
+</style>
+
+```{r}
+#| label: setup
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+
+resolve_meeting_dir <- function() {
+
+  # Quarto can execute knitr from /Applications/quarto/share on macOS,
+  # so never trust current_input(dir = TRUE) by itself.
+  expected_folder <- "November 24 2025 - MATISSE"
+
+  candidates <- character(0)
+
+  # 1. If RStudio knows the open source file, use it.
+  if (interactive() && requireNamespace("rstudioapi", quietly = TRUE)) {
+    ctx <- tryCatch(
+      rstudioapi::getSourceEditorContext(),
+      error = function(e) NULL
+    )
+
+    if (!is.null(ctx) && !is.null(ctx$path) && nzchar(ctx$path)) {
+      candidates <- c(
+        candidates,
+        dirname(ctx$path)
+      )
+    }
+  }
+
+  # 2. Ask knitr for the input path, but resolve it against getwd()
+  #    rather than accepting Quarto's internal share directory.
+  qmd_input <- tryCatch(
+    knitr::current_input(),
+    error = function(e) NULL
+  )
+
+  if (!is.null(qmd_input) && length(qmd_input) == 1 && nzchar(qmd_input)) {
+    if (file.exists(qmd_input)) {
+      candidates <- c(
+        candidates,
+        dirname(normalizePath(qmd_input, winslash = "/", mustWork = TRUE))
+      )
+    }
+
+    candidates <- c(
+      candidates,
+      dirname(
+        file.path(
+          getwd(),
+          qmd_input
+        )
+      )
+    )
+  }
+
+  # 3. Common Quarto working-directory possibilities.
+  candidates <- c(
+    candidates,
+    getwd(),
+    file.path(getwd(), "journal_club", expected_folder),
+    file.path(dirname(getwd()), expected_folder)
+  )
+
+  # 4. If rendering from the project root, search only the expected
+  #    journal_club location.
+  project_candidate <- file.path(
+    getwd(),
+    "journal_club",
+    expected_folder
+  )
+
+  if (dir.exists(project_candidate)) {
+    candidates <- c(candidates, project_candidate)
+  }
+
+  candidates <- unique(
+    normalizePath(
+      candidates[dir.exists(candidates)],
+      winslash = "/",
+      mustWork = TRUE
+    )
+  )
+
+  # A valid meeting directory must contain index.qmd and the files folder.
+  valid <- candidates[
+    file.exists(file.path(candidates, "index.qmd")) &
+      dir.exists(file.path(candidates, "files"))
+  ]
+
+  # Prefer the explicitly named MATISSE meeting folder.
+  named <- valid[
+    basename(valid) == expected_folder
+  ]
+
+  if (length(named) > 0) {
+    return(named[1])
+  }
+
+  if (length(valid) > 0) {
+    return(valid[1])
+  }
+
+  stop(
+    paste0(
+      "Could not resolve the MATISSE meeting directory.
+",
+      "Current working directory: ", getwd(), "
+",
+      "Expected folder: journal_club/", expected_folder
+    )
+  )
+}
+
+meeting_dir <- resolve_meeting_dir()
+
+# Attendance
+attendance_dir <- file.path(
+  meeting_dir,
+  "files",
+  "meeting recap-attendance"
+)
+
+attendance_clean_path <- file.path(attendance_dir, "attendance_clean.csv")
+attendance_summary_path <- file.path(attendance_dir, "attendance_summary.csv")
+
+if (!file.exists(attendance_clean_path) || !file.exists(attendance_summary_path)) {
+
+  attendance_script_candidates <- c(
+    file.path(meeting_dir, "scripts", "process_attendance.R"),
+    file.path(meeting_dir, "scripts", "MATISSE_process_attendance.R")
+  )
+
+  attendance_script <- attendance_script_candidates[
+    file.exists(attendance_script_candidates)
+  ][1]
+
+  if (
+    length(attendance_script) != 1 ||
+    is.na(attendance_script)
+  ) {
+    stop(
+      paste0(
+        "Could not find the MATISSE attendance-processing script.\n",
+        "Expected one of:\n  ",
+        paste(attendance_script_candidates, collapse = "\n  ")
+      )
+    )
+  }
+
+  # Pass the already-resolved meeting_dir into the sourced script.
+  source(
+    attendance_script,
+    local = TRUE
+  )
+}
+
+people <- readr::read_csv(
+  attendance_clean_path,
+  show_col_types = FALSE
+)
+
+headline <- readr::read_csv(
+  attendance_summary_path,
+  show_col_types = FALSE
+)
+
+# Archived pre-Journal Club survey
+survey_available <- FALSE
+survey_error <- NULL
+
+survey_rds_candidates <- c(
+  file.path(meeting_dir, "files", "Pre_JC_survey_unprocessed", "survey_results.rds"),
+  file.path(meeting_dir, "files", "Pre_JC_survey_processed", "survey_results.rds"),
+  file.path(meeting_dir, "files", "survey_results.rds")
+)
+
+survey_rds_path <- survey_rds_candidates[
+  file.exists(survey_rds_candidates)
+][1]
+
+helper_candidates <- c(
+  file.path(meeting_dir, "scripts", "REDCap Helpers.R"),
+  file.path(meeting_dir, "REDCap Helpers.R")
+)
+
+helper_path <- helper_candidates[
+  file.exists(helper_candidates)
+][1]
+
+survey_dict_candidates <- list.files(
+  meeting_dir,
+  pattern = "DataDictionary.*\\.csv$|data.?dictionary.*\\.csv$|_DataDictionary_.*\\.csv$",
+  full.names = TRUE,
+  recursive = TRUE,
+  ignore.case = TRUE
+)
+
+survey_dict_path <- if (length(survey_dict_candidates) > 0) {
+  survey_dict_candidates[
+    which.max(file.info(survey_dict_candidates)$mtime)
+  ]
+} else {
+  NA_character_
+}
+
+if (
+  length(survey_rds_path) == 1 &&
+  !is.na(survey_rds_path) &&
+  length(helper_path) == 1 &&
+  !is.na(helper_path)
+) {
+
+  old_wd <- getwd()
+
+  survey_available <- tryCatch({
+
+    # The historical presentation was written assuming the meeting folder
+    # was the working directory. Recreate that environment while initializing
+    # the archived survey.
+    setwd(meeting_dir)
+
+    source(
+      helper_path,
+      local = TRUE
+    )
+
+    # IMPORTANT: pass the resolved dictionary explicitly. The REDCap helper
+    # defaults to here::here()/files/data dictionary, but this historical
+    # MATISSE folder stores its dictionary elsewhere.
+    if (
+      length(survey_dict_path) != 1 ||
+      is.na(survey_dict_path) ||
+      !file.exists(survey_dict_path)
+    ) {
+      stop(
+        paste0(
+          "Could not find the MATISSE REDCap data dictionary under: ",
+          meeting_dir
+        )
+      )
+    }
+
+    choice_map <- get_dictionary_choices(
+      dict_path = survey_dict_path
+    )
+
+    # Historical recap: use the archived RDS directly rather than attempting
+    # a live REDCap connection.
+    dt <- readRDS(
+      survey_rds_path
+    )
+
+    # IMPORTANT: keep these objects in the main knitr execution environment.
+    # Later survey chunks depend directly on dt_clean, checkbox_data and
+    # question_map.
+    dt_clean <- clean_all_survey_data(
+      dt,
+      choice_map = choice_map,
+      dict_path = survey_dict_path
+    )
+
+    checkbox_data <- prepare_all_checkboxes(
+      dt_clean,
+      choice_map = choice_map,
+      dict_path = survey_dict_path
+    )
+
+    question_map <- create_question_map(
+      dict_path = survey_dict_path
+    )
+
+    disease_name <- "CSCC"
+
+    normalize_acronyms <- function(df) {
+      df |>
+        mutate(
+          across(
+            where(is.character),
+            ~ .x |>
+              str_replace_all("\\bCscc\\b", "CSCC") |>
+              str_replace_all("\\bCt\\b", "CT") |>
+              str_replace_all("\\bFdg\\b", "FDG") |>
+              str_replace_all("\\bPet\\b", "PET") |>
+              str_replace_all("\\bMri\\b", "MRI") |>
+              str_replace_all("\\bΔtlg50%\\b", "ΔTLG50%") |>
+              str_replace_all("\\bCll\\b", "CLL") |>
+              str_replace_all("\\bPd-1\\b", "PD-1") |>
+              str_replace_all("\\bFda\\b", "FDA")
+          )
+        )
+    }
+
+    dt_clean <- normalize_acronyms(
+      dt_clean
+    )
+
+    checkbox_data <- lapply(
+      checkbox_data,
+      normalize_acronyms
+    )
+
+    if ("patients_per_month" %in% names(dt_clean)) {
+      dt_clean <- dt_clean |>
+        mutate(
+          patients_per_month =
+            str_replace(
+              patients_per_month,
+              "Cscc",
+              "CSCC"
+            )
+        )
+    }
+
+    if ("minimum_response_omit_surgery" %in% names(dt_clean)) {
+      dt_clean <- dt_clean |>
+        mutate(
+          minimum_response_omit_surgery =
+            str_replace(
+              minimum_response_omit_surgery,
+              "Δtlg50%",
+              "ΔTLG50%"
+            )
+        )
+    }
+
+    if ("indicators_omit_surgery" %in% names(checkbox_data)) {
+      checkbox_data$indicators_omit_surgery <-
+        checkbox_data$indicators_omit_surgery |>
+        mutate(
+          label = str_replace_all(label, "Ct", "CT"),
+          label = str_replace(label, "Mri", "MRI"),
+          label = str_replace(label, "Fdg", "FDG"),
+          label = str_replace(label, "tlg50", "TLG50"),
+          label = str_replace(label, "Pet", "PET"),
+          label = str_replace(label, "Cscc", "CSCC")
+        )
+    }
+
+    TRUE
+
+  }, error = function(e) {
+
+    survey_error <<- conditionMessage(e)
+    message(
+      "Survey setup unavailable: ",
+      survey_error
+    )
+
+    FALSE
+
+  }, finally = {
+
+    setwd(old_wd)
+
+  })
+
+} else {
+
+  missing_parts <- character(0)
+
+  if (
+    length(survey_rds_path) != 1 ||
+    is.na(survey_rds_path)
+  ) {
+    missing_parts <- c(
+      missing_parts,
+      "survey_results.rds"
+    )
+  }
+
+  if (
+    length(helper_path) != 1 ||
+    is.na(helper_path)
+  ) {
+    missing_parts <- c(
+      missing_parts,
+      "REDCap Helpers.R"
+    )
+  }
+
+  survey_error <- paste(
+    "Missing:",
+    paste(
+      missing_parts,
+      collapse = ", "
+    )
+  )
+}
+
+```
+
+<div class="hero">
+
+<div class="kicker">SoCO Journal Club · November 24, 2025</div>
+
+# MATISSE: when response begins to challenge surgery
+
+<p class="hero-copy">
+A Journal Club on ultra-short neoadjuvant nivolumab with or without low-dose ipilimumab in resectable cutaneous squamous cell carcinoma — and on the harder question of what evidence should be enough to adapt, reduce, or potentially omit definitive local therapy.
+</p>
+
+<div class="accent"></div>
+
+<div class="link-row">
+<a class="soco-link" href="https://doi.org/10.1038/s41591-025-03943-w">Read the article</a>
+<a class="soco-link secondary" href="../../jc.qmd">Back to Journal Club</a>
+</div>
+
+</div>
+
+
+<div class="section-kicker">Meeting pulse</div>
+
+## A sustained multidisciplinary conversation
+
+```{r}
+#| echo: false
+#| results: asis
+
+h <- headline[1, ]
+
+cat(
+  '<div class="metric-grid">',
+    '<div class="metric-card">',
+      '<span class="metric-label">People represented</span>',
+      '<span class="metric-value">', h$people, '</span>',
+      '<span class="metric-note">Unique people after reconnect reconciliation</span>',
+    '</div>',
+    '<div class="metric-card">',
+      '<span class="metric-label">Median time together</span>',
+      '<span class="metric-value">', round(h$median_minutes), ' min</span>',
+      '<span class="metric-note">Half the room stayed at least this long</span>',
+    '</div>',
+    '<div class="metric-card">',
+      '<span class="metric-label">Stayed ≥ 60 minutes</span>',
+      '<span class="metric-value">', scales::percent(h$pct_60min_plus, accuracy = 1), '</span>',
+      '<span class="metric-note">Sustained engagement across the session</span>',
+    '</div>',
+  '</div>'
+)
+```
+
+<div class="partnership-card">
+  <div class="partnership-eyebrow">Academic–industry partnership</div>
+  <div class="partnership-title">A joint conversation with Bristol Myers Squibb</div>
+  <p class="partnership-copy">
+    This Journal Club was part of SoCO's academic–society–industry partnership series.
+    We were pleased to welcome colleagues from <strong>Bristol Myers Squibb</strong> into the room
+    for the MATISSE discussion. Their participation added an important industry perspective
+    while preserving the meeting's independent, evidence-focused format.
+  </p>
+</div>
+
+
+<div class="section-kicker">The paper</div>
+
+## Ultra-short neoadjuvant immunotherapy before planned surgery
+
+<div class="paper-card">
+
+<div class="paper-eyebrow">Primary article · Nature Medicine</div>
+
+<div class="paper-title">
+Neoadjuvant ipilimumab and nivolumab in resectable cutaneous squamous cell carcinoma: a randomized phase 2 trial
+</div>
+
+<div class="paper-citation">
+<strong>Breukers SE, Traets JJH, van Dijk SW, et al.</strong>
+<em>Nature Medicine.</em> 2025;31(12):4055–4064.<br>
+doi: 10.1038/s41591-025-03943-w
+</div>
+
+</div>
+
+<div class="question-card">
+The paper's most provocative question was not simply whether neoadjuvant immunotherapy works. It was: <strong>when a patient responds deeply and quickly, how much surgery and radiation do they still need?</strong>
+</div>
+
+
+<div class="section-kicker">Study architecture</div>
+
+## Two doses, surgery at week 4, and an unexpected natural experiment
+
+<div class="section-intro">
+MATISSE enrolled 50 patients with resectable stage I–IVa CSCC requiring extensive or potentially disfiguring surgery. Patients were assigned to two doses of nivolumab or two doses of nivolumab plus one low-dose ipilimumab dose before planned standard-of-care surgery in week 4. The trial was randomized but explicitly noncomparative: it was not designed or powered to establish superiority of one immunotherapy arm over the other.
+</div>
+
+<div class="highlight-grid">
+
+<div class="highlight-card">
+<div class="highlight-num">01 · Pathologic response</div>
+<h3>55% versus 80% overall pathologic response</h3>
+<p>Among the 40 patients who proceeded to surgery, MPR or PPR occurred in 55% with nivolumab and 80% with nivolumab plus ipilimumab. The individual components were MPR 45% and 50%, and PPR 10% and 30%, respectively.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">02 · Survival among responders</div>
+<h3>Response carried a strong prognostic signal</h3>
+<p>Patients achieving MPR or PPR had 100% disease-specific survival at 2 years, irrespective of treatment arm.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">03 · Organ preservation</div>
+<h3>Nine patients remained cancer-free without surgery or RT</h3>
+<p>Ten patients chose not to undergo planned local therapy. Nine ultimately achieved a clinical complete remission after only the neoadjuvant treatment and remained cancer-free at a median follow-up of 34 months.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">04 · Toxicity</div>
+<h3>No apparent surgical penalty from the short course</h3>
+<p>Grade 3 immune-related toxicity was 12% with nivolumab and 8% with nivolumab plus ipilimumab; no grade 4–5 irAEs were observed, and surgery was not delayed because of immune toxicity.</p>
+</div>
+
+</div>
+
+<div class="caution-note">
+<strong>Important design point:</strong> the 10 patients who did not undergo planned surgery were not randomized to treatment omission. Their decision created a clinically fascinating observational cohort, but it does not establish that surgery can safely be omitted in otherwise similar responders.
+</div>
+
+
+<div class="section-kicker">The biomarker question</div>
+
+## Could we identify the patients in whom de-escalation is safest?
+
+<div class="highlight-grid">
+
+<div class="highlight-card">
+<div class="highlight-num">FDG-PET</div>
+<h3>ΔTLG50% emerged as the most actionable early signal</h3>
+<p>A decrease in total lesion glycolysis at week 4 identified response with 92% accuracy at the primary tumor and 91% accuracy at the index lymph node. An on-treatment decrease was accompanied by 100% 2-year DSS.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">Week-4 biopsy</div>
+<h3>Pathology added information, but imperfectly</h3>
+<p>A week-4 biopsy showing ≤50% viable tumor identified response with 92% sensitivity, 64% specificity, and 82% accuracy.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">MRI</div>
+<h3>Anatomic response was less persuasive</h3>
+<p>The paper reported poor correlation between MR-RECIST response and pathological response, underscoring the challenge of using size-based imaging alone after immunotherapy.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">Tumor biology</div>
+<h3>Interesting signals were not yet individual decision tools</h3>
+<p>Baseline IFN-γ signature was associated with response, while TMB was not discriminating in the expected direction. The authors concluded that these molecular measures were not sufficiently robust for individual treatment decisions.</p>
+</div>
+
+</div>
+
+
+<div class="section-kicker">Before the meeting</div>
+
+## What did the room believe before discussing MATISSE?
+
+<div class="section-intro">
+The pre-Journal Club survey deliberately asked the group to commit before the paper discussion: prior experience with nivolumab plus ipilimumab, preferred neoadjuvant agent, how many doses they would give, whether surgery should always proceed, what findings might justify omission, and what barriers limit dual-checkpoint use.
+</div>
+
+```{r}
+#| echo: false
+#| results: asis
+if (!survey_available) {
+  detail <- if (
+    exists("survey_error") &&
+    !is.null(survey_error) &&
+    nzchar(survey_error)
+  ) {
+    paste0(
+      '<br><span style="font-size:.86em;">Setup detail: ',
+      htmltools::htmlEscape(survey_error),
+      '</span>'
+    )
+  } else {
+    ""
+  }
+
+  cat(
+    '<div class="caution-note">',
+    '<strong>Survey could not be initialized during this render.</strong> ',
+    'The archived survey is present, but one of the survey helper/setup steps failed.',
+    detail,
+    '</div>'
+  )
+}
+```
+
+```{r}
+#| label: survey-snapshot
+#| echo: false
+#| results: asis
+
+if (survey_available) {
+
+  html_escape2 <- function(x) {
+    x <- gsub("&", "&amp;", x, fixed = TRUE)
+    x <- gsub("<", "&lt;", x, fixed = TRUE)
+    x <- gsub(">", "&gt;", x, fixed = TRUE)
+    x
+  }
+
+  make_snapshot <- function(data, var, title, kicker, keep = NULL, note = NULL) {
+
+    x <- data |>
+      dplyr::filter(!is.na(.data[[var]]), .data[[var]] != "") |>
+      dplyr::count(.data[[var]], name = "n") |>
+      dplyr::mutate(
+        pct = 100 * n / sum(n),
+        label = as.character(.data[[var]])
+      )
+
+    if (!is.null(keep)) {
+      x <- x |>
+        dplyr::filter(label %in% keep) |>
+        dplyr::mutate(
+          order_key = match(label, keep)
+        ) |>
+        dplyr::arrange(order_key)
+    } else {
+      x <- x |>
+        dplyr::arrange(desc(n))
+    }
+
+    cat('<div class="survey-insight-card">')
+    cat('<div class="survey-insight-kicker">', html_escape2(kicker), '</div>')
+    cat('<h3>', html_escape2(title), '</h3>')
+
+    for (i in seq_len(nrow(x))) {
+      cat(
+        '<div class="survey-mini-row">',
+          '<div class="survey-mini-label">', html_escape2(x$label[i]), '</div>',
+          '<div class="survey-mini-track"><div class="survey-mini-fill" style="width:100%;"></div></div>',
+          '<div class="survey-mini-value">', round(x$pct[i]), '%</div>',
+        '</div>'
+      )
+    }
+
+    if (!is.null(note)) {
+      cat('<div class="survey-insight-note">', html_escape2(note), '</div>')
+    }
+
+    cat('</div>')
+  }
+
+  cat('<div class="survey-snapshot-grid">')
+
+  make_snapshot(
+    dt_clean,
+    "used_nivo_ipi",
+    "Had the room used NIVO + IPI preoperatively?",
+    "Prior experience",
+    keep = c("Yes", "No", "I Am Not A Clinician"),
+    note = "Most respondents had not yet used the combination in the preoperative setting."
+  )
+
+  make_snapshot(
+    dt_clean,
+    "surgery_decision",
+    "Should surgery be automatic after neoadjuvant therapy?",
+    "Treatment strategy",
+    keep = c(
+      "Decision Based On Response At Pre-Surgical Evaluation",
+      "Routinely Take To Surgery",
+      "I Am Not A Clinician"
+    ),
+    note = "The dominant pre-meeting view favored letting response inform the surgical decision."
+  )
+
+  make_snapshot(
+    dt_clean,
+    "minimum_response_omit_surgery",
+    "What minimum response might justify omitting surgery?",
+    "De-escalation threshold",
+    keep = c(
+      "Complete Clinical Response On Physical Examination",
+      "Visible Decrease In Tumor Size On Physical Examination",
+      "Meaningful Symptomatic Improvement Alone",
+      "I Would Not Consider Omitting Surgery Outside A Clinical Trial",
+      "I Am Not A Clinician"
+    ),
+    note = "Complete clinical response was the most common threshold among the listed response-based options."
+  )
+
+  cat('</div>')
+}
+```
+
+
+<div class="survey-disclosure">
+<button id="survey-toggle" class="survey-toggle" type="button" aria-expanded="false" aria-controls="full-survey-panel">
+  <span>Explore all 11 pre-meeting survey questions</span>
+  <span class="survey-chevron">⌄</span>
+</button>
+</div>
+
+<div id="full-survey-panel" class="survey-panel">
+
+```{r}
+#| label: full-survey-css
+#| echo: false
+#| results: asis
+
+if (survey_available) {
+
+  esc <- function(x) {
+    x <- gsub("&", "&amp;", x, fixed = TRUE)
+    x <- gsub("<", "&lt;", x, fixed = TRUE)
+    x <- gsub(">", "&gt;", x, fixed = TRUE)
+    x
+  }
+
+  shorten_label <- function(x) {
+
+    dplyr::case_when(
+      stringr::str_detect(x, stringr::regex("^I Am Not A Clinician$", ignore_case = TRUE)) ~
+        "Not a clinician",
+
+      stringr::str_detect(x, stringr::regex("Clinician But I Do Not (Manage|Treat) CSCC", ignore_case = TRUE)) ~
+        "Clinician, does not manage CSCC",
+
+      stringr::str_detect(x, stringr::regex("^Medical Oncologist$", ignore_case = TRUE)) ~
+        "Medical oncology",
+      stringr::str_detect(x, stringr::regex("^Medical Dermatologist$", ignore_case = TRUE)) ~
+        "Medical dermatology",
+      stringr::str_detect(x, stringr::regex("^Surgical Oncologist$", ignore_case = TRUE)) ~
+        "Surgical oncology",
+      stringr::str_detect(x, stringr::regex("^Mohs Surgeon$", ignore_case = TRUE)) ~
+        "Mohs surgery",
+      stringr::str_detect(x, stringr::regex("^Radiation Oncologist$", ignore_case = TRUE)) ~
+        "Radiation oncology",
+      stringr::str_detect(x, stringr::regex("^Non-Clinician Researcher$", ignore_case = TRUE)) ~
+        "Non-clinician researcher",
+      stringr::str_detect(x, stringr::regex("^Advanced Practice Provider$", ignore_case = TRUE)) ~
+        "Advanced practice provider",
+
+      stringr::str_detect(x, stringr::regex("Decision Based On Response At Pre-Surgical Evaluation", ignore_case = TRUE)) ~
+        "Decision based on response",
+      stringr::str_detect(x, stringr::regex("Routinely Take To Surgery", ignore_case = TRUE)) ~
+        "Routinely proceed to surgery",
+
+      stringr::str_detect(x, stringr::regex("Complete Clinical Response On Physical Examination", ignore_case = TRUE)) ~
+        "Complete clinical response",
+      stringr::str_detect(x, stringr::regex("Visible Decrease In Tumor Size On Physical Examination", ignore_case = TRUE)) ~
+        "Visible tumor decrease",
+      stringr::str_detect(x, stringr::regex("Meaningful (Improvement In Patient-Reported Symptoms|Symptomatic Improvement Alone)", ignore_case = TRUE)) ~
+        "Meaningful symptomatic improvement",
+      stringr::str_detect(x, stringr::regex("Partial (Response|Radiologic Response).*CT Or MRI", ignore_case = TRUE)) ~
+        "Partial response on CT/MRI",
+      stringr::str_detect(x, stringr::regex("Complete Radiologic Response.*CT Or MRI", ignore_case = TRUE)) ~
+        "Complete response on CT/MRI",
+      stringr::str_detect(x, stringr::regex("Substantial (Decrease|Reduction).*FDG-PET|ΔTLG50", ignore_case = TRUE)) ~
+        "Substantial FDG-PET metabolic response",
+      stringr::str_detect(x, stringr::regex("Complete Resolution Of FDG-PET Avidity", ignore_case = TRUE)) ~
+        "Complete FDG-PET resolution",
+      stringr::str_detect(x, stringr::regex("Biopsy.*0% Viable Tumor", ignore_case = TRUE)) ~
+        "Biopsy: 0% viable tumor",
+      stringr::str_detect(x, stringr::regex("Biopsy.*10% Viable Tumor", ignore_case = TRUE)) ~
+        "Biopsy: ≤10% viable tumor",
+      stringr::str_detect(x, stringr::regex("Biopsy.*50% Viable Tumor", ignore_case = TRUE)) ~
+        "Biopsy: ≤50% viable tumor",
+      stringr::str_detect(x, stringr::regex("Would Not (Omit|Consider Omitting) Surgery Outside A Clinical Trial", ignore_case = TRUE)) ~
+        "Would not omit outside a trial",
+
+      stringr::str_detect(x, stringr::regex("Progression On Prior Anti.*PD-1", ignore_case = TRUE)) ~
+        "Progression after prior anti-PD-1",
+      stringr::str_detect(x, stringr::regex("Bulky Regional Nodal", ignore_case = TRUE)) ~
+        "Bulky regional nodal CSCC",
+      stringr::str_detect(x, stringr::regex("Another Critical Site.*Mutilating", ignore_case = TRUE)) ~
+        "Critical site / mutilating surgery",
+      stringr::str_detect(x, stringr::regex("Periorbital.*Orbital Exenteration", ignore_case = TRUE)) ~
+        "Periorbital CSCC requiring exenteration",
+      stringr::str_detect(x, stringr::regex("Conjunctival.*Orbital Exenteration", ignore_case = TRUE)) ~
+        "Conjunctival SCC requiring exenteration",
+      stringr::str_detect(x, stringr::regex("Indolent Hematologic Malignancy", ignore_case = TRUE)) ~
+        "Indolent hematologic malignancy",
+      stringr::str_detect(x, stringr::regex("Hematologic Malignancy.*Active Systemic Treatment", ignore_case = TRUE)) ~
+        "Hematologic malignancy on treatment",
+      stringr::str_detect(x, stringr::regex("Solid-Organ Transplant", ignore_case = TRUE)) ~
+        "Solid-organ transplant recipient",
+      stringr::str_detect(x, stringr::regex("Low-Dose Immunosuppression.*Autoimmune", ignore_case = TRUE)) ~
+        "Low-dose immunosuppression for autoimmune disease",
+      stringr::str_detect(x, stringr::regex("None Of The Above", ignore_case = TRUE)) ~
+        "None of the above",
+
+      stringr::str_detect(x, stringr::regex("Concerns About Toxicity Or Tolerability", ignore_case = TRUE)) ~
+        "Toxicity / tolerability",
+      stringr::str_detect(x, stringr::regex("Uncertainty About Benefit Versus Risk", ignore_case = TRUE)) ~
+        "Uncertain benefit–risk",
+      stringr::str_detect(x, stringr::regex("Cost Or Insurance Coverage", ignore_case = TRUE)) ~
+        "Cost / insurance coverage",
+      stringr::str_detect(x, stringr::regex("Not FDA Approved", ignore_case = TRUE)) ~
+        "Not FDA approved",
+      stringr::str_detect(x, stringr::regex("Not Recommended By Guidelines", ignore_case = TRUE)) ~
+        "Not recommended by guidelines",
+      stringr::str_detect(x, stringr::regex("I Have No Concerns", ignore_case = TRUE)) ~
+        "No concerns",
+
+      TRUE ~ x
+    )
+  }
+
+  render_rows <- function(df) {
+
+    for (i in seq_len(nrow(df))) {
+
+      pct <- df$pct[i]
+
+      cat(
+        '<div class="survey-css-row">',
+          '<div class="survey-css-label">', esc(shorten_label(df$label[i])), '</div>',
+          '<div class="survey-css-track">',
+            '<div class="survey-css-fill" style="width:100%;"></div>',
+          '</div>',
+          '<div class="survey-css-value">', round(pct), '%</div>',
+        '</div>'
+      )
+    }
+  }
+
+  radio_data <- function(var, order = NULL) {
+
+    x <- dt_clean |>
+      dplyr::filter(!is.na(.data[[var]]), .data[[var]] != "") |>
+      dplyr::count(.data[[var]], name = "n") |>
+      dplyr::mutate(
+        label = as.character(.data[[var]]),
+        pct = 100 * n / sum(n)
+      )
+
+    if (!is.null(order)) {
+      x <- x |>
+        dplyr::mutate(.ord = match(label, order)) |>
+        dplyr::arrange(.ord, desc(n))
+    } else {
+      x <- x |>
+        dplyr::arrange(desc(n))
+    }
+
+    x
+  }
+
+  checkbox_css_data <- function(var, order = NULL) {
+
+    x <- checkbox_data[[var]] |>
+      dplyr::mutate(
+        pct = 100 * n_selected / .respondent_total,
+        label = as.character(label)
+      )
+
+    if (!is.null(order)) {
+      x <- x |>
+        dplyr::mutate(.ord = match(label, order)) |>
+        dplyr::arrange(.ord, desc(n_selected))
+    } else {
+      x <- x |>
+        dplyr::arrange(desc(n_selected))
+    }
+
+    x
+  }
+
+  render_card <- function(
+    number,
+    title,
+    data,
+    wide = FALSE,
+    note = NULL
+  ) {
+
+    n_total <- if (".respondent_total" %in% names(data)) {
+      data$.respondent_total[1]
+    } else {
+      sum(data$n)
+    }
+
+    cls <- if (wide) "survey-css-card wide" else "survey-css-card"
+
+    cat('<div class="', cls, '">')
+    cat('<div class="survey-css-head">')
+    cat('<div>')
+    cat('<div class="survey-css-number">Question ', number, '</div>')
+    cat('<h3>', esc(title), '</h3>')
+    cat('</div>')
+    cat('<div class="survey-css-n">n = ', n_total, '</div>')
+    cat('</div>')
+
+    render_rows(data)
+
+    if (!is.null(note)) {
+      cat('<div class="survey-css-foot">', esc(note), '</div>')
+    }
+
+    cat('</div>')
+  }
+
+  cat('<div class="survey-css-grid">')
+
+  render_card(
+    1,
+    "Who was in the room?",
+    radio_data("who_are_you")
+  )
+
+  render_card(
+    2,
+    "How many high-risk CSCC patients did respondents see each month?",
+    radio_data("patients_per_month")
+  )
+
+  render_card(
+    3,
+    "Prior nivolumab + ipilimumab use",
+    radio_data("used_nivo_ipi")
+  )
+
+  render_card(
+    4,
+    "Preferred preoperative systemic therapy",
+    radio_data("preferred_preop_agent"),
+    note = "Cemiplimab was the dominant pre-meeting choice."
+  )
+
+  render_card(
+    5,
+    "How many doses before surgery?",
+    radio_data("doses_before_surgery")
+  )
+
+  render_card(
+    6,
+    "How many doses are needed for most of the benefit?",
+    radio_data("doses_needed_for_benefit")
+  )
+
+  render_card(
+    7,
+    "Should surgery be automatic after neoadjuvant therapy?",
+    radio_data("surgery_decision"),
+    note = "Most respondents favored allowing response to influence the surgical decision."
+  )
+
+  render_card(
+    8,
+    "What findings might support omission of surgery?",
+    checkbox_css_data("indicators_omit_surgery"),
+    wide = TRUE,
+    note = "Multiple selections were allowed; percentages therefore do not sum to 100%."
+  )
+
+  render_card(
+    9,
+    "Minimum response required to consider surgery omission",
+    radio_data("minimum_response_omit_surgery"),
+    wide = TRUE
+  )
+
+  render_card(
+    10,
+    "Where might nivolumab + ipilimumab fit?",
+    checkbox_css_data("situations_nivo_ipi"),
+    wide = TRUE,
+    note = "Multiple selections were allowed; percentages therefore do not sum to 100%."
+  )
+
+  render_card(
+    11,
+    "Barriers to preoperative nivolumab + ipilimumab",
+    checkbox_css_data("barriers_nivo_ipi"),
+    wide = TRUE,
+    note = "Toxicity/tolerability and uncertainty about benefit–risk were the most common barriers."
+  )
+
+  cat('</div>')
+}
+```
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("survey-toggle");
+  const panel = document.getElementById("full-survey-panel");
+
+  if (!button || !panel) return;
+
+  button.addEventListener("click", function () {
+    const open = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!open));
+    panel.classList.toggle("open", !open);
+  });
+});
+</script>
+
+
+<div class="section-kicker">What the room was really debating</div>
+
+## MATISSE pushed beyond response rate
+
+<div class="highlight-grid">
+
+<div class="highlight-card">
+<div class="highlight-num">01 · Combination therapy</div>
+<h3>Does ipilimumab add enough to matter?</h3>
+<p>The numerical difference in total pathological response was provocative, but the study was noncomparative and not powered to establish superiority of NIVO + IPI. The discussion therefore had to separate biological plausibility from causal evidence.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">02 · Surgery omission</div>
+<h3>Can a compelling natural experiment become a treatment strategy?</h3>
+<p>The nine durable clinical complete responses without surgery were difficult to ignore. But patient-selected omission is not the same as prospectively assigned response-adapted de-escalation.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">03 · Response definition</div>
+<h3>What should be sufficient to change local therapy?</h3>
+<p>Physical examination, CT/MRI, FDG-PET, and on-treatment biopsy each answer different questions. The meeting focused on which combination could be trusted enough to support a major decision such as omitting surgery.</p>
+</div>
+
+<div class="highlight-card">
+<div class="highlight-num">04 · Treatment burden</div>
+<h3>Benefit is not only recurrence control</h3>
+<p>The quality-of-life signal in the surgery-omission cohort made treatment burden part of the efficacy discussion: organ preservation, function, and social role matter when evaluating a response-guided strategy.</p>
+</div>
+
+</div>
+
+
+<div class="section-kicker">Our community</div>
+
+## Who joined us?
+
+```{r}
+#| label: attendance-table
+#| echo: false
+#| results: asis
+
+roster <- people |>
+  transmute(
+    Name,
+    Minutes = round(duration_min),
+    Camera = if_else(any_camera, "●", "—"),
+    Unmuted = if_else(any_unmute, "●", "—"),
+    `Raised hand` = if_else(any_hand_raise, "●", "—")
+  ) |>
+  arrange(desc(Minutes), Name)
+
+cat(
+  '<div class="roster-summary">',
+    '<strong>', nrow(roster), ' people represented</strong>',
+    '<span>Sorted by time in meeting · ● indicates a recorded Teams signal</span>',
+  '</div>'
+)
+
+min_minutes <- min(roster$Minutes, na.rm = TRUE)
+max_minutes <- max(roster$Minutes, na.rm = TRUE)
+
+minute_fill <- function(x) {
+  if (max_minutes == min_minutes) return("rgba(40,169,162,.16)")
+  alpha <- 0.05 + 0.27 * ((x - min_minutes)/(max_minutes - min_minutes))
+  sprintf("rgba(40,169,162,%.3f)", alpha)
+}
+
+html_escape <- function(x) {
+  x <- gsub("&","&amp;",x,fixed=TRUE)
+  x <- gsub("<","&lt;",x,fixed=TRUE)
+  x <- gsub(">","&gt;",x,fixed=TRUE)
+  x
+}
+
+cat('<div class="attendance-scroll">')
+cat('<table class="attendance-table">')
+cat(
+  '<thead><tr>',
+    '<th>Name</th>',
+    '<th>Minutes</th>',
+    '<th>Camera</th>',
+    '<th>Unmuted</th>',
+    '<th>Raised hand</th>',
+  '</tr></thead><tbody>'
+)
+
+for (i in seq_len(nrow(roster))) {
+
+  row <- roster[i, ]
+
+  signal_cell <- function(value) {
+    cls <- if (identical(value, "●")) " signal-on" else ""
+    paste0('<td class="', cls, '">', value, '</td>')
+  }
+
+  cat(
+    '<tr>',
+      '<td class="name-cell">', html_escape(row$Name), '</td>',
+      '<td class="minutes-cell" style="background:', minute_fill(row$Minutes), ';">',
+        row$Minutes,
+      '</td>',
+      signal_cell(row$Camera),
+      signal_cell(row$Unmuted),
+      signal_cell(row$`Raised hand`),
+    '</tr>'
+  )
+}
+
+cat('</tbody></table></div>')
+```
+
+
+<div class="footer-card">
+
+## The most important result may have been the question MATISSE made unavoidable.
+
+<p>
+Two doses of immunotherapy produced deep responses quickly. Some patients then remained disease-free without the extensive local therapy that had originally been planned. MATISSE does not prove that surgery can be omitted—but it provides a compelling rationale for prospective trials in which response is allowed to determine what comes next.
+</p>
+
+</div>
+
+<div class="link-row">
+<a class="soco-link" href="../../jc.qmd">Back to Journal Club</a>
+<a class="soco-link secondary" href="https://doi.org/10.1038/s41591-025-03943-w">Read the article</a>
+</div>

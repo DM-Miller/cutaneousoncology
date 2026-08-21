@@ -1,0 +1,28 @@
+match_key,Name,duration_min,camera_on,hand_raise,unmute,any_camera,any_hand_raise,any_unmute
+adeadamson,Ade Adamson,53.45,2.0,0.0,2.0,True,False,True
+ajaysharma,"Ajay N. "" ""Sharma",45.46666666666667,4.0,0.0,2.0,True,False,True
+alexsorrentino,Alex Sorrentino,57.25,0.0,0.0,0.0,False,False,False
+christinecimoch,"Christine C. "" ""Cimoch",83.06666666666666,4.0,0.0,1.0,True,False,True
+d237,D237,72.51666666666667,1.0,0.0,0.0,True,False,False
+danhippe,Dan Hippe,98.2,1.0,0.0,1.0,True,False,True
+davidsavage,David J Savage,151.38333333333333,2.0,0.0,1.0,True,False,True
+davidmiller,David M. Miller,112.15,1.0,0.0,1.0,True,False,True
+elizabethbuchbinder,"Elizabeth I. "" ""Buchbinder",80.98333333333333,3.0,0.0,2.0,True,False,True
+elizabethlilley,"Elizabeth J. "" ""Lilley",19.9,0.0,0.0,0.0,False,False,False
+francescollichio,"Frances"" ""Collichio",12.783333333333333,0.0,0.0,0.0,False,False,False
+howardkaufman,Howard L. Kaufman,113.53333333333333,3.0,0.0,2.0,True,False,True
+isaacbrownell,Isaac Brownell,114.6,1.0,0.0,2.0,True,False,True
+jenniferdesimone,"Jennifer"" ""Desimone",109.78333333333333,1.0,0.0,3.0,True,False,True
+jessicafewkes,"Jessica L. "" ""Fewkes",46.2,0.0,0.0,0.0,False,False,False
+kristarubin,"Krista M. CNP"" ""Rubin",96.35,0.0,0.0,0.0,False,False,False
+mehranyusuf,"Mehran Behruj"" ""Yusuf",100.3,0.0,2.0,2.0,False,True,True
+minabakhtiar,"Mina "" ""Bakhtiar",85.15,2.0,0.0,1.0,True,False,True
+paulnghiem,Paul Nghiem,74.35,3.0,0.0,2.0,True,False,True
+peterchen,Peter Ch'en,89.3,1.0,0.0,0.0,True,False,False
+rhodaalani,"Rhoda Myra "" ""Alani",107.6,0.0,0.0,3.0,False,False,True
+rimakulikauskas,Rima Kulikauskas,96.63333333333334,2.0,0.0,0.0,True,False,False
+sameer,Sameer,106.48333333333333,4.0,0.0,2.0,True,False,True
+songpark,Song Park,40.53333333333333,1.0,0.0,0.0,True,False,False
+tatyanasharova,"Tatyana"" ""Sharova",71.95,1.0,0.0,2.0,True,False,True
+vernsondak,Vern Sondak,110.25,2.0,0.0,3.0,True,False,True
+vishalpatel,Vishal Patel,68.06666666666666,1.0,1.0,2.0,True,True,True
