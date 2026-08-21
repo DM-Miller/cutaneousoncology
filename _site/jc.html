@@ -440,6 +440,93 @@ ul.task-list li input[type="checkbox"] {
   }
 
   /* =========================================================
+     Next Journal Club
+     ========================================================= */
+
+  .soco-jc-next {
+    max-width: 1120px;
+    margin: 4.5rem auto 4.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .soco-jc-next-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2rem, 4vw, 3rem);
+    border: 1px solid var(--soco-line);
+    border-radius: 1.15rem;
+    background:
+      radial-gradient(circle at 88% 18%, rgba(15,127,134,0.13), transparent 30%),
+      radial-gradient(circle at 12% 88%, rgba(255,59,63,0.05), transparent 30%),
+      linear-gradient(135deg, #eef8f7 0%, #f8fbfb 58%, #ffffff 100%);
+    box-shadow: 0 16px 44px rgba(4,27,51,0.07);
+  }
+
+  .soco-jc-next-card::after {
+    content: "?";
+    position: absolute;
+    right: 1.6rem;
+    bottom: -2.8rem;
+    color: rgba(15,127,134,0.055);
+    font-size: clamp(9rem, 20vw, 17rem);
+    font-weight: 850;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .soco-jc-next-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+  }
+
+  .soco-jc-next-label {
+    margin-bottom: 0.55rem;
+    color: var(--soco-teal);
+    font-size: 0.76rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .soco-jc-next h2 {
+    margin: 0 0 0.8rem;
+    color: var(--soco-navy);
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  .soco-jc-next p {
+    max-width: 720px;
+    margin: 0;
+    color: #526574;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .soco-jc-next-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 1.35rem;
+    padding: 0.55rem 0.82rem;
+    border: 1px solid rgba(15,127,134,0.28);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.82);
+    color: var(--soco-navy);
+    font-size: 0.82rem;
+    font-weight: 780;
+  }
+
+  .soco-jc-next-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: var(--soco-coral);
+  }
+
+  /* =========================================================
      Rich recap archive
      ========================================================= */
 
@@ -661,6 +748,23 @@ ul.task-list li input[type="checkbox"] {
     white-space: nowrap;
   }
 
+  .soco-jc-recap-partnership {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 0.9rem;
+    padding: 0.52rem 0.9rem;
+    border: 1px solid rgba(15,127,134,0.26);
+    border-radius: 999px;
+    background: #eef8f7;
+    color: var(--soco-navy);
+    font-size: 0.78rem;
+    font-weight: 760;
+    line-height: 1.2;
+    text-align: center;
+  }
+
   @media (max-width: 820px) {
     .soco-jc-recap-card {
       grid-template-columns: 1fr;
@@ -796,9 +900,21 @@ ul.task-list li input[type="checkbox"] {
       margin-bottom: 2.8rem;
     }
 
-    .soco-jc-current {
+    .soco-jc-next {
       margin-top: 2.8rem;
       margin-bottom: 3.5rem;
+      padding-left: 0.85rem;
+      padding-right: 0.85rem;
+    }
+
+    .soco-jc-next-card {
+      padding: 1.35rem 1.15rem;
+      border-radius: 0.95rem;
+    }
+
+    .soco-jc-next-card::after {
+      right: -0.5rem;
+      bottom: -1.6rem;
     }
 
     .soco-jc-current-top,
@@ -888,7 +1004,7 @@ ul.task-list li input[type="checkbox"] {
 <p>A multidisciplinary forum for examining practice-changing and practice-informing literature in cutaneous oncology—with attention to what the data show, what they do not show, and how strongly they should change what we believe or do.</p>
 </div>
 <div class="soco-actions">
-<p><a href="#current-discussion" class="btn btn-primary">Current discussion</a> <a href="#meeting-recaps" class="btn btn-outline-primary">Meeting recaps</a> <a href="#article-archive" class="btn btn-outline-primary">Article archive</a> <a href="https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/" class="btn btn-outline-primary">Interactive timeline</a></p>
+<p><a href="#next-journal-club" class="btn btn-primary">Next Journal Club</a> <a href="#meeting-recaps" class="btn btn-outline-primary">Meeting recaps</a> <a href="#article-archive" class="btn btn-outline-primary">Article archive</a> <a href="https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/" class="btn btn-outline-primary">Interactive timeline</a></p>
 </div>
 </section>
 </div>
@@ -902,45 +1018,22 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="persuaded-by-evidence.-rarely-certain.">Persuaded by evidence. Rarely certain.</h2>
 <p>The SoCO Journal Club is a multi-institutional and multidisciplinary forum for discussing important literature in skin cancer.</p>
 <p>The aim is not simply to summarize a paper or decide whether it is “positive.” We examine the question, design, assumptions, analyses, uncertainty, clinical relevance, and the degree to which the evidence should alter practice—or generate the next question.</p>
-<p>Beginning in 2026, we are also preserving more of the <strong>meeting itself</strong>: the questions that animated the discussion, the perspectives that changed our thinking, and the people who were in the room.</p>
+<p>Beginning with selected meetings in late 2025 and continuing in 2026, we are also preserving more of the <strong>meeting itself</strong>: the questions that animated the discussion, the perspectives that changed our thinking, and the people who were in the room.</p>
 </section>
 </div>
-<div id="current-discussion" class="soco-jc-current">
-<div class="soco-jc-current-card">
-<div class="soco-jc-current-top">
-<div class="soco-eyebrow">
-<p>August 14, 2026 · Current discussion</p>
+<div id="next-journal-club" class="soco-jc-next">
+<div class="soco-jc-next-card">
+<div class="soco-jc-next-copy">
+<div class="soco-jc-next-label">
+<p>Coming next</p>
 </div>
-<section id="first-in-cutaneous-squamous-cell-carcinoma" class="level2">
-<h2 class="anchored" data-anchor-id="first-in-cutaneous-squamous-cell-carcinoma">FIRST in cutaneous squamous cell carcinoma</h2>
-<div class="soco-jc-citation">
-<p><strong>Miller DM, et al.</strong> Frontline immunotherapy with response-guided subsequent treatment (FIRST) in cutaneous squamous cell carcinoma: a Bayesian causal analysis of dose intensity, early benefit, and treatment de-escalation. <em>J Immunother Cancer.</em> 2026;14(7):e015029.</p>
+<section id="the-next-journal-club-paper-is-still-tbd." class="level2">
+<h2 class="anchored" data-anchor-id="the-next-journal-club-paper-is-still-tbd.">The next Journal Club paper is still TBD.</h2>
+<p>We have not picked the next article yet—and that is part of the fun. The next discussion will be posted here once the paper is selected, with the same focus on evidence, uncertainty, clinical relevance, and the questions that deserve a room full of thoughtful people.</p>
+<div class="soco-jc-next-status">
+<p><span class="soco-jc-next-dot"></span> Article selection in progress</p>
 </div>
 </section>
-</div>
-<div class="soco-jc-current-body">
-<p>The paper was the starting point. The larger conversation was about <strong>how much immunotherapy is enough, what a deep response should allow us to omit, and how confidently observational data can answer a causal treatment question.</strong></p>
-<div class="soco-jc-question">
-<p><span class="soco-jc-question-label">The question beneath the paper</span></p>
-<p>What does another dose actually buy us?</p>
-</div>
-<div class="soco-jc-discussion-grid">
-<section id="treatment-intensity" class="level3 soco-jc-discussion-card">
-<h3 class="anchored" data-anchor-id="treatment-intensity">Treatment intensity</h3>
-<p>Once a patient has already achieved a deep response, how much additional systemic therapy—or local consolidation—is actually necessary?</p>
-</section>
-<section id="causal-inference" class="level3 soco-jc-discussion-card">
-<h3 class="anchored" data-anchor-id="causal-inference">Causal inference</h3>
-<p>If dose is shaped by response, toxicity, frailty, and clinician judgment, what assumptions are required before we interpret a dose–outcome association causally?</p>
-</section>
-<section id="clinical-translation" class="level3 soco-jc-discussion-card">
-<h3 class="anchored" data-anchor-id="clinical-translation">Clinical translation</h3>
-<p>The signal is provocative. The challenge is deciding what is sufficiently persuasive to change practice and what still requires prospective confirmation.</p>
-</section>
-</div>
-<div class="soco-jc-links">
-<p><a href="./journal_club/August 14 2026 - FIRST in CSCC/index.html" class="soco-jc-link">Read the meeting recap</a> <a href="https://jitc.bmj.com/content/14/7/e015029" class="soco-jc-link secondary">Read the article</a> <a href="https://themillerlab.github.io/FIRST/" class="soco-jc-link secondary">Methods &amp; reproducible workflow</a></p>
-</div>
 </div>
 </div>
 </div>
@@ -1071,6 +1164,39 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="soco-jc-recap-meta">
 <p>30 attendees · 82-minute median meeting time</p>
+</div>
+</div>
+</div>
+</div>
+<div class="soco-jc-recap-card">
+<div class="soco-jc-recap-art">
+<p><img src="journal_club/November 24 2025 - MATISSE/MATISSE_Nov24_card.svg" class="img-fluid" alt="Primary article card for the November 24, 2025 SoCO Journal Club discussion of MATISSE and neoadjuvant nivolumab with or without ipilimumab in resectable cutaneous squamous cell carcinoma"></p>
+</div>
+<div class="soco-jc-recap-copy">
+<div class="soco-jc-recap-date">
+<p>November 24, 2025 · SoCO Journal Club</p>
+</div>
+<div class="soco-jc-recap-title">
+<p>MATISSE: Neoadjuvant Nivolumab ± Ipilimumab in Resectable CSCC</p>
+</div>
+<div class="soco-jc-recap-divider">
+
+</div>
+<div class="soco-jc-recap-question">
+<p>When response is this deep and this early, how much local therapy is still necessary?</p>
+</div>
+<div class="soco-jc-recap-description">
+<p>A response-adapted discussion of ultra-short neoadjuvant immunotherapy, whether surgery should remain automatic, what clinical, imaging, and pathologic signals might support treatment de-escalation, and where dual-checkpoint blockade may fit in high-risk resectable CSCC.</p>
+</div>
+<div class="soco-jc-recap-partnership">
+<p>Joint academic–industry session with Bristol Myers Squibb</p>
+</div>
+<div class="soco-jc-recap-footer">
+<div class="soco-jc-recap-actions">
+<p><a href="./journal_club/November 24 2025 - MATISSE/index.html" class="soco-jc-recap-link">Read meeting recap</a> <a href="https://doi.org/10.1038/s41591-025-03943-w" class="soco-jc-recap-link secondary">Read the article</a></p>
+</div>
+<div class="soco-jc-recap-meta">
+<p>29 attendees · academic–industry Journal Club</p>
 </div>
 </div>
 </div>

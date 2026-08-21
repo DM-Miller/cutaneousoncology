@@ -1,0 +1,30 @@
+match_key,Name,duration_min,camera_on,hand_raise,unmute,any_camera,any_hand_raise,any_unmute
+alexsorrentino,Alex Sorrentino,53.88333333333333,0,0,0,FALSE,FALSE,FALSE
+andrewknight,Andrew D. Knight,81.45,2,0,1,TRUE,FALSE,TRUE
+caratrulli,Cara Trulli,83.05,1,0,3,TRUE,FALSE,TRUE
+christinecimoch,Christine C. Cimoch,58.05,3,0,1,TRUE,FALSE,TRUE
+davidmiller,David M. Miller,85.05,1,0,0,TRUE,FALSE,FALSE
+elizabethbuchbinder,Elizabeth I. Buchbinder,82.96666666666667,2,0,2,TRUE,FALSE,TRUE
+francescollichio,Frances Collichio,84.05,5,3,3,TRUE,TRUE,TRUE
+frankworden,Frank Worden,30.366666666666667,0,0,2,FALSE,FALSE,TRUE
+gregorynorigian,Gregory Norigian,84.06666666666666,1,2,4,TRUE,TRUE,TRUE
+howardkaufman,Howard L. Kaufman,82.23333333333333,1,0,3,TRUE,FALSE,TRUE
+jenniferdesimone,Jennifer Desimone,77.93333333333334,2,0,2,TRUE,FALSE,TRUE
+julianeczapla,Juliane Andrade Czapla,80.26666666666667,1,0,0,TRUE,FALSE,FALSE
+kentsai,Ken Tsai,23.466666666666665,0,0,0,FALSE,FALSE,FALSE
+kevinemerick,Kevin S. Emerick,73.75,1,1,5,TRUE,TRUE,TRUE
+kristarubin,Krista M. Rubin,60,1,0,0,TRUE,FALSE,FALSE
+manishathakuria,Manisha Thakuria,76.03333333333333,0,0,0,FALSE,FALSE,FALSE
+mariamelashmawy,Mariam El-Ashmawy,25.5,2,0,1,TRUE,FALSE,TRUE
+meghanmooradian,Meghan J. Mooradian,41.55,0,0,1,FALSE,FALSE,TRUE
+mollyyancovitz,Molly Yancovitz,47.6,0,0,0,FALSE,FALSE,FALSE
+omidnajmi,Omid Najmi,75.23333333333333,2,0,3,TRUE,FALSE,TRUE
+rongejman,Ron S. Gejman,76.21666666666667,1,0,0,TRUE,FALSE,FALSE
+rossmerkin,Ross D. Merkin,83.28333333333333,1,2,5,TRUE,TRUE,TRUE
+ryansullivan,Ryan J. Sullivan,59.416666666666664,2,0,5,TRUE,FALSE,TRUE
+sameergupta,Sameer Gupta,79.23333333333333,3,0,2,TRUE,FALSE,TRUE
+sashahussain,Sasha J Hussain,75.53333333333333,1,0,0,TRUE,FALSE,FALSE
+soniacohen,Sonia Cohen,83.91666666666667,3,0,2,TRUE,FALSE,TRUE
+sunandanachandra,Sunandana Chandra,92.26666666666667,1,0,0,TRUE,FALSE,FALSE
+suzannetopalian,Suzanne Topalian,59.1,0,0,0,FALSE,FALSE,FALSE
+vishalpatel,Vishal Patel,76.7,5,2,5,TRUE,TRUE,TRUE
