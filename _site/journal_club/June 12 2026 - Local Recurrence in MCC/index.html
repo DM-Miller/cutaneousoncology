@@ -173,7 +173,18 @@ ul.task-list li input[type="checkbox"] {
   }
 
   body { color: var(--ink); background: #fff; }
-  main.content { max-width: 1120px; margin: auto; padding-top: 0 !important; }
+  main.content {
+    width: 100%;
+    max-width: 1120px;
+    min-width: 0;
+    margin: auto;
+    padding-top: 0 !important;
+  }
+
+  main.content,
+  main.content * {
+    box-sizing: border-box;
+  }
   h1,h2,h3 { color: var(--navy); font-weight: 800; }
 
   .hero {
@@ -812,106 +823,300 @@ ul.task-list li input[type="checkbox"] {
     line-height: 1.55;
   }
 
-  @media(max-width:760px){
-    main.content {
-      width:100%;
-      max-width:100%;
-      padding-left:.85rem !important;
-      padding-right:.85rem !important;
-      overflow-x:hidden;
+  @media (max-width:760px) {
+    /*
+      MOBILE LAYOUT
+      Quarto uses a page-level CSS grid. These rules:
+      1) allow the content grid item and all custom children to shrink;
+      2) use minmax(0,1fr) for mobile one-column layouts;
+      3) keep intentionally wide attendance tables inside their own scroller;
+      4) constrain archived survey figures to the viewport.
+    */
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
-    .metric-grid,.highlight-grid,.survey-grid{grid-template-columns:1fr;}
+    #quarto-content,
+    #quarto-content.page-columns,
+    main.content,
+    .page-columns .content {
+      min-width: 0 !important;
+      max-width: 100% !important;
+    }
+
+    main.content {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 1rem !important;
+    }
+
+    main.content > *,
+    .hero,
+    .metric-grid,
+    .metric-card,
+    .paper-card,
+    .question-card,
+    .highlight-grid,
+    .highlight-card,
+    .discussion-quote,
+    .caution-note,
+    .perspective-card,
+    .survey-grid,
+    .survey-card,
+    .survey-note,
+    .survey-disclosure,
+    .survey-toggle,
+    .survey-toggle-copy,
+    .survey-panel,
+    .survey-text-list,
+    .survey-text-item,
+    .community-banner,
+    .engagement-spotlight,
+    .engagement-pill-row,
+    .engagement-pill,
+    .roster-summary,
+    .attendance-scroll,
+    .attendance-note,
+    .footer-card,
+    .link-row {
+      min-width: 0;
+      max-width: 100%;
+    }
 
     .hero {
-      margin-top:1rem;
-      padding:1.55rem 1.15rem;
-      border-radius:18px;
+      margin: 1rem 0 1.8rem;
+      padding: 1.55rem 1.1rem 1.45rem;
+      border-radius: 18px;
     }
 
     .hero h1 {
-      font-size:clamp(2rem,10vw,2.55rem);
-      line-height:1.02;
+      max-width: 100%;
+      font-size: clamp(2rem, 9.5vw, 2.55rem);
+      line-height: 1.04;
+      letter-spacing: -.035em;
+      overflow-wrap: anywhere;
     }
 
     .hero-copy {
-      font-size:1rem;
-      line-height:1.55;
+      max-width: 100%;
+      font-size: 1rem;
+      line-height: 1.52;
+    }
+
+    .kicker,
+    .section-kicker,
+    .community-banner-kicker {
+      font-size: .72rem;
+      line-height: 1.45;
+      letter-spacing: .11em;
+      overflow-wrap: anywhere;
+    }
+
+    main.content h2 {
+      max-width: 100%;
+      font-size: clamp(1.55rem, 7vw, 2rem);
+      line-height: 1.12;
+      overflow-wrap: anywhere;
+    }
+
+    main.content h3,
+    .paper-title,
+    .community-banner-title {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .metric-grid,
+    .highlight-grid,
+    .survey-grid {
+      grid-template-columns: minmax(0,1fr);
+      gap: .8rem;
+    }
+
+    .metric-card,
+    .survey-card,
+    .highlight-card {
+      padding: 1.05rem 1.1rem;
+      border-radius: 14px;
+    }
+
+    .metric-value,
+    .survey-value {
+      font-size: 2rem;
     }
 
     .paper-card {
-      margin-left:0;
-      margin-right:0;
-      padding:1.2rem 1rem;
+      width: 100%;
+      margin: 1rem 0 1.8rem;
+      padding: 1.2rem 1rem;
+      border-left-width: 5px;
+      border-radius: 0 15px 15px 0;
     }
 
-    .paper-title { font-size:1.3rem; }
+    .paper-title {
+      font-size: 1.28rem;
+    }
+
+    .paper-citation {
+      overflow-wrap: anywhere;
+    }
 
     .link-row {
-      display:grid;
-      grid-template-columns:1fr;
-      gap:.55rem;
+      display: grid;
+      grid-template-columns: minmax(0,1fr);
+      width: 100%;
+      gap: .6rem;
     }
 
     .soco-link {
-      justify-content:center;
-      width:100%;
-      text-align:center;
+      width: 100%;
+      max-width: 100%;
+      justify-content: center;
+      text-align: center;
+      white-space: normal;
     }
 
-    .community-banner {
-      padding:1.1rem;
+    .question-card,
+    .discussion-quote,
+    .caution-note,
+    .survey-note {
+      padding: 1rem;
     }
 
-    .engagement-spotlight {
-      padding:1.1rem 1rem;
-    }
-
-    .engagement-pill-row {
-      display:grid;
-      grid-template-columns:1fr;
-    }
-
-    .engagement-pill {
-      width:100%;
-      justify-content:flex-start;
-    }
-
-    .roster-summary {
-      display:block;
-    }
-
-    .roster-summary span {
-      display:block;
-      margin-top:.3rem;
-    }
-
-    .attendance-scroll {
-      margin-left:-.2rem;
-      margin-right:-.2rem;
-      padding-bottom:.25rem;
-    }
-
-    .attendance-table {
-      min-width:690px;
+    .perspective-card {
+      width: 100%;
+      padding: 1.15rem 1rem;
+      border-radius: 16px;
     }
 
     .survey-toggle {
-      padding:.9rem;
+      grid-template-columns: auto minmax(0,1fr) auto;
+      gap: .65rem;
+      padding: .9rem;
+    }
+
+    .survey-toggle-copy strong,
+    .survey-toggle-copy span {
+      overflow-wrap: anywhere;
     }
 
     .survey-panel {
-      padding:.8rem;
+      width: 100%;
+      padding: .85rem;
     }
 
-    .survey-toggle-badge {
-      width:34px;
-      height:34px;
+    .survey-panel .cell,
+    .survey-panel .cell-output,
+    .survey-panel .cell-output-display,
+    .survey-panel figure,
+    .survey-panel .quarto-figure {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .community-banner {
+      padding: 1.15rem 1rem;
+      border-radius: 16px;
+    }
+
+    .community-banner-title {
+      font-size: clamp(1.55rem, 7.5vw, 2rem);
+    }
+
+    .engagement-spotlight {
+      padding: 1.1rem 1rem;
+    }
+
+    .engagement-pill-row {
+      display: grid;
+      grid-template-columns: minmax(0,1fr);
+    }
+
+    .engagement-pill {
+      width: 100%;
+      min-width: 0;
+      justify-content: flex-start;
+      white-space: normal;
+    }
+
+    .roster-summary {
+      display: block;
+      padding: .85rem .9rem;
+    }
+
+    .roster-summary span {
+      display: block;
+      margin-top: .3rem;
+    }
+
+    .attendance-scroll {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding-bottom: .3rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .attendance-table {
+      width: 690px;
+      min-width: 690px;
+      max-width: none;
     }
 
     .footer-card {
-      padding:1.3rem 1.15rem;
-      border-radius:16px;
+      margin-top: 2.4rem;
+      padding: 1.3rem 1.15rem;
+      border-radius: 16px;
+    }
+
+    img,
+    svg,
+    video,
+    iframe,
+    canvas {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-width:420px) {
+    main.content {
+      padding-left: .85rem !important;
+      padding-right: .85rem !important;
+    }
+
+    .hero {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 9vw, 2.25rem);
+    }
+
+    .metric-value,
+    .survey-value {
+      font-size: 1.9rem;
+    }
+
+    .community-banner,
+    .perspective-card {
+      padding-left: .9rem;
+      padding-right: .9rem;
+    }
+
+    .survey-toggle-badge {
+      width: 34px;
+      height: 34px;
+    }
+
+    .attendance-table {
+      width: 620px;
+      min-width: 620px;
     }
   }
 </style>
