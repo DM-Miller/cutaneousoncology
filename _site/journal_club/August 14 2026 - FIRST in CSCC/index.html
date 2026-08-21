@@ -179,9 +179,16 @@ ul.task-list li input[type="checkbox"] {
   }
 
   main.content {
+    width: 100%;
     max-width: 1120px;
+    min-width: 0;
     margin: auto;
     padding-top: 0 !important;
+  }
+
+  main.content,
+  main.content * {
+    box-sizing: border-box;
   }
 
   h1, h2, h3 {
@@ -749,40 +756,235 @@ ul.task-list li input[type="checkbox"] {
   }
 
   @media (max-width:760px) {
+    /*
+      MOBILE LAYOUT
+      Quarto's page is itself a CSS grid. The key fixes here are:
+      1) allow the content grid item to shrink (min-width: 0);
+      2) constrain every custom component to the viewport;
+      3) use minmax(0,1fr) rather than bare 1fr for one-column grids.
+    */
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    #quarto-content,
+    #quarto-content.page-columns,
+    main.content,
+    .page-columns .content {
+      min-width: 0 !important;
+      max-width: 100% !important;
+    }
+
+    main.content {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 1rem !important;
+    }
+
+    main.content > *,
+    .hero,
     .metric-grid,
+    .metric-card,
+    .participation-card,
+    .paper-section,
+    .paper-card,
+    .study-frame,
+    .study-flow,
+    .study-step,
     .study-stats,
-    .highlight-grid {
-      grid-template-columns: 1fr;
+    .study-stat,
+    .highlight-grid,
+    .highlight-card,
+    .discussion-quote,
+    .community-note,
+    .roster-summary,
+    .attendance-group,
+    .standout-card,
+    .footer-card,
+    .link-row {
+      min-width: 0;
+      max-width: 100%;
     }
 
     .hero {
-      padding: 2rem 1.5rem;
+      margin: 1rem 0 1.8rem;
+      padding: 1.55rem 1.1rem 1.45rem;
+      border-radius: 18px;
+    }
+
+    .hero::after {
+      width: 190px;
+      height: 190px;
+      top: -55px;
+      right: -55px;
+      background-size: 22px 22px;
     }
 
     .hero h1 {
-      font-size: 2.45rem;
+      max-width: 100%;
+      font-size: clamp(2rem, 9.5vw, 2.55rem);
+      line-height: 1.04;
+      letter-spacing: -.035em;
+      overflow-wrap: anywhere;
     }
 
-    .study-flow {
-      grid-template-columns: 1fr;
+    .hero-copy {
+      max-width: 100%;
+      font-size: 1rem;
+      line-height: 1.52;
     }
 
-    .study-arrow {
-      transform: rotate(90deg);
-      min-height: 18px;
+    .kicker,
+    .section-kicker {
+      font-size: .72rem;
+      line-height: 1.45;
+      letter-spacing: .11em;
+      overflow-wrap: anywhere;
+    }
+
+    main.content h2 {
+      max-width: 100%;
+      font-size: clamp(1.55rem, 7vw, 2rem);
+      line-height: 1.12;
+      overflow-wrap: anywhere;
+    }
+
+    main.content h3 {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .metric-grid,
+    .study-stats,
+    .highlight-grid,
+    .study-flow,
+    .standout-pills,
+    .link-row {
+      grid-template-columns: minmax(0,1fr);
+    }
+
+    .metric-grid,
+    .study-stats,
+    .highlight-grid {
+      gap: .8rem;
+    }
+
+    .metric-card {
+      padding: 1.15rem 1.1rem;
+    }
+
+    .metric-value {
+      font-size: 2rem;
+    }
+
+    .link-row {
+      display: grid;
+      width: 100%;
+      gap: .65rem;
+    }
+
+    .soco-link {
+      width: 100%;
+      max-width: 100%;
+      justify-content: center;
+      text-align: center;
+      white-space: normal;
+    }
+
+    .participation-card {
+      padding: 1.15rem 1rem 1rem;
     }
 
     .participation-row {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0,1fr);
       gap: .4rem;
+      margin: .95rem 0;
     }
 
     .participation-label {
       text-align: left;
     }
 
+    .participation-track {
+      width: 100%;
+    }
+
+    .paper-section {
+      margin: 2.4rem 0 2rem;
+    }
+
+    .paper-card {
+      width: 100%;
+      margin: 1rem 0 0;
+      padding: 1.25rem 1.05rem 1.25rem;
+      border-left-width: 5px;
+      border-radius: 0 15px 15px 0;
+    }
+
+    .paper-title {
+      font-size: 1.28rem;
+      overflow-wrap: anywhere;
+    }
+
+    .paper-citation {
+      overflow-wrap: anywhere;
+    }
+
+    .study-frame {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 15px;
+    }
+
+    .study-flow {
+      display: grid;
+      grid-template-columns: minmax(0,1fr);
+      gap: .6rem;
+    }
+
+    .study-arrow {
+      transform: rotate(90deg);
+      min-height: 18px;
+      line-height: 1;
+    }
+
+    .study-step {
+      width: 100%;
+      padding: .95rem;
+    }
+
+    .study-stats {
+      display: grid;
+      grid-template-columns: minmax(0,1fr);
+      width: 100%;
+    }
+
+    .study-stat {
+      width: 100%;
+      padding: .85rem .7rem;
+    }
+
+    .study-stat-value {
+      max-width: 100%;
+      font-size: 1.28rem;
+      overflow-wrap: anywhere;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1fr);
+    }
+
+    .highlight-card {
+      padding: 1.05rem;
+    }
+
     .roster-summary {
       display: block;
+      padding: .85rem .9rem;
     }
 
     .roster-summary span {
@@ -791,11 +993,14 @@ ul.task-list li input[type="checkbox"] {
     }
 
     .attendance-group {
+      width: 100%;
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     .attendance-group table {
-      min-width: 720px;
+      width: 620px;
+      min-width: 620px;
     }
 
     .standout-card {
@@ -804,20 +1009,55 @@ ul.task-list li input[type="checkbox"] {
 
     .standout-pills {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0,1fr);
     }
 
     .standout-pill {
       width: 100%;
+      min-width: 0;
       justify-content: flex-start;
+      white-space: normal;
     }
 
-    .paper-card {
-      padding: 1.35rem 1.25rem;
+    .footer-card {
+      margin-top: 2.4rem;
+      padding: 1.35rem 1.15rem;
+      border-radius: 16px;
     }
 
-    .paper-title {
-      font-size: 1.35rem;
+    img,
+    svg,
+    video,
+    iframe {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-width:420px) {
+    main.content {
+      padding-left: .85rem !important;
+      padding-right: .85rem !important;
+    }
+
+    .hero {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 9vw, 2.25rem);
+    }
+
+    .study-frame,
+    .participation-card {
+      padding-left: .85rem;
+      padding-right: .85rem;
+    }
+
+    .attendance-group table {
+      width: 580px;
+      min-width: 580px;
     }
   }
 </style>
@@ -1307,7 +1547,7 @@ These recognitions reflect the substance of the live discussion rather than a fo
 <p>We had a great group on August 14. Thanks for spending part of your afternoon with us — and especially to everyone who asked a question, shared a perspective, or helped move the discussion along.</p>
 </section>
 <div class="link-row">
-<p><a href="../../jc.html" class="soco-link">Back to Journal Club</a> <a href="https://jitc.bmj.com/content/14/7/e015029" class="soco-link secondary">Read the article</a> <a href="files/FIRST Approach in CSCC.pdf" class="soco-link secondary">Meeting slides</a> <a href="../../research_forum.html" class="soco-link secondary">Research Forum</a></p>
+<p><a href="../../jc.html" class="soco-link">Back to Journal Club</a> <a href="https://jitc.bmj.com/content/14/7/e015029" class="soco-link secondary">Read the article</a> <a href="../../research_forum.html" class="soco-link secondary">Research Forum</a></p>
 </div>
 
 

@@ -1,10 +1,10 @@
 ---
 pagetitle: "Page Not Found | Society of Cutaneous Oncology"
-editor: visual
 page-layout: full
 toc: false
 ---
 
+```{=html}
 <style>
 .soco-404 {
   position: relative;
@@ -109,12 +109,14 @@ toc: false
   }
 }
 </style>
+```
 
-<div class="soco-404">
-<div class="soco-404-inner">
-<div class="soco-404-copy">
-
-<div class="soco-eyebrow">Society of Cutaneous Oncology • 404</div>
+::::::: soco-404
+:::::: soco-404-inner
+::::: soco-404-copy
+::: soco-eyebrow
+Society of Cutaneous Oncology • 404
+:::
 
 <h1 class="soco-404-headline">
 
@@ -128,19 +130,15 @@ The page you're looking for may have moved, been renamed, or no longer be availa
 
 </p>
 
-<div class="soco-404-actions">
-
-[Return to SoCO](index.qmd){.btn .btn-primary}
-[Join our community](join.qmd){.btn .btn-outline-light}
-
-</div>
+::: soco-404-actions
+[Return to SoCO](index.qmd){.btn .btn-primary} [Join our community](join.qmd){.btn .btn-outline-light}
+:::
 
 <p class="soco-404-note">
 
 Looking for something specific? Use the search icon in the navigation bar to search the SoCO website.
 
 </p>
-
-</div>
-</div>
-</div>
+:::::
+::::::
+:::::::
