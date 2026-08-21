@@ -4116,7 +4116,14 @@ margin-top: 0;
 display: none !important;
 }
 main.content {
+width: 100%;
+max-width: 100%;
+min-width: 0;
 padding-top: 0 !important;
+}
+main.content,
+main.content * {
+box-sizing: border-box;
 }
 .soco-reg-hero {
 position: relative;
@@ -4369,10 +4376,183 @@ font-size: .9rem;
 line-height: 1.6;
 }
 @media (max-width: 800px) {
+
+html,
+body {
+max-width: 100%;
+overflow-x: hidden;
+}
+#quarto-content,
+#quarto-content.page-columns,
+main.content,
+.page-columns .content {
+min-width: 0 !important;
+max-width: 100% !important;
+}
+main.content {
+width: 100% !important;
+margin: 0 !important;
+padding: 0 .9rem !important;
+}
+.soco-reg-hero,
+.soco-reg-hero-inner,
+.soco-reg-shell,
+.soco-reg-card,
+.soco-reg-callout,
 .soco-reg-grid-2,
-.soco-reg-grid-3 { grid-template-columns: 1fr; }
-.soco-reg-hero { width: calc(100% - 1rem); margin-top: .6rem; padding: 3.2rem 1.25rem 3.4rem; }
-.soco-reg-card { padding: 1.3rem 1.2rem; }
+.soco-reg-grid-3,
+.soco-reg-mini,
+.soco-reg-act,
+.soco-reg-question-group,
+.soco-reg-quote,
+.soco-reg-tags,
+.soco-reg-tags p,
+.soco-reg-date-table {
+min-width: 0;
+max-width: 100%;
+}
+.soco-reg-hero {
+width: 100%;
+margin: .7rem 0 1.6rem;
+padding: 2rem 1rem 2.2rem;
+border-radius: 1rem;
+}
+.soco-reg-hero::after {
+width: 240px;
+height: 240px;
+top: -75px;
+right: -75px;
+background-size: 24px 24px;
+}
+.soco-reg-hero-inner,
+.soco-reg-shell {
+width: 100%;
+max-width: 100%;
+margin: 0;
+}
+.soco-reg-shell {
+padding-bottom: 2.5rem;
+}
+.soco-reg-eyebrow {
+font-size: .7rem;
+line-height: 1.45;
+letter-spacing: .11em;
+overflow-wrap: anywhere;
+}
+.soco-reg-hero h1 {
+max-width: 100%;
+font-size: clamp(2rem, 10vw, 2.7rem) !important;
+line-height: 1.03 !important;
+letter-spacing: -.03em;
+overflow-wrap: anywhere;
+}
+.soco-reg-subtitle {
+max-width: 100%;
+margin-top: .9rem;
+font-size: 1rem;
+line-height: 1.5;
+}
+.soco-reg-tags p {
+display: grid;
+grid-template-columns: minmax(0,1fr);
+gap: .5rem;
+}
+.soco-reg-tag {
+width: 100%;
+justify-content: flex-start;
+white-space: normal;
+}
+.soco-reg-grid-2,
+.soco-reg-grid-3 {
+grid-template-columns: minmax(0,1fr);
+gap: .8rem;
+}
+.soco-reg-card {
+margin: 1rem 0 1.5rem;
+padding: 1.15rem 1rem;
+border-radius: .9rem;
+}
+.soco-reg-card h2 {
+font-size: clamp(1.45rem, 6.8vw, 1.85rem);
+line-height: 1.15;
+overflow-wrap: anywhere;
+}
+.soco-reg-card h3,
+.soco-reg-mini-value,
+.soco-reg-question-group h3 {
+overflow-wrap: anywhere;
+}
+.soco-reg-mini {
+padding: 1rem;
+}
+.soco-reg-callout,
+.soco-reg-question-group,
+.soco-reg-quote {
+padding: 1rem;
+}
+.soco-reg-act {
+padding: .9rem 1rem;
+}
+.soco-reg-act strong {
+font-size: 1.08rem;
+}
+.soco-reg-time {
+display: block;
+min-width: 0;
+margin: 0 0 .15rem;
+}
+.soco-reg-question-group ul {
+padding-left: 1.15rem;
+}
+.soco-reg-question-group li {
+overflow-wrap: anywhere;
+}
+.soco-reg-date-table {
+display: block;
+width: 100%;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+border-radius: .9rem;
+}
+.soco-reg-date-table thead,
+.soco-reg-date-table tbody,
+.soco-reg-date-table tr {
+min-width: 560px;
+}
+.soco-reg-date-table th,
+.soco-reg-date-table td {
+white-space: normal;
+}
+img,
+svg,
+video,
+iframe,
+canvas {
+max-width: 100%;
+height: auto;
+}
+}
+@media (max-width: 420px) {
+main.content {
+padding-left: .75rem !important;
+padding-right: .75rem !important;
+}
+.soco-reg-hero {
+padding-left: .9rem;
+padding-right: .9rem;
+}
+.soco-reg-hero h1 {
+font-size: clamp(1.85rem, 9.5vw, 2.35rem) !important;
+}
+.soco-reg-card {
+padding-left: .9rem;
+padding-right: .9rem;
+}
+.soco-reg-date-table thead,
+.soco-reg-date-table tbody,
+.soco-reg-date-table tr {
+min-width: 520px;
+}
 }
 </style>
 
