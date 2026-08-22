@@ -1,6 +1,5 @@
 ---
 pagetitle: "Our Philosophy | Society of Cutaneous Oncology"
-editor: visual
 page-layout: full
 toc: false
 ---

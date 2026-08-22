@@ -8,6 +8,7 @@ website:
   page-navigation: true
   reader-mode: true
   open-graph: true
+
   twitter-card:
     site: "@SocCutaneousOnc"
 
@@ -18,29 +19,49 @@ website:
     logo-href: index.qmd
     title: false
     search: true
+
     right:
       - text: "Journal"
         href: joco.qmd
+
       - text: "Journal Club"
         href: jc.qmd
+
       - text: "Research Forum"
         href: research_forum.qmd
+
       - text: "Community Highlights"
         href: community_highlights.qmd
-      - text: "Our Philosophy"
-        href: philosophy.qmd
+
+      - text: "About"
+        menu:
+          - text: "About SoCO"
+            href: index.qmd
+
+          - text: "Our Philosophy"
+            href: philosophy.qmd
+
+          - text: "History"
+            href: history.qmd
+
       - text: "Join Our Community"
         href: join.qmd
 
   page-footer:
     left: "© Society of Cutaneous Oncology"
+
     right:
       - text: "Journal of Cutaneous Oncology"
         href: https://journalofcutaneousoncology.io
+
       - text: "SoCO Journal Club"
         href: jc.qmd
+
       - text: "Community Highlights"
         href: community_highlights.qmd
+
+      - text: "History"
+        href: history.qmd
 
 format:
   html:

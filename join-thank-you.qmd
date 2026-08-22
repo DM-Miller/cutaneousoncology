@@ -5,15 +5,132 @@ toc: false
 ---
 
 <style>
-.soco-thanks { min-height:70vh; display:flex; align-items:center; background:radial-gradient(circle at 82% 22%,rgba(40,169,162,.22),transparent 30%),radial-gradient(circle at 92% 85%,rgba(233,120,99,.12),transparent 25%),linear-gradient(135deg,#062A46 0%,#083754 55%,#0B4657 100%); color:#fff; }
-.soco-thanks-inner { width:100%; max-width:900px; margin:0 auto; padding:clamp(5rem,10vw,8rem) 2rem; }
-.soco-thanks .soco-eyebrow { color:#7ED8D2; }
-.soco-thanks-headline { margin:.65rem 0 1.4rem; max-width:850px; color:#fff!important; font-size:clamp(3.3rem,6.4vw,6rem); line-height:.98; letter-spacing:-.05em; font-weight:750; }
-.soco-thanks-dek { max-width:760px; margin:0 0 2rem; color:rgba(255,255,255,.84); font-size:clamp(1.15rem,2vw,1.35rem); line-height:1.65; }
-.soco-thanks-actions { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:2rem; }
-.soco-thanks-actions .btn-outline-light { border-color:rgba(255,255,255,.55); color:#fff; }
-.soco-thanks-actions .btn-outline-light:hover { background:#fff; color:#062A46; }
-@media(max-width:700px){.soco-thanks-inner{padding-left:1.25rem;padding-right:1.25rem;}}
+:root {
+  --soco-navy:#082D4D;
+  --soco-blue:#0E5688;
+  --soco-teal:#28A9A2;
+  --soco-teal-dark:#168A8F;
+  --soco-coral:#E25A4E;
+  --soco-ink:#31424E;
+  --soco-muted:#6B747B;
+  --soco-pale:#F3F8F8;
+  --soco-line:#D9E8E8;
+}
+
+.soco-thanks {
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  margin:0;
+  border:1px solid var(--soco-line);
+  background:
+    radial-gradient(circle at 84% 18%,rgba(40,169,162,.14) 0 0,rgba(40,169,162,.14) 0 100px,transparent 101px),
+    radial-gradient(circle at 12% 88%,rgba(226,90,78,.055) 0 0,rgba(226,90,78,.055) 0 120px,transparent 121px),
+    linear-gradient(135deg,#ffffff 0%,#f5faf9 58%,#eef8f7 100%);
+  color:var(--soco-ink);
+}
+
+.soco-thanks::after {
+  content:"";
+  position:absolute;
+  width:360px;
+  height:360px;
+  top:-90px;
+  right:-55px;
+  opacity:.16;
+  background-image:radial-gradient(circle,rgba(40,169,162,.72) 0 1.2px,transparent 1.8px);
+  background-size:30px 30px;
+  mask-image:radial-gradient(circle,#000 0%,transparent 72%);
+  -webkit-mask-image:radial-gradient(circle,#000 0%,transparent 72%);
+  pointer-events:none;
+}
+
+.soco-thanks-inner {
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  padding:clamp(5rem,10vw,8rem) 2rem;
+}
+
+.soco-thanks .soco-eyebrow {
+  color:var(--soco-teal-dark);
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.soco-thanks-headline {
+  margin:.65rem 0 1.4rem;
+  max-width:850px;
+  color:var(--soco-navy)!important;
+  font-size:clamp(3.3rem,6.4vw,6rem);
+  line-height:.98;
+  letter-spacing:-.05em;
+  font-weight:750;
+}
+
+.soco-thanks-dek {
+  max-width:760px;
+  margin:0 0 2rem;
+  color:#4d6170;
+  font-size:clamp(1.15rem,2vw,1.35rem);
+  line-height:1.65;
+}
+
+.soco-thanks-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.8rem;
+  margin-top:2rem;
+}
+
+.soco-thanks-actions .btn-primary {
+  background:var(--soco-blue)!important;
+  border-color:var(--soco-blue)!important;
+  color:#fff!important;
+  box-shadow:0 8px 22px rgba(8,45,77,.10);
+}
+
+.soco-thanks-actions .btn-primary:hover,
+.soco-thanks-actions .btn-primary:focus {
+  background:var(--soco-navy)!important;
+  border-color:var(--soco-navy)!important;
+  color:#fff!important;
+}
+
+.soco-thanks-actions .btn-outline-light {
+  border-color:#b8d7dc!important;
+  color:var(--soco-blue)!important;
+  background:rgba(255,255,255,.82)!important;
+}
+
+.soco-thanks-actions .btn-outline-light:hover,
+.soco-thanks-actions .btn-outline-light:focus {
+  background:#fff!important;
+  border-color:var(--soco-teal)!important;
+  color:var(--soco-navy)!important;
+}
+
+@media(max-width:700px){
+  .soco-thanks {
+    min-height:64vh;
+  }
+
+  .soco-thanks-inner{
+    padding-left:1.25rem;
+    padding-right:1.25rem;
+  }
+
+  .soco-thanks::after {
+    width:260px;
+    height:260px;
+    right:-90px;
+  }
+}
 </style>
 
 <div class="soco-thanks"><div class="soco-thanks-inner">
@@ -48,5 +165,3 @@ document.addEventListener("DOMContentLoaded", function () {
   } catch (e) {}
 });
 </script>
-
-

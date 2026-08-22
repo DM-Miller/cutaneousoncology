@@ -2869,7 +2869,7 @@ A record of the people who keep showing up: clinicians, researchers, trainees, a
 ## Showing up matters.
 
 <p>
-The numbers below are not meant to turn participation into a competition. They are a simple way to recognize the people who have repeatedly made time for thoughtful, multidisciplinary discussion.
+The numbers below offer a simple way to recognize the people who have repeatedly made time for thoughtful, multidisciplinary discussion.
 </p>
 </div>
 
@@ -2938,7 +2938,7 @@ if (nrow(member_summary)) {
 ## Community participation
 
 <p>
-Two complementary measures are shown: how often someone joined the meetings in this archive, and how much total time they spent participating. The intent is recognition rather than competition.
+Two complementary measures are shown: how often someone joined the meetings in this archive, and how much total time they spent participating. Together, they provide a simple view of sustained engagement across the community.
 </p>
 
 <div class="ch-convener-note">

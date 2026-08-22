@@ -1,0 +1,717 @@
+---
+pagetitle: "History | Society of Cutaneous Oncology"
+page-layout: full
+toc: false
+---
+
+<style>
+:root {
+  --hist-navy: #082D4D;
+  --hist-blue: #0E5688;
+  --hist-teal: #28A9A2;
+  --hist-teal-dark: #168A8F;
+  --hist-coral: #E25A4E;
+  --hist-ink: #31424E;
+  --hist-muted: #6B747B;
+  --hist-pale: #F3F8F8;
+  --hist-line: #D9E8E8;
+  --hist-white: #ffffff;
+}
+
+.history-wrap {
+  color: var(--hist-ink);
+}
+
+.history-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0 calc(50% - 50vw);
+  padding: clamp(3.5rem, 7vw, 6.5rem) max(1.25rem, calc((100vw - 1180px)/2));
+  background:
+    radial-gradient(circle at 84% 18%, rgba(40,169,162,.16) 0 0, rgba(40,169,162,.16) 0 95px, transparent 96px),
+    radial-gradient(circle at 11% 92%, rgba(226,90,78,.08) 0 0, rgba(226,90,78,.08) 0 120px, transparent 121px),
+    linear-gradient(135deg, #f8fcfc 0%, #eef8f7 52%, #ffffff 100%);
+  border-bottom: 1px solid var(--hist-line);
+}
+
+.history-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 2.5rem;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.history-kicker {
+  margin-bottom: .75rem;
+  color: var(--hist-teal-dark);
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.history-hero h1 {
+  max-width: 820px;
+  margin: 0;
+  color: var(--hist-navy);
+  font-size: clamp(2.6rem, 6vw, 5.25rem);
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+
+.history-hero-dek {
+  max-width: 770px;
+  margin: 1.15rem 0 0;
+  color: #526878;
+  font-size: clamp(1.08rem, 2vw, 1.3rem);
+  line-height: 1.68;
+}
+
+.history-hero-logo {
+  width: 180px;
+  max-width: 100%;
+  margin-left: auto;
+  opacity: .96;
+}
+
+.history-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin-top: 1.5rem;
+}
+
+.history-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: .65rem 1rem;
+  border-radius: 999px;
+  text-decoration: none !important;
+  font-weight: 750;
+  transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+}
+
+.history-actions a:first-child {
+  color: #fff !important;
+  background: var(--hist-navy);
+  box-shadow: 0 8px 24px rgba(8,45,77,.14);
+}
+
+.history-actions a:last-child {
+  color: var(--hist-navy) !important;
+  background: rgba(255,255,255,.82);
+  border: 1px solid var(--hist-line);
+}
+
+.history-actions a:hover {
+  transform: translateY(-1px);
+}
+
+.history-intro {
+  max-width: 920px;
+  margin: 3.25rem auto 1.5rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.history-intro h2 {
+  margin-bottom: .7rem;
+  color: var(--hist-navy);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  letter-spacing: -.025em;
+}
+
+.history-intro p {
+  margin: 0 auto;
+  color: var(--hist-muted);
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+.history-era-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  max-width: 1060px;
+  margin: 2rem auto 4.25rem;
+  padding: 0 1rem;
+}
+
+.history-era {
+  position: relative;
+  padding: 1rem 1rem .9rem;
+  text-align: center;
+}
+
+.history-era:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: -16%;
+  width: 32%;
+  height: 1px;
+  background: var(--hist-line);
+}
+
+.history-era-year {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 74px;
+  padding: .36rem .65rem;
+  border: 1px solid rgba(40,169,162,.3);
+  border-radius: 999px;
+  color: var(--hist-teal-dark);
+  background: #fff;
+  font-size: .84rem;
+  font-weight: 850;
+  letter-spacing: .04em;
+}
+
+.history-era-label {
+  margin-top: .55rem;
+  color: var(--hist-navy);
+  font-size: .9rem;
+  font-weight: 720;
+}
+
+.history-timeline {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1rem 1rem;
+}
+
+.history-timeline::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-1px);
+  background: linear-gradient(
+    to bottom,
+    rgba(40,169,162,.18),
+    rgba(40,169,162,.8) 10%,
+    rgba(40,169,162,.8) 90%,
+    rgba(40,169,162,.18)
+  );
+}
+
+.history-event {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr;
+  align-items: start;
+  margin: 0 0 2.25rem;
+}
+
+.history-event-card {
+  position: relative;
+  padding: 1.35rem 1.4rem 1.25rem;
+  border: 1px solid var(--hist-line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.98);
+  box-shadow: 0 12px 32px rgba(8,45,77,.055);
+}
+
+.history-event:nth-child(odd) .history-event-card {
+  grid-column: 1;
+}
+
+.history-event:nth-child(even) .history-event-card {
+  grid-column: 3;
+}
+
+.history-event:nth-child(odd) .history-event-card::after,
+.history-event:nth-child(even) .history-event-card::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-top: 1px solid var(--hist-line);
+  border-right: 1px solid var(--hist-line);
+}
+
+.history-event:nth-child(odd) .history-event-card::after {
+  right: -8px;
+  transform: rotate(45deg);
+}
+
+.history-event:nth-child(even) .history-event-card::after {
+  left: -8px;
+  transform: rotate(225deg);
+}
+
+.history-dot {
+  grid-column: 2;
+  grid-row: 1;
+  z-index: 3;
+  justify-self: center;
+  width: 16px;
+  height: 16px;
+  margin-top: 23px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: var(--hist-teal);
+  box-shadow: 0 0 0 2px var(--hist-teal);
+}
+
+.history-event.featured .history-dot {
+  background: var(--hist-coral);
+  box-shadow: 0 0 0 2px var(--hist-coral);
+}
+
+.history-date {
+  margin-bottom: .32rem;
+  color: var(--hist-teal-dark);
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.history-event.featured .history-date {
+  color: var(--hist-coral);
+}
+
+.history-event h3 {
+  margin: 0 0 .6rem;
+  color: var(--hist-navy);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+
+.history-event p {
+  margin: 0;
+  color: #536776;
+  line-height: 1.67;
+}
+
+.history-event p + p {
+  margin-top: .72rem;
+}
+
+.history-paper {
+  margin-top: 1rem;
+  padding: .85rem .95rem;
+  border-radius: 12px;
+  background: var(--hist-pale);
+  border: 1px solid #e2efef;
+}
+
+.history-paper-label {
+  margin-bottom: .25rem;
+  color: var(--hist-teal-dark);
+  font-size: .7rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.history-paper-title {
+  color: var(--hist-navy);
+  font-weight: 760;
+  line-height: 1.45;
+}
+
+.history-paper-meta {
+  margin-top: .28rem;
+  color: var(--hist-muted);
+  font-size: .86rem;
+  line-height: 1.5;
+}
+
+.history-paper a {
+  color: var(--hist-blue);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.history-pandemic {
+  max-width: 900px;
+  margin: .75rem auto 3rem;
+  padding: 0 1rem;
+}
+
+.history-pandemic-inner {
+  position: relative;
+  overflow: hidden;
+  padding: 1.35rem 1.45rem;
+  border: 1px solid rgba(226,90,78,.18);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(226,90,78,.055), rgba(255,255,255,.96));
+}
+
+.history-pandemic-inner::after {
+  content: "2020";
+  position: absolute;
+  right: 1rem;
+  bottom: -.48rem;
+  color: rgba(226,90,78,.06);
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.history-pandemic-label {
+  position: relative;
+  z-index: 1;
+  margin-bottom: .3rem;
+  color: var(--hist-coral);
+  font-size: .74rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.history-pandemic h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 .48rem;
+  color: var(--hist-navy);
+  font-size: 1.35rem;
+}
+
+.history-pandemic p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #586a78;
+  line-height: 1.66;
+}
+
+.history-chapter {
+  max-width: 1060px;
+  margin: 4.25rem auto 0;
+  padding: 0 1rem;
+}
+
+.history-chapter-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.6rem, 4vw, 2.5rem);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(40,169,162,.13) 0 0, rgba(40,169,162,.13) 0 100px, transparent 101px),
+    #082D4D;
+  color: #fff;
+}
+
+.history-chapter-card h2 {
+  margin: 0 0 .65rem;
+  color: #fff;
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  letter-spacing: -.025em;
+}
+
+.history-chapter-card p {
+  max-width: 800px;
+  margin: 0;
+  color: rgba(255,255,255,.82);
+  line-height: 1.72;
+}
+
+.history-chapter-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin-top: 1.2rem;
+}
+
+.history-chapter-links a {
+  display: inline-flex;
+  padding: .62rem .9rem;
+  border-radius: 999px;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,.28);
+  text-decoration: none !important;
+  font-weight: 730;
+}
+
+.history-source-note {
+  max-width: 980px;
+  margin: 2.5rem auto 1rem;
+  padding: 0 1rem;
+  color: #7a8994;
+  font-size: .82rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .history-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .history-hero-logo {
+    width: 125px;
+    margin: .25rem 0 0;
+  }
+
+  .history-era-strip {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    margin-bottom: 3rem;
+  }
+
+  .history-era::after {
+    display: none;
+  }
+
+  .history-timeline::before {
+    left: 20px;
+  }
+
+  .history-event {
+    grid-template-columns: 40px minmax(0,1fr);
+  }
+
+  .history-event:nth-child(odd) .history-event-card,
+  .history-event:nth-child(even) .history-event-card {
+    grid-column: 2;
+  }
+
+  .history-dot {
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  .history-event:nth-child(odd) .history-event-card::after,
+  .history-event:nth-child(even) .history-event-card::after {
+    left: -8px;
+    right: auto;
+    transform: rotate(225deg);
+  }
+}
+
+@media (max-width: 520px) {
+  .history-hero {
+    padding-top: 3rem;
+    padding-bottom: 3.25rem;
+  }
+
+  .history-hero h1 {
+    font-size: clamp(2.35rem, 13vw, 3.5rem);
+  }
+
+  .history-era-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: .25rem;
+  }
+
+  .history-era {
+    padding-left: .35rem;
+    padding-right: .35rem;
+  }
+
+  .history-timeline {
+    padding-left: .4rem;
+    padding-right: .6rem;
+  }
+
+  .history-event-card {
+    padding: 1.15rem 1.05rem;
+    border-radius: 15px;
+  }
+
+  .history-event h3 {
+    font-size: 1.22rem;
+  }
+}
+</style>
+
+<div class="history-wrap">
+
+<section class="history-hero">
+<div class="history-hero-inner">
+<div>
+<div class="history-kicker">The story of SoCO</div>
+<h1>From one room to a community.</h1>
+<p class="history-hero-dek">
+The Society of Cutaneous Oncology began as a local multidisciplinary academic meeting in Boston. An unexpected move online widened the circle, and over time the group evolved into a broader scientific community built around critical discussion, collaborative research, and shared inquiry.
+</p>
+<div class="history-actions">
+<a href="about.qmd">About SoCO</a>
+<a href="community_highlights.qmd">Community Highlights</a>
+</div>
+</div>
+<div>
+<img src="img/soco-logo-stacked-transparent.png" class="history-hero-logo" alt="Society of Cutaneous Oncology logo">
+</div>
+</div>
+</section>
+
+<section class="history-intro">
+<h2>A history shaped by conversation</h2>
+<p>
+The format has changed—from an in-person conference room, to Zoom, to a multi-institutional scientific community—but the central idea has remained remarkably consistent: bring people together, examine the evidence carefully, and make the discussion useful.
+</p>
+</section>
+
+<div class="history-era-strip">
+<div class="history-era">
+<div class="history-era-year">2019</div>
+<div class="history-era-label">The local beginning</div>
+</div>
+<div class="history-era">
+<div class="history-era-year">2020</div>
+<div class="history-era-label">The move online</div>
+</div>
+<div class="history-era">
+<div class="history-era-year">2023</div>
+<div class="history-era-label">SoCO takes shape</div>
+</div>
+<div class="history-era">
+<div class="history-era-year">2025+</div>
+<div class="history-era-label">A broader community</div>
+</div>
+</div>
+
+<section class="history-timeline">
+
+<div class="history-event featured">
+<div class="history-event-card">
+<div class="history-date">April 2, 2019</div>
+<h3>The first meeting</h3>
+<p>
+The group began as an in-person multidisciplinary academic program bringing together clinicians and investigators from Massachusetts General Hospital and Mass Eye and Ear around the management of non-melanoma skin cancers.
+</p>
+<p>
+The opening Journal Club established the model that would continue to define the group: start with a clinically important paper, then interrogate what the evidence does—and does not—support.
+</p>
+<div class="history-paper">
+<div class="history-paper-label">First Journal Club</div>
+<div class="history-paper-title">
+<a href="https://doi.org/10.1200/JCO.2017.77.0941">Postoperative Concurrent Chemoradiotherapy Versus Postoperative Radiotherapy in High-Risk Cutaneous Squamous Cell Carcinoma of the Head and Neck: The Randomized Phase III TROG 05.01 Trial</a>
+</div>
+<div class="history-paper-meta">Porceddu SV et al. Journal of Clinical Oncology. 2018;36:1275–1283.</div>
+</div>
+</div>
+<div class="history-dot"></div>
+</div>
+
+<div class="history-event">
+<div class="history-event-card">
+<div class="history-date">March 3, 2020</div>
+<h3>The last in-person meeting</h3>
+<p>
+What had started as a recurring face-to-face academic meeting held its final in-person session just before the COVID-19 pandemic disrupted clinical, academic, and professional life worldwide.
+</p>
+</div>
+<div class="history-dot"></div>
+</div>
+
+</section>
+
+<section class="history-pandemic">
+<div class="history-pandemic-inner">
+<div class="history-pandemic-label">A turning point</div>
+<h3>The interruption changed the format—and ultimately the reach.</h3>
+<p>
+On March 11, 2020, the World Health Organization characterized COVID-19 as a pandemic. The move away from in-person meetings was initially a necessity. It soon became an opportunity: geography no longer had to define who could join the conversation.
+</p>
+</div>
+</section>
+
+<section class="history-timeline">
+
+<div class="history-event featured">
+<div class="history-event-card">
+<div class="history-date">May 5, 2020</div>
+<h3>The group returns—online</h3>
+<p>
+Two months after the final in-person meeting, the program restarted on Zoom. The virtual format made it possible to invite colleagues beyond Boston and began the transition from a local institutional meeting toward a distributed academic community.
+</p>
+<div class="history-paper">
+<div class="history-paper-label">First online Journal Club</div>
+<div class="history-paper-title">
+<a href="https://doi.org/10.1200/JCO.20.00201">Neoadjuvant Nivolumab for Patients With Resectable Merkel Cell Carcinoma in the CheckMate 358 Trial</a>
+</div>
+<div class="history-paper-meta">Topalian SL et al. Journal of Clinical Oncology. 2020;38:2476–2487.</div>
+</div>
+</div>
+<div class="history-dot"></div>
+</div>
+
+<div class="history-event featured">
+<div class="history-event-card">
+<div class="history-date">March 6, 2023</div>
+<h3>The Society of Cutaneous Oncology</h3>
+<p>
+The expanding community was formally reintroduced as the <strong>Society of Cutaneous Oncology (SoCO)</strong>. The new name reflected what the group had become: multidisciplinary, multi-institutional, and centered on the broader field of cutaneous oncology rather than any single institution or disease.
+</p>
+<div class="history-paper">
+<div class="history-paper-label">First Journal Club as SoCO</div>
+<div class="history-paper-title">
+<a href="https://doi.org/10.1056/NEJMoa2203086">Nicotinamide for Skin-Cancer Chemoprevention in Transplant Recipients</a>
+</div>
+<div class="history-paper-meta">Allen NC et al. New England Journal of Medicine. 2023;388:804–812.</div>
+</div>
+</div>
+<div class="history-dot"></div>
+</div>
+
+<div class="history-event">
+<div class="history-event-card">
+<div class="history-date">March 31, 2023</div>
+<h3>The first Research Forum</h3>
+<p>
+SoCO added a second kind of scientific conversation. Rather than beginning with a published paper, the Research Forum created a place to discuss ideas still in development—study concepts, methods, unanswered questions, and opportunities for collaboration.
+</p>
+<div class="history-paper">
+<div class="history-paper-label">Inaugural Research Forum</div>
+<div class="history-paper-title">ICARUS</div>
+<div class="history-paper-meta">The first Research Forum focused on the ICARUS research program and established a venue for work in progress and collaborative study development.</div>
+</div>
+</div>
+<div class="history-dot"></div>
+</div>
+
+<div class="history-event featured">
+<div class="history-event-card">
+<div class="history-date">April 10, 2025</div>
+<h3>The first joint academic–industry scientific session</h3>
+<p>
+SoCO held its first collaborative academic–industry meeting with Bristol Myers Squibb. The format extended the same principles used in Journal Club—open scientific discussion, careful evidence interpretation, and constructive critique—to a session that included both academic and industry participants.
+</p>
+<div class="history-paper">
+<div class="history-paper-label">Discussion focus</div>
+<div class="history-paper-title">
+<a href="https://doi.org/10.1200/JCO-24-02138">Nivolumab With or Without Ipilimumab in Patients With Recurrent or Metastatic Merkel Cell Carcinoma: A Nonrandomized, Open-Label, International, Multicenter Phase I/II Study</a>
+</div>
+<div class="history-paper-meta">Bhatia S et al. Journal of Clinical Oncology. 2025;43:1137–1147. CheckMate 358.</div>
+</div>
+</div>
+<div class="history-dot"></div>
+</div>
+
+</section>
+
+<section class="history-chapter">
+<div class="history-chapter-card">
+<h2>The next chapter is being written in public.</h2>
+<p>
+Today, SoCO brings together Journal Club, Research Forum, collaborative scientific projects, and the Journal of Cutaneous Oncology. Its structure remains intentionally lightweight: the community grows through participation, and the scientific record grows through the meetings, methods, discussions, and collaborations that follow.
+</p>
+<div class="history-chapter-links">
+<a href="community_highlights.qmd">Explore the community →</a>
+<a href="jc.qmd">Journal Club →</a>
+<a href="research_forum.qmd">Research Forum →</a>
+<a href="joco.qmd">Journal of Cutaneous Oncology →</a>
+</div>
+</div>
+</section>
+
+<div class="history-source-note">
+Historical meeting dates reflect the Society's internal program record. Publication details are linked to the original articles. COVID-19 pandemic context reflects the World Health Organization's March 11, 2020 declaration.
+</div>
+
+</div>
