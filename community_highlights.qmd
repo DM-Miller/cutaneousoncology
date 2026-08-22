@@ -2813,7 +2813,7 @@ A record of the people who keep showing up: clinicians, researchers, trainees, a
 <div class="ch-accent"></div>
 
 <div class="ch-note">
-<strong>A note on the archive.</strong> Attendance records are available for a recent subset of SoCO meetings rather than the full history of the community. Everything on this page therefore refers to <strong>tracked meetings</strong> only.
+<strong>A note on the archive.</strong> SoCO has held <strong>78 meetings</strong> to date. Detailed attendance records are available for <strong>8 meetings from roughly the past year</strong>, so participation metrics on this page refer to that recent tracked subset rather than the full history of the community. <a href="jc.qmd">Explore the Journal Club archive</a> and <a href="research_forum.qmd">Research Forum archive</a>.
 </div>
 </div>
 </div>
