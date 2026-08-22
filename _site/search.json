@@ -1580,5 +1580,40 @@
     "title": "Community Highlights",
     "section": "Meetings in the current attendance archive",
     "text": "Meetings in the current attendance archive\n\nThis page processes the Attendance Over Time archive directly. As new attendance_clean.csv files are added, the page updates automatically on render."
+  },
+  {
+    "objectID": "communit_highligts.html#showing-up-matters.",
+    "href": "communit_highligts.html#showing-up-matters.",
+    "title": "Community Highlights",
+    "section": "Showing up matters.",
+    "text": "Showing up matters.\n\nThe numbers below are not meant to turn participation into a competition. They are a simple way to recognize the people who have repeatedly made time for thoughtful, multidisciplinary discussion."
+  },
+  {
+    "objectID": "communit_highligts.html#everyone-who-has-joined-us",
+    "href": "communit_highligts.html#everyone-who-has-joined-us",
+    "title": "Community Highlights",
+    "section": "Everyone who has joined us",
+    "text": "Everyone who has joined us\n\nEvery name below represents at least one appearance at a tracked SoCO Journal Club or Research Forum. No ranking here—just recognition."
+  },
+  {
+    "objectID": "communit_highligts.html#top-20-community-contributors",
+    "href": "communit_highligts.html#top-20-community-contributors",
+    "title": "Community Highlights",
+    "section": "Top 20 community contributors",
+    "text": "Top 20 community contributors\n\nTwo separate measures are shown. Meeting attendance is the percentage of all tracked SoCO meetings attended—Journal Clubs and Research Forums combined. Participation time is normalized to the academic / clinical participant with the greatest total tracked attendance time, who is set to 100%."
+  },
+  {
+    "objectID": "communit_highligts.html#industry-collaborators",
+    "href": "communit_highligts.html#industry-collaborators",
+    "title": "Community Highlights",
+    "section": "Industry collaborators",
+    "text": "Industry collaborators\n\nIndustry colleagues are recognized separately rather than included in the academic / clinical participation ranking. Company assignment is based primarily on email domain, with a small person-level override table embedded directly in this page for older attendance exports whose email was not captured. Known colleagues who participated from shared rooms—or whose participation is confirmed from historical meeting correspondence when the Teams attendance export is no longer available—are also acknowledged without assigning invented attendance minutes."
+  },
+  {
+    "objectID": "communit_highligts.html#meetings-in-the-current-attendance-archive",
+    "href": "communit_highligts.html#meetings-in-the-current-attendance-archive",
+    "title": "Community Highlights",
+    "section": "Meetings in the current attendance archive",
+    "text": "Meetings in the current attendance archive\n\nThis page processes the Attendance Over Time archive directly. As new attendance_clean.csv files are added, the page updates automatically on render."
   }
 ]

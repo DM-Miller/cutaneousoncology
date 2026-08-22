@@ -26,7 +26,7 @@ website:
       - text: "Research Forum"
         href: research_forum.qmd
       - text: "Community Highlights"
-        href: community_highlights/index.qmd
+        href: community_highlights.qmd
       - text: "Our Philosophy"
         href: philosophy.qmd
       - text: "Join Our Community"
@@ -40,7 +40,7 @@ website:
       - text: "SoCO Journal Club"
         href: jc.qmd
       - text: "Community Highlights"
-        href: community_highlights/index.qmd
+        href: community_highlights.qmd
 
 format:
   html:
