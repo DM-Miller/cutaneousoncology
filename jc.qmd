@@ -1151,6 +1151,56 @@ Joint academic–industry session with Bristol Myers Squibb
 :::::
 
 
+::::: {.soco-jc-recap-card}
+
+::: {.soco-jc-recap-art}
+![](<journal_club/July 11 2025 - c-Post/CPOST_July11_card.svg>){alt="Primary article card for the July 11, 2025 SoCO Journal Club discussion of C-POST and adjuvant cemiplimab in high-risk resected cutaneous squamous cell carcinoma"}
+:::
+
+:::: {.soco-jc-recap-copy}
+
+::: {.soco-jc-recap-date}
+July 11, 2025 · SoCO Journal Club
+:::
+
+::: {.soco-jc-recap-title}
+C-POST: Adjuvant Cemiplimab in High-Risk Resected CSCC
+:::
+
+::: {.soco-jc-recap-divider}
+:::
+
+::: {.soco-jc-recap-question}
+A positive phase 3 trial reduced recurrence—but who should actually receive adjuvant anti–PD-1, and what role should radiation still play?
+:::
+
+::: {.soco-jc-recap-description}
+A multidisciplinary discussion of adjuvant cemiplimab after surgery and postoperative radiation, the competing rise of neoadjuvant immunotherapy, treatment burden and overtreatment, and why C-POST and KEYNOTE-630 may have produced different results.
+:::
+
+<div class="soco-jc-recap-partnership">
+Joint academic–industry session with Regeneron
+</div>
+
+::: {.soco-jc-recap-footer}
+
+::: {.soco-jc-recap-actions}
+[Read meeting recap](<journal_club/July 11 2025 - c-Post/index.qmd>){.soco-jc-recap-link}
+[Read the article](https://doi.org/10.1056/NEJMoa2502449){.soco-jc-recap-link .secondary}
+[Read the Perspective](https://journalofcutaneousoncology.io/perspectives/vol_3_issue_2/adjuvant_cemiplimab_for_high_risk_resected_cscc/){.soco-jc-recap-link .secondary}
+:::
+
+::: {.soco-jc-recap-meta}
+38 attendees · 90-minute median meeting time
+:::
+
+:::
+
+::::
+
+:::::
+
+
 ::::::
 
 ::::::::
