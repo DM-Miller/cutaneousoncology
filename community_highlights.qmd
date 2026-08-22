@@ -721,14 +721,6 @@ main.content {
   line-height:1.25;
 }
 
-.ch-qc-total {
-  display:block;
-  margin-top:.22rem;
-  color:var(--soco-teal-dark);
-  font-size:.66rem;
-  font-weight:800;
-  line-height:1.25;
-}
 
 .ch-qc-meeting-title {
   display:block;
@@ -746,25 +738,9 @@ main.content {
   font-weight:750;
 }
 
-.ch-qc-meeting-duration {
-  display:block;
-  margin-top:.16rem;
-  color:#75858f;
-  font-size:.64rem;
-  font-weight:600;
-}
 
 .ch-qc-present {
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(40,169,162,.12) 0,
-      rgba(40,169,162,.12) var(--qc-pct),
-      transparent var(--qc-pct),
-      transparent 100%
-    );
+  background:rgba(40,169,162,.045);
 }
 
 .ch-qc-minutes {
@@ -776,15 +752,6 @@ main.content {
   font-weight:850;
 }
 
-.ch-qc-percent {
-  position:relative;
-  z-index:1;
-  display:block;
-  margin-top:.12rem;
-  color:var(--soco-teal-dark);
-  font-size:.69rem;
-  font-weight:750;
-}
 
 .ch-qc-absent {
   color:#a8b3ba;
@@ -963,9 +930,7 @@ main.content {
     font-size:.72rem;
   }
 
-  .ch-qc-audience,
-  .ch-qc-total,
-  .ch-qc-meeting-duration {
+  .ch-qc-audience {
     font-size:.6rem;
   }
 
@@ -973,9 +938,6 @@ main.content {
     font-size:.72rem;
   }
 
-  .ch-qc-percent {
-    font-size:.64rem;
-  }
 
   .ch-roster-details > summary {
     min-height:60px;
@@ -2666,11 +2628,7 @@ qc_people <- qc_attendance |>
     meetings_attended = n_distinct(meeting_folder),
     .groups = "drop"
   ) |>
-  arrange(
-    desc(total_minutes),
-    desc(meetings_attended),
-    name
-  )
+  arrange(name)
 
 # ============================================================
 # OPTIONAL CSV OUTPUTS FOR AUDIT / REUSE
@@ -3204,12 +3162,12 @@ if (nrow(meeting_summary)) {
 <summary>
 <span class="ch-qc-summary-copy">
 <span class="ch-qc-summary-title">View full attendance matrix</span>
-<span class="ch-qc-summary-subtitle">Meeting-by-meeting participation · ordered by total tracked participation time</span>
+<span class="ch-qc-summary-subtitle">Meeting-by-meeting participation across the recent tracked archive</span>
 </span>
 </summary>
 
 <div class="ch-qc-note">
-The matrix provides a meeting-by-meeting view of participation. For consistency, each meeting is benchmarked to the scientific convener’s tracked attendance time, with participation capped at 100%. <strong>Confirmed · time n/a</strong> indicates known participation when individual attendance time was not preserved; confirmed full-session participation may be credited manually when known.
+The matrix provides a meeting-by-meeting record of participation when attendance data are available. <strong>We recognize that clinical, research, and personal schedules vary, and joining for any portion of a meeting is appreciated.</strong> Attendance duration is shown when captured, but it is not intended as a measure of contribution or engagement. <strong>Confirmed · time n/a</strong> indicates known participation when individual attendance time was not preserved.
 </div>
 
 ```{r attendance-qc-matrix}
@@ -3245,17 +3203,6 @@ if (nrow(qc_people) && nrow(qc_meetings)) {
       as.Date(qc_meetings$meeting_date[m])
     )
 
-    duration_text <- if (
-      !is.na(qc_meetings$observed_meeting_minutes[m])
-    ) {
-      paste0(
-        "≈ ",
-        round(qc_meetings$observed_meeting_minutes[m]),
-        " min"
-      )
-    } else {
-      ""
-    }
 
     cat(
       '<th scope="col">',
@@ -3264,9 +3211,6 @@ if (nrow(qc_people) && nrow(qc_meetings)) {
         '</span>',
         '<span class="ch-qc-meeting-date">',
           esc(meeting_date_display),
-        '</span>',
-        '<span class="ch-qc-meeting-duration">',
-          esc(duration_text),
         '</span>',
       '</th>'
     )
@@ -3280,7 +3224,6 @@ if (nrow(qc_people) && nrow(qc_meetings)) {
     person_key <- qc_people$name_key[p]
     person_name <- qc_people$name[p]
     person_audience <- qc_people$audience[p]
-    person_total_minutes <- round(qc_people$total_minutes[p])
 
     cat('<tr>')
 
@@ -3291,10 +3234,6 @@ if (nrow(qc_people) && nrow(qc_meetings)) {
         '</span>',
         '<span class="ch-qc-audience">',
           esc(person_audience),
-        '</span>',
-        '<span class="ch-qc-total">',
-          person_total_minutes,
-          ' min total',
         '</span>',
       '</td>'
     )
@@ -3319,38 +3258,31 @@ if (nrow(qc_people) && nrow(qc_meetings)) {
         )
 
       } else if (
-        cell$attendance_status[[1]] ==
-          "confirmed_time_not_captured"
+        cell$attendance_status[[1]] %in%
+          c("confirmed_time_not_captured", "manual_credit")
       ) {
 
         cat(
           '<td>',
             '<span class="ch-qc-confirmed">Confirmed</span>',
-            '<span class="ch-qc-time-na">time n/a</span>',
+            '<span class="ch-qc-time-na">',
+              if (
+                cell$attendance_status[[1]] ==
+                  "confirmed_time_not_captured"
+              ) "time n/a" else "full-session participation confirmed",
+            '</span>',
           '</td>'
         )
 
       } else {
 
         minutes_value <- round(cell$minutes[[1]])
-        pct_value <- round(cell$attendance_pct[[1]])
-
-        pct_for_fill <- max(
-          0,
-          min(100, pct_value)
-        )
 
         cat(
-          '<td class="ch-qc-present" style="--qc-pct:',
-            pct_for_fill,
-            '%;">',
+          '<td class="ch-qc-present">',
             '<span class="ch-qc-minutes">',
               minutes_value,
               ' min',
-            '</span>',
-            '<span class="ch-qc-percent">',
-              pct_value,
-              '% of meeting',
             '</span>',
           '</td>'
         )
