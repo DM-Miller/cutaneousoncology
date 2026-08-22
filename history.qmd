@@ -2,6 +2,7 @@
 pagetitle: "History | Society of Cutaneous Oncology"
 page-layout: full
 toc: false
+
 ---
 
 <style>
