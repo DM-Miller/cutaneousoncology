@@ -6,139 +6,356 @@ toc: false
 
 ```{=html}
 <style>
+:root {
+  --soco-navy:#041b33;
+  --soco-blue:#0E5688;
+  --soco-teal:#28A9A2;
+  --soco-teal-dark:#168A8F;
+  --soco-coral:#E25A4E;
+  --soco-ink:#31424E;
+  --soco-muted:#6B747B;
+  --soco-pale:#F3F8F8;
+  --soco-line:#D9E8E8;
+}
+
+#title-block-header,
+.quarto-title-block,
+.quarto-title,
+.quarto-title-meta {
+  display:none !important;
+}
+
+html,
+body,
+main.content {
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+body {
+  background:#fff;
+}
+
+main.content {
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+}
+
 .soco-404 {
-  position: relative;
-  overflow: hidden;
-  min-height: 72vh;
-  display: flex;
-  align-items: center;
+  position:relative;
+  overflow:hidden;
+  min-height:76vh;
+  display:flex;
+  align-items:center;
   background:
-    radial-gradient(circle at 82% 22%, rgba(40,169,162,.22), transparent 30%),
-    radial-gradient(circle at 92% 85%, rgba(233,120,99,.12), transparent 25%),
-    linear-gradient(135deg, #062A46 0%, #083754 55%, #0B4657 100%);
-  color: #fff;
+    radial-gradient(circle at 86% 18%, rgba(40,169,162,.15), transparent 30%),
+    radial-gradient(circle at 8% 88%, rgba(226,90,78,.05), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #f5fbfa 48%, #edf8f7 100%);
+  color:var(--soco-ink);
+}
+
+.soco-404::before {
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  top:-95px;
+  right:-75px;
+  opacity:.24;
+  background-image:
+    radial-gradient(circle, rgba(40,169,162,.8) 0 1.35px, transparent 1.9px);
+  background-size:30px 30px;
+  mask-image:radial-gradient(circle,#000 0%,transparent 72%);
+  -webkit-mask-image:radial-gradient(circle,#000 0%,transparent 72%);
+  pointer-events:none;
 }
 
 .soco-404::after {
-  content: "404";
-  position: absolute;
-  right: -1rem;
-  bottom: -5rem;
-  color: rgba(255,255,255,.035);
-  font-size: clamp(15rem, 35vw, 32rem);
-  line-height: .8;
-  font-weight: 800;
-  letter-spacing: -.08em;
-  pointer-events: none;
+  content:"404";
+  position:absolute;
+  right:-1rem;
+  bottom:-4.8rem;
+  color:rgba(4,27,51,.035);
+  font-size:clamp(15rem,35vw,31rem);
+  line-height:.8;
+  font-weight:850;
+  letter-spacing:-.09em;
+  pointer-events:none;
 }
 
 .soco-404-inner {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: clamp(5rem, 10vw, 8rem) 2rem;
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:1180px;
+  margin:0 auto;
+  padding:clamp(4.5rem,9vw,7.4rem) 2rem;
 }
 
-.soco-404-copy {
-  max-width: 800px;
+.soco-404-card {
+  max-width:900px;
+  padding:clamp(2.3rem,5vw,4rem);
+  border:1px solid var(--soco-line);
+  border-radius:1.3rem;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.98) 0%, rgba(244,250,249,.98) 100%);
+  box-shadow:0 24px 70px rgba(4,27,51,.08);
 }
 
-.soco-404 .soco-eyebrow {
-  color: #7ED8D2;
+.soco-eyebrow {
+  color:var(--soco-teal-dark);
+  font-size:.78rem;
+  font-weight:850;
+  letter-spacing:.13em;
+  text-transform:uppercase;
 }
 
 .soco-404-headline {
-  margin: .65rem 0 1.4rem;
-  color: #fff !important;
-  font-size: clamp(3.3rem, 6.4vw, 6rem);
-  line-height: .98;
-  letter-spacing: -.05em;
-  font-weight: 750;
+  margin:.65rem 0 1.15rem;
+  color:var(--soco-navy) !important;
+  font-size:clamp(3.25rem,6.1vw,5.8rem);
+  line-height:.98;
+  letter-spacing:-.055em;
+  font-weight:800;
 }
 
 .soco-404-dek {
-  max-width: 700px;
-  margin: 0;
-  color: rgba(255,255,255,.82);
-  font-size: clamp(1.15rem, 2vw, 1.35rem);
-  line-height: 1.65;
+  max-width:720px;
+  margin:0;
+  color:#526777;
+  font-size:clamp(1.08rem,1.8vw,1.28rem);
+  line-height:1.68;
+}
+
+.soco-404-accent {
+  width:92px;
+  height:5px;
+  margin-top:1.45rem;
+  border-radius:999px;
+  background:linear-gradient(
+    90deg,
+    var(--soco-teal) 0 70%,
+    var(--soco-coral) 70%
+  );
 }
 
 .soco-404-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .8rem;
-  margin-top: 2.2rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.8rem;
+  margin-top:2rem;
 }
 
 .soco-404-actions .btn {
-  padding: .75rem 1.2rem;
+  padding:.78rem 1.18rem;
+  border-radius:.72rem;
+  font-weight:750;
+  text-decoration:none !important;
 }
 
-.soco-404-actions .btn-outline-light {
-  border-color: rgba(255,255,255,.55);
-  color: #fff;
+.soco-404-actions .btn-primary {
+  border-color:var(--soco-teal-dark);
+  background:var(--soco-teal-dark);
+  color:#fff;
 }
 
-.soco-404-actions .btn-outline-light:hover {
-  background: #fff;
-  color: #062A46;
+.soco-404-actions .btn-primary:hover {
+  border-color:#0f6f74;
+  background:#0f6f74;
+  color:#fff;
+}
+
+.soco-404-actions .btn-outline-soco {
+  border:1px solid rgba(22,138,143,.35);
+  background:#fff;
+  color:var(--soco-teal-dark);
+}
+
+.soco-404-actions .btn-outline-soco:hover {
+  border-color:var(--soco-teal-dark);
+  background:var(--soco-pale);
+  color:var(--soco-navy);
+}
+
+.soco-404-links {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:.8rem;
+  max-width:800px;
+  margin-top:2.15rem;
+}
+
+.soco-404-link-card {
+  display:block;
+  min-width:0;
+  padding:1rem 1.05rem;
+  border:1px solid rgba(40,169,162,.2);
+  border-radius:.9rem;
+  background:#eef8f7;
+  color:var(--soco-navy) !important;
+  text-decoration:none !important;
+  transition:
+    transform .15s ease,
+    border-color .15s ease,
+    background .15s ease,
+    box-shadow .15s ease;
+}
+
+.soco-404-link-card:hover {
+  transform:translateY(-2px);
+  border-color:rgba(22,138,143,.45);
+  background:#e7f5f4;
+  box-shadow:0 10px 24px rgba(4,27,51,.06);
+}
+
+.soco-404-link-label {
+  display:block;
+  margin-bottom:.18rem;
+  color:var(--soco-teal-dark);
+  font-size:.7rem;
+  font-weight:850;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.soco-404-link-title {
+  display:block;
+  color:var(--soco-navy);
+  font-size:.98rem;
+  font-weight:800;
+  line-height:1.25;
 }
 
 .soco-404-note {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  max-width: 650px;
-  border-top: 1px solid rgba(255,255,255,.18);
-  color: rgba(255,255,255,.62);
-  font-size: .92rem;
-  line-height: 1.6;
+  max-width:680px;
+  margin-top:2.2rem;
+  padding-top:1.3rem;
+  border-top:1px solid var(--soco-line);
+  color:#70818d;
+  font-size:.91rem;
+  line-height:1.62;
 }
 
-@media (max-width: 700px) {
+@media (max-width:800px) {
+  .soco-404-links {
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:700px) {
+  .soco-404 {
+    min-height:auto;
+  }
+
   .soco-404-inner {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding:2.7rem .7rem 3.4rem;
+  }
+
+  .soco-404-card {
+    width:100%;
+    min-width:0;
+    padding:1.5rem 1rem;
+    border-radius:1rem;
+  }
+
+  .soco-404-headline {
+    font-size:clamp(2.7rem,13vw,4rem);
+    overflow-wrap:anywhere;
+  }
+
+  .soco-404-dek {
+    font-size:1rem;
+    line-height:1.6;
+  }
+
+  .soco-404-actions {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .soco-404-actions .btn {
+    width:100%;
+    text-align:center;
+  }
+
+  .soco-404-link-card {
+    overflow-wrap:anywhere;
+  }
+
+  .soco-404::before {
+    width:300px;
+    height:300px;
+    right:-100px;
+    top:-65px;
   }
 
   .soco-404::after {
-    right: -2rem;
-    bottom: -1rem;
+    right:-2.2rem;
+    bottom:-1rem;
+    font-size:12rem;
+  }
+}
+
+@media (max-width:430px) {
+  .soco-404-inner {
+    padding-left:.5rem;
+    padding-right:.5rem;
+  }
+
+  .soco-404-card {
+    padding:1.3rem .9rem;
+  }
+
+  .soco-404-headline {
+    font-size:2.65rem;
   }
 }
 </style>
 ```
 
-::::::: soco-404
-:::::: soco-404-inner
-::::: soco-404-copy
-::: soco-eyebrow
-Society of Cutaneous Oncology • 404
-:::
+<div class="soco-404">
+<div class="soco-404-inner">
+<div class="soco-404-card">
 
-<h1 class="soco-404-headline">
+<div class="soco-eyebrow">Society of Cutaneous Oncology • 404</div>
 
-Page not found.
-
-</h1>
+<h1 class="soco-404-headline">Page not found.</h1>
 
 <p class="soco-404-dek">
-
-The page you're looking for may have moved, been renamed, or no longer be available. You can return to the Society of Cutaneous Oncology homepage or explore our community and programs.
-
+The page you're looking for may have moved, been renamed, or no longer be available. You can return to the Society of Cutaneous Oncology homepage or continue exploring our programs and community.
 </p>
 
-::: soco-404-actions
-[Return to SoCO](index.qmd){.btn .btn-primary} [Join our community](join.qmd){.btn .btn-outline-light}
-:::
+<div class="soco-404-accent"></div>
+
+<div class="soco-404-actions">
+<a class="btn btn-primary" href="/index.html">Return to SoCO</a>
+<a class="btn btn-outline-soco" href="/join.html">Join our community</a>
+</div>
+
+<div class="soco-404-links">
+
+<a class="soco-404-link-card" href="/jc.html">
+<span class="soco-404-link-label">Evidence discussion</span>
+<span class="soco-404-link-title">Journal Club</span>
+</a>
+
+<a class="soco-404-link-card" href="/research_forum.html">
+<span class="soco-404-link-label">Research community</span>
+<span class="soco-404-link-title">Research Forum</span>
+</a>
+
+<a class="soco-404-link-card" href="/community_highlights.html">
+<span class="soco-404-link-label">Our community</span>
+<span class="soco-404-link-title">Community Highlights</span>
+</a>
+
+</div>
 
 <p class="soco-404-note">
-
 Looking for something specific? Use the search icon in the navigation bar to search the SoCO website.
-
 </p>
-:::::
-::::::
-:::::::
+
+</div>
+</div>
+</div>
