@@ -1,0 +1,1158 @@
+---
+title: "C-POST"
+pagetitle: "C-POST | SoCO Journal Club"
+description: "Meeting recap from the July 11, 2025 Society of Cutaneous Oncology Journal Club discussing adjuvant cemiplimab in high-risk resected cutaneous squamous cell carcinoma."
+date: 2025-07-11
+author: "Society of Cutaneous Oncology"
+categories:
+  - 2025
+  - Journal Club
+  - Cutaneous Squamous Cell Carcinoma
+  - Adjuvant Immunotherapy
+tags:
+  - CSCC
+  - C-POST
+  - Cemiplimab
+  - Adjuvant Therapy
+  - Neoadjuvant Therapy
+  - Radiation
+  - KEYNOTE-630
+image: CPOST_July11_card.svg
+page-layout: full
+title-block-style: none
+toc: false
+---
+
+<style>
+:root {
+  --navy:#082D4D;
+  --blue:#0E5688;
+  --teal:#28A9A2;
+  --teal-dark:#168A8F;
+  --coral:#E25A4E;
+  --ink:#31424E;
+  --muted:#6B747B;
+  --pale:#F3F8F8;
+  --line:#D9E8E8;
+  --white:#FFFFFF;
+}
+
+#title-block-header,
+.quarto-title-block,
+.quarto-title,
+.quarto-title-meta {
+  display:none !important;
+}
+
+html, body {
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+body {
+  background:#fff;
+  color:var(--ink);
+}
+
+main.content {
+  max-width:1120px;
+  margin:auto;
+  padding-top:0 !important;
+}
+
+h1,h2,h3 {
+  color:var(--navy);
+  font-weight:800;
+}
+
+.hero {
+  position:relative;
+  overflow:hidden;
+  margin:2rem 0 2.4rem;
+  padding:2.8rem 3rem;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(40,169,162,.12),transparent 31%),
+    radial-gradient(circle at 12% 88%,rgba(226,90,78,.05),transparent 28%),
+    linear-gradient(135deg,#EEF8F7 0%,#FFFFFF 72%);
+  box-shadow:0 10px 30px rgba(8,45,77,.07);
+}
+
+.hero::after {
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  top:-80px;
+  right:-50px;
+  opacity:.18;
+  background-image:radial-gradient(circle,rgba(40,169,162,.7) 0 1.2px,transparent 1.8px);
+  background-size:26px 26px;
+  mask-image:radial-gradient(circle,#000 0%,transparent 72%);
+  -webkit-mask-image:radial-gradient(circle,#000 0%,transparent 72%);
+  pointer-events:none;
+}
+
+.kicker,.section-kicker {
+  color:var(--teal-dark);
+  font-weight:850;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:.79rem;
+}
+
+.hero h1 {
+  position:relative;
+  z-index:1;
+  max-width:930px;
+  margin:.55rem 0 .8rem;
+  color:var(--navy);
+  font-size:clamp(2.7rem,5vw,4.25rem);
+  line-height:1.01;
+  letter-spacing:-.045em;
+}
+
+.hero-copy {
+  position:relative;
+  z-index:1;
+  max-width:860px;
+  color:#526574;
+  font-size:1.18rem;
+  line-height:1.65;
+}
+
+.accent {
+  width:94px;
+  height:5px;
+  margin-top:1.4rem;
+  border-radius:4px;
+  background:linear-gradient(90deg,var(--teal) 0 68%,var(--coral) 68%);
+}
+
+.link-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.7rem;
+  margin-top:1.25rem;
+}
+
+.soco-link {
+  display:inline-flex;
+  padding:.62rem .94rem;
+  border-radius:999px;
+  background:var(--blue);
+  color:#fff !important;
+  text-decoration:none;
+  font-size:.88rem;
+  font-weight:750;
+}
+
+.soco-link.secondary {
+  background:rgba(255,255,255,.9);
+  border:1px solid rgba(40,169,162,.42);
+  color:var(--navy) !important;
+}
+
+.partnership {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:fit-content;
+  max-width:100%;
+  margin:1.35rem 0 0;
+  padding:.58rem 1rem;
+  border:1px solid rgba(40,169,162,.42);
+  border-radius:999px;
+  background:#EEF8F7;
+  color:var(--navy);
+  font-size:.86rem;
+  font-weight:800;
+  text-align:center;
+}
+
+.section-kicker {
+  margin-top:3rem;
+}
+
+.section-intro {
+  max-width:900px;
+  color:#56636D;
+  font-size:1.05rem;
+  line-height:1.72;
+}
+
+.metric-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1rem;
+  margin:1.4rem 0 2rem;
+}
+
+.metric-card {
+  padding:1.25rem 1.3rem;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(8,45,77,.05);
+}
+
+.metric-label {
+  display:block;
+  color:var(--muted);
+  font-size:.75rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.metric-value {
+  display:block;
+  margin:.3rem 0;
+  color:var(--navy);
+  font-size:2rem;
+  font-weight:850;
+}
+
+.metric-note {
+  color:var(--muted);
+  font-size:.87rem;
+  line-height:1.42;
+}
+
+.paper-card {
+  margin:1.25rem 0 2rem;
+  padding:1.7rem 1.9rem;
+  border-left:7px solid var(--teal);
+  border-radius:0 20px 20px 0;
+  background:linear-gradient(135deg,rgba(40,169,162,.085),rgba(8,45,77,.035));
+}
+
+.paper-eyebrow {
+  margin-bottom:.6rem;
+  color:var(--teal-dark);
+  font-size:.76rem;
+  font-weight:850;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.paper-title {
+  margin:0 0 .7rem;
+  color:var(--navy);
+  font-size:1.55rem;
+  font-weight:850;
+  line-height:1.25;
+}
+
+.paper-citation {
+  color:#52616D;
+  line-height:1.55;
+}
+
+.question-card {
+  margin:1.35rem 0 2rem;
+  padding:1.3rem 1.45rem;
+  border-left:6px solid var(--coral);
+  border-radius:0 16px 16px 0;
+  background:#FFF7F5;
+  color:#5B423D;
+  font-size:1.08rem;
+  font-weight:720;
+  line-height:1.55;
+}
+
+.highlight-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
+  margin:1.2rem 0 2rem;
+}
+
+.highlight-card {
+  padding:1.25rem;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+}
+
+.highlight-card h3 {
+  margin:.15rem 0 .55rem;
+  font-size:1.08rem;
+}
+
+.highlight-card p {
+  margin:0;
+  color:#586A77;
+  font-size:.93rem;
+  line-height:1.58;
+}
+
+.partners-card {
+  margin:1.2rem 0 2rem;
+  padding:1.45rem 1.55rem;
+  border:1px solid rgba(40,169,162,.30);
+  border-radius:18px;
+  background:linear-gradient(135deg,#EEF8F7,#FFFFFF);
+}
+
+.partners-card h3 {
+  margin:0 0 .6rem;
+}
+
+.partners-card p {
+  margin:.3rem 0;
+  color:#536675;
+  line-height:1.65;
+}
+
+.signal-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+  margin:1.25rem 0 1.6rem;
+}
+
+.signal-card {
+  padding:1.25rem 1.35rem;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+}
+
+.signal-eyebrow {
+  color:var(--coral);
+  font-size:.73rem;
+  font-weight:850;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+
+.signal-title {
+  margin:.3rem 0 .85rem;
+  color:var(--navy);
+  font-size:1.05rem;
+  font-weight:800;
+}
+
+.signal-row {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(110px,.7fr) 58px;
+  gap:.75rem;
+  align-items:center;
+  margin:.55rem 0;
+  color:#435A6C;
+  font-size:.9rem;
+}
+
+.signal-track {
+  height:8px;
+  border-radius:999px;
+  overflow:hidden;
+  background:#EAF2F2;
+}
+
+.signal-fill {
+  width:100%;
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#2D9697,#17628F);
+}
+
+.signal-value {
+  text-align:right;
+  color:var(--navy);
+  font-weight:850;
+}
+
+.signal-note {
+  margin-top:.8rem;
+  padding-top:.75rem;
+  border-top:1px solid var(--line);
+  color:#66727A;
+  font-size:.82rem;
+  line-height:1.5;
+}
+
+.survey-disclosure {
+  margin:1.4rem 0 2rem;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+}
+
+.survey-toggle {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  width:100%;
+  padding:1rem 1.2rem;
+  border:0;
+  background:#F6FAFA;
+  color:var(--navy);
+  font-weight:820;
+  text-align:left;
+  cursor:pointer;
+}
+
+.survey-panel {
+  display:none;
+  padding:1rem 1.15rem 1.25rem;
+}
+
+.survey-panel.open {
+  display:block;
+}
+
+.survey-css-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+}
+
+.survey-css-card {
+  min-width:0;
+  padding:1.1rem 1.15rem;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fff;
+}
+
+.survey-css-card.wide {
+  grid-column:1 / -1;
+}
+
+.survey-css-kicker {
+  color:var(--coral);
+  font-size:.7rem;
+  font-weight:850;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.survey-css-title {
+  margin:.25rem 0 .7rem;
+  color:var(--navy);
+  font-size:1rem;
+  font-weight:800;
+}
+
+.survey-css-row {
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(110px,.9fr) 52px;
+  gap:.7rem;
+  align-items:center;
+  margin:.52rem 0;
+  color:#42596B;
+  font-size:.86rem;
+}
+
+.survey-css-label {
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+
+.survey-css-track {
+  height:8px;
+  overflow:hidden;
+  border-radius:999px;
+  background:#EAF2F2;
+}
+
+.survey-css-fill {
+  width:100%;
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#2D9697,#17628F);
+}
+
+.survey-css-value {
+  color:var(--navy);
+  font-weight:850;
+  text-align:right;
+}
+
+.survey-css-note {
+  margin-top:.7rem;
+  color:#697782;
+  font-size:.78rem;
+  line-height:1.45;
+}
+
+.quote-card {
+  margin:1rem 0;
+  padding:1.2rem 1.35rem;
+  border-left:5px solid var(--teal);
+  border-radius:0 16px 16px 0;
+  background:#F4F9F9;
+}
+
+.quote-card strong {
+  color:var(--navy);
+}
+
+.quote-card p {
+  margin:.3rem 0 0;
+  color:#536675;
+  line-height:1.65;
+}
+
+.followup {
+  margin:2rem 0;
+  padding:1.55rem 1.65rem;
+  border:1px solid rgba(40,169,162,.30);
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 92% 12%,rgba(40,169,162,.10),transparent 26%),
+    linear-gradient(135deg,#EEF8F7,#FFFFFF);
+}
+
+.followup h2 {
+  margin:.2rem 0 .65rem;
+}
+
+.attendance-wrap {
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin:1rem 0 2rem;
+}
+
+.attendance-table {
+  width:100%;
+  min-width:620px;
+  border-collapse:collapse;
+  font-size:.88rem;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding:.68rem .75rem;
+  border-bottom:1px solid var(--line);
+  text-align:left;
+}
+
+.attendance-table th {
+  color:var(--navy);
+  font-size:.75rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+@media (max-width:820px) {
+  .metric-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+  .highlight-grid,
+  .signal-grid,
+  .survey-css-grid {
+    grid-template-columns:1fr;
+  }
+  .survey-css-card.wide {
+    grid-column:auto;
+  }
+}
+
+@media (max-width:620px) {
+  main.content {
+    width:100%;
+    padding-left:.8rem !important;
+    padding-right:.8rem !important;
+  }
+  .hero {
+    margin-top:1rem;
+    padding:1.35rem 1.15rem;
+    border-radius:18px;
+  }
+  .hero h1 {
+    font-size:clamp(2.15rem,10vw,2.8rem);
+  }
+  .hero-copy {
+    font-size:1rem;
+    line-height:1.58;
+  }
+  .metric-grid {
+    grid-template-columns:1fr;
+  }
+  .link-row {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .soco-link {
+    width:100%;
+    justify-content:center;
+    text-align:center;
+  }
+  .partnership {
+    width:100%;
+  }
+  .signal-row,
+  .survey-css-row {
+    grid-template-columns:minmax(0,1fr) 86px 46px;
+    gap:.48rem;
+    font-size:.81rem;
+  }
+}
+</style>
+
+```{r setup}
+#| include: false
+#| warning: false
+#| message: false
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(here)
+  library(htmltools)
+})
+
+project_root <- here::here()
+
+meeting_candidates <- c(
+  here::here("journal_club", "July 11 2025 - C-POST"),
+  here::here("journal_club", "July 11 2025 - Adjuvant Cemiplimab in High-Risk SCC")
+)
+
+meeting_dir <- meeting_candidates[dir.exists(meeting_candidates)][1]
+
+if (length(meeting_dir) == 0 || is.na(meeting_dir)) {
+  jc_dir <- here::here("journal_club")
+  if (dir.exists(jc_dir)) {
+    hits <- list.dirs(jc_dir, recursive = FALSE, full.names = TRUE)
+    hits <- hits[
+      grepl("July 11 2025", basename(hits), ignore.case = TRUE) &
+      grepl("C.?POST|Cemiplimab", basename(hits), ignore.case = TRUE)
+    ]
+    if (length(hits) >= 1) meeting_dir <- hits[[1]]
+  }
+}
+
+if (length(meeting_dir) == 0 || is.na(meeting_dir) || !dir.exists(meeting_dir)) {
+  stop("Could not locate the July 11 2025 C-POST recap folder.")
+}
+
+attendance_dir <- file.path(meeting_dir, "files", "meeting recap-attendance")
+processor <- file.path(meeting_dir, "scripts", "process_attendance.R")
+
+if (file.exists(processor)) source(processor)
+
+attendance_clean_file <- file.path(attendance_dir, "attendance_clean.csv")
+attendance_summary_file <- file.path(attendance_dir, "attendance_summary.csv")
+
+attendance_clean <- if (file.exists(attendance_clean_file)) readr::read_csv(attendance_clean_file, show_col_types = FALSE) else tibble()
+attendance_summary <- if (file.exists(attendance_summary_file)) readr::read_csv(attendance_summary_file, show_col_types = FALSE) else tibble()
+
+metric_value <- function(metric, fallback = NA_real_) {
+  if (!nrow(attendance_summary) || !metric %in% attendance_summary$metric) return(fallback)
+  attendance_summary$value[match(metric, attendance_summary$metric)]
+}
+
+n_attend <- metric_value("unique_attendees", 38)
+median_min <- metric_value("median_minutes", 89.6)
+pct_60 <- metric_value("attended_60_minutes_or_more_pct", 74)
+n_regen <- metric_value("regeneron_attendees", 9)
+
+# ------------------------------------------------------------
+# Historical pre-JC survey
+# ------------------------------------------------------------
+#
+# This recap is historical. Do NOT call REDCap.
+# Search broadly for the archived processed survey generated by the
+# original July 2025 Journal Club workflow.
+
+survey_file <- NULL
+
+preferred_names <- c(
+  "survey_results_pre_test_processed.rds",
+  "survey_results_pre_test_processed.csv",
+  "survey_results_pre_test.rds",
+  "survey_results_pre_test.csv"
+)
+
+search_roots <- unique(c(
+  file.path(meeting_dir, "files"),
+  file.path(project_root, "files"),
+  meeting_dir,
+  project_root
+))
+
+search_roots <- search_roots[dir.exists(search_roots)]
+
+survey_candidates <- character(0)
+
+for (root in search_roots) {
+
+  # First look for the historical file names directly.
+  for (nm in preferred_names) {
+    direct_hits <- list.files(
+      root,
+      pattern = paste0("^", gsub("\\.", "\\\\.", nm), "$"),
+      recursive = TRUE,
+      full.names = TRUE,
+      ignore.case = TRUE
+    )
+
+    survey_candidates <- c(
+      survey_candidates,
+      direct_hits
+    )
+  }
+
+  # Broader fallback: any archived pre-JC survey RDS/CSV.
+  broad_hits <- list.files(
+    root,
+    pattern = "(survey_results.*pre.*test|pre.*JC.*survey).*\\.(rds|csv)$",
+    recursive = TRUE,
+    full.names = TRUE,
+    ignore.case = TRUE
+  )
+
+  survey_candidates <- c(
+    survey_candidates,
+    broad_hits
+  )
+}
+
+survey_candidates <- unique(
+  survey_candidates[file.exists(survey_candidates)]
+)
+
+# Exclude test/debug artifacts if a real processed archive exists.
+non_test <- survey_candidates[
+  !grepl(
+    "(^|[/_ -])test([/_ .-]|$)",
+    basename(survey_candidates),
+    ignore.case = TRUE
+  ) |
+  grepl(
+    "pre_test_processed",
+    basename(survey_candidates),
+    ignore.case = TRUE
+  )
+]
+
+if (length(non_test)) {
+  survey_candidates <- non_test
+}
+
+if (length(survey_candidates)) {
+
+  # Prefer processed files, then RDS, then most recently modified.
+  score <- rep(0, length(survey_candidates))
+
+  score <- score +
+    ifelse(
+      grepl("processed", survey_candidates, ignore.case = TRUE),
+      1000,
+      0
+    )
+
+  score <- score +
+    ifelse(
+      grepl("\\.rds$", survey_candidates, ignore.case = TRUE),
+      100,
+      0
+    )
+
+  score <- score +
+    as.numeric(file.info(survey_candidates)$mtime) / 1e10
+
+  survey_file <- survey_candidates[
+    which.max(score)
+  ]
+}
+
+survey_dt <- NULL
+
+if (!is.null(survey_file)) {
+
+  survey_dt <- if (
+    grepl("\\.rds$", survey_file, ignore.case = TRUE)
+  ) {
+    readRDS(survey_file)
+  } else {
+    readr::read_csv(
+      survey_file,
+      show_col_types = FALSE
+    )
+  }
+
+  survey_dt <- as.data.frame(survey_dt)
+
+  message(
+    "Loaded archived pre-JC survey: ",
+    normalizePath(
+      survey_file,
+      winslash = "/",
+      mustWork = FALSE
+    )
+  )
+
+} else {
+
+  message(
+    "Archived pre-JC survey file was not found. ",
+    "The published survey summary will still render."
+  )
+}
+
+esc <- function(x) htmltools::htmlEscape(as.character(x))
+
+clean_response <- function(x) {
+  x <- as.character(x)
+  x[x %in% c("", "NA", "Not Answered", "Missing")] <- NA_character_
+  x
+}
+
+freq_from_col <- function(index) {
+  if (is.null(survey_dt) || ncol(survey_dt) < index) return(NULL)
+  x <- clean_response(survey_dt[[index]])
+  x <- x[!is.na(x)]
+  if (!length(x)) return(NULL)
+  out <- as.data.frame(table(x), stringsAsFactors = FALSE)
+  names(out) <- c("label", "n")
+  out$pct <- 100 * out$n / sum(out$n)
+  out <- out[order(-out$n, out$label), ]
+  rownames(out) <- NULL
+  out
+}
+
+render_rows <- function(df) {
+  if (is.null(df) || !nrow(df)) {
+    return(invisible(FALSE))
+  }
+
+  for (i in seq_len(nrow(df))) {
+    cat(
+      '<div class="survey-css-row">',
+        '<div class="survey-css-label">', esc(df$label[i]), '</div>',
+        '<div class="survey-css-track"><div class="survey-css-fill"></div></div>',
+        '<div class="survey-css-value">', round(df$pct[i]), '%</div>',
+      '</div>'
+    )
+  }
+
+  invisible(TRUE)
+}
+
+render_question <- function(number, title, df, wide = FALSE, note = NULL) {
+  if (is.null(df) || !nrow(df)) return(invisible(NULL))
+
+  cls <- if (wide) "survey-css-card wide" else "survey-css-card"
+
+  cat('<div class="', cls, '">')
+  cat('<div class="survey-css-kicker">Question ', number, '</div>')
+  cat('<div class="survey-css-title">', esc(title), '</div>')
+  render_rows(df)
+
+  if (!is.null(note)) {
+    cat(
+      '<div class="survey-css-note">',
+      esc(note),
+      '</div>'
+    )
+  }
+
+  cat('</div>')
+}
+
+# Historical survey positions from the July 2025 deck:
+# 1 = record id; 2-7 = Q1-Q6. Q7 was a multi-select barrier item.
+q1 <- freq_from_col(2)
+q2 <- freq_from_col(3)
+q3 <- freq_from_col(4)
+q4 <- freq_from_col(5)
+q5 <- freq_from_col(6)
+q6 <- freq_from_col(7)
+```
+
+<div class="hero">
+<div class="kicker">July 11, 2025 · SoCO Journal Club</div>
+<h1>C-POST: Adjuvant Cemiplimab in High-Risk Resected CSCC</h1>
+<div class="hero-copy">
+  A positive phase 3 trial changed the evidence base—but the room quickly moved to the harder questions: <strong>who should actually receive adjuvant therapy, what role radiation still plays, and whether immunotherapy belongs before surgery rather than after it.</strong>
+</div>
+<div class="accent"></div>
+<div class="partnership">Joint academic–industry Journal Club with Regeneron</div>
+<div class="link-row">
+<a class="soco-link" href="https://doi.org/10.1056/NEJMoa2502449">Read the NEJM article</a>
+<a class="soco-link secondary" href="https://journalofcutaneousoncology.io/perspectives/vol_3_issue_2/adjuvant_cemiplimab_for_high_risk_resected_cscc/">Read the JoCO Perspective</a>
+</div>
+</div>
+
+<div class="metric-grid">
+<div class="metric-card">
+<span class="metric-label">Meeting</span>
+<span class="metric-value">`r n_attend`</span>
+<span class="metric-note">unique attendees after reconnects were consolidated</span>
+</div>
+<div class="metric-card">
+<span class="metric-label">Median attendance</span>
+<span class="metric-value">`r round(median_min)` min</span>
+<span class="metric-note">among unique attendees</span>
+</div>
+<div class="metric-card">
+<span class="metric-label">Stayed ≥60 min</span>
+<span class="metric-value">`r round(pct_60)`%</span>
+<span class="metric-note">sustained participation across a long-form discussion</span>
+</div>
+<div class="metric-card">
+<span class="metric-label">Regeneron</span>
+<span class="metric-value">`r n_regen`</span>
+<span class="metric-note">attendees identified by Regeneron email domain</span>
+</div>
+</div>
+
+<div class="paper-card">
+<div class="paper-eyebrow">Primary article</div>
+<div class="paper-title">Adjuvant Cemiplimab or Placebo in High-Risk Cutaneous Squamous-Cell Carcinoma</div>
+<div class="paper-citation"><strong>Rischin D, Porceddu S, Day F, et al.</strong> <em>New England Journal of Medicine.</em> 2025. DOI: 10.1056/NEJMoa2502449.</div>
+</div>
+
+<div class="section-kicker">The signal</div>
+
+## What C-POST established
+
+C-POST randomized **415 patients** with high-risk resected CSCC after surgery and postoperative radiotherapy to cemiplimab or placebo. At the primary analysis, disease recurrence or death occurred in 24 patients receiving cemiplimab and 65 receiving placebo, corresponding to a **hazard ratio of 0.32**. Estimated 24-month disease-free survival was **87.1% versus 64.1%**.
+
+<div class="question-card">
+The question beneath the paper: <strong>Does a large reduction in recurrence risk mean adjuvant anti–PD-1 should become routine—or does it make patient selection, sequencing, and treatment burden even more important?</strong>
+</div>
+
+<div class="highlight-grid">
+<div class="highlight-card">
+<h3>What is proven?</h3>
+<p>Adjuvant cemiplimab reduces recurrence after complete local therapy in a carefully selected, very-high-risk population.</p>
+</div>
+<div class="highlight-card">
+<h3>What is not proven?</h3>
+<p>C-POST does not establish that cemiplimab can replace postoperative radiation, because both randomized groups received radiation before study therapy.</p>
+</div>
+<div class="highlight-card">
+<h3>What changed the discussion?</h3>
+<p>The competing clinical reality was already neoadjuvant immunotherapy—an approach many participants were using before adjuvant phase 3 data arrived.</p>
+</div>
+</div>
+
+<div class="partners-card">
+<div class="section-kicker" style="margin-top:0;">Academic–industry conversation</div>
+<h3>Regeneron joined the room—not just the agenda.</h3>
+<p>The session deliberately brought academic clinicians together with colleagues from Regeneron involved in medical affairs and clinical development. The later JoCO Perspective acknowledged Christopher Zajac, Alyson Baryiames, Sarah Nia, Brian Burleson, Kim Premo, Frank Seebach, Julie Montiel, and Matthew Fury for participating and sharing insights about the development and interpretation of C-POST.</p>
+<p>The recap preserves the distinction between participation and independent interpretation: industry colleagues contributed context, while the discussion remained an evidence-focused SoCO Journal Club.</p>
+</div>
+
+<div class="section-kicker">Before the discussion</div>
+
+## What the survey said
+
+The survey is particularly useful in retrospect because it captured a field already moving faster than the formal evidence base. The visual language below deliberately uses **equal-length rails**: the percentage is the quantitative signal, while the rail provides alignment rather than a second encoding of magnitude.
+
+<div class="signal-grid">
+<div class="signal-card">
+<div class="signal-eyebrow">Prior practice</div>
+<div class="signal-title">Had clinicians already recommended adjuvant anti–PD-1?</div>
+<div class="signal-row">
+<div>Yes</div><div class="signal-track"><div class="signal-fill"></div></div><div class="signal-value">64%</div>
+</div>
+<div class="signal-row">
+<div>No</div><div class="signal-track"><div class="signal-fill"></div></div><div class="signal-value">36%</div>
+</div>
+<div class="signal-note">Published analysis: n = 22 clinicians actively managing CSCC.</div>
+</div>
+
+<div class="signal-card">
+<div class="signal-eyebrow">Case vignette</div>
+<div class="signal-title">Untreated parotid metastasis: where did the room lean?</div>
+<div class="signal-row">
+<div>Immunotherapy-first strategy</div><div class="signal-track"><div class="signal-fill"></div></div><div class="signal-value">68%</div>
+</div>
+<div class="signal-row">
+<div>Surgery → RT ± ICI</div><div class="signal-track"><div class="signal-fill"></div></div><div class="signal-value">12%</div>
+</div>
+<div class="signal-note">The transcript records the tension this created for equipoise in ongoing neoadjuvant trials.</div>
+</div>
+
+<div class="signal-card">
+<div class="signal-eyebrow">Implementation</div>
+<div class="signal-title">Most common anticipated barriers to adjuvant anti–PD-1</div>
+<div class="signal-row">
+<div>Prefer neoadjuvant ICI</div><div class="signal-track"><div class="signal-fill"></div></div><div class="signal-value">65%</div>
+</div>
+<div class="signal-row">
+<div>Toxicity concerns</div><div class="signal-track"><div class="signal-fill"></div></div><div class="signal-value">48%</div>
+</div>
+<div class="signal-row">
+<div>Benefit–risk uncertainty</div><div class="signal-track"><div class="signal-fill"></div></div><div class="signal-value">43%</div>
+</div>
+<div class="signal-note">Multiple selections were allowed; six respondents also selected waiting for recurrence to avoid overtreatment.</div>
+</div>
+
+<div class="signal-card">
+<div class="signal-eyebrow">Radiation</div>
+<div class="signal-title">Could postoperative RT be omitted in favor of cemiplimab?</div>
+<div class="signal-row">
+<div>Comfortable</div><div class="signal-track"><div class="signal-fill"></div></div><div class="signal-value">&lt;⅓</div>
+</div>
+<div class="signal-row">
+<div>Uncertain / uncomfortable</div><div class="signal-track"><div class="signal-fill"></div></div><div class="signal-value">majority</div>
+</div>
+<div class="signal-note">The published Perspective emphasizes substantial ambivalence; C-POST did not test RT omission.</div>
+</div>
+</div>
+
+<div class="survey-disclosure">
+<button class="survey-toggle" type="button" onclick="document.getElementById('full-survey-panel').classList.toggle('open'); this.querySelector('span:last-child').textContent = document.getElementById('full-survey-panel').classList.contains('open') ? '−' : '+';">
+<span>Explore the full archived pre-meeting survey</span>
+<span>+</span>
+</button>
+<div class="survey-panel" id="full-survey-panel">
+
+```{r full-survey-css}
+#| echo: false
+#| results: asis
+#| warning: false
+#| message: false
+cat('<div class="survey-css-grid">')
+
+render_question(1, "Who was in the room?", q1)
+render_question(2, "How many high-risk CSCC patients did respondents see each month?", q2)
+render_question(3, "Prior adjuvant anti–PD-1 use", q3)
+render_question(4, "Preferred management for untreated parotid nodal metastasis", q4, wide = TRUE)
+render_question(5, "Comfort omitting postoperative radiation in favor of adjuvant anti–PD-1", q5, wide = TRUE)
+render_question(6, "Anticipated future use: neoadjuvant or adjuvant anti–PD-1?", q6, wide = TRUE)
+
+cat(
+  '<div class="survey-css-card wide">',
+    '<div class="survey-css-kicker">Question 7</div>',
+    '<div class="survey-css-title">Barriers to adjuvant anti–PD-1 use</div>',
+    '<div class="survey-css-row"><div class="survey-css-label">Preference for neoadjuvant immunotherapy</div><div class="survey-css-track"><div class="survey-css-fill"></div></div><div class="survey-css-value">65%</div></div>',
+    '<div class="survey-css-row"><div class="survey-css-label">Toxicity concerns</div><div class="survey-css-track"><div class="survey-css-fill"></div></div><div class="survey-css-value">48%</div></div>',
+    '<div class="survey-css-row"><div class="survey-css-label">Uncertainty regarding benefit versus risk</div><div class="survey-css-track"><div class="survey-css-fill"></div></div><div class="survey-css-value">43%</div></div>',
+    '<div class="survey-css-row"><div class="survey-css-label">Prefer to wait for recurrence to avoid overtreatment</div><div class="survey-css-track"><div class="survey-css-fill"></div></div><div class="survey-css-value">n=6</div></div>',
+    '<div class="survey-css-note">Multiple selections were allowed. The published Perspective reports the three leading percentages; the meeting transcript additionally records six selections for waiting until recurrence.</div>',
+  '</div>'
+)
+
+cat('</div>')
+
+if (is.null(survey_dt)) {
+  cat(
+    '<div class="survey-css-note" style="margin-top:1rem;">',
+    '<strong>Historical survey archive:</strong> ',
+    'the local response-level file was not available in this render, so only survey results preserved in the published JoCO Perspective are shown here.',
+    '</div>'
+  )
+}
+```
+
+</div>
+</div>
+
+<div class="section-kicker">What the room wrestled with</div>
+
+## The discussion moved beyond the headline result
+
+<div class="quote-card">
+<strong>Radiation became the practical fault line.</strong>
+<p>Participants repeatedly returned to the patient who arrives after surgery but before postoperative RT. The trial proves benefit after radiation; it does not tell clinicians whether systemic therapy can safely replace radiation.</p>
+</div>
+
+<div class="quote-card">
+<strong>Neoadjuvant therapy had already changed the baseline.</strong>
+<p>For a resectable parotid metastasis, the majority of surveyed clinicians favored beginning with immunotherapy. That prompted a discussion about whether contemporary practice was already eroding equipoise for surgery-first randomized strategies.</p>
+</div>
+
+<div class="quote-card">
+<strong>C-POST versus KEYNOTE-630 was treated as an inference problem, not a horse race.</strong>
+<p>The group considered differences in eligibility, radiation, timing to randomization, dosing schedules, study conduct, and chance. Reconstructed survival curves were used to ask whether the placebo groups actually looked as different as post hoc explanations implied.</p>
+</div>
+
+<div class="quote-card">
+<strong>The Regeneron perspective added useful restraint.</strong>
+<p>When cross-trial speculation became tempting, Matthew Fury emphasized how much information remained unavailable and cautioned against pushing the comparison beyond what the data could support.</p>
+</div>
+
+<div class="section-kicker">People in the room</div>
+
+## A multidisciplinary meeting
+
+The attendance export contains **`r n_attend` unique attendees** after duplicate reconnects were consolidated, including **`r n_regen` Regeneron participants**. The meeting mixed dermatology, Mohs surgery, surgical oncology, medical oncology, radiation-oriented perspectives, trainees, researchers, and clinical-development colleagues.
+
+```{r attendance-table}
+#| echo: false
+#| results: asis
+#| warning: false
+#| message: false
+if (nrow(attendance_clean)) {
+  shown <- attendance_clean |>
+    mutate(
+      `Attendance` = paste0(round(minutes), " min"),
+      `Affiliation marker` = ifelse(regeneron, "Regeneron", "Academic / clinical")
+    ) |>
+    select(Name = name, Attendance, `Affiliation marker`)
+
+  cat('<div class="attendance-wrap"><table class="attendance-table">')
+  cat('<thead><tr><th>Name</th><th>Attendance</th><th>Meeting role</th></tr></thead><tbody>')
+  for (i in seq_len(nrow(shown))) {
+    cat(
+      '<tr><td>', esc(shown$Name[i]), '</td>',
+      '<td>', esc(shown$Attendance[i]), '</td>',
+      '<td>', esc(shown$`Affiliation marker`[i]), '</td></tr>'
+    )
+  }
+  cat('</tbody></table></div>')
+}
+```
+
+<div class="section-kicker">A few contributions that shifted the discussion</div>
+
+## Discussion standouts
+
+<div class="highlight-grid">
+<div class="highlight-card">
+<h3>Vern Sondak</h3>
+<p>Pressed on the clinical reality of parotid metastases, the opportunity cost of missing neoadjuvant therapy, and the distinction between saving radiation for salvage versus assuming it is unnecessary.</p>
+</div>
+<div class="highlight-card">
+<h3>Nikhil Khushalani</h3>
+<p>Focused the group on trial equipoise, treatment duration, cost stewardship, and differences in timing between C-POST and KEYNOTE-630.</p>
+</div>
+<div class="highlight-card">
+<h3>Isaac Brownell</h3>
+<p>Raised the provocative question of whether dosing frequency itself might matter in a microscopic-residual-disease setting.</p>
+</div>
+<div class="highlight-card">
+<h3>Ross Merkin</h3>
+<p>Framed the central implementation dilemma: does radiation have a biological role in the positive C-POST strategy, or is it simply a treatment we may eventually learn to omit?</p>
+</div>
+<div class="highlight-card">
+<h3>Kevin Emerick</h3>
+<p>Made the stewardship argument concrete—cost and overtreatment matter when a substantial fraction of patients may never recur.</p>
+</div>
+<div class="highlight-card">
+<h3>Matthew Fury</h3>
+<p>Added sponsor-side trial-development context while repeatedly marking the boundary between reasonable hypotheses and conclusions the available cross-trial data could not support.</p>
+</div>
+</div>
+
+<div class="followup">
+<div class="section-kicker" style="margin-top:0;">What happened next?</div>
+<h2>The Journal Club became a published Perspective.</h2>
+<p>The July discussion did not end with the meeting. Its survey data, multidisciplinary debate, and exploratory reconstruction of the C-POST and KEYNOTE-630 survival curves were developed into a <em>Journal of Cutaneous Oncology</em> Perspectives on the Science article:</p>
+<p><strong>Miller DM, Patel VA, Sondak VK, et al.</strong> <em>Evolving Standards for Resected High-Risk CSCC: Integrating Insights from C-POST and KEYNOTE-630.</em> Journal of Cutaneous Oncology. 2025;3(2). DOI: 10.59449/joco.2025.09.03.</p>
+<div class="link-row">
+<a class="soco-link" href="https://journalofcutaneousoncology.io/perspectives/vol_3_issue_2/adjuvant_cemiplimab_for_high_risk_resected_cscc/">Read the Perspective</a>
+<a class="soco-link secondary" href="https://doi.org/10.59449/joco.2025.09.03">Open DOI</a>
+</div>
+</div>
+
+<div class="section-kicker">Where the meeting landed</div>
+
+## Persuaded—but still asking what to do with the evidence
+
+C-POST supplied the strongest evidence yet that postoperative PD-1 blockade can reduce recurrence in high-risk resected CSCC. The meeting did **not** interpret that as a command to treat every eligible patient.
+
+Instead, the discussion sharpened the next questions: **Who has enough absolute recurrence risk to justify a year of systemic therapy? When should treatment be moved before surgery? Can radiation ever be safely omitted? And why did two superficially similar adjuvant PD-1 trials produce such different results?**
+
+That is exactly the kind of uncertainty a Journal Club should preserve.

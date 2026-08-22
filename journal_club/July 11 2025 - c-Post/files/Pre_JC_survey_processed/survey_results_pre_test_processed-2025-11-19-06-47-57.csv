@@ -1,0 +1,9 @@
+record_id,who_are_you,patients_per_month,used_nivo_ipi,preferred_preop_agent,doses_before_surgery,surgery_decision,barriers_nivo_ipi___concerns_about_toxicity_or_tolerability,barriers_nivo_ipi___cost_or_insurance_coverage_concerns,barriers_nivo_ipi___uncertainty_about_benefit_versus_risk,barriers_nivo_ipi___not_fda_approved,barriers_nivo_ipi___not_recommended_by_guidelines,barriers_nivo_ipi___i_have_no_concerns,barriers_nivo_ipi___i_am_a_clinician_but_i_do_not_manage_cscc_patients,barriers_nivo_ipi___i_am_not_a_clinician,soco_jc_survey_complete
+1,Medical Oncologist,1 2,Yes,Cemiplimab,1,Decision Based On Response At Pre Surgical Evaluation,1,1,1,1,0,0,0,0,0
+2,Medical Dermatologist,3 5,No,Pembrolizumab,2,Decision Based On Response At Pre Surgical Evaluation,0,0,1,1,0,0,0,0,0
+3,Surgical Oncologist,"6, 0",I Am A Clinician But I Do Not Manage Cscc Patients,Nivolumab,3,Decision Based On Response At Pre Surgical Evaluation,0,0,0,0,0,1,0,0,0
+4,Advanced Practice Provider,I Am A Clinician But I Do Not Treat Cscc,I Am A Clinician But I Do Not Manage Cscc Patients,I Am A Clinician But I Do Not Manage Cscc Patients,I Am A Clinician But I Do Not Manage Cscc Patients,I Am A Clinician But I Do Not Manage Cscc Patients,0,0,0,0,0,0,1,0,0
+5,Other,I Am Not A Clinician,I Am Not A Clinician,I Am Not A Clinician,I Am Not A Clinician,I Am Not A Clinician,0,0,0,0,0,0,0,1,0
+6,Medical Dermatologist,Greater Than 20,No,Cemiplimab,4,Routinely Take To Surgery,1,1,1,0,0,0,0,0,0
+7,Student Trainee,11 20,I Am A Clinician But I Do Not Manage Cscc Patients,Nivo Plus Ipi,3,Decision Based On Response At Pre Surgical Evaluation,0,0,0,0,1,0,0,0,0
+8,Non Clinician Researcher,I Am A Clinician But I Do Not Treat Cscc,I Am A Clinician But I Do Not Manage Cscc Patients,I Am A Clinician But I Do Not Manage Cscc Patients,I Am A Clinician But I Do Not Manage Cscc Patients,I Am A Clinician But I Do Not Manage Cscc Patients,0,0,0,1,0,0,0,0,0
