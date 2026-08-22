@@ -300,6 +300,53 @@ main.content {
   line-height:1.72;
 }
 
+.ch-convener-note {
+  margin-top:1rem;
+  padding:.82rem 1rem;
+  border-left:3px solid var(--soco-teal);
+  border-radius:.6rem;
+  background:#f7fbfb;
+  color:#536979;
+  font-size:.9rem;
+  line-height:1.55;
+}
+
+.ch-convener-line {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:.3rem .55rem;
+  margin-bottom:.16rem;
+}
+
+.ch-convener-label {
+  color:var(--soco-teal-dark);
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+
+.ch-convener-name {
+  color:var(--soco-navy);
+  font-weight:800;
+}
+
+.ch-convener-copy {
+  color:#617584;
+}
+
+@media (max-width: 640px) {
+  .ch-convener-line {
+    display:block;
+  }
+
+  .ch-convener-label {
+    display:block;
+    margin-bottom:.12rem;
+  }
+}
+
 .ch-metrics {
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
@@ -469,10 +516,44 @@ main.content {
 }
 
 .ch-meeting {
-  padding:1rem 1.1rem;
+  display:block;
+  position:relative;
+  padding:1rem 3rem 1rem 1.1rem;
   border:1px solid var(--soco-line);
   border-radius:.9rem;
   background:var(--soco-surface);
+  color:inherit !important;
+  text-decoration:none !important;
+  transition:
+    transform .15s ease,
+    border-color .15s ease,
+    box-shadow .15s ease,
+    background .15s ease;
+}
+
+.ch-meeting::after {
+  content:"→";
+  position:absolute;
+  right:1.05rem;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--soco-teal-dark);
+  font-size:1.05rem;
+  font-weight:800;
+}
+
+.ch-meeting:hover,
+.ch-meeting:focus-visible {
+  transform:translateY(-2px);
+  border-color:rgba(22,138,143,.42);
+  background:#eef8f7;
+  box-shadow:0 10px 24px rgba(4,27,51,.06);
+  text-decoration:none !important;
+}
+
+.ch-meeting:focus-visible {
+  outline:3px solid rgba(40,169,162,.24);
+  outline-offset:2px;
 }
 
 .ch-meeting-type {
@@ -492,6 +573,404 @@ main.content {
 .ch-meeting-meta {
   color:var(--soco-muted);
   font-size:.82rem;
+}
+
+
+
+/* ============================================================
+   COMMUNITY ROSTER
+   ============================================================ */
+
+.ch-roster-details {
+  margin-top:1.3rem;
+  overflow:hidden;
+  border:1px solid var(--soco-line);
+  border-radius:1rem;
+  background:#fff;
+  box-shadow:0 8px 22px rgba(4,27,51,.04);
+}
+
+.ch-roster-details > summary {
+  position:relative;
+  min-height:64px;
+  padding:1rem 3.4rem 1rem 1.15rem;
+  cursor:pointer;
+  list-style:none;
+  background:linear-gradient(135deg,#f3f8f8 0%,#fff 100%);
+  color:var(--soco-navy);
+}
+
+.ch-roster-details > summary::-webkit-details-marker {
+  display:none;
+}
+
+.ch-roster-details > summary::after {
+  content:"+";
+  position:absolute;
+  right:1.15rem;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--soco-teal-dark);
+  font-size:1.65rem;
+  font-weight:500;
+  line-height:1;
+}
+
+.ch-roster-details[open] > summary::after {
+  content:"−";
+}
+
+.ch-roster-summary-title {
+  display:block;
+  color:var(--soco-navy);
+  font-size:1rem;
+  font-weight:850;
+}
+
+.ch-roster-summary-subtitle {
+  display:block;
+  margin-top:.18rem;
+  color:var(--soco-muted);
+  font-size:.82rem;
+  line-height:1.45;
+}
+
+.ch-roster-note {
+  padding:.9rem 1.05rem;
+  border-top:1px solid var(--soco-line);
+  background:#fbfdfd;
+  color:#607381;
+  font-size:.82rem;
+  line-height:1.55;
+}
+
+.ch-roster-group {
+  padding:1.05rem;
+  border-top:1px solid var(--soco-line);
+}
+
+.ch-roster-group:first-of-type {
+  border-top:0;
+}
+
+.ch-roster-group h3 {
+  margin:0 0 .8rem;
+  color:var(--soco-navy);
+  font-size:1rem;
+  font-weight:850;
+}
+
+.ch-roster-columns {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+  align-items:start;
+}
+
+.ch-roster-table-wrap {
+  width:100%;
+  min-width:0;
+  overflow:hidden;
+  border:1px solid #e2ecef;
+  border-radius:.78rem;
+  background:#fff;
+}
+
+.ch-roster-table {
+  width:100%;
+  margin:0;
+  border-collapse:collapse;
+  table-layout:fixed;
+  font-size:.79rem;
+}
+
+.ch-roster-table th,
+.ch-roster-table td {
+  padding:.62rem .7rem;
+  border-bottom:1px solid #e6eeee;
+  vertical-align:top;
+  text-align:left;
+}
+
+.ch-roster-table th {
+  background:#eef8f7;
+  color:var(--soco-navy);
+  font-size:.7rem;
+  font-weight:850;
+  letter-spacing:.035em;
+  text-transform:uppercase;
+}
+
+.ch-roster-table th:first-child,
+.ch-roster-table td:first-child {
+  width:42%;
+}
+
+.ch-roster-table td:first-child {
+  color:var(--soco-navy);
+  font-weight:780;
+}
+
+.ch-roster-table tbody tr:nth-child(even) {
+  background:#fbfdfd;
+}
+
+.ch-roster-table tbody tr:last-child td {
+  border-bottom:0;
+}
+
+.ch-roster-affiliation {
+  color:#526a79;
+  overflow-wrap:anywhere;
+}
+
+/* ============================================================
+   COLLAPSIBLE ATTENDANCE QC MATRIX
+   ============================================================ */
+
+.ch-qc-details {
+  margin-top:1.4rem;
+  overflow:hidden;
+  border:1px solid var(--soco-line);
+  border-radius:1rem;
+  background:#fff;
+  box-shadow:0 8px 22px rgba(4,27,51,.04);
+}
+
+.ch-qc-details > summary {
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  min-height:64px;
+  padding:1rem 3.4rem 1rem 1.15rem;
+  cursor:pointer;
+  list-style:none;
+  background:linear-gradient(135deg,#f3f8f8 0%,#fff 100%);
+  color:var(--soco-navy);
+}
+
+.ch-qc-details > summary::-webkit-details-marker {
+  display:none;
+}
+
+.ch-qc-details > summary::after {
+  content:"+";
+  position:absolute;
+  right:1.15rem;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--soco-teal-dark);
+  font-size:1.65rem;
+  font-weight:500;
+  line-height:1;
+}
+
+.ch-qc-details[open] > summary::after {
+  content:"−";
+}
+
+.ch-qc-summary-copy {
+  min-width:0;
+}
+
+.ch-qc-summary-title {
+  display:block;
+  color:var(--soco-navy);
+  font-size:1rem;
+  font-weight:850;
+}
+
+.ch-qc-summary-subtitle {
+  display:block;
+  margin-top:.18rem;
+  color:var(--soco-muted);
+  font-size:.82rem;
+  line-height:1.45;
+}
+
+.ch-qc-note {
+  padding:.9rem 1.05rem;
+  border-top:1px solid var(--soco-line);
+  background:#fbfdfd;
+  color:#607381;
+  font-size:.82rem;
+  line-height:1.55;
+}
+
+.ch-qc-table-wrap {
+  width:100%;
+  max-width:100%;
+  overflow-x:auto;
+  overflow-y:visible;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;
+  border-top:1px solid var(--soco-line);
+}
+
+.ch-qc-table {
+  width:max-content;
+  min-width:100%;
+  margin:0;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:.76rem;
+}
+
+.ch-qc-table th,
+.ch-qc-table td {
+  min-width:152px;
+  padding:.68rem .72rem;
+  border-right:1px solid #e6eeee;
+  border-bottom:1px solid #e6eeee;
+  vertical-align:middle;
+  text-align:center;
+}
+
+.ch-qc-table thead th {
+  position:sticky;
+  top:0;
+  z-index:3;
+  background:#eef8f7;
+  color:var(--soco-navy);
+  font-weight:800;
+}
+
+.ch-qc-table th:first-child,
+.ch-qc-table td:first-child {
+  position:sticky;
+  left:0;
+  min-width:210px;
+  max-width:210px;
+  text-align:left;
+}
+
+.ch-qc-table thead th:first-child {
+  z-index:5;
+  background:#e7f5f4;
+}
+
+.ch-qc-table tbody td:first-child {
+  z-index:2;
+  background:#fff;
+  box-shadow:7px 0 12px -12px rgba(4,27,51,.5);
+}
+
+.ch-qc-table tbody tr:nth-child(even) td:first-child {
+  background:#fbfdfd;
+}
+
+.ch-qc-table tbody tr:nth-child(even) td:not(:first-child) {
+  background-color:#fbfdfd;
+}
+
+.ch-qc-table tbody tr:hover td {
+  background-color:#f5fbfa;
+}
+
+.ch-qc-table tbody tr:hover td:first-child {
+  background:#eef8f7;
+}
+
+.ch-qc-person {
+  display:block;
+  color:var(--soco-navy);
+  font-weight:780;
+  line-height:1.3;
+}
+
+.ch-qc-audience {
+  display:block;
+  margin-top:.18rem;
+  color:#7a8993;
+  font-size:.66rem;
+  font-weight:650;
+  line-height:1.25;
+}
+
+.ch-qc-total {
+  display:block;
+  margin-top:.22rem;
+  color:var(--soco-teal-dark);
+  font-size:.66rem;
+  font-weight:800;
+  line-height:1.25;
+}
+
+.ch-qc-meeting-title {
+  display:block;
+  max-width:150px;
+  margin:0 auto;
+  line-height:1.28;
+  overflow-wrap:anywhere;
+}
+
+.ch-qc-meeting-date {
+  display:block;
+  margin-top:.22rem;
+  color:var(--soco-teal-dark);
+  font-size:.68rem;
+  font-weight:750;
+}
+
+.ch-qc-meeting-duration {
+  display:block;
+  margin-top:.16rem;
+  color:#75858f;
+  font-size:.64rem;
+  font-weight:600;
+}
+
+.ch-qc-present {
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(40,169,162,.12) 0,
+      rgba(40,169,162,.12) var(--qc-pct),
+      transparent var(--qc-pct),
+      transparent 100%
+    );
+}
+
+.ch-qc-minutes {
+  position:relative;
+  z-index:1;
+  display:block;
+  color:var(--soco-navy);
+  font-size:.78rem;
+  font-weight:850;
+}
+
+.ch-qc-percent {
+  position:relative;
+  z-index:1;
+  display:block;
+  margin-top:.12rem;
+  color:var(--soco-teal-dark);
+  font-size:.69rem;
+  font-weight:750;
+}
+
+.ch-qc-absent {
+  color:#a8b3ba;
+  font-weight:650;
+}
+
+.ch-qc-confirmed {
+  display:block;
+  color:var(--soco-teal-dark);
+  font-size:.7rem;
+  font-weight:850;
+}
+
+.ch-qc-time-na {
+  display:block;
+  margin-top:.12rem;
+  color:#7b8b94;
+  font-size:.64rem;
 }
 
 @media (max-width:900px) {
@@ -621,6 +1100,100 @@ main.content {
     overflow-wrap:anywhere;
   }
 
+  .ch-qc-details > summary {
+    min-height:60px;
+    padding:.85rem 3rem .85rem .85rem;
+  }
+
+  .ch-qc-summary-title {
+    font-size:.92rem;
+  }
+
+  .ch-qc-summary-subtitle {
+    font-size:.74rem;
+  }
+
+  .ch-qc-details > summary::after {
+    right:.9rem;
+  }
+
+  .ch-qc-note {
+    padding:.78rem .85rem;
+    font-size:.75rem;
+  }
+
+  .ch-qc-table {
+    font-size:.69rem;
+  }
+
+  .ch-qc-table th,
+  .ch-qc-table td {
+    min-width:128px;
+    padding:.58rem .55rem;
+  }
+
+  .ch-qc-table th:first-child,
+  .ch-qc-table td:first-child {
+    min-width:150px;
+    max-width:150px;
+  }
+
+  .ch-qc-meeting-title {
+    max-width:124px;
+  }
+
+  .ch-qc-person {
+    font-size:.72rem;
+  }
+
+  .ch-qc-audience,
+  .ch-qc-total,
+  .ch-qc-meeting-duration {
+    font-size:.6rem;
+  }
+
+  .ch-qc-minutes {
+    font-size:.72rem;
+  }
+
+  .ch-qc-percent {
+    font-size:.64rem;
+  }
+
+  .ch-roster-details > summary {
+    min-height:60px;
+    padding:.85rem 3rem .85rem .85rem;
+  }
+
+  .ch-roster-summary-title {
+    font-size:.92rem;
+  }
+
+  .ch-roster-summary-subtitle,
+  .ch-roster-note {
+    font-size:.74rem;
+  }
+
+  .ch-roster-group {
+    padding:.8rem;
+  }
+
+  .ch-roster-columns {
+    grid-template-columns:minmax(0,1fr);
+    gap:.75rem;
+  }
+
+  .ch-roster-table {
+    width:100%;
+    min-width:0;
+    font-size:.72rem;
+  }
+
+  .ch-roster-table th,
+  .ch-roster-table td {
+    padding:.55rem .55rem;
+  }
+
   .ch-note {
     padding:.9rem 1rem;
     font-size:.9rem;
@@ -710,7 +1283,7 @@ Tracked meetings
 Academic / clinical participants
 </div>
 <div class="ch-metric-value">
-91
+93
 </div>
 <div class="ch-metric-note">
 unique people represented in the tracked attendance archive
@@ -724,7 +1297,7 @@ Industry collaborators
 20
 </div>
 <div class="ch-metric-note">
-recognized separately from the academic community leaderboard
+recognized separately from the academic / clinical participation view
 </div>
 </div>
 <div class="ch-metric">
@@ -732,7 +1305,7 @@ recognized separately from the academic community leaderboard
 Person-hours
 </div>
 <div class="ch-metric-value">
-329
+323
 </div>
 <div class="ch-metric-note">
 combined participation time across tracked meetings
@@ -753,7 +1326,7 @@ Every name below represents at least one appearance at a tracked SoCO Journal Cl
 </section>
 </div>
 <div class="ch-rollcall">
-<span class="ch-name-chip"> Adewole S. Adamson </span><span class="ch-name-chip"> Adewunmi O. Adelaja </span><span class="ch-name-chip"> Ajay N. Sharma </span><span class="ch-name-chip"> Aleigha R. Lawless </span><span class="ch-name-chip"> Alex Sorrentino </span><span class="ch-name-chip"> Andrew D. Knight </span><span class="ch-name-chip"> Ann W. Silk </span><span class="ch-name-chip"> Annie Chang </span><span class="ch-name-chip"> Aubriana McEvoy </span><span class="ch-name-chip"> Bailey Claire Smith </span><span class="ch-name-chip"> Ben Gratz </span><span class="ch-name-chip"> Candice D Church </span><span class="ch-name-chip"> Charlie Li </span><span class="ch-name-chip"> Christine C. Cimoch </span><span class="ch-name-chip"> Christopher Barker </span><span class="ch-name-chip"> Claire Verschraegen </span><span class="ch-name-chip"> Dan Hippe </span><span class="ch-name-chip"> Daniel Coit </span><span class="ch-name-chip"> David J Savage </span><span class="ch-name-chip"> David M. Miller </span><span class="ch-name-chip"> Devarati Mitra </span><span class="ch-name-chip"> Elizabeth I. Buchbinder </span><span class="ch-name-chip"> Elizabeth J. Lilley </span><span class="ch-name-chip"> Emily Godwin Summers </span><span class="ch-name-chip"> Frances Collichio </span><span class="ch-name-chip"> Frank Worden </span><span class="ch-name-chip"> Gabriella Chefitz </span><span class="ch-name-chip"> Haroutyun Joulfayan </span><span class="ch-name-chip"> Howard L. Kaufman </span><span class="ch-name-chip"> Isaac Brownell </span><span class="ch-name-chip"> Itai M. Pashtan </span><span class="ch-name-chip"> Jack Kollings </span><span class="ch-name-chip"> Jacob Choi </span><span class="ch-name-chip"> James A. DeCaprio </span><span class="ch-name-chip"> James F. McIntyre </span><span class="ch-name-chip"> Jennifer DeSimone </span><span class="ch-name-chip"> Jessica L. Fewkes </span><span class="ch-name-chip"> Juliane Andrade Czapla </span><span class="ch-name-chip"> Justine V. Cohen </span><span class="ch-name-chip"> Kamaneh Montazeri </span><span class="ch-name-chip"> Karam Khaddour </span><span class="ch-name-chip"> Kathryn Bollin </span><span class="ch-name-chip"> Ken Tsai </span><span class="ch-name-chip"> Kevin S. Emerick </span><span class="ch-name-chip"> Khalid Garman </span><span class="ch-name-chip"> Krista Lachance </span><span class="ch-name-chip"> Krista M. Rubin </span><span class="ch-name-chip"> Larisa Geskin </span><span class="ch-name-chip"> Laura Ferris </span><span class="ch-name-chip"> Lauren O’Loughlin </span><span class="ch-name-chip"> Lisa Zaba </span><span class="ch-name-chip"> Madeliene Stump </span><span class="ch-name-chip"> Manisha Thakuria </span><span class="ch-name-chip"> Mariam El-Ashmawy </span><span class="ch-name-chip"> Meghan J. Mooradian </span><span class="ch-name-chip"> Mehran Behruj Yusuf </span><span class="ch-name-chip"> Michael Povelaitis </span><span class="ch-name-chip"> Michael Wong </span><span class="ch-name-chip"> Mina Bakhtiar </span><span class="ch-name-chip"> Molly Yancovitz </span><span class="ch-name-chip"> Natasha Hill </span><span class="ch-name-chip"> Nikhil Khushalani </span><span class="ch-name-chip"> Paul Nghiem </span><span class="ch-name-chip"> Peter Ch’en </span><span class="ch-name-chip"> Ray Cheever </span><span class="ch-name-chip"> Reed E. Drews </span><span class="ch-name-chip"> Rhoda Alani </span><span class="ch-name-chip"> Riley M. Fadden </span><span class="ch-name-chip"> Rima Kulikauskas </span><span class="ch-name-chip"> Ron S. Gejman </span><span class="ch-name-chip"> Ross D. Merkin </span><span class="ch-name-chip"> Ryan J. Sullivan </span><span class="ch-name-chip"> Sameer Gupta </span><span class="ch-name-chip"> Sanjay Chandrasekaran </span><span class="ch-name-chip"> Sasha J Hussain </span><span class="ch-name-chip"> Shailender Bhatia </span><span class="ch-name-chip"> Shinya U Amano </span><span class="ch-name-chip"> Song Park </span><span class="ch-name-chip"> Sonia Cohen </span><span class="ch-name-chip"> Sunandana Chandra </span><span class="ch-name-chip"> Suzanne Topalian </span><span class="ch-name-chip"> Tatyana Sharova </span><span class="ch-name-chip"> Taylor Harp </span><span class="ch-name-chip"> Tien Nguyen </span><span class="ch-name-chip"> Todd Franklin Pearson </span><span class="ch-name-chip"> Truelian Yu </span><span class="ch-name-chip"> Vatche Tchekmedyian </span><span class="ch-name-chip"> Vern Sondak </span><span class="ch-name-chip"> Vishal Patel </span><span class="ch-name-chip"> William J. IV Benjamin </span><span class="ch-name-chip"> William T Reed </span>
+<span class="ch-name-chip"> Adewole S. Adamson </span><span class="ch-name-chip"> Adewunmi O. Adelaja </span><span class="ch-name-chip"> Ajay N. Sharma </span><span class="ch-name-chip"> Aleigha R. Lawless </span><span class="ch-name-chip"> Alex Sorrentino </span><span class="ch-name-chip"> Andrew D. Knight </span><span class="ch-name-chip"> Ann W. Silk </span><span class="ch-name-chip"> Annie Chang </span><span class="ch-name-chip"> Aubriana McEvoy </span><span class="ch-name-chip"> Bailey Claire Smith </span><span class="ch-name-chip"> Ben Gratz </span><span class="ch-name-chip"> Candice D Church </span><span class="ch-name-chip"> Charlie Li </span><span class="ch-name-chip"> Christine C. Cimoch </span><span class="ch-name-chip"> Christopher Barker </span><span class="ch-name-chip"> Claire Verschraegen </span><span class="ch-name-chip"> Dan Hippe </span><span class="ch-name-chip"> Daniel Coit </span><span class="ch-name-chip"> David J Savage </span><span class="ch-name-chip"> David M. Miller </span><span class="ch-name-chip"> Devarati Mitra </span><span class="ch-name-chip"> Don Lawrence </span><span class="ch-name-chip"> Elizabeth I. Buchbinder </span><span class="ch-name-chip"> Elizabeth J. Lilley </span><span class="ch-name-chip"> Emily Godwin Summers </span><span class="ch-name-chip"> Frances Collichio </span><span class="ch-name-chip"> Frank Worden </span><span class="ch-name-chip"> Gabriella Chefitz </span><span class="ch-name-chip"> Haroutyun Joulfayan </span><span class="ch-name-chip"> Howard L. Kaufman </span><span class="ch-name-chip"> Isaac Brownell </span><span class="ch-name-chip"> Itai M. Pashtan </span><span class="ch-name-chip"> Jack Kollings </span><span class="ch-name-chip"> Jacob Choi </span><span class="ch-name-chip"> James A. DeCaprio </span><span class="ch-name-chip"> James F. McIntyre </span><span class="ch-name-chip"> Jennifer DeSimone </span><span class="ch-name-chip"> Jessica L. Fewkes </span><span class="ch-name-chip"> Juliane Andrade Czapla </span><span class="ch-name-chip"> Justine V. Cohen </span><span class="ch-name-chip"> Kamaneh Montazeri </span><span class="ch-name-chip"> Karam Khaddour </span><span class="ch-name-chip"> Kathryn Bollin </span><span class="ch-name-chip"> Ken Tsai </span><span class="ch-name-chip"> Kevin S. Emerick </span><span class="ch-name-chip"> Khalid Garman </span><span class="ch-name-chip"> Krista Lachance </span><span class="ch-name-chip"> Krista M. Rubin </span><span class="ch-name-chip"> Larisa Geskin </span><span class="ch-name-chip"> Laura Ferris </span><span class="ch-name-chip"> Lauren O’Loughlin </span><span class="ch-name-chip"> Lisa Zaba </span><span class="ch-name-chip"> Madeliene Stump </span><span class="ch-name-chip"> Manisha Thakuria </span><span class="ch-name-chip"> Maria Melendez-Gonzalez </span><span class="ch-name-chip"> Mariam El-Ashmawy </span><span class="ch-name-chip"> Meghan J. Mooradian </span><span class="ch-name-chip"> Mehran Behruj Yusuf </span><span class="ch-name-chip"> Michael Povelaitis </span><span class="ch-name-chip"> Michael Wong </span><span class="ch-name-chip"> Mina Bakhtiar </span><span class="ch-name-chip"> Molly Yancovitz </span><span class="ch-name-chip"> Natasha Hill </span><span class="ch-name-chip"> Nikhil Khushalani </span><span class="ch-name-chip"> Paul Nghiem </span><span class="ch-name-chip"> Peter Ch’en </span><span class="ch-name-chip"> Ray Cheever </span><span class="ch-name-chip"> Reed E. Drews </span><span class="ch-name-chip"> Rhoda Alani </span><span class="ch-name-chip"> Riley M. Fadden </span><span class="ch-name-chip"> Rima Kulikauskas </span><span class="ch-name-chip"> Ron S. Gejman </span><span class="ch-name-chip"> Ross D. Merkin </span><span class="ch-name-chip"> Ryan J. Sullivan </span><span class="ch-name-chip"> Sameer Gupta </span><span class="ch-name-chip"> Sanjay Chandrasekaran </span><span class="ch-name-chip"> Sasha J Hussain </span><span class="ch-name-chip"> Shailender Bhatia </span><span class="ch-name-chip"> Shinya U Amano </span><span class="ch-name-chip"> Song Park </span><span class="ch-name-chip"> Sonia Cohen </span><span class="ch-name-chip"> Sunandana Chandra </span><span class="ch-name-chip"> Suzanne Topalian </span><span class="ch-name-chip"> Tatyana Sharova </span><span class="ch-name-chip"> Taylor Harp </span><span class="ch-name-chip"> Tien Nguyen </span><span class="ch-name-chip"> Todd Franklin Pearson </span><span class="ch-name-chip"> Truelian Yu </span><span class="ch-name-chip"> Vatche Tchekmedyian </span><span class="ch-name-chip"> Vern Sondak </span><span class="ch-name-chip"> Vishal Patel </span><span class="ch-name-chip"> William J. IV Benjamin </span><span class="ch-name-chip"> William T Reed </span>
 </div>
 </section>
 <section class="ch-section">
@@ -761,73 +1334,25 @@ Every name below represents at least one appearance at a tracked SoCO Journal Cl
 <div class="ch-eyebrow">
 Sustained participation
 </div>
-<section id="top-20-community-contributors" class="level2">
-<h2 class="anchored" data-anchor-id="top-20-community-contributors">Top 20 community contributors</h2>
+<section id="community-participation" class="level2">
+<h2 class="anchored" data-anchor-id="community-participation">Community participation</h2>
 <p>
-Two separate measures are shown. <strong>Meeting attendance</strong> is the percentage of all tracked SoCO meetings attended—Journal Clubs and Research Forums combined. <strong>Participation time</strong> is normalized to the academic / clinical participant with the greatest total tracked attendance time, who is set to 100%.
+Two complementary measures are shown: how often someone joined the meetings in this archive, and how much total time they spent participating. The intent is recognition rather than competition.
 </p>
+<div class="ch-convener-note">
+<div class="ch-convener-line">
+<p><span class="ch-convener-label">Scientific convener</span> <span class="ch-convener-name">David M. Miller, MD, PhD</span></p>
+</div>
+<div class="ch-convener-copy">
+<p>The convener’s attendance is tracked in the full matrix below but is not included in the community participation rankings.</p>
+</div>
+</div>
 </section>
 </div>
 <div class="ch-leaderboard">
 <div class="ch-person">
 <div class="ch-rank">
 1
-</div>
-<div class="ch-person-name">
-David M. Miller
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Meeting attendance</span> <span class="ch-bar-value"> 100 % · 8 of 8 </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill" style="width: 100 %;">
-
-</div>
-</div>
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 100 % · 864 min </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill coral" style="width: 100 %;">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ch-person">
-<div class="ch-rank">
-2
-</div>
-<div class="ch-person-name">
-Sameer Gupta
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Meeting attendance</span> <span class="ch-bar-value"> 100 % · 8 of 8 </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill" style="width: 100 %;">
-
-</div>
-</div>
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 75 % · 652 min </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill coral" style="width: 75 %;">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ch-person">
-<div class="ch-rank">
-3
 </div>
 <div class="ch-person-name">
 Isaac Brownell
@@ -844,10 +1369,66 @@ Isaac Brownell
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 85 % · 735 min </span>
+<span>Participation time</span> <span class="ch-bar-value"> 100 % · 728 min </span>
 </div>
 <div class="ch-track">
-<div class="ch-fill coral" style="width: 85 %;">
+<div class="ch-fill coral" style="width: 100 %;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ch-person">
+<div class="ch-rank">
+2
+</div>
+<div class="ch-person-name">
+Vern Sondak
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Meeting attendance</span> <span class="ch-bar-value"> 88 % · 7 of 8 </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill" style="width: 88 %;">
+
+</div>
+</div>
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Participation time</span> <span class="ch-bar-value"> 88 % · 642 min </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill coral" style="width: 88 %;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ch-person">
+<div class="ch-rank">
+3
+</div>
+<div class="ch-person-name">
+Sameer Gupta
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Meeting attendance</span> <span class="ch-bar-value"> 88 % · 7 of 8 </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill" style="width: 88 %;">
+
+</div>
+</div>
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Participation time</span> <span class="ch-bar-value"> 83 % · 605 min </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill coral" style="width: 83 %;">
 
 </div>
 </div>
@@ -872,10 +1453,10 @@ Howard L. Kaufman
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 72 % · 626 min </span>
+<span>Participation time</span> <span class="ch-bar-value"> 75 % · 543 min </span>
 </div>
 <div class="ch-track">
-<div class="ch-fill coral" style="width: 72 %;">
+<div class="ch-fill coral" style="width: 75 %;">
 
 </div>
 </div>
@@ -886,7 +1467,7 @@ Howard L. Kaufman
 5
 </div>
 <div class="ch-person-name">
-Vern Sondak
+Vishal Patel
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
@@ -900,10 +1481,10 @@ Vern Sondak
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 71 % · 614 min </span>
+<span>Participation time</span> <span class="ch-bar-value"> 64 % · 466 min </span>
 </div>
 <div class="ch-track">
-<div class="ch-fill coral" style="width: 71 %;">
+<div class="ch-fill coral" style="width: 64 %;">
 
 </div>
 </div>
@@ -912,62 +1493,6 @@ Vern Sondak
 <div class="ch-person">
 <div class="ch-rank">
 6
-</div>
-<div class="ch-person-name">
-Juliane Andrade Czapla
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Meeting attendance</span> <span class="ch-bar-value"> 75 % · 6 of 8 </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill" style="width: 75 %;">
-
-</div>
-</div>
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 66 % · 571 min </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill coral" style="width: 66 %;">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ch-person">
-<div class="ch-rank">
-7
-</div>
-<div class="ch-person-name">
-Krista M. Rubin
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Meeting attendance</span> <span class="ch-bar-value"> 75 % · 6 of 8 </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill" style="width: 75 %;">
-
-</div>
-</div>
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 59 % · 507 min </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill coral" style="width: 59 %;">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ch-person">
-<div class="ch-rank">
-8
 </div>
 <div class="ch-person-name">
 Elizabeth I. Buchbinder
@@ -984,10 +1509,66 @@ Elizabeth I. Buchbinder
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 59 % · 506 min </span>
+<span>Participation time</span> <span class="ch-bar-value"> 72 % · 522 min </span>
 </div>
 <div class="ch-track">
-<div class="ch-fill coral" style="width: 59 %;">
+<div class="ch-fill coral" style="width: 72 %;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ch-person">
+<div class="ch-rank">
+7
+</div>
+<div class="ch-person-name">
+Juliane Andrade Czapla
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Meeting attendance</span> <span class="ch-bar-value"> 75 % · 6 of 8 </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill" style="width: 75 %;">
+
+</div>
+</div>
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Participation time</span> <span class="ch-bar-value"> 65 % · 476 min </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill coral" style="width: 65 %;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ch-person">
+<div class="ch-rank">
+8
+</div>
+<div class="ch-person-name">
+Ross D. Merkin
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Meeting attendance</span> <span class="ch-bar-value"> 75 % · 6 of 8 </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill" style="width: 75 %;">
+
+</div>
+</div>
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Participation time</span> <span class="ch-bar-value"> 64 % · 464 min </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill coral" style="width: 64 %;">
 
 </div>
 </div>
@@ -996,62 +1577,6 @@ Elizabeth I. Buchbinder
 <div class="ch-person">
 <div class="ch-rank">
 9
-</div>
-<div class="ch-person-name">
-Vishal Patel
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Meeting attendance</span> <span class="ch-bar-value"> 75 % · 6 of 8 </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill" style="width: 75 %;">
-
-</div>
-</div>
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 46 % · 401 min </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill coral" style="width: 46 %;">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ch-person">
-<div class="ch-rank">
-10
-</div>
-<div class="ch-person-name">
-Song Park
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Meeting attendance</span> <span class="ch-bar-value"> 75 % · 6 of 8 </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill" style="width: 75 %;">
-
-</div>
-</div>
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 39 % · 338 min </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill coral" style="width: 39 %;">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ch-person">
-<div class="ch-rank">
-11
 </div>
 <div class="ch-person-name">
 Adewunmi O. Adelaja
@@ -1068,10 +1593,10 @@ Adewunmi O. Adelaja
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 52 % · 448 min </span>
+<span>Participation time</span> <span class="ch-bar-value"> 62 % · 455 min </span>
 </div>
 <div class="ch-track">
-<div class="ch-fill coral" style="width: 52 %;">
+<div class="ch-fill coral" style="width: 62 %;">
 
 </div>
 </div>
@@ -1079,35 +1604,7 @@ Adewunmi O. Adelaja
 </div>
 <div class="ch-person">
 <div class="ch-rank">
-12
-</div>
-<div class="ch-person-name">
-Christine C. Cimoch
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Meeting attendance</span> <span class="ch-bar-value"> 62 % · 5 of 8 </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill" style="width: 62 %;">
-
-</div>
-</div>
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 47 % · 406 min </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill coral" style="width: 47 %;">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ch-person">
-<div class="ch-rank">
-13
+10
 </div>
 <div class="ch-person-name">
 Suzanne Topalian
@@ -1124,10 +1621,10 @@ Suzanne Topalian
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 46 % · 396 min </span>
+<span>Participation time</span> <span class="ch-bar-value"> 58 % · 423 min </span>
 </div>
 <div class="ch-track">
-<div class="ch-fill coral" style="width: 46 %;">
+<div class="ch-fill coral" style="width: 58 %;">
 
 </div>
 </div>
@@ -1135,10 +1632,10 @@ Suzanne Topalian
 </div>
 <div class="ch-person">
 <div class="ch-rank">
-14
+11
 </div>
 <div class="ch-person-name">
-Paul Nghiem
+Krista M. Rubin
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
@@ -1152,10 +1649,10 @@ Paul Nghiem
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 42 % · 366 min </span>
+<span>Participation time</span> <span class="ch-bar-value"> 56 % · 405 min </span>
 </div>
 <div class="ch-track">
-<div class="ch-fill coral" style="width: 42 %;">
+<div class="ch-fill coral" style="width: 56 %;">
 
 </div>
 </div>
@@ -1163,35 +1660,7 @@ Paul Nghiem
 </div>
 <div class="ch-person">
 <div class="ch-rank">
-15
-</div>
-<div class="ch-person-name">
-Ross D. Merkin
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Meeting attendance</span> <span class="ch-bar-value"> 62 % · 5 of 8 </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill" style="width: 62 %;">
-
-</div>
-</div>
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 42 % · 359 min </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill coral" style="width: 42 %;">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ch-person">
-<div class="ch-rank">
-16
+12
 </div>
 <div class="ch-person-name">
 Manisha Thakuria
@@ -1208,10 +1677,10 @@ Manisha Thakuria
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 38 % · 327 min </span>
+<span>Participation time</span> <span class="ch-bar-value"> 54 % · 396 min </span>
 </div>
 <div class="ch-track">
-<div class="ch-fill coral" style="width: 38 %;">
+<div class="ch-fill coral" style="width: 54 %;">
 
 </div>
 </div>
@@ -1219,10 +1688,10 @@ Manisha Thakuria
 </div>
 <div class="ch-person">
 <div class="ch-rank">
-17
+13
 </div>
 <div class="ch-person-name">
-Ajay N. Sharma
+Song Park
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
@@ -1236,10 +1705,10 @@ Ajay N. Sharma
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 36 % · 313 min </span>
+<span>Participation time</span> <span class="ch-bar-value"> 32 % · 236 min </span>
 </div>
 <div class="ch-track">
-<div class="ch-fill coral" style="width: 36 %;">
+<div class="ch-fill coral" style="width: 32 %;">
 
 </div>
 </div>
@@ -1247,63 +1716,7 @@ Ajay N. Sharma
 </div>
 <div class="ch-person">
 <div class="ch-rank">
-18
-</div>
-<div class="ch-person-name">
-Mehran Behruj Yusuf
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Meeting attendance</span> <span class="ch-bar-value"> 50 % · 4 of 8 </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill" style="width: 50 %;">
-
-</div>
-</div>
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 47 % · 405 min </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill coral" style="width: 47 %;">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ch-person">
-<div class="ch-rank">
-19
-</div>
-<div class="ch-person-name">
-Aleigha R. Lawless
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Meeting attendance</span> <span class="ch-bar-value"> 50 % · 4 of 8 </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill" style="width: 50 %;">
-
-</div>
-</div>
-</div>
-<div class="ch-bar-block">
-<div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 38 % · 324 min </span>
-</div>
-<div class="ch-track">
-<div class="ch-fill coral" style="width: 38 %;">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ch-person">
-<div class="ch-rank">
-20
+14
 </div>
 <div class="ch-person-name">
 Kevin S. Emerick
@@ -1320,10 +1733,178 @@ Kevin S. Emerick
 </div>
 <div class="ch-bar-block">
 <div class="ch-bar-label">
-<span>Participation time</span> <span class="ch-bar-value"> 37 % · 323 min </span>
+<span>Participation time</span> <span class="ch-bar-value"> 45 % · 330 min </span>
 </div>
 <div class="ch-track">
-<div class="ch-fill coral" style="width: 37 %;">
+<div class="ch-fill coral" style="width: 45 %;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ch-person">
+<div class="ch-rank">
+15
+</div>
+<div class="ch-person-name">
+Nikhil Khushalani
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Meeting attendance</span> <span class="ch-bar-value"> 50 % · 4 of 8 </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill" style="width: 50 %;">
+
+</div>
+</div>
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Participation time</span> <span class="ch-bar-value"> 44 % · 320 min </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill coral" style="width: 44 %;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ch-person">
+<div class="ch-rank">
+16
+</div>
+<div class="ch-person-name">
+Christine C. Cimoch
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Meeting attendance</span> <span class="ch-bar-value"> 50 % · 4 of 8 </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill" style="width: 50 %;">
+
+</div>
+</div>
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Participation time</span> <span class="ch-bar-value"> 44 % · 320 min </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill coral" style="width: 44 %;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ch-person">
+<div class="ch-rank">
+17
+</div>
+<div class="ch-person-name">
+Paul Nghiem
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Meeting attendance</span> <span class="ch-bar-value"> 50 % · 4 of 8 </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill" style="width: 50 %;">
+
+</div>
+</div>
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Participation time</span> <span class="ch-bar-value"> 36 % · 263 min </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill coral" style="width: 36 %;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ch-person">
+<div class="ch-rank">
+18
+</div>
+<div class="ch-person-name">
+Ajay N. Sharma
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Meeting attendance</span> <span class="ch-bar-value"> 50 % · 4 of 8 </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill" style="width: 50 %;">
+
+</div>
+</div>
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Participation time</span> <span class="ch-bar-value"> 32 % · 236 min </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill coral" style="width: 32 %;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ch-person">
+<div class="ch-rank">
+19
+</div>
+<div class="ch-person-name">
+Frances Collichio
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Meeting attendance</span> <span class="ch-bar-value"> 50 % · 4 of 8 </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill" style="width: 50 %;">
+
+</div>
+</div>
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Participation time</span> <span class="ch-bar-value"> 32 % · 233 min </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill coral" style="width: 32 %;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ch-person">
+<div class="ch-rank">
+20
+</div>
+<div class="ch-person-name">
+Mariam El-Ashmawy
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Meeting attendance</span> <span class="ch-bar-value"> 50 % · 4 of 8 </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill" style="width: 50 %;">
+
+</div>
+</div>
+</div>
+<div class="ch-bar-block">
+<div class="ch-bar-label">
+<span>Participation time</span> <span class="ch-bar-value"> 32 % · 229 min </span>
+</div>
+<div class="ch-track">
+<div class="ch-fill coral" style="width: 32 %;">
 
 </div>
 </div>
@@ -1339,7 +1920,7 @@ Academic–industry participation
 <section id="industry-collaborators" class="level2">
 <h2 class="anchored" data-anchor-id="industry-collaborators">Industry collaborators</h2>
 <p>
-Industry colleagues are recognized separately rather than included in the academic / clinical participation ranking. Company assignment is based primarily on email domain, with a small person-level override table embedded directly in this page for older attendance exports whose email was not captured. Known colleagues who participated from shared rooms—or whose participation is confirmed from historical meeting correspondence when the Teams attendance export is no longer available—are also acknowledged without assigning invented attendance minutes.
+Industry colleagues are recognized separately from the academic and clinical community. When individual attendance time was not preserved, confirmed participation is acknowledged without estimating minutes.
 </p>
 </section>
 </div>
@@ -1371,13 +1952,1013 @@ Bristol Myers Squibb
 Replimune
 </h3>
 <div class="ch-industry-meta">
-3 colleagues represented · 0 individually tracked person-hours
+3 colleagues represented · 3 individually tracked person-hours
 </div>
 <div class="ch-industry-names">
-<span class="ch-industry-name"> Adam Whalley </span><span class="ch-industry-name"> Adam Yakovich </span><span class="ch-industry-name"> Jeannie Hou </span>
+<span class="ch-industry-name"> Adam Yakovich </span><span class="ch-industry-name"> Adam Whalley </span><span class="ch-industry-name"> Jeannie Hou </span>
 </div>
 </div>
 </div>
+</section>
+<section class="ch-section">
+<div class="ch-section-head">
+<div class="ch-eyebrow">
+Across institutions
+</div>
+<section id="community-roster" class="level2">
+<h2 class="anchored" data-anchor-id="community-roster">Community roster</h2>
+<p>
+A directory-style view of the people, institutions, and organizations represented across the current SoCO attendance archive. Related health-system affiliations are consolidated where appropriate, and affiliations may not reflect a current appointment.
+</p>
+</section>
+</div>
+<details class="ch-roster-details">
+<summary>
+<span class="ch-roster-summary-title">View community roster</span> <span class="ch-roster-summary-subtitle">People and institutions represented across the current archive</span>
+</summary>
+<div class="ch-roster-group">
+<h3 class="anchored">
+Academic / clinical community
+</h3>
+<div class="ch-roster-columns">
+<div class="ch-roster-table-wrap">
+<table class="ch-roster-table">
+<thead>
+<tr>
+<th>
+Name
+</th>
+<th>
+Institution / Organization
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Adewole S. Adamson
+</td>
+<td class="ch-roster-affiliation">
+The University of Texas at Austin
+</td>
+</tr>
+<tr>
+<td>
+Adewunmi O. Adelaja
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Ajay N. Sharma
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Aleigha R. Lawless
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Alex Sorrentino
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Andrew D. Knight
+</td>
+<td class="ch-roster-affiliation">
+Dana-Farber Cancer Institute
+</td>
+</tr>
+<tr>
+<td>
+Ann W. Silk
+</td>
+<td class="ch-roster-affiliation">
+Dana-Farber Cancer Institute
+</td>
+</tr>
+<tr>
+<td>
+Annie Chang
+</td>
+<td class="ch-roster-affiliation">
+Harvard Medical School
+</td>
+</tr>
+<tr>
+<td>
+Aubriana McEvoy
+</td>
+<td class="ch-roster-affiliation">
+Washington University in St.&nbsp;Louis
+</td>
+</tr>
+<tr>
+<td>
+Bailey Claire Smith
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Ben Gratz
+</td>
+<td class="ch-roster-affiliation">
+University of Washington
+</td>
+</tr>
+<tr>
+<td>
+Candice D Church
+</td>
+<td class="ch-roster-affiliation">
+University of Washington
+</td>
+</tr>
+<tr>
+<td>
+Charlie Li
+</td>
+<td class="ch-roster-affiliation">
+Washington University in St.&nbsp;Louis
+</td>
+</tr>
+<tr>
+<td>
+Christine C. Cimoch
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Christopher Barker
+</td>
+<td class="ch-roster-affiliation">
+Memorial Sloan Kettering Cancer Center
+</td>
+</tr>
+<tr>
+<td>
+Claire Verschraegen
+</td>
+<td class="ch-roster-affiliation">
+The Ohio State University
+</td>
+</tr>
+<tr>
+<td>
+Dan Hippe
+</td>
+<td class="ch-roster-affiliation">
+University of Washington
+</td>
+</tr>
+<tr>
+<td>
+Daniel Coit
+</td>
+<td class="ch-roster-affiliation">
+Memorial Sloan Kettering Cancer Center (retired)
+</td>
+</tr>
+<tr>
+<td>
+David J Savage
+</td>
+<td class="ch-roster-affiliation">
+University of New Mexico Comprehensive Cancer Center
+</td>
+</tr>
+<tr>
+<td>
+David M. Miller
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Devarati Mitra
+</td>
+<td class="ch-roster-affiliation">
+MD Anderson Cancer Center
+</td>
+</tr>
+<tr>
+<td>
+Don Lawrence
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Elizabeth I. Buchbinder
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Elizabeth J. Lilley
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Emily Godwin Summers
+</td>
+<td class="ch-roster-affiliation">
+University of North Carolina
+</td>
+</tr>
+<tr>
+<td>
+Frances Collichio
+</td>
+<td class="ch-roster-affiliation">
+University of North Carolina
+</td>
+</tr>
+<tr>
+<td>
+Frank Worden
+</td>
+<td class="ch-roster-affiliation">
+University of Michigan
+</td>
+</tr>
+<tr>
+<td>
+Gabriella Chefitz
+</td>
+<td class="ch-roster-affiliation">
+National Institutes of Health (NIAMS)
+</td>
+</tr>
+<tr>
+<td>
+Haroutyun Joulfayan
+</td>
+<td class="ch-roster-affiliation">
+Washington University School of Medicine in St.&nbsp;Louis
+</td>
+</tr>
+<tr>
+<td>
+Howard L. Kaufman
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Isaac Brownell
+</td>
+<td class="ch-roster-affiliation">
+National Institutes of Health
+</td>
+</tr>
+<tr>
+<td>
+Itai M. Pashtan
+</td>
+<td class="ch-roster-affiliation">
+Dana-Farber Cancer Institute
+</td>
+</tr>
+<tr>
+<td>
+Jack Kollings
+</td>
+<td class="ch-roster-affiliation">
+University of Washington
+</td>
+</tr>
+<tr>
+<td>
+Jacob Choi
+</td>
+<td class="ch-roster-affiliation">
+Northwestern Medicine
+</td>
+</tr>
+<tr>
+<td>
+James A. DeCaprio
+</td>
+<td class="ch-roster-affiliation">
+Dana-Farber Cancer Institute
+</td>
+</tr>
+<tr>
+<td>
+James F. McIntyre
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Jennifer DeSimone
+</td>
+<td class="ch-roster-affiliation">
+Inova
+</td>
+</tr>
+<tr>
+<td>
+Jessica L. Fewkes
+</td>
+<td class="ch-roster-affiliation">
+Mass Eye and Ear
+</td>
+</tr>
+<tr>
+<td>
+Juliane Andrade Czapla
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Justine V. Cohen
+</td>
+<td class="ch-roster-affiliation">
+Dana-Farber Cancer Institute
+</td>
+</tr>
+<tr>
+<td>
+Kamaneh Montazeri
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Karam Khaddour
+</td>
+<td class="ch-roster-affiliation">
+Dana-Farber Cancer Institute
+</td>
+</tr>
+<tr>
+<td>
+Kathryn Bollin
+</td>
+<td class="ch-roster-affiliation">
+Scripps Health
+</td>
+</tr>
+<tr>
+<td>
+Ken Tsai
+</td>
+<td class="ch-roster-affiliation">
+Moffitt Cancer Center
+</td>
+</tr>
+<tr>
+<td>
+Kevin S. Emerick
+</td>
+<td class="ch-roster-affiliation">
+Mass Eye and Ear
+</td>
+</tr>
+<tr>
+<td>
+Khalid Garman
+</td>
+<td class="ch-roster-affiliation">
+National Institutes of Health
+</td>
+</tr>
+<tr>
+<td>
+Krista Lachance
+</td>
+<td class="ch-roster-affiliation">
+University of Washington
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="ch-roster-table-wrap">
+<table class="ch-roster-table">
+<thead>
+<tr>
+<th>
+Name
+</th>
+<th>
+Institution / Organization
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Krista M. Rubin
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Larisa Geskin
+</td>
+<td class="ch-roster-affiliation">
+Columbia University
+</td>
+</tr>
+<tr>
+<td>
+Laura Ferris
+</td>
+<td class="ch-roster-affiliation">
+University of North Carolina
+</td>
+</tr>
+<tr>
+<td>
+Lauren O’Loughlin
+</td>
+<td class="ch-roster-affiliation">
+Beth Israel Deaconess Medical Center
+</td>
+</tr>
+<tr>
+<td>
+Lisa Zaba
+</td>
+<td class="ch-roster-affiliation">
+Stanford University
+</td>
+</tr>
+<tr>
+<td>
+Madeliene Stump
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Manisha Thakuria
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Maria Melendez-Gonzalez
+</td>
+<td class="ch-roster-affiliation">
+University of North Carolina
+</td>
+</tr>
+<tr>
+<td>
+Mariam El-Ashmawy
+</td>
+<td class="ch-roster-affiliation">
+UT Southwestern Medical Center
+</td>
+</tr>
+<tr>
+<td>
+Meghan J. Mooradian
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Mehran Behruj Yusuf
+</td>
+<td class="ch-roster-affiliation">
+University of Alabama at Birmingham
+</td>
+</tr>
+<tr>
+<td>
+Michael Povelaitis
+</td>
+<td class="ch-roster-affiliation">
+University of North Carolina
+</td>
+</tr>
+<tr>
+<td>
+Michael Wong
+</td>
+<td class="ch-roster-affiliation">
+Roswell Park Comprehensive Cancer Center
+</td>
+</tr>
+<tr>
+<td>
+Mina Bakhtiar
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Molly Yancovitz
+</td>
+<td class="ch-roster-affiliation">
+Beth Israel Deaconess Medical Center
+</td>
+</tr>
+<tr>
+<td>
+Natasha Hill
+</td>
+<td class="ch-roster-affiliation">
+National Institutes of Health
+</td>
+</tr>
+<tr>
+<td>
+Nikhil Khushalani
+</td>
+<td class="ch-roster-affiliation">
+Moffitt Cancer Center
+</td>
+</tr>
+<tr>
+<td>
+Paul Nghiem
+</td>
+<td class="ch-roster-affiliation">
+University of Washington
+</td>
+</tr>
+<tr>
+<td>
+Peter Ch’en
+</td>
+<td class="ch-roster-affiliation">
+University of Washington
+</td>
+</tr>
+<tr>
+<td>
+Ray Cheever
+</td>
+<td class="ch-roster-affiliation">
+University of North Carolina
+</td>
+</tr>
+<tr>
+<td>
+Reed E. Drews
+</td>
+<td class="ch-roster-affiliation">
+Beth Israel Deaconess Medical Center
+</td>
+</tr>
+<tr>
+<td>
+Rhoda Alani
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Riley M. Fadden
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Rima Kulikauskas
+</td>
+<td class="ch-roster-affiliation">
+University of Washington
+</td>
+</tr>
+<tr>
+<td>
+Ron S. Gejman
+</td>
+<td class="ch-roster-affiliation">
+Columbia University
+</td>
+</tr>
+<tr>
+<td>
+Ross D. Merkin
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Ryan J. Sullivan
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Sameer Gupta
+</td>
+<td class="ch-roster-affiliation">
+Mass Eye and Ear
+</td>
+</tr>
+<tr>
+<td>
+Sanjay Chandrasekaran
+</td>
+<td class="ch-roster-affiliation">
+UT Southwestern Medical Center
+</td>
+</tr>
+<tr>
+<td>
+Sasha J Hussain
+</td>
+<td class="ch-roster-affiliation">
+University of Massachusetts Medical School
+</td>
+</tr>
+<tr>
+<td>
+Shailender Bhatia
+</td>
+<td class="ch-roster-affiliation">
+University of Washington
+</td>
+</tr>
+<tr>
+<td>
+Shinya U Amano
+</td>
+<td class="ch-roster-affiliation">
+MaineHealth
+</td>
+</tr>
+<tr>
+<td>
+Song Park
+</td>
+<td class="ch-roster-affiliation">
+University of Washington
+</td>
+</tr>
+<tr>
+<td>
+Sonia Cohen
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Sunandana Chandra
+</td>
+<td class="ch-roster-affiliation">
+Northwestern University
+</td>
+</tr>
+<tr>
+<td>
+Suzanne Topalian
+</td>
+<td class="ch-roster-affiliation">
+Johns Hopkins Medicine
+</td>
+</tr>
+<tr>
+<td>
+Tatyana Sharova
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Taylor Harp
+</td>
+<td class="ch-roster-affiliation">
+MedStar Health
+</td>
+</tr>
+<tr>
+<td>
+Tien Nguyen
+</td>
+<td class="ch-roster-affiliation">
+Dana-Farber Cancer Institute
+</td>
+</tr>
+<tr>
+<td>
+Todd Franklin Pearson
+</td>
+<td class="ch-roster-affiliation">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td>
+Truelian Yu
+</td>
+<td class="ch-roster-affiliation">
+Georgetown University / MedStar Health
+</td>
+</tr>
+<tr>
+<td>
+Vatche Tchekmedyian
+</td>
+<td class="ch-roster-affiliation">
+MaineHealth
+</td>
+</tr>
+<tr>
+<td>
+Vern Sondak
+</td>
+<td class="ch-roster-affiliation">
+Moffitt Cancer Center
+</td>
+</tr>
+<tr>
+<td>
+Vishal Patel
+</td>
+<td class="ch-roster-affiliation">
+George Washington University
+</td>
+</tr>
+<tr>
+<td>
+William J. IV Benjamin
+</td>
+<td class="ch-roster-affiliation">
+Mass Eye and Ear
+</td>
+</tr>
+<tr>
+<td>
+William T Reed
+</td>
+<td class="ch-roster-affiliation">
+MaineHealth
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="ch-roster-group">
+<h3 class="anchored">
+Industry collaborators
+</h3>
+<div class="ch-roster-columns">
+<div class="ch-roster-table-wrap">
+<table class="ch-roster-table">
+<thead>
+<tr>
+<th>
+Name
+</th>
+<th>
+Organization
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Abraham Selvan
+</td>
+<td class="ch-roster-affiliation">
+Bristol Myers Squibb
+</td>
+</tr>
+<tr>
+<td>
+Cara Trulli
+</td>
+<td class="ch-roster-affiliation">
+Bristol Myers Squibb
+</td>
+</tr>
+<tr>
+<td>
+Christopher Lao
+</td>
+<td class="ch-roster-affiliation">
+Bristol Myers Squibb
+</td>
+</tr>
+<tr>
+<td>
+Corey Rantz
+</td>
+<td class="ch-roster-affiliation">
+Bristol Myers Squibb
+</td>
+</tr>
+<tr>
+<td>
+Divya Patel
+</td>
+<td class="ch-roster-affiliation">
+Bristol Myers Squibb
+</td>
+</tr>
+<tr>
+<td>
+Gregory Norigian
+</td>
+<td class="ch-roster-affiliation">
+Bristol Myers Squibb
+</td>
+</tr>
+<tr>
+<td>
+Leon Sakkal
+</td>
+<td class="ch-roster-affiliation">
+Bristol Myers Squibb
+</td>
+</tr>
+<tr>
+<td>
+Omid Najmi
+</td>
+<td class="ch-roster-affiliation">
+Bristol Myers Squibb
+</td>
+</tr>
+<tr>
+<td>
+Alyson Baryiames
+</td>
+<td class="ch-roster-affiliation">
+Regeneron
+</td>
+</tr>
+<tr>
+<td>
+Brian Burleson
+</td>
+<td class="ch-roster-affiliation">
+Regeneron
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="ch-roster-table-wrap">
+<table class="ch-roster-table">
+<thead>
+<tr>
+<th>
+Name
+</th>
+<th>
+Organization
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Christopher Zajac
+</td>
+<td class="ch-roster-affiliation">
+Regeneron
+</td>
+</tr>
+<tr>
+<td>
+David Kremer
+</td>
+<td class="ch-roster-affiliation">
+Regeneron
+</td>
+</tr>
+<tr>
+<td>
+Frank Seebach
+</td>
+<td class="ch-roster-affiliation">
+Regeneron
+</td>
+</tr>
+<tr>
+<td>
+Julie Montiel
+</td>
+<td class="ch-roster-affiliation">
+Regeneron
+</td>
+</tr>
+<tr>
+<td>
+Kim Premo
+</td>
+<td class="ch-roster-affiliation">
+Regeneron
+</td>
+</tr>
+<tr>
+<td>
+Matthew Fury
+</td>
+<td class="ch-roster-affiliation">
+Regeneron
+</td>
+</tr>
+<tr>
+<td>
+Sarah Nia
+</td>
+<td class="ch-roster-affiliation">
+Regeneron
+</td>
+</tr>
+<tr>
+<td>
+Adam Whalley
+</td>
+<td class="ch-roster-affiliation">
+Replimune
+</td>
+</tr>
+<tr>
+<td>
+Adam Yakovich
+</td>
+<td class="ch-roster-affiliation">
+Replimune
+</td>
+</tr>
+<tr>
+<td>
+Jeannie Hou
+</td>
+<td class="ch-roster-affiliation">
+Replimune
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</details>
 </section>
 <section class="ch-section">
 <div class="ch-section-head">
@@ -1387,12 +2968,12 @@ What is represented
 <section id="meetings-in-the-current-attendance-archive" class="level2">
 <h2 class="anchored" data-anchor-id="meetings-in-the-current-attendance-archive">Meetings in the current attendance archive</h2>
 <p>
-This page processes the <code>Attendance Over Time</code> archive directly. As new <code>attendance_clean.csv</code> files are added, the page updates automatically on render.
+This page will continue to grow as additional SoCO meetings are added to the archive.
 </p>
 </section>
 </div>
 <div class="ch-meeting-grid">
-<div class="ch-meeting">
+<a class="ch-meeting" href=" /journal_club/August 14 2026 - FIRST in CSCC/ " aria-label="Open meeting archive:  FIRST in CSCC ">
 <div class="ch-meeting-type">
 Journal Club
 </div>
@@ -1402,8 +2983,7 @@ FIRST in CSCC
 <div class="ch-meeting-meta">
 August 14, 2026 · 26 academic / clinical
 </div>
-</div>
-<div class="ch-meeting">
+</a><a class="ch-meeting" href=" /research_forum/July 24 2026 - The Open Inference Project/ " aria-label="Open meeting archive:  The Open Inference Project ">
 <div class="ch-meeting-type">
 Research Forum
 </div>
@@ -1413,8 +2993,7 @@ The Open Inference Project
 <div class="ch-meeting-meta">
 July 24, 2026 · 38 academic / clinical
 </div>
-</div>
-<div class="ch-meeting">
+</a><a class="ch-meeting" href=" /journal_club/June 12 2026 - Local Recurrence in MCC/ " aria-label="Open meeting archive:  Local Recurrence in MCC ">
 <div class="ch-meeting-type">
 Journal Club
 </div>
@@ -1424,8 +3003,7 @@ Local Recurrence in MCC
 <div class="ch-meeting-meta">
 June 12, 2026 · 34 academic / clinical
 </div>
-</div>
-<div class="ch-meeting">
+</a><a class="ch-meeting" href=" /journal_club/April 6 2026 - IGNYTE/ " aria-label="Open meeting archive:  IGNYTE ">
 <div class="ch-meeting-type">
 Journal Club
 </div>
@@ -1433,10 +3011,9 @@ Journal Club
 IGNYTE
 </div>
 <div class="ch-meeting-meta">
-April 12, 2026 · 34 academic / clinical
+April 12, 2026 · 27 academic / clinical · 2 industry
 </div>
-</div>
-<div class="ch-meeting">
+</a><a class="ch-meeting" href=" /research_forum/March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC/ " aria-label="Open meeting archive:  Bayesian Causal Analysis of Dose Intensity in CSCC ">
 <div class="ch-meeting-type">
 Research Forum
 </div>
@@ -1446,8 +3023,7 @@ Bayesian Causal Analysis of Dose Intensity in CSCC
 <div class="ch-meeting-meta">
 March 9, 2026 · 26 academic / clinical
 </div>
-</div>
-<div class="ch-meeting">
+</a><a class="ch-meeting" href=" /journal_club/February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC/ " aria-label="Open meeting archive:  Nivo-Rela vs BRAF-MEKi MAIC ">
 <div class="ch-meeting-type">
 Journal Club
 </div>
@@ -1457,8 +3033,7 @@ Nivo-Rela vs BRAF-MEKi MAIC
 <div class="ch-meeting-meta">
 February 13, 2026 · 29 academic / clinical
 </div>
-</div>
-<div class="ch-meeting">
+</a><a class="ch-meeting" href=" /journal_club/November 24 2025 - MATISSE/ " aria-label="Open meeting archive:  MATISSE ">
 <div class="ch-meeting-type">
 Journal Club
 </div>
@@ -1468,8 +3043,7 @@ MATISSE
 <div class="ch-meeting-meta">
 November 24, 2025 · 26 academic / clinical · 3 industry
 </div>
-</div>
-<div class="ch-meeting">
+</a><a class="ch-meeting" href=" /journal_club/July 11 2025 - c-Post/ " aria-label="Open meeting archive:  c-Post ">
 <div class="ch-meeting-type">
 Journal Club
 </div>
@@ -1479,8 +3053,3185 @@ c-Post
 <div class="ch-meeting-meta">
 July 11, 2025 · 29 academic / clinical · 9 industry
 </div>
+</a>
 </div>
+<details class="ch-qc-details">
+<summary>
+<span class="ch-qc-summary-copy"> <span class="ch-qc-summary-title">View full attendance matrix</span> <span class="ch-qc-summary-subtitle">Meeting-by-meeting participation · ordered by total tracked participation time</span> </span>
+</summary>
+<div class="ch-qc-note">
+<p>The matrix provides a meeting-by-meeting view of participation. For consistency, each meeting is benchmarked to the scientific convener’s tracked attendance time, with participation capped at 100%. <strong>Confirmed · time n/a</strong> indicates known participation when individual attendance time was not preserved; confirmed full-session participation may be credited manually when known.</p>
 </div>
+<div class="ch-qc-table-wrap">
+<table class="ch-qc-table">
+<thead>
+<tr>
+<th scope="col">
+Participant
+</th>
+<th scope="col">
+<span class="ch-qc-meeting-title"> FIRST in CSCC </span> <span class="ch-qc-meeting-date"> August 14, 2026 </span> <span class="ch-qc-meeting-duration"> ≈ 112 min </span>
+</th>
+<th scope="col">
+<span class="ch-qc-meeting-title"> The Open Inference Project </span> <span class="ch-qc-meeting-date"> July 24, 2026 </span> <span class="ch-qc-meeting-duration"> ≈ 114 min </span>
+</th>
+<th scope="col">
+<span class="ch-qc-meeting-title"> Local Recurrence in MCC </span> <span class="ch-qc-meeting-date"> June 12, 2026 </span> <span class="ch-qc-meeting-duration"> ≈ 107 min </span>
+</th>
+<th scope="col">
+<span class="ch-qc-meeting-title"> IGNYTE </span> <span class="ch-qc-meeting-date"> April 12, 2026 </span> <span class="ch-qc-meeting-duration"> ≈ 103 min </span>
+</th>
+<th scope="col">
+<span class="ch-qc-meeting-title"> Bayesian Causal Analysis of Dose Intensity in CSCC </span> <span class="ch-qc-meeting-date"> March 9, 2026 </span> <span class="ch-qc-meeting-duration"> ≈ 112 min </span>
+</th>
+<th scope="col">
+<span class="ch-qc-meeting-title"> Nivo-Rela vs BRAF-MEKi MAIC </span> <span class="ch-qc-meeting-date"> February 13, 2026 </span> <span class="ch-qc-meeting-duration"> ≈ 98 min </span>
+</th>
+<th scope="col">
+<span class="ch-qc-meeting-title"> MATISSE </span> <span class="ch-qc-meeting-date"> November 24, 2025 </span> <span class="ch-qc-meeting-duration"> ≈ 85 min </span>
+</th>
+<th scope="col">
+<span class="ch-qc-meeting-title"> c-Post </span> <span class="ch-qc-meeting-date"> July 11, 2025 </span> <span class="ch-qc-meeting-duration"> ≈ 130 min </span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<span class="ch-qc-person"> David M. Miller </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 861 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 112 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 114 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 107 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 112 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 98 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 85 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 130 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Isaac Brownell </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 728 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 115 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 84 %;">
+<span class="ch-qc-minutes"> 95 min </span> <span class="ch-qc-percent"> 84 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 111 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 105 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 110 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 99 %;">
+<span class="ch-qc-minutes"> 97 min </span> <span class="ch-qc-percent"> 99 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 74 %;">
+<span class="ch-qc-minutes"> 96 min </span> <span class="ch-qc-percent"> 74 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Vern Sondak </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 642 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 110 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 53 %;">
+<span class="ch-qc-minutes"> 60 min </span> <span class="ch-qc-percent"> 53 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 70 %;">
+<span class="ch-qc-minutes"> 75 min </span> <span class="ch-qc-percent"> 70 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 99 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 99 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 95 %;">
+<span class="ch-qc-minutes"> 107 min </span> <span class="ch-qc-percent"> 95 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 97 %;">
+<span class="ch-qc-minutes"> 95 min </span> <span class="ch-qc-percent"> 97 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 71 %;">
+<span class="ch-qc-minutes"> 92 min </span> <span class="ch-qc-percent"> 71 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Sameer Gupta </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 605 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 95 %;">
+<span class="ch-qc-minutes"> 106 min </span> <span class="ch-qc-percent"> 95 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 91 %;">
+<span class="ch-qc-minutes"> 104 min </span> <span class="ch-qc-percent"> 91 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 44 %;">
+<span class="ch-qc-minutes"> 47 min </span> <span class="ch-qc-percent"> 44 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 70 %;">
+<span class="ch-qc-minutes"> 78 min </span> <span class="ch-qc-percent"> 70 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 99 %;">
+<span class="ch-qc-minutes"> 97 min </span> <span class="ch-qc-percent"> 99 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 93 %;">
+<span class="ch-qc-minutes"> 79 min </span> <span class="ch-qc-percent"> 93 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 71 %;">
+<span class="ch-qc-minutes"> 93 min </span> <span class="ch-qc-percent"> 71 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Howard L. Kaufman </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 543 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 114 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 64 %;">
+<span class="ch-qc-minutes"> 72 min </span> <span class="ch-qc-percent"> 64 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 88 %;">
+<span class="ch-qc-minutes"> 94 min </span> <span class="ch-qc-percent"> 88 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 10 %;">
+<span class="ch-qc-minutes"> 11 min </span> <span class="ch-qc-percent"> 10 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 70 %;">
+<span class="ch-qc-minutes"> 78 min </span> <span class="ch-qc-percent"> 70 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 97 %;">
+<span class="ch-qc-minutes"> 82 min </span> <span class="ch-qc-percent"> 97 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 71 %;">
+<span class="ch-qc-minutes"> 92 min </span> <span class="ch-qc-percent"> 71 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Elizabeth I. Buchbinder </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 522 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 72 %;">
+<span class="ch-qc-minutes"> 81 min </span> <span class="ch-qc-percent"> 72 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 81 %;">
+<span class="ch-qc-minutes"> 87 min </span> <span class="ch-qc-percent"> 81 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 70 %;">
+<span class="ch-qc-minutes"> 78 min </span> <span class="ch-qc-percent"> 70 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 92 %;">
+<span class="ch-qc-minutes"> 90 min </span> <span class="ch-qc-percent"> 92 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 83 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Juliane Andrade Czapla </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 476 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 74 %;">
+<span class="ch-qc-minutes"> 84 min </span> <span class="ch-qc-percent"> 74 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 104 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 9 %;">
+<span class="ch-qc-minutes"> 10 min </span> <span class="ch-qc-percent"> 9 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 97 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 94 %;">
+<span class="ch-qc-minutes"> 80 min </span> <span class="ch-qc-percent"> 94 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 78 %;">
+<span class="ch-qc-minutes"> 101 min </span> <span class="ch-qc-percent"> 78 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Vishal Patel </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 466 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 61 %;">
+<span class="ch-qc-minutes"> 68 min </span> <span class="ch-qc-percent"> 61 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 79 %;">
+<span class="ch-qc-minutes"> 90 min </span> <span class="ch-qc-percent"> 79 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 63 %;">
+<span class="ch-qc-minutes"> 65 min </span> <span class="ch-qc-percent"> 63 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 73 %;">
+<span class="ch-qc-minutes"> 82 min </span> <span class="ch-qc-percent"> 73 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 25 %;">
+<span class="ch-qc-minutes"> 24 min </span> <span class="ch-qc-percent"> 25 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 90 %;">
+<span class="ch-qc-minutes"> 77 min </span> <span class="ch-qc-percent"> 90 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 46 %;">
+<span class="ch-qc-minutes"> 60 min </span> <span class="ch-qc-percent"> 46 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Ross D. Merkin </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 464 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 57 %;">
+<span class="ch-qc-minutes"> 65 min </span> <span class="ch-qc-percent"> 57 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 104 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 24 %;">
+<span class="ch-qc-minutes"> 27 min </span> <span class="ch-qc-percent"> 24 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 91 %;">
+<span class="ch-qc-minutes"> 89 min </span> <span class="ch-qc-percent"> 91 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 83 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 73 %;">
+<span class="ch-qc-minutes"> 95 min </span> <span class="ch-qc-percent"> 73 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Adewunmi O. Adelaja </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 455 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 112 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 92 %;">
+<span class="ch-qc-minutes"> 98 min </span> <span class="ch-qc-percent"> 92 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 104 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 45 %;">
+<span class="ch-qc-minutes"> 44 min </span> <span class="ch-qc-percent"> 45 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 75 %;">
+<span class="ch-qc-minutes"> 98 min </span> <span class="ch-qc-percent"> 75 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Suzanne Topalian </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 423 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 68 %;">
+<span class="ch-qc-minutes"> 73 min </span> <span class="ch-qc-percent"> 68 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 97 %;">
+<span class="ch-qc-minutes"> 100 min </span> <span class="ch-qc-percent"> 97 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 87 %;">
+<span class="ch-qc-minutes"> 98 min </span> <span class="ch-qc-percent"> 87 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 69 %;">
+<span class="ch-qc-minutes"> 59 min </span> <span class="ch-qc-percent"> 69 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 72 %;">
+<span class="ch-qc-minutes"> 93 min </span> <span class="ch-qc-percent"> 72 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Krista M. Rubin </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 405 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 86 %;">
+<span class="ch-qc-minutes"> 96 min </span> <span class="ch-qc-percent"> 86 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 96 %;">
+<span class="ch-qc-minutes"> 102 min </span> <span class="ch-qc-percent"> 96 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 52 %;">
+<span class="ch-qc-minutes"> 51 min </span> <span class="ch-qc-percent"> 52 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 71 %;">
+<span class="ch-qc-minutes"> 60 min </span> <span class="ch-qc-percent"> 71 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 73 %;">
+<span class="ch-qc-minutes"> 95 min </span> <span class="ch-qc-percent"> 73 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Manisha Thakuria </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 396 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 30 %;">
+<span class="ch-qc-minutes"> 32 min </span> <span class="ch-qc-percent"> 30 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 102 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 99 %;">
+<span class="ch-qc-minutes"> 111 min </span> <span class="ch-qc-percent"> 99 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 77 %;">
+<span class="ch-qc-minutes"> 75 min </span> <span class="ch-qc-percent"> 77 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 89 %;">
+<span class="ch-qc-minutes"> 76 min </span> <span class="ch-qc-percent"> 89 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Kevin S. Emerick </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 330 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 75 %;">
+<span class="ch-qc-minutes"> 80 min </span> <span class="ch-qc-percent"> 75 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 84 %;">
+<span class="ch-qc-minutes"> 87 min </span> <span class="ch-qc-percent"> 84 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 87 %;">
+<span class="ch-qc-minutes"> 74 min </span> <span class="ch-qc-percent"> 87 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 68 %;">
+<span class="ch-qc-minutes"> 89 min </span> <span class="ch-qc-percent"> 68 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Nikhil Khushalani </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 320 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 89 %;">
+<span class="ch-qc-minutes"> 95 min </span> <span class="ch-qc-percent"> 89 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 102 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 37 %;">
+<span class="ch-qc-minutes"> 36 min </span> <span class="ch-qc-percent"> 37 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 67 %;">
+<span class="ch-qc-minutes"> 88 min </span> <span class="ch-qc-percent"> 67 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Christine C. Cimoch </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 320 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 74 %;">
+<span class="ch-qc-minutes"> 83 min </span> <span class="ch-qc-percent"> 74 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 81 %;">
+<span class="ch-qc-minutes"> 86 min </span> <span class="ch-qc-percent"> 81 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 95 %;">
+<span class="ch-qc-minutes"> 92 min </span> <span class="ch-qc-percent"> 95 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 68 %;">
+<span class="ch-qc-minutes"> 58 min </span> <span class="ch-qc-percent"> 68 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Ann W. Silk </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 317 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 104 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 110 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Mehran Behruj Yusuf </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 300 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 89 %;">
+<span class="ch-qc-minutes"> 100 min </span> <span class="ch-qc-percent"> 89 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 83 %;">
+<span class="ch-qc-minutes"> 94 min </span> <span class="ch-qc-percent"> 83 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 99 %;">
+<span class="ch-qc-minutes"> 105 min </span> <span class="ch-qc-percent"> 99 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Rhoda Alani </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 297 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 96 %;">
+<span class="ch-qc-minutes"> 108 min </span> <span class="ch-qc-percent"> 96 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 83 %;">
+<span class="ch-qc-minutes"> 95 min </span> <span class="ch-qc-percent"> 83 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 97 %;">
+<span class="ch-qc-minutes"> 95 min </span> <span class="ch-qc-percent"> 97 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Sonia Cohen </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 291 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 75 %;">
+<span class="ch-qc-minutes"> 85 min </span> <span class="ch-qc-percent"> 75 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 122 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 99 %;">
+<span class="ch-qc-minutes"> 84 min </span> <span class="ch-qc-percent"> 99 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Aleigha R. Lawless </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 264 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 85 %;">
+<span class="ch-qc-minutes"> 96 min </span> <span class="ch-qc-percent"> 85 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 56 %;">
+<span class="ch-qc-minutes"> 60 min </span> <span class="ch-qc-percent"> 56 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 97 %;">
+<span class="ch-qc-minutes"> 108 min </span> <span class="ch-qc-percent"> 97 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Paul Nghiem </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 263 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 66 %;">
+<span class="ch-qc-minutes"> 74 min </span> <span class="ch-qc-percent"> 66 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 23 %;">
+<span class="ch-qc-minutes"> 26 min </span> <span class="ch-qc-percent"> 23 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 96 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 96 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 46 %;">
+<span class="ch-qc-minutes"> 60 min </span> <span class="ch-qc-percent"> 46 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Jennifer DeSimone </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 241 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 110 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 92 %;">
+<span class="ch-qc-minutes"> 78 min </span> <span class="ch-qc-percent"> 92 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 41 %;">
+<span class="ch-qc-minutes"> 53 min </span> <span class="ch-qc-percent"> 41 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Song Park </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 236 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 36 %;">
+<span class="ch-qc-minutes"> 41 min </span> <span class="ch-qc-percent"> 36 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 59 %;">
+<span class="ch-qc-minutes"> 67 min </span> <span class="ch-qc-percent"> 59 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 95 %;">
+<span class="ch-qc-minutes"> 102 min </span> <span class="ch-qc-percent"> 95 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 23 %;">
+<span class="ch-qc-minutes"> 26 min </span> <span class="ch-qc-percent"> 23 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 1 %;">
+<span class="ch-qc-minutes"> 1 min </span> <span class="ch-qc-percent"> 1 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Ajay N. Sharma </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 236 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 41 %;">
+<span class="ch-qc-minutes"> 45 min </span> <span class="ch-qc-percent"> 41 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 95 %;">
+<span class="ch-qc-minutes"> 108 min </span> <span class="ch-qc-percent"> 95 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 73 %;">
+<span class="ch-qc-minutes"> 77 min </span> <span class="ch-qc-percent"> 73 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 5 %;">
+<span class="ch-qc-minutes"> 5 min </span> <span class="ch-qc-percent"> 5 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Frances Collichio </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 233 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 11 %;">
+<span class="ch-qc-minutes"> 13 min </span> <span class="ch-qc-percent"> 11 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 50 %;">
+<span class="ch-qc-minutes"> 57 min </span> <span class="ch-qc-percent"> 50 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 77 %;">
+<span class="ch-qc-minutes"> 80 min </span> <span class="ch-qc-percent"> 77 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 99 %;">
+<span class="ch-qc-minutes"> 84 min </span> <span class="ch-qc-percent"> 99 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Ken Tsai </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 231 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 96 %;">
+<span class="ch-qc-minutes"> 99 min </span> <span class="ch-qc-percent"> 96 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 97 %;">
+<span class="ch-qc-minutes"> 108 min </span> <span class="ch-qc-percent"> 97 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 28 %;">
+<span class="ch-qc-minutes"> 23 min </span> <span class="ch-qc-percent"> 28 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Mariam El-Ashmawy </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 229 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 88 %;">
+<span class="ch-qc-minutes"> 91 min </span> <span class="ch-qc-percent"> 88 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 97 %;">
+<span class="ch-qc-minutes"> 109 min </span> <span class="ch-qc-percent"> 97 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 30 %;">
+<span class="ch-qc-minutes"> 26 min </span> <span class="ch-qc-percent"> 30 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 3 %;">
+<span class="ch-qc-minutes"> 4 min </span> <span class="ch-qc-percent"> 3 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> David J Savage </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 228 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 151 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 68 %;">
+<span class="ch-qc-minutes"> 77 min </span> <span class="ch-qc-percent"> 68 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Kamaneh Montazeri </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 219 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 88 %;">
+<span class="ch-qc-minutes"> 91 min </span> <span class="ch-qc-percent"> 88 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 65 %;">
+<span class="ch-qc-minutes"> 73 min </span> <span class="ch-qc-percent"> 65 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 56 %;">
+<span class="ch-qc-minutes"> 55 min </span> <span class="ch-qc-percent"> 56 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 1 %;">
+<span class="ch-qc-minutes"> 1 min </span> <span class="ch-qc-percent"> 1 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Ryan J. Sullivan </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 203 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 36 %;">
+<span class="ch-qc-minutes"> 41 min </span> <span class="ch-qc-percent"> 36 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 70 %;">
+<span class="ch-qc-minutes"> 59 min </span> <span class="ch-qc-percent"> 70 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Dan Hippe </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 201 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 88 %;">
+<span class="ch-qc-minutes"> 98 min </span> <span class="ch-qc-percent"> 88 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 90 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 90 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Claire Verschraegen </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 199 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 85 %;">
+<span class="ch-qc-minutes"> 88 min </span> <span class="ch-qc-percent"> 85 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 99 %;">
+<span class="ch-qc-minutes"> 111 min </span> <span class="ch-qc-percent"> 99 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Jessica L. Fewkes </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 198 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 41 %;">
+<span class="ch-qc-minutes"> 46 min </span> <span class="ch-qc-percent"> 41 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 89 %;">
+<span class="ch-qc-minutes"> 101 min </span> <span class="ch-qc-percent"> 89 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 48 %;">
+<span class="ch-qc-minutes"> 51 min </span> <span class="ch-qc-percent"> 48 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Adewole S. Adamson </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 197 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 48 %;">
+<span class="ch-qc-minutes"> 53 min </span> <span class="ch-qc-percent"> 48 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 54 %;">
+<span class="ch-qc-minutes"> 61 min </span> <span class="ch-qc-percent"> 54 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 30 %;">
+<span class="ch-qc-minutes"> 29 min </span> <span class="ch-qc-percent"> 30 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 41 %;">
+<span class="ch-qc-minutes"> 53 min </span> <span class="ch-qc-percent"> 41 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Lisa Zaba </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 196 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 83 %;">
+<span class="ch-qc-minutes"> 94 min </span> <span class="ch-qc-percent"> 83 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 96 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 96 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Molly Yancovitz </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 194 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 68 %;">
+<span class="ch-qc-minutes"> 73 min </span> <span class="ch-qc-percent"> 68 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 56 %;">
+<span class="ch-qc-minutes"> 48 min </span> <span class="ch-qc-percent"> 56 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 57 %;">
+<span class="ch-qc-minutes"> 74 min </span> <span class="ch-qc-percent"> 57 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Alex Sorrentino </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 191 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 51 %;">
+<span class="ch-qc-minutes"> 57 min </span> <span class="ch-qc-percent"> 51 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 34 %;">
+<span class="ch-qc-minutes"> 35 min </span> <span class="ch-qc-percent"> 34 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 46 %;">
+<span class="ch-qc-minutes"> 45 min </span> <span class="ch-qc-percent"> 46 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 63 %;">
+<span class="ch-qc-minutes"> 54 min </span> <span class="ch-qc-percent"> 63 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Shailender Bhatia </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 189 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 85 %;">
+<span class="ch-qc-minutes"> 96 min </span> <span class="ch-qc-percent"> 85 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 95 %;">
+<span class="ch-qc-minutes"> 93 min </span> <span class="ch-qc-percent"> 95 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Karam Khaddour </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 185 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 42 %;">
+<span class="ch-qc-minutes"> 43 min </span> <span class="ch-qc-percent"> 42 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 86 %;">
+<span class="ch-qc-minutes"> 96 min </span> <span class="ch-qc-percent"> 86 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 35 %;">
+<span class="ch-qc-minutes"> 46 min </span> <span class="ch-qc-percent"> 35 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Vatche Tchekmedyian </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 178 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 90 %;">
+<span class="ch-qc-minutes"> 88 min </span> <span class="ch-qc-percent"> 90 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 69 %;">
+<span class="ch-qc-minutes"> 90 min </span> <span class="ch-qc-percent"> 69 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Natasha Hill </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 167 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 94 %;">
+<span class="ch-qc-minutes"> 97 min </span> <span class="ch-qc-percent"> 94 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 71 %;">
+<span class="ch-qc-minutes"> 69 min </span> <span class="ch-qc-percent"> 71 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Andrew D. Knight </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 162 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 96 %;">
+<span class="ch-qc-minutes"> 81 min </span> <span class="ch-qc-percent"> 96 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 62 %;">
+<span class="ch-qc-minutes"> 80 min </span> <span class="ch-qc-percent"> 62 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Laura Ferris </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 140 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 86 %;">
+<span class="ch-qc-minutes"> 98 min </span> <span class="ch-qc-percent"> 86 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 32 %;">
+<span class="ch-qc-minutes"> 42 min </span> <span class="ch-qc-percent"> 32 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Itai M. Pashtan </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 132 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 38 %;">
+<span class="ch-qc-minutes"> 43 min </span> <span class="ch-qc-percent"> 38 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 84 %;">
+<span class="ch-qc-minutes"> 89 min </span> <span class="ch-qc-percent"> 84 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Michael Wong </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 128 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 101 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 24 %;">
+<span class="ch-qc-minutes"> 27 min </span> <span class="ch-qc-percent"> 24 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Frank Worden </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 127 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 99 %;">
+<span class="ch-qc-minutes"> 97 min </span> <span class="ch-qc-percent"> 99 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 36 %;">
+<span class="ch-qc-minutes"> 30 min </span> <span class="ch-qc-percent"> 36 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Peter Ch’en </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 126 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 80 %;">
+<span class="ch-qc-minutes"> 89 min </span> <span class="ch-qc-percent"> 80 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 32 %;">
+<span class="ch-qc-minutes"> 37 min </span> <span class="ch-qc-percent"> 32 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Sunandana Chandra </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 124 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 32 %;">
+<span class="ch-qc-minutes"> 32 min </span> <span class="ch-qc-percent"> 32 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 92 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Meghan J. Mooradian </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 115 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 17 %;">
+<span class="ch-qc-minutes"> 18 min </span> <span class="ch-qc-percent"> 17 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 50 %;">
+<span class="ch-qc-minutes"> 56 min </span> <span class="ch-qc-percent"> 50 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 49 %;">
+<span class="ch-qc-minutes"> 42 min </span> <span class="ch-qc-percent"> 49 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Tien Nguyen </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 112 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 112 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Annie Chang </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 108 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 96 %;">
+<span class="ch-qc-minutes"> 108 min </span> <span class="ch-qc-percent"> 96 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Michael Povelaitis </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 108 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 95 %;">
+<span class="ch-qc-minutes"> 108 min </span> <span class="ch-qc-percent"> 95 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Haroutyun Joulfayan </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 107 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 95 %;">
+<span class="ch-qc-minutes"> 107 min </span> <span class="ch-qc-percent"> 95 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Kathryn Bollin </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 107 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 94 %;">
+<span class="ch-qc-minutes"> 107 min </span> <span class="ch-qc-percent"> 94 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Candice D Church </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 107 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 107 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Daniel Coit </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 106 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 106 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Ray Cheever </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 105 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 92 %;">
+<span class="ch-qc-minutes"> 105 min </span> <span class="ch-qc-percent"> 92 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Adam Yakovich </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 103 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Jeannie Hou </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 103 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Charlie Li </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 103 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 91 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 91 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Don Lawrence </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 103 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 100 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 100 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> James F. McIntyre </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 103 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 96 %;">
+<span class="ch-qc-minutes"> 103 min </span> <span class="ch-qc-percent"> 96 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Adam Whalley </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 99 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 96 %;">
+<span class="ch-qc-minutes"> 99 min </span> <span class="ch-qc-percent"> 96 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Christopher Barker </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 99 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 93 %;">
+<span class="ch-qc-minutes"> 99 min </span> <span class="ch-qc-percent"> 93 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Christopher Zajac </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 99 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 76 %;">
+<span class="ch-qc-minutes"> 99 min </span> <span class="ch-qc-percent"> 76 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Sarah Nia </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 97 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 74 %;">
+<span class="ch-qc-minutes"> 97 min </span> <span class="ch-qc-percent"> 74 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Khalid Garman </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 97 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 74 %;">
+<span class="ch-qc-minutes"> 97 min </span> <span class="ch-qc-percent"> 74 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Shinya U Amano </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 97 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 99 %;">
+<span class="ch-qc-minutes"> 97 min </span> <span class="ch-qc-percent"> 99 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Rima Kulikauskas </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 97 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 86 %;">
+<span class="ch-qc-minutes"> 97 min </span> <span class="ch-qc-percent"> 86 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Matthew Fury </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 96 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 74 %;">
+<span class="ch-qc-minutes"> 96 min </span> <span class="ch-qc-percent"> 74 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Reed E. Drews </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 96 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 73 %;">
+<span class="ch-qc-minutes"> 96 min </span> <span class="ch-qc-percent"> 73 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Truelian Yu </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 95 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 97 %;">
+<span class="ch-qc-minutes"> 95 min </span> <span class="ch-qc-percent"> 97 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Kim Premo </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 95 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 73 %;">
+<span class="ch-qc-minutes"> 95 min </span> <span class="ch-qc-percent"> 73 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Brian Burleson </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 95 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 73 %;">
+<span class="ch-qc-minutes"> 95 min </span> <span class="ch-qc-percent"> 73 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Aubriana McEvoy </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 94 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 88 %;">
+<span class="ch-qc-minutes"> 94 min </span> <span class="ch-qc-percent"> 88 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Krista Lachance </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 94 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 82 %;">
+<span class="ch-qc-minutes"> 94 min </span> <span class="ch-qc-percent"> 82 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Frank Seebach </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 91 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 70 %;">
+<span class="ch-qc-minutes"> 91 min </span> <span class="ch-qc-percent"> 70 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Jacob Choi </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 91 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 62 %;">
+<span class="ch-qc-minutes"> 64 min </span> <span class="ch-qc-percent"> 62 % of meeting </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 24 %;">
+<span class="ch-qc-minutes"> 26 min </span> <span class="ch-qc-percent"> 24 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Alyson Baryiames </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 88 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 68 %;">
+<span class="ch-qc-minutes"> 88 min </span> <span class="ch-qc-percent"> 68 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Emily Godwin Summers </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 88 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 77 %;">
+<span class="ch-qc-minutes"> 88 min </span> <span class="ch-qc-percent"> 77 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Mina Bakhtiar </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 85 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 76 %;">
+<span class="ch-qc-minutes"> 85 min </span> <span class="ch-qc-percent"> 76 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Gregory Norigian </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 84 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 99 %;">
+<span class="ch-qc-minutes"> 84 min </span> <span class="ch-qc-percent"> 99 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Cara Trulli </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 83 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 98 %;">
+<span class="ch-qc-minutes"> 83 min </span> <span class="ch-qc-percent"> 98 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Madeliene Stump </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 78 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 60 %;">
+<span class="ch-qc-minutes"> 78 min </span> <span class="ch-qc-percent"> 60 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Todd Franklin Pearson </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 78 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 68 %;">
+<span class="ch-qc-minutes"> 78 min </span> <span class="ch-qc-percent"> 68 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Ron S. Gejman </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 76 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 90 %;">
+<span class="ch-qc-minutes"> 76 min </span> <span class="ch-qc-percent"> 90 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Julie Montiel </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 76 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 59 %;">
+<span class="ch-qc-minutes"> 76 min </span> <span class="ch-qc-percent"> 59 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Sasha J Hussain </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 76 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 89 %;">
+<span class="ch-qc-minutes"> 76 min </span> <span class="ch-qc-percent"> 89 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Omid Najmi </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 75 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 88 %;">
+<span class="ch-qc-minutes"> 75 min </span> <span class="ch-qc-percent"> 88 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> William J. IV Benjamin </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 75 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 67 %;">
+<span class="ch-qc-minutes"> 75 min </span> <span class="ch-qc-percent"> 67 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> David Kremer </span> <span class="ch-qc-audience"> Industry </span> <span class="ch-qc-total"> 74 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 57 %;">
+<span class="ch-qc-minutes"> 74 min </span> <span class="ch-qc-percent"> 57 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Larisa Geskin </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 73 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 20 %;">
+<span class="ch-qc-minutes"> 21 min </span> <span class="ch-qc-percent"> 20 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 40 %;">
+<span class="ch-qc-minutes"> 53 min </span> <span class="ch-qc-percent"> 40 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Tatyana Sharova </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 72 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 64 %;">
+<span class="ch-qc-minutes"> 72 min </span> <span class="ch-qc-percent"> 64 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Ben Gratz </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 64 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 56 %;">
+<span class="ch-qc-minutes"> 64 min </span> <span class="ch-qc-percent"> 56 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Lauren O’Loughlin </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 60 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 46 %;">
+<span class="ch-qc-minutes"> 60 min </span> <span class="ch-qc-percent"> 46 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Maria Melendez-Gonzalez </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 57 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 55 %;">
+<span class="ch-qc-minutes"> 57 min </span> <span class="ch-qc-percent"> 55 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> James A. DeCaprio </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 46 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 43 %;">
+<span class="ch-qc-minutes"> 46 min </span> <span class="ch-qc-percent"> 43 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Riley M. Fadden </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 45 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 46 %;">
+<span class="ch-qc-minutes"> 45 min </span> <span class="ch-qc-percent"> 46 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Bailey Claire Smith </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 36 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 32 %;">
+<span class="ch-qc-minutes"> 36 min </span> <span class="ch-qc-percent"> 32 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Devarati Mitra </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 33 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 31 %;">
+<span class="ch-qc-minutes"> 33 min </span> <span class="ch-qc-percent"> 31 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Jack Kollings </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 33 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 29 %;">
+<span class="ch-qc-minutes"> 33 min </span> <span class="ch-qc-percent"> 29 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> William T Reed </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 32 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 28 %;">
+<span class="ch-qc-minutes"> 32 min </span> <span class="ch-qc-percent"> 28 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Gabriella Chefitz </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 30 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 23 %;">
+<span class="ch-qc-minutes"> 30 min </span> <span class="ch-qc-percent"> 23 % of meeting </span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Sanjay Chandrasekaran </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 29 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 26 %;">
+<span class="ch-qc-minutes"> 29 min </span> <span class="ch-qc-percent"> 26 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Elizabeth J. Lilley </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 20 min total </span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 18 %;">
+<span class="ch-qc-minutes"> 20 min </span> <span class="ch-qc-percent"> 18 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Justine V. Cohen </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 19 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 17 %;">
+<span class="ch-qc-minutes"> 19 min </span> <span class="ch-qc-percent"> 17 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="ch-qc-person"> Taylor Harp </span> <span class="ch-qc-audience"> Academic / clinical </span> <span class="ch-qc-total"> 15 min total </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present" style="--qc-pct: 16 %;">
+<span class="ch-qc-minutes"> 15 min </span> <span class="ch-qc-percent"> 16 % of meeting </span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
 </section>
 </div>
 

@@ -14,6 +14,49 @@ toc: false
 .soco-community-preview > * { position: relative; z-index: 1; }
 .soco-community-preview .soco-community-link { display: inline-block; margin-top: .35rem; }
 #soco-community-returning { display: none; }
+
+.soco-structure {
+  position: relative;
+}
+
+.soco-structure-copy {
+  max-width: 900px;
+}
+
+.soco-convener-card {
+  margin-top: 1.25rem;
+  padding: 1.05rem 1.15rem;
+  border: 1px solid rgba(40,169,162,.24);
+  border-left: 4px solid #28A9A2;
+  border-radius: 12px;
+  background: rgba(243,248,248,.9);
+}
+
+.soco-convener-eyebrow {
+  margin-bottom: .22rem;
+  color: #168A8F;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.soco-convener-name {
+  margin: 0 0 .35rem 0;
+  color: #082D4D;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.soco-convener-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .soco-convener-card {
+    padding: .95rem 1rem;
+  }
+}
 </style>
 
 :::::::: soco-hero
@@ -67,6 +110,28 @@ Scientific progress depends on more than new data. It requires a culture in whic
 The Society of Cutaneous Oncology was created to support that culture across cutaneous oncology.
 
 [Read our philosophy →](philosophy.qmd){.soco-philosophy-link}
+:::
+
+::: {.soco-section .soco-structure}
+## How we are organized
+
+<div class="soco-structure-copy">
+
+SoCO was deliberately designed with a lightweight organizational structure. Consistent with our philosophy, we have chosen not to create a standing executive committee, leadership council, or hierarchy of titles. The aim is to keep participation open, encourage contributions across disciplines and career stages, and allow ideas to be evaluated on their merits.
+
+The Society's work is therefore shaped primarily by the people who participate in its Journal Club, Research Forum, collaborative projects, and other scientific activities.
+
+</div>
+
+<div class="soco-convener-card">
+<div class="soco-convener-eyebrow">Scientific convener</div>
+<div class="soco-convener-name">David M. Miller, MD, PhD</div>
+<p>
+The scientific convener brings together the Society's scientific programming, helps coordinate topics and participants, and provides continuity across Journal Club, Research Forum, and related activities. The role is intended to be facilitative rather than hierarchical.
+</p>
+</div>
+
+[Explore the SoCO community →](community_highlights.qmd){.soco-philosophy-link}
 :::
 
 ::::::: {.soco-section .soco-platforms}
@@ -136,5 +201,3 @@ document.addEventListener("DOMContentLoaded", function () {
   } catch (e) {}
 });
 </script>
-
-

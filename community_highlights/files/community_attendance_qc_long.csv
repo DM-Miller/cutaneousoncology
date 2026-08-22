@@ -1,0 +1,251 @@
+name_key,name,audience,company,meeting_folder,meeting_date,meeting_type,minutes,observed_meeting_minutes,attendance_pct,attendance_status
+adamwhalley,Adam Whalley,Industry,Replimune,April 12 2026 - IGNYTE,2026-04-12,Journal Club,99.13333333,103.3666667,95.90454688619654,tracked
+adamyakovich,Adam Yakovich,Industry,Replimune,April 12 2026 - IGNYTE,2026-04-12,Journal Club,103.4666667,103.3666667,100,tracked
+adewunmiadelaja,Adewunmi O. Adelaja,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,103.9666667,103.3666667,100,tracked
+alexsorrentino,Alex Sorrentino,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,34.91666667,103.3666667,33.7794259839473,tracked
+annsilk,Ann W. Silk,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,102.95,103.3666667,99.59690419232606,tracked
+claireverschraegen,Claire Verschraegen,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,87.78333333,103.3666667,84.92421796358458,tracked
+davidmiller,David M. Miller,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,103.3666667,103.3666667,99.99999999999999,tracked
+donlawrence,Don Lawrence,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,102.85,103.3666667,99.50016120622375,tracked
+elizabethbuchbinder,Elizabeth I. Buchbinder,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,103.0333333,103.3666667,99.67752331516365,tracked
+francescollichio,Frances Collichio,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,79.96666667,103.3666667,77.36214122303704,tracked
+howardkaufman,Howard L. Kaufman,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,10.6,103.3666667,10.254756526844645,tracked
+isaacbrownell,Isaac Brownell,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,104.5666667,103.3666667,100,tracked
+jacobchoi,Jacob Choi,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,64.33333333,103.3666667,62.23798772259337,tracked
+julianeczapla,Juliane Andrade Czapla,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,9.6,103.3666667,9.287326665821565,tracked
+kamanehmontazeri,Kamaneh Montazeri,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,90.68333333,103.3666667,87.72976456055152,tracked
+karamkhaddour,Karam Khaddour,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,43.15,103.3666667,41.74459850314589,tracked
+kentsai,Ken Tsai,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,99.15,103.3666667,95.92067072043835,tracked
+kevinemerick,Kevin S. Emerick,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,86.85,103.3666667,84.02128342985448,tracked
+manishathakuria,Manisha Thakuria,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,101.7333333,103.3666667,98.41986449583365,tracked
+mariamelashmawy,Mariam El-Ashmawy,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,91,103.3666667,88.03611735310025,tracked
+mariamelendezgonzalez,Maria Melendez-Gonzalez,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,56.63333333,103.3666667,54.78877779271564,tracked
+michaelwong,Michael Wong,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,100.9,103.3666667,97.61367297722875,tracked
+natashahill,Natasha Hill,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,97.01666667,103.3666667,93.85682035348056,tracked
+nikhilkhushalani,Nikhil Khushalani,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,101.5666667,103.3666667,98.25862625015847,tracked
+rossmerkin,Ross D. Merkin,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,104.15,103.3666667,100,tracked
+ryansullivan,Ryan J. Sullivan,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,103.05,103.3666667,99.69364717842836,tracked
+suzannetopalian,Suzanne Topalian,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,100.0166667,103.3666667,96.75910996557269,tracked
+vernsondak,Vern Sondak,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,102.8,103.3666667,99.4517897131726,tracked
+vishalpatel,Vishal Patel,Academic / clinical,NA,April 12 2026 - IGNYTE,2026-04-12,Journal Club,65.46666667,103.3666667,63.33440823820238,tracked
+adewoleadamson,Adewole S. Adamson,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,53.45,112.15,47.659384752563525,tracked
+ajaysharma,Ajay N. Sharma,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,45.46666666666667,112.15,40.54094219051865,tracked
+alexsorrentino,Alex Sorrentino,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,57.25,112.15,51.047703967900134,tracked
+christinecimoch,Christine C. Cimoch,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,83.06666666666666,112.15,74.06746916332293,tracked
+danhippe,Dan Hippe,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,98.2,112.15,87.56130182790905,tracked
+davidmiller,David M. Miller,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,112.15,112.15,100,tracked
+davidsavage,David J Savage,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,151.38333333333333,112.15,100,tracked
+elizabethbuchbinder,Elizabeth I. Buchbinder,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,80.98333333333333,112.15,72.20983801456383,tracked
+elizabethlilley,Elizabeth J. Lilley,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,19.9,112.15,17.744092732946942,tracked
+francescollichio,Frances Collichio,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,12.783333333333331,112.15,11.39842472878585,tracked
+howardkaufman,Howard L. Kaufman,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,113.53333333333332,112.15,100,tracked
+isaacbrownell,Isaac Brownell,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,114.6,112.15,100,tracked
+jenniferdesimone,Jennifer DeSimone,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,109.78333333333332,112.15,97.88973101500964,tracked
+jessicafewkes,Jessica L. Fewkes,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,46.2,112.15,41.19482835488185,tracked
+kristarubin,Krista M. Rubin,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,96.35,112.15,85.91172536781096,tracked
+mehranyusuf,Mehran Behruj Yusuf,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,100.3,112.15,89.43379402585822,tracked
+minabakhtiar,Mina Bakhtiar,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,85.15,112.15,75.92510031208202,tracked
+paulnghiem,Paul Nghiem,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,74.35,112.15,66.29514043691483,tracked
+peterchen,Peter Ch'en,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,89.3,112.15,79.62550156041016,tracked
+rhodaalani,Rhoda Alani,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,107.6,112.15,95.94293357111012,tracked
+rimakulikauskas,Rima Kulikauskas,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,96.63333333333334,112.15,86.1643632040422,tracked
+sameergupta,Sameer Gupta,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,106.48333333333332,112.15,94.94724327537523,tracked
+songpark,Song Park,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,40.53333333333333,112.15,36.14207163025709,tracked
+tatyanasharova,Tatyana Sharova,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,71.95,112.15,64.15514935354436,tracked
+vernsondak,Vern Sondak,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,110.25,112.15,98.30584039233169,tracked
+vishalpatel,Vishal Patel,Academic / clinical,NA,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,68.06666666666666,112.15,60.69252489225738,tracked
+adewoleadamson,Adewole S. Adamson,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,29.383333333333333,97.8,30.044308111792777,tracked
+adewunmiadelaja,Adewunmi O. Adelaja,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,43.666666666666664,97.8,44.648943421949554,tracked
+ajaysharma,Ajay N. Sharma,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,4.516666666666667,97.8,4.61826857532379,tracked
+alexsorrentino,Alex Sorrentino,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,44.733333333333334,97.8,45.73960463531016,tracked
+christinecimoch,Christine C. Cimoch,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,92.45,97.8,94.52965235173825,tracked
+davidmiller,David M. Miller,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,97.8,97.8,100,tracked
+elizabethbuchbinder,Elizabeth I. Buchbinder,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,90.35,97.8,92.38241308793457,tracked
+frankworden,Frank Worden,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,97.05,97.8,99.23312883435582,tracked
+isaacbrownell,Isaac Brownell,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,97.28333333333332,97.8,99.47171097477845,tracked
+julianeczapla,Juliane Andrade Czapla,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,97.31666666666666,97.8,99.50579413769597,tracked
+kamanehmontazeri,Kamaneh Montazeri,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,54.666666666666664,97.8,55.89638718473074,tracked
+kristarubin,Krista M. Rubin,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,51.233333333333334,97.8,52.38582140422631,tracked
+manishathakuria,Manisha Thakuria,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,75.18333333333334,97.8,76.87457396046354,tracked
+natashahill,Natasha Hill,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,69.48333333333333,97.8,71.04635310156783,tracked
+nikhilkhushalani,Nikhil Khushalani,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,35.88333333333333,97.8,36.690524880708935,tracked
+rhodaalani,Rhoda Alani,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,94.83333333333331,97.8,96.96659850034082,tracked
+rileyfadden,Riley M. Fadden,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,45.3,97.8,46.31901840490798,tracked
+rossmerkin,Ross D. Merkin,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,89.38333333333334,97.8,91.39400136332652,tracked
+sameergupta,Sameer Gupta,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,96.56666666666666,97.8,98.7389229720518,tracked
+shailenderbhatia,Shailender Bhatia,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,93.05,97.8,95.14314928425358,tracked
+shinyaamano,Shinya U Amano,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,96.68333333333334,97.8,98.85821404226313,tracked
+songpark,Song Park,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,0.5666666666666667,97.8,0.5794137695978187,tracked
+soniacohen,Sonia Cohen,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,122,97.8,100,tracked
+sunandanachandra,Sunandana Chandra,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,31.65,97.8,32.36196319018405,tracked
+taylorharp,Taylor Harp,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,15.416666666666666,97.8,15.763462849352418,tracked
+truelianyu,Truelian Yu,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,95.18333333333334,97.8,97.32447171097479,tracked
+vatchetchekmedyian,Vatche Tchekmedyian,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,88.23333333333333,97.8,90.21813224267213,tracked
+vernsondak,Vern Sondak,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,94.55,97.8,96.67689161554192,tracked
+vishalpatel,Vishal Patel,Academic / clinical,NA,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,24.4,97.8,24.948875255623722,tracked
+adewoleadamson,Adewole S. Adamson,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,53.31666666666667,130.16666666666666,40.96030729833547,tracked
+adewunmiadelaja,Adewunmi O. Adelaja,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,97.76666666666668,130.16666666666666,75.1088348271447,tracked
+alysonbaryiames,Alyson Baryiames,Industry,Regeneron,July 11 2025 - c-Post,2025-07-11,Journal Club,88.41666666666667,130.16666666666666,67.92573623559541,tracked
+andrewknight,Andrew D. Knight,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,80.11666666666666,130.16666666666666,61.54929577464789,tracked
+brianburleson,Brian Burleson,Industry,Regeneron,July 11 2025 - c-Post,2025-07-11,Journal Club,94.63333333333334,130.16666666666666,72.70166453265045,tracked
+christopherzajac,Christopher Zajac,Industry,Regeneron,July 11 2025 - c-Post,2025-07-11,Journal Club,98.63333333333334,130.16666666666666,75.77464788732395,tracked
+davidkremer,David Kremer,Industry,Regeneron,July 11 2025 - c-Post,2025-07-11,Journal Club,73.66666666666667,130.16666666666666,56.59411011523688,tracked
+davidmiller,David M. Miller,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,130.16666666666666,130.16666666666666,100,tracked
+frankseebach,Frank Seebach,Industry,Regeneron,July 11 2025 - c-Post,2025-07-11,Journal Club,91.4,130.16666666666666,70.21766965428938,tracked
+gabriellachefitz,Gabriella Chefitz,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,30,130.16666666666666,23.047375160051217,tracked
+howardkaufman,Howard L. Kaufman,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,92.06666666666666,130.16666666666666,70.72983354673495,tracked
+isaacbrownell,Isaac Brownell,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,95.7,130.16666666666666,73.52112676056339,tracked
+jenniferdesimone,Jennifer DeSimone,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,53.166666666666664,130.16666666666666,40.84507042253521,tracked
+julianeczapla,Juliane Andrade Czapla,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,100.88333333333334,130.16666666666666,77.5032010243278,tracked
+juliemontiel,Julie Montiel,Industry,Regeneron,July 11 2025 - c-Post,2025-07-11,Journal Club,76.18333333333334,130.16666666666666,58.52752880921896,tracked
+kamanehmontazeri,Kamaneh Montazeri,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,1,130.16666666666666,0.7682458386683739,tracked
+karamkhaddour,Karam Khaddour,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,45.916666666666664,130.16666666666666,35.2752880921895,tracked
+kevinemerick,Kevin S. Emerick,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,89.08333333333333,130.16666666666666,68.43790012804097,tracked
+khalidgarman,Khalid Garman,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,96.91666666666669,130.16666666666666,74.45582586427658,tracked
+kimpremo,Kim Premo,Industry,Regeneron,July 11 2025 - c-Post,2025-07-11,Journal Club,94.65,130.16666666666666,72.71446862996159,tracked
+kristarubin,Krista M. Rubin,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,95.13333333333334,130.16666666666666,73.08578745198464,tracked
+larisageskin,Larisa Geskin,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,52.56666666666667,130.16666666666666,40.38412291933419,tracked
+lauraferris,Laura Ferris,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,41.7,130.16666666666666,32.035851472471194,tracked
+laurenoloughlin,Lauren O'Loughlin,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,59.733333333333334,130.16666666666666,45.8898847631242,tracked
+madelienestump,Madeliene Stump,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,77.91666666666667,130.16666666666666,59.85915492957747,tracked
+mariamelashmawy,Mariam El-Ashmawy,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,3.816666666666667,130.16666666666666,2.9321382842509607,tracked
+matthewfury,Matthew Fury,Industry,Regeneron,July 11 2025 - c-Post,2025-07-11,Journal Club,95.88333333333334,130.16666666666666,73.66197183098592,tracked
+mollyyancovitz,Molly Yancovitz,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,73.83333333333333,130.16666666666666,56.72215108834828,tracked
+nikhilkhushalani,Nikhil Khushalani,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,87.81666666666666,130.16666666666666,67.46478873239437,tracked
+paulnghiem,Paul Nghiem,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,59.65,130.16666666666666,45.8258642765685,tracked
+reeddrews,Reed E. Drews,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,95.65,130.16666666666666,73.48271446862996,tracked
+rossmerkin,Ross D. Merkin,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,95.16666666666669,130.16666666666666,73.11139564660692,tracked
+sameergupta,Sameer Gupta,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,93,130.16666666666666,71.44686299615877,tracked
+sarahnia,Sarah Nia,Industry,Regeneron,July 11 2025 - c-Post,2025-07-11,Journal Club,96.95,130.16666666666666,74.48143405889886,tracked
+suzannetopalian,Suzanne Topalian,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,93.31666666666666,130.16666666666666,71.69014084507042,tracked
+vatchetchekmedyian,Vatche Tchekmedyian,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,90.2,130.16666666666666,69.29577464788733,tracked
+vernsondak,Vern Sondak,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,92.4,130.16666666666666,70.98591549295776,tracked
+vishalpatel,Vishal Patel,Academic / clinical,NA,July 11 2025 - c-Post,2025-07-11,Journal Club,60.166666666666664,130.16666666666666,46.222791293213824,tracked
+adewoleadamson,Adewole S. Adamson,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,60.93333333333333,113.55,53.66211654190518,tracked
+adewunmiadelaja,Adewunmi O. Adelaja,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,111.73333333333332,113.55,98.40011742257448,tracked
+ajaysharma,Ajay N. Sharma,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,108.36666666666666,113.55,95.43519741670336,tracked
+aleighalawless,Aleigha R. Lawless,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,96.1,113.55,84.63232056362835,tracked
+baileysmith,Bailey Claire Smith,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,36.333333333333336,113.55,31.997651548510202,tracked
+bengratz,Ben Gratz,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,63.916666666666664,113.55,56.28944664611771,tracked
+charlieli,Charlie Li,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,103.16666666666669,113.55,90.85571701159549,tracked
+danhippe,Dan Hippe,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,102.75,113.55,90.4887714663144,tracked
+davidmiller,David M. Miller,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,113.55,113.55,100,tracked
+davidsavage,David J Savage,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,76.81666666666666,113.55,67.65008072801996,tracked
+emilysummers,Emily Godwin Summers,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,87.75,113.55,77.2787318361955,tracked
+francescollichio,Frances Collichio,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,56.666666666666664,113.55,49.904594158226914,tracked
+haroutyunjoulfayan,Haroutyun Joulfayan,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,107.41666666666669,113.55,94.5985615734625,tracked
+howardkaufman,Howard L. Kaufman,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,72.35,113.55,63.716424482606776,tracked
+isaacbrownell,Isaac Brownell,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,94.93333333333334,113.55,83.60487303684134,tracked
+itaipashtan,Itai M. Pashtan,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,42.733333333333334,113.55,37.633935124027595,tracked
+jackkollings,Jack Kollings,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,32.85,113.55,28.92998678996037,tracked
+jessicafewkes,Jessica L. Fewkes,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,101.35,113.55,89.25583443416997,tracked
+julianeczapla,Juliane Andrade Czapla,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,83.85,113.55,73.8441215323646,tracked
+justinecohen,Justine V. Cohen,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,19.266666666666666,113.55,16.967562013797153,tracked
+kathrynbollin,Kathryn Bollin,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,106.98333333333332,113.55,94.21693820637017,tracked
+kristalachance,Krista Lachance,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,93.65,113.55,82.47468075737561,tracked
+lauraferris,Laura Ferris,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,97.83333333333331,113.55,86.15881403199764,tracked
+lisazaba,Lisa Zaba,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,93.73333333333332,113.55,82.54806986643182,tracked
+mehranyusuf,Mehran Behruj Yusuf,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,94.48333333333332,113.55,83.20857184793776,tracked
+michaelpovelaitis,Michael Povelaitis,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,108.13333333333334,113.55,95.22970791134597,tracked
+paulnghiem,Paul Nghiem,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,25.916666666666668,113.55,22.8240129164832,tracked
+peterchen,Peter Ch'en,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,36.516666666666666,113.55,32.159107588433876,tracked
+raycheever,Ray Cheever,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,104.56666666666666,113.55,92.08865404373991,tracked
+rhodaalani,Rhoda Alani,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,94.63333333333334,113.55,83.34067224423896,tracked
+rossmerkin,Ross D. Merkin,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,64.9,113.55,57.155438132981075,tracked
+sameergupta,Sameer Gupta,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,103.86666666666666,113.55,91.47218552766769,tracked
+shailenderbhatia,Shailender Bhatia,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,96.01666666666668,113.55,84.55893145457216,tracked
+songpark,Song Park,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,67.3,113.55,59.269044473800086,tracked
+soniacohen,Sonia Cohen,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,84.73333333333333,113.55,74.62204608836049,tracked
+toddpearson,Todd Franklin Pearson,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,77.5,113.55,68.25187142228094,tracked
+vernsondak,Vern Sondak,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,59.88333333333333,113.55,52.73741376779686,tracked
+vishalpatel,Vishal Patel,Academic / clinical,NA,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,89.86666666666666,113.55,79.14281520622339,tracked
+adewunmiadelaja,Adewunmi O. Adelaja,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,97.6,106.61666666666666,91.54291073940911,tracked
+ajaysharma,Ajay N. Sharma,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,77.38333333333334,106.61666666666666,72.58089729560733,tracked
+aleighalawless,Aleigha R. Lawless,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,59.766666666666666,106.61666666666666,56.057526965765206,tracked
+annsilk,Ann W. Silk,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,104.3,106.61666666666666,97.82710645615133,tracked
+aubrianamcevoy,Aubriana McEvoy,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,93.83333333333331,106.61666666666666,88.01000468969829,tracked
+candicechurch,Candice D Church,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,106.65,106.61666666666666,100,tracked
+christinecimoch,Christine C. Cimoch,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,85.98333333333333,106.61666666666666,80.64717836485853,tracked
+christopherbarker,Christopher Barker,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,99,106.61666666666666,92.85602626231046,tracked
+danielcoit,Daniel Coit,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,106.35,106.61666666666666,99.74988275754261,tracked
+davidmiller,David M. Miller,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,106.61666666666666,106.61666666666666,100,tracked
+devaratimitra,Devarati Mitra,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,33.13333333333333,106.61666666666666,31.07706737533219,tracked
+elizabethbuchbinder,Elizabeth I. Buchbinder,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,86.81666666666666,106.61666666666666,81.4287947475379,tracked
+howardkaufman,Howard L. Kaufman,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,93.96666666666668,106.61666666666666,88.13506331092701,tracked
+isaacbrownell,Isaac Brownell,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,111.35,106.61666666666666,100,tracked
+itaipashtan,Itai M. Pashtan,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,89.18333333333334,106.61666666666666,83.64858527434735,tracked
+jamesdecaprio,James A. DeCaprio,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,45.71666666666667,106.61666666666666,42.879474753790845,tracked
+jamesmcintyre,James F. McIntyre,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,102.81666666666666,106.61666666666666,96.43582929498203,tracked
+jessicafewkes,Jessica L. Fewkes,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,50.93333333333333,106.61666666666666,47.772393309363764,tracked
+julianeczapla,Juliane Andrade Czapla,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,104.25,106.61666666666666,97.78020947319057,tracked
+kevinemerick,Kevin S. Emerick,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,79.91666666666667,106.61666666666666,74.95701109895265,tracked
+kristarubin,Krista M. Rubin,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,102.38333333333334,106.61666666666666,96.02938877598875,tracked
+larisageskin,Larisa Geskin,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,20.9,106.61666666666666,19.602938877598877,tracked
+lisazaba,Lisa Zaba,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,102.75,106.61666666666666,96.37329998436768,tracked
+manishathakuria,Manisha Thakuria,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,32.43333333333333,106.61666666666666,30.420509613881507,tracked
+meghanmooradian,Meghan J. Mooradian,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,17.65,106.61666666666666,16.55463498514929,tracked
+mehranyusuf,Mehran Behruj Yusuf,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,105.18333333333334,106.61666666666666,98.65561982179148,tracked
+mollyyancovitz,Molly Yancovitz,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,72.83333333333333,106.61666666666666,68.3132718461779,tracked
+nikhilkhushalani,Nikhil Khushalani,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,95.05,106.61666666666666,89.1511646084102,tracked
+paulnghiem,Paul Nghiem,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,102.81666666666666,106.61666666666666,96.43582929498203,tracked
+sameergupta,Sameer Gupta,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,47.15,106.61666666666666,44.22385493199938,tracked
+songpark,Song Park,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,101.7,106.61666666666666,95.38846334219166,tracked
+suzannetopalian,Suzanne Topalian,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,72.81666666666666,106.61666666666666,68.2976395185243,tracked
+tiennguyen,Tien Nguyen,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,111.73333333333332,106.61666666666666,100,tracked
+vernsondak,Vern Sondak,Academic / clinical,NA,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,74.91666666666667,106.61666666666666,70.26731280287636,tracked
+aleighalawless,Aleigha R. Lawless,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,108.46666666666668,112.2,96.67260843731432,tracked
+anniechang,Annie Chang,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,108.23333333333332,112.2,96.46464646464645,tracked
+annsilk,Ann W. Silk,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,109.73333333333332,112.2,97.80154486036838,tracked
+claireverschraegen,Claire Verschraegen,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,110.85,112.2,98.79679144385027,tracked
+davidmiller,David M. Miller,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,112.2,112.2,100,tracked
+elizabethbuchbinder,Elizabeth I. Buchbinder,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,78.13333333333334,112.2,69.63755199049317,tracked
+howardkaufman,Howard L. Kaufman,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,78.03333333333333,112.2,69.54842543077837,tracked
+isaacbrownell,Isaac Brownell,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,109.75,112.2,97.81639928698752,tracked
+jacobchoi,Jacob Choi,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,26.416666666666668,112.2,23.54426619132502,tracked
+kamanehmontazeri,Kamaneh Montazeri,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,72.81666666666666,112.2,64.8989898989899,tracked
+karamkhaddour,Karam Khaddour,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,96.05,112.2,85.60606060606061,tracked
+kentsai,Ken Tsai,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,108.31666666666666,112.2,96.53891859774212,tracked
+manishathakuria,Manisha Thakuria,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,110.56666666666666,112.2,98.54426619132501,tracked
+mariamelashmawy,Mariam El-Ashmawy,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,109.13333333333334,112.2,97.26678550207963,tracked
+meghanmooradian,Meghan J. Mooradian,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,56,112.2,49.9108734402852,tracked
+michaelwong,Michael Wong,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,26.666666666666668,112.2,23.767082590612006,tracked
+rossmerkin,Ross D. Merkin,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,26.733333333333334,112.2,23.826500297088533,tracked
+ryansullivan,Ryan J. Sullivan,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,40.916666666666664,112.2,36.46761734997029,tracked
+sameergupta,Sameer Gupta,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,78.31666666666666,112.2,69.80095068330361,tracked
+sanjaychandrasekaran,Sanjay Chandrasekaran,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,29.166666666666668,112.2,25.99524658348188,tracked
+songpark,Song Park,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,25.766666666666666,112.2,22.964943553178845,tracked
+suzannetopalian,Suzanne Topalian,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,97.75,112.2,87.12121212121212,tracked
+vernsondak,Vern Sondak,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,107.03333333333332,112.2,95.39512774806892,tracked
+vishalpatel,Vishal Patel,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,81.55,112.2,72.68270944741533,tracked
+williambenjamin,William J. IV Benjamin,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,74.65,112.2,66.53297682709449,tracked
+williamreed,William T Reed,Academic / clinical,NA,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,31.7,112.2,28.25311942959002,tracked
+alexsorrentino,Alex Sorrentino,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,53.88333333333333,85.05,63.35488928081521,tracked
+andrewknight,Andrew D. Knight,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,81.45,85.05,95.76719576719577,tracked
+caratrulli,Cara Trulli,Industry,Bristol Myers Squibb,November 24 2025 - MATISSE,2025-11-24,Journal Club,83.05,85.05,97.64844209288654,tracked
+christinecimoch,Christine C. Cimoch,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,58.05,85.05,68.25396825396825,tracked
+davidmiller,David M. Miller,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,85.05,85.05,100,tracked
+elizabethbuchbinder,Elizabeth I. Buchbinder,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,82.96666666666667,85.05,97.55046051342347,tracked
+francescollichio,Frances Collichio,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,84.05,85.05,98.82422104644327,tracked
+frankworden,Frank Worden,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,30.366666666666667,85.05,35.70448755633941,tracked
+gregorynorigian,Gregory Norigian,Industry,Bristol Myers Squibb,November 24 2025 - MATISSE,2025-11-24,Journal Club,84.06666666666666,85.05,98.84381736233588,tracked
+howardkaufman,Howard L. Kaufman,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,82.23333333333333,85.05,96.68822261414856,tracked
+jenniferdesimone,Jennifer DeSimone,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,77.93333333333334,85.05,91.63237311385461,tracked
+julianeczapla,Juliane Andrade Czapla,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,80.26666666666667,85.05,94.37585733882031,tracked
+kentsai,Ken Tsai,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,23.466666666666665,85.05,27.591612776797962,tracked
+kevinemerick,Kevin S. Emerick,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,73.75,85.05,86.71369782480893,tracked
+kristarubin,Krista M. Rubin,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,60,85.05,70.54673721340389,tracked
+manishathakuria,Manisha Thakuria,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,76.03333333333333,85.05,89.3983931020968,tracked
+mariamelashmawy,Mariam El-Ashmawy,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,25.5,85.05,29.98236331569665,tracked
+meghanmooradian,Meghan J. Mooradian,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,41.55,85.05,48.85361552028219,tracked
+mollyyancovitz,Molly Yancovitz,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,47.6,85.05,55.967078189300416,tracked
+omidnajmi,Omid Najmi,Industry,Bristol Myers Squibb,November 24 2025 - MATISSE,2025-11-24,Journal Club,75.23333333333333,85.05,88.45776993925142,tracked
+rongejman,Ron S. Gejman,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,76.21666666666667,85.05,89.61395257691555,tracked
+rossmerkin,Ross D. Merkin,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,83.28333333333333,85.05,97.92279051538311,tracked
+ryansullivan,Ryan J. Sullivan,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,59.416666666666664,85.05,69.86086615716245,tracked
+sameergupta,Sameer Gupta,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,79.23333333333333,85.05,93.16088575347834,tracked
+sashahussain,Sasha J Hussain,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,75.53333333333333,85.05,88.81050362531845,tracked
+soniacohen,Sonia Cohen,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,83.91666666666667,85.05,98.66745051930239,tracked
+sunandanachandra,Sunandana Chandra,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,92.26666666666668,85.05,100,tracked
+suzannetopalian,Suzanne Topalian,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,59.1,85.05,69.48853615520282,tracked
+vishalpatel,Vishal Patel,Academic / clinical,NA,November 24 2025 - MATISSE,2025-11-24,Journal Club,76.7,85.05,90.1822457378013,tracked
+jeanniehou,Jeannie Hou,Industry,Replimune,April 12 2026 - IGNYTE,2026-04-12,Journal Club,103.36666669999998,103.3666667,100,manual_credit

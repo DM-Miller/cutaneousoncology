@@ -1642,13 +1642,41 @@
     "href": "community_highlights.html#industry-collaborators",
     "title": "Community Highlights",
     "section": "Industry collaborators",
-    "text": "Industry collaborators\n\nIndustry colleagues are recognized separately rather than included in the academic / clinical participation ranking. Company assignment is based primarily on email domain, with a small person-level override table embedded directly in this page for older attendance exports whose email was not captured. Known colleagues who participated from shared rooms—or whose participation is confirmed from historical meeting correspondence when the Teams attendance export is no longer available—are also acknowledged without assigning invented attendance minutes."
+    "text": "Industry collaborators\n\nIndustry colleagues are recognized separately from the academic and clinical community. When individual attendance time was not preserved, confirmed participation is acknowledged without estimating minutes."
   },
   {
     "objectID": "community_highlights.html#meetings-in-the-current-attendance-archive",
     "href": "community_highlights.html#meetings-in-the-current-attendance-archive",
     "title": "Community Highlights",
     "section": "Meetings in the current attendance archive",
-    "text": "Meetings in the current attendance archive\n\nThis page processes the Attendance Over Time archive directly. As new attendance_clean.csv files are added, the page updates automatically on render."
+    "text": "Meetings in the current attendance archive\n\nThis page will continue to grow as additional SoCO meetings are added to the archive."
+  },
+  {
+    "objectID": "community_highlights.html#community-participation",
+    "href": "community_highlights.html#community-participation",
+    "title": "Community Highlights",
+    "section": "Community participation",
+    "text": "Community participation\n\nTwo complementary measures are shown: how often someone joined the meetings in this archive, and how much total time they spent participating. The intent is recognition rather than competition.\n\n\n\nScientific convener David M. Miller, MD, PhD\n\n\nThe convener’s attendance is tracked in the full matrix below but is not included in the community participation rankings."
+  },
+  {
+    "objectID": "community_highlights.html#community-roster",
+    "href": "community_highlights.html#community-roster",
+    "title": "Community Highlights",
+    "section": "Community roster",
+    "text": "Community roster\n\nA directory-style view of the people, institutions, and organizations represented across the current SoCO attendance archive. Related health-system affiliations are consolidated where appropriate, and affiliations may not reflect a current appointment."
+  },
+  {
+    "objectID": "journal_club/August 14 2026 - FIRST in CSCC/index.html#first-in-cutaneous-squamous-cell-carcinoma-1",
+    "href": "journal_club/August 14 2026 - FIRST in CSCC/index.html#first-in-cutaneous-squamous-cell-carcinoma-1",
+    "title": "FIRST in Cutaneous Squamous Cell Carcinoma",
+    "section": "FIRST in cutaneous squamous cell carcinoma",
+    "text": "FIRST in cutaneous squamous cell carcinoma\n\n\nPrimary article · Journal for ImmunoTherapy of Cancer\n\n\nFrontline immunotherapy with response-guided subsequent treatment (FIRST) in cutaneous squamous cell carcinoma: a Bayesian causal analysis of dose intensity, early benefit, and treatment de-escalation\n\n\nMiller DM, et al. J Immunother Cancer. 2026;14(7):e015029.\ndoi: 10.1136/jitc-2026-015029\n\n\nRead the article DOI Methods & reproducible workflow\n\n\n\nFrom a real-world cohort to an inference question\n\nBecause treatment evolved over time, patients received different amounts of immunotherapy. That gave us an opportunity to first describe what happened across 189 patients, then ask the harder question: what does another dose actually buy us?\n\n\n\nFrom cohort to inference\n\n\nThe analysis moved from describing what happened to asking what additional treatment may have contributed.\n\n\n\n01 · Observe\n189-patient real-world cohort\nPatients received different amounts of immunotherapy during an evolving period of practice.\n\n→\n\n02 · Describe\nWhat happened?\nCharacterize dose exposure, response, surgery, recurrence, and event-free survival.\n\n→\n\n03 · Infer\nWhat might another dose buy us?\nUse causal assumptions and Bayesian models to estimate dose–response and dose–EFS relationships.\n\n\n\n\n189\npatients\n\n\nDose → Response\none inferential target\n\n\nDose → EFS\nsecond inferential target\n\n\n\nThe study moved from describing the observed cohort to estimating the relationship between dose and response and between dose and event-free survival. Bayesian models allowed uncertainty to be carried forward rather than reducing the analysis to a single point estimate.\n\nAn important caveat: this was an observational experience during an evolving period of practice—not a randomized comparison. Treatment selection and confounding by indication matter, and the results should be interpreted in that context.\n\n\nDiscussion highlights"
+  },
+  {
+    "objectID": "index.html#how-we-are-organized",
+    "href": "index.html#how-we-are-organized",
+    "title": "\nInterpreting evidence. Building community. Advancing care.\n",
+    "section": "How we are organized",
+    "text": "How we are organized\n\nSoCO was deliberately designed with a lightweight organizational structure. Consistent with our philosophy, we have chosen not to create a standing executive committee, leadership council, or hierarchy of titles. The aim is to keep participation open, encourage contributions across disciplines and career stages, and allow ideas to be evaluated on their merits.\nThe Society’s work is therefore shaped primarily by the people who participate in its Journal Club, Research Forum, collaborative projects, and other scientific activities.\n\n\n\nScientific convener\n\n\nDavid M. Miller, MD, PhD\n\n\nThe scientific convener brings together the Society’s scientific programming, helps coordinate topics and participants, and provides continuity across Journal Club, Research Forum, and related activities. The role is intended to be facilitative rather than hierarchical.\n\n\nExplore the SoCO community →"
   }
 ]

@@ -937,10 +937,10 @@ toc: false
 SoCO Journal Club · August 14, 2026
 :::
 
-# Thanks for showing up.
+# FIRST in cutaneous squamous cell carcinoma
 
 ::: {.hero-copy}
-Thanks to everyone who joined us on August 14. Here’s a look back at the paper, the questions that drove the discussion, how people participated, and who was in the room.
+A Journal Club discussion of response-guided immunotherapy, dose intensity, causal inference, and the central clinical question behind the paper: **what does another dose actually buy us?**
 :::
 
 ::: {.accent}
@@ -949,6 +949,7 @@ Thanks to everyone who joined us on August 14. Here’s a look back at the paper
 ::: {.link-row}
 [Read the article](https://jitc.bmj.com/content/14/7/e015029){.soco-link}
 [Meeting slides](<files/FIRST Approach in CSCC.pdf>){.soco-link .secondary}
+[Methods & reproducible workflow](https://themillerlab.github.io/FIRST/){.soco-link .secondary}
 [Back to Journal Club](../../jc.qmd){.soco-link .secondary}
 :::
 

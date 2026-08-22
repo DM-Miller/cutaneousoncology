@@ -1,35 +1,31 @@
-match_key,Name,duration_min,camera_on,hand_raise,unmute,any_camera,any_hand_raise,any_unmute,any_active_engagement
-adewunmiadelaja,Adewunmi O. Adelaja,97.6,1,0,2,TRUE,FALSE,TRUE,TRUE
-ajaysharma,Ajay N. Sharma,77.38333333333334,4,0,2,TRUE,FALSE,TRUE,TRUE
-aleighalawless,Aleigha R. Lawless,59.766666666666666,1,0,0,TRUE,FALSE,FALSE,FALSE
-annsilk,Ann W. Silk,104.3,1,2,5,TRUE,TRUE,TRUE,TRUE
-aubrianamcevoy,Aubriana McEvoy,93.83333333333333,4,0,1,TRUE,FALSE,TRUE,TRUE
-candicechurch,Candice D Church,106.65,0,0,0,FALSE,FALSE,FALSE,FALSE
-christinecimoch,Christine C. Cimoch,85.98333333333333,0,0,1,FALSE,FALSE,TRUE,TRUE
-christopherbarker,Christopher Barker,99,1,0,1,TRUE,FALSE,TRUE,TRUE
-danielcoit,Daniel Coit,106.35,1,0,1,TRUE,FALSE,TRUE,TRUE
-davidmiller,David M. Miller,106.61666666666666,1,0,0,TRUE,FALSE,FALSE,FALSE
-devaratimitra,Devarati Mitra,33.13333333333333,0,0,0,FALSE,FALSE,FALSE,FALSE
-elizabethbuchbinder,Elizabeth I. Buchbinder,86.81666666666666,5,0,1,TRUE,FALSE,TRUE,TRUE
-howardkaufman,Howard L. Kaufman,93.96666666666667,1,0,1,TRUE,FALSE,TRUE,TRUE
-isaacbrownell,Isaac Brownell,111.35,2,0,4,TRUE,FALSE,TRUE,TRUE
-itaipashtan,Itai M. Pashtan,89.18333333333334,1,0,0,TRUE,FALSE,FALSE,FALSE
-jamesdecaprio,James A. DeCaprio,45.71666666666667,1,0,1,TRUE,FALSE,TRUE,TRUE
-jamesmcintyre,James F. McIntyre,102.81666666666666,5,2,3,TRUE,TRUE,TRUE,TRUE
-jessicafewkes,Jessica L. Fewkes,50.93333333333333,0,0,0,FALSE,FALSE,FALSE,FALSE
-julianeczapla,Juliane Andrade Czapla,104.25,1,0,0,TRUE,FALSE,FALSE,FALSE
-kevinemerick,Kevin S. Emerick,79.91666666666667,1,2,5,TRUE,TRUE,TRUE,TRUE
-kristarubin,Krista M. Rubin,102.38333333333334,0,0,1,FALSE,FALSE,TRUE,TRUE
-larisageskin,Larisa Geskin,20.9,1,0,0,TRUE,FALSE,FALSE,FALSE
-lisazaba,Lisa Zaba,102.75,3,0,0,TRUE,FALSE,FALSE,FALSE
-manishathakuria,Manisha Thakuria,32.43333333333333,0,0,0,FALSE,FALSE,FALSE,FALSE
-meghanmooradian,Meghan Mooradian,17.65,0,0,0,FALSE,FALSE,FALSE,FALSE
-mehranyusuf,Mehran Behruj Yusuf,105.18333333333334,0,1,2,FALSE,TRUE,TRUE,TRUE
-mollyyancovitz,Molly Yancovitz,72.83333333333333,0,0,0,FALSE,FALSE,FALSE,FALSE
-nikhilkhushalani,Nikhil Khushalani,95.05,3,3,5,TRUE,TRUE,TRUE,TRUE
-paulnghiem,Paul Nghiem,102.81666666666666,1,1,5,TRUE,TRUE,TRUE,TRUE
-samirgupta,Samir Gupta,47.15,0,0,0,FALSE,FALSE,FALSE,FALSE
-songpark,Song Park,101.7,1,0,2,TRUE,FALSE,TRUE,TRUE
-suzannetopalian,Suzanne Topalian,72.81666666666666,1,0,0,TRUE,FALSE,FALSE,FALSE
-tiennguyen,Tien Nguyen,111.73333333333333,0,0,4,FALSE,FALSE,TRUE,TRUE
-vernsondak,Vern Sondak,74.91666666666667,1,2,8,TRUE,TRUE,TRUE,TRUE
+match_key,Name,duration_min,camera_on,hand_raise,unmute,is_room,any_camera,any_hand_raise,any_unmute
+adamwhalley,Adam Whalley,99.13333333,2,0,5,FALSE,TRUE,FALSE,TRUE
+adamyakovich,Adam Yakovich,103.4666667,1,0,5,FALSE,TRUE,FALSE,TRUE
+adewunmiadelaja,Adewunmi O. Adelaja,103.9666667,2,0,1,FALSE,TRUE,FALSE,TRUE
+alexsorrentino,Alex Sorrentino,34.91666667,0,0,0,FALSE,FALSE,FALSE,FALSE
+annsilk,Ann W. Silk,102.95,2,3,4,FALSE,TRUE,TRUE,TRUE
+claireverschraegen,Claire Verschraegen,87.78333333,1,0,0,FALSE,TRUE,FALSE,FALSE
+davidmiller,David M. Miller,103.3666667,1,0,1,FALSE,TRUE,FALSE,TRUE
+donlawrence,Don Lawrence,102.85,1,2,4,FALSE,TRUE,TRUE,TRUE
+elizabethbuchbinder,Elizabeth I. Buchbinder,103.0333333,1,1,4,FALSE,TRUE,TRUE,TRUE
+francescollichio,Frances Collichio,79.96666667,0,0,0,FALSE,FALSE,FALSE,FALSE
+howardkaufman,Howard Kaufman,10.6,0,0,0,FALSE,FALSE,FALSE,FALSE
+isaacbrownell,Isaac Brownell,104.5666667,1,0,0,FALSE,TRUE,FALSE,FALSE
+jacobchoi,Jacob Choi,64.33333333,2,0,0,FALSE,TRUE,FALSE,FALSE
+julianeczapla,Juliane Andrade Czapla,9.6,0,0,0,FALSE,FALSE,FALSE,FALSE
+kamanehmontazeri,Kamaneh Montazeri,90.68333333,0,0,1,FALSE,FALSE,FALSE,TRUE
+karamkhaddour,Karam Khaddour,43.15,0,0,0,FALSE,FALSE,FALSE,FALSE
+kentsai,Ken Tsai,99.15,0,0,0,FALSE,FALSE,FALSE,FALSE
+kevinemerick,Kevin S. Emerick,86.85,2,0,0,FALSE,TRUE,FALSE,FALSE
+manishathakuria,Manisha Thakuria,101.7333333,1,0,0,FALSE,TRUE,FALSE,FALSE
+mariamelendezgonzalez,Maria Melendez-Gonzalez,56.63333333,0,0,0,FALSE,FALSE,FALSE,FALSE
+mariamelashmawy,Mariam El-Ashmawy,91,0,0,0,FALSE,FALSE,FALSE,FALSE
+michaelwong,Michael Wong,100.9,1,2,5,FALSE,TRUE,TRUE,TRUE
+natashahill,Natasha Hill,97.01666667,1,0,0,FALSE,TRUE,FALSE,FALSE
+nikhilkhushalani,Nikhil Khushalani,101.5666667,1,0,5,FALSE,TRUE,FALSE,TRUE
+replimuneteam,Replimune team,91.41666667,1,0,0,FALSE,TRUE,FALSE,FALSE
+rossmerkin,Ross D. Merkin,104.15,1,1,1,FALSE,TRUE,TRUE,TRUE
+ryansullivan,Ryan J. Sullivan,103.05,1,1,5,FALSE,TRUE,TRUE,TRUE
+suzannetopalian,Suzanne Topalian,100.0166667,0,0,0,FALSE,FALSE,FALSE,FALSE
+vernsondak,Vern Sondak,102.8,3,0,5,FALSE,TRUE,FALSE,TRUE
+vishalpatel,Vishal Patel,65.46666667,0,0,0,FALSE,FALSE,FALSE,FALSE

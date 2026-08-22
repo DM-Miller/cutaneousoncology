@@ -1,0 +1,114 @@
+name_key,name,audience,company,meetings_attended,total_minutes,email,domain,affiliation,affiliation_override,affiliation_display
+laurenoloughlin,Lauren O'Loughlin,Academic / clinical,NA,1,59.733333333333334,lolough1@bidmc.harvard.edu,bidmc.harvard.edu,Beth Israel Deaconess Medical Center,NA,Beth Israel Deaconess Medical Center
+mollyyancovitz,Molly Yancovitz,Academic / clinical,NA,3,194.26666666666665,myancovi@bidmc.harvard.edu,bidmc.harvard.edu,Beth Israel Deaconess Medical Center,NA,Beth Israel Deaconess Medical Center
+reeddrews,Reed E. Drews,Academic / clinical,NA,1,95.65,rdrews@bidmc.harvard.edu,bidmc.harvard.edu,Beth Israel Deaconess Medical Center,NA,Beth Israel Deaconess Medical Center
+larisageskin,Larisa Geskin,Academic / clinical,NA,2,73.46666666666667,ljg2145@cumc.columbia.edu,cumc.columbia.edu,Columbia University,NA,Columbia University
+rongejman,Ron S. Gejman,Academic / clinical,NA,1,76.21666666666667,rsg2119@cumc.columbia.edu,cumc.columbia.edu,Columbia University,NA,Columbia University
+andrewknight,Andrew D. Knight,Academic / clinical,NA,2,161.56666666666666,andrew_knight@dfci.harvard.edu,dfci.harvard.edu,Dana-Farber Cancer Institute,NA,Dana-Farber Cancer Institute
+annsilk,Ann W. Silk,Academic / clinical,NA,3,316.98333333333335,ann_silk@dfci.harvard.edu,dfci.harvard.edu,Dana-Farber Cancer Institute,NA,Dana-Farber Cancer Institute
+itaipashtan,Itai M. Pashtan,Academic / clinical,NA,2,131.91666666666669,itai_pashtan@dfci.harvard.edu,dfci.harvard.edu,Dana-Farber Cancer Institute,NA,Dana-Farber Cancer Institute
+jamesdecaprio,James A. DeCaprio,Academic / clinical,NA,1,45.71666666666667,james_decaprio@dfci.harvard.edu,dfci.harvard.edu,Dana-Farber Cancer Institute,NA,Dana-Farber Cancer Institute
+justinecohen,Justine V. Cohen,Academic / clinical,NA,1,19.266666666666666,justine_cohen@dfci.harvard.edu,dfci.harvard.edu,Dana-Farber Cancer Institute,NA,Dana-Farber Cancer Institute
+karamkhaddour,Karam Khaddour,Academic / clinical,NA,3,185.11666666666667,karam_khaddour@dfci.harvard.edu,dfci.harvard.edu,Dana-Farber Cancer Institute,NA,Dana-Farber Cancer Institute
+tiennguyen,Tien Nguyen,Academic / clinical,NA,1,111.73333333333332,tien_nguyen1@dfci.harvard.edu,dfci.harvard.edu,Dana-Farber Cancer Institute,NA,Dana-Farber Cancer Institute
+vishalpatel,Vishal Patel,Academic / clinical,NA,7,466.21666667,vpatel@mfa.gwu.edu,mfa.gwu.edu,George Washington University,George Washington University,George Washington University
+truelianyu,Truelian Yu,Academic / clinical,NA,1,95.18333333333334,,,NA,Georgetown University / MedStar Health,Georgetown University / MedStar Health
+anniechang,Annie Chang,Academic / clinical,NA,1,108.23333333333332,,,NA,Harvard Medical School,Harvard Medical School
+jenniferdesimone,Jennifer DeSimone,Academic / clinical,NA,3,240.88333333333333,jennifer.desimone@inova.org,inova.org,Inova,NA,Inova
+suzannetopalian,Suzanne Topalian,Academic / clinical,NA,5,423.0000000333333,stopali1@jhmi.edu,jhmi.edu,Johns Hopkins Medicine,NA,Johns Hopkins Medicine
+devaratimitra,Devarati Mitra,Academic / clinical,NA,1,33.13333333333333,dmitra@mdanderson.org,mdanderson.org,MD Anderson Cancer Center,NA,MD Anderson Cancer Center
+shinyaamano,Shinya U Amano,Academic / clinical,NA,1,96.68333333333334,shinya.amano@mainehealth.org,mainehealth.org,MaineHealth,NA,MaineHealth
+vatchetchekmedyian,Vatche Tchekmedyian,Academic / clinical,NA,2,178.43333333333334,vatche.tchekmedyian@mainehealth.org,mainehealth.org,MaineHealth,NA,MaineHealth
+williamreed,William T Reed,Academic / clinical,NA,1,31.7,william.reed@mainehealth.org,mainehealth.org,MaineHealth,NA,MaineHealth
+jessicafewkes,Jessica L. Fewkes,Academic / clinical,NA,3,198.48333333333335,jessica_fewkes@meei.harvard.edu,meei.harvard.edu,Mass Eye and Ear,NA,Mass Eye and Ear
+kevinemerick,Kevin S. Emerick,Academic / clinical,NA,4,329.6,kevin_emerick@meei.harvard.edu,meei.harvard.edu,Mass Eye and Ear,NA,Mass Eye and Ear
+sameergupta,Sameer Gupta,Academic / clinical,NA,7,604.6166666666666,sgupta19@meei.harvard.edu,meei.harvard.edu,Mass Eye and Ear,NA,Mass Eye and Ear
+williambenjamin,William J. IV Benjamin,Academic / clinical,NA,1,74.65,william_benjamin@meei.harvard.edu,meei.harvard.edu,Mass Eye and Ear,NA,Mass Eye and Ear
+adewunmiadelaja,Adewunmi O. Adelaja,Academic / clinical,NA,5,454.73333336666667,aadelaja@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+ajaysharma,Ajay N. Sharma,Academic / clinical,NA,4,235.73333333333335,ansharma@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+aleighalawless,Aleigha R. Lawless,Academic / clinical,NA,3,264.33333333333337,alawless@mgb.org,mgb.org,Mass General Brigham,NA,Mass General Brigham
+alexsorrentino,Alex Sorrentino,Academic / clinical,NA,4,190.78333333666666,asorrentino@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,Mass General Brigham,Mass General Brigham
+baileysmith,Bailey Claire Smith,Academic / clinical,NA,1,36.333333333333336,bsmith88@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+christinecimoch,Christine C. Cimoch,Academic / clinical,NA,4,319.55,ccimoch@mgb.org,mgb.org,Mass General Brigham,NA,Mass General Brigham
+davidmiller,David M. Miller,Academic / clinical,NA,8,860.9000000333333,dmiller4@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+donlawrence,Don Lawrence,Academic / clinical,NA,1,102.85,,,NA,Mass General Brigham,Mass General Brigham
+elizabethbuchbinder,Elizabeth I. Buchbinder,Academic / clinical,NA,6,522.2833333,ebuchbinder@mgb.org,mgb.org,Mass General Brigham,NA,Mass General Brigham
+elizabethlilley,Elizabeth J. Lilley,Academic / clinical,NA,1,19.9,elilley@bwh.harvard.edu,bwh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+howardkaufman,Howard L. Kaufman,Academic / clinical,NA,7,542.7833333333333,hlkaufman@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+jamesmcintyre,James F. McIntyre,Academic / clinical,NA,1,102.81666666666666,jfmcintyre@mgb.org,mgb.org,Mass General Brigham,NA,Mass General Brigham
+julianeczapla,Juliane Andrade Czapla,Academic / clinical,NA,6,476.16666666666663,jczapla@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+kamanehmontazeri,Kamaneh Montazeri,Academic / clinical,NA,4,219.16666666333333,kmontazeri@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+kristarubin,Krista M. Rubin,Academic / clinical,NA,5,405.09999999999997,kmrubin@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+madelienestump,Madeliene Stump,Academic / clinical,NA,1,77.91666666666667,mstump@bwh.harvard.edu,bwh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+manishathakuria,Manisha Thakuria,Academic / clinical,NA,5,395.9499999666666,mthakuria1@bwh.harvard.edu,bwh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+meghanmooradian,Meghan J. Mooradian,Academic / clinical,NA,3,115.2,mmooradian@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+minabakhtiar,Mina Bakhtiar,Academic / clinical,NA,1,85.15,mbakhtiar@mgb.org,mgb.org,Mass General Brigham,Mass General Brigham,Mass General Brigham
+rhodaalani,Rhoda Alani,Academic / clinical,NA,3,297.06666666666666,ralani@mgb.org,mgb.org,Mass General Brigham,NA,Mass General Brigham
+rileyfadden,Riley M. Fadden,Academic / clinical,NA,1,45.3,rfadden@mgb.org,mgb.org,Mass General Brigham,NA,Mass General Brigham
+rossmerkin,Ross D. Merkin,Academic / clinical,NA,6,463.6166666666667,rdmerkin@mgb.org,mgb.org,Mass General Brigham,NA,Mass General Brigham
+ryansullivan,Ryan J. Sullivan,Academic / clinical,NA,3,203.38333333333333,rsullivan7@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+soniacohen,Sonia Cohen,Academic / clinical,NA,3,290.65000000000003,scohen22@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+tatyanasharova,Tatyana Sharova,Academic / clinical,NA,1,71.95,tsharova@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+toddpearson,Todd Franklin Pearson,Academic / clinical,NA,1,77.5,tfpearson@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
+taylorharp,Taylor Harp,Academic / clinical,NA,1,15.416666666666666,taylor.harp@medstar.net,medstar.net,MedStar Health,NA,MedStar Health
+christopherbarker,Christopher Barker,Academic / clinical,NA,1,99,barkerc@mskcc.org,mskcc.org,Memorial Sloan Kettering Cancer Center,NA,Memorial Sloan Kettering Cancer Center
+danielcoit,Daniel Coit,Academic / clinical,NA,1,106.35,,,NA,Memorial Sloan Kettering Cancer Center (retired),Memorial Sloan Kettering Cancer Center (retired)
+kentsai,Ken Tsai,Academic / clinical,NA,3,230.93333333333334,kenneth.tsai@moffitt.org,moffitt.org,Moffitt Cancer Center,Moffitt Cancer Center,Moffitt Cancer Center
+nikhilkhushalani,Nikhil Khushalani,Academic / clinical,NA,4,320.3166667,,,NA,Moffitt Cancer Center,Moffitt Cancer Center
+vernsondak,Vern Sondak,Academic / clinical,NA,7,641.8333333333333,vernon.sondak@moffitt.org,moffitt.org,Moffitt Cancer Center,NA,Moffitt Cancer Center
+isaacbrownell,Isaac Brownell,Academic / clinical,NA,7,728.1833333666666,isaac.brownell@nih.gov,nih.gov,National Institutes of Health,NA,National Institutes of Health
+khalidgarman,Khalid Garman,Academic / clinical,NA,1,96.91666666666669,khalid.garman@nih.gov,nih.gov,National Institutes of Health,NA,National Institutes of Health
+natashahill,Natasha Hill,Academic / clinical,NA,2,166.50000000333335,natasha.hill@nih.gov,nih.gov,National Institutes of Health,NA,National Institutes of Health
+gabriellachefitz,Gabriella Chefitz,Academic / clinical,NA,1,30,,,NA,National Institutes of Health (NIAMS),National Institutes of Health (NIAMS)
+jacobchoi,Jacob Choi,Academic / clinical,NA,2,90.74999999666667,jacob.choi@nm.org,nm.org,Northwestern Medicine,Northwestern Medicine,Northwestern Medicine
+sunandanachandra,Sunandana Chandra,Academic / clinical,NA,2,123.91666666666669,sunandana.chandra@northwestern.edu,northwestern.edu,Northwestern University,NA,Northwestern University
+michaelwong,Michael Wong,Academic / clinical,NA,2,127.56666666666668,michael.wong@roswellpark.org,roswellpark.org,Roswell Park Comprehensive Cancer Center,NA,Roswell Park Comprehensive Cancer Center
+kathrynbollin,Kathryn Bollin,Academic / clinical,NA,1,106.98333333333332,bollin.kathryn@scrippshealth.org,scrippshealth.org,Scripps Health,NA,Scripps Health
+lisazaba,Lisa Zaba,Academic / clinical,NA,2,196.48333333333332,,,NA,Stanford University,Stanford University
+claireverschraegen,Claire Verschraegen,Academic / clinical,NA,2,198.63333333,claire.verschraegen@osumc.edu,osumc.edu,The Ohio State University,The Ohio State University,The Ohio State University
+adewoleadamson,Adewole S. Adamson,Academic / clinical,NA,4,197.08333333333334,adewole.adamson@austin.utexas.edu,austin.utexas.edu,The University of Texas at Austin,NA,The University of Texas at Austin
+mariamelashmawy,Mariam El-Ashmawy,Academic / clinical,NA,4,229.45,mariam.el-ashmawy@utsouthwestern.edu,utsouthwestern.edu,UT Southwestern Medical Center,NA,UT Southwestern Medical Center
+sanjaychandrasekaran,Sanjay Chandrasekaran,Academic / clinical,NA,1,29.166666666666668,sanjay.chandrasekaran@utsouthwestern.edu,utsouthwestern.edu,UT Southwestern Medical Center,NA,UT Southwestern Medical Center
+mehranyusuf,Mehran Behruj Yusuf,Academic / clinical,NA,3,299.96666666666664,yusuf@uabmc.edu,uabmc.edu,University of Alabama at Birmingham,University of Alabama at Birmingham,University of Alabama at Birmingham
+sashahussain,Sasha J Hussain,Academic / clinical,NA,1,75.53333333333333,sasha.hussain3@umassmed.edu,umassmed.edu,University of Massachusetts Medical School,NA,University of Massachusetts Medical School
+frankworden,Frank Worden,Academic / clinical,NA,2,127.41666666666666,fworden@med.umich.edu,med.umich.edu,University of Michigan,University of Michigan,University of Michigan
+davidsavage,David J Savage,Academic / clinical,NA,2,228.2,dasavage@salud.unm.edu,salud.unm.edu,NA,University of New Mexico Comprehensive Cancer Center,University of New Mexico Comprehensive Cancer Center
+emilysummers,Emily Godwin Summers,Academic / clinical,NA,1,87.75,emily_summers@med.unc.edu,med.unc.edu,University of North Carolina,NA,University of North Carolina
+francescollichio,Frances Collichio,Academic / clinical,NA,4,233.46666667,frances_collichio@med.unc.edu,med.unc.edu,University of North Carolina,NA,University of North Carolina
+lauraferris,Laura Ferris,Academic / clinical,NA,2,139.5333333333333,laura_ferris@med.unc.edu,med.unc.edu,University of North Carolina,University of North Carolina,University of North Carolina
+mariamelendezgonzalez,Maria Melendez-Gonzalez,Academic / clinical,NA,1,56.63333333,,,NA,University of North Carolina,University of North Carolina
+michaelpovelaitis,Michael Povelaitis,Academic / clinical,NA,1,108.13333333333334,michael_povelaitis@med.unc.edu,med.unc.edu,University of North Carolina,NA,University of North Carolina
+raycheever,Ray Cheever,Academic / clinical,NA,1,104.56666666666666,,,NA,University of North Carolina,University of North Carolina
+bengratz,Ben Gratz,Academic / clinical,NA,1,63.916666666666664,,,NA,University of Washington,University of Washington
+candicechurch,Candice D Church,Academic / clinical,NA,1,106.65,,,NA,University of Washington,University of Washington
+danhippe,Dan Hippe,Academic / clinical,NA,2,200.95,,,NA,University of Washington,University of Washington
+jackkollings,Jack Kollings,Academic / clinical,NA,1,32.85,,,NA,University of Washington,University of Washington
+kristalachance,Krista Lachance,Academic / clinical,NA,1,93.65,,,NA,University of Washington,University of Washington
+paulnghiem,Paul Nghiem,Academic / clinical,NA,4,262.73333333333335,pnghiem@uw.edu,uw.edu,University of Washington,NA,University of Washington
+peterchen,Peter Ch'en,Academic / clinical,NA,2,125.81666666666666,,,NA,University of Washington,University of Washington
+rimakulikauskas,Rima Kulikauskas,Academic / clinical,NA,1,96.63333333333334,,,NA,University of Washington,University of Washington
+shailenderbhatia,Shailender Bhatia,Academic / clinical,NA,2,189.06666666666666,,,NA,University of Washington,University of Washington
+songpark,Song Park,Academic / clinical,NA,5,235.86666666666667,,,NA,University of Washington,University of Washington
+haroutyunjoulfayan,Haroutyun Joulfayan,Academic / clinical,NA,1,107.41666666666669,,,NA,Washington University School of Medicine in St. Louis,Washington University School of Medicine in St. Louis
+aubrianamcevoy,Aubriana McEvoy,Academic / clinical,NA,1,93.83333333333331,amcevoy@wustl.edu,wustl.edu,Washington University in St. Louis,NA,Washington University in St. Louis
+charlieli,Charlie Li,Academic / clinical,NA,1,103.16666666666669,chenglin.l@wustl.edu,wustl.edu,Washington University in St. Louis,NA,Washington University in St. Louis
+abrahamselvan,Abraham Selvan,Industry,Bristol Myers Squibb,1,0,,,NA,NA,Bristol Myers Squibb
+caratrulli,Cara Trulli,Industry,Bristol Myers Squibb,1,83.05,cara.trulli@bms.com,bms.com,Bristol Myers Squibb,NA,Bristol Myers Squibb
+christopherlao,Christopher Lao,Industry,Bristol Myers Squibb,1,0,,,NA,NA,Bristol Myers Squibb
+coreyrantz,Corey Rantz,Industry,Bristol Myers Squibb,1,0,,,NA,NA,Bristol Myers Squibb
+divyapatel,Divya Patel,Industry,Bristol Myers Squibb,1,0,,,NA,NA,Bristol Myers Squibb
+gregorynorigian,Gregory Norigian,Industry,Bristol Myers Squibb,1,84.06666666666666,gregory.norigian@bms.com,bms.com,Bristol Myers Squibb,NA,Bristol Myers Squibb
+leonsakkal,Leon Sakkal,Industry,Bristol Myers Squibb,1,0,,,NA,NA,Bristol Myers Squibb
+omidnajmi,Omid Najmi,Industry,Bristol Myers Squibb,1,75.23333333333333,omid.najmi@bms.com,bms.com,Bristol Myers Squibb,NA,Bristol Myers Squibb
+alysonbaryiames,Alyson Baryiames,Industry,Regeneron,1,88.41666666666667,alyson.baryiames@regeneron.com,regeneron.com,Regeneron,NA,Regeneron
+brianburleson,Brian Burleson,Industry,Regeneron,1,94.63333333333334,brian.burleson@regeneron.com,regeneron.com,Regeneron,NA,Regeneron
+christopherzajac,Christopher Zajac,Industry,Regeneron,1,98.63333333333334,christopher.zajac@regeneron.com,regeneron.com,Regeneron,NA,Regeneron
+davidkremer,David Kremer,Industry,Regeneron,1,73.66666666666667,david.kremer@regeneron.com,regeneron.com,Regeneron,NA,Regeneron
+frankseebach,Frank Seebach,Industry,Regeneron,1,91.4,frank.seebach@regeneron.com,regeneron.com,Regeneron,NA,Regeneron
+juliemontiel,Julie Montiel,Industry,Regeneron,1,76.18333333333334,julie.montiel@regeneron.com,regeneron.com,Regeneron,NA,Regeneron
+kimpremo,Kim Premo,Industry,Regeneron,1,94.65,kimberly.premo@regeneron.com,regeneron.com,Regeneron,NA,Regeneron
+matthewfury,Matthew Fury,Industry,Regeneron,1,95.88333333333334,matthew.fury@regeneron.com,regeneron.com,Regeneron,NA,Regeneron
+sarahnia,Sarah Nia,Industry,Regeneron,1,96.95,sarah.keshvarzian@regeneron.com,regeneron.com,Regeneron,NA,Regeneron
+adamwhalley,Adam Whalley,Industry,Replimune,1,99.13333333,adam.whalley@replimune.com,replimune.com,Replimune,NA,Replimune
+adamyakovich,Adam Yakovich,Industry,Replimune,1,103.4666667,adam.yakovich@replimune.com,replimune.com,Replimune,NA,Replimune
+jeanniehou,Jeannie Hou,Industry,Replimune,1,0,,,NA,NA,Replimune
