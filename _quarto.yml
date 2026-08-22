@@ -9,6 +9,14 @@ website:
   reader-mode: true
   open-graph: true
 
+  google-analytics:
+    tracking-id: "G-RC10SNZMP2"
+
+  cookie-consent:
+    type: express
+    style: simple
+    palette: light
+
   twitter-card:
     site: "@SocCutaneousOnc"
 
