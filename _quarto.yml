@@ -3,13 +3,14 @@ project:
 
 website:
   title: "Society of Cutaneous Oncology"
-  site-url: https://cutaneousoncology.io
+  site-url: https://societyofcutaneousoncology.org
   favicon: img/favicon.ico
   page-navigation: true
   reader-mode: true
   open-graph: true
   twitter-card:
     site: "@SocCutaneousOnc"
+
   navbar:
     background: light
     logo: img/soco-logo-h-transparent.png
@@ -24,10 +25,13 @@ website:
         href: jc.qmd
       - text: "Research Forum"
         href: research_forum.qmd
+      - text: "Community Highlights"
+        href: community_highlights/index.qmd
       - text: "Our Philosophy"
         href: philosophy.qmd
       - text: "Join Our Community"
         href: join.qmd
+
   page-footer:
     left: "© Society of Cutaneous Oncology"
     right:
@@ -35,6 +39,8 @@ website:
         href: https://journalofcutaneousoncology.io
       - text: "SoCO Journal Club"
         href: jc.qmd
+      - text: "Community Highlights"
+        href: community_highlights/index.qmd
 
 format:
   html:
