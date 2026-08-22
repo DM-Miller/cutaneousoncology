@@ -164,6 +164,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main.content {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 0 !important;
+  overflow-x: hidden;
+}
+
 :root {
   --soco-navy: #082D4D;
   --soco-blue: #0E5688;
@@ -220,6 +233,8 @@ ul.task-list li input[type="checkbox"] {
 .soco-join-hero-copy {
   position: relative;
   z-index: 1;
+  width: 100%;
+  min-width: 0;
   max-width: 900px;
 }
 
@@ -507,15 +522,118 @@ ul.task-list li input[type="checkbox"] {
 
 @media(max-width:700px) {
   .soco-join-hero {
-    margin-top: 1.25rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin-top: .75rem;
+    padding-left: .7rem;
+    padding-right: .7rem;
   }
 
   .soco-join-hero-inner {
+    width: 100%;
+    min-width: 0;
     min-height: auto;
-    padding-top: 2.2rem;
-    padding-bottom: 2.2rem;
+    padding: 1.6rem 1.05rem 1.7rem;
+    box-sizing: border-box;
+  }
+
+  .soco-join-hero-copy {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .soco-join-hero .soco-eyebrow {
+    max-width: 100%;
+    font-size: .7rem;
+    line-height: 1.45;
+    letter-spacing: .10em;
+    overflow-wrap: anywhere;
+  }
+
+  .soco-join-headline {
+    width: 100%;
+    max-width: 100%;
+    margin: .55rem 0 1rem;
+    font-size: clamp(2.2rem, 10.5vw, 3rem);
+    line-height: 1;
+    letter-spacing: -.042em;
+    text-wrap: wrap;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .soco-join-hero .soco-dek {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.56;
+  }
+
+  .soco-join-actions {
+    width: 100%;
+    gap: .65rem;
+    margin-top: 1.4rem;
+  }
+
+  .soco-join-hero-inner::after {
+    width: 240px;
+    height: 240px;
+    top: -70px;
+    right: -95px;
+    opacity: .15;
+  }
+
+  .soco-join-reasons-inner,
+  .soco-join-form-section,
+  .soco-join-closing-inner {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+@media(max-width:430px) {
+  .soco-join-hero {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+  .soco-join-hero-inner {
+    padding: 1.35rem .9rem 1.45rem;
+  }
+
+  .soco-join-headline {
+    font-size: 2.02rem;
+    line-height: 1.01;
+  }
+
+  .soco-join-hero .soco-dek {
+    font-size: .95rem;
+    line-height: 1.53;
+  }
+
+  .soco-join-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .soco-join-actions .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .soco-join-intro {
+    padding-left: .9rem;
+    padding-right: .9rem;
+  }
+
+  .soco-join-free {
+    max-width: 100%;
+    white-space: normal;
   }
 }
 </style>
