@@ -264,7 +264,7 @@ main.content {
 
 .ch-person {
   display:grid;
-  grid-template-columns:48px minmax(180px,1.2fr) minmax(210px,1fr) minmax(210px,1fr);
+  grid-template-columns:minmax(0,1fr) auto;
   gap:1rem;
   align-items:center;
   padding:1rem 1.1rem;
@@ -273,53 +273,30 @@ main.content {
   background:#fff;
 }
 
-.ch-rank {
-  color:var(--soco-teal);
-  font-size:1.1rem;
-  font-weight:850;
-  text-align:center;
-}
-
 .ch-person-name {
+  min-width:0;
   color:var(--soco-navy);
   font-weight:800;
 }
 
-.ch-bar-block {
-  min-width:0;
-}
-
-.ch-bar-label {
+.ch-meeting-count {
   display:flex;
-  justify-content:space-between;
-  gap:.7rem;
-  margin-bottom:.36rem;
-  color:#667683;
-  font-size:.74rem;
-  font-weight:700;
+  align-items:baseline;
+  gap:.35rem;
+  white-space:nowrap;
+  color:var(--soco-muted);
 }
 
-.ch-bar-value {
+.ch-meeting-count-value {
   color:var(--soco-navy);
+  font-size:1.35rem;
   font-weight:850;
+  line-height:1;
 }
 
-.ch-track {
-  width:100%;
-  height:8px;
-  overflow:hidden;
-  border-radius:999px;
-  background:#e8f0f2;
-}
-
-.ch-fill {
-  height:100%;
-  border-radius:999px;
-  background:linear-gradient(90deg,#279a9b,#17628f);
-}
-
-.ch-fill.coral {
-  background:linear-gradient(90deg,#ee776b,#ff3b3f);
+.ch-meeting-count-label {
+  font-size:.78rem;
+  font-weight:700;
 }
 
 .ch-industry-grid {
@@ -834,11 +811,7 @@ main.content {
   }
 
   .ch-person {
-    grid-template-columns:42px 1fr;
-  }
-
-  .ch-bar-block {
-    grid-column:2;
+    grid-template-columns:minmax(0,1fr) auto;
   }
 }
 
@@ -916,14 +889,10 @@ main.content {
   }
 
   .ch-person {
-    grid-template-columns:34px minmax(0,1fr);
-    gap:.7rem;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:.65rem;
     min-width:0;
-    padding:.85rem .8rem;
-  }
-
-  .ch-rank {
-    font-size:1rem;
+    padding:.82rem .75rem;
   }
 
   .ch-person-name {
@@ -931,23 +900,16 @@ main.content {
     overflow-wrap:anywhere;
   }
 
-  .ch-bar-block {
-    grid-column:1 / -1;
-    min-width:0;
+  .ch-meeting-count {
+    gap:.25rem;
   }
 
-  .ch-bar-label {
-    gap:.45rem;
+  .ch-meeting-count-value {
+    font-size:1.15rem;
+  }
+
+  .ch-meeting-count-label {
     font-size:.7rem;
-  }
-
-  .ch-bar-label span:first-child {
-    min-width:0;
-  }
-
-  .ch-bar-value {
-    flex:0 0 auto;
-    white-space:nowrap;
   }
 
   .ch-industry-card h3,
@@ -1080,11 +1042,7 @@ main.content {
     padding:.78rem .7rem;
   }
 
-  .ch-bar-label {
-    align-items:flex-start;
-  }
-
-  .ch-bar-value {
+  .ch-meeting-count-label {
     font-size:.68rem;
   }
 }
@@ -2288,8 +2246,8 @@ member_summary <- member_summary |>
       }
   ) |>
   arrange(
-    desc(tracked_meeting_attendance_pct),
-    desc(normalized_minutes_pct),
+    desc(meetings_attended),
+    desc(total_minutes),
     name
   ) |>
   mutate(
@@ -2938,21 +2896,11 @@ if (nrow(member_summary)) {
 ## Community participation
 
 <p>
-Two complementary measures are shown: how often someone joined the meetings in this archive, and how much total time they spent participating. Together, they provide a simple view of sustained engagement across the community.
+A recognition of community members who have joined us most consistently across the current attendance archive. This group reflects frequency of participation across tracked meetings, with participation time used only to distinguish otherwise equal records.
 </p>
-
-<div class="ch-convener-note">
-<div class="ch-convener-line">
-<span class="ch-convener-label">Scientific convener</span>
-<span class="ch-convener-name">David M. Miller, MD, PhD</span>
-</div>
-<div class="ch-convener-copy">
-The convener’s attendance is tracked in the full matrix below but is not included in the community participation rankings.
-</div>
-</div>
 </div>
 
-```{r leaderboard}
+```{r sustained-participation}
 #| echo: false
 #| results: asis
 
@@ -2962,38 +2910,22 @@ if (nrow(top20)) {
 
   for (i in seq_len(nrow(top20))) {
 
-    meeting_pct <- round(top20$tracked_meeting_attendance_pct[i])
-    min_pct <- round(top20$normalized_minutes_pct[i])
+    meeting_word <- if (top20$meetings_attended[i] == 1) {
+      "meeting"
+    } else {
+      "meetings"
+    }
 
     cat(
       '<div class="ch-person">',
-        '<div class="ch-rank">', i, '</div>',
         '<div class="ch-person-name">', esc(top20$name[i]), '</div>',
-
-        '<div class="ch-bar-block">',
-          '<div class="ch-bar-label">',
-            '<span>Meeting attendance</span>',
-            '<span class="ch-bar-value">',
-              meeting_pct, '% · ',
-              top20$meetings_attended[i], ' of ', n_meetings,
-            '</span>',
-          '</div>',
-          '<div class="ch-track">',
-            '<div class="ch-fill" style="width:', meeting_pct, '%;"></div>',
-          '</div>',
-        '</div>',
-
-        '<div class="ch-bar-block">',
-          '<div class="ch-bar-label">',
-            '<span>Participation time</span>',
-            '<span class="ch-bar-value">',
-              min_pct, '% · ',
-              round(top20$total_minutes[i]), ' min',
-            '</span>',
-          '</div>',
-          '<div class="ch-track">',
-            '<div class="ch-fill coral" style="width:', min_pct, '%;"></div>',
-          '</div>',
+        '<div class="ch-meeting-count">',
+          '<span class="ch-meeting-count-value">',
+            top20$meetings_attended[i],
+          '</span>',
+          '<span class="ch-meeting-count-label">',
+            meeting_word,
+          '</span>',
         '</div>',
       '</div>'
     )
