@@ -540,7 +540,7 @@ toc: false
 The Society of Cutaneous Oncology began as a local multidisciplinary academic meeting in Boston. An unexpected move online widened the circle, and over time the group evolved into a broader scientific community built around critical discussion, collaborative research, and shared inquiry.
 </p>
 <div class="history-actions">
-<a href="about.qmd">About SoCO</a>
+<a href="index.qmd">About SoCO</a>
 <a href="community_highlights.qmd">Community Highlights</a>
 </div>
 </div>
