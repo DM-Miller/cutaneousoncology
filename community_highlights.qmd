@@ -743,34 +743,25 @@ main.content {
   background:rgba(40,169,162,.045);
 }
 
-.ch-qc-minutes {
-  position:relative;
-  z-index:1;
-  display:block;
-  color:var(--soco-navy);
-  font-size:.78rem;
-  font-weight:850;
+.ch-qc-present-label {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.28rem .52rem;
+  border:1px solid rgba(15,127,134,.18);
+  border-radius:999px;
+  background:#eef8f7;
+  color:var(--soco-teal-dark);
+  font-size:.69rem;
+  font-weight:800;
+  letter-spacing:.02em;
 }
-
 
 .ch-qc-absent {
   color:#a8b3ba;
   font-weight:650;
 }
 
-.ch-qc-confirmed {
-  display:block;
-  color:var(--soco-teal-dark);
-  font-size:.7rem;
-  font-weight:850;
-}
-
-.ch-qc-time-na {
-  display:block;
-  margin-top:.12rem;
-  color:#7b8b94;
-  font-size:.64rem;
-}
 
 @media (max-width:900px) {
   .ch-metrics {
@@ -934,8 +925,9 @@ main.content {
     font-size:.6rem;
   }
 
-  .ch-qc-minutes {
-    font-size:.72rem;
+  .ch-qc-present-label {
+    padding:.24rem .44rem;
+    font-size:.64rem;
   }
 
 
@@ -1430,6 +1422,7 @@ map_affiliation_from_domain <- function(x) {
 # ambiguous institutional domain.
 affiliation_people_overrides <- tribble(
   ~name,                  ~affiliation_override,
+  "Adewunmi O. Adelaja",  "Beth Israel Lahey",
   "Alex Sorrentino",      "Mass General Brigham",
   "Frank Worden",         "University of Michigan",
   "Ken Tsai",             "Moffitt Cancer Center",
@@ -3167,7 +3160,7 @@ if (nrow(meeting_summary)) {
 </summary>
 
 <div class="ch-qc-note">
-The matrix provides a meeting-by-meeting record of participation when attendance data are available. <strong>We recognize that clinical, research, and personal schedules vary, and joining for any portion of a meeting is appreciated.</strong> Attendance duration is shown when captured, but it is not intended as a measure of contribution or engagement. <strong>Confirmed · time n/a</strong> indicates known participation when individual attendance time was not preserved.
+The matrix provides a simple meeting-by-meeting record of who was present when attendance data are available. <strong>We recognize that clinical, research, and personal schedules vary, and joining for any portion of a meeting is appreciated.</strong> The matrix intentionally does not display how long someone participated; presence reflects participation for any portion of the meeting.
 </div>
 
 ```{r attendance-qc-matrix}
@@ -3175,14 +3168,6 @@ The matrix provides a meeting-by-meeting record of participation when attendance
 #| results: asis
 
 qc_meetings <- meeting_index |>
-  left_join(
-    meeting_duration |>
-      select(
-        meeting_folder,
-        observed_meeting_minutes
-      ),
-    by = "meeting_folder"
-  ) |>
   arrange(desc(meeting_date), meeting_folder)
 
 if (nrow(qc_people) && nrow(qc_meetings)) {
@@ -3257,33 +3242,11 @@ if (nrow(qc_people) && nrow(qc_meetings)) {
           '</td>'
         )
 
-      } else if (
-        cell$attendance_status[[1]] %in%
-          c("confirmed_time_not_captured", "manual_credit")
-      ) {
-
-        cat(
-          '<td>',
-            '<span class="ch-qc-confirmed">Confirmed</span>',
-            '<span class="ch-qc-time-na">',
-              if (
-                cell$attendance_status[[1]] ==
-                  "confirmed_time_not_captured"
-              ) "time n/a" else "full-session participation confirmed",
-            '</span>',
-          '</td>'
-        )
-
       } else {
-
-        minutes_value <- round(cell$minutes[[1]])
 
         cat(
           '<td class="ch-qc-present">',
-            '<span class="ch-qc-minutes">',
-              minutes_value,
-              ' min',
-            '</span>',
+            '<span class="ch-qc-present-label">Present</span>',
           '</td>'
         )
       }
@@ -3302,3 +3265,5 @@ if (nrow(qc_people) && nrow(qc_meetings)) {
 </section>
 
 </div>
+
+

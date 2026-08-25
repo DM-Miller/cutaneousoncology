@@ -35,8 +35,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./img/favicon.ico" rel="icon">
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -76,31 +74,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RC10SNZMP2"></script>
 
-<script type="text/plain" cookie-consent="tracking">
+<script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-RC10SNZMP2', { 'anonymize_ip': true});
 </script>
-
-<script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-cookieconsent.run({
-  "notice_banner_type":"simple",
-  "consent_type":"express",
-  "palette":"light",
-  "language":"en",
-  "page_load_consent_levels":["strictly-necessary"],
-  "notice_banner_reject_button_hide":false,
-  "preferences_center_close_button_hide":false,
-  "website_name":""
-  ,
-"language":"en"
-  });
-});
-</script> 
-  
 <style>html{ scroll-behavior: smooth; }</style>
 
 
@@ -932,34 +912,25 @@ main.content {
   background:rgba(40,169,162,.045);
 }
 
-.ch-qc-minutes {
-  position:relative;
-  z-index:1;
-  display:block;
-  color:var(--soco-navy);
-  font-size:.78rem;
-  font-weight:850;
+.ch-qc-present-label {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.28rem .52rem;
+  border:1px solid rgba(15,127,134,.18);
+  border-radius:999px;
+  background:#eef8f7;
+  color:var(--soco-teal-dark);
+  font-size:.69rem;
+  font-weight:800;
+  letter-spacing:.02em;
 }
-
 
 .ch-qc-absent {
   color:#a8b3ba;
   font-weight:650;
 }
 
-.ch-qc-confirmed {
-  display:block;
-  color:var(--soco-teal-dark);
-  font-size:.7rem;
-  font-weight:850;
-}
-
-.ch-qc-time-na {
-  display:block;
-  margin-top:.12rem;
-  color:#7b8b94;
-  font-size:.64rem;
-}
 
 @media (max-width:900px) {
   .ch-metrics {
@@ -1123,8 +1094,9 @@ main.content {
     font-size:.6rem;
   }
 
-  .ch-qc-minutes {
-    font-size:.72rem;
+  .ch-qc-present-label {
+    padding:.24rem .44rem;
+    font-size:.64rem;
   }
 
 
@@ -1563,7 +1535,7 @@ The University of Texas at Austin
 Adewunmi O. Adelaja
 </td>
 <td class="ch-roster-affiliation">
-Mass General Brigham
+Beth Israel Lahey
 </td>
 </tr>
 <tr>
@@ -2616,7 +2588,7 @@ July 11, 2025 · 29 academic / clinical · 9 industry
 <span class="ch-qc-summary-copy"> <span class="ch-qc-summary-title">View full attendance matrix</span> <span class="ch-qc-summary-subtitle">Meeting-by-meeting participation across the recent tracked archive</span> </span>
 </summary>
 <div class="ch-qc-note">
-<p>The matrix provides a meeting-by-meeting record of participation when attendance data are available. <strong>We recognize that clinical, research, and personal schedules vary, and joining for any portion of a meeting is appreciated.</strong> Attendance duration is shown when captured, but it is not intended as a measure of contribution or engagement. <strong>Confirmed · time n/a</strong> indicates known participation when individual attendance time was not preserved.</p>
+<p>The matrix provides a simple meeting-by-meeting record of who was present when attendance data are available. <strong>We recognize that clinical, research, and personal schedules vary, and joining for any portion of a meeting is appreciated.</strong> The matrix intentionally does not display how long someone participated; presence reflects participation for any portion of the meeting.</p>
 </div>
 <div class="ch-qc-table-wrap">
 <table class="ch-qc-table">
@@ -2666,7 +2638,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 99 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -2695,7 +2667,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -2715,28 +2687,28 @@ Participant
 <span class="ch-qc-person"> Adewole S. Adamson </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 53 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 61 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
-</td>
-<td>
-<span class="ch-qc-absent">—</span>
-</td>
-<td class="ch-qc-present">
-<span class="ch-qc-minutes"> 29 min </span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 53 min </span>
+<span class="ch-qc-present-label">Present</span>
+</td>
+<td>
+<span class="ch-qc-absent">—</span>
+</td>
+<td class="ch-qc-present">
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -2747,25 +2719,25 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 112 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 98 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 104 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 44 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 98 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -2773,13 +2745,13 @@ Participant
 <span class="ch-qc-person"> Ajay N. Sharma </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 45 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 108 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 77 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -2788,7 +2760,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 5 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -2805,16 +2777,16 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 96 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 60 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 108 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -2831,7 +2803,7 @@ Participant
 <span class="ch-qc-person"> Alex Sorrentino </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 57 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -2840,16 +2812,16 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 35 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 45 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 54 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -2881,7 +2853,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 88 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -2907,10 +2879,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 81 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 80 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -2924,13 +2896,13 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 104 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 110 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -2959,7 +2931,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 108 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -2982,7 +2954,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 94 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3008,7 +2980,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 36 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3037,7 +3009,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 64 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3084,7 +3056,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 95 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -3098,7 +3070,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 107 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3139,7 +3111,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 83 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3153,7 +3125,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3179,13 +3151,13 @@ Participant
 <span class="ch-qc-person"> Christine C. Cimoch </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 83 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 86 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3194,10 +3166,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 92 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 58 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3214,7 +3186,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 99 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3258,7 +3230,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 99 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -3275,10 +3247,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 88 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 111 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3295,10 +3267,10 @@ Participant
 <span class="ch-qc-person"> Dan Hippe </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 98 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3330,7 +3302,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 106 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3353,10 +3325,10 @@ Participant
 <span class="ch-qc-person"> David J Savage </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 151 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 77 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3403,7 +3375,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 74 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -3411,28 +3383,28 @@ Participant
 <span class="ch-qc-person"> David M. Miller </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 112 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 114 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 107 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 112 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 98 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 85 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 130 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -3446,7 +3418,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 33 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3478,7 +3450,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3498,25 +3470,25 @@ Participant
 <span class="ch-qc-person"> Elizabeth I. Buchbinder </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 81 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 87 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 78 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 90 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 83 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3527,7 +3499,7 @@ Participant
 <span class="ch-qc-person"> Elizabeth J. Lilley </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 20 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3559,7 +3531,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 88 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3585,16 +3557,16 @@ Participant
 <span class="ch-qc-person"> Frances Collichio </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 13 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 57 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 80 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3603,7 +3575,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 84 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3635,7 +3607,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 91 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -3658,10 +3630,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 97 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 30 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3693,7 +3665,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 30 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -3719,7 +3691,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 84 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3733,7 +3705,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 107 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3759,28 +3731,28 @@ Participant
 <span class="ch-qc-person"> Howard L. Kaufman </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 114 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 72 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 94 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 11 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 78 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 82 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 92 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -3788,28 +3760,28 @@ Participant
 <span class="ch-qc-person"> Isaac Brownell </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 115 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 95 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 111 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 105 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 110 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 97 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 96 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -3820,10 +3792,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 43 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 89 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3849,7 +3821,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 33 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3884,10 +3856,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 64 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 26 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3910,7 +3882,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 46 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3939,7 +3911,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3970,8 +3942,8 @@ Participant
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
-<td>
-<span class="ch-qc-confirmed">Confirmed</span> <span class="ch-qc-time-na"> full-session participation confirmed </span>
+<td class="ch-qc-present">
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -3991,7 +3963,7 @@ Participant
 <span class="ch-qc-person"> Jennifer DeSimone </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 110 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4009,10 +3981,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 78 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 53 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4020,13 +3992,13 @@ Participant
 <span class="ch-qc-person"> Jessica L. Fewkes </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 46 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 101 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 51 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4052,25 +4024,25 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 84 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 104 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 10 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 97 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 80 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 101 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4099,7 +4071,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 76 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4110,7 +4082,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 19 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4145,19 +4117,19 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 91 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 73 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 55 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 1 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4174,10 +4146,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 43 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 96 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4186,7 +4158,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 46 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4197,7 +4169,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 107 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4232,16 +4204,16 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 99 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 108 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 23 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4258,10 +4230,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 80 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 87 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4270,10 +4242,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 74 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 89 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4302,7 +4274,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 97 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4331,7 +4303,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 95 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4342,7 +4314,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 94 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4368,13 +4340,13 @@ Participant
 <span class="ch-qc-person"> Krista M. Rubin </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 96 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 102 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4383,13 +4355,13 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 51 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 60 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 95 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4403,7 +4375,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 21 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4418,7 +4390,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 53 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4429,7 +4401,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 98 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4447,7 +4419,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 42 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4476,7 +4448,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 60 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4487,10 +4459,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 94 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4534,7 +4506,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 78 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4548,19 +4520,19 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 32 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 102 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 111 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 75 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 76 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4580,7 +4552,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 57 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4609,19 +4581,19 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 91 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 109 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 26 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 4 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4650,7 +4622,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 96 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4664,19 +4636,19 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 18 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 56 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 42 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4687,13 +4659,13 @@ Participant
 <span class="ch-qc-person"> Mehran Behruj Yusuf </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 100 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 94 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 105 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4719,7 +4691,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 108 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4754,10 +4726,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 101 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 27 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4774,7 +4746,7 @@ Participant
 <span class="ch-qc-person"> Mina Bakhtiar </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 85 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4809,7 +4781,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 73 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4821,10 +4793,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 48 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 74 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4841,13 +4813,13 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 97 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 69 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4867,22 +4839,22 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 95 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 102 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 36 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 88 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4908,7 +4880,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 75 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4919,13 +4891,13 @@ Participant
 <span class="ch-qc-person"> Paul Nghiem </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 74 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 26 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4940,7 +4912,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 60 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -4948,10 +4920,10 @@ Participant
 <span class="ch-qc-person"> Peter Ch’en </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 89 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 37 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -4980,7 +4952,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 105 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5027,7 +4999,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 96 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -5035,10 +5007,10 @@ Participant
 <span class="ch-qc-person"> Rhoda Alani </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 108 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 95 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5050,7 +5022,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 95 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5079,7 +5051,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 45 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5093,7 +5065,7 @@ Participant
 <span class="ch-qc-person"> Rima Kulikauskas </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 97 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5140,7 +5112,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 76 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5154,25 +5126,25 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 65 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 104 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 27 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 89 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 83 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 95 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -5189,16 +5161,16 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 41 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 59 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5209,28 +5181,28 @@ Participant
 <span class="ch-qc-person"> Sameer Gupta </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 106 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 104 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 47 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 78 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 97 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 79 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 93 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -5250,7 +5222,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 29 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5288,7 +5260,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 97 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -5314,7 +5286,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 76 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5328,7 +5300,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 96 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5340,7 +5312,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 93 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5369,7 +5341,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 97 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5383,22 +5355,22 @@ Participant
 <span class="ch-qc-person"> Song Park </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 41 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 67 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 102 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 26 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 1 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5415,7 +5387,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 85 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5427,10 +5399,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 122 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 84 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5456,10 +5428,10 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 32 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 92 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5476,22 +5448,22 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 73 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 100 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 98 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 59 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 93 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -5499,7 +5471,7 @@ Participant
 <span class="ch-qc-person"> Tatyana Sharova </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 72 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5543,7 +5515,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 15 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5563,7 +5535,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 112 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5589,7 +5561,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 78 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5630,7 +5602,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 95 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5659,13 +5631,13 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 88 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 90 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -5673,28 +5645,28 @@ Participant
 <span class="ch-qc-person"> Vern Sondak </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 110 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 60 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 75 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 103 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 107 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 95 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 92 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -5702,28 +5674,28 @@ Participant
 <span class="ch-qc-person"> Vishal Patel </span> <span class="ch-qc-audience"> Academic / clinical </span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 68 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 90 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 65 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 82 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 24 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 77 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 60 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 </tr>
 <tr>
@@ -5743,7 +5715,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 75 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -5772,7 +5744,7 @@ Participant
 <span class="ch-qc-absent">—</span>
 </td>
 <td class="ch-qc-present">
-<span class="ch-qc-minutes"> 32 min </span>
+<span class="ch-qc-present-label">Present</span>
 </td>
 <td>
 <span class="ch-qc-absent">—</span>
@@ -6201,8 +6173,8 @@ Participant
 <p>© Society of Cutaneous Oncology</p>
 </div>   
     <div class="nav-footer-center">
-
-<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+      &nbsp;
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

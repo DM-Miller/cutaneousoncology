@@ -2,6 +2,7 @@ name_key,name,audience,company,meetings_attended,total_minutes,email,domain,affi
 laurenoloughlin,Lauren O'Loughlin,Academic / clinical,NA,1,59.733333333333334,lolough1@bidmc.harvard.edu,bidmc.harvard.edu,Beth Israel Deaconess Medical Center,NA,Beth Israel Deaconess Medical Center
 mollyyancovitz,Molly Yancovitz,Academic / clinical,NA,3,194.26666666666665,myancovi@bidmc.harvard.edu,bidmc.harvard.edu,Beth Israel Deaconess Medical Center,NA,Beth Israel Deaconess Medical Center
 reeddrews,Reed E. Drews,Academic / clinical,NA,1,95.65,rdrews@bidmc.harvard.edu,bidmc.harvard.edu,Beth Israel Deaconess Medical Center,NA,Beth Israel Deaconess Medical Center
+adewunmiadelaja,Adewunmi O. Adelaja,Academic / clinical,NA,5,454.73333336666667,aadelaja@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,Beth Israel Lahey,Beth Israel Lahey
 larisageskin,Larisa Geskin,Academic / clinical,NA,2,73.46666666666667,ljg2145@cumc.columbia.edu,cumc.columbia.edu,Columbia University,NA,Columbia University
 rongejman,Ron S. Gejman,Academic / clinical,NA,1,76.21666666666667,rsg2119@cumc.columbia.edu,cumc.columbia.edu,Columbia University,NA,Columbia University
 andrewknight,Andrew D. Knight,Academic / clinical,NA,2,161.56666666666666,andrew_knight@dfci.harvard.edu,dfci.harvard.edu,Dana-Farber Cancer Institute,NA,Dana-Farber Cancer Institute
@@ -24,7 +25,6 @@ jessicafewkes,Jessica L. Fewkes,Academic / clinical,NA,3,198.48333333333335,jess
 kevinemerick,Kevin S. Emerick,Academic / clinical,NA,4,329.6,kevin_emerick@meei.harvard.edu,meei.harvard.edu,Mass Eye and Ear,NA,Mass Eye and Ear
 sameergupta,Sameer Gupta,Academic / clinical,NA,7,604.6166666666666,sgupta19@meei.harvard.edu,meei.harvard.edu,Mass Eye and Ear,NA,Mass Eye and Ear
 williambenjamin,William J. IV Benjamin,Academic / clinical,NA,1,74.65,william_benjamin@meei.harvard.edu,meei.harvard.edu,Mass Eye and Ear,NA,Mass Eye and Ear
-adewunmiadelaja,Adewunmi O. Adelaja,Academic / clinical,NA,5,454.73333336666667,aadelaja@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
 ajaysharma,Ajay N. Sharma,Academic / clinical,NA,4,235.73333333333335,ansharma@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,NA,Mass General Brigham
 aleighalawless,Aleigha R. Lawless,Academic / clinical,NA,3,264.33333333333337,alawless@mgb.org,mgb.org,Mass General Brigham,NA,Mass General Brigham
 alexsorrentino,Alex Sorrentino,Academic / clinical,NA,4,190.78333333666666,asorrentino@mgh.harvard.edu,mgh.harvard.edu,Mass General Brigham,Mass General Brigham,Mass General Brigham
