@@ -74,6 +74,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RC10SNZMP2"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RC10SNZMP2', { 'anonymize_ip': true});
+</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
 
@@ -646,6 +655,94 @@ ul.task-list li input[type="checkbox"] {
     font-size: .84rem;
   }
 
+
+  .attendance-details {
+    margin: 1rem 0 1.5rem;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(8,45,77,.045);
+  }
+
+  .attendance-details > summary {
+    position: relative;
+    min-height: 64px;
+    padding: 1rem 3.4rem 1rem 1.05rem;
+    cursor: pointer;
+    list-style: none;
+    background: linear-gradient(135deg,#F3F8F8 0%,#FFFFFF 100%);
+    color: var(--navy);
+  }
+
+  .attendance-details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .attendance-details > summary::after {
+    content: "+";
+    position: absolute;
+    right: 1.05rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--teal);
+    font-size: 1.65rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .attendance-details[open] > summary::after {
+    content: "−";
+  }
+
+  .attendance-summary-title {
+    display: block;
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 850;
+  }
+
+  .attendance-summary-subtitle {
+    display: block;
+    margin-top: .18rem;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.4;
+  }
+
+  .attendance-details .attendance-note {
+    margin: 0;
+    padding: .85rem 1rem;
+    border-top: 1px solid var(--line);
+    background: #FBFDFD;
+  }
+
+  .attendance-details .attendance-scroll {
+    border-top: 1px solid var(--line);
+    border-radius: 0;
+  }
+
+  .attendance-details .attendance-table {
+    min-width: 560px;
+    margin: 0 !important;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .attendance-details .attendance-table thead th,
+  .attendance-details .attendance-table tbody td {
+    text-align: left;
+  }
+
+  .attendance-details .attendance-table .name-cell {
+    width: 38%;
+  }
+
+  .attendance-details .affiliation-cell {
+    color: #52616D;
+  }
+
   .gt_table {
     border: 1px solid var(--line) !important;
     border-radius: 16px !important;
@@ -1165,6 +1262,7 @@ ul.task-list li input[type="checkbox"] {
     .engagement-pill-row,
     .engagement-pill,
     .roster-summary,
+    .attendance-details,
     .attendance-scroll,
     .estimand-primer,
     .estimand-flow,
@@ -1349,6 +1447,26 @@ ul.task-list li input[type="checkbox"] {
       max-width: none;
     }
 
+    .attendance-details > summary {
+      min-height: 60px;
+      padding: .85rem 3rem .85rem .9rem;
+    }
+
+    .attendance-summary-title {
+      font-size: .92rem;
+    }
+
+    .attendance-summary-subtitle,
+    .attendance-details .attendance-note {
+      font-size: .74rem;
+    }
+
+    .attendance-details .attendance-table {
+      width: 100%;
+      min-width: 500px;
+      max-width: none;
+    }
+
     .estimand-primer {
       padding: 1rem;
       border-radius: 16px;
@@ -1478,6 +1596,11 @@ ul.task-list li input[type="checkbox"] {
     .attendance-table {
       width: 620px;
       min-width: 620px;
+    }
+
+    .attendance-details .attendance-table {
+      width: 100%;
+      min-width: 470px;
     }
   }
 
@@ -1957,10 +2080,17 @@ The ranking combines time present and recorded Teams signals with a moderator-en
 </p>
 </div>
 <div class="section-intro">
-<p>Teams reconnects are reconciled before display. The shared conference-room connection is shown as <strong>Replimune team</strong>, and abbreviated attendee names are normalized in the attendance-processing script. The full table remains below so the underlying signals are transparent.</p>
+<p>Teams reconnects are reconciled before display, and abbreviated attendee names are normalized in the attendance-processing script. The shared Replimune conference-room connection is represented below by the individual Replimune colleagues whose participation was confirmed. The attendance roster is limited to names and institutional affiliations.</p>
+</div>
+<details class="attendance-details">
+<summary>
+<span class="attendance-summary-title">Attendance roster</span> <span class="attendance-summary-subtitle">View names and affiliations</span>
+</summary>
+<div class="attendance-note">
+<p>This roster records attendance and institutional affiliation only.</p>
 </div>
 <div class="roster-summary">
-<strong>30 attendee/team connections represented</strong><span>Sorted by time in meeting · ● indicates the Teams signal was recorded at least once</span>
+<strong>30 attendance records</strong><span>Alphabetical · affiliations from the SoCO lookup table</span>
 </div>
 <div class="attendance-scroll">
 <table class="attendance-table">
@@ -1970,536 +2100,255 @@ The ranking combines time present and recorded Teams signals with a moderator-en
 Name
 </th>
 <th>
-Minutes
-</th>
-<th>
-Camera
-</th>
-<th>
-Unmuted
-</th>
-<th>
-Raised hand
+Affiliation
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="name-cell">
-Isaac Brownell
+Adam Whalley
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.340) ;">
-105
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Adewunmi O. Adelaja
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.337) ;">
-104
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Ross D. Merkin
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.337) ;">
-104
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
+<td class="affiliation-cell">
+Replimune
 </td>
 </tr>
 <tr>
 <td class="name-cell">
 Adam Yakovich
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.334) ;">
-103
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
+<td class="affiliation-cell">
+Replimune
 </td>
 </tr>
 <tr>
 <td class="name-cell">
-Ann W. Silk
+Adewunmi O. Adelaja
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.334) ;">
-103
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-David M. Miller
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.334) ;">
-103
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Don Lawrence
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.334) ;">
-103
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Elizabeth I. Buchbinder
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.334) ;">
-103
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Ryan J. Sullivan
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.334) ;">
-103
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Vern Sondak
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.334) ;">
-103
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Manisha Thakuria
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.331) ;">
-102
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Nikhil Khushalani
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.331) ;">
-102
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Michael Wong
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.328) ;">
-101
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Suzanne Topalian
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.325) ;">
-100
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Adam Whalley
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.322) ;">
-99
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Ken Tsai
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.322) ;">
-99
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Natasha Hill
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.316) ;">
-97
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Kamaneh Montazeri
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.299) ;">
-91
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Mariam El-Ashmawy
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.299) ;">
-91
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Replimune team
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.299) ;">
-91
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Claire Verschraegen
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.290) ;">
-88
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Kevin S. Emerick
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.287) ;">
-87
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Frances Collichio
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.266) ;">
-80
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Vishal Patel
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.222) ;">
-65
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Jacob Choi
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.219) ;">
-64
-</td>
-<td class="signal-cell signal-on">
-●
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Maria Melendez-Gonzalez
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.199) ;">
-57
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Karam Khaddour
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.157) ;">
-43
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
+<td class="affiliation-cell">
+Beth Israel Lahey
 </td>
 </tr>
 <tr>
 <td class="name-cell">
 Alex Sorrentino
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.134) ;">
-35
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
-</td>
-<td class="signal-cell">
-—
+<td class="affiliation-cell">
+Mass General Brigham
 </td>
 </tr>
 <tr>
 <td class="name-cell">
-Howard Kaufman
+Ann W. Silk
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.063) ;">
-11
+<td class="affiliation-cell">
+Dana-Farber Cancer Institute
 </td>
-<td class="signal-cell">
-—
+</tr>
+<tr>
+<td class="name-cell">
+Claire Verschraegen
 </td>
-<td class="signal-cell">
-—
+<td class="affiliation-cell">
+The Ohio State University
 </td>
-<td class="signal-cell">
-—
+</tr>
+<tr>
+<td class="name-cell">
+David M. Miller
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Don Lawrence
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Elizabeth I. Buchbinder
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Frances Collichio
+</td>
+<td class="affiliation-cell">
+University of North Carolina
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Howard L. Kaufman
+</td>
+<td class="affiliation-cell">
+Mass Eye and Ear
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Isaac Brownell
+</td>
+<td class="affiliation-cell">
+National Institutes of Health
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Jacob Choi
+</td>
+<td class="affiliation-cell">
+Northwestern Medicine
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Jeannie Hou
+</td>
+<td class="affiliation-cell">
+Replimune
 </td>
 </tr>
 <tr>
 <td class="name-cell">
 Juliane Andrade Czapla
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.060) ;">
-10
+<td class="affiliation-cell">
+Mass General Brigham
 </td>
-<td class="signal-cell">
-—
+</tr>
+<tr>
+<td class="name-cell">
+Kamaneh Montazeri
 </td>
-<td class="signal-cell">
-—
+<td class="affiliation-cell">
+Mass General Brigham
 </td>
-<td class="signal-cell">
-—
+</tr>
+<tr>
+<td class="name-cell">
+Karam Khaddour
+</td>
+<td class="affiliation-cell">
+Dana-Farber Cancer Institute
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Ken Tsai
+</td>
+<td class="affiliation-cell">
+Moffitt Cancer Center
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Kevin S. Emerick
+</td>
+<td class="affiliation-cell">
+Mass Eye and Ear
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Manisha Thakuria
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Maria Melendez-Gonzalez
+</td>
+<td class="affiliation-cell">
+University of North Carolina
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Mariam El-Ashmawy
+</td>
+<td class="affiliation-cell">
+UT Southwestern Medical Center
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Michael Wong
+</td>
+<td class="affiliation-cell">
+Roswell Park Comprehensive Cancer Center
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Natasha Hill
+</td>
+<td class="affiliation-cell">
+National Institutes of Health
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Nikhil Khushalani
+</td>
+<td class="affiliation-cell">
+Moffitt Cancer Center
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Ross D. Merkin
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Ryan J. Sullivan
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Suzanne Topalian
+</td>
+<td class="affiliation-cell">
+Johns Hopkins Medicine
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Vern Sondak
+</td>
+<td class="affiliation-cell">
+Moffitt Cancer Center
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Vishal Patel
+</td>
+<td class="affiliation-cell">
+George Washington University
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="attendance-note">
-<p>Participation signals are descriptive only. Camera use, unmuting, and hand raises do not measure the quality or depth of participation.</p>
-</div>
+</details>
 <div class="updates-wrap">
 <div class="section-kicker">
 <p>Relevant updates</p>

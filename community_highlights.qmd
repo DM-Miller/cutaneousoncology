@@ -1256,7 +1256,8 @@ name_reconciliation <- tribble(
   "lisazaba",             "Lisa Zaba",                 FALSE,
   "danielcoit",           "Daniel Coit",               FALSE,
   "dancoit",              "Daniel Coit",               FALSE,
-  "danhippe",             "Dan Hippe",                 FALSE
+  "danhippe",             "Dan Hippe",                 FALSE,
+  "williambenjamin",       "William J. Benjamin",        FALSE
 ) |>
   mutate(
     canonical_key = if_else(
@@ -1424,7 +1425,9 @@ affiliation_people_overrides <- tribble(
   ~name,                  ~affiliation_override,
   "Adewunmi O. Adelaja",  "Beth Israel Lahey",
   "Alex Sorrentino",      "Mass General Brigham",
+  "Andrew D. Knight",     "Mass General Brigham",
   "Frank Worden",         "University of Michigan",
+  "Howard L. Kaufman",    "Mass Eye and Ear",
   "Ken Tsai",             "Moffitt Cancer Center",
   "Shailender Bhatia",    "University of Washington",
   "Nikhil Khushalani",    "Moffitt Cancer Center",

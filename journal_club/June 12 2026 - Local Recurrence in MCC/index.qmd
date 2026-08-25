@@ -597,6 +597,60 @@ execute:
     line-height: 1.5;
   }
 
+  .attendance-details {
+    margin: 1rem 0 1.6rem;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(8,45,77,.045);
+  }
+
+  .attendance-details > summary {
+    position: relative;
+    min-height: 64px;
+    padding: 1rem 3.4rem 1rem 1.05rem;
+    cursor: pointer;
+    list-style: none;
+    background: linear-gradient(135deg,#F3F8F8 0%,#FFFFFF 100%);
+    color: var(--navy);
+  }
+
+  .attendance-details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .attendance-details > summary::after {
+    content: "+";
+    position: absolute;
+    right: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--teal);
+    font-size: 1.65rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .attendance-details[open] > summary::after {
+    content: "−";
+  }
+
+  .attendance-summary-title {
+    display: block;
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 850;
+  }
+
+  .attendance-summary-subtitle {
+    display: block;
+    margin-top: .18rem;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.45;
+  }
+
   .roster-summary {
     display: flex;
     align-items: baseline;
@@ -749,6 +803,7 @@ execute:
     .engagement-spotlight,
     .engagement-pill-row,
     .engagement-pill,
+    .attendance-details,
     .roster-summary,
     .attendance-scroll,
     .attendance-note,
@@ -912,6 +967,19 @@ execute:
       min-width: 0;
       justify-content: flex-start;
       white-space: normal;
+    }
+
+    .attendance-details > summary {
+      min-height: 60px;
+      padding: .85rem 3rem .85rem .9rem;
+    }
+
+    .attendance-summary-title {
+      font-size: .92rem;
+    }
+
+    .attendance-summary-subtitle {
+      font-size: .74rem;
     }
 
     .roster-summary {
@@ -2100,43 +2168,222 @@ cat(
 
 
 ::: {.section-intro}
-The cleaned Teams attendance record is retained with the meeting materials. Duplicate display names are reconciled and automated note-taking accounts are removed before the metrics below are calculated.
+The cleaned Teams attendance record is retained with the meeting materials. Duplicate display names are reconciled and automated note-taking accounts are removed before the roster below is generated.
 :::
 
+
+<details class="attendance-details">
+<summary>
+<span class="attendance-summary-title">`r nrow(people)` people represented</span>
+<span class="attendance-summary-subtitle">View attendance and affiliations</span>
+</summary>
 
 ```{r}
 #| label: attendance-table
 #| results: asis
 
 library(dplyr)
+library(stringr)
+library(purrr)
+
+# ============================================================
+# SoCO master person -> affiliation lookup
+# Reusable across Journal Club and Research Forum recaps.
+# ============================================================
+
+person_affiliations <- tibble::tribble(
+  ~name, ~affiliation,
+  "Abraham Selvan", "Bristol Myers Squibb",
+  "Adam Whalley", "Replimune",
+  "Adam Yakovich", "Replimune",
+  "Adewole S. Adamson", "The University of Texas at Austin",
+  "Adewunmi O. Adelaja", "Beth Israel Lahey",
+  "Ajay N. Sharma", "Mass General Brigham",
+  "Aleigha R. Lawless", "Mass General Brigham",
+  "Alex Sorrentino", "Mass General Brigham",
+  "Alyson Baryiames", "Regeneron",
+  "Andrew D. Knight", "Mass General Brigham",
+  "Ann W. Silk", "Dana-Farber Cancer Institute",
+  "Annie Chang", "Harvard Medical School",
+  "Aubriana McEvoy", "Washington University in St. Louis",
+  "Bailey Claire Smith", "Mass General Brigham",
+  "Ben Gratz", "University of Washington",
+  "Brian Burleson", "Regeneron",
+  "Candice D Church", "University of Washington",
+  "Cara Trulli", "Bristol Myers Squibb",
+  "Charlie Li", "Washington University in St. Louis",
+  "Christine C. Cimoch", "Mass General Brigham",
+  "Christopher Barker", "Memorial Sloan Kettering Cancer Center",
+  "Christopher Lao", "Bristol Myers Squibb",
+  "Christopher Zajac", "Regeneron",
+  "Claire Verschraegen", "The Ohio State University",
+  "Corey Rantz", "Bristol Myers Squibb",
+  "Dan Hippe", "University of Washington",
+  "Daniel Coit", "Memorial Sloan Kettering Cancer Center (retired)",
+  "David J Savage", "University of New Mexico Comprehensive Cancer Center",
+  "David Kremer", "Regeneron",
+  "David M. Miller", "Mass General Brigham",
+  "Devarati Mitra", "MD Anderson Cancer Center",
+  "Divya Patel", "Bristol Myers Squibb",
+  "Don Lawrence", "Mass General Brigham",
+  "Elizabeth I. Buchbinder", "Mass General Brigham",
+  "Elizabeth J. Lilley", "Mass General Brigham",
+  "Emily Godwin Summers", "University of North Carolina",
+  "Frances Collichio", "University of North Carolina",
+  "Frank Seebach", "Regeneron",
+  "Frank Worden", "University of Michigan",
+  "Gabriella Chefitz", "National Institutes of Health (NIAMS)",
+  "Gregory Norigian", "Bristol Myers Squibb",
+  "Haroutyun Joulfayan", "Washington University School of Medicine in St. Louis",
+  "Howard L. Kaufman", "Mass Eye and Ear",
+  "Isaac Brownell", "National Institutes of Health",
+  "Itai M. Pashtan", "Dana-Farber Cancer Institute",
+  "Jack Kollings", "University of Washington",
+  "Jacob Choi", "Northwestern Medicine",
+  "James A. DeCaprio", "Dana-Farber Cancer Institute",
+  "James F. McIntyre", "Mass General Brigham",
+  "Jeannie Hou", "Replimune",
+  "Jennifer DeSimone", "Inova",
+  "Jessica L. Fewkes", "Mass Eye and Ear",
+  "Juliane Andrade Czapla", "Mass General Brigham",
+  "Julie Montiel", "Regeneron",
+  "Justine V. Cohen", "Dana-Farber Cancer Institute",
+  "Kamaneh Montazeri", "Mass General Brigham",
+  "Karam Khaddour", "Dana-Farber Cancer Institute",
+  "Kathryn Bollin", "Scripps Health",
+  "Ken Tsai", "Moffitt Cancer Center",
+  "Kevin S. Emerick", "Mass Eye and Ear",
+  "Khalid Garman", "National Institutes of Health",
+  "Kim Premo", "Regeneron",
+  "Krista Lachance", "University of Washington",
+  "Krista M. Rubin", "Mass General Brigham",
+  "Larisa Geskin", "Columbia University",
+  "Laura Ferris", "University of North Carolina",
+  "Lauren O'Loughlin", "Beth Israel Deaconess Medical Center",
+  "Leon Sakkal", "Bristol Myers Squibb",
+  "Lisa Zaba", "Stanford University",
+  "Madeliene Stump", "Mass General Brigham",
+  "Manisha Thakuria", "Mass General Brigham",
+  "Maria Melendez-Gonzalez", "University of North Carolina",
+  "Mariam El-Ashmawy", "UT Southwestern Medical Center",
+  "Matthew Fury", "Regeneron",
+  "Meghan J. Mooradian", "Mass General Brigham",
+  "Mehran Behruj Yusuf", "University of Alabama at Birmingham",
+  "Michael Povelaitis", "University of North Carolina",
+  "Michael Wong", "Roswell Park Comprehensive Cancer Center",
+  "Mina Bakhtiar", "Mass General Brigham",
+  "Molly Yancovitz", "Beth Israel Deaconess Medical Center",
+  "Natasha Hill", "National Institutes of Health",
+  "Nikhil Khushalani", "Moffitt Cancer Center",
+  "Omid Najmi", "Bristol Myers Squibb",
+  "Paul Nghiem", "University of Washington",
+  "Peter Ch'en", "University of Washington",
+  "Ray Cheever", "University of North Carolina",
+  "Reed E. Drews", "Beth Israel Deaconess Medical Center",
+  "Rhoda Alani", "Mass General Brigham",
+  "Riley M. Fadden", "Mass General Brigham",
+  "Rima Kulikauskas", "University of Washington",
+  "Ron S. Gejman", "Columbia University",
+  "Ross D. Merkin", "Mass General Brigham",
+  "Ryan J. Sullivan", "Mass General Brigham",
+  "Sameer Gupta", "Mass Eye and Ear",
+  "Sanjay Chandrasekaran", "UT Southwestern Medical Center",
+  "Sarah Nia", "Regeneron",
+  "Sasha J Hussain", "University of Massachusetts Medical School",
+  "Shailender Bhatia", "University of Washington",
+  "Shinya U Amano", "MaineHealth",
+  "Song Park", "University of Washington",
+  "Sonia Cohen", "Mass General Brigham",
+  "Sunandana Chandra", "Northwestern University",
+  "Suzanne Topalian", "Johns Hopkins Medicine",
+  "Tatyana Sharova", "Mass General Brigham",
+  "Taylor Harp", "MedStar Health",
+  "Tien Nguyen", "Dana-Farber Cancer Institute",
+  "Todd Franklin Pearson", "Mass General Brigham",
+  "Truelian Yu", "Georgetown University / MedStar Health",
+  "Vatche Tchekmedyian", "MaineHealth",
+  "Vern Sondak", "Moffitt Cancer Center",
+  "Vishal Patel", "George Washington University",
+  "William J. Benjamin", "Mass Eye and Ear",
+  "William T Reed", "MaineHealth"
+)
+
+# Basic normalization for matching cleaned Teams names to the master lookup.
+clean_name_key <- function(x) {
+  x |>
+    as.character() |>
+    stringr::str_squish() |>
+    stringr::str_to_lower() |>
+    stringr::str_replace_all("[^a-z0-9]", "")
+}
+
+surname_key <- function(x) {
+  purrr::map_chr(
+    as.character(x),
+    function(nm) {
+      nm <- stringr::str_squish(nm)
+      if (is.na(nm) || nm == "") return("")
+
+      # Handle both "First Last" and "Last, First".
+      if (stringr::str_detect(nm, ",")) {
+        surname <- stringr::str_split_fixed(nm, ",", 2)[1]
+      } else {
+        words <- stringr::str_split(nm, "\\s+")[[1]]
+        surname <- words[length(words)]
+      }
+
+      surname |>
+        stringr::str_to_lower() |>
+        stringr::str_replace_all("[^a-z0-9]", "")
+    }
+  )
+}
+
+affiliation_lookup <- person_affiliations |>
+  mutate(
+    name_key = clean_name_key(name),
+    surname_key = surname_key(name)
+  )
+
+# Conservative fallback: use surname only when it is unique in the
+# master lookup. This helps reconcile familiar-name variants without
+# guessing when surnames are shared.
+unique_surname_lookup <- affiliation_lookup |>
+  add_count(surname_key, name = "surname_n") |>
+  filter(surname_n == 1) |>
+  select(
+    surname_key,
+    surname_name = name,
+    surname_affiliation = affiliation
+  )
 
 roster <- people |>
   transmute(
-    Name,
-    Minutes = round(duration_min),
-    Camera = if_else(any_camera, "●", "—"),
-    Unmuted = if_else(any_unmute, "●", "—"),
-    `Raised hand` = if_else(any_hand_raise, "●", "—")
+    raw_name = Name,
+    name_key = clean_name_key(Name),
+    surname_key = surname_key(Name)
   ) |>
-  arrange(desc(Minutes), Name)
-
-cat(
-  paste0(
-    '<div class="roster-summary">',
-      '<strong>', nrow(roster), ' people represented</strong>',
-      '<span>Sorted by time in meeting · ● indicates the Teams signal was recorded at least once</span>',
-    '</div>'
-  )
-)
-
-min_minutes <- min(roster$Minutes, na.rm = TRUE)
-max_minutes <- max(roster$Minutes, na.rm = TRUE)
-
-minute_fill <- function(x) {
-  if (max_minutes == min_minutes) return("rgba(40,169,162,.18)")
-  alpha <- 0.06 + 0.28 * ((x - min_minutes) / (max_minutes - min_minutes))
-  sprintf("rgba(40,169,162,%.3f)", alpha)
-}
+  distinct() |>
+  left_join(
+    affiliation_lookup |>
+      select(
+        name_key,
+        canonical_name = name,
+        affiliation
+      ),
+    by = "name_key"
+  ) |>
+  left_join(
+    unique_surname_lookup,
+    by = "surname_key"
+  ) |>
+  mutate(
+    Name = coalesce(canonical_name, surname_name, raw_name),
+    Affiliation = coalesce(affiliation, surname_affiliation, "—")
+  ) |>
+  select(Name, Affiliation) |>
+  distinct() |>
+  arrange(Name)
 
 html_escape <- function(x) {
   x <- gsub("&", "&amp;", x, fixed = TRUE)
@@ -2150,31 +2397,17 @@ cat('<table class="attendance-table">')
 cat(
   '<thead><tr>',
   '<th>Name</th>',
-  '<th>Minutes</th>',
-  '<th>Camera</th>',
-  '<th>Unmuted</th>',
-  '<th>Raised hand</th>',
+  '<th style="text-align:left;">Affiliation</th>',
   '</tr></thead><tbody>'
 )
 
 for (i in seq_len(nrow(roster))) {
-
   row <- roster[i, ]
-
-  signal_cell <- function(value) {
-    cls <- if (identical(value, "●")) " signal-on" else ""
-    paste0('<td class="signal-cell', cls, '">', value, '</td>')
-  }
 
   cat(
     '<tr>',
       '<td class="name-cell">', html_escape(row$Name), '</td>',
-      '<td class="minutes-cell" style="background:', minute_fill(row$Minutes), ';">',
-        row$Minutes,
-      '</td>',
-      signal_cell(row$Camera),
-      signal_cell(row$Unmuted),
-      signal_cell(row$`Raised hand`),
+      '<td style="text-align:left;">', html_escape(row$Affiliation), '</td>',
     '</tr>'
   )
 }
@@ -2183,8 +2416,10 @@ cat('</tbody></table></div>')
 ```
 
 <div class="attendance-note">
-Participation signals are descriptive only. Camera use, unmuting, and hand raises do not measure the quality or depth of participation; the transcript-informed adjustment is included precisely because those platform signals miss substantive discussion.
+This roster records meeting attendance and institutional affiliation only.
 </div>
+
+</details>
 
 
 ::: {.footer-card}
