@@ -579,6 +579,94 @@ toc: false
     line-height:1.5;
   }
 
+
+  .forum-attendance-details {
+    margin: 1rem 0 2rem;
+    overflow: hidden;
+    border: 1px solid var(--soco-line);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(4,27,51,.045);
+  }
+
+  .forum-attendance-details > summary {
+    position: relative;
+    min-height: 64px;
+    padding: 1rem 3.4rem 1rem 1.05rem;
+    cursor: pointer;
+    list-style: none;
+    background: linear-gradient(135deg,#F3F8F8 0%,#FFFFFF 100%);
+    color: var(--soco-navy);
+  }
+
+  .forum-attendance-details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .forum-attendance-details > summary::after {
+    content: "+";
+    position: absolute;
+    right: 1.05rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--soco-teal);
+    font-size: 1.65rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .forum-attendance-details[open] > summary::after {
+    content: "−";
+  }
+
+  .forum-attendance-summary-title {
+    display: block;
+    color: var(--soco-navy);
+    font-size: 1rem;
+    font-weight: 850;
+  }
+
+  .forum-attendance-summary-subtitle {
+    display: block;
+    margin-top: .18rem;
+    color: var(--soco-muted);
+    font-size: .82rem;
+    line-height: 1.4;
+  }
+
+  .forum-attendance-details .forum-attendance-note {
+    margin: 0;
+    padding: .85rem 1rem;
+    border-top: 1px solid var(--soco-line);
+    background: #FBFDFD;
+  }
+
+  .forum-attendance-details .forum-attendance-scroll {
+    border-top: 1px solid var(--soco-line);
+    border-radius: 0;
+  }
+
+  .forum-attendance-details .forum-attendance-table {
+    min-width: 560px;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .forum-attendance-details .forum-attendance-table thead th,
+  .forum-attendance-details .forum-attendance-table tbody td {
+    text-align: left;
+  }
+
+  .forum-attendance-details .forum-attendance-table .name-cell {
+    width: 38%;
+  }
+
+  .forum-attendance-details .affiliation-cell {
+    color: #52616D;
+  }
+
   /* =========================================================
      Navigation
      ========================================================= */
@@ -703,6 +791,7 @@ toc: false
     .forum-standout-pills,
     .forum-standout-pill,
     .forum-roster-summary,
+    .forum-attendance-details,
     .forum-attendance-scroll,
     .forum-entry-links,
     .forum-entry-link,
@@ -922,6 +1011,26 @@ toc: false
       max-width: none;
     }
 
+    .forum-attendance-details > summary {
+      min-height: 60px;
+      padding: .85rem 3rem .85rem .9rem;
+    }
+
+    .forum-attendance-summary-title {
+      font-size: .92rem;
+    }
+
+    .forum-attendance-summary-subtitle,
+    .forum-attendance-details .forum-attendance-note {
+      font-size: .74rem;
+    }
+
+    .forum-attendance-details .forum-attendance-table {
+      width: 100%;
+      min-width: 500px;
+      max-width: none;
+    }
+
     .forum-entry-links {
       display: grid;
       grid-template-columns: minmax(0,1fr);
@@ -982,6 +1091,11 @@ toc: false
     .forum-attendance-table {
       width: 620px;
       min-width: 620px;
+    }
+
+    .forum-attendance-details .forum-attendance-table {
+      width: 100%;
+      min-width: 470px;
     }
   }
 
@@ -1046,6 +1160,254 @@ if (!file.exists(clean_path) || !file.exists(summary_path)) {
 
 people <- readr::read_csv(clean_path, show_col_types = FALSE)
 headline <- readr::read_csv(summary_path, show_col_types = FALSE)
+
+
+# ============================================================
+# SoCO master person -> affiliation lookup
+# Shared across Journal Club and Research Forum recaps.
+# ============================================================
+
+person_affiliations <- tibble::tribble(
+  ~name, ~affiliation,
+  "Abraham Selvan", "Bristol Myers Squibb",
+  "Adam Whalley", "Replimune",
+  "Adam Yakovich", "Replimune",
+  "Adewole S. Adamson", "The University of Texas at Austin",
+  "Adewunmi O. Adelaja", "Beth Israel Lahey",
+  "Ajay N. Sharma", "Mass General Brigham",
+  "Aleigha R. Lawless", "Mass General Brigham",
+  "Alex Sorrentino", "Mass General Brigham",
+  "Alyson Baryiames", "Regeneron",
+  "Andrew D. Knight", "Mass General Brigham",
+  "Ann W. Silk", "Dana-Farber Cancer Institute",
+  "Annie Chang", "Harvard Medical School",
+  "Aubriana McEvoy", "Washington University in St. Louis",
+  "Bailey Claire Smith", "Mass General Brigham",
+  "Ben Gratz", "University of Washington",
+  "Brian Burleson", "Regeneron",
+  "Candice D Church", "University of Washington",
+  "Cara Trulli", "Bristol Myers Squibb",
+  "Charlie Li", "Washington University in St. Louis",
+  "Christine C. Cimoch", "Mass General Brigham",
+  "Christopher Barker", "Memorial Sloan Kettering Cancer Center",
+  "Christopher Lao", "Bristol Myers Squibb",
+  "Christopher Zajac", "Regeneron",
+  "Claire Verschraegen", "The Ohio State University",
+  "Corey Rantz", "Bristol Myers Squibb",
+  "Dan Hippe", "University of Washington",
+  "Daniel Coit", "Memorial Sloan Kettering Cancer Center (retired)",
+  "David J Savage", "University of New Mexico Comprehensive Cancer Center",
+  "David Kremer", "Regeneron",
+  "David M. Miller", "Mass General Brigham",
+  "Devarati Mitra", "MD Anderson Cancer Center",
+  "Divya Patel", "Bristol Myers Squibb",
+  "Don Lawrence", "Mass General Brigham",
+  "Elizabeth I. Buchbinder", "Mass General Brigham",
+  "Elizabeth J. Lilley", "Mass General Brigham",
+  "Emily Godwin Summers", "University of North Carolina",
+  "Frances Collichio", "University of North Carolina",
+  "Frank Seebach", "Regeneron",
+  "Frank Worden", "University of Michigan",
+  "Gabriella Chefitz", "National Institutes of Health (NIAMS)",
+  "Gregory Norigian", "Bristol Myers Squibb",
+  "Haroutyun Joulfayan", "Washington University School of Medicine in St. Louis",
+  "Howard L. Kaufman", "Mass Eye and Ear",
+  "Isaac Brownell", "National Institutes of Health",
+  "Itai M. Pashtan", "Dana-Farber Cancer Institute",
+  "Jack Kollings", "University of Washington",
+  "Jacob Choi", "Northwestern Medicine",
+  "James A. DeCaprio", "Dana-Farber Cancer Institute",
+  "James F. McIntyre", "Mass General Brigham",
+  "Jeannie Hou", "Replimune",
+  "Jennifer DeSimone", "Inova",
+  "Jessica L. Fewkes", "Mass Eye and Ear",
+  "Juliane Andrade Czapla", "Mass General Brigham",
+  "Julie Montiel", "Regeneron",
+  "Justine V. Cohen", "Dana-Farber Cancer Institute",
+  "Kamaneh Montazeri", "Mass General Brigham",
+  "Karam Khaddour", "Dana-Farber Cancer Institute",
+  "Kathryn Bollin", "Scripps Health",
+  "Ken Tsai", "Moffitt Cancer Center",
+  "Kevin S. Emerick", "Mass Eye and Ear",
+  "Khalid Garman", "National Institutes of Health",
+  "Kim Premo", "Regeneron",
+  "Krista Lachance", "University of Washington",
+  "Krista M. Rubin", "Mass General Brigham",
+  "Larisa Geskin", "Columbia University",
+  "Laura Ferris", "University of North Carolina",
+  "Lauren O'Loughlin", "Beth Israel Deaconess Medical Center",
+  "Leon Sakkal", "Bristol Myers Squibb",
+  "Lisa Zaba", "Stanford University",
+  "Madeliene Stump", "Mass General Brigham",
+  "Manisha Thakuria", "Mass General Brigham",
+  "Maria Melendez-Gonzalez", "University of North Carolina",
+  "Mariam El-Ashmawy", "UT Southwestern Medical Center",
+  "Matthew Fury", "Regeneron",
+  "Meghan J. Mooradian", "Mass General Brigham",
+  "Mehran Behruj Yusuf", "University of Alabama at Birmingham",
+  "Michael Povelaitis", "University of North Carolina",
+  "Michael Wong", "Roswell Park Comprehensive Cancer Center",
+  "Mina Bakhtiar", "Mass General Brigham",
+  "Molly Yancovitz", "Beth Israel Deaconess Medical Center",
+  "Natasha Hill", "National Institutes of Health",
+  "Nikhil Khushalani", "Moffitt Cancer Center",
+  "Omid Najmi", "Bristol Myers Squibb",
+  "Paul Nghiem", "University of Washington",
+  "Peter Ch'en", "University of Washington",
+  "Ray Cheever", "University of North Carolina",
+  "Reed E. Drews", "Beth Israel Deaconess Medical Center",
+  "Rhoda Alani", "Mass General Brigham",
+  "Riley M. Fadden", "Mass General Brigham",
+  "Rima Kulikauskas", "University of Washington",
+  "Ron S. Gejman", "Columbia University",
+  "Ross D. Merkin", "Mass General Brigham",
+  "Ryan J. Sullivan", "Mass General Brigham",
+  "Sameer Gupta", "Mass Eye and Ear",
+  "Sanjay Chandrasekaran", "UT Southwestern Medical Center",
+  "Sarah Nia", "Regeneron",
+  "Sasha J Hussain", "University of Massachusetts Medical School",
+  "Shailender Bhatia", "University of Washington",
+  "Shinya U Amano", "MaineHealth",
+  "Song Park", "University of Washington",
+  "Sonia Cohen", "Mass General Brigham",
+  "Sunandana Chandra", "Northwestern University",
+  "Suzanne Topalian", "Johns Hopkins Medicine",
+  "Tatyana Sharova", "Mass General Brigham",
+  "Taylor Harp", "MedStar Health",
+  "Tien Nguyen", "Dana-Farber Cancer Institute",
+  "Todd Franklin Pearson", "Mass General Brigham",
+  "Truelian Yu", "Georgetown University / MedStar Health",
+  "Vatche Tchekmedyian", "MaineHealth",
+  "Vern Sondak", "Moffitt Cancer Center",
+  "Vishal Patel", "George Washington University",
+  "William J. Benjamin", "Mass Eye and Ear",
+  "William T Reed", "MaineHealth",
+  "Replimune team", "Replimune"
+)
+
+name_reconciliation <- tibble::tribble(
+  ~observed_key,         ~canonical_name,
+  "adeadamson",          "Adewole S. Adamson",
+  "adewoleadamson",      "Adewole S. Adamson",
+  "andrewknight",        "Andrew D. Knight",
+  "andyknight",          "Andrew D. Knight",
+  "sameer",              "Sameer Gupta",
+  "sameergupta",         "Sameer Gupta",
+  "samirgupta",          "Sameer Gupta",
+  "sg",                  "Sameer Gupta",
+  "soundsgood",          "Sameer Gupta",
+  "vernonsondak",        "Vern Sondak",
+  "vernsondak",          "Vern Sondak",
+  "francisworden",       "Frank Worden",
+  "frankworden",         "Frank Worden",
+  "alexandrasorrentino", "Alex Sorrentino",
+  "alexsorrentino",      "Alex Sorrentino",
+  "williambenjamin",     "William J. Benjamin"
+)
+
+clean_name_key <- function(x) {
+
+  x <- as.character(x)
+  x <- stringr::str_replace_all(x, "\\u00A0", " ")
+  x <- stringr::str_squish(x)
+
+  purrr::map_chr(x, function(nm) {
+
+    if (is.na(nm) || nm == "") return("")
+
+    nm2 <- nm |>
+      stringr::str_replace(
+        stringr::regex(
+          ",?\\s*(MD|PhD|DO|MBBS|CNP|NP|PA|MS|MPH|MBA|PGY\\d+)(,?\\s*(MD|PhD|DO|MBBS|CNP|NP|PA|MS|MPH|MBA|PGY\\d+))*\\s*$",
+          ignore_case = TRUE
+        ),
+        ""
+      ) |>
+      stringr::str_squish()
+
+    if (stringr::str_detect(nm2, ",")) {
+
+      parts <- stringr::str_split_fixed(nm2, ",", 2)
+      last_name <- stringr::str_squish(parts[1])
+
+      first_name <- parts[2] |>
+        stringr::str_squish() |>
+        stringr::str_split("\\s+") |>
+        purrr::pluck(1, 1)
+
+    } else {
+
+      words <- nm2 |>
+        stringr::str_replace_all("[^A-Za-z0-9' -]", " ") |>
+        stringr::str_squish() |>
+        stringr::str_split("\\s+") |>
+        purrr::pluck(1)
+
+      # Preserve one-token Teams aliases such as "Sg" as one-token keys.
+      if (length(words) == 1) {
+        return(
+          words[1] |>
+            stringr::str_to_lower() |>
+            stringr::str_replace_all("[^a-z0-9]", "")
+        )
+      }
+
+      first_name <- if (length(words)) words[1] else ""
+      last_name <- if (length(words)) words[length(words)] else ""
+    }
+
+    paste0(first_name, last_name) |>
+      stringr::str_to_lower() |>
+      stringr::str_replace_all("[^a-z0-9]", "")
+  })
+}
+
+affiliation_lookup <- person_affiliations |>
+  dplyr::mutate(
+    name_key = clean_name_key(name)
+  )
+
+attendance_roster <- people |>
+  dplyr::transmute(
+    raw_name = Name,
+    observed_key = clean_name_key(Name)
+  ) |>
+  dplyr::distinct() |>
+  dplyr::left_join(
+    name_reconciliation,
+    by = "observed_key"
+  ) |>
+  dplyr::mutate(
+    display_name = dplyr::coalesce(canonical_name, raw_name),
+    name_key = clean_name_key(display_name)
+  ) |>
+  dplyr::left_join(
+    affiliation_lookup |>
+      dplyr::select(
+        name_key,
+        lookup_name = name,
+        affiliation
+      ),
+    by = "name_key"
+  ) |>
+  dplyr::mutate(
+    Name = dplyr::coalesce(lookup_name, display_name),
+    Affiliation = dplyr::coalesce(affiliation, "—")
+  ) |>
+  dplyr::select(Name, Affiliation) |>
+  dplyr::distinct() |>
+  dplyr::arrange(Name)
+
+missing_affiliations <- attendance_roster |>
+  dplyr::filter(Affiliation == "—") |>
+  dplyr::pull(Name)
+
+if (length(missing_affiliations)) {
+  warning(
+    "Missing affiliation lookup for: ",
+    paste(missing_affiliations, collapse = ", ")
+  )
+}
 ```
 
 ::::: {.forum-entry-hero}
@@ -1113,8 +1475,8 @@ cat(
   '<div class="forum-meeting-pulse">',
     '<div class="forum-pulse-card">',
       '<span class="forum-pulse-label">People represented</span>',
-      '<span class="forum-pulse-value">', h$people, '</span>',
-      '<span class="forum-pulse-note">Cleaned Teams attendance record</span>',
+      '<span class="forum-pulse-value">', nrow(attendance_roster), '</span>',
+      '<span class="forum-pulse-note">Unique people after reconnect and duplicate-name reconciliation</span>',
     '</div>',
     '<div class="forum-pulse-card">',
       '<span class="forum-pulse-label">Median time together</span>',
@@ -1309,38 +1671,24 @@ That reflects the purpose of the SoCO Research Forum itself: bringing ideas forw
 
 ## Who joined us?
 
-The attendance record is preserved as part of the meeting recap. Teams participation signals are included only as a descriptive record; they are not a measure of the quality of anyone's contribution.
+The attendance record is preserved as part of the meeting recap. The roster below is limited to names and institutional affiliations.
+
+<details class="forum-attendance-details">
+<summary>
+<span class="forum-attendance-summary-title">Attendance roster</span>
+<span class="forum-attendance-summary-subtitle">View names and affiliations</span>
+</summary>
+
+<div class="forum-attendance-note">
+This roster records meeting attendance and institutional affiliation only.
+</div>
 
 ```{r}
 #| label: attendance-table
 #| echo: false
 #| results: asis
-
-roster <- people |>
-  dplyr::transmute(
-    Name,
-    Minutes = round(duration_min),
-    Camera = dplyr::if_else(any_camera, "●", "—"),
-    Unmuted = dplyr::if_else(any_unmute, "●", "—"),
-    `Raised hand` = dplyr::if_else(any_hand_raise, "●", "—")
-  ) |>
-  dplyr::arrange(desc(Minutes), Name)
-
-cat(
-  '<div class="forum-roster-summary">',
-    '<strong>', nrow(roster), ' people represented</strong>',
-    '<span>Sorted by time in meeting · ● = signal recorded at least once</span>',
-  '</div>'
-)
-
-min_minutes <- min(roster$Minutes, na.rm = TRUE)
-max_minutes <- max(roster$Minutes, na.rm = TRUE)
-
-minute_fill <- function(x) {
-  if (max_minutes == min_minutes) return("rgba(15,127,134,.16)")
-  alpha <- 0.05 + 0.25 * ((x - min_minutes)/(max_minutes - min_minutes))
-  sprintf("rgba(15,127,134,%.3f)", alpha)
-}
+#| message: false
+#| warning: false
 
 html_escape <- function(x) {
   x <- gsub("&","&amp;",x,fixed=TRUE)
@@ -1349,36 +1697,30 @@ html_escape <- function(x) {
   x
 }
 
+cat(
+  '<div class="forum-roster-summary">',
+    '<strong>', nrow(attendance_roster), ' people represented</strong>',
+    '<span>Alphabetical · affiliations from the SoCO lookup table</span>',
+  '</div>'
+)
+
 cat('<div class="forum-attendance-scroll">')
 cat('<table class="forum-attendance-table">')
 cat(
   '<thead><tr>',
     '<th>Name</th>',
-    '<th>Minutes</th>',
-    '<th>Camera</th>',
-    '<th>Unmuted</th>',
-    '<th>Raised hand</th>',
+    '<th>Affiliation</th>',
   '</tr></thead><tbody>'
 )
 
-for (i in seq_len(nrow(roster))) {
+for (i in seq_len(nrow(attendance_roster))) {
 
-  row <- roster[i, ]
-
-  signal_cell <- function(value) {
-    cls <- if (identical(value, "●")) " signal-on" else ""
-    paste0('<td class="', cls, '">', value, '</td>')
-  }
+  row <- attendance_roster[i, ]
 
   cat(
     '<tr>',
       '<td class="name-cell">', html_escape(row$Name), '</td>',
-      '<td class="minutes-cell" style="background:', minute_fill(row$Minutes), ';">',
-        row$Minutes,
-      '</td>',
-      signal_cell(row$Camera),
-      signal_cell(row$Unmuted),
-      signal_cell(row$`Raised hand`),
+      '<td class="affiliation-cell">', html_escape(row$Affiliation), '</td>',
     '</tr>'
   )
 }
@@ -1386,9 +1728,7 @@ for (i in seq_len(nrow(roster))) {
 cat('</tbody></table></div>')
 ```
 
-<div class="forum-attendance-note">
-Automated meeting-note bots and the non-person entry D237 are excluded from the cleaned roster. Reconnects are reconciled in the attendance-processing script.
-</div>
+</details>
 
 :::
 

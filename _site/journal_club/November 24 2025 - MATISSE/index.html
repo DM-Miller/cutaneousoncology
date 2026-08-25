@@ -74,6 +74,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RC10SNZMP2"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RC10SNZMP2', { 'anonymize_ip': true});
+</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
 
@@ -807,6 +816,97 @@ h1,h2,h3 {
   font-size:.84rem;
 }
 
+
+.attendance-details {
+  margin:1rem 0 2rem;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(8,45,77,.045);
+}
+
+.attendance-details > summary {
+  position:relative;
+  min-height:64px;
+  padding:1rem 3.4rem 1rem 1.05rem;
+  cursor:pointer;
+  list-style:none;
+  background:linear-gradient(135deg,#F3F8F8 0%,#FFFFFF 100%);
+  color:var(--navy);
+}
+
+.attendance-details > summary::-webkit-details-marker {
+  display:none;
+}
+
+.attendance-details > summary::after {
+  content:"+";
+  position:absolute;
+  right:1.05rem;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--teal-dark);
+  font-size:1.65rem;
+  font-weight:500;
+  line-height:1;
+}
+
+.attendance-details[open] > summary::after {
+  content:"−";
+}
+
+.attendance-summary-title {
+  display:block;
+  color:var(--navy);
+  font-size:1rem;
+  font-weight:850;
+}
+
+.attendance-summary-subtitle {
+  display:block;
+  margin-top:.18rem;
+  color:var(--muted);
+  font-size:.82rem;
+  line-height:1.4;
+}
+
+.attendance-note {
+  margin:0;
+  padding:.85rem 1rem;
+  border-top:1px solid var(--line);
+  background:#FBFDFD;
+  color:var(--muted);
+  font-size:.82rem;
+  line-height:1.55;
+}
+
+.attendance-details .attendance-scroll {
+  border-top:1px solid var(--line);
+  border-radius:0;
+}
+
+.attendance-details .attendance-table {
+  min-width:560px;
+  margin:0;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+}
+
+.attendance-details .attendance-table thead th,
+.attendance-details .attendance-table tbody td {
+  text-align:left;
+}
+
+.attendance-details .attendance-table .name-cell {
+  width:38%;
+}
+
+.attendance-details .affiliation-cell {
+  color:#52616D;
+}
+
 .footer-card {
   margin:3rem 0 1rem;
   padding:1.8rem 2rem;
@@ -915,6 +1015,24 @@ h1,h2,h3 {
     min-width:690px;
   }
 
+  .attendance-details > summary {
+    min-height:60px;
+    padding:.85rem 3rem .85rem .9rem;
+  }
+
+  .attendance-summary-title {
+    font-size:.92rem;
+  }
+
+  .attendance-summary-subtitle,
+  .attendance-note {
+    font-size:.74rem;
+  }
+
+  .attendance-details .attendance-table {
+    min-width:470px;
+  }
+
   .footer-card {
     padding:1.3rem 1.15rem;
     border-radius:16px;
@@ -945,7 +1063,7 @@ Meeting pulse
 <h2 class="anchored" data-anchor-id="a-sustained-multidisciplinary-conversation">A sustained multidisciplinary conversation</h2>
 <div class="metric-grid">
 <div class="metric-card">
-<span class="metric-label">People represented</span> <span class="metric-value"> 29 </span> <span class="metric-note">Unique people after reconnect reconciliation</span>
+<span class="metric-label">People represented</span> <span class="metric-value"> 29 </span> <span class="metric-note">Unique people after reconnect and duplicate-name reconciliation</span>
 </div>
 <div class="metric-card">
 <span class="metric-label">Median time together</span> <span class="metric-value"> 76 min</span> <span class="metric-note">Half the room stayed at least this long</span>
@@ -2609,8 +2727,15 @@ Our community
 </section>
 <section id="who-joined-us" class="level2">
 <h2 class="anchored" data-anchor-id="who-joined-us">Who joined us?</h2>
+<details class="attendance-details">
+<summary>
+<span class="attendance-summary-title">Attendance roster</span> <span class="attendance-summary-subtitle">View names and affiliations</span>
+</summary>
+<div class="attendance-note">
+<p>This roster records meeting attendance and institutional affiliation only.</p>
+</div>
 <div class="roster-summary">
-<strong> 29 people represented</strong> <span>Sorted by time in meeting · ● indicates a recorded Teams signal</span>
+<strong> 29 people represented</strong> <span>Alphabetical · affiliations from the SoCO lookup table</span>
 </div>
 <div class="attendance-scroll">
 <table class="attendance-table">
@@ -2620,516 +2745,247 @@ Our community
 Name
 </th>
 <th>
-Minutes
-</th>
-<th>
-Camera
-</th>
-<th>
-Unmuted
-</th>
-<th>
-Raised hand
+Affiliation
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="name-cell">
-Sunandana Chandra
+Alex Sorrentino
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.320) ;">
-92
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-David M. Miller
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.293) ;">
-85
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Frances Collichio
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.289) ;">
-84
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Gregory Norigian
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.289) ;">
-84
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Sonia Cohen
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.289) ;">
-84
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Cara Trulli
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.285) ;">
-83
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Elizabeth I. Buchbinder
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.285) ;">
-83
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Ross D. Merkin
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.285) ;">
-83
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Howard L. Kaufman
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.281) ;">
-82
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
+<td class="affiliation-cell">
+Mass General Brigham
 </td>
 </tr>
 <tr>
 <td class="name-cell">
 Andrew D. Knight
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.277) ;">
-81
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
+<td class="affiliation-cell">
+Mass General Brigham
 </td>
 </tr>
 <tr>
 <td class="name-cell">
-Juliane Andrade Czapla
+Cara Trulli
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.273) ;">
-80
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Sameer Gupta
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.269) ;">
-79
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Jennifer Desimone
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.265) ;">
-78
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Vishal Patel
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.261) ;">
-77
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Manisha Thakuria
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.257) ;">
-76
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Ron S. Gejman
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.257) ;">
-76
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Sasha J Hussain
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.257) ;">
-76
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Omid Najmi
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.253) ;">
-75
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Kevin S. Emerick
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.250) ;">
-74
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Krista M. Rubin
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.195) ;">
-60
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Ryan J. Sullivan
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.191) ;">
-59
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
-</td>
-</tr>
-<tr>
-<td class="name-cell">
-Suzanne Topalian
-</td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.191) ;">
-59
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
+<td class="affiliation-cell">
+Bristol Myers Squibb
 </td>
 </tr>
 <tr>
 <td class="name-cell">
 Christine C. Cimoch
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.187) ;">
-58
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
+<td class="affiliation-cell">
+Mass General Brigham
 </td>
 </tr>
 <tr>
 <td class="name-cell">
-Alex Sorrentino
+David M. Miller
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.171) ;">
-54
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
+<td class="affiliation-cell">
+Mass General Brigham
 </td>
 </tr>
 <tr>
 <td class="name-cell">
-Molly Yancovitz
+Elizabeth I. Buchbinder
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.148) ;">
-48
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
-</td>
-<td class="">
-—
+<td class="affiliation-cell">
+Mass General Brigham
 </td>
 </tr>
 <tr>
 <td class="name-cell">
-Meghan J. Mooradian
+Frances Collichio
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.124) ;">
-42
-</td>
-<td class="">
-—
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
+<td class="affiliation-cell">
+University of North Carolina
 </td>
 </tr>
 <tr>
 <td class="name-cell">
 Frank Worden
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.077) ;">
-30
-</td>
-<td class="">
-—
-</td>
-<td class=" signal-on">
-●
-</td>
-<td class="">
-—
+<td class="affiliation-cell">
+University of Michigan
 </td>
 </tr>
 <tr>
 <td class="name-cell">
-Mariam El-Ashmawy
+Gregory Norigian
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.062) ;">
-26
+<td class="affiliation-cell">
+Bristol Myers Squibb
 </td>
-<td class=" signal-on">
-●
+</tr>
+<tr>
+<td class="name-cell">
+Howard L. Kaufman
 </td>
-<td class=" signal-on">
-●
+<td class="affiliation-cell">
+Mass Eye and Ear
 </td>
-<td class="">
-—
+</tr>
+<tr>
+<td class="name-cell">
+Jennifer DeSimone
+</td>
+<td class="affiliation-cell">
+Inova
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Juliane Andrade Czapla
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
 </td>
 </tr>
 <tr>
 <td class="name-cell">
 Ken Tsai
 </td>
-<td class="minutes-cell" style="background: rgba(40,169,162,0.050) ;">
-23
+<td class="affiliation-cell">
+Moffitt Cancer Center
 </td>
-<td class="">
-—
+</tr>
+<tr>
+<td class="name-cell">
+Kevin S. Emerick
 </td>
-<td class="">
-—
+<td class="affiliation-cell">
+Mass Eye and Ear
 </td>
-<td class="">
-—
+</tr>
+<tr>
+<td class="name-cell">
+Krista M. Rubin
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Manisha Thakuria
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Mariam El-Ashmawy
+</td>
+<td class="affiliation-cell">
+UT Southwestern Medical Center
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Meghan J. Mooradian
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Molly Yancovitz
+</td>
+<td class="affiliation-cell">
+Beth Israel Deaconess Medical Center
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Omid Najmi
+</td>
+<td class="affiliation-cell">
+Bristol Myers Squibb
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Ron S. Gejman
+</td>
+<td class="affiliation-cell">
+Columbia University
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Ross D. Merkin
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Ryan J. Sullivan
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Sameer Gupta
+</td>
+<td class="affiliation-cell">
+Mass Eye and Ear
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Sasha J Hussain
+</td>
+<td class="affiliation-cell">
+University of Massachusetts Medical School
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Sonia Cohen
+</td>
+<td class="affiliation-cell">
+Mass General Brigham
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Sunandana Chandra
+</td>
+<td class="affiliation-cell">
+Northwestern University
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Suzanne Topalian
+</td>
+<td class="affiliation-cell">
+Johns Hopkins Medicine
+</td>
+</tr>
+<tr>
+<td class="name-cell">
+Vishal Patel
+</td>
+<td class="affiliation-cell">
+George Washington University
 </td>
 </tr>
 </tbody>
 </table>
 </div>
+</details>
 </section>
 <section id="the-most-important-result-may-have-been-the-question-matisse-made-unavoidable." class="level2 footer-card">
 <h2 class="anchored" data-anchor-id="the-most-important-result-may-have-been-the-question-matisse-made-unavoidable.">The most important result may have been the question MATISSE made unavoidable.</h2>
