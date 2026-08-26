@@ -107,7 +107,28 @@ In development
 
 ## Proposed Meetings {#proposed-meetings}
 
-Some Forum conversations begin as working concepts. These pages make the proposed format, agenda, and questions visible while there is still time to refine them with the people who will shape the discussion.
+We are currently developing two Fall 2026 Forum concepts. Each is built as a 90-minute conversation rather than a traditional lecture.
+
+:::
+
+::: {.soco-proposed-meeting-card}
+
+::: {.soco-proposed-meeting-kicker}
+Proposed Meeting · Fall 2026
+:::
+
+### The Art of Authorship
+
+**Who Gets on the Paper? Guidelines, Culture, and the Reality of Scientific Publishing**
+
+A proposed 90-minute, multi-stakeholder conversation on how authorship decisions are actually made, why practice can diverge from established standards, and how investigators, editors, industry colleagues, and publication professionals may see the same problem differently.
+
+::: {.soco-proposed-meeting-meta}
+**Format:** Case-based, moderator-led conversation  
+**Perspectives:** Academia · Editors · Industry · Publication professionals
+:::
+
+[View proposed meeting →](https://societyofcutaneousoncology.org/research_forum/Art%20of%20Authorship/){.soco-card-link}
 
 :::
 
@@ -209,6 +230,10 @@ Explore prior discussions, methods sessions, trial concepts, preliminary analyse
     box-shadow: 0 8px 24px rgba(4, 27, 51, 0.055);
   }
 
+  .soco-proposed-meeting-card > p:first-child {
+    margin-top: 0;
+  }
+
   .soco-proposed-meeting-kicker {
     margin-bottom: 0.55rem;
     color: #0f7f86;
@@ -245,5 +270,6 @@ Explore prior discussions, methods sessions, trial concepts, preliminary analyse
     .soco-proposed-meeting-card {
       padding: 1.5rem 1.35rem;
     }
+
   }
 </style>
