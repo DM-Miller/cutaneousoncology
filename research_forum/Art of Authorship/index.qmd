@@ -16,7 +16,7 @@ execute:
 ---
 
 ```{=html}
-<!-- SoCO ART OF AUTHORSHIP · COLLAPSIBLE REFERENCE SECTIONS VERSION 2026-08-26 -->
+<!-- SoCO ART OF AUTHORSHIP · WHY-THIS-CONVERSATION + COLLAPSIBLE REFERENCE SECTIONS VERSION 2026-08-26 -->
 <style type="text/css">
 :root {
   --soco-navy: #041b33;
@@ -973,6 +973,21 @@ main.content {
   </div>
 
   <p>These decisions are rarely made by one person or one group. Investigators, sponsors, editors, institutions, publication teams, statisticians, writers, mentors, and trainees all shape the process, often under different incentives. The point is to understand those pressures without losing sight of individual responsibility.</p>
+</section>
+
+
+<section id="why-this-conversation" class="soco-reg-card">
+  <h2>Why bring this into the room?</h2>
+
+  <p>Authorship guidance is not new. What is less common is talking openly about how these decisions are actually made among the people who work together — investigators, editors, industry colleagues, writers, statisticians, trainees, and others.</p>
+
+  <p>Many of our assumptions about authorship are learned through experience: from mentors, collaborators, institutions, companies, and the culture around us. Bringing those experiences into the open may do more than raise awareness. It can give people a shared language — and perhaps a little more confidence — to ask difficult questions, decline authorship that does not fit, recognize contributors who are being overlooked, and start these conversations earlier.</p>
+
+  <p>As research becomes increasingly multicenter, multidisciplinary, and intertwined with industry and publication teams, these decisions are only becoming more complicated.</p>
+
+  <div class="soco-reg-callout">
+    <strong>The goal is not to invent new rules.</strong> It is to make the existing ones more usable in the relationships where authorship decisions actually happen.
+  </div>
 </section>
 
 <section id="goals" class="soco-reg-card">
