@@ -16,7 +16,7 @@ tags:
   - Merkel Cell Polyomavirus
   - Prognosis
   - Biomarkers
-image: DMM_pic_cropped.jpg
+image: image.png
 page-layout: full
 title-block-style: none
 toc: false

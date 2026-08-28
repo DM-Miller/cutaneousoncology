@@ -10,7 +10,7 @@ categories:
   - Response-Guided Treatment
   - Treatment De-escalation
   - Bayesian Methods
-image: ../../img/first-research-forum-2026.png
+image: image.png
 page-layout: full
 title-block-style: none
 toc: false

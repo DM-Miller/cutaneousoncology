@@ -15,7 +15,7 @@ tags:
   - Peer Review
   - Scientific Publishing
   - Editorial Process
-image: discs_black_.2.png
+image: image.png
 page-layout: full
 title-block-style: none
 toc: false

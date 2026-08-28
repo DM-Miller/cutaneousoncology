@@ -11,7 +11,7 @@ categories:
   - Open Science
   - Analytic Search Space
   - Open Inference Project
-image: open_inference_logo.png
+image: image.png
 page-layout: full
 title-block-style: none
 toc: false

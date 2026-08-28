@@ -15,7 +15,7 @@ tags:
   - Gene Expression Profiling
   - MERLIN
   - Sentinel Lymph Node Biopsy
-image: SondakVernon_2995.jpg
+image: image.png
 page-layout: full
 title-block-style: none
 toc: false

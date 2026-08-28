@@ -15,7 +15,7 @@ tags:
   - Immunoprevention
   - ICARUS
   - Clinical Trial Design
-image: DMM_pic_cropped.jpg
+image: image.png
 page-layout: full
 title-block-style: none
 toc: false
