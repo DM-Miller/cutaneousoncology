@@ -628,6 +628,25 @@ Tell us who you are and where you work. We will keep you informed about upcoming
 </div>
 
 
+<div class="soco-form-field">
+
+<label for="referral_source">How did you find us?</label>
+
+<select id="referral_source" name="referral_source">
+<option value="" selected>Select one (optional)</option>
+<option value="Colleague or word of mouth">Colleague or word of mouth</option>
+<option value="SoCO Journal Club or Research Forum">SoCO Journal Club or Research Forum</option>
+<option value="Society of Cutaneous Oncology website">Society of Cutaneous Oncology website</option>
+<option value="Social media">Social media</option>
+<option value="Conference or meeting">Conference or meeting</option>
+<option value="Journal of Cutaneous Oncology">Journal of Cutaneous Oncology</option>
+<option value="Email or mailing list">Email or mailing list</option>
+<option value="Other">Other</option>
+</select>
+
+</div>
+
+
 <button type="submit" class="btn btn-primary">
 Join our community
 </button>
