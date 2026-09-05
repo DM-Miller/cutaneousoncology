@@ -1,0 +1,907 @@
+---
+title: "SoCO Journal Club · DAROMUN Pulse"
+description: "Adaptive pre-meeting pulse for the SoCO Journal Club discussion of DAROMUN / PIVOTAL."
+format:
+  html:
+    page-layout: full
+    toc: false
+    title-block-banner: false
+    include-in-header:
+      text: |
+        <meta name="robots" content="noindex,nofollow,noarchive">
+        <meta name="googlebot" content="noindex,nofollow,noarchive">
+---
+
+```{=html}
+
+<style>
+#quarto-header,
+.navbar,
+.quarto-navbar-tools,
+footer,
+.nav-footer,
+.page-footer,
+#quarto-content > .page-columns > .content > header,
+#title-block-header,
+.quarto-title-block,
+h1.title {
+  display: none !important;
+}
+
+body,
+#quarto-content,
+.page-columns,
+.content,
+main.content {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+#quarto-content {
+  min-height: 100vh !important;
+}
+</style>
+
+<style>
+:root{
+  --ink:#102a35;
+  --muted:#667980;
+  --paper:#f4f8f7;
+  --card:#ffffff;
+  --line:#d8e5e2;
+  --accent:#1f7475;
+  --accent2:#3d928f;
+  --soft:#e4f2f0;
+  --radius:24px;
+  --shadow:0 18px 50px rgba(16,42,53,.10);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink)}
+body{
+  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 12% -10%,rgba(31,116,117,.12),transparent 28rem),
+    linear-gradient(180deg,#fbfdfc 0%,#f3f8f7 100%);
+}
+button{font:inherit}
+.shell{
+  min-height:100dvh;
+  width:min(100%,720px);
+  margin:0 auto;
+  padding:max(20px,env(safe-area-inset-top)) 16px max(22px,env(safe-area-inset-bottom));
+  display:flex;
+  flex-direction:column;
+}
+.topbar{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:18px;
+}
+.brand .eyebrow{
+  font-size:.72rem;
+  font-weight:850;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:4px;
+}
+.brand .title{
+  font-size:clamp(1.08rem,4vw,1.35rem);
+  font-weight:820;
+  letter-spacing:-.025em;
+}
+.dev{
+  appearance:none;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.82);
+  color:var(--muted);
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:.72rem;
+  font-weight:760;
+  cursor:pointer;
+}
+.screen{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:0;
+}
+.card{
+  background:rgba(255,255,255,.96);
+  border:1px solid rgba(216,229,226,.95);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:clamp(22px,5vw,34px);
+}
+.kicker{
+  font-size:.74rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:9px;
+}
+h1,h2,p{margin-top:0}
+h1,h2{
+  letter-spacing:-.035em;
+  line-height:1.06;
+}
+h1{font-size:clamp(2rem,8vw,3.15rem);margin-bottom:14px}
+h2{font-size:clamp(1.65rem,7vw,2.55rem);margin-bottom:13px}
+.lede{
+  color:var(--muted);
+  font-size:clamp(1rem,4.1vw,1.16rem);
+  line-height:1.48;
+  margin-bottom:20px;
+}
+.prompt{
+  font-size:clamp(1.18rem,5vw,1.48rem);
+  font-weight:820;
+  line-height:1.25;
+  letter-spacing:-.02em;
+  margin-bottom:16px;
+}
+.choice-stack{display:grid;gap:10px}
+.choice{
+  width:100%;
+  text-align:left;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--ink);
+  border-radius:16px;
+  padding:15px 16px;
+  font-weight:780;
+  line-height:1.2;
+  cursor:pointer;
+  box-shadow:0 5px 18px rgba(16,42,53,.04);
+}
+.choice:hover,.choice:focus-visible{
+  border-color:rgba(31,116,117,.55);
+  background:var(--soft);
+  outline:none;
+}
+.note{
+  margin:15px 2px 0;
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.4;
+}
+.primer{
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,#f8fbfa,#eef7f5);
+  border-radius:18px;
+  padding:15px 16px;
+  margin:3px 0 18px;
+}
+.primer .mini{
+  font-size:.69rem;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:900;
+  margin-bottom:6px;
+}
+.primer p{
+  margin:0;
+  font-size:.96rem;
+  line-height:1.45;
+}
+.cta{
+  appearance:none;
+  border:0;
+  width:100%;
+  border-radius:16px;
+  padding:16px 17px;
+  background:var(--accent);
+  color:white;
+  font-weight:850;
+  font-size:1rem;
+  cursor:pointer;
+}
+.cta:hover,.cta:focus-visible{
+  background:var(--accent2);
+  outline:3px solid rgba(31,116,117,.2);
+  outline-offset:3px;
+}
+.meta{
+  margin-top:12px;
+  color:var(--muted);
+  text-align:center;
+  font-size:.76rem;
+}
+.progress{
+  display:flex;
+  gap:5px;
+  margin:0 0 16px;
+}
+.progress span{
+  height:4px;
+  flex:1;
+  border-radius:99px;
+  background:var(--line);
+}
+.progress span.on{background:var(--accent)}
+.evidence .choice{
+  padding:13px 15px;
+}
+
+
+.text-input{
+  width:100%;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--ink);
+  border-radius:15px;
+  padding:13px 14px;
+  font:inherit;
+  font-size:1rem;
+  box-shadow:0 4px 16px rgba(16,42,53,.035);
+}
+.text-input:focus{
+  outline:3px solid rgba(31,116,117,.18);
+  border-color:rgba(31,116,117,.55);
+}
+.text-area{
+  resize:vertical;
+  min-height:88px;
+  margin-bottom:15px;
+}
+.field-label{
+  font-weight:850;
+  margin-top:2px;
+}
+.field-label span{
+  font-weight:650;
+  color:var(--muted);
+}
+.receipt-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+  margin-top:18px;
+}
+.receipt-grid > div{
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,#fbfdfc,#f4f9f8);
+  border-radius:15px;
+  padding:12px 14px;
+}
+.receipt-grid small{
+  display:block;
+  color:var(--muted);
+  font-size:.7rem;
+  font-weight:850;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+.receipt-grid strong{
+  display:block;
+  line-height:1.3;
+}
+
+.role-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.role-choice{
+  min-height:56px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+@media (max-width:430px){
+  .role-grid{gap:8px}
+  .role-choice{
+    min-height:52px;
+    padding:12px 13px;
+    font-size:.94rem;
+  }
+}
+
+@media (max-height:720px){
+  .shell{padding-top:12px;padding-bottom:12px}
+  .topbar{margin-bottom:10px}
+  .card{padding:19px}
+  .lede{margin-bottom:14px}
+  .choice-stack{gap:8px}
+  .choice{padding:12px 14px}
+  .primer{padding:12px 14px;margin-bottom:14px}
+}
+</style>
+
+
+<div class="shell">
+  <div class="topbar">
+    <div class="brand">
+      <div class="eyebrow">SoCO Journal Club</div>
+      <div class="title">DAROMUN · PIVOTAL</div>
+    </div>
+    <button class="dev" id="resetBtn" title="Return to the familiarity question">Start over</button>
+  </div>
+
+  <!-- Static Netlify survey form: named fields must exist in built HTML. -->
+  <form id="survey-form"
+        name="daromun-pre-jc-survey-v3"
+        method="POST"
+        action="/"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        style="display:none">
+    <input type="hidden" name="form-name" value="daromun-pre-jc-survey-v3">
+    <input type="hidden" name="survey_id" value="soco-daromun-pulse-2026">
+    <input type="hidden" name="survey_version" value="3.0">
+    <input type="hidden" name="respondent_id" id="respondent_id">
+    <input type="hidden" name="campaign" id="campaign">
+    <input type="hidden" name="entry_familiarity" id="entry_familiarity">
+    <input type="hidden" name="started_at_client" id="started_at_client">
+    <input type="hidden" name="completed_at_client" id="completed_at_client">
+    <input type="hidden" name="elapsed_seconds" id="elapsed_seconds">
+
+    <input type="hidden" name="familiarity" id="familiarity">
+    <input type="hidden" name="evidence_compelling" id="evidence_compelling">
+    <input type="hidden" name="clinical_scenario" id="clinical_scenario">
+    <input type="hidden" name="discussion_priority" id="discussion_priority">
+    <input type="hidden" name="adcom_evaluable_meaningful" id="adcom_evaluable_meaningful">
+    <input type="hidden" name="primary_role" id="primary_role">
+    <input type="hidden" name="question_for_room" id="question_for_room">
+    <input type="hidden" name="name" id="name_final">
+
+    <label>Do not fill this out
+      <input name="bot-field" tabindex="-1" autocomplete="off">
+    </label>
+  </form>
+
+  <!-- Separate anonymous funnel form. No page-load event is ever posted. -->
+  <form id="event-form"
+        name="daromun-pulse-events-v3"
+        method="POST"
+        action="/"
+        data-netlify="true"
+        netlify-honeypot="event-bot-field"
+        style="display:none">
+    <input type="hidden" name="form-name" value="daromun-pulse-events-v3">
+    <input type="hidden" name="event_name">
+    <input type="hidden" name="respondent_id">
+    <input type="hidden" name="campaign">
+    <input type="hidden" name="entry_familiarity">
+    <input type="hidden" name="event_at_client">
+    <input type="hidden" name="step">
+    <label>Do not fill this out
+      <input name="event-bot-field" tabindex="-1" autocomplete="off">
+    </label>
+  </form>
+
+  <main class="screen" id="screen"></main>
+</div>
+
+<script>
+const screen = document.getElementById("screen");
+const resetBtn = document.getElementById("resetBtn");
+const surveyForm = document.getElementById("survey-form");
+
+const params = new URLSearchParams(window.location.search);
+const entryFamiliarity = params.get("familiarity") || "";
+const campaignValue = params.get("campaign") || "";
+
+const RESPONDENT_KEY = "soco_daromun_v3_respondent_id";
+let humanStartedTracked = false;
+let familiarityChoice = ["none","basics","data"].includes(entryFamiliarity) ? entryFamiliarity : "";
+let evidenceChoice = null;
+let scenarioChoice = null;
+let discussionChoice = null;
+let adcomChoice = null;
+let roleChoice = null;
+
+const copy = {
+  none: {
+    kicker: "YOUR STARTING POINT",
+    title: "Perfect. That’s useful to know.",
+    lede: "You do not need to know this paper yet. That’s part of the point.",
+    primer: "DAROMUN combines two tumor-targeted immunocytokines delivered intralesionally before surgery and was studied in the phase III PIVOTAL trial.",
+    cta: "Got it — give me the question →"
+  },
+  basics: {
+    kicker: "YOUR STARTING POINT",
+    title: "Great. You have enough context to have an initial take.",
+    lede: "We’ll keep the background light and get quickly to where you land.",
+    primer: null,
+    cta: "Let’s get into it →"
+  },
+  data: {
+    kicker: "YOUR STARTING POINT",
+    title: "Got it. Let’s go straight to the evidence.",
+    lede: "We’re interested in your starting interpretation before the room weighs in.",
+    primer: null,
+    cta: "Let’s get into it →"
+  }
+};
+
+function isLocalPreview(){
+  return location.protocol === "file:" ||
+         location.hostname === "localhost" ||
+         location.hostname === "127.0.0.1";
+}
+
+function makeId(){
+  if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+  return "soco-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2);
+}
+
+function respondentId(){
+  let id = "";
+  try { id = localStorage.getItem(RESPONDENT_KEY) || ""; } catch (_) {}
+  if (!id) {
+    id = makeId();
+    try { localStorage.setItem(RESPONDENT_KEY, id); } catch (_) {}
+  }
+  return id;
+}
+
+function setHidden(id, value){
+  const el = document.getElementById(id);
+  if (el) el.value = value == null ? "" : String(value);
+}
+
+function ensureStarted(){
+  let t = document.getElementById("started_at_client").value;
+  if (!t) {
+    t = new Date().toISOString();
+    setHidden("started_at_client", t);
+  }
+  return t;
+}
+
+function syncCoreHidden(){
+  setHidden("respondent_id", respondentId());
+  setHidden("campaign", campaignValue);
+  setHidden("entry_familiarity", entryFamiliarity);
+  setHidden("familiarity", familiarityChoice);
+  setHidden("evidence_compelling", evidenceChoice);
+  setHidden("clinical_scenario", scenarioChoice);
+  setHidden("discussion_priority", discussionChoice);
+  setHidden("adcom_evaluable_meaningful", adcomChoice);
+  setHidden("primary_role", roleChoice);
+}
+
+function encode(data){
+  return new URLSearchParams(data).toString();
+}
+
+async function trackEvent(eventName, step){
+  // Scanner safety: this function is called only after a deliberate human action.
+  // It is never called merely because the URL loaded.
+  const data = {
+    "form-name": "daromun-pulse-events-v3",
+    event_name: eventName,
+    respondent_id: respondentId(),
+    campaign: campaignValue,
+    entry_familiarity: familiarityChoice || entryFamiliarity || "",
+    event_at_client: new Date().toISOString(),
+    step: step || ""
+  };
+
+  if (isLocalPreview()) return;
+
+  try {
+    await fetch("/", {
+      method: "POST",
+      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      body: encode(data),
+      keepalive: true
+    });
+  } catch (_) {
+    // Funnel telemetry must never interrupt survey completion.
+  }
+}
+
+function markHumanStarted(step){
+  ensureStarted();
+  syncCoreHidden();
+  if (humanStartedTracked) return;
+  humanStartedTracked = true;
+  trackEvent("human_started", step);
+}
+
+function setParam(value){
+  const u = new URL(window.location.href);
+  u.searchParams.set("familiarity", value);
+  history.replaceState({}, "", u);
+}
+
+function clearParam(){
+  const u = new URL(window.location.href);
+  u.searchParams.delete("familiarity");
+  history.replaceState({}, "", u);
+}
+
+function renderGateway(){
+  clearParam();
+  screen.innerHTML = `
+    <section class="card">
+      <div class="kicker">LOCAL PROTOTYPE · EMAIL GATEWAY</div>
+      <h1>Before the room weighs in</h1>
+      <div class="prompt">How familiar are you with DAROMUN / PIVOTAL?</div>
+      <div class="choice-stack">
+        <button class="choice" data-f="none">→ Not familiar yet</button>
+        <button class="choice" data-f="basics">→ Familiar with the basics</button>
+        <button class="choice" data-f="data">→ Familiar with the data</button>
+      </div>
+      <div class="note"><em>Any starting point is useful.</em></div>
+      <div class="meta">Choose one to begin</div>
+    </section>
+  `;
+  screen.querySelectorAll("[data-f]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      familiarityChoice = btn.dataset.f;
+      setParam(familiarityChoice);
+      syncCoreHidden();
+      markHumanStarted("familiarity_selected_on_site");
+      renderLanding(familiarityChoice);
+    });
+  });
+}
+
+function renderLanding(f){
+  const x = copy[f] || copy.none;
+  screen.innerHTML = `
+    <section class="card">
+      <div class="progress"><span class="on"></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="kicker">${x.kicker}</div>
+      <h2>${x.title}</h2>
+      <p class="lede">${x.lede}</p>
+      ${x.primer ? `
+        <div class="primer">
+          <div class="mini">The 20-second version</div>
+          <p>${x.primer}</p>
+        </div>` : ""}
+      <button class="cta" id="continueBtn">${x.cta}</button>
+      <div class="meta">Your response is not submitted until the final screen</div>
+    </section>
+  `;
+  document.getElementById("continueBtn").addEventListener("click", () => {
+    familiarityChoice = f;
+    syncCoreHidden();
+    markHumanStarted("adaptive_intro_continue");
+    renderEvidence();
+  });
+}
+
+function renderEvidence(){
+  const answers = [
+    "Very compelling",
+    "Moderately compelling",
+    "Interesting, but not yet practice-changing",
+    "Not particularly compelling",
+    "Unsure / need to understand the data better"
+  ];
+
+  screen.innerHTML = `
+    <section class="card evidence">
+      <div class="progress"><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span></div>
+      <div class="kicker">YOUR STARTING POSITION</div>
+      <h2>How compelling do you currently find the PIVOTAL evidence?</h2>
+      <div class="choice-stack">
+        ${answers.map(a => `<button class="choice" data-evidence="${a}">${a}</button>`).join("")}
+      </div>
+      <div class="meta">Your pre-discussion starting position</div>
+    </section>
+  `;
+
+  screen.querySelectorAll("[data-evidence]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      evidenceChoice = btn.dataset.evidence;
+      syncCoreHidden();
+      trackEvent("evidence_answered", "evidence");
+      renderScenario();
+    });
+  });
+}
+
+function renderScenario(){
+  const scenarioAnswers = [
+    "DAROMUN → surgery",
+    "Neoadjuvant systemic immunotherapy → surgery",
+    "Upfront surgery",
+    "RP1 + nivolumab (when available)",
+    "I’d need more information before deciding"
+  ];
+
+  screen.innerHTML = `
+    <section class="card">
+      <div class="progress"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span></div>
+      <div class="kicker">A PATIENT IN FRONT OF YOU</div>
+      <p class="lede" style="color:var(--ink);margin-bottom:16px">
+        Resectable, injectable locoregional recurrence after prior surgery and adjuvant anti–PD-1.
+        No distant disease. Assume DAROMUN is available.
+      </p>
+      <h2 style="font-size:clamp(1.55rem,6vw,2.25rem)">What would you be most likely to recommend?</h2>
+      <div class="choice-stack">
+        ${scenarioAnswers.map(a => `<button class="choice" data-scenario="${a}">${a}</button>`).join("")}
+      </div>
+      <div class="meta">Choose the option you would be most likely to recommend</div>
+    </section>
+  `;
+
+  screen.querySelectorAll("[data-scenario]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      scenarioChoice = btn.dataset.scenario;
+      syncCoreHidden();
+      trackEvent("scenario_answered", "clinical_scenario");
+      renderDiscussionQuestion(scenarioChoice);
+    });
+  });
+}
+
+function renderDiscussionQuestion(scenarioChoice){
+  const discussionAnswers = [
+    "How DAROMUN compares with modern neoadjuvant systemic therapy",
+    "Which patients are most likely to benefit, especially after prior anti–PD-1",
+    "Whether benefit extends beyond the injected lesions",
+    "How to interpret the endpoints and durability of benefit",
+    "I need more context before deciding"
+  ];
+
+  screen.innerHTML = `
+    <section class="card">
+      <div class="progress"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></div>
+      <div class="kicker">WHAT DESERVES DISCUSSION?</div>
+      <h2 style="font-size:clamp(1.55rem,6vw,2.25rem)">What question most needs discussion?</h2>
+      <div class="choice-stack">
+        ${discussionAnswers.map(a => `<button class="choice" data-discussion="${a}">${a}</button>`).join("")}
+      </div>
+      <div class="meta">Choose the issue that matters most to your interpretation right now</div>
+    </section>
+  `;
+
+  screen.querySelectorAll("[data-discussion]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      discussionChoice = btn.dataset.discussion;
+      syncCoreHidden();
+      renderAdcomQuestion(scenarioChoice, discussionChoice);
+    });
+  });
+}
+
+function renderAdcomQuestion(scenarioChoice, discussionChoice){
+  const adcomAnswers = ["Yes", "No", "Unsure"];
+
+  screen.innerHTML = `
+    <section class="card">
+      <div class="progress"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span></div>
+      <div class="kicker">EVIDENCE INTERPRETATION</div>
+      <h2>Are the PIVOTAL efficacy results evaluable and clinically meaningful?</h2>
+
+      <div class="choice-stack" style="margin-top:18px">
+        ${adcomAnswers.map(a => `<button class="choice" data-adcom="${a}" style="text-align:center;font-size:1.05rem">${a}</button>`).join("")}
+      </div>
+
+      <div class="note" style="margin-top:18px">
+        <em>Adapted from the voting question posed at the July 2026 FDA CTGTAC meeting for RP1 + nivolumab in advanced melanoma.</em>
+      </div>
+
+      <div class="meta">Pre-discussion starting position</div>
+    </section>
+  `;
+
+  screen.querySelectorAll("[data-adcom]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      adcomChoice = btn.dataset.adcom;
+      syncCoreHidden();
+      renderRoleQuestion(
+        scenarioChoice,
+        discussionChoice,
+        adcomChoice
+      );
+    });
+  });
+}
+
+function renderRoleQuestion(scenarioChoice, discussionChoice, adcomChoice){
+  const roles = [
+    "Medical Oncology",
+    "Dermatology / Dermatologic Surgery",
+    "Surgery / ENT",
+    "Radiation Oncology",
+    "Pathology / Dermatopathology",
+    "Research / Scientist",
+    "Trainee",
+    "Industry",
+    "Other"
+  ];
+
+  screen.innerHTML = `
+    <section class="card">
+      <div class="progress"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></div>
+      <div class="kicker">WHO’S IN THE ROOM?</div>
+      <h2 style="font-size:clamp(1.5rem,5.8vw,2.15rem)">What is your primary professional role?</h2>
+
+      <div class="role-grid">
+        ${roles.map(a => `<button class="choice role-choice" data-role="${a}">${a}</button>`).join("")}
+      </div>
+
+      <div class="meta">Context only — not another test</div>
+    </section>
+  `;
+
+  screen.querySelectorAll("[data-role]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      roleChoice = btn.dataset.role;
+      syncCoreHidden();
+      renderFinalContribution(
+        scenarioChoice,
+        discussionChoice,
+        adcomChoice,
+        roleChoice
+      );
+    });
+  });
+}
+
+function renderFinalContribution(scenarioChoice, discussionChoice, adcomChoice, roleChoice){
+  screen.innerHTML = `
+    <section class="card">
+      <div class="kicker">ONE QUESTION FOR THE ROOM</div>
+      <h2 style="font-size:clamp(1.45rem,5.6vw,2.05rem);margin-bottom:10px">
+        What do you most want the group—or the investigators—to address?
+      </h2>
+      <p class="note" style="margin:0 0 14px"><em>Optional. One sentence is plenty.</em></p>
+
+      <textarea id="roomQuestion" class="text-input text-area"
+        rows="3"
+        placeholder="Your question or concern..."></textarea>
+
+      <div class="field-label">Name <span>(optional)</span></div>
+      <p class="note" style="margin:4px 0 9px"><em>Leave blank to stay anonymous.</em></p>
+      <input id="nameField" class="text-input" type="text" autocomplete="name"
+        placeholder="Your name">
+
+      <button class="cta" id="submitBtn" style="margin-top:16px">
+        Submit my starting position →
+      </button>
+
+      <div class="meta"><span id="submitStatus">Your response will be saved when you submit</span></div>
+    </section>
+  `;
+
+  document.getElementById("submitBtn").addEventListener("click", () => {
+    submitSurvey({
+      scenarioChoice,
+      discussionChoice,
+      adcomChoice,
+      roleChoice
+    });
+  });
+}
+
+async function submitSurvey(x){
+  const button = document.getElementById("submitBtn");
+  const status = document.getElementById("submitStatus");
+  const roomQuestion = document.getElementById("roomQuestion").value.trim();
+  const name = document.getElementById("nameField").value.trim();
+
+  setHidden("question_for_room", roomQuestion);
+  setHidden("name_final", name);
+  syncCoreHidden();
+
+  const started = new Date(ensureStarted());
+  const done = new Date();
+  setHidden("completed_at_client", done.toISOString());
+  setHidden(
+    "elapsed_seconds",
+    Number.isFinite(started.getTime()) ? Math.max(0, Math.round((done - started) / 1000)) : ""
+  );
+
+  button.disabled = true;
+  button.textContent = "Saving…";
+  status.textContent = isLocalPreview()
+    ? "Local preview — simulating successful submission"
+    : "Saving your starting position…";
+
+  const data = new FormData(surveyForm);
+  const body = new URLSearchParams();
+  for (const [k,v] of data.entries()) body.append(k, v);
+
+  try {
+    if (!isLocalPreview()) {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: body.toString()
+      });
+      if (!response.ok) throw new Error("Netlify returned " + response.status);
+    }
+
+    await trackEvent("survey_completed", "complete");
+
+    renderReceipt({
+      ...x,
+      roomQuestion,
+      name
+    });
+  } catch (err) {
+    console.error(err);
+    button.disabled = false;
+    button.textContent = "Submit my starting position →";
+    status.textContent = "We couldn’t save that yet. Please try once more.";
+  }
+}
+
+function renderReceipt(x){
+  const first = x.name ? x.name.split(/\s+/)[0] : "";
+  const heading = first ? `Thanks, ${escapeHtml(first)}.` : "Your starting position is now part of the room.";
+
+  screen.innerHTML = `
+    <section class="card">
+      <div class="kicker">YOU’RE IN.</div>
+      <h2>${heading}</h2>
+      <p class="lede">
+        ${first ? "Your starting position is now part of the room. " : ""}
+        We’ll open Journal Club with where everyone started—and see whether the discussion moves us.
+      </p>
+
+      <div class="receipt-grid">
+        <div>
+          <small>Evidence</small>
+          <strong>${escapeHtml(evidenceChoice)}</strong>
+        </div>
+        <div>
+          <small>Clinical choice</small>
+          <strong>${escapeHtml(x.scenarioChoice)}</strong>
+        </div>
+        <div>
+          <small>Evidence vote</small>
+          <strong>${escapeHtml(x.adcomChoice)}</strong>
+        </div>
+      </div>
+
+      <div class="meta" style="margin-top:18px">
+        ${isLocalPreview()
+          ? "Local preview complete · no data were transmitted"
+          : "Response saved"}
+      </div>
+    </section>
+  `;
+}
+
+function escapeHtml(value){
+  return String(value || "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+resetBtn.addEventListener("click", () => {
+  evidenceChoice = null;
+  scenarioChoice = null;
+  discussionChoice = null;
+  adcomChoice = null;
+  roleChoice = null;
+  familiarityChoice = "";
+  syncCoreHidden();
+  renderGateway();
+});
+
+syncCoreHidden();
+
+const initial = ["none","basics","data"].includes(entryFamiliarity) ? entryFamiliarity : "";
+if (initial) {
+  familiarityChoice = initial;
+  syncCoreHidden();
+  renderLanding(initial);
+} else {
+  renderGateway();
+}
+</script>
+
+```
+
