@@ -161,10 +161,14 @@ h2{font-size:clamp(1.65rem,7vw,2.55rem);margin-bottom:13px}
   cursor:pointer;
   box-shadow:0 5px 18px rgba(16,42,53,.04);
 }
-.choice:hover,.choice:focus-visible{
+/* Do not visually highlight answer buttons merely because a stationary pointer
+   happens to be over them after a screen transition. That can look like a
+   preselected response. Preserve a clear keyboard-only focus treatment. */
+.choice:focus-visible{
   border-color:rgba(31,116,117,.55);
   background:var(--soft);
-  outline:none;
+  outline:3px solid rgba(31,116,117,.18);
+  outline-offset:2px;
 }
 .note{
   margin:15px 2px 0;
