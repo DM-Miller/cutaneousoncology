@@ -1,6 +1,15 @@
 project:
   type: website
 
+  render:
+    - "*.qmd"
+    - "journal_club/**/*.qmd"
+    - "research_forum/**/*.qmd"
+    - "slides/**/*.qmd"
+    - "old versions/**/*.qmd"
+    - "!data/**"
+    - "!workflows/**"
+
 website:
   title: "Society of Cutaneous Oncology"
   site-url: https://societyofcutaneousoncology.org

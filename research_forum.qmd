@@ -8,6 +8,8 @@ listing:
   - id: SoCO_Research_Forum
     contents:
       - "research_forum/**/index.qmd"
+      - "!data/**"
+      - "!workflows/**"
     sort: "date desc"
     type: default
     categories: false

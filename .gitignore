@@ -9,3 +9,32 @@
 
 **/*.quarto_ipynb
 *.mp4
+
+
+# SoCO operational data: local/private, never commit
+/data/
+
+# Generated operational outputs
+/survey_build/
+/_freeze/
+
+# Private and generated workflow data
+workflows/**/data/raw_private/
+workflows/**/data/working_private/
+workflows/**/data/processed_private/
+workflows/**/data/netlify_private/
+workflows/**/outputs/
+
+# Generated migration documentation
+workflows/migration_history/generated_readme_renders/
+workflows/migration_history/local_artifacts/
+
+# Microsoft Office temporary lock files
+~$*
+
+
+
+# Local SoCO operational system
+/workflows/
+/START_HERE_SOCO_OPERATIONS.md
+/templates/
