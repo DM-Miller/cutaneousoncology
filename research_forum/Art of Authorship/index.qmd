@@ -2,7 +2,7 @@
 title: "The Art of Authorship"
 description: "Who Gets on the Paper? Guidelines, Culture, and the Reality of Scientific Publishing."
 image: image.png
-pagetitle: "Proposed Meeting: The Art of Authorship — Who Gets on the Paper? | Society of Cutaneous Oncology"
+pagetitle: "The Art of Authorship — Who Gets on the Paper? | Society of Cutaneous Oncology"
 format:
   html:
     page-layout: full
@@ -16,7 +16,7 @@ execute:
 ---
 
 ```{=html}
-<!-- SoCO ART OF AUTHORSHIP · MODULES 1–3 REFINED + NETLIFY FEEDBACK VERSION 2026-08-26 -->
+<!-- SoCO ART OF AUTHORSHIP · RESEARCH WORKSHOP · OCTOBER 28, 2026 -->
 <style type="text/css">
 :root {
   --soco-navy: #041b33;
@@ -31,7 +31,7 @@ execute:
   --soco-white: #ffffff;
 }
 
-/* Companion styling to the SoCO "Inside the Review Room" proposed-meeting page. */
+/* Companion styling to the SoCO Research Workshop pages. */
 body {
   background: var(--soco-surface);
   color: var(--soco-ink);
@@ -873,7 +873,7 @@ main.content {
 }
 
 
-/* Proposed-meeting feedback drawer -------------------------------------- */
+/* Workshop feedback drawer --------------------------------------------- */
 .soco-feedback-wrap {
   margin: 2rem 0 0;
 }
@@ -1093,7 +1093,7 @@ main.content {
 <div class="soco-reg-hero">
   <div class="soco-reg-hero-inner">
     <div class="soco-reg-eyebrow">
-      <p>Society of Cutaneous Oncology · Proposed Meeting · Fall 2026</p>
+      <p>Society of Cutaneous Oncology · Research Workshop · October 28, 2026 · 3:30–5:00 PM ET</p>
     </div>
 
     <h1 id="the-art-of-authorship">The Art of Authorship</h1>
@@ -1105,7 +1105,7 @@ main.content {
       </p>
 
       <p class="soco-reg-deck">
-        A proposed 90-minute, multi-stakeholder Research Forum on how authorship decisions are actually made — and why real-world practice can diverge from established standards.
+        A 90-minute, multi-stakeholder Research Workshop using cases, survey data, and open discussion to examine how authorship decisions are actually made — and why real-world practice can diverge from established standards.
       </p>
     </div>
 
@@ -1134,13 +1134,13 @@ main.content {
     <p>If the rules are relatively clear, why does authorship in the real world so often look different?</p>
   </div>
 
-  <p>This forum would focus on that <strong>gap between standards and practice</strong>: how authorship decisions are actually made, what pressures shape them, where legitimate ambiguity exists, and how different stakeholders see the same problem.</p>
+  <p>This workshop will focus on that <strong>gap between standards and practice</strong>: how authorship decisions are actually made, what pressures shape them, where legitimate ambiguity exists, and how different stakeholders see the same problem.</p>
 </section>
 
 <div class="soco-reg-grid-3">
   <div class="soco-reg-mini">
     <div class="soco-reg-mini-label"><p>Format</p></div>
-    <div class="soco-reg-mini-value"><p>Structured, moderator-led open forum</p></div>
+    <div class="soco-reg-mini-value"><p>Structured, moderator-led Research Workshop</p></div>
   </div>
 
   <div class="soco-reg-mini">
@@ -1208,7 +1208,7 @@ main.content {
 </section>
 
 <section id="goals" class="soco-reg-card">
-  <h2>Goals of the forum</h2>
+  <h2>Goals of the workshop</h2>
 
   <div class="soco-reg-grid-2">
     <div class="soco-reg-stakeholder">
@@ -1233,40 +1233,45 @@ main.content {
   </div>
 </section>
 
-<section id="testing-the-premise" class="soco-reg-card">
-  <h2>Testing the premise</h2>
+<section id="discussion-architecture" class="soco-reg-card">
+  <h2>Discussion architecture</h2>
 
-  <p>The survey, cases, and conjectures would not function as separate parts of the meeting. They would work together as a repeated discussion structure.</p>
+  <p>The workshop would be organized around a small number of recurring authorship tensions rather than a catalogue of edge cases. For each module, one or two participants would be asked in advance to react first — ideally pairing an academic perspective with an industry, publication, or editorial perspective. They would not give presentations; their role would be to help open the discussion before it moves to the broader group.</p>
 
   <div class="soco-reg-callout">
-    <strong>The basic rhythm:</strong> present a case → live vote → reveal the related survey result → discuss why people answered differently → identify the principle or pressure driving the disagreement.
+    <strong>The basic rhythm:</strong> present the case → live vote → reveal the related survey result → hear two contrasting first reactions → open the discussion → identify the principle or pressure driving the disagreement.
   </div>
 
-  <p>A short anonymous survey would go to all stakeholder groups before the meeting, using a common core with role-specific branching. Case-specific results would be held back and revealed during the corresponding discussion rather than presented all at once.</p>
+  <!-- ORGANIZER-ONLY WORKING DISCUSSION ANCHORS — DO NOT RENDER PUBLICLY UNTIL INVITATIONS ARE CONFIRMED
+  Module 1 · Invited expert + buried contributor: Frank Worden (academic target); Howard Kaufman (industry, confirmed).
+  Module 2 · Clinically involved investigator: Lisa Zaba (lead target); Aubri McAvoy (secondary).
+  Module 3 · Clinical-trial authorship: Beth Bookbinder (academic target); Leon Sakkal, BMS (industry target).
+  Module 4 · Delphi / gray zone + editor synthesis: Vishal Patel; Adai Adamson.
+
+  Broader discussion / invite pool: Ryan Sullivan; Ahmed Naim (Sun Pharma); Matt Fury; Nick Squitieri; Kunal Patel; Susan Buchanan (Regeneron); Rhonica Whitaker (Regeneron); Andrew Wolfa (Regeneron).
+  -->
 
   <div class="soco-reg-conjecture">
     <div class="kicker">Umbrella conjecture</div>
     <strong>Authorship criteria are understood better than they are followed.</strong>
-    <p>The question for the forum is why: ambiguity, incentives, hierarchy, habit, different ideas about contribution, or something else.</p>
+    <p>The question for the workshop is why: ambiguity, incentives, hierarchy, habit, different ideas about contribution, or something else.</p>
   </div>
 
   <div class="soco-reg-act">
-    <p><small>Discussion module 1</small> <strong>Why are we on the paper?</strong></p>
+    <p><small>Discussion module 1</small> <strong>Credit, credibility, and the person who actually did the work</strong></p>
   </div>
 
   <section class="soco-reg-question-group">
-    <h3>Case · The invited expert</h3>
-    <p>A recognized disease expert receives a nearly completed abstract or manuscript from a collaborative group or sponsor and is invited to review it and join the author list. The expert did not participate in study design, conduct, analysis, or the initial interpretation of results.</p>
-    <p><strong>Conjecture:</strong> Authorship can be driven as much by legitimacy, professional incentive, and social norms as by scientific contribution.</p>
-    <p class="soco-reg-note">Publication groups may seek recognized investigators whose names lend credibility to the work, while investigators may be more willing to accept authorship when it is professionally advantageous and when respected peers appear to be doing the same.</p>
-    <p><strong>Survey signal:</strong> Have you ever been invited to join a paper when you felt your contribution might not justify authorship? Have you accepted because authorship was professionally valuable, because respected colleagues were already on the paper, or because the invitation felt like part of the normal publication process?</p>
+    <h3>Case · The invited thought leader</h3>
+    <p>A recognized disease expert receives a nearly completed abstract or manuscript from a collaborative group or sponsor and is invited to review it and join the author list. The expert did not participate in study design, conduct, analysis, or the initial interpretation of results. At the same time, another contributor — perhaps an industry scientist, CRO researcher, statistician, writer, or junior investigator — has done substantial day-to-day intellectual work but is positioned much less prominently on the byline.</p>
+    <p><strong>Conjecture:</strong> Authorship can be shaped by credibility, visibility, affiliation, and professional incentives as well as by the work itself.</p>
+    <p><strong>Survey signal:</strong> Have you ever been invited onto a nearly completed paper? Have you seen author order fail to reflect who actually led the analysis or writing? Does the identity or affiliation of the contributor change how the same work is valued?</p>
     <ul>
-      <li>Author, not author, or depends?</li>
-      <li>Why was this person invited — scientific contribution, expertise, credibility, relationships, or some combination?</li>
-      <li>Why might the investigator say yes?</li>
-      <li>Does seeing respected colleagues on the author list make the invitation feel more legitimate?</li>
-      <li>At what point does a recurring practice become a norm even when it sits uneasily with formal authorship criteria?</li>
-      <li>Who has an incentive to interrupt that cycle?</li>
+      <li>Can a late-invited expert legitimately earn authorship through substantive interpretation and revision, or is the invitation itself the problem?</li>
+      <li>What does first authorship actually signify: analytic leadership, writing leadership, scientific leadership, public responsibility, or some combination?</li>
+      <li>When does adding a recognized expert improve the science, and when does it primarily add legitimacy or visibility?</li>
+      <li>Would the contributor who did much of the work be credited differently if they were an academic investigator rather than an industry scientist, CRO researcher, statistician, or writer?</li>
+      <li>Does a transparent contributorship statement solve the problem if professional credit still follows the byline and author order?</li>
     </ul>
   </section>
 
@@ -1279,62 +1284,65 @@ main.content {
     <p>An investigator cared for patients included in a retrospective or prospective study, helped identify or enroll participants, and provided access to data or specimens, but had limited involvement in study design, analysis, interpretation, or manuscript development.</p>
     <p><strong>Conjecture:</strong> Clinical contribution and intellectual contribution are not the same thing — but in collaborative research, the boundary between them can be genuinely difficult to draw.</p>
     <p class="soco-reg-note">An investigator may be essential to making the research possible — identifying and caring for patients, enrolling participants, providing data or specimens — without having shaped the study question, analysis, interpretation, or manuscript. The harder question is whether being essential to the research is the same as qualifying for authorship.</p>
-    <p><strong>Survey signal:</strong> Which contributions do you believe should count toward authorship: patient care, patient identification or enrollment, providing access to data or specimens, site leadership, data acquisition, interpretation, manuscript development, or some combination?</p>
+    <p><strong>Survey signal:</strong> Which contributions should count toward authorship: patient care, patient identification or enrollment, providing access to data or specimens, site leadership, data acquisition, interpretation, manuscript development, or some combination?</p>
     <ul>
-      <li>Which of these contributions are sufficient for authorship, and which should be recognized another way?</li>
-      <li>Does being essential to the creation of the dataset make someone an author?</li>
-      <li>Should a clinically important contributor be offered the opportunity to make the additional contributions needed for authorship?</li>
-      <li>Does the answer change for a clinical trial, retrospective study, registry, or translational project?</li>
+      <li>Which clinical contributions are sufficient for authorship, and which should be recognized another way?</li>
+      <li>Does being essential to creating the dataset make someone an author?</li>
+      <li>Should a clinically important collaborator be offered the opportunity to make the additional contributions needed for authorship?</li>
+      <li>Does the answer change for a retrospective study, prospective cohort, registry, translational project, or clinical trial?</li>
       <li>Is there a meaningful distinction between contributing to the research and contributing to the paper?</li>
+      <li>When you are leading a clinical project, how do you decide which investigators and clinical collaborators belong on the paper?</li>
     </ul>
   </section>
 
   <div class="soco-reg-act">
-    <p><small>Discussion module 3</small> <strong>Who really led the work?</strong></p>
+    <p><small>Discussion module 3</small> <strong>Who gets on the clinical trial paper?</strong></p>
   </div>
 
   <section class="soco-reg-question-group">
-    <h3>Case · The buried lead contributor</h3>
-    <p>A researcher at a contract research organization does much of the day-to-day intellectual work on a study: helps shape the analysis, works through the data, develops figures and tables, drafts substantial portions of the manuscript, and coordinates revisions. An academic investigator provides important disease expertise and interpretation but does not lead the analysis or writing. The academic investigator is listed first; the CRO researcher appears further down the author list.</p>
-    <p><strong>Conjecture:</strong> Authorship order does not always reflect who actually led the work; status, affiliation, and expectations about who should “front” a publication can shape the byline.</p>
-    <p class="soco-reg-note">In industry-sponsored and contracted research, the people doing much of the analytic, organizational, and writing work may be less visible on the byline, while a recognizable academic investigator is positioned more prominently because that is how the publication is expected to look.</p>
-    <p><strong>Survey signal:</strong> Have you seen first authorship or author order fail to reflect who actually led the work? Would the same contribution be credited differently if it came from an academic investigator rather than a CRO researcher, industry scientist, statistician, or writer?</p>
+    <h3>Case · The multidisciplinary trial</h3>
+    <p>A multicenter clinical trial depends on several kinds of expertise. Medical oncologists lead the regulatory work, protocol development, systemic therapy, and much of the trial infrastructure. Surgeons perform a key intervention and contribute clinically important expertise to the treatment paradigm, but successful systemic therapy may reduce the number of operations they ultimately perform. When the primary paper is assembled, the medical oncology investigators receive the most prominent authorship positions while an important surgical contributor is not included.</p>
+    <p><strong>Conjecture:</strong> In clinical trials, the work that is easiest to count — protocol leadership, accrual, regulatory responsibility, or manuscript development — may not capture every contribution that is essential to the scientific question or treatment paradigm.</p>
+    <p><strong>Survey signal:</strong> In a multicenter trial, what should drive inclusion and author order: protocol leadership, study conception, site leadership, accrual, performance of a key procedure, data interpretation, manuscript work, steering-committee role, or some combination?</p>
     <ul>
-      <li>Who actually led this work?</li>
-      <li>What should first authorship represent?</li>
-      <li>Would the author order look the same if the lead contributor worked at an academic institution rather than a CRO?</li>
-      <li>How much should affiliation, status, or perceived credibility influence author order?</li>
-      <li>Is it acceptable for the academic investigator to be first author if they provide important clinical interpretation and take public responsibility for the paper?</li>
-      <li>At what point does the byline become misleading even if everyone listed legitimately qualifies for authorship?</li>
-      <li>Does contributorship transparency solve the problem if most professional credit still follows author order?</li>
+      <li>When should authorship expectations be established — protocol development, site activation, database lock, or manuscript planning?</li>
+      <li>How should multidisciplinary contributions be valued when one component of the treatment strategy reduces the amount of another specialist's procedural work?</li>
+      <li>Should site accrual be a threshold for authorship, a tiebreaker, or largely irrelevant once someone has made another substantive contribution?</li>
+      <li>How should sponsors balance predefined publication plans with contributions that emerge during conduct, analysis, and interpretation?</li>
+      <li>If 40 people legitimately qualify, is there any meaningful reason not to include 60 or 80 if they also qualify? What is gained or lost as the byline expands?</li>
+      <li>Do considerations such as goodwill, future collaboration, representation across sites or specialties, and investigator engagement have a legitimate place in authorship decisions?</li>
+      <li>At what point does a very large author list make individual accountability less meaningful — and is group authorship or a collaborator appendix a better solution?</li>
     </ul>
   </section>
 
   <div class="soco-reg-act">
-    <p><small>Discussion module 4</small> <strong>Where is the gray zone?</strong></p>
+    <p><small>Discussion module 4</small> <strong>Where is the genuine gray zone?</strong></p>
   </div>
 
   <section class="soco-reg-question-group">
     <h3>Case · The Delphi survey</h3>
     <p>A Delphi study asks a group of experts to participate in multiple survey rounds and help establish consensus recommendations. A smaller investigator group designed the study, developed the survey, analyzed and interpreted the results, and drafted the manuscript.</p>
-    <p><strong>Conjecture:</strong> Not every difficult authorship decision represents misconduct, and transparency alone may not resolve genuine ambiguity.</p>
+    <p><strong>Conjecture:</strong> Not every difficult authorship decision represents misconduct. Some disagreements reflect genuinely different views of what constitutes sufficient intellectual contribution.</p>
     <p><strong>Survey signal:</strong> Does participation in a Delphi process itself warrant authorship? Should every participant be an author, or only those who also contribute to design, interpretation, and manuscript development?</p>
     <ul>
-      <li>Does the answer change if participants substantially shape the questions or recommendations across rounds?</li>
+      <li>Does the answer change if participants substantially reshape the questions or recommendations across rounds?</li>
+      <li>Is intellectual participation in consensus formation meaningfully different from simply supplying data?</li>
       <li>How should meaningful participation that falls short of authorship be recognized?</li>
       <li>Would a detailed contributorship statement settle the question, or simply make the disagreement more visible?</li>
     </ul>
   </section>
 
-  <p class="soco-reg-note">To keep the discussion moving, one or two participants could be told in advance that they may be asked to react first to a particular case. They would not give presentations; their role would simply be to help open the discussion before it moves to the broader group.</p>
+  <div class="soco-reg-callout">
+    <strong>Editor reaction:</strong> After the four cases, journal editors would be invited to react across them: what would concern an editor, what contribution statements can and cannot solve, when journals should challenge an author list, and which problems properly belong to the author group or institution rather than the journal.
+  </div>
 
   <div class="soco-reg-callout">
-    <strong>Ground rule:</strong> This would not be a forum for naming individuals, companies, journals, or adjudicating prior authorship disputes. Cases would be anonymized or constructed from recurring situations, with the discussion focused on why these situations arise and how they might be handled better.
+    <strong>Ground rule:</strong> This would not be a workshop for naming individuals, companies, journals, or adjudicating prior authorship disputes. Cases would be anonymized or constructed from recurring situations, with the discussion focused on why these situations arise and how they might be handled better.
   </div>
 </section>
 
 <section id="agenda" class="soco-reg-card">
-  <h2>Proposed 90-minute agenda</h2>
+  <h2>90-minute agenda</h2>
 
   <div class="soco-reg-act">
     <p><small>Act I · approximately 15 minutes</small> <strong>Set the Table</strong></p>
@@ -1347,42 +1355,42 @@ main.content {
   ICMJE, COPE, contributorship, and the distinction between ghost authorship and guest/gift/honorary authorship. Enough shared vocabulary to participate — no ethics lecture.</p>
 
   <p><strong><span class="soco-reg-time">10–15 min</span> A first look at the survey</strong><br />
-  Two or three high-level findings about authorship experience and when authorship decisions are made. Case-specific results are held back for Act II.</p>
+  Two or three high-level findings about authorship experience and when authorship decisions are made. Case-specific results are held back for the corresponding discussions.</p>
 
   <div class="soco-reg-act">
-    <p><small>Act II · approximately 50 minutes</small> <strong>Test It in Practice</strong></p>
+    <p><small>Act II · approximately 58 minutes</small> <strong>Test It in Practice</strong></p>
   </div>
 
-  <p><strong><span class="soco-reg-time">15–27 min</span> Module 1 · Why are we on the paper?</strong><br />
-  The invited expert. Case → live vote → related survey result → discussion.</p>
+  <p><strong><span class="soco-reg-time">15–29 min</span> Module 1 · Credit, credibility, and who did the work</strong><br />
+  The invited thought leader and the less-visible lead contributor. Case → live vote → survey result → paired reactions → discussion.</p>
 
-  <p><strong><span class="soco-reg-time">27–39 min</span> Module 2 · What counts as contribution?</strong><br />
-  The clinically involved investigator. Case → live vote → related survey result → discussion.</p>
+  <p><strong><span class="soco-reg-time">29–43 min</span> Module 2 · What counts as contribution?</strong><br />
+  The clinically involved investigator. Patient care, enrollment, data and specimens, clinical collaboration, and the boundary between enabling research and qualifying for authorship.</p>
 
-  <p><strong><span class="soco-reg-time">39–51 min</span> Module 3 · Who really led the work?</strong><br />
-  The buried lead contributor. Case → live vote → related survey result → discussion.</p>
+  <p><strong><span class="soco-reg-time">43–59 min</span> Module 3 · Who gets on the clinical trial paper?</strong><br />
+  The multidisciplinary trial. Protocol leadership, accrual, specialty contribution, author-list size, goodwill, and accountability.</p>
 
-  <p><strong><span class="soco-reg-time">51–65 min</span> Module 4 · Where is the gray zone?</strong><br />
-  The Delphi survey. Case → live vote → related survey result → discussion.</p>
+  <p><strong><span class="soco-reg-time">59–73 min</span> Module 4 · Where is the genuine gray zone?</strong><br />
+  The Delphi survey. Participation, intellectual contribution, consensus formation, and alternative forms of recognition.</p>
 
   <div class="soco-reg-act">
-    <p><small>Act III · approximately 25 minutes</small> <strong>What Survives?</strong></p>
+    <p><small>Act III · approximately 17 minutes</small> <strong>What Survives?</strong></p>
   </div>
 
-  <p><strong><span class="soco-reg-time">65–77 min</span> Conjectures and refutations</strong><br />
-  Return to the working conjectures after hearing the cases and the room. Which survive? Which need to be revised? Which were wrong?</p>
+  <p><strong><span class="soco-reg-time">73–81 min</span> Editor reaction across the cases</strong><br />
+  What would raise concern? What can contributorship statements solve? When should a journal intervene, and when is the problem outside the journal's remit?</p>
 
-  <p><strong><span class="soco-reg-time">77–86 min</span> What should change?</strong><br />
-  Prospective authorship discussions, contribution tracking, recognition of important non-author contributions, late invitations, declining authorship, and the responsibilities of lead authors, journals, sponsors, and institutions.</p>
+  <p><strong><span class="soco-reg-time">81–88 min</span> What should change?</strong><br />
+  Prospective authorship discussions, contribution tracking, recognition of important non-author contributions, multidisciplinary trial planning, late invitations, declining authorship, and the responsibilities of lead authors, journals, sponsors, and institutions.</p>
 
-  <p><strong><span class="soco-reg-time">86–90 min</span> Closing question</strong><br />
+  <p><strong><span class="soco-reg-time">88–90 min</span> Closing question</strong><br />
   What is one thing we should do differently after this conversation?</p>
 </section>
 
 <section id="additional-cases" class="soco-reg-card">
   <h2>Additional cases we may draw from</h2>
 
-  <p>The meeting will probably only have time for four core cases. These additional scenarios could be substituted based on survey findings or held in reserve if the discussion moves quickly.</p>
+  <p>The workshop will focus on four core cases. These additional scenarios could be substituted based on survey findings or held in reserve if the discussion moves quickly.</p>
   <p class="soco-reg-collapse-note">Expand a case to see the scenario and discussion prompts.</p>
 
   <details class="soco-reg-collapse">
@@ -1546,17 +1554,17 @@ main.content {
 <section id="potential-output" class="soco-reg-card">
   <h2>Potential scholarly output</h2>
 
-  <p>The forum could also serve as the foundation for a <strong>multi-stakeholder perspective on authorship in contemporary oncology</strong>. The aim would not be to publish another generic summary of existing criteria. Rather, the perspective could synthesize:</p>
+  <p>The workshop could also serve as the foundation for a <strong>multi-stakeholder perspective on authorship in contemporary oncology</strong>. The aim would not be to publish another generic summary of existing criteria. Rather, the perspective could synthesize:</p>
 
   <ul>
     <li>the existing authorship framework and prior scholarship;</li>
     <li>contemporary experiences captured through the SoCO survey;</li>
-    <li>points of agreement and disagreement exposed during the Research Forum;</li>
+    <li>points of agreement and disagreement exposed during the Research Workshop;</li>
     <li>the pressures unique to modern academic–industry and multicenter collaborative research; and</li>
     <li>practical principles for aligning contribution, credit, transparency, and accountability.</li>
   </ul>
 
-  <p>The paper should probably follow the same principle it argues for: authorship based on meaningful contribution across the groups represented in the forum.</p>
+  <p>The paper should probably follow the same principle it argues for: authorship based on meaningful contribution across the groups represented in the workshop.</p>
 
   <div class="soco-reg-quote">
     <p>The question is less who is getting authorship “right” or “wrong” than why these decisions vary so much in practice — and whether we can do better.</p>
@@ -1568,15 +1576,15 @@ main.content {
   <details class="soco-feedback-drawer">
     <summary>
       <span class="soco-feedback-summary-copy">
-        <span class="soco-feedback-summary-kicker">Help shape the forum</span>
-        <span class="soco-feedback-summary-title">Share your thoughts about this proposed meeting</span>
+        <span class="soco-feedback-summary-kicker">Help shape the workshop</span>
+        <span class="soco-feedback-summary-title">Share your thoughts about this workshop</span>
       </span>
     </summary>
 
     <div class="soco-feedback-inner">
       <h2>What are we missing?</h2>
 
-      <p class="soco-feedback-intro">This is still a proposed meeting concept. If the topic resonates — or if you think we are overlooking an important issue, perspective, or case — we would value your input.</p>
+      <p class="soco-feedback-intro">The workshop is scheduled for October 28, 2026. If you think we are overlooking an important issue, perspective, or case, we would value your input.</p>
 
       <form
         class="soco-feedback-form"
@@ -1630,7 +1638,7 @@ main.content {
 
         <div class="soco-feedback-choice">
           <input id="soco-feedback-attend" name="interested_in_attending" type="checkbox" value="Yes">
-          <label for="soco-feedback-attend">Yes, I would be interested in attending this Research Forum.</label>
+          <label for="soco-feedback-attend">Yes, I would be interested in attending this Research Workshop.</label>
         </div>
 
         <div class="soco-feedback-field">
@@ -1639,7 +1647,7 @@ main.content {
             id="soco-feedback-missing"
             name="topics_or_issues_to_add"
             maxlength="3000"
-            placeholder="A case, question, stakeholder perspective, authorship problem, or issue that is not yet reflected in the proposal..."
+            placeholder="A case, question, stakeholder perspective, authorship problem, or issue we should be sure to address..."
           ></textarea>
           <div class="soco-feedback-help">A few sentences is plenty.</div>
         </div>
@@ -1658,7 +1666,7 @@ main.content {
 
         <div id="soco-feedback-status" class="soco-feedback-status" role="status" aria-live="polite"></div>
 
-        <p class="soco-feedback-privacy">Your name and email are required so that feedback comes from an identifiable member of the scientific community and so we can follow up if helpful. Your response will be shared with the Society of Cutaneous Oncology team and used to help shape the proposed meeting.</p>
+        <p class="soco-feedback-privacy">Your name and email are required so that feedback comes from an identifiable member of the scientific community and so we can follow up if helpful. Your response will be shared with the Society of Cutaneous Oncology team and used to help shape the workshop.</p>
       </form>
     </div>
   </details>

@@ -308,12 +308,12 @@ toc: false
   }
 
   .soco-jc-next-card::after {
-    content: "?";
+    content: "09.25";
     position: absolute;
     right: 1.6rem;
     bottom: -2.8rem;
     color: rgba(15,127,134,0.055);
-    font-size: clamp(9rem, 20vw, 17rem);
+    font-size: clamp(6rem, 14vw, 11rem);
     font-weight: 850;
     line-height: 1;
     pointer-events: none;
@@ -889,13 +889,19 @@ Beginning with selected meetings in late 2025 and continuing in 2026, we are als
 Coming next
 :::
 
-## The next Journal Club paper is still TBD.
+## Neoadjuvant intralesional Daromun in resectable melanoma
 
-We have not picked the next article yet—and that is part of the fun. The next discussion will be posted here once the paper is selected, with the same focus on evidence, uncertainty, clinical relevance, and the questions that deserve a room full of thoughtful people.
+**Friday, September 25, 2026 · 3:30 PM ET**
+
+We will discuss Hauschild and colleagues’ updated report from the randomized phase III PIVOTAL trial of intralesional Daromun (L19IL2/L19TNF) followed by surgery versus up-front surgery in resectable, locally advanced melanoma. Beyond the reported recurrence-free survival benefit, we will examine the trial population, choice and timing of end points, post hoc event-free survival analyses, safety, and how strongly these results should influence practice in a rapidly evolving neoadjuvant treatment landscape.
+
+::: {.soco-jc-links}
+[Read the article](https://doi.org/10.1200/JCO-26-00852){.soco-jc-link}
+:::
 
 <div class="soco-jc-next-status">
   <span class="soco-jc-next-dot"></span>
-  Article selection in progress
+  Meeting scheduled · September 25 at 3:30 PM ET
 </div>
 
 :::::

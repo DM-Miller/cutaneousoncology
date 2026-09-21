@@ -1,11 +1,11 @@
 ---
-title: "Research Forum"
-pagetitle: "Research Forum | Society of Cutaneous Oncology"
+title: "Research Workshop"
+pagetitle: "Research Workshop | Society of Cutaneous Oncology"
 page-layout: full
 title-block-banner: false
 toc: false
 listing:
-  - id: SoCO_Research_Forum
+  - id: SoCO_Research_Workshop
     contents:
       - "research_forum/**/index.qmd"
       - "!data/**"
@@ -22,15 +22,15 @@ listing:
 :::: {.soco-forum-hero-copy}
 
 ::: {.soco-eyebrow}
-SoCO Research Forum
+SoCO Research Workshop
 :::
 
 # Bring the work before it’s finished.
 
-The Research Forum is a recurring multidisciplinary space for investigators to present work in progress, challenge assumptions, refine methods, and develop collaborative projects across cutaneous oncology.
+The Research Workshop is a recurring multidisciplinary space for investigators to bring forward work in progress, challenge assumptions, refine methods, and develop collaborative projects across cutaneous oncology.
 
 ::: {.soco-actions}
-[Proposed meetings](#proposed-meetings){.btn .btn-primary}
+[Upcoming workshop](#upcoming-workshop){.btn .btn-primary}
 [Explore presentations](#presentations){.btn .btn-outline-primary}
 [Journal Club](jc.qmd){.btn .btn-outline-primary}
 :::
@@ -42,14 +42,14 @@ The Research Forum is a recurring multidisciplinary space for investigators to p
 ::: {.soco-section .soco-forum-intro}
 
 ::: {.soco-eyebrow}
-Why the Forum exists
+Why the Workshop exists
 :::
 
 ## Good science gets better through criticism.
 
 Many clinical investigators first receive sustained criticism only after a study has been designed, analyzed, and written.
 
-The Research Forum creates space to bring ideas forward **while there is still time to change them**—from an early clinical question or trial concept to preliminary analyses, methodological problems, and mature projects seeking broader multidisciplinary input.
+The Research Workshop creates space to bring ideas forward **while there is still time to change them**—from an early clinical question or trial concept to preliminary analyses, methodological problems, and mature projects seeking broader multidisciplinary input.
 
 The goal is not simply to present work. It is to make the work better.
 
@@ -91,7 +91,7 @@ The working principle
 
 ## Our best ideas deserve our colleagues’ best criticism.
 
-Research Forum presentations may include **new study concepts, trial designs, preliminary data, statistical or methodological questions, reproducibility challenges, data-sharing opportunities, and collaborative projects** across the spectrum of cutaneous oncology.
+Research Workshop sessions may include **new study concepts, trial designs, preliminary data, statistical or methodological questions, reproducibility challenges, data-sharing opportunities, and collaborative projects** across the spectrum of cutaneous oncology.
 
 The work may be early. It may be incomplete. That is the point.
 
@@ -104,54 +104,67 @@ The work may be early. It may be incomplete. That is the point.
 ::: {.soco-archive-heading}
 
 ::: {.soco-eyebrow}
-In development
+Upcoming Research Workshop
 :::
 
-## Proposed Meetings {#proposed-meetings}
+## October 28, 2026 {#upcoming-workshop}
 
-We are currently developing two Fall 2026 Forum concepts. Each is built as a 90-minute conversation rather than a traditional lecture.
+Our next Research Workshop is a 90-minute, multi-stakeholder discussion built around cases, survey data, and open conversation.
 
 :::
 
 ::: {.soco-proposed-meeting-card}
 
 ::: {.soco-proposed-meeting-kicker}
-Proposed Meeting · Fall 2026
+Research Workshop · October 28, 2026 · 3:30–5:00 PM ET
 :::
 
 ### The Art of Authorship
 
 **Who Gets on the Paper? Guidelines, Culture, and the Reality of Scientific Publishing**
 
-A proposed 90-minute, multi-stakeholder conversation on how authorship decisions are actually made, why practice can diverge from established standards, and how investigators, editors, industry colleagues, and publication professionals may see the same problem differently.
+A 90-minute, multi-stakeholder Research Workshop on how authorship decisions are actually made, why practice can diverge from established standards, and how investigators, editors, industry colleagues, and publication professionals may see the same problem differently.
 
 ::: {.soco-proposed-meeting-meta}
-**Format:** Case-based, moderator-led conversation  
+**Date:** October 28, 2026 · 3:30–5:00 PM ET  
+**Format:** Case-based, moderator-led Research Workshop  
 **Perspectives:** Academia · Editors · Industry · Publication professionals
 :::
 
-[View proposed meeting →](https://societyofcutaneousoncology.org/research_forum/Art%20of%20Authorship/){.soco-card-link}
+[View workshop →](https://societyofcutaneousoncology.org/research_forum/Art%20of%20Authorship/){.soco-card-link}
+
+:::
+
+::: {.soco-archive-heading}
+
+::: {.soco-eyebrow}
+In development
+:::
+
+## Future Workshops
+
+Additional Research Workshop concepts remain in development for future dates.
 
 :::
 
 ::: {.soco-proposed-meeting-card}
 
 ::: {.soco-proposed-meeting-kicker}
-Proposed Meeting · Fall 2026
+In Development
 :::
 
 ### Inside the Review Room
 
 **From Patient-Level Data to FDA Regulatory Decision-Making**
 
-A proposed 90-minute, moderator-led panel exploring how oncology applications are reviewed inside FDA, how patient-level evidence is interrogated and reconstructed, and when advisory committees become part of the regulatory process.
+A 90-minute, moderator-led workshop exploring how oncology applications are reviewed inside FDA, how patient-level evidence is interrogated and reconstructed, and when advisory committees become part of the regulatory process.
 
 ::: {.soco-proposed-meeting-meta}
-**Format:** Conversational, moderator-led panel  
-**Proposed panel:** FDA regulatory medicine colleagues with a SoCO moderator
+**Format:** Conversational, moderator-led workshop  
+**Potential participants:** FDA regulatory medicine colleagues with a SoCO moderator
 :::
 
-[View proposed meeting →](https://societyofcutaneousoncology.org/research_forum/inside%20the%20review%20room/){.soco-card-link}
+[View meeting concept →](https://societyofcutaneousoncology.org/research_forum/inside%20the%20review%20room/){.soco-card-link}
 
 :::
 
@@ -162,16 +175,16 @@ A proposed 90-minute, moderator-led panel exploring how oncology applications ar
 ::: {.soco-archive-heading}
 
 ::: {.soco-eyebrow}
-Research Forum archive
+Research Workshop archive
 :::
 
 ## Presentations {#presentations}
 
-Explore prior discussions, methods sessions, trial concepts, preliminary analyses, and projects that were brought to the Forum while still in motion.
+Explore prior discussions, methods sessions, trial concepts, preliminary analyses, and projects that were brought to the Workshop while still in motion.
 
 :::
 
-::: {#SoCO_Research_Forum}
+::: {#SoCO_Research_Workshop}
 :::
 
 :::
@@ -272,6 +285,5 @@ Explore prior discussions, methods sessions, trial concepts, preliminary analyse
     .soco-proposed-meeting-card {
       padding: 1.5rem 1.35rem;
     }
-
   }
 </style>
