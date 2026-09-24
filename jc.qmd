@@ -1234,7 +1234,7 @@ When a richer meeting recap exists, the recap above should be considered the pre
 # 2026 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## February – August 2026
+## February – September 2026
 
 ### February
 
@@ -1251,6 +1251,10 @@ Kavanagh, Fergal G., Hannah L. Kalvin, Edmund K. Bartlett, Christopher A. Barker
 ### August
 
 Miller, David M., Ross D. Merkin, Howard L. Kaufman, Sameer G. Gupta, Natalie Wolkow, Adewunmi Adelaja, Ryan J. Sullivan, Chirayu Patel, Alexandra Sorrentino, Sonia Cohen, Christine Cimoch, and Kevin S. Emerick. 2026. “Frontline Immunotherapy With Response-Guided Subsequent Treatment (FIRST) in Cutaneous Squamous Cell Carcinoma: A Bayesian Causal Analysis of Dose Intensity, Early Benefit, and Treatment De-Escalation.” *Journal for ImmunoTherapy of Cancer* 14 (7): e015029. https://doi.org/10.1136/jitc-2026-015029.
+
+### September
+
+Hauschild, Axel, Jessica Cecile Hassel, Mirjana Ziemer, Piotr Rutkowski, Friedegund Meier, Lukas Flatz, Caroline Gaudy-Marqueste, et al. 2026. “Neoadjuvant Intralesional Daromun (L19IL2/L19TNF) in Resectable Locally Advanced Melanoma: An Update on the Efficacy and Safety Results of the PIVOTAL Phase III Trial.” *Journal of Clinical Oncology*, August. https://doi.org/10.1200/JCO-26-00852.
 :::
 
 # 2025 Articles
