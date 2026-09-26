@@ -1846,7 +1846,7 @@ The randomized efficacy signal was compelling. The harder question was where a l
 Meeting pulse
 :::
 
-## A large group stayed for a long discussion
+## A great turnout — and people stayed
 
 ::: {.metric-grid}
 
@@ -1855,15 +1855,15 @@ Meeting pulse
 
 [`r ifelse(is.na(headline$people), "—", headline$people)`]{.metric-value}
 
-[Unique people linked to SOCO-E0009 in the persistent registry]{.metric-note}
+[A terrific turnout for the discussion]{.metric-note}
 :::
 
 ::: {.metric-card}
-[Median time together]{.metric-label}
+[Median time with us]{.metric-label}
 
 [`r ifelse(is.na(headline$median_minutes), "—", paste0(round(headline$median_minutes), " min"))`]{.metric-value}
 
-[Half the group stayed at least this long]{.metric-note}
+[Half the group stayed this long or longer]{.metric-note}
 :::
 
 ::: {.metric-card}
@@ -1871,7 +1871,7 @@ Meeting pulse
 
 [`r ifelse(is.na(headline$pct_60min_plus), "—", scales::percent(headline$pct_60min_plus, accuracy = 1))`]{.metric-value}
 
-[Joined for at least 60 minutes]{.metric-note}
+[More than three quarters stayed for an hour or more]{.metric-note}
 :::
 
 :::
@@ -2385,7 +2385,7 @@ if (nrow(meeting_roster)) {
   cat(
     '<div class="caution-note">',
     '<strong>Attendance roster unavailable.</strong> ',
-    'The registry-backed event participation view did not produce a readable roster.',
+    'We could not display the attendance roster.',
     '</div>'
   )
 }
