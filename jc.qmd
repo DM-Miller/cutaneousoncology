@@ -308,7 +308,7 @@ toc: false
   }
 
   .soco-jc-next-card::after {
-    content: "09.25";
+    content: "11.20";
     position: absolute;
     right: 1.6rem;
     bottom: -2.8rem;
@@ -889,19 +889,17 @@ Beginning with selected meetings in late 2025 and continuing in 2026, we are als
 Coming next
 :::
 
-## Neoadjuvant intralesional Daromun in resectable melanoma
+## InterPATH after ESMO
 
-**Friday, September 25, 2026 · 3:30 PM ET**
+**Friday, November 20, 2026 · 3:30 PM ET**
 
-We will discuss Hauschild and colleagues’ updated report from the randomized phase III PIVOTAL trial of intralesional Daromun (L19IL2/L19TNF) followed by surgery versus up-front surgery in resectable, locally advanced melanoma. Beyond the reported recurrence-free survival benefit, we will examine the trial population, choice and timing of end points, post hoc event-free survival analyses, safety, and how strongly these results should influence practice in a rapidly evolving neoadjuvant treatment landscape.
+Our next Journal Club will turn to **InterPATH** following its ESMO presentation. We will use the same evidence-first format: what the study actually establishes, where uncertainty remains, and how the results should be interpreted in the context of contemporary cutaneous oncology practice.
 
-::: {.soco-jc-links}
-[Read the article](https://doi.org/10.1200/JCO-26-00852){.soco-jc-link}
-:::
+Meeting materials and the primary publication will be added here as they become available.
 
 <div class="soco-jc-next-status">
   <span class="soco-jc-next-dot"></span>
-  Meeting scheduled · September 25 at 3:30 PM ET
+  Meeting scheduled · November 20 at 3:30 PM ET
 </div>
 
 :::::
@@ -926,6 +924,51 @@ For selected Journal Clubs, we preserve the conversation behind the paper: the c
 :::::::
 
 :::::: {.soco-jc-recap-list}
+
+
+::::: {.soco-jc-recap-card}
+
+::: {.soco-jc-recap-art}
+![](<journal_club/September 25 2026 - DAROMUN PIVOTAL/DAROMUN_Sept25_card.svg>){alt="Editorial card for the September 25, 2026 SoCO Journal Club discussion of DAROMUN PIVOTAL in resectable locally advanced melanoma"}
+:::
+
+:::: {.soco-jc-recap-copy}
+
+::: {.soco-jc-recap-date}
+September 25, 2026 · SoCO Journal Club
+:::
+
+::: {.soco-jc-recap-title}
+DAROMUN PIVOTAL: Neoadjuvant Intralesional Therapy in Resectable Melanoma
+:::
+
+::: {.soco-jc-recap-divider}
+:::
+
+::: {.soco-jc-recap-question}
+How compelling is a recurrence-free survival benefit when the trial population, treatment era, and neoadjuvant comparator landscape are all moving underneath it?
+:::
+
+::: {.soco-jc-recap-description}
+A discussion of the phase III PIVOTAL trial, including recurrence-free and distant metastasis-free survival, the heavily recurrent and previously treated population, the timing of neoadjuvant end points, injection-site toxicity, systemic effect from locally delivered therapy, and where DAROMUN might fit beside modern systemic neoadjuvant treatment.
+:::
+
+::: {.soco-jc-recap-footer}
+
+::: {.soco-jc-recap-actions}
+[Read meeting recap](<journal_club/September 25 2026 - DAROMUN PIVOTAL/index.qmd>){.soco-jc-recap-link}
+[Read the article](https://doi.org/10.1200/JCO-26-00852){.soco-jc-recap-link .secondary}
+:::
+
+::: {.soco-jc-recap-meta}
+41 attendees · 79th SoCO meeting
+:::
+
+:::
+
+::::
+
+:::::
 
 
 ::::: {.soco-jc-recap-card}
