@@ -1,9 +1,10 @@
-meeting_folder,meeting_date,meeting_type,unique_people,academic_people,industry_people,total_person_minutes
-July 11 2025 - c-Post,2025-07-11,Journal Club,38,29,9,2948.5833333333335
-November 24 2025 - MATISSE,2025-11-24,Journal Club,29,26,3,1992.1666666666667
-February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,29,29,0,1968.8166666666668
-March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,26,26,0,2014.95
-April 12 2026 - IGNYTE,2026-04-12,Journal Club,29,27,2,2454.7000001300003
-June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,34,34,0,2795.8833333333337
-July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,38,38,0,3073.3499999999995
-August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,26,26,0,2145.7166666666662
+event_id,meeting_folder,meeting_date,meeting_type,meeting_title,unique_people,academic_people,industry_people,total_person_minutes
+SOCO-E0001,July 11 2025 - c-Post,2025-07-11,Journal Club,c-Post,38,29,9,2948.61
+SOCO-E0002,November 24 2025 - MATISSE,2025-11-24,Journal Club,MATISSE,29,26,3,1992.17
+SOCO-E0003,February 13 2026 - Nivo-Rela vs BRAF-MEKi MAIC,2026-02-13,Journal Club,Nivo-Rela vs BRAF-MEKi MAIC,29,29,0,1968.8000000000002
+SOCO-E0004,March 9 2026 - Bayesian Causal Analysis of Dose Intensity in CSCC,2026-03-09,Research Forum,Bayesian Causal Analysis of Dose Intensity in CSCC,26,26,0,2014.96
+SOCO-E0005,April 12 2026 - IGNYTE,2026-04-06,Journal Club,IGNYTE,29,27,2,2454.7100000000005
+SOCO-E0006,June 12 2026 - Local Recurrence in MCC,2026-06-12,Journal Club,Local Recurrence in MCC,34,34,0,2795.880000000001
+SOCO-E0007,July 24 2026 - The Open Inference Project,2026-07-24,Research Forum,The Open Inference Project,38,38,0,3073.35
+SOCO-E0008,August 14 2026 - FIRST in CSCC,2026-08-14,Journal Club,FIRST in CSCC,26,26,0,2145.7
+SOCO-E0009,September 25 2026 - DAROMUN PIVOTAL,2026-09-25,Journal Club,DAROMUN PIVOTAL,41,36,5,3072.33

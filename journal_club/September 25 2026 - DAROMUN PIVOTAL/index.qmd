@@ -1,0 +1,2405 @@
+---
+title: "DAROMUN / PIVOTAL"
+pagetitle: "DAROMUN / PIVOTAL | SoCO Journal Club Recap"
+description: "Meeting recap from the September 25, 2026 Society of Cutaneous Oncology Journal Club discussing the PIVOTAL phase III update of neoadjuvant intralesional DAROMUN in resectable locally advanced melanoma."
+date: 2026-09-25
+author: "Society of Cutaneous Oncology"
+categories:
+  - 2026
+  - Journal Club
+  - Melanoma
+  - Neoadjuvant Therapy
+  - Intralesional Therapy
+tags:
+  - DAROMUN
+  - PIVOTAL
+  - L19IL2
+  - L19TNF
+  - Melanoma
+  - Neoadjuvant Therapy
+page-layout: full
+title-block-style: none
+toc: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+<style>
+  :root {
+    --navy: #082D4D;
+    --teal: #28A9A2;
+    --coral: #E25A4E;
+    --ink: #31424E;
+    --muted: #6B747B;
+    --pale: #F3F8F8;
+    --line: #D9E8E8;
+  }
+
+  #title-block-header,
+  .quarto-title-block,
+  .quarto-title,
+  .quarto-title-meta {
+    display: none !important;
+  }
+
+  body { color: var(--ink); background: #fff; }
+  main.content {
+    width: 100%;
+    max-width: 1120px;
+    min-width: 0;
+    margin: auto;
+    padding-top: 0 !important;
+  }
+
+  main.content,
+  main.content * {
+    box-sizing: border-box;
+  }
+  h1,h2,h3 { color: var(--navy); font-weight: 800; }
+
+  .hero {
+    margin: 2rem 0 2.4rem;
+    padding: 2.8rem 3rem;
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 88% 12%, rgba(40,169,162,.11), transparent 31%),
+      linear-gradient(135deg,#F3F8F8 0%,#FFFFFF 72%);
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgba(8,45,77,.07);
+  }
+
+  .kicker,.section-kicker {
+    color: var(--teal);
+    font-weight: 800;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    font-size: .8rem;
+  }
+
+  .hero h1 {
+    max-width: 900px;
+    font-size: clamp(2.7rem,5vw,4.1rem);
+    line-height: 1.02;
+    margin: .55rem 0 .8rem;
+    letter-spacing: -.04em;
+  }
+
+  .hero-copy {
+    font-size: 1.2rem;
+    max-width: 850px;
+    color: #56636D;
+    line-height: 1.65;
+  }
+
+  .accent {
+    width: 94px;
+    height: 5px;
+    border-radius: 4px;
+    background: linear-gradient(90deg,var(--teal) 0 68%,var(--coral) 68%);
+    margin-top: 1.4rem;
+  }
+
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    margin: 1.4rem 0 2rem;
+  }
+
+  .metric-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1.35rem 1.4rem;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(8,45,77,.05);
+  }
+
+  .metric-label {
+    display: block;
+    color: var(--muted);
+    font-size: .8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+  }
+
+  .metric-value {
+    display: block;
+    color: var(--navy);
+    font-size: 2.35rem;
+    font-weight: 850;
+    line-height: 1.05;
+    margin: .35rem 0;
+  }
+
+  .metric-note { color: var(--muted); font-size: .92rem; line-height: 1.45; }
+
+  .section-kicker { margin-top: 2.8rem; }
+
+  .section-intro {
+    font-size: 1.05rem;
+    color: #56636D;
+    max-width: 860px;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .paper-card {
+    max-width: 980px;
+    margin: 1.2rem auto 2rem;
+    padding: 1.75rem 2rem 1.7rem;
+    border-left: 7px solid var(--teal);
+    border-radius: 0 20px 20px 0;
+    background: linear-gradient(135deg,rgba(40,169,162,.085),rgba(8,45,77,.035));
+    box-shadow: 0 12px 30px rgba(8,45,77,.08);
+  }
+
+  .paper-eyebrow {
+    color: var(--teal);
+    font-size: .78rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: .65rem;
+  }
+
+  .paper-title {
+    color: var(--navy);
+    font-size: 1.62rem;
+    line-height: 1.22;
+    font-weight: 850;
+    letter-spacing: -.015em;
+    margin: 0 0 .85rem;
+  }
+
+  .paper-citation { color: #52616D; font-size: .98rem; line-height: 1.45; }
+
+  .link-row {
+    display:flex;
+    flex-wrap:wrap;
+    gap:.7rem;
+    margin-top:1.2rem;
+  }
+
+  .soco-link {
+    display:inline-flex;
+    padding:.58rem .9rem;
+    border-radius:999px;
+    background:var(--navy);
+    color:#fff !important;
+    text-decoration:none;
+    font-size:.88rem;
+    font-weight:750;
+  }
+
+  .soco-link.secondary {
+    background:#fff;
+    border:1px solid rgba(40,169,162,.42);
+    color:var(--navy) !important;
+  }
+
+  .question-card {
+    margin: 1.6rem 0 2rem;
+    padding: 1.55rem 1.7rem;
+    border-left: 5px solid var(--coral);
+    border-radius: 0 14px 14px 0;
+    background: linear-gradient(135deg,rgba(226,90,78,.055),rgba(40,169,162,.045));
+  }
+
+  .question-card strong {
+    display:block;
+    color:var(--navy);
+    font-size:1.2rem;
+    line-height:1.55;
+  }
+
+  .highlight-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:1rem;
+    margin:1.2rem 0 1.5rem;
+  }
+
+  .highlight-card {
+    border:1px solid #DCE8EB;
+    border-radius:16px;
+    padding:1.2rem 1.25rem;
+    background:#fff;
+    box-shadow:0 5px 18px rgba(8,45,77,.045);
+  }
+
+  .highlight-num {
+    color:var(--coral);
+    font-weight:900;
+    font-size:.8rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+
+  .highlight-card h3 {
+    color:var(--navy);
+    font-size:1.08rem;
+    margin:.25rem 0 .55rem;
+  }
+
+  .highlight-card p {
+    color:#405463;
+    font-size:.94rem;
+    line-height:1.5;
+    margin:0;
+  }
+
+  .discussion-quote {
+    margin:1.4rem 0;
+    padding:1.1rem 1.25rem;
+    border-left:5px solid var(--teal);
+    background:#EFF8F7;
+    border-radius:0 12px 12px 0;
+    color:var(--navy);
+    font-size:1.05rem;
+    font-weight:700;
+    line-height:1.45;
+  }
+
+  .caution-note {
+    background:#FFF8F0;
+    border-left:5px solid #E6A34A;
+    padding:1rem 1.15rem;
+    border-radius:0 12px 12px 0;
+    color:#59462E;
+    margin:1rem 0 1.5rem;
+    font-size:.92rem;
+    line-height:1.5;
+  }
+
+  .perspective-card {
+    margin:2rem 0;
+    padding:1.5rem 1.6rem;
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:
+      radial-gradient(circle at 88% 12%,rgba(40,169,162,.10),transparent 28%),
+      linear-gradient(135deg,#F7FBFB,#fff);
+    box-shadow:0 8px 24px rgba(8,45,77,.05);
+  }
+
+  .perspective-card h3 { margin:.25rem 0 .65rem; }
+  .perspective-card p { color:#52616D; line-height:1.65; margin-bottom:0; }
+
+
+  .survey-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1rem;
+    margin:1.2rem 0 1.5rem;
+  }
+
+  .survey-card {
+    padding:1.25rem 1.3rem;
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 5px 18px rgba(8,45,77,.045);
+  }
+
+  .survey-value {
+    display:block;
+    color:var(--navy);
+    font-size:2rem;
+    font-weight:850;
+    line-height:1.05;
+    margin-bottom:.4rem;
+  }
+
+  .survey-label {
+    display:block;
+    color:var(--teal);
+    font-size:.76rem;
+    font-weight:850;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:.45rem;
+  }
+
+  .survey-copy {
+    color:#52616D;
+    font-size:.92rem;
+    line-height:1.5;
+  }
+
+  .survey-note {
+    margin:1.2rem 0 2rem;
+    padding:1.15rem 1.25rem;
+    border-left:5px solid var(--teal);
+    border-radius:0 12px 12px 0;
+    background:#EFF8F7;
+    color:var(--navy);
+    line-height:1.6;
+  }
+
+  /* =========================================================
+     FULL SURVEY DISCLOSURE
+     ========================================================= */
+
+  .survey-disclosure {
+    margin: 1.3rem 0 2.2rem;
+  }
+
+  .survey-toggle {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: .9rem;
+    align-items: center;
+    padding: 1rem 1.15rem;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background:
+      linear-gradient(135deg, #F3F8F8 0%, #FFFFFF 100%);
+    color: var(--navy);
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(8,45,77,.04);
+  }
+
+  .survey-toggle:hover {
+    border-color: rgba(40,169,162,.48);
+    box-shadow: 0 8px 24px rgba(8,45,77,.07);
+  }
+
+  .survey-toggle-badge {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(40,169,162,.12);
+    color: var(--navy);
+    font-size: 1.05rem;
+  }
+
+  .survey-toggle-copy strong {
+    display: block;
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 850;
+  }
+
+  .survey-toggle-copy span {
+    display: block;
+    margin-top: .15rem;
+    color: var(--muted);
+    font-size: .84rem;
+    line-height: 1.4;
+  }
+
+  .survey-toggle-icon {
+    color: var(--teal);
+    font-size: 1.3rem;
+    font-weight: 900;
+    transition: transform .2s ease;
+  }
+
+  .survey-toggle[aria-expanded="true"] .survey-toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .survey-panel {
+    display: none;
+    margin-top: .8rem;
+    padding: 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .survey-panel.is-open {
+    display: block;
+  }
+
+  .survey-panel-intro {
+    margin: 0 0 1.15rem;
+    padding: .85rem 1rem;
+    border-left: 4px solid var(--teal);
+    border-radius: 0 10px 10px 0;
+    background: #F5FAFA;
+    color: var(--muted);
+    font-size: .9rem;
+    line-height: 1.55;
+  }
+
+  .survey-question-label {
+    color: var(--teal);
+    font-size: .76rem;
+    font-weight: 850;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+    margin: 1rem 0 .35rem;
+  }
+
+  .survey-figure-separator {
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid #EDF2F4;
+  }
+
+  .survey-text-list {
+    display: grid;
+    gap: .55rem;
+    margin-top: .5rem;
+  }
+
+  .survey-text-item {
+    padding: .78rem .9rem;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #FAFCFC;
+    color: #4B5E6C;
+    font-size: .88rem;
+    line-height: 1.5;
+  }
+
+  /* =========================================================
+     PUBLICATION-STYLE PRE-MEETING SURVEY ARCHIVE
+     ========================================================= */
+
+  .survey-archive-details {
+    margin: 1.25rem 0 2.25rem;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(8,45,77,.045);
+  }
+
+  .survey-archive-details > summary {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto minmax(0,1fr) auto;
+    gap: .9rem;
+    align-items: center;
+    padding: 1rem 3.4rem 1rem 1.1rem;
+    cursor: pointer;
+    list-style: none;
+    background: linear-gradient(135deg,#F3F8F8 0%,#FFFFFF 100%);
+    color: var(--navy);
+  }
+
+  .survey-archive-details > summary::-webkit-details-marker { display:none; }
+
+  .survey-archive-details > summary::after {
+    content: "+";
+    position: absolute;
+    right: 1.15rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--teal);
+    font-size: 1.55rem;
+    font-weight: 500;
+  }
+
+  .survey-archive-details[open] > summary::after { content:"−"; }
+
+  .survey-archive-badge {
+    display:inline-flex;
+    width:38px;
+    height:38px;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(40,169,162,.12);
+    color:var(--navy);
+    font-size:1rem;
+    font-weight:800;
+  }
+
+  .survey-archive-title {
+    display:block;
+    color:var(--navy);
+    font-size:1rem;
+    font-weight:850;
+  }
+
+  .survey-archive-subtitle {
+    display:block;
+    margin-top:.15rem;
+    color:var(--muted);
+    font-size:.84rem;
+    line-height:1.45;
+  }
+
+  .survey-archive-body {
+    padding:1rem 1.1rem 1.2rem;
+    background:#fff;
+  }
+
+  .survey-archive-intro {
+    margin:0 0 1.05rem;
+    padding:.9rem 1rem;
+    border-left:4px solid var(--teal);
+    border-radius:0 11px 11px 0;
+    background:#F5FAFA;
+    color:#586A75;
+    font-size:.9rem;
+    line-height:1.58;
+  }
+
+  .pub-survey-stack {
+    display:grid;
+    gap:1rem;
+  }
+
+  .pub-survey-panel {
+    border:1px solid #DCE8EB;
+    border-radius:17px;
+    padding:1.15rem 1.2rem 1.2rem;
+    background:#fff;
+    box-shadow:0 5px 18px rgba(8,45,77,.035);
+  }
+
+  .pub-survey-kicker {
+    color:var(--teal);
+    font-size:.72rem;
+    font-weight:850;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+    margin-bottom:.3rem;
+  }
+
+  .pub-survey-title {
+    color:var(--navy);
+    font-size:1.12rem;
+    font-weight:850;
+    line-height:1.28;
+    margin:0;
+  }
+
+  .pub-survey-meta {
+    color:var(--muted);
+    font-size:.8rem;
+    margin:.25rem 0 .9rem;
+  }
+
+  .pub-survey-context {
+    max-width:900px;
+    margin:.48rem 0 .35rem;
+    padding:.72rem .82rem;
+    border-left:4px solid var(--teal);
+    border-radius:0 10px 10px 0;
+    background:#F5FAFA;
+    color:#526574;
+    font-size:.86rem;
+    line-height:1.5;
+  }
+
+  .pub-survey-context strong {
+    color:var(--navy);
+  }
+
+  .pub-bar-list {
+    display:grid;
+    gap:.58rem;
+  }
+
+  .pub-bar-row {
+    display:grid;
+    grid-template-columns:minmax(190px,1.55fr) minmax(150px,2.1fr) 64px;
+    gap:.75rem;
+    align-items:center;
+  }
+
+  .pub-bar-label {
+    color:#405463;
+    font-size:.87rem;
+    line-height:1.32;
+  }
+
+  .pub-bar-track {
+    height:12px;
+    border-radius:999px;
+    background:#EDF3F4;
+    overflow:hidden;
+  }
+
+  .pub-bar-fill {
+    height:100%;
+    border-radius:999px;
+    background:linear-gradient(90deg,#198F8B,#51BBB5);
+  }
+
+  .pub-bar-fill.uncertainty {
+    background:linear-gradient(90deg,#D9665C,#E98A7F);
+  }
+
+  .pub-bar-value {
+    color:var(--navy);
+    font-size:.84rem;
+    font-weight:850;
+    text-align:right;
+    font-variant-numeric:tabular-nums;
+  }
+
+  .pub-vote-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:.75rem;
+  }
+
+  .pub-vote-card {
+    padding:1rem;
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:linear-gradient(135deg,#F8FBFB,#fff);
+    text-align:center;
+  }
+
+  .pub-vote-label {
+    color:var(--muted);
+    font-size:.72rem;
+    font-weight:850;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+  }
+
+  .pub-vote-value {
+    display:block;
+    margin:.25rem 0 .15rem;
+    color:var(--navy);
+    font-size:1.8rem;
+    line-height:1;
+    font-weight:900;
+  }
+
+  .pub-vote-count {
+    color:#6B747B;
+    font-size:.78rem;
+  }
+
+  .survey-archive-note {
+    margin:.9rem 0 0;
+    color:var(--muted);
+    font-size:.8rem;
+    line-height:1.5;
+  }
+
+  .footer-card {
+    margin:3rem 0 1rem;
+    padding:1.8rem 2rem;
+    background:var(--navy);
+    color:#fff;
+    border-radius:20px;
+  }
+
+  .footer-card h2 { color:#fff; margin-top:0; }
+  .footer-card p { margin-bottom:0; color:#EAF2F5; }
+
+  /* =========================================================
+     COMMUNITY / ENGAGEMENT / ATTENDANCE
+     ========================================================= */
+
+
+
+
+
+
+  .engagement-spotlight {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 0 1.4rem;
+    padding: 1.35rem 1.45rem 1.25rem;
+    border: 1px solid #E9C85F;
+    border-left: 7px solid #D7A400;
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 92% 18%, rgba(255,255,255,.58), transparent 28%),
+      linear-gradient(135deg, #FFF8D8 0%, #FDE9A9 100%);
+    box-shadow: 0 10px 28px rgba(116,83,0,.10);
+  }
+
+  .engagement-spotlight-title {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin: 0 0 .35rem;
+    color: #765308;
+    font-size: 1.1rem;
+    font-weight: 850;
+    letter-spacing: -.01em;
+  }
+
+  .engagement-spotlight-copy {
+    max-width: 900px;
+    margin: 0;
+    color: #735F2C;
+    font-size: .94rem;
+    line-height: 1.55;
+  }
+
+  .engagement-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin-top: .95rem;
+  }
+
+  .engagement-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem .72rem;
+    border: 1px solid rgba(118,83,8,.18);
+    border-radius: 999px;
+    background: rgba(255,255,255,.82);
+    color: #57420D;
+    font-size: .86rem;
+    font-weight: 780;
+    box-shadow: 0 2px 7px rgba(116,83,0,.08);
+  }
+
+  .engagement-method {
+    margin: .75rem 0 0;
+    color: #7C6B42;
+    font-size: .78rem;
+    line-height: 1.5;
+  }
+
+
+
+
+
+  .attendance-details {
+    margin: 1rem 0 1.6rem;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(8,45,77,.045);
+  }
+
+  .attendance-details > summary {
+    position: relative;
+    min-height: 64px;
+    padding: 1rem 3.4rem 1rem 1.05rem;
+    cursor: pointer;
+    list-style: none;
+    background: linear-gradient(135deg,#F3F8F8 0%,#FFFFFF 100%);
+    color: var(--navy);
+  }
+
+  .attendance-details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .attendance-details > summary::after {
+    content: "+";
+    position: absolute;
+    right: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--teal);
+    font-size: 1.65rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .attendance-details[open] > summary::after {
+    content: "−";
+  }
+
+  .attendance-summary-title {
+    display: block;
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 850;
+  }
+
+  .attendance-summary-subtitle {
+    display: block;
+    margin-top: .18rem;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.45;
+  }
+
+  .roster-summary {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 0 .8rem;
+    padding: .95rem 1.05rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #F9FBFB;
+  }
+
+  .roster-summary strong {
+    color: var(--navy);
+    font-size: 1rem;
+  }
+
+  .roster-summary span {
+    color: var(--muted);
+    font-size: .84rem;
+  }
+
+  .attendance-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 16px;
+  }
+
+  .attendance-table {
+    width: 100%;
+    min-width: 690px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(8,45,77,.045);
+  }
+
+  .attendance-table thead th {
+    padding: .72rem .75rem;
+    background: var(--navy);
+    color: #fff;
+    border: 0;
+    font-size: .78rem;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .attendance-table thead th:first-child {
+    text-align: left;
+  }
+
+  .attendance-table tbody td {
+    padding: .66rem .75rem;
+    border-top: 1px solid #E9EFF1;
+    color: #334857;
+    font-size: .88rem;
+    text-align: center;
+  }
+
+  .attendance-table tbody tr:nth-child(even) td:not(.minutes-cell) {
+    background: #FBFDFD;
+  }
+
+  .attendance-table tbody tr:hover td:not(.minutes-cell) {
+    background: #F3F9F9;
+  }
+
+  .attendance-table .name-cell {
+    color: var(--navy);
+    font-weight: 750;
+    text-align: left;
+  }
+
+  .attendance-table .minutes-cell {
+    color: #17384C;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .attendance-table .signal-cell {
+    color: #7A868E;
+  }
+
+  .attendance-table .signal-on {
+    color: var(--teal);
+    font-weight: 900;
+  }
+
+  .attendance-note {
+    margin-top: .8rem;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.55;
+  }
+
+
+  /* =========================================================
+     FIRST-MEETING RECOGNITION
+     ========================================================= */
+
+  .first-meeting-card {
+    margin: 1rem 0 1.55rem;
+    overflow: hidden;
+    border: 1px solid #E7D4D0;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(8,45,77,.04);
+  }
+
+  .first-meeting-heading {
+    padding: .9rem 1rem;
+    background: #FBE7E4;
+    color: #A63F36;
+    font-size: .9rem;
+    font-weight: 850;
+  }
+
+  .first-meeting-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .first-meeting-table {
+    width: 100%;
+    min-width: 660px;
+    margin: 0;
+    border-collapse: collapse;
+    background: #fff;
+  }
+
+  .first-meeting-table th {
+    padding: .72rem .75rem;
+    background: var(--navy);
+    color: #fff;
+    border: 0;
+    font-size: .78rem;
+    font-weight: 800;
+    text-align: left;
+  }
+
+  .first-meeting-table td {
+    padding: .72rem .75rem;
+    border-top: 1px solid #E6ECEF;
+    color: #405463;
+    font-size: .88rem;
+    line-height: 1.4;
+    vertical-align: top;
+  }
+
+  .first-meeting-table td:first-child {
+    color: var(--navy);
+    font-weight: 800;
+  }
+
+  .first-meeting-table tbody tr:nth-child(even) td {
+    background: #FBFDFD;
+  }
+
+  .first-meeting-note {
+    margin: .72rem 1rem .9rem;
+    color: var(--muted);
+    font-size: .78rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width:760px) {
+    /*
+      MOBILE LAYOUT
+      Quarto uses a page-level CSS grid. These rules:
+      1) allow the content grid item and all custom children to shrink;
+      2) use minmax(0,1fr) for mobile one-column layouts;
+      3) keep intentionally wide attendance tables inside their own scroller;
+      4) constrain archived survey figures to the viewport.
+    */
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    #quarto-content,
+    #quarto-content.page-columns,
+    main.content,
+    .page-columns .content {
+      min-width: 0 !important;
+      max-width: 100% !important;
+    }
+
+    main.content {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 1rem !important;
+    }
+
+    main.content > *,
+    .hero,
+    .metric-grid,
+    .metric-card,
+    .paper-card,
+    .question-card,
+    .highlight-grid,
+    .highlight-card,
+    .discussion-quote,
+    .caution-note,
+    .perspective-card,
+    .survey-grid,
+    .survey-card,
+    .survey-note,
+    .survey-disclosure,
+    .survey-toggle,
+    .survey-toggle-copy,
+    .survey-panel,
+    .survey-text-list,
+    .survey-text-item,
+    .community-banner,
+    .engagement-spotlight,
+    .engagement-pill-row,
+    .engagement-pill,
+    .attendance-details,
+    .roster-summary,
+    .attendance-scroll,
+    .attendance-note,
+    .first-meeting-card,
+    .first-meeting-scroll,
+    .first-meeting-note,
+    .footer-card,
+    .link-row {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .hero {
+      margin: 1rem 0 1.8rem;
+      padding: 1.55rem 1.1rem 1.45rem;
+      border-radius: 18px;
+    }
+
+    .hero h1 {
+      max-width: 100%;
+      font-size: clamp(2rem, 9.5vw, 2.55rem);
+      line-height: 1.04;
+      letter-spacing: -.035em;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-copy {
+      max-width: 100%;
+      font-size: 1rem;
+      line-height: 1.52;
+    }
+
+    .kicker,
+    .section-kicker {
+      font-size: .72rem;
+      line-height: 1.45;
+      letter-spacing: .11em;
+      overflow-wrap: anywhere;
+    }
+
+    main.content h2 {
+      max-width: 100%;
+      font-size: clamp(1.55rem, 7vw, 2rem);
+      line-height: 1.12;
+      overflow-wrap: anywhere;
+    }
+
+    main.content h3,
+    .paper-title {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .metric-grid,
+    .highlight-grid,
+    .survey-grid {
+      grid-template-columns: minmax(0,1fr);
+      gap: .8rem;
+    }
+
+    .metric-card,
+    .survey-card,
+    .highlight-card {
+      padding: 1.05rem 1.1rem;
+      border-radius: 14px;
+    }
+
+    .metric-value,
+    .survey-value {
+      font-size: 2rem;
+    }
+
+    .paper-card {
+      width: 100%;
+      margin: 1rem 0 1.8rem;
+      padding: 1.2rem 1rem;
+      border-left-width: 5px;
+      border-radius: 0 15px 15px 0;
+    }
+
+    .paper-title {
+      font-size: 1.28rem;
+    }
+
+    .paper-citation {
+      overflow-wrap: anywhere;
+    }
+
+    .link-row {
+      display: grid;
+      grid-template-columns: minmax(0,1fr);
+      width: 100%;
+      gap: .6rem;
+    }
+
+    .soco-link {
+      width: 100%;
+      max-width: 100%;
+      justify-content: center;
+      text-align: center;
+      white-space: normal;
+    }
+
+    .question-card,
+    .discussion-quote,
+    .caution-note,
+    .survey-note {
+      padding: 1rem;
+    }
+
+    .perspective-card {
+      width: 100%;
+      padding: 1.15rem 1rem;
+      border-radius: 16px;
+    }
+
+    .survey-toggle {
+      grid-template-columns: auto minmax(0,1fr) auto;
+      gap: .65rem;
+      padding: .9rem;
+    }
+
+    .survey-toggle-copy strong,
+    .survey-toggle-copy span {
+      overflow-wrap: anywhere;
+    }
+
+    .survey-panel {
+      width: 100%;
+      padding: .85rem;
+    }
+    .survey-archive-body {
+      padding:.8rem;
+    }
+
+    .pub-bar-row {
+      grid-template-columns:minmax(0,1fr) 58px;
+      gap:.45rem .65rem;
+    }
+
+    .pub-bar-label {
+      grid-column:1 / -1;
+    }
+
+    .pub-bar-track {
+      grid-column:1;
+    }
+
+    .pub-bar-value {
+      grid-column:2;
+    }
+
+    .pub-vote-grid {
+      grid-template-columns:minmax(0,1fr);
+    }
+
+
+    .survey-panel .cell,
+    .survey-panel .cell-output,
+    .survey-panel .cell-output-display,
+    .survey-panel figure,
+    .survey-panel .quarto-figure {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .community-banner {
+      padding: 1.15rem 1rem;
+      border-radius: 16px;
+    }
+
+    .engagement-spotlight {
+      padding: 1.1rem 1rem;
+    }
+
+    .engagement-pill-row {
+      display: grid;
+      grid-template-columns: minmax(0,1fr);
+    }
+
+    .engagement-pill {
+      width: 100%;
+      min-width: 0;
+      justify-content: flex-start;
+      white-space: normal;
+    }
+
+    .attendance-details > summary {
+      min-height: 60px;
+      padding: .85rem 3rem .85rem .9rem;
+    }
+
+    .attendance-summary-title {
+      font-size: .92rem;
+    }
+
+    .attendance-summary-subtitle {
+      font-size: .74rem;
+    }
+
+    .roster-summary {
+      display: block;
+      padding: .85rem .9rem;
+    }
+
+    .roster-summary span {
+      display: block;
+      margin-top: .3rem;
+    }
+
+    .attendance-scroll {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding-bottom: .3rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .attendance-table {
+      width: 690px;
+      min-width: 690px;
+      max-width: none;
+    }
+
+    .footer-card {
+      margin-top: 2.4rem;
+      padding: 1.3rem 1.15rem;
+      border-radius: 16px;
+    }
+
+    img,
+    svg,
+    video,
+    iframe,
+    canvas {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-width:420px) {
+    main.content {
+      padding-left: .85rem !important;
+      padding-right: .85rem !important;
+    }
+
+    .hero {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 9vw, 2.25rem);
+    }
+
+    .metric-value,
+    .survey-value {
+      font-size: 1.9rem;
+    }
+
+    .perspective-card {
+      padding-left: .9rem;
+      padding-right: .9rem;
+    }
+
+    .survey-toggle-badge {
+      width: 34px;
+      height: 34px;
+    }
+
+    .attendance-table {
+      width: 620px;
+      min-width: 620px;
+    }
+  }
+</style>
+
+```{r}
+#| label: setup-recap
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(scales)
+})
+
+# -------------------------------------------------------------------------
+# Resolve this meeting folder.
+# -------------------------------------------------------------------------
+resolve_meeting_dir <- function() {
+
+  if (
+    exists("meeting_dir", inherits = TRUE) &&
+    is.character(meeting_dir) &&
+    length(meeting_dir) == 1 &&
+    nzchar(meeting_dir) &&
+    dir.exists(meeting_dir)
+  ) {
+    return(normalizePath(meeting_dir, winslash = "/", mustWork = TRUE))
+  }
+
+  current_input <- tryCatch(
+    knitr::current_input(dir = TRUE),
+    error = function(e) NULL
+  )
+
+  if (
+    !is.null(current_input) &&
+    length(current_input) == 1 &&
+    !is.na(current_input) &&
+    nzchar(current_input) &&
+    file.exists(current_input)
+  ) {
+    return(dirname(normalizePath(current_input, winslash = "/", mustWork = TRUE)))
+  }
+
+  if (interactive() && requireNamespace("rstudioapi", quietly = TRUE)) {
+    ctx <- tryCatch(
+      rstudioapi::getSourceEditorContext(),
+      error = function(e) NULL
+    )
+
+    if (!is.null(ctx) && !is.null(ctx$path) && nzchar(ctx$path)) {
+      active_path <- normalizePath(ctx$path, winslash = "/", mustWork = TRUE)
+      active_dir <- dirname(active_path)
+      if (basename(active_path) == "index.qmd") return(active_dir)
+      if (basename(active_dir) == "scripts") return(dirname(active_dir))
+    }
+  }
+
+  stop(
+    paste0(
+      "Could not determine the Journal Club meeting directory.\n",
+      "Render index.qmd with Quarto or open index.qmd in RStudio."
+    )
+  )
+}
+
+meeting_dir <- resolve_meeting_dir()
+
+# -------------------------------------------------------------------------
+# Attendance + roster: persistent SoCO registry is the source of truth.
+#
+# Raw Teams exports remain the provenance for participation, but identity,
+# event metadata, organization-at-event, and current affiliation are resolved
+# upstream in the registry. The recap should not maintain a parallel identity
+# or affiliation system.
+# -------------------------------------------------------------------------
+
+find_soco_root <- function(start = getwd(), max_up = 12L) {
+  here <- normalizePath(start, winslash = "/", mustWork = TRUE)
+
+  for (i in 0:max_up) {
+    if (
+      dir.exists(file.path(here, "data", "registry")) &&
+      dir.exists(file.path(here, "workflows", "registry"))
+    ) {
+      return(here)
+    }
+
+    parent <- dirname(here)
+    if (identical(parent, here)) break
+    here <- parent
+  }
+
+  stop(
+    paste(
+      "Could not locate the SoCO project root.",
+      "Expected data/registry/ and workflows/registry/ under the same root."
+    ),
+    call. = FALSE
+  )
+}
+
+soco_root <- find_soco_root(meeting_dir)
+
+registry_view_script <- file.path(
+  soco_root,
+  "workflows",
+  "registry",
+  "R",
+  "tools",
+  "40_build_registry_views.R"
+)
+
+if (!file.exists(registry_view_script)) {
+  stop(
+    "Could not find registry view helper:\n",
+    registry_view_script,
+    call. = FALSE
+  )
+}
+
+source(registry_view_script, local = TRUE)
+
+daromun_event <- event_participation |>
+  filter(event_id == "SOCO-E0009")
+
+if (!nrow(daromun_event)) {
+  stop(
+    "SOCO-E0009 (DAROMUN PIVOTAL) has no registry-backed participation rows.",
+    call. = FALSE
+  )
+}
+
+if (
+  daromun_event |>
+    count(person_id) |>
+    filter(n > 1) |>
+    nrow() > 0
+) {
+  stop(
+    "SOCO-E0009 contains duplicate person_id rows in event_participation.",
+    call. = FALSE
+  )
+}
+
+duration_available <- !all(is.na(daromun_event$duration_min))
+
+headline <- tibble::tibble(
+  people = n_distinct(daromun_event$person_id),
+  median_minutes = if (duration_available) {
+    median(daromun_event$duration_min, na.rm = TRUE)
+  } else {
+    NA_real_
+  },
+  pct_60min_plus = if (duration_available) {
+    mean(daromun_event$duration_min >= 60, na.rm = TRUE)
+  } else {
+    NA_real_
+  }
+)
+
+display_affiliation <- function(x) {
+  x <- str_squish(as.character(x))
+
+  case_when(
+    is.na(x) | x == "" ~ "—",
+
+    x %in% c(
+      "Massachusetts General Hospital",
+      "Brigham and Women's Hospital",
+      "Mass General Brigham"
+    ) ~ "Mass General Brigham",
+
+    x == "Washington University School of Medicine in St. Louis" ~
+      "Washington University in St. Louis",
+
+    TRUE ~ x
+  )
+}
+
+meeting_roster <- daromun_event |>
+  transmute(
+    name = name,
+    affiliation = display_affiliation(
+      coalesce(
+        organization_at_event,
+        current_affiliation
+      )
+    )
+  ) |>
+  distinct() |>
+  arrange(name)
+
+roster_n <- nrow(meeting_roster)
+
+# -------------------------------------------------------------------------
+# First SoCO meeting recognition.
+#
+# These names were identified during the live welcome / first-timer sequence.
+# Tatyana Sharova is intentionally excluded because this was not her first
+# SoCO meeting. The canonical registry name is used for Annekathryn Goodman;
+# the transcript's nearby "Catherine" reference resolves to her speaker turn.
+# -------------------------------------------------------------------------
+
+first_meeting_specs <- tribble(
+  ~canonical_name,         ~display_name,             ~role_override,
+  "Alexis Rutt",           "Lexi Rutt",                "Regulatory Coordinator – Melanoma",
+  "Patrick Kurpaska",      "Patrick Kurpaska",         "Medical Oncologist",
+  "Shannon Saed",          "Shannon Saed",             "Medical Student / Research Fellow",
+  "Sara Behbahani",        "Sara Behbahani",           "Mohs Fellow",
+  "Annekathryn Goodman",   "Annekathryn Goodman",      "Gynecologic Oncologist"
+)
+
+first_meeting <- daromun_event |>
+  filter(name %in% first_meeting_specs$canonical_name) |>
+  select(
+    person_id,
+    canonical_name = name,
+    current_title,
+    organization_at_event,
+    current_affiliation
+  ) |>
+  left_join(
+    first_meeting_specs,
+    by = "canonical_name"
+  ) |>
+  mutate(
+    professional_role = coalesce(
+      role_override,
+      current_title,
+      "—"
+    ),
+    institution = display_affiliation(
+      coalesce(
+        organization_at_event,
+        current_affiliation
+      )
+    ),
+    display_order = match(
+      canonical_name,
+      first_meeting_specs$canonical_name
+    )
+  ) |>
+  arrange(display_order) |>
+  select(
+    name = display_name,
+    professional_role,
+    institution
+  )
+
+# -------------------------------------------------------------------------
+# Survey assets.
+#
+# Preferred local home:
+#   files/meeting recap-survey/
+#
+# If the files are not there, the recap also looks upward through the repo
+# for workflows/journal_club/events/2026-09-25_daromun and finds the exact
+# archived outputs there. This lets the Journal Club recap consume the
+# workflow outputs without hard-coding a machine-specific absolute path.
+# -------------------------------------------------------------------------
+find_upward <- function(start_dir, relative_path) {
+  current <- normalizePath(start_dir, winslash = "/", mustWork = TRUE)
+
+  repeat {
+    candidate <- file.path(current, relative_path)
+    if (dir.exists(candidate)) return(candidate)
+
+    parent <- dirname(current)
+    if (identical(parent, current)) break
+    current <- parent
+  }
+
+  NA_character_
+}
+
+workflow_dir <- find_upward(
+  meeting_dir,
+  file.path(
+    "workflows",
+    "journal_club",
+    "events",
+    "2026-09-25_daromun"
+  )
+)
+
+find_recap_asset <- function(filename, required_columns = NULL) {
+  search_dirs <- c(
+    file.path(meeting_dir, "files", "meeting recap-survey"),
+    workflow_dir
+  )
+
+  search_dirs <- unique(
+    search_dirs[
+      !is.na(search_dirs) &
+        dir.exists(search_dirs)
+    ]
+  )
+
+  for (d in search_dirs) {
+    candidates <- list.files(
+      d,
+      recursive = TRUE,
+      full.names = TRUE
+    )
+
+    hits <- candidates[
+      basename(candidates) == filename
+    ]
+
+    if (!length(hits)) next
+
+    for (hit in hits) {
+
+      if (!is.null(required_columns)) {
+        dat <- tryCatch(
+          readr::read_csv(
+            hit,
+            n_max = 5,
+            show_col_types = FALSE
+          ),
+          error = function(e) NULL
+        )
+
+        if (
+          is.null(dat) ||
+            !all(required_columns %in% names(dat))
+        ) {
+          next
+        }
+      }
+
+      return(
+        normalizePath(
+          hit,
+          winslash = "/",
+          mustWork = TRUE
+        )
+      )
+    }
+  }
+
+  NA_character_
+}
+
+question_summary_path <- find_recap_asset(
+  "question_summary.csv",
+  required_columns = c(
+    "question",
+    "phase",
+    "response",
+    "pct",
+    "total"
+  )
+)
+
+compelling_fig <- find_recap_asset("compelling_pre_post.png")
+practice_fig <- find_recap_asset("practice_influence.png")
+
+# The full pre-meeting archive lives in the pre_event_survey workflow. Use the
+# privacy-safe aggregate export for closed questions. Starting familiarity is
+# reconstructed only as an aggregate from the saved local analysis file; no
+# respondent-level fields are ever printed to the recap.
+pre_summary_path <- NA_character_
+pre_analysis_path <- NA_character_
+pre_audience_fig <- NA_character_
+
+if (!is.na(workflow_dir)) {
+  pre_summary_candidate <- file.path(
+    workflow_dir,
+    "pre_event_survey",
+    "outputs",
+    "presentation_export",
+    "question_summary.csv"
+  )
+  pre_analysis_candidate <- file.path(
+    workflow_dir,
+    "pre_event_survey",
+    "data",
+    "processed_private",
+    "responses",
+    "daromun_preJC_v3_analysis.csv"
+  )
+  pre_audience_candidate <- file.path(
+    workflow_dir,
+    "pre_event_survey",
+    "outputs",
+    "presentation_export",
+    "figures",
+    "audience_snapshot.png"
+  )
+
+  if (file.exists(pre_summary_candidate)) {
+    pre_summary_path <- normalizePath(pre_summary_candidate, winslash = "/", mustWork = TRUE)
+  }
+  if (file.exists(pre_analysis_candidate)) {
+    pre_analysis_path <- normalizePath(pre_analysis_candidate, winslash = "/", mustWork = TRUE)
+  }
+  if (file.exists(pre_audience_candidate)) {
+    pre_audience_fig <- normalizePath(pre_audience_candidate, winslash = "/", mustWork = TRUE)
+  }
+}
+
+pre_summary <- tibble::tibble()
+pre_analysis <- tibble::tibble()
+
+if (!is.na(pre_summary_path)) {
+  pre_summary <- readr::read_csv(pre_summary_path, show_col_types = FALSE)
+}
+
+if (!is.na(pre_analysis_path)) {
+  pre_analysis <- readr::read_csv(pre_analysis_path, show_col_types = FALSE)
+}
+
+pre_lookup_prop <- function(question_name, response_name) {
+  if (!nrow(pre_summary)) return(NA_real_)
+  x <- pre_summary |>
+    dplyr::filter(
+      question == question_name,
+      response == response_name
+    ) |>
+    dplyr::pull(proportion)
+  if (!length(x)) NA_real_ else x[[1]]
+}
+
+pre_scenario_daromun_pct <- pre_lookup_prop(
+  "clinical_scenario",
+  "DAROMUN → surgery"
+)
+
+pre_scenario_need_info_pct <- pre_lookup_prop(
+  "clinical_scenario",
+  "I’d need more information before deciding"
+)
+
+pre_priority_modern_pct <- pre_lookup_prop(
+  "discussion_priority",
+  "How DAROMUN compares with modern neoadjuvant systemic therapy"
+)
+
+pre_adcom_yes_pct <- pre_lookup_prop(
+  "adcom_evaluable_meaningful",
+  "Yes"
+)
+
+# Fallback values are the archived September 25 outputs. If the CSV is found,
+# the values below are replaced dynamically from the archived data.
+pre_n <- 49L
+post_n <- 21L
+pre_very_pct <- 0.0816326531
+pre_unsure_pct <- 0.4489795918
+post_very_pct <- 0.6190476190
+post_moderate_pct <- 0.3809523810
+practice_high_pct <- 0.6666666667  # practice-changing + substantially
+
+if (!is.na(question_summary_path)) {
+  qs <- readr::read_csv(question_summary_path, show_col_types = FALSE)
+
+  get_pct <- function(question_name, phase_name, response_name) {
+    x <- qs |>
+      filter(
+        question == question_name,
+        phase == phase_name,
+        response == response_name
+      ) |>
+      pull(pct)
+    if (length(x) == 0) NA_real_ else x[1]
+  }
+
+  get_total <- function(question_name, phase_name) {
+    x <- qs |>
+      filter(question == question_name, phase == phase_name) |>
+      pull(total) |>
+      unique()
+    if (length(x) == 0) NA_integer_ else as.integer(x[1])
+  }
+
+  pre_n <- get_total("evidence_compelling", "Before JC")
+  post_n <- get_total("evidence_compelling", "After JC")
+  pre_very_pct <- get_pct("evidence_compelling", "Before JC", "Very compelling")
+  pre_unsure_pct <- get_pct(
+    "evidence_compelling",
+    "Before JC",
+    "Unsure / need to understand the data better"
+  )
+  post_very_pct <- get_pct("evidence_compelling", "After JC", "Very compelling")
+  post_moderate_pct <- get_pct("evidence_compelling", "After JC", "Moderately compelling")
+
+  practice_high_pct <- sum(
+    qs |>
+      filter(
+        question == "practice_influence",
+        phase == "After JC",
+        response %in% c("Practice-changing", "Substantially")
+      ) |>
+      pull(pct),
+    na.rm = TRUE
+  )
+}
+
+# -------------------------------------------------------------------------
+# Community roster is already built above from registry-backed
+# event_participation for SOCO-E0009.
+# -------------------------------------------------------------------------
+```
+
+:::: {.hero}
+
+::: {.kicker}
+SoCO Journal Club · September 25, 2026
+:::
+
+# DAROMUN / PIVOTAL
+
+::: {.hero-copy}
+The randomized efficacy signal was compelling. The harder question was where a locally delivered neoadjuvant therapy belongs in a melanoma treatment landscape that changed while PIVOTAL was being conducted.
+:::
+
+::: {.accent}
+:::
+
+::::
+
+::: {.section-kicker}
+Meeting pulse
+:::
+
+## A large group stayed for a long discussion
+
+::: {.metric-grid}
+
+::: {.metric-card}
+[People who joined]{.metric-label}
+
+[`r ifelse(is.na(headline$people), "—", headline$people)`]{.metric-value}
+
+[Unique people linked to SOCO-E0009 in the persistent registry]{.metric-note}
+:::
+
+::: {.metric-card}
+[Median time together]{.metric-label}
+
+[`r ifelse(is.na(headline$median_minutes), "—", paste0(round(headline$median_minutes), " min"))`]{.metric-value}
+
+[Half the group stayed at least this long]{.metric-note}
+:::
+
+::: {.metric-card}
+[Stayed at least an hour]{.metric-label}
+
+[`r ifelse(is.na(headline$pct_60min_plus), "—", scales::percent(headline$pct_60min_plus, accuracy = 1))`]{.metric-value}
+
+[Joined for at least 60 minutes]{.metric-note}
+:::
+
+:::
+
+::: {.section-kicker}
+The paper we discussed
+:::
+
+## PIVOTAL — the longer follow-up
+
+:::: {.paper-card}
+
+::: {.paper-eyebrow}
+Phase III update · Journal of Clinical Oncology · 2026
+:::
+
+::: {.paper-title}
+Neoadjuvant intralesional L19IL2/L19TNF (DAROMUN) in resectable locally advanced melanoma
+:::
+
+::: {.paper-citation}
+**Hauschild A, et al.** *J Clin Oncol.* 2026.  
+doi: 10.1200/JCO-26-00852
+:::
+
+::: {.link-row}
+[DOI](https://ascopubs.org/doi/10.1200/JCO-26-00852){.soco-link}
+:::
+
+::::
+
+::: {.question-card}
+**The question beneath the paper:** PIVOTAL showed a durable randomized recurrence benefit. But how should that result be interpreted — and used — in a contemporary neoadjuvant era?
+:::
+
+The 2026 update extended median follow-up to **36.8 months** and reported updated relapse-free survival (RFS), distant metastasis-free survival (DMFS), safety, and post hoc event-free survival (EFS) analyses. The intention-to-treat population included **256 patients**, of whom **222 had recurrent disease**.
+
+The updated RFS analysis remained strongly separated: **HR 0.55**, with median RFS of **23.8 months** with DAROMUN followed by surgery versus **6.5 months** with surgery alone.
+
+::: {.caution-note}
+**The interpretive challenge:** this was a randomized trial, but not a head-to-head comparison with contemporary neoadjuvant checkpoint strategies. Its population was predominantly recurrent and often previously treated, making direct cross-trial placement difficult.
+:::
+
+::: {.section-kicker}
+Starting position
+:::
+
+## The pre-meeting survey captured more than confidence
+
+::: {.section-intro}
+The pre-Journal Club pulse captured where the room was starting: how compelling the PIVOTAL evidence seemed, what clinicians would do with a recurrent, injectable melanoma after prior anti–PD-1, whether the efficacy result felt clinically meaningful, and which uncertainty most needed discussion.
+:::
+
+::: {.survey-grid}
+
+::: {.survey-card}
+[`r scales::percent(pre_unsure_pct, accuracy = 1)`]{.survey-value}
+[Needed more context]{.survey-label}
+
+::: {.survey-copy}
+Before the session, this was the largest single response to the evidence question; only `r scales::percent(pre_very_pct, accuracy = 1)` called the evidence very compelling.
+:::
+:::
+
+::: {.survey-card}
+[`r ifelse(is.na(pre_scenario_daromun_pct), "—", scales::percent(pre_scenario_daromun_pct, accuracy = 1))`]{.survey-value}
+[Would choose DAROMUN → surgery]{.survey-label}
+
+::: {.survey-copy}
+In the recurrent, injectable post–anti–PD-1 scenario, relatively few respondents entered the meeting already choosing DAROMUN followed by surgery.
+:::
+:::
+
+::: {.survey-card}
+[`r ifelse(is.na(pre_priority_modern_pct), "—", scales::percent(pre_priority_modern_pct, accuracy = 1))`]{.survey-value}
+[Wanted the modern comparator question]{.survey-label}
+
+::: {.survey-copy}
+The most important agenda item was how DAROMUN should be interpreted alongside contemporary neoadjuvant systemic therapy.
+:::
+:::
+
+:::
+
+<details class="survey-archive-details">
+<summary>
+  <span class="survey-archive-badge">▤</span>
+  <span>
+    <span class="survey-archive-title">Explore the full pre-meeting survey</span>
+    <span class="survey-archive-subtitle">Open the complete closed-question results: audience, starting familiarity, evidence, clinical choice, regulatory-style vote, and discussion priorities.</span>
+  </span>
+</summary>
+
+<div class="survey-archive-body">
+
+<p class="survey-archive-intro">
+These are the archived <strong>pre-discussion</strong> responses from September 25, preserving the room’s starting point across the closed survey questions.
+</p>
+
+```{r}
+#| label: full-pre-survey-archive
+#| echo: false
+#| message: false
+#| warning: false
+#| results: asis
+
+html_escape_survey <- function(x) {
+  x <- replace_na(as.character(x), "")
+  x <- stringr::str_replace_all(x, "&", "&amp;")
+  x <- stringr::str_replace_all(x, "<", "&lt;")
+  x <- stringr::str_replace_all(x, ">", "&gt;")
+  x <- stringr::str_replace_all(x, '"', "&quot;")
+  x
+}
+
+pct_label <- function(x) {
+  ifelse(is.na(x), "—", paste0(round(100 * x), "%"))
+}
+
+render_bar_panel <- function(df, kicker, title, sort_desc = FALSE, context = NULL) {
+
+  if (!nrow(df)) return(invisible(NULL))
+
+  df <- df |>
+    dplyr::filter(!is.na(response), response != "")
+
+  if (sort_desc) {
+    df <- df |>
+      dplyr::arrange(dplyr::desc(proportion), response)
+  }
+
+  denom <- suppressWarnings(max(df$denominator, na.rm = TRUE))
+  if (!is.finite(denom)) denom <- NA_real_
+
+  cat('<section class="pub-survey-panel">')
+  cat('<div class="pub-survey-kicker">', html_escape_survey(kicker), '</div>', sep = "")
+  cat('<h3 class="pub-survey-title">', html_escape_survey(title), '</h3>', sep = "")
+  if (!is.null(context) && nzchar(context)) {
+    cat(
+      '<div class="pub-survey-context"><strong>Clinical scenario:</strong> ',
+      html_escape_survey(context),
+      '</div>',
+      sep = ""
+    )
+  }
+  cat('<div class="pub-survey-meta">Pre-meeting pulse · n = ', ifelse(is.na(denom), "—", denom), '</div>', sep = "")
+  cat('<div class="pub-bar-list">')
+
+  for (i in seq_len(nrow(df))) {
+    label <- as.character(df$response[[i]])
+    prop <- suppressWarnings(as.numeric(df$proportion[[i]]))
+    width <- ifelse(is.na(prop), 0, max(0, min(100, 100 * prop)))
+    uncertainty <- stringr::str_detect(
+      stringr::str_to_lower(label),
+      "unsure|need more|need to understand|more information"
+    )
+
+    cat('<div class="pub-bar-row">')
+    cat('<div class="pub-bar-label">', html_escape_survey(label), '</div>', sep = "")
+    cat('<div class="pub-bar-track"><div class="pub-bar-fill', ifelse(uncertainty, ' uncertainty', ''), '" style="width:', sprintf('%.1f', width), '%"></div></div>', sep = "")
+    cat('<div class="pub-bar-value">', pct_label(prop), '</div>', sep = "")
+    cat('</div>')
+  }
+
+  cat('</div></section>')
+}
+
+render_vote_panel <- function(df) {
+
+  if (!nrow(df)) return(invisible(NULL))
+
+  denom <- suppressWarnings(max(df$denominator, na.rm = TRUE))
+  if (!is.finite(denom)) denom <- NA_real_
+
+  cat('<section class="pub-survey-panel">')
+  cat('<div class="pub-survey-kicker">A regulatory-style threshold</div>')
+  cat('<h3 class="pub-survey-title">Are the PIVOTAL efficacy results evaluable and clinically meaningful?</h3>')
+  cat('<div class="pub-survey-meta">Pre-meeting pulse · n = ', ifelse(is.na(denom), "—", denom), '</div>', sep = "")
+  cat('<div class="pub-vote-grid">')
+
+  for (i in seq_len(nrow(df))) {
+    cat('<div class="pub-vote-card">')
+    cat('<span class="pub-vote-label">', html_escape_survey(df$response[[i]]), '</span>', sep = "")
+    cat('<span class="pub-vote-value">', pct_label(df$proportion[[i]]), '</span>', sep = "")
+    cat('<span class="pub-vote-count">', df$n[[i]], ' respondent', ifelse(df$n[[i]] == 1, '', 's'), '</span>', sep = "")
+    cat('</div>')
+  }
+
+  cat('</div></section>')
+}
+
+cat('<div class="pub-survey-stack">')
+
+if (nrow(pre_summary)) {
+
+  role_df <- pre_summary |> dplyr::filter(question == "primary_role")
+  evidence_df <- pre_summary |> dplyr::filter(question == "evidence_compelling")
+  scenario_df <- pre_summary |> dplyr::filter(question == "clinical_scenario")
+  priority_df <- pre_summary |> dplyr::filter(question == "discussion_priority")
+  adcom_df <- pre_summary |> dplyr::filter(question == "adcom_evaluable_meaningful")
+
+  render_bar_panel(
+    role_df,
+    "Who answered?",
+    "A multidisciplinary respondent group",
+    sort_desc = TRUE
+  )
+
+  if (nrow(pre_analysis) && "entry_familiarity" %in% names(pre_analysis)) {
+    familiarity_df <- pre_analysis |>
+      dplyr::transmute(response = stringr::str_squish(as.character(entry_familiarity))) |>
+      dplyr::filter(!is.na(response), response != "") |>
+      dplyr::count(response, name = "n") |>
+      dplyr::mutate(
+        denominator = sum(n),
+        proportion = n / denominator
+      )
+
+    render_bar_panel(
+      familiarity_df,
+      "Starting familiarity",
+      "How familiar was the room with DAROMUN / PIVOTAL?",
+      sort_desc = FALSE
+    )
+  }
+
+  render_bar_panel(
+    evidence_df,
+    "Starting position",
+    "How compelling was the evidence before discussion?",
+    sort_desc = FALSE
+  )
+
+  render_vote_panel(adcom_df)
+
+  render_bar_panel(
+    scenario_df,
+    "A patient in front of you",
+    "What would respondents recommend before the discussion?",
+    sort_desc = FALSE,
+    context = paste(
+      "Resectable, injectable locoregional recurrence after prior surgery and adjuvant anti–PD-1.",
+      "No distant disease. Assume DAROMUN is available."
+    )
+  )
+
+  render_bar_panel(
+    priority_df,
+    "Set the agenda",
+    "What most needed discussion?",
+    sort_desc = TRUE
+  )
+
+} else {
+  cat(
+    '<div class="caution-note"><strong>Pre-meeting aggregate file not found.</strong> ',
+    'Expected <code>pre_event_survey/outputs/presentation_export/question_summary.csv</code> ',
+    'inside the DAROMUN workflow.</div>'
+  )
+}
+
+cat('</div>')
+```
+
+<p class="survey-archive-note">
+The survey is a descriptive snapshot of SoCO respondents, not a representative estimate of melanoma practice nationally or internationally. Percentages use the non-missing denominator for each question.
+</p>
+
+</div>
+</details>
+
+::: {.section-kicker}
+Before → after
+:::
+
+## The community's view changed sharply after the discussion
+
+::: {.section-intro}
+Before Journal Club, only `r scales::percent(pre_very_pct, accuracy = 1)` of `r pre_n` respondents rated the evidence **very compelling**, while `r scales::percent(pre_unsure_pct, accuracy = 1)` said they needed to understand the data better. After the discussion, `r scales::percent(post_very_pct, accuracy = 1)` of `r post_n` post-JC respondents selected **very compelling** and the remainder selected **moderately compelling**.
+:::
+
+```{r}
+#| label: compelling-pre-post
+#| results: asis
+#| fig-align: center
+#| out-width: "100%"
+
+if (!is.na(compelling_fig)) {
+  knitr::include_graphics(compelling_fig)
+} else {
+  cat(
+    '<div class="caution-note"><strong>Figure not found.</strong> ',
+    'Place <code>compelling_pre_post.png</code> in ',
+    '<code>files/meeting recap-survey/</code>, or keep the archived workflow ',
+    'under <code>workflows/journal_club/events/2026-09-25_daromun/</code>.</div>'
+  )
+}
+```
+
+::: {.caution-note}
+**Important:** the pre- and post-meeting surveys represent aggregate respondent groups rather than paired individual responses. The shift should therefore be interpreted as a change in the distribution of responses, not as documented person-level conversion.
+:::
+
+::: {.section-kicker}
+Practice signal
+:::
+
+## Compelling did not automatically mean practice-changing
+
+::: {.section-intro}
+The post-JC question deliberately separated belief in the evidence from its immediate influence on care. `r scales::percent(practice_high_pct, accuracy = 1)` of post-JC respondents said the results should influence current clinical practice **substantially** or be **practice-changing** — a strong signal, but not the same as universal adoption.
+:::
+
+```{r}
+#| label: practice-influence
+#| results: asis
+#| fig-align: center
+#| out-width: "100%"
+
+if (!is.na(practice_fig)) {
+  knitr::include_graphics(practice_fig)
+} else {
+  cat(
+    '<div class="caution-note"><strong>Figure not found.</strong> ',
+    'Place <code>practice_influence.png</code> in ',
+    '<code>files/meeting recap-survey/</code>, or keep the archived workflow ',
+    'under <code>workflows/journal_club/events/2026-09-25_daromun/</code>.</div>'
+  )
+}
+```
+
+::: {.section-kicker}
+Discussion highlights
+:::
+
+## What the room wrestled with
+
+<div class="highlight-grid">
+
+<div class="highlight-card">
+<h3>1 · The efficacy signal survived scrutiny</h3>
+<p><strong>Beth Buchbinder</strong> walked the group through the RFS curves and their early separation. <strong>Michael Wong</strong> went further, arguing that the DMFS signal was especially important because it suggested a systemic effect from a locally delivered therapy.</p>
+</div>
+
+<div class="highlight-card">
+<h3>2 · The neoadjuvant window has to count</h3>
+<p>A preoperative strategy cannot be judged only among patients who ultimately reach surgery. <strong>Michael Wong</strong> emphasized that RFS and EFS start different clocks, while <strong>Alfredo Covelli</strong> provided study-team context on why EFS has become more prominent in current neoadjuvant development.</p>
+</div>
+
+<div class="highlight-card">
+<h3>3 · PIVOTAL studied a different population</h3>
+<p><strong>Isaac Brownell</strong> challenged whether the population was comparable with modern neoadjuvant trials at all. <strong>Nikhil Khushalani</strong> sharpened the question: what would this same recurrent, often previously treated population have looked like with contemporary systemic neoadjuvant therapy?</p>
+</div>
+
+<div class="highlight-card">
+<h3>4 · Safety may be an important differentiator</h3>
+<p><strong>Sunandana Chandra</strong> focused on the severe and sometimes life-altering immune toxicities seen with systemic neoadjuvant therapy. <strong>Isaac Brownell</strong> and <strong>Michael Wong</strong> framed the potential advantage as a different benefit–risk tradeoff rather than proof of comparative superiority.</p>
+</div>
+
+<div class="highlight-card">
+<h3>5 · Patient selection is now the harder question</h3>
+<p><strong>Vishal Patel</strong> pushed on practical injection-site toxicity and whether inflammatory breakdown should be interpreted differently when the injected lesion is headed to surgery. He also surfaced questions from <strong>Aubri McEvoy</strong> about molecular selection and what to do after an inadequate pathologic response.</p>
+</div>
+
+</div>
+
+::: {.section-kicker}
+Where the discussion landed
+:::
+
+## The question changed from “does it work?” to “where do I use it?”
+
+::: {.perspective-card}
+The meeting ended in a more interesting place than it began. The group largely moved beyond whether PIVOTAL demonstrated a meaningful randomized treatment effect. The unresolved questions were comparative and practical: where DAROMUN fits alongside contemporary neoadjuvant immunotherapy, which patients are best suited for a locally delivered strategy, how toxicity should enter that choice, and which endpoint best captures the full preoperative treatment experience.
+:::
+
+::: {.caution-note}
+**Where this recap intentionally stops:** the purpose here is to preserve the community's encounter with the evidence — the starting uncertainty, the discussion, the change in aggregate opinion, and the questions that remained. A separate JoCO **Perspective on the Science** can take the next step: external synthesis, comparative positioning, methodological critique, and a durable thesis about where this strategy belongs.
+:::
+
+::: {.section-kicker}
+Our community
+:::
+
+## Who joined us?
+
+```{r}
+#| label: first-soco-meeting
+#| results: asis
+
+escape_first_meeting <- function(x) {
+  x <- replace_na(as.character(x), "")
+  x <- stringr::str_replace_all(x, "&", "&amp;")
+  x <- stringr::str_replace_all(x, "<", "&lt;")
+  x <- stringr::str_replace_all(x, ">", "&gt;")
+  x <- stringr::str_replace_all(x, '"', "&quot;")
+  x
+}
+
+if (nrow(first_meeting)) {
+
+  cat('<div class="first-meeting-card">')
+  cat('<div class="first-meeting-heading">👋 First SoCO Meeting</div>')
+  cat('<div class="first-meeting-scroll">')
+  cat('<table class="first-meeting-table">')
+  cat(
+    '<thead><tr>',
+    '<th>Name</th>',
+    '<th>Professional role</th>',
+    '<th>Institution</th>',
+    '</tr></thead>'
+  )
+  cat('<tbody>')
+
+  for (i in seq_len(nrow(first_meeting))) {
+    cat(
+      '<tr>',
+      '<td>', escape_first_meeting(first_meeting$name[[i]]), '</td>',
+      '<td>', escape_first_meeting(first_meeting$professional_role[[i]]), '</td>',
+      '<td>', escape_first_meeting(first_meeting$institution[[i]]), '</td>',
+      '</tr>',
+      sep = ""
+    )
+  }
+
+  cat('</tbody></table></div>')
+  cat(
+    '<div class="first-meeting-note">',
+    'A special welcome to colleagues joining SoCO for the first time.',
+    '</div>'
+  )
+  cat('</div>')
+}
+```
+
+:::: {.engagement-spotlight}
+
+::: {.engagement-spotlight-title}
+💬 Voices that shaped the discussion
+:::
+
+::: {.engagement-spotlight-copy}
+Beth Buchbinder, Michael Wong, Isaac Brownell, Nikhil Khushalani, Sunandana Chandra, and Vishal Patel repeatedly sharpened the discussion across efficacy, trial interpretation, safety, and patient selection.
+:::
+
+::: {.engagement-pill-row}
+[Beth Buchbinder]{.engagement-pill}
+[Michael Wong]{.engagement-pill}
+[Isaac Brownell]{.engagement-pill}
+[Nikhil Khushalani]{.engagement-pill}
+[Sunandana Chandra]{.engagement-pill}
+[Vishal Patel]{.engagement-pill}
+:::
+
+::: {.engagement-method}
+Alfredo Covelli added study-team context throughout the discussion, and Aubri McEvoy's questions helped push the conversation toward molecular selection and management after an inadequate pathologic response.
+:::
+
+::::
+
+```{r}
+#| label: attendance-roster
+#| results: asis
+
+escape_html <- function(x) {
+  x <- replace_na(as.character(x), "")
+  x <- stringr::str_replace_all(x, "&", "&amp;")
+  x <- stringr::str_replace_all(x, "<", "&lt;")
+  x <- stringr::str_replace_all(x, ">", "&gt;")
+  x <- stringr::str_replace_all(x, '"', "&quot;")
+  x
+}
+
+if (nrow(meeting_roster)) {
+
+  cat('<details class="attendance-details">')
+  cat('<summary>')
+  cat(
+    '<span class="attendance-summary-title">',
+    roster_n,
+    ' people represented</span>',
+    sep = ""
+  )
+  cat(
+    '<span class="attendance-summary-subtitle">',
+    'View attendance and affiliations',
+    '</span>',
+    sep = ""
+  )
+  cat('</summary>')
+
+  cat('<div class="attendance-scroll">')
+  cat('<table class="attendance-table">')
+  cat('<thead><tr><th>Name</th><th>Affiliation</th></tr></thead>')
+  cat('<tbody>')
+
+  for (i in seq_len(nrow(meeting_roster))) {
+    cat(
+      '<tr>',
+      '<td class="name-cell">', escape_html(meeting_roster$name[[i]]), '</td>',
+      '<td style="text-align:left;">', escape_html(meeting_roster$affiliation[[i]]), '</td>',
+      '</tr>',
+      sep = ""
+    )
+  }
+
+  cat('</tbody></table></div>')
+  cat('</details>')
+
+} else {
+  cat(
+    '<div class="caution-note">',
+    '<strong>Attendance roster unavailable.</strong> ',
+    'The registry-backed event participation view did not produce a readable roster.',
+    '</div>'
+  )
+}
+```
+
+::: {.footer-card}
+
+## Thanks for joining us.
+
+This Journal Club brought together academic clinicians, investigators, trainees, and industry colleagues to interrogate the same randomized evidence from different vantage points — and to make explicit where confidence increased and uncertainty remained.
+
+:::
+
+::: {.link-row}
+[Back to Journal Club](../../jc.qmd){.soco-link}
+[Read the JCO paper](https://ascopubs.org/doi/10.1200/JCO-26-00852){.soco-link .secondary}
+:::

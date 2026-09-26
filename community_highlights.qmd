@@ -1009,98 +1009,94 @@ main.content {
 
 suppressPackageStartupMessages({
   library(tidyverse)
-  library(here)
   library(htmltools)
 })
 
-project_root <- here::here()
-attendance_root <- file.path(project_root, "Attendance Over Time")
+# ============================================================
+# PROJECT ROOT + REGISTRY VIEW
+# ============================================================
+#
+# The persistent SoCO registry is the source of truth for:
+#   - identity
+#   - current affiliation
+#   - event metadata
+#   - tracked participation
+#
+# Community Highlights is now a downstream presentation layer. It no longer
+# reparses Teams files or maintains a parallel alias / affiliation system.
+# Any attendance or identity correction should be curated upstream in the
+# registry and then inherited here on the next render.
+
+find_soco_root <- function(start = getwd(), max_up = 10L) {
+  here <- normalizePath(start, winslash = "/", mustWork = TRUE)
+
+  for (i in 0:max_up) {
+    if (
+      dir.exists(file.path(here, "data", "registry")) &&
+      dir.exists(file.path(here, "workflows", "registry"))
+    ) {
+      return(here)
+    }
+
+    parent <- dirname(here)
+    if (identical(parent, here)) break
+    here <- parent
+  }
+
+  stop(
+    paste(
+      "Could not locate the SoCO project root.",
+      "Expected data/registry/ and workflows/registry/ under the same root."
+    ),
+    call. = FALSE
+  )
+}
+
+project_root <- find_soco_root()
 community_dir <- file.path(project_root, "community_highlights")
 output_dir <- file.path(community_dir, "files")
 
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
-if (!dir.exists(attendance_root)) {
-  stop(
-    "Could not find the attendance archive:\n",
-    attendance_root
-  )
-}
-
-# ============================================================
-# MEETING CLASSIFICATION
-# ============================================================
-
-meeting_metadata <- tribble(
-  ~folder_pattern, ~meeting_type,
-  "Open Inference Project", "Research Forum",
-  "Bayesian Causal Analysis of Dose Intensity", "Research Forum",
-  "Research Forum", "Research Forum"
+registry_view_script <- file.path(
+  project_root,
+  "workflows",
+  "registry",
+  "R",
+  "tools",
+  "40_build_registry_views.R"
 )
 
-classify_meeting <- function(folder_name) {
-
-  hit <- meeting_metadata |>
-    filter(
-      str_detect(
-        folder_name,
-        regex(folder_pattern, ignore_case = TRUE)
-      )
-    )
-
-  if (nrow(hit)) {
-    return(hit$meeting_type[[1]])
-  }
-
-  "Journal Club"
+if (!file.exists(registry_view_script)) {
+  stop(
+    "Could not find registry view helper:\n",
+    registry_view_script,
+    call. = FALSE
+  )
 }
 
-extract_meeting_date <- function(folder_name) {
+source(registry_view_script, local = TRUE)
 
-  # Parse the date directly from folder names such as:
-  # "July 11 2025 - c-Post"
-  # "March 9 2026 - Bayesian Causal Analysis..."
-  #
-  # Use capture groups rather than regex look-behind so this works
-  # reliably with stringi/ICU on macOS and inside Quarto.
+# Full-program count is intentionally separate from the tracked registry subset.
+# Update this single value when a new SoCO meeting occurs.
+soco_total_meetings <- 79L
 
-  m <- str_match(
-    folder_name,
-    "^([A-Za-z]+)\\s+(\\d{1,2})\\s+(\\d{4})"
-  )
 
-  if (nrow(m) == 0 || any(is.na(m[1, 2:4]))) {
-    return(as.Date(NA))
-  }
+# ============================================================
+# DISPLAY HELPERS
+# ============================================================
 
-  month_text <- m[1, 2]
-  day_text   <- m[1, 3]
-  year_text  <- m[1, 4]
-
-  month_num <- match(
-    str_to_lower(month_text),
-    str_to_lower(month.name)
-  )
-
-  if (is.na(month_num)) {
-    return(as.Date(NA))
-  }
-
-  as.Date(
-    sprintf(
-      "%04d-%02d-%02d",
-      as.integer(year_text),
-      month_num,
-      as.integer(day_text)
-    )
-  )
+clean_name_key <- function(x) {
+  x |>
+    as.character() |>
+    replace_na("") |>
+    str_squish() |>
+    str_to_lower() |>
+    str_replace_all("[^a-z0-9]", "")
 }
 
 format_meeting_date <- function(x) {
-
-  if (length(x) != 1 || is.na(x)) {
-    return("")
-  }
+  if (length(x) != 1 || is.na(x)) return("")
 
   paste0(
     format(x, "%B"),
@@ -1111,1029 +1107,107 @@ format_meeting_date <- function(x) {
   )
 }
 
-# ============================================================
-# IDENTITY CLEANING
-# ============================================================
+display_affiliation <- function(x) {
+  x <- str_squish(as.character(x))
 
-clean_name_key <- function(x) {
+  case_when(
+    is.na(x) | x == "" ~ "—",
 
-  x <- as.character(x)
-  x <- str_replace_all(x, "\\u00A0", " ")
-  x <- str_squish(x)
+    x %in% c(
+      "Massachusetts General Hospital",
+      "Brigham and Women's Hospital",
+      "Mass General Brigham"
+    ) ~ "Mass General Brigham",
 
-  map_chr(x, function(nm) {
+    x == "Washington University School of Medicine in St. Louis" ~
+      "Washington University in St. Louis",
 
-    if (is.na(nm) || nm == "") return("")
-
-    nm2 <- nm |>
-      str_replace(
-        regex(
-          ",?\\s*(MD|PhD|DO|MBBS|CNP|NP|PA|MS|MPH|MBA|PGY\\d+)(,?\\s*(MD|PhD|DO|MBBS|CNP|NP|PA|MS|MPH|MBA|PGY\\d+))*\\s*$",
-          ignore_case = TRUE
-        ),
-        ""
-      ) |>
-      str_squish()
-
-    if (str_detect(nm2, ",")) {
-
-      parts <- str_split_fixed(nm2, ",", 2)
-
-      last_name <- parts[1] |>
-        str_squish() |>
-        str_to_lower()
-
-      given_part <- parts[2] |>
-        str_squish()
-
-      first_name <- given_part |>
-        str_split("\\s+") |>
-        pluck(1, 1) |>
-        str_to_lower()
-
-      key <- paste(first_name, last_name)
-
-    } else {
-
-      words <- nm2 |>
-        str_replace_all("[^A-Za-z0-9' -]", " ") |>
-        str_squish() |>
-        str_split("\\s+") |>
-        pluck(1)
-
-      if (length(words) == 1) {
-        key <- str_to_lower(words[1])
-      } else {
-        key <- paste(
-          str_to_lower(words[1]),
-          str_to_lower(words[length(words)])
-        )
-      }
-    }
-
-    key |>
-      str_replace_all("[^a-z0-9]", "") |>
-      str_trim()
-  })
+    TRUE ~ x
+  )
 }
 
+esc <- function(x) htmltools::htmlEscape(as.character(x))
+
+
 # ============================================================
-# EMBEDDED NAME RECONCILIATION
+# REGISTRY-DERIVED TRACKED ATTENDANCE
 # ============================================================
 #
-# Keep all identity reconciliation here.
-# Add rows as new aliases / malformed Teams display names appear.
-
-name_reconciliation <- tribble(
-  ~observed_key,          ~canonical_name,             ~exclude,
-
-  # Clear duplicate identities
-  "adeadamson",           "Adewole S. Adamson",        FALSE,
-  "adewoleadamson",       "Adewole S. Adamson",        FALSE,
-
-  "andrewknight",         "Andrew D. Knight",          FALSE,
-  "andyknight",           "Andrew D. Knight",          FALSE,
-
-  "sameer",               "Sameer Gupta",              FALSE,
-  "sameergupta",          "Sameer Gupta",              FALSE,
-  "samirgupta",           "Sameer Gupta",              FALSE,
-  "sg",                   "Sameer Gupta",              FALSE,
-
-  # IGNYTE Teams export used the abbreviated display name "DL".
-  # The IGNYTE attendance processor separately normalized this to Don Lawrence.
-  "dl",                   "Don Lawrence",              FALSE,
-  "donlawrence",          "Don Lawrence",              FALSE,
-  "donaldlawrence",       "Don Lawrence",              FALSE,
-
-  # Raw Teams reports may use a legal/full first name while the cleaned
-  # attendance table uses the familiar display name.
-  "francisworden",        "Frank Worden",              FALSE,
-  "frankworden",          "Frank Worden",              FALSE,
-  "alexandrasorrentino",  "Alex Sorrentino",           FALSE,
-  "alexsorrentino",       "Alex Sorrentino",           FALSE,
-
-  "vernonsondak",         "Vern Sondak",               FALSE,
-  "vernsondak",           "Vern Sondak",               FALSE,
-
-  # Non-person / artifact
-  "d237",                 NA_character_,               TRUE,
-
-  # Preferred display names / malformed Teams strings
-  "adewunmiadelaja",      "Adewunmi O. Adelaja",       FALSE,
-  "ajaysharma",           "Ajay N. Sharma",            FALSE,
-  "christinecimoch",      "Christine C. Cimoch",       FALSE,
-  "davidmiller",          "David M. Miller",            FALSE,
-  "elizabethbuchbinder",  "Elizabeth I. Buchbinder",   FALSE,
-  "elizabethlilley",      "Elizabeth J. Lilley",       FALSE,
-  "francescollichio",     "Frances Collichio",         FALSE,
-  "howardkaufman",        "Howard L. Kaufman",         FALSE,
-  "isaacbrownell",        "Isaac Brownell",            FALSE,
-  "jenniferdesimone",     "Jennifer DeSimone",         FALSE,
-  "jessicafewkes",        "Jessica L. Fewkes",         FALSE,
-  "julianeczapla",        "Juliane Andrade Czapla",    FALSE,
-  "khalidgarman",         "Khalid Garman",             FALSE,
-  "kamanehmontazeri",     "Kamaneh Montazeri",         FALSE,
-  "karamkhaddour",        "Karam Khaddour",            FALSE,
-  "kevinemerick",         "Kevin S. Emerick",          FALSE,
-  "kristarubin",          "Krista M. Rubin",           FALSE,
-  "larisageskin",         "Larisa Geskin",             FALSE,
-  "lauraferris",          "Laura Ferris",              FALSE,
-  "laurenoloughlin",      "Lauren O'Loughlin",         FALSE,
-  "meghanmooradian",      "Meghan J. Mooradian",       FALSE,
-  "mehranyusuf",          "Mehran Behruj Yusuf",       FALSE,
-  "minabakhtiar",         "Mina Bakhtiar",             FALSE,
-  "mollyyancovitz",       "Molly Yancovitz",           FALSE,
-  "mariam",               "Mariam El-Ashmawy",         FALSE,
-  "nikhilkhushalani",     "Nikhil Khushalani",         FALSE,
-  "reeddrews",            "Reed E. Drews",             FALSE,
-  "rhodaalani",           "Rhoda Alani",               FALSE,
-  "rossmerkin",           "Ross D. Merkin",            FALSE,
-  "madelienestump",       "Madeliene Stump",           FALSE,
-  "tatyanasharova",       "Tatyana Sharova",           FALSE,
-  "vatchetchekmedyian",   "Vatche Tchekmedyian",      FALSE,
-  "kentsai",              "Ken Tsai",                  FALSE,
-  "shailenderbhatia",     "Shailender Bhatia",         FALSE,
-  "lisazaba",             "Lisa Zaba",                 FALSE,
-  "danielcoit",           "Daniel Coit",               FALSE,
-  "dancoit",              "Daniel Coit",               FALSE,
-  "danhippe",             "Dan Hippe",                 FALSE,
-  "williambenjamin",       "William J. Benjamin",        FALSE
-) |>
-  mutate(
-    canonical_key = if_else(
-      is.na(canonical_name),
-      NA_character_,
-      clean_name_key(canonical_name)
-    )
-  )
-
-apply_name_reconciliation <- function(df) {
-
-  df |>
-    left_join(
-      name_reconciliation,
-      by = c("name_key" = "observed_key")
-    ) |>
-    mutate(
-      exclude = replace_na(exclude, FALSE),
-
-      name = if_else(
-        !is.na(canonical_name),
-        canonical_name,
-        name
-      ),
-
-      name_key = if_else(
-        !is.na(canonical_key),
-        canonical_key,
-        name_key
-      )
-    ) |>
-    filter(!exclude) |>
-    select(
-      -canonical_name,
-      -canonical_key,
-      -exclude
-    )
-}
-
-# ============================================================
-# EMBEDDED INDUSTRY LOOKUP
-# ============================================================
-#
-# Domain-based classification works whenever email was retained in
-# attendance_clean.csv. For older meetings without email, add a person
-# directly to industry_people_overrides below.
-
-industry_domains <- tribble(
-  ~domain, ~company,
-  "regeneron.com", "Regeneron",
-  "bms.com",       "Bristol Myers Squibb",
-  "replimune.com", "Replimune"
-)
-
-# Institutional affiliation is inferred only from the email domain preserved
-# in the Teams attendance report. Unknown domains are left as the domain itself
-# rather than assigning an institution that is not supported by the record.
-affiliation_domains <- tribble(
-  ~domain,                         ~affiliation,
-
-  # Mass General Brigham family
-  "mgb.org",                       "Mass General Brigham",
-  "massgeneralbrigham.org",        "Mass General Brigham",
-  "partners.org",                  "Mass General Brigham",
-  "mgh.harvard.edu",               "Mass General Brigham",
-  "bwh.harvard.edu",               "Mass General Brigham",
-  "brighamandwomens.org",          "Mass General Brigham",
-  "brighamhealth.org",             "Mass General Brigham",
-
-  # Boston / Harvard ecosystem
-  "meei.harvard.edu",              "Mass Eye and Ear",
-  "dfci.harvard.edu",              "Dana-Farber Cancer Institute",
-  "bidmc.harvard.edu",             "Beth Israel Deaconess Medical Center",
-  "bidmc.org",                     "Beth Israel Deaconess Medical Center",
-  "harvard.edu",                   "Harvard University",
-
-  # Federal / national
-  "nih.gov",                       "National Institutes of Health",
-
-  # Major academic cancer / medical centers
-  "fredhutch.org",                 "Fred Hutch Cancer Center",
-  "uw.edu",                        "University of Washington",
-  "mskcc.org",                     "Memorial Sloan Kettering Cancer Center",
-  "yale.edu",                      "Yale University",
-  "columbia.edu",                  "Columbia University",
-  "northwestern.edu",              "Northwestern University",
-  "northwesternmedicine.org",      "Northwestern Medicine",
-  "upenn.edu",                     "University of Pennsylvania",
-  "pennmedicine.upenn.edu",        "Penn Medicine",
-  "wustl.edu",                     "Washington University in St. Louis",
-  "vumc.org",                      "Vanderbilt University Medical Center",
-  "miami.edu",                     "University of Miami",
-  "moffitt.org",                   "Moffitt Cancer Center",
-  "mdanderson.org",                "MD Anderson Cancer Center",
-  "stanford.edu",                  "Stanford University",
-  "ucsf.edu",                      "UCSF",
-  "ucsd.edu",                      "UC San Diego",
-  "ucla.edu",                      "UCLA",
-  "duke.edu",                      "Duke University",
-  "emory.edu",                     "Emory University",
-  "umich.edu",                     "University of Michigan",
-  "jhmi.edu",                      "Johns Hopkins Medicine",
-  "jhu.edu",                       "Johns Hopkins University",
-  "clevelandclinic.org",           "Cleveland Clinic",
-  "mayoclinic.org",                "Mayo Clinic",
-  "mountsinai.org",                "Mount Sinai",
-  "nyulangone.org",                "NYU Langone Health",
-
-  # Additional domains represented in the SoCO attendance archive
-  "osu.edu",                       "The Ohio State University",
-  "osumc.edu",                     "The Ohio State University",
-  "unc.edu",                       "University of North Carolina",
-  "unchealth.org",                 "University of North Carolina",
-  "roswellpark.org",               "Roswell Park Comprehensive Cancer Center",
-  "utsouthwestern.edu",            "UT Southwestern Medical Center",
-  "utexas.edu",                    "The University of Texas at Austin",
-  "gwu.edu",                       "George Washington University",
-  "nm.org",                        "Northwestern Medicine",
-  "uab.edu",                       "University of Alabama at Birmingham",
-  "uabmc.edu",                     "University of Alabama at Birmingham",
-  "mainehealth.org",               "MaineHealth",
-  "umassmed.edu",                  "University of Massachusetts Medical School",
-  "medstar.net",                   "MedStar Health",
-  "medstarhealth.org",             "MedStar Health",
-  "inova.org",                     "Inova",
-  "scrippshealth.org",             "Scripps Health",
-  "scripps.org",                   "Scripps Health",
-
-  # Industry
-  "regeneron.com",                 "Regeneron",
-  "bms.com",                       "Bristol Myers Squibb",
-  "replimune.com",                 "Replimune"
-)
-
-# Match exact domains first, but also allow institutional subdomains such as
-# med.umich.edu -> umich.edu. The most specific matching suffix wins.
-map_affiliation_from_domain <- function(x) {
-
-  lookup <- affiliation_domains |>
-    arrange(desc(nchar(domain)))
-
-  map_chr(
-    replace_na(str_to_lower(x), ""),
-    function(d) {
-
-      if (d == "") return(NA_character_)
-
-      hit <- lookup |>
-        filter(
-          d == domain |
-            str_ends(d, paste0(".", domain))
-        ) |>
-        slice_head(n = 1)
-
-      if (!nrow(hit)) return(NA_character_)
-
-      hit$affiliation[[1]]
-    }
-  )
-}
-
-# Confirmed affiliations can fill a missing email/domain or supersede an
-# ambiguous institutional domain.
-affiliation_people_overrides <- tribble(
-  ~name,                  ~affiliation_override,
-  "Adewunmi O. Adelaja",  "Beth Israel Lahey",
-  "Alex Sorrentino",      "Mass General Brigham",
-  "Andrew D. Knight",     "Mass General Brigham",
-  "Frank Worden",         "University of Michigan",
-  "Howard L. Kaufman",    "Mass Eye and Ear",
-  "Ken Tsai",             "Moffitt Cancer Center",
-  "Shailender Bhatia",    "University of Washington",
-  "Nikhil Khushalani",    "Moffitt Cancer Center",
-  "Mina Bakhtiar",        "Mass General Brigham",
-  "Lisa Zaba",            "Stanford University",
-  "Crystal Chance",       "University of Washington",
-  "Don Lawrence",         "Mass General Brigham",
-  "Daniel Coit",          "Memorial Sloan Kettering Cancer Center (retired)",
-  "Dan Hippe",            "University of Washington",
-  "Krista Lachance",      "University of Washington",
-  "Rima Kulikauskas",     "University of Washington",
-  "Song Park",            "University of Washington",
-  "Jack Kollings",        "University of Washington",
-  "Ben Gratz",            "University of Washington",
-  "Haroutyun Joulfayan",  "Washington University School of Medicine in St. Louis",
-  "Gabriella Chefitz",     "National Institutes of Health (NIAMS)",
-  "Candice D Church",      "University of Washington",
-  "Annie Chang",           "Harvard Medical School",
-  "Maria Melendez-Gonzalez","University of North Carolina",
-  "Laura Ferris",          "University of North Carolina",
-  "Ray Cheever",           "University of North Carolina",
-  "Vishal Patel",          "George Washington University",
-  "Jacob Choi",            "Northwestern Medicine",
-  "Truelian Yu",           "Georgetown University / MedStar Health",
-  "Peter Ch'en",           "University of Washington",
-  "David J Savage",       "University of New Mexico Comprehensive Cancer Center",
-  "Mehran Behruj Yusuf",  "University of Alabama at Birmingham",
-  "Claire Verschraegen",  "The Ohio State University"
-) |>
-  mutate(
-    name_key = clean_name_key(name)
-  )
-
-industry_people_overrides <- tribble(
-  ~name,               ~company,
-
-  # Bristol Myers Squibb
-  "Gregory Norigian",  "Bristol Myers Squibb",
-  "Omid Najmi",        "Bristol Myers Squibb",
-  "Cara Trulli",       "Bristol Myers Squibb",
-  "Leon Sakkal",       "Bristol Myers Squibb",
-  "Abraham Selvan",    "Bristol Myers Squibb",
-  "Divya Patel",       "Bristol Myers Squibb",
-  "Christopher Lao",   "Bristol Myers Squibb",
-  "Corey Rantz",       "Bristol Myers Squibb",
-
-  # Replimune
-  "Jeannie Hou",       "Replimune",
-  "Adam Yakovich",     "Replimune",
-  "Adam Whalley",      "Replimune"
-) |>
-  mutate(
-    name = as.character(name),
-    company = as.character(company),
-    name_key = clean_name_key(name)
-  )
-
-# Some industry colleagues participated from a shared room or otherwise
-# were not preserved as separate rows in the Teams attendance export.
-# Keep those known participants here so they are still acknowledged
-# in the industry-recognition section without assigning invented minutes.
-supplemental_industry_attendees <- tribble(
-  ~name,               ~company,                 ~meeting_folder,
-
-  # Replimune colleagues confirmed to have participated in the IGNYTE meeting.
-  "Jeannie Hou",       "Replimune",              "April 12 2026 - IGNYTE",
-  "Adam Yakovich",     "Replimune",              "April 12 2026 - IGNYTE",
-  "Adam Whalley",      "Replimune",              "April 12 2026 - IGNYTE",
-
-  # Bristol Myers Squibb colleagues confirmed from the April 2025
-  # Journal Club invitation / correspondence. Individual Teams
-  # attendance records are no longer available for that meeting,
-  # so they are acknowledged here without invented attendance minutes.
-  "Omid Najmi",        "Bristol Myers Squibb",    "April 2025 - CheckMate 358 Journal Club",
-  "Christopher Lao",   "Bristol Myers Squibb",    "April 2025 - CheckMate 358 Journal Club",
-  "Leon Sakkal",       "Bristol Myers Squibb",    "April 2025 - CheckMate 358 Journal Club",
-  "Divya Patel",       "Bristol Myers Squibb",    "April 2025 - CheckMate 358 Journal Club",
-  "Gregory Norigian",  "Bristol Myers Squibb",    "April 2025 - CheckMate 358 Journal Club",
-  "Corey Rantz",       "Bristol Myers Squibb",    "April 2025 - CheckMate 358 Journal Club",
-  "Abraham Selvan",    "Bristol Myers Squibb",    "April 2025 - CheckMate 358 Journal Club"
-) |>
-  mutate(
-    name_key = clean_name_key(name)
-  )
-
-
-# ============================================================
-# ATTENDANCE FILE STANDARDIZATION
-# ============================================================
-
-normalize_email <- function(x) {
-  x |>
-    replace_na("") |>
-    as.character() |>
-    str_replace_all("\\\\", "") |>
-    str_to_lower() |>
-    str_trim()
-}
-
-extract_domain <- function(email) {
-  ifelse(
-    str_detect(email, "@"),
-    str_replace(email, "^.*@", ""),
-    ""
-  )
-}
-
-surname_key <- function(x) {
-
-  x <- as.character(x)
-
-  map_chr(
-    x,
-    function(nm) {
-
-      if (is.na(nm) || str_squish(nm) == "") return("")
-
-      nm <- str_squish(nm)
-
-      if (str_detect(nm, ",")) {
-        surname <- str_split_fixed(nm, ",", 2)[1]
-      } else {
-        words <- nm |>
-          str_replace_all("[^A-Za-z0-9' -]", " ") |>
-          str_squish() |>
-          str_split("\\s+") |>
-          pluck(1)
-
-        surname <- if (length(words)) words[length(words)] else ""
-      }
-
-      surname |>
-        str_to_lower() |>
-        str_replace_all("[^a-z0-9]", "")
-    }
-  )
-}
-
-standardize_attendance <- function(path, folder_name) {
-
-  x <- readr::read_csv(
-    path,
-    show_col_types = FALSE
-  )
-
-  nms <- names(x)
-
-  name_col <- case_when(
-    "name" %in% nms ~ "name",
-    "Name" %in% nms ~ "Name",
-    "participant" %in% nms ~ "participant",
-    "Participant" %in% nms ~ "Participant",
-    TRUE ~ NA_character_
-  )
-
-  minutes_col <- case_when(
-    "minutes" %in% nms ~ "minutes",
-    "Minutes" %in% nms ~ "Minutes",
-    "duration_min" %in% nms ~ "duration_min",
-    "attendance_minutes" %in% nms ~ "attendance_minutes",
-    "duration_minutes" %in% nms ~ "duration_minutes",
-    TRUE ~ NA_character_
-  )
-
-  email_col <- case_when(
-    "email" %in% nms ~ "email",
-    "Email" %in% nms ~ "Email",
-    TRUE ~ NA_character_
-  )
-
-  if (is.na(name_col) || is.na(minutes_col)) {
-    warning(
-      "Skipping ", folder_name,
-      ": attendance_clean.csv does not contain recognizable name/minutes columns. ",
-      "Columns found: ",
-      paste(nms, collapse = " | ")
-    )
-    return(NULL)
-  }
-
-  tibble(
-    meeting_folder = folder_name,
-    meeting_date = extract_meeting_date(folder_name),
-    meeting_type = classify_meeting(folder_name),
-    name = as.character(x[[name_col]]),
-    minutes = suppressWarnings(as.numeric(x[[minutes_col]])),
-    email = if (!is.na(email_col)) as.character(x[[email_col]]) else ""
-  ) |>
-    mutate(
-      name = str_squish(name),
-      name_key = clean_name_key(name),
-      email = normalize_email(email),
-      domain = extract_domain(email)
-    ) |>
-    filter(
-      name != "",
-      !is.na(minutes)
-    )
-}
-
-
-# ============================================================
-# RAW TEAMS EMAIL EXTRACTION
-# ============================================================
-#
-# attendance_clean.csv is the source of attendance minutes. The original
-# Teams attendance report is the source of email/domain information because
-# some historical cleaning scripts intentionally dropped the Email column.
-
-read_teams_export_matrix <- function(path) {
-
-  ext <- tolower(tools::file_ext(path))
-
-  if (ext %in% c("xls", "xlsx")) {
-
-    if (!requireNamespace("readxl", quietly = TRUE)) {
-      warning("Package 'readxl' is required to read: ", basename(path))
-      return(NULL)
-    }
-
-    raw <- readxl::read_excel(
-      path,
-      col_names = FALSE,
-      col_types = "text",
-      .name_repair = "minimal"
-    ) |>
-      as_tibble(.name_repair = "minimal")
-
-  } else {
-
-    file_size <- file.info(path)$size
-    bytes <- readBin(
-      path,
-      what = "raw",
-      n = ifelse(is.na(file_size), 0, file_size)
-    )
-
-    has_nul <- length(bytes) > 0 && any(bytes == as.raw(0))
-    encoding <- if (has_nul) "UTF-16LE" else "UTF-8"
-
-    con <- file(path, open = "r", encoding = encoding)
-    on.exit(close(con), add = TRUE)
-
-    lines <- readLines(con, warn = FALSE)
-
-    if (!length(lines)) return(NULL)
-
-    lines[1] <- sub("^\ufeff", "", lines[1])
-
-    # Microsoft Teams frequently produces a UTF-16LE tab-delimited file even
-    # when the extension is .csv.
-    if (any(grepl("\t", lines, fixed = TRUE))) {
-
-      split_lines <- strsplit(lines, "\t", fixed = TRUE)
-      max_cols <- max(lengths(split_lines))
-
-      padded <- lapply(
-        split_lines,
-        function(x) {
-          length(x) <- max_cols
-          x[is.na(x)] <- ""
-          x
-        }
-      )
-
-      raw <- as_tibble(
-        do.call(rbind, padded),
-        .name_repair = "minimal"
-      )
-
-    } else {
-
-      raw <- suppressWarnings(
-        readr::read_csv(
-          I(paste(lines, collapse = "\n")),
-          col_names = FALSE,
-          show_col_types = FALSE,
-          progress = FALSE,
-          name_repair = "minimal",
-          trim_ws = TRUE
-        )
-      )
-    }
-  }
-
-  if (is.null(raw) || !nrow(raw)) return(NULL)
-
-  names(raw) <- paste0("col_", seq_len(ncol(raw)))
-
-  raw |>
-    mutate(
-      across(
-        everything(),
-        ~ replace_na(as.character(.x), "") |>
-          str_squish()
-      )
-    )
-}
-
-extract_name_email_pairs <- function(path, folder_name) {
-
-  raw <- tryCatch(
-    read_teams_export_matrix(path),
-    error = function(e) {
-      warning(
-        "Could not read email information from ",
-        basename(path),
-        ": ",
-        conditionMessage(e)
-      )
-      NULL
-    }
-  )
-
-  if (is.null(raw) || !nrow(raw)) return(tibble())
-
-  header_rows <- which(
-    apply(
-      as.data.frame(raw),
-      1,
-      function(z) {
-        vals <- str_to_lower(str_squish(as.character(z)))
-        any(vals == "name") && any(vals == "email")
-      }
-    )
-  )
-
-  if (!length(header_rows)) return(tibble())
-
-  pieces <- map_dfr(
-    header_rows,
-    function(header_row) {
-
-      header <- raw[header_row, , drop = FALSE] |>
-        unlist(use.names = FALSE) |>
-        as.character() |>
-        str_squish()
-
-      name_idx <- which(str_to_lower(header) == "name")[1]
-      email_idx <- which(str_to_lower(header) == "email")[1]
-
-      if (is.na(name_idx) || is.na(email_idx)) return(tibble())
-
-      rows_after <- seq.int(header_row + 1, nrow(raw))
-
-      if (!length(rows_after)) return(tibble())
-
-      tibble(
-        name = as.character(raw[[name_idx]][rows_after]),
-        email = as.character(raw[[email_idx]][rows_after])
-      ) |>
-        mutate(
-          name = str_squish(name),
-          email = normalize_email(email)
-        ) |>
-        filter(
-          name != "",
-          str_detect(email, "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$")
-        )
-    }
-  )
-
-  if (!nrow(pieces)) return(tibble())
-
-  pieces |>
-    mutate(
-      meeting_folder = folder_name,
-      meeting_date = extract_meeting_date(folder_name),
-      surname_key = surname_key(name),
-      name_key = clean_name_key(name),
-      domain = extract_domain(email)
-    ) |>
-    apply_name_reconciliation() |>
-    distinct(
-      meeting_folder,
-      name_key,
-      email,
-      .keep_all = TRUE
-    )
-}
-
-# ============================================================
-# SCAN ALL TRACKED MEETINGS
-# ============================================================
-
-meeting_folders <- list.dirs(
-  attendance_root,
-  recursive = FALSE,
-  full.names = TRUE
-)
-
-clean_files <- file.path(
-  meeting_folders,
-  "attendance_clean.csv"
-)
-
-has_clean <- file.exists(clean_files)
-
-meeting_folders <- meeting_folders[has_clean]
-clean_files <- clean_files[has_clean]
-
-# Original Teams attendance reports in each tracked meeting folder.
-raw_report_index <- map_dfr(
-  meeting_folders,
-  function(folder_path) {
-
-    candidates <- list.files(
-      folder_path,
-      full.names = TRUE,
-      recursive = FALSE,
-      pattern = "\\.(csv|xls|xlsx)$",
-      ignore.case = TRUE
-    )
-
-    candidates <- candidates[
-      !tolower(basename(candidates)) %in%
-        c("attendance_clean.csv", "attendance_summary.csv")
-    ]
-
-    if (!length(candidates)) return(tibble())
-
-    tibble(
-      meeting_folder = basename(folder_path),
-      path = candidates,
-      file_name = basename(candidates)
-    )
-  }
-)
-
-# Quiet QC guardrail: warn when exactly the same raw attendance report has
-# accidentally been placed in more than one meeting folder.
-if (nrow(raw_report_index)) {
-
-  raw_report_index <- raw_report_index |>
-    mutate(
-      md5 = unname(tools::md5sum(path))
-    )
-
-  duplicate_raw_reports <- raw_report_index |>
-    group_by(md5) |>
-    filter(
-      md5 != "",
-      n_distinct(meeting_folder) > 1
-    ) |>
-    ungroup()
-
-  if (nrow(duplicate_raw_reports)) {
-    warning(
-      "The same raw attendance report appears in more than one tracked meeting folder: ",
-      paste(
-        unique(duplicate_raw_reports$file_name),
-        collapse = " | "
-      )
-    )
-  }
-}
-
-raw_email_long <- if (nrow(raw_report_index)) {
-  pmap_dfr(
-    raw_report_index |>
-      select(meeting_folder, path),
-    ~ extract_name_email_pairs(
-      path = ..2,
-      folder_name = ..1
-    )
-  )
-} else {
-  tibble()
-}
-
-if (!length(clean_files)) {
-  stop(
-    "No attendance_clean.csv files were found under:\n",
-    attendance_root
-  )
-}
-
-attendance_list <- map2(
-  clean_files,
-  basename(meeting_folders),
-  standardize_attendance
-)
-
-attendance_long <- bind_rows(attendance_list)
-
-if (!nrow(attendance_long)) {
-  stop("Attendance files were found, but no usable attendance rows were produced.")
-}
-
-attendance_long <- apply_name_reconciliation(attendance_long) |>
-  filter(
-    !str_detect(
-      name,
-      regex("^Replimune team$", ignore_case = TRUE)
-    )
-  )
-
-# Collapse duplicates within each meeting AFTER reconciliation.
-attendance_long <- attendance_long |>
-  group_by(
-    meeting_folder,
-    meeting_date,
-    meeting_type,
-    name_key
-  ) |>
-  summarise(
-    name = first(name),
-    minutes = sum(minutes, na.rm = TRUE),
-    email = {
-      z <- email[email != "" & !is.na(email)]
-      if (length(z)) z[[1]] else ""
-    },
-    domain = {
-      z <- domain[domain != "" & !is.na(domain)]
-      if (length(z)) z[[1]] else ""
-    },
-    .groups = "drop"
-  )
-
-
-# Enrich each attendance row with the email/domain preserved in the original
-# Teams report. First match reconciled identities exactly. If a raw Teams row
-# uses a legal name while the clean attendance row uses a familiar name, use
-# surname matching only when that surname is unique within the meeting on both
-# sides. This catches examples such as Francis (Frank) Worden without making a
-# broad fuzzy match.
-if (nrow(raw_email_long)) {
-
-  raw_email_by_meeting <- raw_email_long |>
-    group_by(
-      meeting_folder,
-      name_key
-    ) |>
-    summarise(
-      email_from_raw = first(email),
-      domain_from_raw = first(domain),
-      .groups = "drop"
-    )
-
-  attendance_long <- attendance_long |>
-    left_join(
-      raw_email_by_meeting,
-      by = c("meeting_folder", "name_key")
-    ) |>
-    mutate(
-      email = coalesce(
-        na_if(email, ""),
-        na_if(email_from_raw, "")
-      ),
-      domain = coalesce(
-        na_if(domain, ""),
-        na_if(domain_from_raw, "")
-      )
-    ) |>
-    select(
-      -email_from_raw,
-      -domain_from_raw
-    )
-
-  unmatched_attendance <- attendance_long |>
-    filter(
-      is.na(email) | email == ""
-    ) |>
-    mutate(
-      surname_key = surname_key(name)
-    ) |>
-    group_by(
-      meeting_folder,
-      surname_key
-    ) |>
-    filter(
-      surname_key != "",
-      n() == 1
-    ) |>
-    ungroup() |>
-    select(
-      meeting_folder,
-      name_key,
-      surname_key
-    )
-
-  unique_raw_surnames <- raw_email_long |>
-    filter(
-      email != "",
-      surname_key != ""
-    ) |>
-    group_by(
-      meeting_folder,
-      surname_key
-    ) |>
-    filter(
-      n_distinct(name_key) == 1,
-      n_distinct(email) == 1
-    ) |>
-    summarise(
-      surname_email = first(email),
-      surname_domain = first(domain),
-      .groups = "drop"
-    )
-
-  surname_fallback <- unmatched_attendance |>
-    inner_join(
-      unique_raw_surnames,
-      by = c("meeting_folder", "surname_key")
-    ) |>
-    select(
-      meeting_folder,
-      name_key,
-      surname_email,
-      surname_domain
-    )
-
-  attendance_long <- attendance_long |>
-    left_join(
-      surname_fallback,
-      by = c("meeting_folder", "name_key")
-    ) |>
-    mutate(
-      email = coalesce(
-        na_if(email, ""),
-        na_if(surname_email, "")
-      ),
-      domain = coalesce(
-        na_if(domain, ""),
-        na_if(surname_domain, "")
-      ),
-      email = replace_na(email, ""),
-      domain = replace_na(domain, "")
-    ) |>
-    select(
-      -surname_email,
-      -surname_domain
-    )
-}
-
-# ============================================================
-# INDUSTRY CLASSIFICATION
-# ============================================================
-
-attendance_long <- attendance_long |>
-  left_join(
-    industry_domains,
-    by = "domain"
-  ) |>
-  left_join(
-    industry_people_overrides |>
-      select(
-        name_key,
-        company_override = company
-      ),
-    by = "name_key"
-  ) |>
-  mutate(
-    company = coalesce(
-      na_if(as.character(company_override), ""),
-      na_if(as.character(company), "")
-    ),
-    audience = if_else(
-      !is.na(company),
-      "Industry",
-      "Academic / clinical"
-    )
-  ) |>
-  select(-company_override)
-
-# Don Lawrence was confirmed at the IGNYTE Journal Club. The original
-# Teams display name was "DL". In case an older attendance_clean.csv
-# omitted or failed to preserve that abbreviated row, retain him as a
-# confirmed participant without inventing attendance minutes.
-don_lawrence_fallback <- tibble(
-  meeting_folder = "April 12 2026 - IGNYTE",
-  meeting_date = extract_meeting_date("April 12 2026 - IGNYTE"),
-  meeting_type = "Journal Club",
-  name_key = clean_name_key("Don Lawrence"),
-  name = "Don Lawrence",
-  minutes = NA_real_,
-  email = "",
-  domain = "",
-  company = NA_character_,
-  audience = "Academic / clinical"
-) |>
-  anti_join(
-    attendance_long |>
-      distinct(name_key, meeting_folder),
-    by = c("name_key", "meeting_folder")
-  )
-
-attendance_long <- bind_rows(
-  attendance_long,
-  don_lawrence_fallback
-)
-
-# ============================================================
-# DENOMINATORS
-# ============================================================
-
-meeting_index <- attendance_long |>
+# event_participation is built centrally by 40_build_registry_views.R.
+# It combines canonical identity, event metadata, persistent participation,
+# and organization-at-event context. This page therefore does not have to
+# reconstruct event/person joins or infer historical employer context itself.
+
+meeting_index <- event_participation |>
   distinct(
-    meeting_folder,
-    meeting_date,
-    meeting_type
+    event_id,
+    meeting_folder = source_folder,
+    meeting_date = event_date,
+    meeting_type = event_type,
+    meeting_title = event_title
   ) |>
   arrange(
     meeting_date,
     meeting_folder
   )
+
+attendance_long <- event_participation |>
+  transmute(
+    event_id,
+    person_id,
+    meeting_folder = source_folder,
+    meeting_date = event_date,
+    meeting_type = event_type,
+    meeting_title = event_title,
+
+    name_key = clean_name_key(name),
+    name,
+    preferred_name,
+    minutes = as.numeric(duration_min),
+
+    audience = if_else(
+      sector_at_event == "industry",
+      "Industry",
+      "Academic / clinical"
+    ),
+
+    company = if_else(
+      sector_at_event == "industry",
+      company_at_event,
+      NA_character_
+    ),
+
+    # Directory/roster affiliation remains the CURRENT registry affiliation.
+    # Historical organization-at-event is used separately for industry cards.
+    affiliation_display = display_affiliation(current_affiliation),
+
+    current_title,
+    identity_match_method,
+    attendance_names_observed,
+    participation_source,
+    organization_context_source
+  )
+
+if (!nrow(attendance_long)) {
+  stop("The registry contains no tracked attendance rows.", call. = FALSE)
+}
+
+if (
+  attendance_long |>
+    count(event_id, person_id) |>
+    filter(n > 1) |>
+    nrow() > 0
+) {
+  stop(
+    "Registry-derived Community Highlights attendance contains duplicate event/person rows.",
+    call. = FALSE
+  )
+}
+
+
+# ============================================================
+# DENOMINATORS
+# ============================================================
 
 n_tracked_meetings <- nrow(meeting_index)
 
@@ -2145,6 +1219,7 @@ n_tracked_rf <- meeting_index |>
   filter(meeting_type == "Research Forum") |>
   nrow()
 
+
 # ============================================================
 # ACADEMIC / CLINICAL MEMBER SUMMARY
 # ============================================================
@@ -2153,17 +1228,21 @@ academic <- attendance_long |>
   filter(audience == "Academic / clinical")
 
 member_summary <- academic |>
-  group_by(name_key) |>
+  group_by(
+    person_id,
+    name_key
+  ) |>
   summarise(
     name = first(name),
-    meetings_attended = n_distinct(meeting_folder),
+    meetings_attended = n_distinct(event_id),
     journal_clubs_attended = n_distinct(
-      meeting_folder[meeting_type == "Journal Club"]
+      event_id[meeting_type == "Journal Club"]
     ),
     research_forums_attended = n_distinct(
-      meeting_folder[meeting_type == "Research Forum"]
+      event_id[meeting_type == "Research Forum"]
     ),
     total_minutes = sum(minutes, na.rm = TRUE),
+    affiliation_display = first(affiliation_display),
     .groups = "drop"
   ) |>
   mutate(
@@ -2189,15 +1268,16 @@ member_summary <- academic |>
       }
   )
 
-max_minutes <- max(
-  member_summary$total_minutes,
-  na.rm = TRUE
-)
+max_minutes <- if (nrow(member_summary)) {
+  max(member_summary$total_minutes, na.rm = TRUE)
+} else {
+  0
+}
 
 member_summary <- member_summary |>
   mutate(
     normalized_minutes_pct =
-      if (max_minutes > 0) {
+      if (is.finite(max_minutes) && max_minutes > 0) {
         100 * total_minutes / max_minutes
       } else {
         rep(0, n())
@@ -2212,6 +1292,7 @@ member_summary <- member_summary |>
     rank = row_number()
   )
 
+
 # ============================================================
 # INDUSTRY RECOGNITION
 # ============================================================
@@ -2219,43 +1300,14 @@ member_summary <- member_summary |>
 industry_summary <- attendance_long |>
   filter(audience == "Industry") |>
   group_by(
+    person_id,
     name_key,
     company
   ) |>
   summarise(
     name = first(name),
-    meetings_attended = n_distinct(meeting_folder),
+    meetings_attended = n_distinct(event_id),
     total_minutes = sum(minutes, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-# Guarantee recognition of known industry participants whose individual
-# minutes were not captured because they joined from a shared room or
-# were otherwise absent from the person-level Teams export.
-supplemental_industry_summary <- supplemental_industry_attendees |>
-  group_by(
-    name_key,
-    company
-  ) |>
-  summarise(
-    name = first(name),
-    meetings_attended = n_distinct(meeting_folder),
-    total_minutes = 0,
-    .groups = "drop"
-  )
-
-industry_summary <- bind_rows(
-  industry_summary,
-  supplemental_industry_summary
-) |>
-  group_by(
-    name_key,
-    company
-  ) |>
-  summarise(
-    name = first(name),
-    meetings_attended = max(meetings_attended, na.rm = TRUE),
-    total_minutes = max(total_minutes, na.rm = TRUE),
     .groups = "drop"
   ) |>
   arrange(
@@ -2268,111 +1320,46 @@ industry_summary <- bind_rows(
 company_summary <- industry_summary |>
   group_by(company) |>
   summarise(
-    unique_colleagues = n_distinct(name_key),
+    unique_colleagues = n_distinct(person_id),
     total_person_minutes = sum(total_minutes, na.rm = TRUE),
     .groups = "drop"
   ) |>
-  arrange(desc(unique_colleagues), company)
+  arrange(
+    desc(unique_colleagues),
+    company
+  )
 
 
 # ============================================================
 # COMMUNITY ROSTER / AFFILIATION
 # ============================================================
 
-contact_candidates <- bind_rows(
-  attendance_long |>
-    select(
-      name_key,
-      meeting_date,
-      email,
-      domain
-    ),
-  if (nrow(raw_email_long)) {
-    raw_email_long |>
-      select(
-        name_key,
-        meeting_date,
-        email,
-        domain
-      )
-  } else {
-    tibble(
-      name_key = character(),
-      meeting_date = as.Date(character()),
-      email = character(),
-      domain = character()
-    )
-  }
-) |>
-  filter(
-    email != "",
-    domain != ""
+community_roster <- attendance_long |>
+  group_by(
+    person_id,
+    name_key
   ) |>
-  distinct()
-
-preferred_contact <- contact_candidates |>
-  arrange(
-    name_key,
-    desc(meeting_date)
-  ) |>
-  group_by(name_key) |>
   summarise(
-    email = first(email),
-    domain = first(domain),
+    name = first(name),
+    audience = if_else(
+      any(audience == "Industry"),
+      "Industry",
+      "Academic / clinical"
+    ),
+    company = {
+      z <- company[!is.na(company) & company != ""]
+      if (length(z)) z[[1]] else NA_character_
+    },
+    affiliation_display = {
+      z <- affiliation_display[
+        !is.na(affiliation_display) &
+          affiliation_display != ""
+      ]
+      if (length(z)) z[[1]] else "—"
+    },
+    meetings_attended = n_distinct(event_id),
+    total_minutes = sum(minutes, na.rm = TRUE),
     .groups = "drop"
-  )
-
-academic_roster <- member_summary |>
-  transmute(
-    name_key,
-    name,
-    audience = "Academic / clinical",
-    company = NA_character_,
-    meetings_attended,
-    total_minutes
-  )
-
-industry_roster <- industry_summary |>
-  transmute(
-    name_key,
-    name,
-    audience = "Industry",
-    company,
-    meetings_attended,
-    total_minutes
-  )
-
-community_roster <- bind_rows(
-  academic_roster,
-  industry_roster
-) |>
-  left_join(
-    preferred_contact,
-    by = "name_key"
-  ) |>
-  mutate(
-    email = replace_na(email, ""),
-    domain = replace_na(domain, "")
-  ) |>
-  mutate(
-    affiliation = map_affiliation_from_domain(domain)
-  ) |>
-  left_join(
-    affiliation_people_overrides |>
-      select(
-        name_key,
-        affiliation_override
-      ),
-    by = "name_key"
-  ) |>
-  mutate(
-    affiliation_display = case_when(
-      audience == "Industry" & !is.na(company) ~ company,
-      !is.na(affiliation_override) ~ affiliation_override,
-      !is.na(affiliation) ~ affiliation,
-      domain != "" ~ domain,
-      TRUE ~ "—"
-    )
   ) |>
   arrange(
     audience,
@@ -2391,18 +1378,18 @@ industry_roster_show <- community_roster |>
     name
   )
 
-unmapped_domains <- community_roster |>
+missing_affiliations <- community_roster |>
   filter(
     audience == "Academic / clinical",
-    domain != "",
-    is.na(affiliation),
-    is.na(affiliation_override)
+    is.na(affiliation_display) |
+      affiliation_display == "—"
   ) |>
-  count(
-    domain,
-    sort = TRUE,
-    name = "people"
+  select(
+    person_id,
+    name,
+    affiliation_display
   )
+
 
 # ============================================================
 # MEETING-LEVEL SUMMARY
@@ -2410,17 +1397,19 @@ unmapped_domains <- community_roster |>
 
 meeting_summary <- attendance_long |>
   group_by(
+    event_id,
     meeting_folder,
     meeting_date,
-    meeting_type
+    meeting_type,
+    meeting_title
   ) |>
   summarise(
-    unique_people = n_distinct(name_key),
+    unique_people = n_distinct(person_id),
     academic_people = n_distinct(
-      name_key[audience == "Academic / clinical"]
+      person_id[audience == "Academic / clinical"]
     ),
     industry_people = n_distinct(
-      name_key[audience == "Industry"]
+      person_id[audience == "Industry"]
     ),
     total_person_minutes = sum(minutes, na.rm = TRUE),
     .groups = "drop"
@@ -2430,92 +1419,19 @@ meeting_summary <- attendance_long |>
     meeting_folder
   )
 
+
 # ============================================================
-# ATTENDANCE QC MATRIX
+# ATTENDANCE MATRIX
 # ============================================================
 #
-# For each tracked meeting, estimate the meeting duration as the longest
-# reconciled individual attendance in that meeting. This makes the percentage
-# interpretable directly from the Teams-derived attendance archive and avoids
-# inventing a scheduled duration when one is not present in attendance_clean.csv.
-
-# For this archive, use the scientific convener's tracked attendance
-# (David M. Miller) as the meeting-duration anchor. This avoids ambiguity
-# from early joins, late disconnects, shared rooms, and other Teams artifacts.
-# If David is unexpectedly absent from a tracked record, fall back to the
-# longest academic / clinical attendance for that meeting.
-david_key <- clean_name_key("David M. Miller")
-
-david_meeting_duration <- attendance_long |>
-  filter(
-    name_key == david_key,
-    !is.na(minutes)
-  ) |>
-  group_by(
-    meeting_folder,
-    meeting_date,
-    meeting_type
-  ) |>
-  summarise(
-    david_minutes = max(minutes, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-fallback_meeting_duration <- attendance_long |>
-  filter(
-    audience == "Academic / clinical",
-    !is.na(minutes)
-  ) |>
-  group_by(
-    meeting_folder,
-    meeting_date,
-    meeting_type
-  ) |>
-  summarise(
-    fallback_minutes = max(minutes, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-meeting_duration <- meeting_index |>
-  left_join(
-    david_meeting_duration,
-    by = c(
-      "meeting_folder",
-      "meeting_date",
-      "meeting_type"
-    )
-  ) |>
-  left_join(
-    fallback_meeting_duration,
-    by = c(
-      "meeting_folder",
-      "meeting_date",
-      "meeting_type"
-    )
-  ) |>
-  mutate(
-    observed_meeting_minutes = coalesce(
-      david_minutes,
-      fallback_minutes
-    )
-  ) |>
-  select(
-    meeting_folder,
-    meeting_date,
-    meeting_type,
-    observed_meeting_minutes
-  )
+# Presence comes directly from persistent PARTICIPATION. Community Highlights
+# does not apply page-level attendance overrides. Any confirmed participant
+# missing from a tracked event should be curated upstream in the registry.
 
 qc_attendance <- attendance_long |>
-  left_join(
-    meeting_duration,
-    by = c(
-      "meeting_folder",
-      "meeting_date",
-      "meeting_type"
-    )
-  ) |>
   transmute(
+    event_id,
+    person_id,
     name_key,
     name,
     audience,
@@ -2524,95 +1440,18 @@ qc_attendance <- attendance_long |>
     meeting_date,
     meeting_type,
     minutes,
-    observed_meeting_minutes,
-    attendance_pct = if_else(
-      observed_meeting_minutes > 0 & !is.na(minutes),
-      pmin(
-        100,
-        100 * minutes / observed_meeting_minutes
-      ),
-      NA_real_
-    ),
     attendance_status = if_else(
       is.na(minutes),
-      "confirmed_time_not_captured",
+      "present_time_not_captured",
       "tracked"
     )
   )
 
-# Preserve confirmed participants from a tracked meeting even if they joined
-# from a shared room or their individual Teams duration was not retained.
-# Do not add historical supplemental meetings that are outside the current
-# eight-meeting Attendance Over Time archive.
-# Manual attendance-credit overrides for confirmed participation where
-# individual Teams timing was not preserved.
-attendance_credit_overrides <- tribble(
-  ~name,          ~meeting_folder,             ~attendance_credit_pct,
-  "Jeannie Hou",  "April 12 2026 - IGNYTE",   100
-) |>
-  mutate(
-    name_key = clean_name_key(name)
-  )
-
-qc_supplemental <- supplemental_industry_attendees |>
-  filter(
-    meeting_folder %in% meeting_index$meeting_folder
-  ) |>
-  anti_join(
-    qc_attendance |>
-      distinct(name_key, meeting_folder),
-    by = c("name_key", "meeting_folder")
-  ) |>
-  left_join(
-    meeting_index,
-    by = "meeting_folder"
-  ) |>
-  left_join(
-    meeting_duration |>
-      select(
-        meeting_folder,
-        observed_meeting_minutes
-      ),
-    by = "meeting_folder"
-  ) |>
-  left_join(
-    attendance_credit_overrides |>
-      select(
-        name_key,
-        meeting_folder,
-        attendance_credit_pct
-      ),
-    by = c("name_key", "meeting_folder")
-  ) |>
-  transmute(
-    name_key,
-    name,
-    audience = "Industry",
-    company,
-    meeting_folder,
-    meeting_date,
-    meeting_type,
-    minutes = if_else(
-      !is.na(attendance_credit_pct),
-      observed_meeting_minutes * attendance_credit_pct / 100,
-      NA_real_
-    ),
-    observed_meeting_minutes,
-    attendance_pct = attendance_credit_pct,
-    attendance_status = if_else(
-      !is.na(attendance_credit_pct),
-      "manual_credit",
-      "confirmed_time_not_captured"
-    )
-  )
-
-qc_attendance <- bind_rows(
-  qc_attendance,
-  qc_supplemental
-)
-
 qc_people <- qc_attendance |>
-  group_by(name_key) |>
+  group_by(
+    person_id,
+    name_key
+  ) |>
   summarise(
     name = first(name),
     audience = if_else(
@@ -2621,10 +1460,11 @@ qc_people <- qc_attendance |>
       "Academic / clinical"
     ),
     total_minutes = sum(minutes, na.rm = TRUE),
-    meetings_attended = n_distinct(meeting_folder),
+    meetings_attended = n_distinct(event_id),
     .groups = "drop"
   ) |>
   arrange(name)
+
 
 # ============================================================
 # OPTIONAL CSV OUTPUTS FOR AUDIT / REUSE
@@ -2666,18 +1506,20 @@ readr::write_csv(
 )
 
 readr::write_csv(
-  unmapped_domains,
-  file.path(output_dir, "community_unmapped_domains.csv")
+  missing_affiliations,
+  file.path(output_dir, "community_missing_affiliations.csv")
 )
+
 
 # ============================================================
 # PAGE OBJECTS
 # ============================================================
 
-esc <- function(x) htmltools::htmlEscape(as.character(x))
-
 meeting_archive_links <- tribble(
   ~meeting_folder,                                                     ~archive_href,
+
+  "September 25 2026 - DAROMUN PIVOTAL",
+  "/journal_club/September%2025%202026%20-%20DAROMUN%20PIVOTAL/",
 
   "August 14 2026 - FIRST in CSCC",
   "/journal_club/August%2014%202026%20-%20FIRST%20in%20CSCC/",
@@ -2722,6 +1564,8 @@ total_person_hours <- if (nrow(attendance_long)) {
 # The scientific convener remains in the full attendance archive/matrix, but
 # is omitted from the ranked participation view because attendance is expected
 # as part of the role.
+david_key <- clean_name_key("David M. Miller")
+
 community_participation <- member_summary |>
   filter(name_key != david_key)
 
@@ -2734,7 +1578,10 @@ community_max_minutes <- if (nrow(community_participation)) {
 community_participation <- community_participation |>
   mutate(
     normalized_minutes_pct =
-      if (community_max_minutes > 0) {
+      if (
+        is.finite(community_max_minutes) &&
+          community_max_minutes > 0
+      ) {
         100 * total_minutes / community_max_minutes
       } else {
         rep(0, n())
@@ -2767,7 +1614,7 @@ A record of the people who keep showing up: clinicians, researchers, trainees, a
 <div class="ch-accent"></div>
 
 <div class="ch-note">
-<strong>A note on the archive.</strong> SoCO has held <strong>78 meetings</strong> to date. Detailed attendance records are available for <strong>8 meetings from roughly the past year</strong>, so participation metrics on this page refer to that recent tracked subset rather than the full history of the community. <a href="jc.qmd">Explore the Journal Club archive</a> and <a href="research_forum.qmd">Research Forum archive</a>.
+<strong>A note on the archive.</strong> SoCO has held <strong>`r soco_total_meetings` meetings</strong> to date. Detailed person-level attendance is currently curated in the SoCO registry for <strong>`r n_meetings` meetings</strong>, so participation metrics on this page refer to that tracked subset rather than the full history of the community. <a href="jc.qmd">Explore the Journal Club archive</a> and <a href="research_forum.qmd">Research Forum archive</a>.
 </div>
 </div>
 </div>
@@ -2795,7 +1642,7 @@ The numbers below offer a simple way to recognize the people who have repeatedly
 <div class="ch-metric">
 <div class="ch-metric-label">Academic / clinical participants</div>
 <div class="ch-metric-value">`r n_academic`</div>
-<div class="ch-metric-note">unique people represented in the tracked attendance archive</div>
+<div class="ch-metric-note">unique people represented in the registry-backed tracked archive</div>
 </div>
 
 <div class="ch-metric">
@@ -2850,7 +1697,7 @@ if (nrow(member_summary)) {
 ## Community participation
 
 <p>
-A recognition of community members who have joined us most consistently across the current attendance archive. This group reflects frequency of participation across tracked meetings, with participation time used only to distinguish otherwise equal records.
+A recognition of community members who have joined us most consistently across the registry-backed tracked archive. This group reflects frequency of participation across tracked meetings, with participation time used only to distinguish otherwise equal records.
 </p>
 </div>
 
@@ -2897,7 +1744,7 @@ if (nrow(top20)) {
 ## Industry collaborators
 
 <p>
-Industry colleagues are recognized separately from the academic and clinical community. When individual attendance time was not preserved, confirmed participation is acknowledged without estimating minutes.
+Industry colleagues are recognized separately from the academic and clinical community. Company grouping reflects the organization represented at the tracked meeting when that historical context is curated; the directory below continues to show the current registry affiliation.
 </p>
 </div>
 
@@ -2957,14 +1804,14 @@ if (nrow(company_summary)) {
 ## Community roster
 
 <p>
-A directory-style view of the people, institutions, and organizations represented across the current SoCO attendance archive. Related health-system affiliations are consolidated where appropriate, and affiliations may not reflect a current appointment.
+A directory-style view of the people, institutions, and organizations represented across the current tracked SoCO archive. Identity and current affiliation come from the persistent SoCO registry; related health-system names are consolidated for display.
 </p>
 </div>
 
 <details class="ch-roster-details">
 <summary>
 <span class="ch-roster-summary-title">View community roster</span>
-<span class="ch-roster-summary-subtitle">People and institutions represented across the current archive</span>
+<span class="ch-roster-summary-subtitle">Registry-backed people and current affiliations represented across the tracked archive</span>
 </summary>
 
 ```{r community-roster}
@@ -3268,5 +2115,6 @@ if (nrow(qc_people) && nrow(qc_meetings)) {
 </section>
 
 </div>
+
 
 
