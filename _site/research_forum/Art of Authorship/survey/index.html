@@ -239,6 +239,25 @@ body {
   color: var(--ink);
 }
 .survey-header p { margin:0; color:var(--muted); }
+.survey-header-full { display:block; }
+.survey-header-compact {
+  display:none;
+  color:var(--ink);
+  font-size:.92rem;
+  font-weight:800;
+  letter-spacing:.01em;
+  line-height:1.25;
+}
+.survey-header.compact {
+  padding-top:12px;
+  padding-bottom:11px;
+}
+.survey-header.compact .survey-header-full { display:none; }
+.survey-header.compact .survey-header-compact {
+  display:flex;
+  align-items:center;
+  min-height:24px;
+}
 .progress-wrap { height: 6px; background:#edf3f2; }
 .progress-bar { height:100%; width:0%; background:var(--accent); transition:width .2s ease; }
 
@@ -395,6 +414,13 @@ body {
   .survey-card { border-radius:0; min-height:100vh; border-left:0; border-right:0; }
   .survey-step { min-height: 60vh; padding:24px 18px; }
   .survey-header, .nav-row { padding-left:18px; padding-right:18px; }
+  .survey-header.compact {
+    padding-top:10px;
+    padding-bottom:9px;
+  }
+  .survey-header-compact {
+    font-size:.86rem;
+  }
 }
 </style>
 <div class="survey-shell">
@@ -402,9 +428,14 @@ body {
     <div class="preview-banner" id="previewBanner">
       Preview mode — you can complete the survey, but no response will be submitted.
     </div>
-    <div class="survey-header">
-      <h1>The Art of Authorship — Pre-Meeting Community Survey</h1>
-      <p>The Society of Cutaneous Oncology is conducting this brief survey in advance of The Art of Authorship — Who Gets on the Paper? Responses will be analyzed in aggregate and used to guide the workshop discussion. You do not need to attend the workshop to participate. Estimated time: 7–9 minutes.</p>
+    <div class="survey-header" id="surveyHeader">
+      <div class="survey-header-full">
+        <h1>The Art of Authorship — Pre-Meeting Community Survey</h1>
+        <p>The Society of Cutaneous Oncology is conducting this brief survey in advance of The Art of Authorship — Who Gets on the Paper? Responses will be analyzed in aggregate and used to guide the workshop discussion. You do not need to attend the workshop to participate. Estimated time: 7–9 minutes.</p>
+      </div>
+      <div class="survey-header-compact" aria-label="Survey title">
+        The Art of Authorship · Community Survey
+      </div>
     </div>
     <div class="progress-wrap"><div id="progressBar" class="progress-bar"></div></div>
 
@@ -801,6 +832,8 @@ body {
 (() => {
   const form = document.getElementById("surveyForm");
   const allSteps = [...document.querySelectorAll(".survey-step")];
+  const surveyCard = document.querySelector(".survey-card");
+  const surveyHeader = document.getElementById("surveyHeader");
   const backBtn = document.getElementById("backBtn");
   const progressBar = document.getElementById("progressBar");
   const thankyou = document.getElementById("thankyou");
@@ -991,6 +1024,21 @@ body {
     if (ta && typeof val === "string") ta.value = val;
   }
 
+  function scrollSurveyIntoView(firstScreen) {
+    if (firstScreen) {
+      window.scrollTo({top:0, behavior:"smooth"});
+      return;
+    }
+
+    // After the opening question, anchor to the survey card rather than
+    // returning to the top of the full SoCO webpage.
+    requestAnimationFrame(() => {
+      if (!surveyCard) return;
+      const y = surveyCard.getBoundingClientRect().top + window.scrollY - 8;
+      window.scrollTo({top:Math.max(0, y), behavior:"smooth"});
+    });
+  }
+
   function setActive(step, pushHistory = true) {
     allSteps.forEach(s => s.classList.remove("active"));
     currentStep = step;
@@ -1002,8 +1050,14 @@ body {
     backBtn.style.visibility = history.length > 1 ? "visible" : "hidden";
     const vis = visibleSteps();
     const idx = Math.max(0, vis.indexOf(step));
+    const firstScreen = idx === 0 && step !== submitStep;
+
+    if (surveyHeader) {
+      surveyHeader.classList.toggle("compact", !firstScreen);
+    }
+
     progressBar.style.width = ((idx + 1) / Math.max(1, vis.length) * 100) + "%";
-    window.scrollTo({top:0, behavior:"smooth"});
+    scrollSurveyIntoView(firstScreen);
     save();
   }
 
@@ -1032,7 +1086,9 @@ body {
         thankyouText.textContent = "Preview complete. No response was submitted.";
       }
       thankyou.classList.add("active");
+      if (surveyHeader) surveyHeader.classList.add("compact");
       progressBar.style.width = "100%";
+      scrollSurveyIntoView(false);
       return;
     }
 
@@ -1047,7 +1103,9 @@ body {
       form.style.display = "none";
       document.getElementById("navRow").style.display = "none";
       thankyou.classList.add("active");
+      if (surveyHeader) surveyHeader.classList.add("compact");
       progressBar.style.width = "100%";
+      scrollSurveyIntoView(false);
       localStorage.removeItem(storageKey);
     } catch(e) {
       let er = form.querySelector(".error");
