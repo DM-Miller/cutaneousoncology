@@ -347,6 +347,10 @@ body {
 .text-answer {
   width:100%; border:1px solid var(--line); border-radius:14px; padding:14px; font:inherit; margin-top:18px;
 }
+.short-text-answer {
+  max-width:560px;
+  display:block;
+}
 .nav-row { display:flex; justify-content:space-between; gap:12px; padding: 0 24px 24px; }
 .nav-row button, .next-btn, .submit-btn {
   border:0; border-radius:999px; padding:12px 18px; font-weight:700; cursor:pointer;
@@ -431,7 +435,7 @@ body {
     <div class="survey-header" id="surveyHeader">
       <div class="survey-header-full">
         <h1>The Art of Authorship — Pre-Meeting Community Survey</h1>
-        <p>The Society of Cutaneous Oncology is conducting this brief survey in advance of The Art of Authorship — Who Gets on the Paper? Responses will be analyzed in aggregate and used to guide the workshop discussion. You do not need to attend the workshop to participate. Estimated time: 7–9 minutes.</p>
+        <p>The Society of Cutaneous Oncology is conducting this brief survey in advance of The Art of Authorship — Who Gets on the Paper? Responses will be analyzed in aggregate and used to guide the workshop discussion. We do not ask for your name unless you choose to provide it at the end. You do not need to attend the workshop to participate. Estimated time: 7–9 minutes.</p>
       </div>
       <div class="survey-header-compact" aria-label="Survey title">
         The Art of Authorship · Community Survey
@@ -442,7 +446,6 @@ body {
     <form id="surveyForm" name="art-of-authorship-premeeting-survey" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="art-of-authorship-premeeting-survey">
       <input type="hidden" name="respondent_id" id="respondent_id">
-      <input type="hidden" name="first_name" id="first_name">
 <input type="hidden" name="profile_setting" id="answer_profile_setting" data-answer-placeholder="true">
 <input type="hidden" name="profile_career_stage_academic" id="answer_profile_career_stage_academic" data-answer-placeholder="true">
 <input type="hidden" name="profile_career_stage_industry" id="answer_profile_career_stage_industry" data-answer-placeholder="true">
@@ -493,6 +496,7 @@ body {
 <input type="hidden" name="m4_org_opportunity_to_qualify" id="answer_m4_org_opportunity_to_qualify" data-answer-placeholder="true">
 <input type="hidden" name="editor_authorship_concern_trigger" id="answer_editor_authorship_concern_trigger" data-answer-placeholder="true">
 <input type="hidden" name="editor_journal_role" id="answer_editor_journal_role" data-answer-placeholder="true">
+<input type="hidden" name="optional_name" id="answer_optional_name" data-answer-placeholder="true">
 <input type="hidden" name="eligible_m1_invited_expert" id="answer_eligible_m1_invited_expert" data-answer-placeholder="true">
 <input type="hidden" name="eligible_m1_inviter" id="answer_eligible_m1_inviter" data-answer-placeholder="true">
 <input type="hidden" name="eligible_m2_clinician" id="answer_eligible_m2_clinician" data-answer-placeholder="true">
@@ -808,6 +812,7 @@ body {
 <button type="button" class="choice single-choice" data-value="require_resolution">The journal should require the authors to resolve the issue before publication</button>
 <button type="button" class="choice single-choice" data-value="institution">The journal should involve the relevant institution(s) when a substantial dispute cannot be resolved</button>
 <button type="button" class="choice single-choice" data-value="unsure">Unsure</button></div></section>
+<section class="survey-step question-step" data-question-id="optional_name" data-question-type="text" data-required="false" data-section="optional_identity"><div class="eyebrow">Optional</div><h2 class="anchored">Your name (optional)</h2><div class="help">If you'd like us to know who submitted this response, you may enter your name below. This is entirely optional.</div><div class="choices"><input type="text" class="text-answer short-text-answer" placeholder="Name" autocomplete="name" maxlength="100"></div><button type="button" class="next-btn">Continue</button></section>
         <section class="survey-step submit-step" id="submitStep" data-question-id="final_submit" data-question-type="submit" data-required="false">
           <h2 class="anchored">Ready to submit?</h2>
           <p>You can use the Back button to review or change any response before submitting.</p>
@@ -822,7 +827,7 @@ body {
     </form>
 
     <div class="thankyou" id="thankyou">
-      <h2 class="anchored">Thank you.</h2>
+      <h2 id="thankyouHeading" class="anchored">Thank you.</h2>
       <p>Your responses have been submitted.</p>
     </div>
   </div>
@@ -837,6 +842,7 @@ body {
   const backBtn = document.getElementById("backBtn");
   const progressBar = document.getElementById("progressBar");
   const thankyou = document.getElementById("thankyou");
+  const thankyouHeading = document.getElementById("thankyouHeading");
   const submitStep = document.getElementById("submitStep");
   const submitBtn = document.getElementById("submitSurveyBtn");
   const previewBanner = document.getElementById("previewBanner");
@@ -861,7 +867,6 @@ body {
   document.getElementById("respondent_id").value = respondentId();
 
   const params = new URLSearchParams(location.search);
-  if (params.get("first_name")) document.getElementById("first_name").value = params.get("first_name");
 
   function answerValue(field) {
     return answers[field];
@@ -1070,6 +1075,28 @@ body {
     return null;
   }
 
+  function optionalFirstName() {
+    const raw = typeof answers.optional_name === "string"
+      ? answers.optional_name.trim()
+      : "";
+
+    if (!raw) return "";
+
+    const tokens = raw.split(/\s+/).filter(Boolean);
+    const titlePattern = /^(dr\.?|prof\.?|professor|mr\.?|mrs\.?|ms\.?|miss)$/i;
+    while (tokens.length > 1 && titlePattern.test(tokens[0])) tokens.shift();
+
+    return tokens.length ? tokens[0] : "";
+  }
+
+  function personalizeThankYou() {
+    if (!thankyouHeading) return;
+    const firstName = optionalFirstName();
+    thankyouHeading.textContent = firstName
+      ? `Thank you, ${firstName}.`
+      : "Thank you.";
+  }
+
   async function submitSurvey() {
     if (submitBtn) {
       submitBtn.disabled = true;
@@ -1085,6 +1112,7 @@ body {
       if (thankyouText) {
         thankyouText.textContent = "Preview complete. No response was submitted.";
       }
+      personalizeThankYou();
       thankyou.classList.add("active");
       if (surveyHeader) surveyHeader.classList.add("compact");
       progressBar.style.width = "100%";
@@ -1102,6 +1130,7 @@ body {
       if (!resp.ok) throw new Error("Submission failed");
       form.style.display = "none";
       document.getElementById("navRow").style.display = "none";
+      personalizeThankYou();
       thankyou.classList.add("active");
       if (surveyHeader) surveyHeader.classList.add("compact");
       progressBar.style.width = "100%";
