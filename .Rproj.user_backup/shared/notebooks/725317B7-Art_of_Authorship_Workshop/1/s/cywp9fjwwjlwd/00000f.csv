@@ -1,0 +1,7 @@
+"0","#| results: asis"
+"0","cat(aoa_figure_html("
+"0","  c(""invited"", ""expert""),"
+"0","  ""SURVEY FIGURE 02"","
+"0","  ""Invited expert authorship threshold / comfort distribution"""
+"0","))"
+"1","<div class=""figure-placeholder""><div class=""figure-placeholder-label"">SURVEY FIGURE 02</div>Invited expert authorship threshold / comfort distribution</div>"

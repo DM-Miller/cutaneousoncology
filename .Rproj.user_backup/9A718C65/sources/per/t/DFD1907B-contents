@@ -1,0 +1,1228 @@
+---
+format:
+  revealjs:
+    width: 1600
+    height: 900
+    margin: 0
+    center: false
+    transition: fade
+    background-transition: fade
+    slide-number: false
+    incremental: false
+    progress: false
+    controls: true
+    hash: true
+    chalkboard: true
+    preview-links: auto
+    footer: "October 28, 2026 · SoCO Research Forum · THE WORKSHOP"
+    css: soco-art-of-authorship.css
+    self-contained: false
+
+execute:
+  enabled: true
+  echo: false
+  warning: false
+  message: false
+---
+## {#title-slide .aoa-slide .aoa-title-slide data-state="no-footer"}
+
+::: {.aoa-title-field}
+::: {.aoa-eyebrow}
+SOCIETY OF CUTANEOUS ONCOLOGY · RESEARCH WORKSHOP
+:::
+
+::: {.aoa-title}
+THE ART OF<br>AUTHORSHIP
+:::
+
+::: {.aoa-title-rule}
+:::
+
+::: {.aoa-subtitle}
+Who gets on the paper?
+:::
+
+::: {.aoa-title-meta}
+Guidelines, culture, and the reality of scientific publishing
+:::
+:::
+
+::: {.aoa-date-chip}
+OCTOBER 28 · 2026
+:::
+
+::: {.notes}
+Arrival slide. Keep this up while people enter.
+:::
+
+<!--
+SoCO RESEARCH FORUM: THE WORKSHOP
+The Art of Authorship — Who Gets on the Paper?
+
+Narrative architecture:
+1. Arrival / introductions
+2. SoCO lineage + PIVOTAL/DAROMUN as a mini process case
+3. Why authorship matters + who answered the survey
+4. Criteria exist; process is the practical problem
+5. Four case modules: clinician/data contributor, late expert, clinical trial, Delphi
+6. Group synthesis: earlier · explicitly · transparently · revisited
+
+Survey figures refresh from ../pre_event_survey/ on every render.
+-->
+
+```{r}
+#| label: refresh-live-survey
+#| include: false
+source("scripts/refresh_art_of_authorship.R")
+```
+
+<style>
+/* ============================================================
+   WORKSHOP PNG POSITIONING
+
+   Standalone survey/data PNG slides were rendering a little
+   right of visual center because Quarto/Reveal centers images
+   inside the effective output box, not necessarily around the
+   1600-px slide midpoint.
+
+   Tune one number below if needed:
+     more negative = move standalone PNGs left
+     less negative = move standalone PNGs right
+   ============================================================ */
+
+:root {
+  --aoa-png-x-nudge: -60px;
+}
+
+/* Standalone PNG slides: center normally, then apply one
+   controlled deck-wide correction. */
+.workshop-png-wrap {
+  position: relative;
+  transform: translateX(var(--aoa-png-x-nudge));
+}
+
+.workshop-png-wrap .cell-output-display,
+.workshop-png-wrap p {
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  display: flex;
+  justify-content: center;
+}
+
+.workshop-png-wrap img {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Mixed figure + discussion-rail slides: center the PNG only
+   within its own grid cell. Do not apply the global nudge. */
+.figure-layout .cell-output-display,
+.figure-layout p {
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: center;
+}
+
+.figure-layout img {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+
+
+## {#introductions .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+WELCOME TO THE WORKSHOP
+:::
+::: {.aoa-heading}
+Who’s in the room?
+:::
+:::
+
+::: {.aoa-content .intro-chat-layout}
+::: {.intro-chat-main}
+<div class="intro-chat-kicker">START IN THE CHAT</div>
+<div class="intro-chat-question">Name · institution · what you do</div>
+<div class="intro-chat-copy">Academic investigator, clinician, industry, editor, trainee, publication professional — however you describe your role.</div>
+:::
+
+::: {.intro-chat-side}
+<div class="intro-chat-side-label">TODAY IS A WORKSHOP</div>
+<div class="intro-chat-side-big">Bring your own experience.</div>
+<div class="intro-chat-side-copy">We’ll use the cases and the survey to find the places where reasonable people disagree.</div>
+:::
+:::
+:::
+:::
+
+
+## {#soco-lineage .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+THE CONVERSATION SO FAR
+:::
+::: {.aoa-heading}
+SoCO has spent years asking what the evidence means
+:::
+:::
+
+::: {.aoa-content}
+::: {.lineage-rail}
+::: {.lineage-node}
+<div class="lineage-year">2019–2026</div>
+<div class="lineage-title">Journal Club</div>
+<div class="lineage-copy">Read the paper. Interrogate the evidence. Ask what it really establishes.</div>
+:::
+<div class="lineage-arrow">→</div>
+::: {.lineage-node}
+<div class="lineage-year">2023–2026</div>
+<div class="lineage-title">Research Forum</div>
+<div class="lineage-copy">Move upstream: methods, inference, peer review, trial design, reproducibility.</div>
+:::
+<div class="lineage-arrow">→</div>
+::: {.lineage-node .active}
+<div class="lineage-year">2026</div>
+<div class="lineage-title">THE WORKSHOP</div>
+<div class="lineage-copy">How does the evidence get made — and who gets credit for making it?</div>
+:::
+:::
+
+::: {.aoa-bottom-line}
+<strong>Today:</strong> not just how we read papers — how we build them.
+:::
+:::
+:::
+
+::: {.notes}
+This is the opening narrative spine: SoCO has traditionally been downstream of the paper. Research Forum moved upstream into methods and interpretation. This workshop moves one step further upstream: before there is evidence to interpret, people have to decide who made it and how credit/accountability will be assigned.
+:::
+
+
+## {#daromun-paper .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+FROM DISCUSSION TO SCHOLARSHIP
+:::
+::: {.aoa-heading}
+A SoCO conversation became a paper
+:::
+:::
+
+::: {.aoa-content .bridge-layout}
+::: {.bridge-paper}
+<div class="bridge-paper-kicker">DAROMUN / PIVOTAL · PERSPECTIVE</div>
+<div class="bridge-paper-title">From interpreting the evidence to writing about it</div>
+<div class="bridge-paper-citation">Publication citation / article image to be updated when published.</div>
+:::
+
+::: {.bridge-question}
+<div class="bridge-question-kicker">THEN A DIFFERENT QUESTION APPEARS</div>
+<div class="bridge-question-big">Who belongs on the paper?</div>
+<div class="bridge-question-copy">The scientific conversation may feel collective. The byline forces individual decisions about contribution, credit, and accountability.</div>
+:::
+:::
+:::
+:::
+
+::: {.notes}
+Use this as the inciting incident, not as a self-congratulatory example. The point is that authorship process appears quickly, even in a relatively small, collegial perspective piece.
+:::
+
+
+## {#pivotal-process-lens .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+THE INCITING EXAMPLE
+:::
+::: {.aoa-heading}
+A paper creates a process problem
+:::
+:::
+
+::: {.aoa-content}
+::: {.case-layout}
+::: {.case-card}
+<div class="case-kicker">THE ORDINARY MOMENT</div>
+<div class="case-headline">A SoCO discussion becomes a perspective piece.</div>
+<div class="case-copy">The scientific conversation feels collective. But once there is a manuscript, the byline forces practical decisions: who should be invited, what contribution is expected, and when do we revisit the author group?</div>
+:::
+
+::: {.question-panel}
+<div class="question-kicker">THE WORKSHOP QUESTION</div>
+<div class="question-big">Not only who qualifies.</div>
+<div class="question-small">How should we decide — early enough, explicitly enough, transparently enough, and flexibly enough — as the work evolves?</div>
+:::
+:::
+
+::: {.slide-thesis}
+The goal is not to replace authorship criteria. It is to make the decision process visible.
+:::
+:::
+:::
+
+::: {.notes}
+Use the PIVOTAL/DAROMUN perspective as the low-stakes real example: not “we solved this,” but “we immediately encountered the problem.” Participation in a conversation does not automatically confer authorship, but once the possibility of a paper emerges, there should be a visible pathway to qualify.
+:::
+
+
+## {#why-authorship .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+WHY HAVE THIS CONVERSATION?
+:::
+::: {.aoa-heading}
+Authorship does several jobs at once
+:::
+:::
+
+::: {.aoa-content}
+::: {.why-grid}
+::: {.why-card}
+<div class="why-label">CREDIT</div>
+<div class="why-title">Who gets recognized?</div>
+Scholarship, promotion, reputation, opportunity.
+:::
+::: {.why-card}
+<div class="why-label">RESPONSIBILITY</div>
+<div class="why-title">Who stands behind the work?</div>
+Accuracy, integrity, interpretation, accountability.
+:::
+::: {.why-card}
+<div class="why-label">CURRENCY</div>
+<div class="why-title">What does a byline mean?</div>
+Different things at different career stages and in different sectors.
+:::
+::: {.why-card .coral-card}
+<div class="why-label">JUDGMENT</div>
+<div class="why-title">Where is the threshold?</div>
+The rules are necessary. The boundary decisions are still human.
+:::
+:::
+:::
+:::
+
+
+## {#four-cases .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+TODAY’S WORK
+:::
+::: {.aoa-heading}
+Four stress tests for authorship process
+:::
+:::
+
+::: {.aoa-content}
+::: {.case-preview-grid}
+::: {.case-preview-card}
+<div class="case-preview-number">01</div>
+<div class="case-preview-title">“But I treated the patients.”</div>
+A substantial clinical contribution creates the dataset — but not necessarily the manuscript.
+:::
+::: {.case-preview-card}
+<div class="case-preview-number">02</div>
+<div class="case-preview-title">The late invitation</div>
+An expert joins after the study and draft already exist.
+:::
+::: {.case-preview-card}
+<div class="case-preview-number">03</div>
+<div class="case-preview-title">The clinical trial</div>
+Investigator roles, sponsor systems, enrollment, leadership, interpretation, and writing collide.
+:::
+::: {.case-preview-card}
+<div class="case-preview-number">04</div>
+<div class="case-preview-title">The Delphi panel</div>
+Collective intellectual work blurs the boundary between participation and authorship.
+:::
+:::
+
+::: {.aoa-bottom-line .coral}
+Each case asks the same question: what process would make the authorship decision fairer, clearer, and less reactive?
+:::
+:::
+:::
+
+::: {.notes}
+Set up the modules as stress tests, not just interesting cases. Each module should end by asking what process would have made the decision easier. The arc should build from opportunity, to timing, to system-scale authorship, to ambiguity.
+:::
+
+
+## {#survey-landscape-1 .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+LAY OF THE LAND · `r AOA_SURVEY$n_label`
+:::
+::: {.aoa-heading}
+This is not one constituency
+:::
+:::
+
+<!-- Standalone PNG positioning is controlled by --aoa-png-x-nudge in the inline CSS block. -->
+::: {.aoa-content .workshop-png-wrap}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_profile_landscape.png"))
+```
+:::
+
+::: {.slide-thesis}
+One dominant setting. Multiple seats at the authorship table.
+:::
+:::
+:::
+
+
+## {#survey-landscape-background .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+LAY OF THE LAND
+:::
+::: {.aoa-heading}
+Who answered — and how clinically active are they?
+:::
+:::
+
+::: {.aoa-content .workshop-png-wrap}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_profile_patient_care.png"))
+```
+:::
+
+::: {.slide-thesis}
+A physician-heavy, clinically engaged sample — drawn from a survey that invited a much broader professional community.
+:::
+:::
+:::
+
+
+## {#survey-landscape-2 .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+LAY OF THE LAND
+:::
+::: {.aoa-heading}
+And they bring very different publishing experience
+:::
+:::
+
+::: {.aoa-content .workshop-png-wrap}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_profile_experience.png"))
+```
+:::
+
+::: {.slide-thesis}
+The same authorship question can carry very different stakes depending on where someone sits in a career.
+:::
+:::
+:::
+
+
+## {#authorship-value-reasons .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+WHY AUTHORSHIP MATTERS
+:::
+::: {.aoa-heading}
+What makes authorship matter to people in the room?
+:::
+:::
+
+::: {.aoa-content .workshop-png-wrap}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_authorship_value_reasons.png"))
+```
+:::
+
+::: {.slide-thesis}
+Before we ask who qualifies, it helps to name what authorship is doing for people.
+:::
+:::
+:::
+
+
+## {#authorship-value-counterfactual .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+WHY AUTHORSHIP MATTERS
+:::
+::: {.aoa-heading}
+Would authorship still matter if it did not “count”?
+:::
+:::
+
+::: {.aoa-content .workshop-png-wrap}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_authorship_value_counterfactual.png"))
+```
+:::
+
+::: {.slide-thesis}
+Authorship is both a professional signal and a form of durable scientific credit.
+:::
+:::
+:::
+
+::: {.notes}
+This is where the stakes become visible: people value authorship for scientific reasons, but it also functions as career currency. That tension explains why process matters.
+:::
+
+
+## {#rules-vs-reality-transition .aoa-slide data-state="no-footer"}
+
+::: {.aoa-transition .light-transition}
+::: {.transition-wrap}
+<div class="transition-index">THE PREMISE</div>
+<div class="transition-kicker">CRITERIA + PROCESS</div>
+<div class="transition-title">The principles are there.<br>The process is the work.</div>
+<div class="transition-subtitle">Criteria tell us who may qualify. A good process helps a group get there fairly.</div>
+:::
+:::
+
+
+## {#guideline-landscape .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+BEFORE THE CRITERIA
+:::
+::: {.aoa-heading}
+There is more than one authorship framework
+:::
+:::
+
+::: {.aoa-content}
+::: {.framework-grid}
+::: {.framework-card .primary}
+<div class="framework-label">ICMJE</div>
+<div class="framework-title">Authorship qualification</div>
+The familiar four criteria; probably the dominant practical reference point in biomedical publishing.
+:::
+::: {.framework-card}
+<div class="framework-label">COPE</div>
+<div class="framework-title">Publication ethics</div>
+Authorship disputes, guest/gift authorship, ghost authorship, and editorial process.
+:::
+::: {.framework-card}
+<div class="framework-label">CRediT</div>
+<div class="framework-title">Contributor roles</div>
+A taxonomy for describing what people did; not itself an authorship threshold.
+:::
+::: {.framework-card}
+<div class="framework-label">JOURNALS / WAME / CSE</div>
+<div class="framework-title">Local implementation</div>
+Journal instructions and editorial policies may add requirements or operational details.
+:::
+:::
+
+::: {.editor-cue}
+<div class="editor-cue-label">Editor perspective · Ade Adamson</div>
+<div class="editor-cue-question">Which of these frameworks actually matters in practice at JAMA — and how do editors use them when authorship gets complicated?</div>
+:::
+
+::: {.aoa-bottom-line}
+<strong>For today:</strong> ICMJE is our shared baseline because it is widely used in biomedical publishing and it is the framework we asked about in the survey.
+:::
+
+::: {.source-note}
+Sources: ICMJE Recommendations; COPE authorship guidance; CRediT contributor taxonomy. ICMJE notes that many non-member journals voluntarily use its recommendations, but it does not monitor or enforce adherence.
+:::
+:::
+:::
+
+
+## {#icmje .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+THE FORMAL FRAMEWORK
+:::
+::: {.aoa-heading}
+ICMJE gives us four criteria
+:::
+:::
+
+::: {.aoa-content}
+::: {.criteria-grid}
+::: {.criteria-card}
+<div class="criteria-number">1</div>
+<div class="criteria-title">Substantial contribution</div>
+Conception/design; or acquisition, analysis, or interpretation of data.
+:::
+::: {.criteria-card}
+<div class="criteria-number">2</div>
+<div class="criteria-title">Draft or revise</div>
+Draft the work or revise it critically for important intellectual content.
+:::
+::: {.criteria-card}
+<div class="criteria-number">3</div>
+<div class="criteria-title">Final approval</div>
+Approve the version to be published.
+:::
+::: {.criteria-card}
+<div class="criteria-number">4</div>
+<div class="criteria-title">Accountability</div>
+Be accountable for the work and help resolve questions about accuracy or integrity.
+:::
+:::
+
+::: {.aoa-bottom-line .coral}
+The hard part is not reciting the criteria. It is operationalizing them before expectations harden and after contributions evolve.
+:::
+:::
+:::
+
+
+## {#guidance-process-gap .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+WHAT GUIDANCE DOES — AND DOES NOT — DO
+:::
+::: {.aoa-heading}
+The principles are increasingly clear. The workflow is still local.
+:::
+:::
+
+::: {.aoa-content}
+::: {.case-layout}
+::: {.case-card}
+<div class="case-kicker">GUIDANCE HELPS</div>
+<div class="case-headline">It names contribution, consent, accountability, acknowledgment, and unacceptable practices.</div>
+<div class="case-copy">Recent institutional guidance reinforces familiar principles: substantive intellectual contribution matters; non-author contributions can be recognized; and lead authors steward the final assignment.</div>
+:::
+
+::: {.question-panel}
+<div class="question-kicker">THE GAP WE ARE WORKSHOPPING</div>
+<div class="question-big">How do we make it happen?</div>
+<div class="question-small">When do we start? Who initiates? What is explicit? What is documented? When do we revisit the plan?</div>
+:::
+:::
+
+::: {.slide-thesis}
+The workshop is about operationalizing good authorship principles in messy, evolving collaborations.
+:::
+:::
+:::
+
+::: {.notes}
+Mention the newly updated Harvard/HMS guidance briefly as a timely anchor, but do not turn this into a guidelines review. The key point: the guidance is sensible, but it does not fully tell us how to run the process in a cohort study, multicenter trial, or Delphi panel.
+:::
+
+
+## {#guidelines-survey .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+GUIDELINES IN PRACTICE
+:::
+::: {.aoa-heading}
+Do we actually know — and use — the rules?
+:::
+:::
+
+::: {.aoa-content .workshop-png-wrap}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_icmje_summary.png"))
+```
+:::
+
+::: {.slide-thesis .question-thesis}
+The criteria may be familiar. The threshold for applying them is where judgment enters.
+:::
+:::
+:::
+
+
+## {#too-many-authors .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+THE CULTURAL LAYER
+:::
+::: {.aoa-heading}
+How many papers can someone meaningfully lead?
+:::
+:::
+
+::: {.aoa-content .workshop-png-wrap}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_publication_capacity.png"))
+```
+:::
+
+::: {.slide-thesis .question-thesis}
+Do we apply different thresholds to our own author capacity than to the capacity we expect from others?
+:::
+:::
+:::
+
+
+## {#module-1-transition .aoa-slide data-state="no-footer"}
+
+::: {.aoa-transition}
+::: {.transition-wrap}
+<div class="transition-index">01</div>
+<div class="transition-kicker">CASE MODULE</div>
+<div class="transition-title">“But I treated the patients.”</div>
+<div class="transition-subtitle">The clinicians generated the dataset. Does that create authorship — or an obligation to offer a path to qualify?</div>
+<div class="transition-presenters">Lisa Zaba</div>
+:::
+:::
+
+
+## {#module-1-clinician-case .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+CASE 01 · CLINICAL CONTRIBUTION
+:::
+::: {.aoa-heading}
+Is the contribution enough — or is the opportunity the point?
+:::
+:::
+
+::: {.aoa-content}
+::: {.case-layout}
+::: {.case-card}
+<div class="case-kicker">THE SITUATION</div>
+<div class="case-headline">A clinician identified patients, delivered complex care, and generated much of the source data.</div>
+<div class="case-copy">They had little role in the original design, statistical analysis, interpretation, or first manuscript draft. The paper could not exist without the clinical work — but the authorship criteria require more than that.</div>
+:::
+
+::: {.question-panel}
+<div class="question-kicker">VOTE FIRST</div>
+<div class="question-big">Author now?</div>
+<div class="question-small">Acknowledgment? Group authorship? Or a meaningful opportunity to qualify?</div>
+:::
+:::
+:::
+:::
+
+::: {.notes}
+Start here because it is intuitive and high-stakes. Make the distinction explicit: automatic authorship versus a meaningful pathway to authorship. Ask Lisa to speak from experience: what does this feel like to clinicians whose care generated the cohort?
+:::
+
+
+## {#clinician-data-expectations .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+SURVEY · CLINICIANS BEHIND THE DATA
+:::
+::: {.aoa-heading}
+Should clinical contribution open a path to authorship?
+:::
+:::
+
+::: {.aoa-content .workshop-png-wrap}
+<!--
+LIVE-DATA FIGURE
+DATA FIELDS FOR THIS FIGURE
+- m2_clin_offer_expectation:
+  clinician expectation to be offered an opportunity to participate as an author
+- m2_clin_not_approached_reaction:
+  clinician reaction if not approached about authorship
+- m2_researcher_obligation_offer:
+  researcher/study-lead obligation to offer clinicians an opportunity to contribute toward authorship
+
+The data are summarized in scripts/build_workshop_figures.R as:
+workshop_clinician_pathway.png
+-->
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_clinician_pathway.png"))
+```
+:::
+
+::: {.slide-thesis}
+The question is not automatic authorship — it is whether substantial clinical contribution creates a meaningful opportunity to qualify.
+:::
+:::
+:::
+
+
+::: {.notes}
+This slide intentionally visualizes the three related clinician-data questions:
+1) clinician expectation to be offered a path,
+2) clinician reaction if not approached,
+3) researcher/study-lead obligation to offer that path.
+
+Speaker framing: this is not an argument that patient care alone automatically equals authorship. The question is whether substantial clinical contribution creates a process obligation to invite people into the intellectual work early enough to qualify.
+:::
+
+
+## {#module-1-clinician-survey .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+SURVEY · CLINICAL CONTRIBUTION
+:::
+::: {.aoa-heading}
+Does caring for the patients earn authorship?
+:::
+:::
+
+::: {.aoa-content .figure-layout}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_m2_clinical_contribution.png"))
+```
+
+::: {.discussion-rail}
+<div class="rail-kicker">LISA ZABA</div>
+<div class="rail-question">Is patient recruitment enough?</div>
+<div class="rail-question">When does clinical judgment become intellectual contribution?</div>
+<div class="rail-question">Who creates the opportunity to qualify?</div>
+:::
+:::
+:::
+
+
+## {#module-1-opportunity .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+ONE PROCESS APPROACH
+:::
+::: {.aoa-heading}
+Authorship entitlement is not the same as opportunity to qualify
+:::
+:::
+
+::: {.aoa-content}
+::: {.process-grid}
+::: {.process-card}
+<div class="process-number">01</div>
+<div class="process-title">Identify contributors</div>
+Clinicians whose care substantially generated the cohort are named early.
+:::
+::: {.process-card}
+<div class="process-number">02</div>
+<div class="process-title">Invite into the science</div>
+Before analysis is final, they are invited to working sessions about the question, data, interpretation, and manuscript story.
+:::
+::: {.process-card}
+<div class="process-number">03</div>
+<div class="process-title">Make expectations explicit</div>
+Clinical contribution alone does not guarantee authorship; substantive intellectual contribution can create a path to qualify.
+:::
+::: {.process-card}
+<div class="process-number">04</div>
+<div class="process-title">Let contribution decide</div>
+People who engage meaningfully can become authors. People who do not are acknowledged appropriately.
+:::
+:::
+
+::: {.aoa-bottom-line}
+This is not a rule. It is one way to make the pathway visible before the manuscript is already finished.
+:::
+:::
+:::
+
+::: {.notes}
+Use the FIRST/FIERCE experience as an example without making it self-centered. “Here is one approach we tried.” It maps to the eventual framework: earlier, explicit, transparent, revisited.
+:::
+
+
+## {#module-2-transition .aoa-slide data-state="no-footer"}
+
+::: {.aoa-transition}
+::: {.transition-wrap}
+<div class="transition-index">02</div>
+<div class="transition-kicker">CASE MODULE</div>
+<div class="transition-title">The late invitation</div>
+<div class="transition-subtitle">The study is done. The manuscript exists. A recognized expert is invited to join.</div>
+<div class="transition-presenters">Mike Wong · Howard Kaufman</div>
+:::
+:::
+
+
+## {#module-2-late-case .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+CASE 02 · THE LATE INVITATION
+:::
+::: {.aoa-heading}
+Can someone arrive late and still qualify?
+:::
+:::
+
+::: {.aoa-content}
+::: {.case-layout}
+::: {.case-card}
+<div class="case-kicker">THE SITUATION</div>
+<div class="case-headline">The study is complete. The manuscript is substantially drafted.</div>
+<div class="case-copy">A recognized expert is invited because their perspective would strengthen the interpretation. They review the manuscript and propose substantive revisions.</div>
+:::
+
+::: {.question-panel}
+<div class="question-kicker">VOTE BEFORE WE SHOW THE SURVEY</div>
+<div class="question-big">Author?</div>
+<div class="question-small">Acknowledgment? Something else? What contribution would change your answer?</div>
+:::
+:::
+:::
+:::
+
+
+## {#module-2-late-survey .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+SURVEY · LATE INVITATION
+:::
+::: {.aoa-heading}
+Where did respondents draw the line?
+:::
+:::
+
+::: {.aoa-content .workshop-png-wrap}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_m1_late_invitation.png"))
+```
+:::
+:::
+
+
+## {#module-3-transition .aoa-slide data-state="no-footer"}
+
+::: {.aoa-transition}
+::: {.transition-wrap}
+<div class="transition-index">03</div>
+<div class="transition-kicker">CASE MODULE</div>
+<div class="transition-title">The clinical trial</div>
+<div class="transition-subtitle">Now the process has to scale across investigators, sites, sponsor teams, medical writing, and evolving contributions.</div>
+<div class="transition-presenters">Beth Bookbinder · Neil Gross · Raj Patel · Leon Sikal</div>
+:::
+:::
+
+
+## {#module-3-case .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+CASE 03 · CLINICAL TRIAL AUTHORSHIP
+:::
+::: {.aoa-heading}
+Plan the process prospectively. Judge contribution honestly.
+:::
+:::
+
+::: {.aoa-content}
+::: {.trial-claims-grid}
+::: {.trial-claim-card}
+<div class="trial-claim-label">ORIGINATION</div>
+The investigator whose IST or concept became the larger program
+:::
+::: {.trial-claim-card}
+<div class="trial-claim-label">ENROLLMENT</div>
+Sites that deliver patients and operational execution
+:::
+::: {.trial-claim-card}
+<div class="trial-claim-label">INTERPRETATION</div>
+People who shape the scientific meaning of the results
+:::
+::: {.trial-claim-card}
+<div class="trial-claim-label">MANUSCRIPT</div>
+Writing, critical revision, medical communications, and disclosure
+:::
+:::
+
+::: {.slide-thesis .question-thesis}
+The byline may need to remain provisional. The authorship process should not.
+:::
+:::
+:::
+
+::: {.notes}
+Beth and Neil can show that “investigator” is not one role: intellectual originator, site PI, late major contributor. Raj/Leon can speak to making this workable across a trial program.
+:::
+
+
+## {#module-3-survey .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+SURVEY · CLINICAL TRIALS
+:::
+::: {.aoa-heading}
+What should matter most?
+:::
+:::
+
+::: {.aoa-content .workshop-png-wrap}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_m3_trial_authorship.png"))
+```
+:::
+:::
+
+
+## {#process-survey .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+FROM TRIALS TO PROCESS
+:::
+::: {.aoa-heading}
+Who should start the authorship conversation?
+:::
+:::
+
+::: {.aoa-content .workshop-png-wrap}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_process_authorship_conversation.png"))
+```
+:::
+
+::: {.slide-thesis .question-thesis}
+The bigger the collaboration, the more dangerous it is to leave authorship process implicit.
+:::
+:::
+:::
+
+
+## {#module-4-transition .aoa-slide data-state="no-footer"}
+
+::: {.aoa-transition .coral-transition}
+::: {.transition-wrap}
+<div class="transition-index">04</div>
+<div class="transition-kicker">GRAY-ZONE DELPHI</div>
+<div class="transition-title">The Delphi panel</div>
+<div class="transition-subtitle">Participation shapes consensus. Does participation itself warrant authorship?</div>
+<div class="transition-presenters">Vishal Patel · Ade Adamson · editor perspective</div>
+:::
+:::
+
+
+## {#module-4-case .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+CASE 04 · DELPHI
+:::
+::: {.aoa-heading}
+Participant, contributor, or author?
+:::
+:::
+
+::: {.aoa-content}
+::: {.case-layout}
+::: {.case-card}
+<div class="case-kicker">THE SITUATION</div>
+<div class="case-headline">A large expert panel completes several Delphi rounds and materially shapes the final consensus recommendations.</div>
+<div class="case-copy">A smaller investigator group designed the study, built the survey, analyzed the results, interpreted them, and drafted the manuscript.</div>
+:::
+
+::: {.question-panel}
+<div class="question-kicker">VOTE FIRST</div>
+<div class="question-big">Are the panelists participants — or authors?</div>
+<div class="question-small">Does your answer change if they substantially reshape the questions or recommendations?</div>
+:::
+:::
+:::
+:::
+
+
+## {#module-4-survey .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+SURVEY · DELPHI
+:::
+::: {.aoa-heading}
+Where does participation become contribution?
+:::
+:::
+
+::: {.aoa-content .figure-layout}
+```{r}
+#| echo: false
+#| out-width: "94%"
+#| fig-align: center
+knitr::include_graphics(aoa_workshop_png("workshop_m4_delphi.png"))
+```
+
+::: {.discussion-rail}
+<div class="rail-kicker">VISHAL PATEL · ADE ADAMSON</div>
+<div class="rail-question">Does completing multiple rounds count as intellectual contribution?</div>
+<div class="rail-question">What if panelists reshape the recommendations?</div>
+<div class="rail-question">How should meaningful participation below authorship be recognized?</div>
+:::
+:::
+:::
+
+
+## {#synthesis-board .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+SYNTHESIS
+:::
+::: {.aoa-heading}
+What would have made each decision easier?
+:::
+:::
+
+::: {.aoa-content}
+::: {.case-preview-grid}
+::: {.case-preview-card}
+<div class="case-preview-number">01</div>
+<div class="case-preview-title">Clinician contributor</div>
+A visible opportunity to qualify before the manuscript is finished.
+:::
+::: {.case-preview-card}
+<div class="case-preview-number">02</div>
+<div class="case-preview-title">Late expert</div>
+A shared threshold for substantive intellectual revision.
+:::
+::: {.case-preview-card}
+<div class="case-preview-number">03</div>
+<div class="case-preview-title">Clinical trial</div>
+A prospective process that can flex as contribution evolves.
+:::
+::: {.case-preview-card}
+<div class="case-preview-number">04</div>
+<div class="case-preview-title">Delphi</div>
+A way to distinguish participation, contribution, acknowledgment, and authorship.
+:::
+:::
+
+::: {.aoa-bottom-line .coral}
+The recurring issue is less “Do criteria exist?” than “How do we apply them visibly and fairly?”
+:::
+:::
+:::
+
+
+## {#process .aoa-slide}
+
+::: {.aoa-shell}
+::: {.aoa-topbar}
+::: {.aoa-section-label}
+DISCUSSION
+:::
+::: {.aoa-heading}
+A process heuristic the room can use
+:::
+:::
+
+::: {.aoa-content}
+::: {.process-grid}
+::: {.process-card}
+<div class="process-number">01</div>
+<div class="process-title">Earlier</div>
+Discuss the process before expectations harden and before the work is nearly complete.
+:::
+::: {.process-card}
+<div class="process-number">02</div>
+<div class="process-title">Explicitly</div>
+State what contributions are expected and what authorship requires.
+:::
+::: {.process-card}
+<div class="process-number">03</div>
+<div class="process-title">Transparently</div>
+Make the basis for decisions visible enough that people can understand the outcome.
+:::
+::: {.process-card}
+<div class="process-number">04</div>
+<div class="process-title">Revisited</div>
+Update the plan as actual contributions evolve.
+:::
+:::
+
+::: {.aoa-bottom-line}
+Decide the process early — not necessarily the final byline.
+:::
+:::
+:::
+
+
+## {#closing .aoa-slide data-state="no-footer"}
+
+::: {.aoa-closing .light-closing}
+<div class="closing-eyebrow">THE WORKSHOP · HOW DOES THE EVIDENCE GET MADE?</div>
+<div class="closing-title">Not just: who gets on the paper?</div>
+<div class="closing-subtitle">How should we decide who gets on the paper?</div>
+<div class="closing-rule"></div>
+<div class="closing-meta">Earlier · explicitly · transparently · revisited</div>
+:::

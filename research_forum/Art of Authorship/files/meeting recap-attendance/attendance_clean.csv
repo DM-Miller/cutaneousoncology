@@ -1,0 +1,44 @@
+﻿match_key,Name,duration_min,camera_on,hand_raise,unmute,any_camera,any_hand_raise,any_unmute,email
+adewoleadamson,Adewole S. Adamson,97.55,1,1,3,TRUE,TRUE,TRUE,adewole.adamson@austin.utexas.edu
+adewunmiadelaja,Adewunmi O. Adelaja,95.5,2,0,1,TRUE,FALSE,TRUE,aadelaja@mgh.harvard.edu
+ahmadnaim,Ahmad Naim,70.716667,0,0,1,FALSE,FALSE,TRUE,ahmad.naim@sunpharma.com
+ajaysharma,Ajay Nair Sharma,62.2,0,0,0,FALSE,FALSE,FALSE,ansharma@mgh.harvard.edu
+aleighalawless,Aleigha R. Lawless,93.233333,0,0,0,FALSE,FALSE,FALSE,alawless@mgb.org
+alfredocovelli,Alfredo Covelli,88.4,1,0,1,TRUE,FALSE,TRUE,alfredo.covelli@philogen.com
+alyssalee,Alyssa Lee,93.483333,0,0,0,FALSE,FALSE,FALSE,alyssa.lee@sunpharma.com
+caratrulli,Cara Trulli,97.25,0,0,0,FALSE,FALSE,FALSE,cara.trulli@bms.com
+christinecimoch,Christine C. Cimoch,101.183333,1,0,3,TRUE,FALSE,TRUE,ccimoch@mgb.org
+christopherzajac,Christopher Zajac,61.216667,1,0,1,TRUE,FALSE,TRUE,christopher.zajac@regeneron.com
+danielcoit,Daniel Coit,72.283333,1,4,1,TRUE,TRUE,TRUE,
+daniellebrazel,Danielle M. Brazel,98.5,1,1,2,TRUE,TRUE,TRUE,dbrazel@mgh.harvard.edu
+davidmiller,David M. Miller,104.766667,1,0,1,TRUE,FALSE,TRUE,dmiller4@mgh.harvard.edu
+desireeratner,Desiree Ratner,20.766667,1,0,1,TRUE,FALSE,TRUE,
+elizabethbuchbinder,Elizabeth I. Buchbinder,96.866667,1,3,2,TRUE,TRUE,TRUE,ebuchbinder@mgb.org
+francescollichio,Frances Collichio,4.316667,0,0,1,FALSE,FALSE,TRUE,frances_collichio@med.unc.edu
+govindwarrier,Govind Warrier,95.366667,4,0,0,TRUE,FALSE,FALSE,gwarrie1@jhmi.edu
+gregorynorigian,Gregory Norigian,101.083333,0,0,1,FALSE,FALSE,TRUE,gregory.norigian@bms.com
+howardkaufman,Howard L. Kaufman,86.916667,1,0,2,TRUE,FALSE,TRUE,hlkaufman@mgh.harvard.edu
+isaacbrownell,Isaac Brownell,15.55,0,0,1,FALSE,FALSE,TRUE,isaac.brownell@nih.gov
+jessicafewkes,Jessica L. Fewkes,95.266667,0,0,0,FALSE,FALSE,FALSE,jessica_fewkes@meei.harvard.edu
+jonathandyer,Jonathan A. Dyer,97.466667,0,0,1,FALSE,FALSE,TRUE,dyerja@health.missouri.edu
+josephgrossman,Joseph Grossman,95.666667,2,1,2,TRUE,TRUE,TRUE,joseph.grossman@modernatx.com
+julianeczapla,Juliane Andrade Czapla,86.966667,0,0,0,FALSE,FALSE,FALSE,jczapla@mgh.harvard.edu
+kamanehmontazeri,Kamaneh Montazeri,88.583333,1,2,2,TRUE,TRUE,TRUE,kmontazeri@mgh.harvard.edu
+kentsai,Kenneth Y. Tsai,92.5,0,1,1,FALSE,TRUE,TRUE,kenneth.tsai@moffitt.org
+kevinemerick,Kevin S. Emerick,98.95,4,2,2,TRUE,TRUE,TRUE,kevin_emerick@meei.harvard.edu
+lauraferris,Laura Ferris,81.433333,5,0,1,TRUE,FALSE,TRUE,laura_ferris@med.unc.edu
+laurenfleshner,Lauren Fleshner,101.066667,1,0,1,TRUE,FALSE,TRUE,
+leonsakkal,Leon Sakkal,99.083333,0,0,0,FALSE,FALSE,FALSE,leon.sakkal@bms.com
+lisazaba,Lisa Zaba,34.883333,0,0,0,FALSE,FALSE,FALSE,lisa.zaba@stanford.edu
+manishathakuria,Manisha Thakuria,61.3,0,0,0,FALSE,FALSE,FALSE,mthakuria1@bwh.harvard.edu
+mayadimitrova,Maya Dimitrova,101.533333,1,0,1,TRUE,FALSE,TRUE,maya.dimitrova@nyulangone.org
+mehranyusuf,Mehran Behruj Yusuf,97.016667,0,0,0,FALSE,FALSE,FALSE,yusuf@uabmc.edu
+michaelwong,Michael K. K. Wong,103.816667,3,3,5,TRUE,TRUE,TRUE,
+patrickkurpaska,Patrick Kurpaska,0.066667,0,0,0,FALSE,FALSE,FALSE,pkurpaska@mgh.harvard.edu
+rajpatel,Raj Patel,99.933333,1,0,2,TRUE,FALSE,TRUE,rajc.patel@bms.com
+sameergupta,Sameer Gupta,89.933333,3,3,3,TRUE,TRUE,TRUE,sgupta19@meei.harvard.edu
+sarabehbahani,Sara Behbahani,62.1,1,0,0,TRUE,FALSE,FALSE,sbehbahani@mgb.org
+suzannetopalian,Suzanne Topalian,83.466667,0,0,0,FALSE,FALSE,FALSE,stopali1@jhmi.edu
+tatyanasharova,Tatyana Sharova,84.216667,0,0,0,FALSE,FALSE,FALSE,tsharova@mgh.harvard.edu
+vishalanilpatel,Vishal Anil Patel,93.916667,2,3,3,TRUE,TRUE,TRUE,vpatel@mfa.gwu.edu
+williambenjamin,William J. Benjamin IV,97.516667,0,0,0,FALSE,FALSE,FALSE,william_benjamin@meei.harvard.edu

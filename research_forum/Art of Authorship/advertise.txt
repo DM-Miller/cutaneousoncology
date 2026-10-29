@@ -1,0 +1,1686 @@
+---
+title: "The Art of Authorship"
+description: "Who Gets on the Paper? From authorship criteria to a fair, workable process."
+image: image.png
+pagetitle: "The Art of Authorship — Who Gets on the Paper? | Society of Cutaneous Oncology"
+format:
+  html:
+    page-layout: full
+    toc: false
+    smooth-scroll: true
+    embed-resources: true
+    self-contained: true
+execute:
+  echo: false
+  warning: false
+---
+
+```{=html}
+<!-- SoCO ART OF AUTHORSHIP · RESEARCH WORKSHOP · OCTOBER 28, 2026 -->
+<style type="text/css">
+:root {
+  --soco-navy: #041b33;
+  --soco-blue: #06436e;
+  --soco-deep-blue: #0f2a59;
+  --soco-teal: #0f7f86;
+  --soco-coral: #ff3b3f;
+  --soco-ink: #18293d;
+  --soco-muted: #5c6f82;
+  --soco-surface: #f6fafb;
+  --soco-line: #dbe8ee;
+  --soco-white: #ffffff;
+}
+
+/* Companion styling to the SoCO Research Workshop pages. */
+body {
+  background: var(--soco-surface);
+  color: var(--soco-ink);
+  font-family: Montserrat, "Segoe UI", Arial, sans-serif;
+}
+
+.soco-reg-hero,
+.soco-reg-hero *,
+.soco-reg-shell,
+.soco-reg-shell * {
+  box-sizing: border-box;
+}
+
+.soco-reg-hero-inner {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.soco-reg-hero p,
+.soco-reg-shell p {
+  max-width: none;
+}
+
+.soco-reg-hero p:first-child,
+.soco-reg-shell p:first-child {
+  margin-top: 0;
+}
+
+#title-block-header,
+.quarto-title-block,
+.quarto-title,
+.quarto-title-meta {
+  display: none !important;
+}
+
+main.content {
+  padding-top: 0 !important;
+}
+
+.soco-reg-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 3.9rem 2.2rem 4.2rem;
+  margin: 1.2rem auto 2.2rem;
+  width: min(1180px, calc(100% - 2rem));
+  border: 1px solid var(--soco-line);
+  border-top: 5px solid var(--soco-coral);
+  border-radius: 1.25rem;
+  background:
+    radial-gradient(circle at 84% 18%, rgba(15,127,134,.10), transparent 30%),
+    radial-gradient(circle at 12% 20%, rgba(255,59,63,.055), transparent 29%),
+    linear-gradient(135deg, #fbfefe 0%, #f2f9f8 56%, #f8fbfc 100%);
+  box-shadow: 0 10px 30px rgba(4,27,51,.06);
+  color: var(--soco-navy);
+}
+
+.soco-reg-hero::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  right: -80px;
+  opacity: .10;
+  background-image: radial-gradient(circle, rgba(4,67,110,.45) 0 1.3px, transparent 2px);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+  pointer-events: none;
+}
+
+.soco-reg-hero-inner,
+.soco-reg-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.soco-reg-eyebrow {
+  margin-bottom: .8rem;
+  color: var(--soco-teal) !important;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.soco-reg-eyebrow p {
+  margin: 0 !important;
+  color: var(--soco-teal) !important;
+}
+
+.soco-reg-hero h1 {
+  margin: 0 !important;
+  max-width: 900px;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--soco-navy) !important;
+  font-size: clamp(2.35rem, 5vw, 4.15rem) !important;
+  font-weight: 850 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.035em;
+  text-shadow: none !important;
+}
+
+.soco-reg-subtitle {
+  max-width: 930px;
+  margin-top: 1.15rem;
+  color: #425f70 !important;
+  line-height: 1.55;
+  min-width: 0;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.soco-reg-subtitle p {
+  margin: 0 !important;
+  color: #425f70 !important;
+}
+
+.soco-reg-subtitle-title {
+  color: #35566b !important;
+  font-size: 1.2rem;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+.soco-reg-subtitle-detail {
+  display: inline-block;
+  margin-top: .16rem;
+  color: #425f70 !important;
+  font-size: 1.06rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.soco-reg-deck {
+  max-width: 880px !important;
+  margin-top: .78rem !important;
+  color: var(--soco-muted) !important;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.65;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.soco-reg-tags {
+  margin-top: 1.45rem;
+}
+
+.soco-reg-tags p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin: 0 !important;
+}
+
+.soco-reg-tag {
+  display: inline-flex;
+  padding: .42rem .75rem;
+  border: 1px solid #c8e1e1;
+  border-radius: 999px;
+  background: rgba(255,255,255,.82);
+  color: var(--soco-blue) !important;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.soco-reg-shell {
+  padding-bottom: 4rem;
+}
+
+.soco-reg-card {
+  margin: 1.4rem 0 2rem;
+  padding: 1.7rem 1.85rem;
+  border: 1px solid var(--soco-line);
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(4,27,51,.055);
+}
+
+.soco-reg-card h2,
+.soco-reg-card h3 {
+  color: var(--soco-navy);
+}
+
+.soco-reg-card h2 {
+  margin-top: 0;
+  padding-bottom: .55rem;
+  border-bottom: 3px solid var(--soco-coral);
+}
+
+.soco-reg-card h3 {
+  margin-bottom: .45rem;
+}
+
+.soco-reg-card p,
+.soco-reg-card li {
+  line-height: 1.62;
+}
+
+.soco-reg-callout {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.45rem;
+  border-left: 5px solid var(--soco-teal);
+  border-radius: .8rem;
+  background: linear-gradient(135deg, rgba(15,127,134,.06), rgba(4,67,110,.035));
+  color: var(--soco-navy);
+}
+
+.soco-reg-callout strong {
+  color: var(--soco-blue);
+}
+
+.soco-reg-grid-2,
+.soco-reg-grid-3 {
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.soco-reg-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.soco-reg-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.soco-reg-mini {
+  padding: 1.2rem 1.25rem;
+  border: 1px solid var(--soco-line);
+  border-radius: .9rem;
+  background: #fff;
+}
+
+.soco-reg-mini-label {
+  margin-bottom: .35rem;
+  color: var(--soco-teal);
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.soco-reg-mini-value {
+  color: var(--soco-navy);
+  font-size: 1.03rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.soco-reg-mini-label p,
+.soco-reg-mini-value p {
+  margin: 0 !important;
+}
+
+.soco-reg-act {
+  margin: 1.8rem 0 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: .9rem;
+  background: var(--soco-navy);
+  color: #fff !important;
+}
+
+.soco-reg-act p,
+.soco-reg-act strong {
+  margin: 0 !important;
+  color: #fff !important;
+}
+
+.soco-reg-act small {
+  display: block;
+  margin-bottom: .2rem;
+  color: #9edfd9;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.soco-reg-act strong {
+  font-size: 1.2rem;
+}
+
+.soco-reg-question-group {
+  margin: 1.35rem 0;
+  padding: 1.2rem 1.35rem;
+  border: 1px solid var(--soco-line);
+  border-radius: .9rem;
+  background: #fff;
+}
+
+.soco-reg-question-group h3 {
+  margin-top: 0;
+  margin-bottom: .7rem;
+  color: var(--soco-blue);
+}
+
+.soco-reg-question-group ul {
+  margin-bottom: 0;
+}
+
+.soco-reg-question-group li {
+  margin: .42rem 0;
+  line-height: 1.55;
+}
+
+.soco-reg-time {
+  display: inline-block;
+  min-width: 4.8rem;
+  margin-right: .45rem;
+  color: var(--soco-teal);
+  font-weight: 850;
+}
+
+.soco-reg-quote {
+  margin: 1.8rem 0;
+  padding: 1.5rem 1.65rem;
+  border-radius: .95rem;
+  background: var(--soco-deep-blue);
+  color: #fff !important;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.soco-reg-quote p {
+  margin: 0 !important;
+  color: #fff !important;
+}
+
+.soco-reg-conjecture {
+  position: relative;
+  margin: 1rem 0;
+  padding: 1.2rem 1.35rem 1.2rem 1.55rem;
+  border: 1px solid var(--soco-line);
+  border-left: 5px solid var(--soco-teal);
+  border-radius: .9rem;
+  background: #fff;
+}
+
+.soco-reg-conjecture .kicker {
+  margin-bottom: .28rem;
+  color: var(--soco-teal);
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.soco-reg-conjecture strong {
+  color: var(--soco-navy);
+}
+
+.soco-reg-conjecture p {
+  margin-bottom: 0;
+}
+
+.soco-reg-stakeholder {
+  min-height: 100%;
+  padding: 1.25rem 1.3rem;
+  border: 1px solid var(--soco-line);
+  border-radius: .9rem;
+  background: linear-gradient(145deg, #ffffff, #f8fbfc);
+}
+
+.soco-reg-stakeholder h3 {
+  margin-top: 0;
+  color: var(--soco-blue);
+}
+
+.soco-reg-reference {
+  margin: 1rem 0;
+  padding: 1rem 1.15rem;
+  border-left: 4px solid #b9d7da;
+  background: #fbfdfd;
+  border-radius: .6rem;
+}
+
+.soco-reg-reference p {
+  margin: 0;
+}
+
+.soco-reg-reference a {
+  color: var(--soco-blue);
+  font-weight: 700;
+}
+
+.soco-reg-note {
+  color: var(--soco-muted);
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+
+/* Custom collapsible sections -------------------------------------------- */
+.soco-reg-collapse {
+  margin: .8rem 0;
+  border: 1px solid var(--soco-line);
+  border-radius: .85rem;
+  background: linear-gradient(145deg, #ffffff, #f9fcfc);
+  overflow: hidden;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.soco-reg-collapse:hover {
+  border-color: #c8dde3;
+  box-shadow: 0 5px 16px rgba(4,27,51,.045);
+}
+
+.soco-reg-collapse[open] {
+  border-color: #bddadd;
+  box-shadow: 0 6px 18px rgba(4,27,51,.05);
+}
+
+.soco-reg-collapse summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--soco-navy);
+  font-weight: 800;
+  line-height: 1.35;
+  user-select: none;
+}
+
+.soco-reg-collapse summary::-webkit-details-marker {
+  display: none;
+}
+
+.soco-reg-collapse summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(15,127,134,.09);
+  color: var(--soco-teal);
+  font-size: 1.1rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.soco-reg-collapse[open] summary::after {
+  content: "−";
+}
+
+.soco-reg-collapse summary:focus-visible {
+  outline: 3px solid rgba(15,127,134,.22);
+  outline-offset: -3px;
+}
+
+.soco-reg-collapse-title {
+  min-width: 0;
+}
+
+.soco-reg-collapse-kicker {
+  display: block;
+  margin-bottom: .14rem;
+  color: var(--soco-teal);
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.soco-reg-collapse-body {
+  padding: 0 1.15rem 1.1rem;
+  border-top: 1px solid #edf3f5;
+}
+
+.soco-reg-collapse-body > :first-child {
+  margin-top: .95rem;
+}
+
+.soco-reg-collapse-body > :last-child {
+  margin-bottom: 0;
+}
+
+.soco-reg-collapse-body ul {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.soco-reg-collapse-body li {
+  margin: .42rem 0;
+  line-height: 1.55;
+}
+
+.soco-reg-collapse-note {
+  margin: -.25rem 0 1rem;
+  color: var(--soco-muted);
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+@media print {
+  .soco-reg-collapse {
+    break-inside: avoid;
+  }
+
+  .soco-reg-collapse summary::after {
+    display: none;
+  }
+
+  .soco-reg-collapse-body {
+    display: block !important;
+  }
+}
+
+/* Medium-width hero refinement */
+@media (max-width: 1050px) {
+  .soco-reg-subtitle {
+    max-width: 820px;
+  }
+
+  .soco-reg-deck {
+    max-width: 800px !important;
+  }
+
+  .soco-reg-subtitle-title {
+    font-size: 1.16rem;
+  }
+
+  .soco-reg-subtitle-detail {
+    font-size: 1.02rem;
+  }
+}
+
+/* Responsive treatment -------------------------------------------------- */
+/* Tablet / phone */
+@media (max-width: 800px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  main.content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .soco-reg-hero,
+  .soco-reg-shell,
+  .soco-reg-card,
+  .soco-reg-question-group,
+  .soco-reg-reference,
+  .soco-reg-conjecture,
+  .soco-reg-stakeholder,
+  .soco-reg-mini,
+  .soco-reg-act,
+  .soco-reg-callout,
+  .soco-reg-quote {
+    min-width: 0;
+  }
+
+  .soco-reg-hero-inner,
+  .soco-reg-shell {
+    width: 100%;
+  }
+
+  .soco-reg-grid-2,
+  .soco-reg-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .soco-reg-hero {
+    width: calc(100% - 1rem);
+    margin: .55rem auto 1.35rem;
+    padding: 2.55rem 1.25rem 2.75rem;
+    border-radius: 1rem;
+  }
+
+  .soco-reg-hero::after {
+    width: 300px;
+    height: 300px;
+    top: -95px;
+    right: -105px;
+    background-size: 25px 25px;
+  }
+
+  .soco-reg-eyebrow {
+    margin-bottom: .7rem;
+    font-size: .7rem;
+    line-height: 1.5;
+    letter-spacing: .11em;
+  }
+
+  .soco-reg-hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.15rem, 9vw, 3.25rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.04em;
+    overflow-wrap: break-word;
+  }
+
+  .soco-reg-subtitle {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .soco-reg-subtitle-title {
+    font-size: 1.08rem;
+    line-height: 1.35;
+  }
+
+  .soco-reg-subtitle-detail {
+    font-size: .98rem;
+    line-height: 1.5;
+  }
+
+  .soco-reg-deck {
+    max-width: 100% !important;
+    margin-top: .68rem !important;
+    font-size: .96rem;
+    line-height: 1.62;
+  }
+
+  .soco-reg-tags {
+    margin-top: 1.15rem;
+  }
+
+  .soco-reg-tags p {
+    gap: .42rem;
+  }
+
+  .soco-reg-tag {
+    padding: .36rem .62rem;
+    font-size: .72rem;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  .soco-reg-shell {
+    width: calc(100% - 1rem);
+    padding-bottom: 2.5rem;
+  }
+
+  .soco-reg-card {
+    margin: 1rem 0 1.35rem;
+    padding: 1.25rem 1.15rem;
+    border-radius: .9rem;
+  }
+
+  .soco-reg-card h2 {
+    font-size: 1.38rem;
+    line-height: 1.2;
+  }
+
+  .soco-reg-card h3 {
+    font-size: 1.08rem;
+    line-height: 1.3;
+  }
+
+  .soco-reg-card p,
+  .soco-reg-card li {
+    line-height: 1.58;
+  }
+
+  .soco-reg-question-group,
+  .soco-reg-conjecture,
+  .soco-reg-stakeholder,
+  .soco-reg-mini,
+  .soco-reg-reference {
+    padding: 1rem 1.05rem;
+  }
+
+  .soco-reg-callout,
+  .soco-reg-quote {
+    margin: 1.25rem 0;
+    padding: 1.1rem 1.15rem;
+  }
+
+  .soco-reg-quote {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .soco-reg-act {
+    margin: 1.45rem 0 .9rem;
+    padding: .9rem 1rem;
+  }
+
+  .soco-reg-act strong {
+    font-size: 1.08rem;
+  }
+
+  .soco-reg-time {
+    min-width: 4.4rem;
+  }
+
+  .soco-reg-reference a,
+  .soco-reg-card a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .soco-reg-card ul,
+  .soco-reg-question-group ul {
+    padding-left: 1.25rem;
+  }
+}
+
+/* Narrow phones */
+@media (max-width: 520px) {
+  .soco-reg-hero {
+    width: calc(100% - .7rem);
+    margin-top: .35rem;
+    padding: 2rem 1rem 2.2rem;
+    border-top-width: 4px;
+    border-radius: .85rem;
+  }
+
+  .soco-reg-hero::after {
+    width: 240px;
+    height: 240px;
+    top: -80px;
+    right: -105px;
+    opacity: .075;
+  }
+
+  .soco-reg-eyebrow {
+    max-width: 92%;
+    font-size: .64rem;
+    letter-spacing: .095em;
+  }
+
+  .soco-reg-hero h1 {
+    font-size: clamp(2rem, 10.5vw, 2.8rem) !important;
+    line-height: 1.01 !important;
+  }
+
+  .soco-reg-subtitle-title {
+    font-size: 1.02rem;
+  }
+
+  .soco-reg-subtitle-detail {
+    margin-top: .2rem;
+    font-size: .93rem;
+  }
+
+  .soco-reg-deck {
+    margin-top: .65rem !important;
+    font-size: .91rem;
+    line-height: 1.58;
+  }
+
+  .soco-reg-tags p {
+    gap: .35rem;
+  }
+
+  .soco-reg-tag {
+    padding: .33rem .55rem;
+    font-size: .68rem;
+  }
+
+  .soco-reg-shell {
+    width: calc(100% - .7rem);
+  }
+
+  .soco-reg-card {
+    padding: 1.08rem .95rem;
+    border-radius: .82rem;
+  }
+
+  .soco-reg-card h2 {
+    padding-bottom: .48rem;
+    font-size: 1.28rem;
+  }
+
+  .soco-reg-card h3 {
+    font-size: 1.03rem;
+  }
+
+  .soco-reg-card p,
+  .soco-reg-card li {
+    font-size: .95rem;
+  }
+
+  .soco-reg-mini,
+  .soco-reg-stakeholder,
+  .soco-reg-question-group,
+  .soco-reg-conjecture,
+  .soco-reg-reference {
+    padding: .92rem .95rem;
+  }
+
+  .soco-reg-callout,
+  .soco-reg-quote {
+    padding: 1rem;
+  }
+
+  .soco-reg-time {
+    display: block;
+    min-width: 0;
+    margin: 0 0 .1rem;
+  }
+
+  .soco-reg-act small {
+    font-size: .65rem;
+    line-height: 1.4;
+  }
+
+  .soco-reg-act strong {
+    display: block;
+    margin-top: .15rem !important;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .soco-reg-collapse summary {
+    padding: .9rem .95rem;
+    gap: .7rem;
+  }
+
+  .soco-reg-collapse summary::after {
+    width: 1.55rem;
+    height: 1.55rem;
+    font-size: 1rem;
+  }
+
+  .soco-reg-collapse-body {
+    padding: 0 .95rem .95rem;
+  }
+}
+
+
+/* Workshop feedback drawer --------------------------------------------- */
+.soco-feedback-wrap {
+  margin: 2rem 0 0;
+}
+
+.soco-feedback-drawer {
+  overflow: hidden;
+  border: 1px solid #c9dfe4;
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(15,127,134,.08), transparent 30%),
+    linear-gradient(145deg, #ffffff, #f7fbfb);
+  box-shadow: 0 8px 24px rgba(4,27,51,.05);
+}
+
+.soco-feedback-drawer summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.4rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--soco-navy);
+  font-weight: 850;
+  user-select: none;
+}
+
+.soco-feedback-drawer summary::-webkit-details-marker { display: none; }
+
+.soco-feedback-drawer summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  width: 1.9rem;
+  height: 1.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(15,127,134,.10);
+  color: var(--soco-teal);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.soco-feedback-drawer[open] summary::after { content: "−"; }
+
+.soco-feedback-summary-copy { min-width: 0; }
+
+.soco-feedback-summary-kicker {
+  display: block;
+  margin-bottom: .16rem;
+  color: var(--soco-teal);
+  font-size: .69rem;
+  font-weight: 850;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.soco-feedback-summary-title {
+  display: block;
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+
+.soco-feedback-inner {
+  padding: 1.25rem 1.4rem 1.45rem;
+  border-top: 1px solid #e6f0f2;
+}
+
+.soco-feedback-inner h2 {
+  margin: 0 0 .55rem;
+  padding: 0;
+  border: 0;
+  color: var(--soco-navy);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.12;
+  letter-spacing: -.02em;
+}
+
+.soco-feedback-intro {
+  max-width: 800px !important;
+  margin: 0 0 1.3rem;
+  color: var(--soco-muted);
+}
+
+.soco-feedback-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 820px;
+}
+
+.soco-feedback-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1rem;
+}
+
+.soco-feedback-field label {
+  display: block;
+  margin-bottom: .38rem;
+  color: var(--soco-ink);
+  font-weight: 750;
+}
+
+.soco-feedback-field input,
+.soco-feedback-field select,
+.soco-feedback-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: .8rem .9rem;
+  border: 1px solid #c8d7de;
+  border-radius: .65rem;
+  background: #fff;
+  color: var(--soco-ink);
+  font: inherit;
+}
+
+.soco-feedback-field textarea {
+  min-height: 125px;
+  resize: vertical;
+}
+
+.soco-feedback-field input:focus,
+.soco-feedback-field select:focus,
+.soco-feedback-field textarea:focus {
+  outline: none;
+  border-color: var(--soco-teal);
+  box-shadow: 0 0 0 3px rgba(15,127,134,.11);
+}
+
+.soco-feedback-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  padding: .85rem .95rem;
+  border: 1px solid var(--soco-line);
+  border-radius: .75rem;
+  background: #fbfdfd;
+}
+
+.soco-feedback-choice input {
+  width: auto;
+  margin-top: .22rem;
+  accent-color: var(--soco-teal);
+}
+
+.soco-feedback-choice label {
+  margin: 0;
+  font-weight: 650;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.soco-feedback-help,
+.soco-feedback-privacy {
+  color: var(--soco-muted);
+  font-size: .84rem;
+  line-height: 1.5;
+}
+
+.soco-feedback-help { margin-top: .35rem; }
+
+.soco-feedback-submit {
+  justify-self: start;
+  border: 0;
+  border-radius: 999px;
+  padding: .78rem 1.2rem;
+  background: var(--soco-blue);
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.soco-feedback-submit:hover { filter: brightness(.94); }
+
+.soco-feedback-submit:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.soco-feedback-status {
+  display: none;
+  margin: .25rem 0 0;
+  padding: .95rem 1.05rem;
+  border-left: 4px solid var(--soco-teal);
+  border-radius: .65rem;
+  background: rgba(15,127,134,.06);
+  color: var(--soco-navy);
+  line-height: 1.55;
+}
+
+.soco-feedback-status.is-visible { display: block; }
+
+@media (max-width: 800px) {
+  .soco-feedback-grid-2 { grid-template-columns: 1fr; }
+  .soco-feedback-drawer summary,
+  .soco-feedback-inner {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .soco-feedback-drawer summary { padding: 1rem; }
+  .soco-feedback-summary-title { font-size: 1rem; }
+  .soco-feedback-inner { padding: 1rem; }
+  .soco-feedback-drawer summary::after {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 1rem;
+  }
+}
+
+</style>
+
+<div class="soco-reg-hero">
+  <div class="soco-reg-hero-inner">
+    <div class="soco-reg-eyebrow">
+      <p>Society of Cutaneous Oncology · Research Workshop · October 28, 2026 · 3:30–5:00 PM ET</p>
+    </div>
+
+    <h1 id="the-art-of-authorship">The Art of Authorship</h1>
+
+    <div class="soco-reg-subtitle">
+      <p>
+        <strong class="soco-reg-subtitle-title">Who Gets on the Paper?</strong><br />
+        <span class="soco-reg-subtitle-detail">From Authorship Criteria to a Fair, Workable Process</span>
+      </p>
+
+      <p class="soco-reg-deck">
+        A 90-minute, multi-stakeholder Research Workshop using cases, survey data, and open discussion to ask a practical question: when the criteria do not settle the case, how should groups make authorship decisions fairly?
+      </p>
+    </div>
+
+    <div class="soco-reg-tags">
+      <p>
+        <span class="soco-reg-tag">Scientific authorship</span>
+        <span class="soco-reg-tag">Authorship process</span>
+        <span class="soco-reg-tag">Editorial perspective</span>
+        <span class="soco-reg-tag">Industry perspective</span>
+        <span class="soco-reg-tag">Cases &amp; discussion</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="soco-reg-shell">
+
+<section id="meeting-concept" class="soco-reg-card">
+  <h2>Meeting concept</h2>
+
+  <p>Scientific authorship carries both <strong>credit and accountability</strong>. The formal criteria are familiar. The difficult part is often deciding how to apply them when contributions are distributed, evolve over time, or do not fit neatly into a checklist.</p>
+
+  <p>A clinician may have generated much of the patient-level data without yet contributing to interpretation or writing. A recognized expert may enter late and materially reshape a nearly finished paper. A multicenter trial may include investigators whose roles range from intellectual originators to site investigators, while sponsor, statistics, and publication teams contribute in different ways. A consensus project may blur the line between participation and authorship altogether.</p>
+
+  <div class="soco-reg-quote">
+    <p>Criteria tell us who may qualify. Process determines how groups get there.</p>
+  </div>
+
+  <p>This workshop will use those recurring situations to examine the <strong>process of authorship</strong>: when the conversation should begin, what should be explicit, how decisions can be transparent, and when an initial plan should be revisited as the work evolves.</p>
+</section>
+
+<div class="soco-reg-grid-3">
+  <div class="soco-reg-mini">
+    <div class="soco-reg-mini-label"><p>Format</p></div>
+    <div class="soco-reg-mini-value"><p>Structured, moderator-led Research Workshop</p></div>
+  </div>
+
+  <div class="soco-reg-mini">
+    <div class="soco-reg-mini-label"><p>Duration</p></div>
+    <div class="soco-reg-mini-value"><p>90 minutes</p></div>
+  </div>
+
+  <div class="soco-reg-mini">
+    <div class="soco-reg-mini-label"><p>Perspectives</p></div>
+    <div class="soco-reg-mini-value"><p>Academia · Editors · Industry · Publication professionals</p></div>
+  </div>
+</div>
+
+<section id="stakeholders" class="soco-reg-card">
+  <h2>Perspectives around the table</h2>
+
+  <p>A good authorship process has to work across very different roles. The workshop brings together people who often experience the same collaboration from different sides.</p>
+
+  <div class="soco-reg-grid-2">
+    <div class="soco-reg-stakeholder">
+      <h3>Clinical &amp; academic investigators</h3>
+      <p>What should happen when clinical care, data generation, study conception, accrual, interpretation, and manuscript development are distributed across different people? When does a contribution create authorship — and when should it create an opportunity to qualify?</p>
+    </div>
+
+    <div class="soco-reg-stakeholder">
+      <h3>Industry &amp; publication colleagues</h3>
+      <p>How can authorship expectations be set prospectively across large, multicenter programs while still allowing the final byline to reflect what people actually contribute over time?</p>
+    </div>
+
+    <div class="soco-reg-stakeholder">
+      <h3>Journal editors</h3>
+      <p>What can a journal reasonably infer from a byline and contributorship statement? Which problems can editorial policy address, and which must be solved earlier by the author group or institution?</p>
+    </div>
+
+    <div class="soco-reg-stakeholder">
+      <h3>Writers, statisticians &amp; methodologists</h3>
+      <p>How should intellectual work that is essential to analysis, interpretation, or communication be recognized when traditional academic hierarchies do not capture it well?</p>
+    </div>
+  </div>
+</section>
+
+<section id="premise" class="soco-reg-card">
+  <h2>Our premise</h2>
+
+  <div class="soco-reg-callout">
+    <strong>The principles are increasingly clear. The process still has to be designed.</strong>
+  </div>
+
+  <p>Guidelines can define authorship criteria, describe inappropriate practices, and assign responsibility. They cannot resolve every real-world case or specify a single workflow for every collaboration. The workshop therefore asks a different question: <strong>what would a fair, workable authorship process look like before a disagreement occurs?</strong></p>
+
+  <p>One possible framework will be tested throughout the meeting: discuss authorship <strong>earlier</strong>, make expectations <strong>explicit</strong>, make the basis for decisions <strong>transparent</strong>, and <strong>revisit</strong> the plan as contributions evolve.</p>
+</section>
+
+
+<section id="why-this-conversation" class="soco-reg-card">
+  <h2>Why bring this into the room?</h2>
+
+  <p>Authorship guidance is not new. What is less routine is talking openly about the process by which collaborators move from contribution to a final byline.</p>
+
+  <p>That process matters because the same formal criteria can produce very different experiences. A clinician who generated a substantial dataset may never be invited into interpretation or manuscript development. A site investigator may not know what publication opportunities exist until a trial is nearly complete. A late contributor may add genuine intellectual value after most of the work is done. And an author list that seemed reasonable at project launch may no longer reflect the work by submission.</p>
+
+  <p>The workshop is designed to make those decisions visible and discussable — not to invent another set of authorship rules, but to ask how the principles we already have can be operationalized more fairly in modern collaborative research.</p>
+
+  <div class="soco-reg-callout">
+    <strong>A key distinction:</strong> decide the process early — not necessarily the final byline.
+  </div>
+</section>
+
+<section id="goals" class="soco-reg-card">
+  <h2>Goals of the workshop</h2>
+
+  <div class="soco-reg-grid-2">
+    <div class="soco-reg-stakeholder">
+      <h3>Start with the gray zones</h3>
+      <p>Use recognizable clinical and collaborative cases where reasonable people can agree on the criteria yet still disagree about the appropriate authorship outcome.</p>
+    </div>
+
+    <div class="soco-reg-stakeholder">
+      <h3>Separate entitlement from opportunity</h3>
+      <p>Ask when a contribution itself warrants authorship — and when it should instead trigger a meaningful opportunity to participate intellectually and qualify.</p>
+    </div>
+
+    <div class="soco-reg-stakeholder">
+      <h3>Stress-test the process</h3>
+      <p>Compare small-team decisions with late contributions, multicenter trials, sponsor–investigator collaborations, and consensus work where roles evolve or are difficult to count.</p>
+    </div>
+
+    <div class="soco-reg-stakeholder">
+      <h3>Leave with something usable</h3>
+      <p>Identify practical habits that could make authorship discussions earlier, more explicit, more transparent, and easier to revisit as contributions change.</p>
+    </div>
+  </div>
+</section>
+
+<section id="discussion-architecture" class="soco-reg-card">
+  <h2>Discussion architecture</h2>
+
+  <p>The cases are arranged to build in complexity. We begin with a common clinical collaboration, move to a late intellectual contribution, then scale the problem to multicenter trials before ending with a genuine gray zone. Each case asks not only <em>who should be an author?</em> but also <em>what process would have made this decision easier and fairer?</em></p>
+
+  <div class="soco-reg-callout">
+    <strong>The basic rhythm:</strong> case → gut reaction → survey result → lived experience → open discussion → process question.
+  </div>
+
+  <!-- ORGANIZER-ONLY WORKING DISCUSSION ANCHORS — DO NOT RENDER PUBLICLY UNTIL INVITATIONS ARE CONFIRMED
+  Module 1 · Clinically involved investigator: Lisa Zaba, with discussion of a prospective "opportunity to qualify" approach.
+  Module 2 · Late invited expert: Mike Wong / Howard Kaufman and other invited perspectives.
+  Module 3 · Clinical-trial authorship: Beth Buchbinder + Neil Gross from the investigator side; Raj Patel / Leon and BMS colleagues from the industry/publication side.
+  Module 4 · Delphi / gray zone + editor synthesis: Vishal Patel / Ade Adamson.
+  -->
+
+  <div class="soco-reg-conjecture">
+    <div class="kicker">Working question</div>
+    <strong>What would a fair authorship process look like before anyone knows exactly how much each person will contribute?</strong>
+    <p>Across the cases, we will test four recurring ideas: earlier, explicitly, transparently, revisited.</p>
+  </div>
+
+  <div class="soco-reg-act">
+    <p><small>Discussion module 1</small> <strong>Contribution — and the opportunity to qualify</strong></p>
+  </div>
+
+  <section class="soco-reg-question-group">
+    <h3>Case · The clinicians who generated the dataset</h3>
+    <p>A small number of physicians cared for many of the patients whose longitudinal clinical data now form the backbone of a retrospective or prospective study. Their care, documentation, clinical judgments, and access to the cohort made the research possible. They did not design the analysis or draft the manuscript, and the project leadership must decide how — or whether — to involve them as the paper develops.</p>
+    <p><strong>The tension:</strong> generating the clinical dataset is important, but importance alone does not automatically satisfy all authorship criteria.</p>
+    <p><strong>Survey signal:</strong> When clinical care or data acquisition is substantial but incomplete for authorship, what obligation — if any — does the study team have to offer a pathway to qualify?</p>
+    <ul>
+      <li>Does caring for or enrolling the patients itself warrant authorship?</li>
+      <li>When does clinical data generation become an intellectual contribution rather than an enabling contribution?</li>
+      <li>Should substantial clinical contributors be invited into planning, interpretation, and manuscript discussions before the analysis is complete?</li>
+      <li>Is there a difference between an entitlement to authorship and an entitlement to a meaningful opportunity to qualify?</li>
+      <li>What should happen if that opportunity is offered and a contributor chooses not to engage?</li>
+    </ul>
+    <p class="soco-reg-note"><strong>One approach to test:</strong> identify substantial clinical contributors early, invite them into the intellectual development of the work, make the expectations for authorship clear, and let the final author list reflect who ultimately contributes.</p>
+  </section>
+
+  <div class="soco-reg-act">
+    <p><small>Discussion module 2</small> <strong>Can someone earn authorship late?</strong></p>
+  </div>
+
+  <section class="soco-reg-question-group">
+    <h3>Case · The late invited expert</h3>
+    <p>A recognized disease expert is invited to review a nearly completed abstract or manuscript. The expert did not participate in the original study design, conduct, or analysis, but may be capable of materially changing the interpretation, framing, and manuscript.</p>
+    <p><strong>The tension:</strong> authorship should reflect contribution, but meaningful intellectual contribution does not always occur at the beginning of a project.</p>
+    <p><strong>Survey signal:</strong> How comfortable are we with late authorship invitations, and what kind of contribution would make one legitimate?</p>
+    <ul>
+      <li>Is a late invitation inherently problematic, or only if the contribution remains superficial?</li>
+      <li>Can substantive interpretation and revision be enough to qualify?</li>
+      <li>How should credibility, reputation, and visibility be separated from genuine intellectual contribution?</li>
+      <li>What expectations should be made explicit when someone is invited late?</li>
+      <li>If the contribution changes the paper substantially, should timing matter?</li>
+    </ul>
+  </section>
+
+  <div class="soco-reg-act">
+    <p><small>Discussion module 3</small> <strong>How does the process scale?</strong></p>
+  </div>
+
+  <section class="soco-reg-question-group">
+    <h3>Case · The multicenter clinical trial</h3>
+    <p>A large trial brings together very different investigator roles: someone may have originated the concept through an investigator-initiated study, another may join primarily as a site investigator, others may lead committees or analyses, and sponsor, statistics, and publication teams may make substantial contributions of their own. Contributions also change as the trial matures.</p>
+    <p><strong>The tension:</strong> the final byline cannot be known prospectively, but a fair process cannot wait until manuscript submission to begin.</p>
+    <p><strong>Survey signal:</strong> When are authorship expectations actually discussed, who initiates the conversation, and what should drive inclusion and order?</p>
+    <ul>
+      <li>What should be decided during protocol development or site activation, and what must remain provisional?</li>
+      <li>How should study conception, trial leadership, accrual, site participation, interpretation, analysis, and manuscript development be weighed?</li>
+      <li>How should the process distinguish the investigator for whom the study is “their baby” from someone joining an established program as a site investigator?</li>
+      <li>How should a system recognize an investigator whose contribution grows substantially over time?</li>
+      <li>Who is responsible for making the criteria and process visible across a large study?</li>
+      <li>How often should a provisional authorship plan be revisited?</li>
+    </ul>
+  </section>
+
+  <div class="soco-reg-act">
+    <p><small>Discussion module 4</small> <strong>What survives when the answer is genuinely ambiguous?</strong></p>
+  </div>
+
+  <section class="soco-reg-question-group">
+    <h3>Case · The Delphi survey</h3>
+    <p>A Delphi study asks a group of experts to participate in multiple rounds and help establish consensus recommendations. A smaller investigator group designed the study, developed the survey, analyzed and interpreted the results, and drafted the manuscript.</p>
+    <p><strong>The tension:</strong> participation itself may be intellectually meaningful, yet not every meaningful contribution necessarily resolves cleanly into individual authorship.</p>
+    <p><strong>Survey signal:</strong> Does participation in a Delphi process warrant authorship? If not automatically, what additional contribution should matter?</p>
+    <ul>
+      <li>Does substantially reshaping questions or recommendations across rounds change the answer?</li>
+      <li>How should collective intellectual work be tracked?</li>
+      <li>What forms of recognition are appropriate when contribution is meaningful but insufficient for authorship?</li>
+      <li>Can a transparent process make disagreement acceptable even when reasonable people reach different outcomes?</li>
+    </ul>
+  </section>
+
+  <div class="soco-reg-callout">
+    <strong>The synthesis question:</strong> after four different cases, what process features keep recurring? Rather than begin with a prescribed answer, the workshop will ask the room what would have made each decision easier — and whether the same principles survive across settings.
+  </div>
+
+  <div class="soco-reg-callout">
+    <strong>Ground rule:</strong> This is not a workshop for naming individuals, companies, journals, or adjudicating prior authorship disputes. Cases are anonymized or constructed from recurring situations, with the discussion focused on how better processes might prevent future disputes.
+  </div>
+</section>
+
+
+
+<!-- BEGIN AOA PRE-MEETING SURVEY CTA -->
+<div class="soco-reg-callout" style="border-left-color: var(--soco-coral);">
+  <strong>The pre-meeting community survey is now open.</strong>
+  <p style="margin:.55rem 0 .9rem;">
+    Share your experiences and perspectives on authorship before the workshop.
+    The survey is open to the broader community; attendance at the workshop is not required.
+    Estimated time: 7–9 minutes.
+  </p>
+  <p style="margin:0;">
+    <a href="survey/"
+       style="display:inline-block;padding:.72rem 1rem;border-radius:.7rem;background:var(--soco-coral);color:#fff !important;font-weight:800;text-decoration:none;">
+      Take the pre-meeting survey →
+    </a>
+  </p>
+</div>
+<!-- END AOA PRE-MEETING SURVEY CTA -->
+
+<section id="workshop-flow" class="soco-reg-card">
+  <h2>How the conversation will build</h2>
+
+  <p>We will begin with a familiar clinical collaboration, then progressively stress-test the same authorship principles in more complex settings: a late intellectual contribution, a multicenter clinical trial, and a consensus project where contribution is genuinely difficult to classify.</p>
+
+  <div class="soco-reg-callout">
+    <strong>The recurring question:</strong> not only “Who should be an author?” but “What process would have made this decision easier, fairer, and more transparent?”
+  </div>
+
+  <p>The workshop will close by asking whether a small set of practical habits recur across the cases: discuss authorship <strong>earlier</strong>, make expectations <strong>explicit</strong>, make the basis for decisions <strong>transparent</strong>, and <strong>revisit</strong> the plan as contributions evolve.</p>
+</section>
+
+
+
+
+
+
+<section id="prior-work" class="soco-reg-card">
+  <h2>Building on prior work</h2>
+
+  <p>The workshop is not starting from a blank page. Existing guidance gives us well-recognized criteria for authorship, frameworks for describing contribution, and approaches to disputes and publication ethics. The opportunity is to ask how those principles should be operationalized in the collaborations we actually conduct.</p>
+
+  <div class="soco-reg-reference">
+    <p><strong>ICMJE authorship criteria.</strong> Authorship is framed around substantive contribution, participation in drafting or critical revision, final approval, and accountability. <a href="https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html">ICMJE: Defining the Role of Authors and Contributors</a>.</p>
+  </div>
+
+  <div class="soco-reg-reference">
+    <p><strong>Contemporary institutional guidance.</strong> Institutions increasingly address responsibilities such as appropriate recognition, consent, accountability, and the responsibility of lead authors. These principles are important, but they do not prescribe one workflow for every collaboration.</p>
+  </div>
+
+  <div class="soco-reg-reference">
+    <p><strong>Medical Publishing Insights and Practices (MPIP) Initiative.</strong> A 2014 survey of 498 investigators, editors, publication professionals, and medical writers used seven gray-zone scenarios to examine how stakeholders make authorship decisions. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4209055/">BMC Medicine 2014;12:197</a>.</p>
+  </div>
+
+  <div class="soco-reg-reference">
+    <p><strong>COPE authorship guidance.</strong> COPE provides practical guidance on authorship disputes and potential ghost, guest, or gift authorship. <a href="https://publicationethics.org/sites/default/files/COPE_DD_A4_Authorship_SEPT19_SCREEN_AW.pdf">COPE Discussion Document: Authorship</a>.</p>
+  </div>
+
+  <div class="soco-reg-reference">
+    <p><strong>CRediT contributorship taxonomy.</strong> CRediT defines 14 contributor roles to make individual contributions more transparent, while remaining distinct from authorship qualification. <a href="https://credit.niso.org/">Contributor Roles Taxonomy (CRediT)</a>.</p>
+  </div>
+
+  <div class="soco-reg-callout">
+    <strong>The opportunity for SoCO:</strong> move from knowing the criteria to making the process more deliberate, visible, and workable.
+  </div>
+</section>
+
+<section id="question-bank" class="soco-reg-card">
+  <h2>Moderator question bank</h2>
+
+  <p>These are prompts to draw from if a discussion needs a push, not a script for the meeting.</p>
+  <p class="soco-reg-collapse-note">Expand a perspective to see possible moderator prompts.</p>
+
+  <details class="soco-reg-collapse">
+    <summary>
+      <span class="soco-reg-collapse-title">
+        <span class="soco-reg-collapse-kicker">Perspective</span>
+        Investigators
+      </span>
+    </summary>
+    <div class="soco-reg-collapse-body">
+      <ul>
+        <li>When was the last time you were explicitly told, before a project began, what would qualify someone for authorship?</li>
+        <li>Have we normalized authorship as a reward for participation rather than a statement of contribution and accountability?</li>
+        <li>How difficult is it in practice to decline authorship from a senior colleague, collaborator, sponsor, or consortium?</li>
+        <li>Do early-career investigators experience these pressures differently from established investigators?</li>
+        <li>What kinds of contribution are systematically overvalued or undervalued in academic medicine?</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="soco-reg-collapse">
+    <summary>
+      <span class="soco-reg-collapse-title">
+        <span class="soco-reg-collapse-kicker">Perspective</span>
+        Industry &amp; publication colleagues
+      </span>
+    </summary>
+    <div class="soco-reg-collapse-body">
+      <ul>
+        <li>When in the life of a trial is the publication author group typically assembled?</li>
+        <li>What practical criteria are used to identify external authors beyond the formal authorship standard?</li>
+        <li>How are contributions prospectively tracked, and who has authority to challenge a proposed author?</li>
+        <li>What happens when an invited investigator has not yet made a sufficient contribution?</li>
+        <li>Are there circumstances in which substantive industry contributions are intentionally made less visible because of perceived optics?</li>
+        <li>Which academic assumptions about industry publication practice are simply wrong?</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="soco-reg-collapse">
+    <summary>
+      <span class="soco-reg-collapse-title">
+        <span class="soco-reg-collapse-kicker">Perspective</span>
+        Editors
+      </span>
+    </summary>
+    <div class="soco-reg-collapse-body">
+      <ul>
+        <li>How often do you suspect that a byline does not accurately reflect the work behind the paper?</li>
+        <li>What patterns raise concern for guest, gift, or ghost authorship?</li>
+        <li>Do contributorship statements meaningfully help, or can they become a retrospective rationalization of an already-decided author list?</li>
+        <li>When should an editor challenge an author list?</li>
+        <li>What is realistically within the journal's responsibility, and what belongs to institutions and author groups?</li>
+        <li>Are current authorship criteria fit for large, highly collaborative modern science?</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="soco-reg-collapse">
+    <summary>
+      <span class="soco-reg-collapse-title">
+        <span class="soco-reg-collapse-kicker">Perspective</span>
+        Everyone
+      </span>
+    </summary>
+    <div class="soco-reg-collapse-body">
+      <ul>
+        <li>Is authorship primarily a mechanism of credit, accountability, or both?</li>
+        <li>If a person can describe what they contributed but cannot defend the paper's conclusions, should they be an author?</li>
+        <li>If everyone technically satisfies the criteria only after being invited to review a finished manuscript, have the criteria actually done their job?</li>
+        <li>What should happen to legitimate contributors whose work is important but insufficient for authorship?</li>
+        <li>Should declining inappropriate authorship be recognized as part of responsible scientific conduct?</li>
+        <li>What would you change about the culture rather than the guideline?</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+
+<section id="potential-output" class="soco-reg-card">
+  <h2>Potential scholarly output</h2>
+
+  <p>The workshop could also serve as the foundation for a <strong>multi-stakeholder perspective on authorship process in contemporary oncology</strong>. The aim would not be another generic summary of authorship criteria. Rather, the perspective could synthesize:</p>
+
+  <ul>
+    <li>the existing authorship framework and what it does — and does not — resolve;</li>
+    <li>contemporary experiences captured through the SoCO survey;</li>
+    <li>the recurring gray zones exposed by the workshop cases;</li>
+    <li>perspectives from investigators, editors, industry, and publication professionals; and</li>
+    <li>practical process principles that could be tested across collaborative research settings.</li>
+  </ul>
+
+  <p>Any resulting paper should follow the same principle it argues for: authorship based on meaningful contribution, with expectations made visible and revisited as the work develops.</p>
+
+  <div class="soco-reg-quote">
+    <p>The principles may already be familiar. The opportunity is to make the process visible enough to use.</p>
+  </div>
+</section>
+
+
+<section id="share-your-thoughts" class="soco-feedback-wrap">
+  <details class="soco-feedback-drawer">
+    <summary>
+      <span class="soco-feedback-summary-copy">
+        <span class="soco-feedback-summary-kicker">Help shape the workshop</span>
+        <span class="soco-feedback-summary-title">Share your thoughts about this workshop</span>
+      </span>
+    </summary>
+
+    <div class="soco-feedback-inner">
+      <h2>What are we missing?</h2>
+
+      <p class="soco-feedback-intro">The workshop is scheduled for October 28, 2026. If you think we are overlooking an important issue, perspective, or case, we would value your input.</p>
+
+      <form
+        class="soco-feedback-form"
+        name="soco-authorship-forum-feedback"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        id="soco-authorship-forum-feedback"
+      >
+        <input type="hidden" name="form-name" value="soco-authorship-forum-feedback">
+        <input type="hidden" name="meeting_title" value="The Art of Authorship">
+        <input type="hidden" name="meeting_url" id="soco-authorship-meeting-url" value="">
+
+        <p hidden>
+          <label>Do not fill this out if you are human: <input name="bot-field"></label>
+        </p>
+
+        <div class="soco-feedback-grid-2">
+          <div class="soco-feedback-field">
+            <label for="soco-feedback-name">Name</label>
+            <input id="soco-feedback-name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="soco-feedback-field">
+            <label for="soco-feedback-email">Email address</label>
+            <input id="soco-feedback-email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="soco-feedback-grid-2">
+          <div class="soco-feedback-field">
+            <label for="soco-feedback-institution">Institution / organization</label>
+            <input id="soco-feedback-institution" name="institution" type="text" autocomplete="organization">
+          </div>
+
+          <div class="soco-feedback-field">
+            <label for="soco-feedback-role">Your perspective</label>
+            <select id="soco-feedback-role" name="role">
+              <option value="" selected>Select one</option>
+              <option>Academic investigator</option>
+              <option>Clinician</option>
+              <option>Trainee / student</option>
+              <option>Journal editor</option>
+              <option>Industry / publication professional</option>
+              <option>Medical writer</option>
+              <option>Statistician / methodologist</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="soco-feedback-choice">
+          <input id="soco-feedback-attend" name="interested_in_attending" type="checkbox" value="Yes">
+          <label for="soco-feedback-attend">Yes, I would be interested in attending this Research Workshop.</label>
+        </div>
+
+        <div class="soco-feedback-field">
+          <label for="soco-feedback-missing">What should we be sure to discuss?</label>
+          <textarea
+            id="soco-feedback-missing"
+            name="topics_or_issues_to_add"
+            maxlength="3000"
+            placeholder="A case, question, stakeholder perspective, authorship problem, or issue we should be sure to address..."
+          ></textarea>
+          <div class="soco-feedback-help">A few sentences is plenty.</div>
+        </div>
+
+        <div class="soco-feedback-field">
+          <label for="soco-feedback-general">Other thoughts on the meeting concept</label>
+          <textarea
+            id="soco-feedback-general"
+            name="general_feedback"
+            maxlength="3000"
+            placeholder="What feels useful? What would you change? Where do you think the discussion could be most valuable?"
+          ></textarea>
+        </div>
+
+        <button class="soco-feedback-submit" type="submit">Send to SoCO</button>
+
+        <div id="soco-feedback-status" class="soco-feedback-status" role="status" aria-live="polite"></div>
+
+        <p class="soco-feedback-privacy">Your name and email are required so that feedback comes from an identifiable member of the scientific community and so we can follow up if helpful. Your response will be shared with the Society of Cutaneous Oncology team and used to help shape the workshop.</p>
+      </form>
+    </div>
+  </details>
+</section>
+
+<script>
+(function () {
+  const form = document.getElementById("soco-authorship-forum-feedback");
+  const urlField = document.getElementById("soco-authorship-meeting-url");
+  const status = document.getElementById("soco-feedback-status");
+
+  if (urlField) urlField.value = window.location.href;
+  if (!form) return;
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalLabel = submitButton ? submitButton.textContent : "";
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending…";
+    }
+
+    if (status) {
+      status.classList.remove("is-visible");
+      status.textContent = "";
+    }
+
+    try {
+      const formData = new FormData(form);
+      const encoded = new URLSearchParams();
+      for (const [key, value] of formData.entries()) encoded.append(key, value);
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encoded.toString()
+      });
+
+      if (!response.ok) throw new Error("Submission failed");
+
+      const firstName = (formData.get("name") || "").toString().trim().split(/\s+/)[0];
+      form.reset();
+      if (urlField) urlField.value = window.location.href;
+
+      if (status) {
+        status.textContent = firstName
+          ? `Thank you, ${firstName}. Your thoughts have been received.`
+          : "Thank you. Your thoughts have been received.";
+        status.classList.add("is-visible");
+      }
+
+      if (submitButton) submitButton.textContent = "Sent";
+    } catch (error) {
+      if (status) {
+        status.textContent = "We could not send your response just now. Please try again.";
+        status.classList.add("is-visible");
+      }
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalLabel;
+      }
+      return;
+    }
+
+    if (submitButton) {
+      setTimeout(function () {
+        submitButton.disabled = false;
+        submitButton.textContent = originalLabel;
+      }, 1600);
+    }
+  });
+})();
+</script>
+
+
+</div>
+```

@@ -1,0 +1,7 @@
+"0","#| results: asis"
+"0","cat(aoa_figure_html("
+"0","  c(""trial"", ""enrollment"", ""steering""),"
+"0","  ""SURVEY FIGURE 04"","
+"0","  ""Trial authorship criteria — steering role vs enrollment vs manuscript contribution"""
+"0","))"
+"1","<div class=""figure-placeholder""><div class=""figure-placeholder-label"">SURVEY FIGURE 04</div>Trial authorship criteria — steering role vs enrollment vs manuscript contribution</div>"

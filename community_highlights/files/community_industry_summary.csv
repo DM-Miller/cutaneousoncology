@@ -1,12 +1,15 @@
 person_id,name_key,company,name,meetings_attended,total_minutes
-SOCO-P0132,gregorynorigian,Bristol Myers Squibb,Gregory Norigian,1,84.07
-SOCO-P0130,caratrulli,Bristol Myers Squibb,Cara Trulli,1,83.05
+SOCO-P0132,gregorynorigian,Bristol Myers Squibb,Gregory Norigian,2,185.15333299999998
+SOCO-P0130,caratrulli,Bristol Myers Squibb,Cara Trulli,2,180.3
+SOCO-P0189,rajpatel,Bristol Myers Squibb,Raj Patel,1,99.933333
+SOCO-P0171,leonsakkal,Bristol Myers Squibb,Leon Sakkal,1,99.083333
 SOCO-P0136,omidnajmi,Bristol Myers Squibb,Omid Najmi,1,75.23
-SOCO-P0161,alfredocovelli,Philogen,Alfredo Covelli,1,95.3
+SOCO-P0201,josephgrossman,Moderna,Joseph Grossman,1,95.666667
+SOCO-P0161,alfredocovelli,Philogen,Alfredo Covelli,2,183.7
 SOCO-P0166,sheiladakhel,Philogen,Sheila Dakhel,1,94.32
 SOCO-P0165,claudiacomacchio,Philogen,Claudia Comacchio,1,93.17
 SOCO-P0185,donatomichelecosi,Philogen,Donato Michele Cosi,1,91.18
-SOCO-P0141,christopherzajac,Regeneron,Christopher Zajac,1,98.63
+SOCO-P0141,christopherzajac,Regeneron,Christopher Zajac,2,159.846667
 SOCO-P0155,sarahnia,Regeneron,Sarah Nia,1,96.95
 SOCO-P0146,matthewfury,Regeneron,Matthew Fury,1,95.88
 SOCO-P0145,kimpremo,Regeneron,Kim Premo,1,94.65
@@ -17,4 +20,6 @@ SOCO-P0144,juliemontiel,Regeneron,Julie Montiel,1,76.18
 SOCO-P0142,davidkremer,Regeneron,David Kremer,1,73.67
 SOCO-P0128,adamyakovich,Replimune,Adam Yakovich,1,103.47
 SOCO-P0127,adamwhalley,Replimune,Adam Whalley,1,99.13
+SOCO-P0162,alyssalee,Sun Pharma,Alyssa Lee,1,93.483333
 SOCO-P0159,anupamajacob,Sun Pharma,Anupama Jacob,1,91.37
+SOCO-P0164,ahmadnaim,Sun Pharma,Ahmad Naim,1,70.716667

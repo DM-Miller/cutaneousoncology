@@ -1,7 +1,7 @@
 ---
 title: "Community Highlights"
 pagetitle: "Community Highlights | Society of Cutaneous Oncology"
-description: "Recognition of the clinicians, researchers, trainees, and industry collaborators who have participated in tracked Society of Cutaneous Oncology Journal Clubs and Research Forums."
+description: "Recognition of the clinicians, researchers, trainees, and industry collaborators who have participated in tracked Society of Cutaneous Oncology Journal Clubs, Research Forums, and Research Workshops."
 page-layout: full
 title-block-style: none
 toc: false
@@ -1079,7 +1079,7 @@ source(registry_view_script, local = TRUE)
 
 # Full-program count is intentionally separate from the tracked registry subset.
 # Update this single value when a new SoCO meeting occurs.
-soco_total_meetings <- 79L
+soco_total_meetings <- 80L
 
 
 # ============================================================
@@ -1219,6 +1219,10 @@ n_tracked_rf <- meeting_index |>
   filter(meeting_type == "Research Forum") |>
   nrow()
 
+n_tracked_rw <- meeting_index |>
+  filter(meeting_type == "Research Workshop") |>
+  nrow()
+
 
 # ============================================================
 # ACADEMIC / CLINICAL MEMBER SUMMARY
@@ -1240,6 +1244,9 @@ member_summary <- academic |>
     ),
     research_forums_attended = n_distinct(
       event_id[meeting_type == "Research Forum"]
+    ),
+    research_workshops_attended = n_distinct(
+      event_id[meeting_type == "Research Workshop"]
     ),
     total_minutes = sum(minutes, na.rm = TRUE),
     affiliation_display = first(affiliation_display),
@@ -1263,6 +1270,13 @@ member_summary <- academic |>
     research_forum_attendance_pct =
       if (n_tracked_rf > 0) {
         100 * research_forums_attended / n_tracked_rf
+      } else {
+        rep(NA_real_, n())
+      },
+
+    research_workshop_attendance_pct =
+      if (n_tracked_rw > 0) {
+        100 * research_workshops_attended / n_tracked_rw
       } else {
         rep(NA_real_, n())
       }
@@ -1551,6 +1565,7 @@ meeting_archive_links <- tribble(
 n_meetings <- nrow(meeting_summary)
 n_jc <- sum(meeting_summary$meeting_type == "Journal Club")
 n_rf <- sum(meeting_summary$meeting_type == "Research Forum")
+n_rw <- sum(meeting_summary$meeting_type == "Research Workshop")
 n_academic <- nrow(member_summary)
 n_industry <- nrow(industry_summary)
 
@@ -1608,7 +1623,7 @@ top20 <- community_participation |>
 # Community Highlights
 
 <p>
-A record of the people who keep showing up: clinicians, researchers, trainees, and collaborators who have contributed their time to SoCO Journal Clubs and Research Forums.
+A record of the people who keep showing up: clinicians, researchers, trainees, and collaborators who have contributed their time to SoCO Journal Clubs, Research Forums, and Research Workshops.
 </p>
 
 <div class="ch-accent"></div>
@@ -1636,7 +1651,7 @@ The numbers below offer a simple way to recognize the people who have repeatedly
 <div class="ch-metric">
 <div class="ch-metric-label">Tracked meetings</div>
 <div class="ch-metric-value">`r n_meetings`</div>
-<div class="ch-metric-note">`r n_jc` Journal Clubs · `r n_rf` Research Forums</div>
+<div class="ch-metric-note">`r n_jc` Journal Clubs · `r n_rf` Research Forums · `r n_rw` Research Workshops</div>
 </div>
 
 <div class="ch-metric">
@@ -1666,7 +1681,7 @@ The numbers below offer a simple way to recognize the people who have repeatedly
 ## Everyone who has joined us
 
 <p>
-Every name below represents at least one appearance at a tracked SoCO Journal Club or Research Forum. No ranking here—just recognition.
+Every name below represents at least one appearance at a tracked SoCO Journal Club, Research Forum, or Research Workshop. No ranking here—just recognition.
 </p>
 </div>
 
@@ -2056,7 +2071,7 @@ if (nrow(qc_people) && nrow(qc_meetings)) {
 
   for (p in seq_len(nrow(qc_people))) {
 
-    person_key <- qc_people$name_key[p]
+    person_key <- qc_people$person_id[p]
     person_name <- qc_people$name[p]
     person_audience <- qc_people$audience[p]
 
@@ -2075,12 +2090,12 @@ if (nrow(qc_people) && nrow(qc_meetings)) {
 
     for (m in seq_len(nrow(qc_meetings))) {
 
-      meeting_name <- qc_meetings$meeting_folder[m]
+      meeting_id <- qc_meetings$event_id[m]
 
       cell <- qc_attendance |>
         filter(
-          name_key == person_key,
-          meeting_folder == meeting_name
+          person_id == person_key,
+          event_id == meeting_id
         ) |>
         slice(1)
 

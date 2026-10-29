@@ -1,0 +1,3 @@
+"0","#| echo: false"
+"0","#| out-width: ""100%"""
+"0","knitr::include_graphics(aoa_workshop_png(""workshop_profile_and_patient_care.png""))"

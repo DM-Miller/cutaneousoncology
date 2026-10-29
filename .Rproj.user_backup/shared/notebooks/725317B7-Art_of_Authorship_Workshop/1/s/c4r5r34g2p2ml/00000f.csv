@@ -1,0 +1,7 @@
+"0","#| results: asis"
+"0","cat(aoa_figure_html("
+"0","  c(""clinical"", ""clinician"", ""involved""),"
+"0","  ""SURVEY FIGURE 03"","
+"0","  ""Clinical contribution / data contribution responses"""
+"0","))"
+"1","<div class=""figure-live""><img src=""data/processed/survey/figures/m2_researcher_clinical_care_principle.png"" alt=""Clinical contribution / data contribution responses""></div>"

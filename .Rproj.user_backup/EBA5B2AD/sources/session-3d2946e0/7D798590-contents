@@ -1,0 +1,3097 @@
+---
+format:
+  revealjs:
+    width: 1600
+    height: 900
+    margin: 0
+    center: false
+    center-title-slide: false
+    auto-stretch: false
+    transition: fade
+    background-transition: fade
+    slide-number: false
+    incremental: false
+    progress: false
+    controls: true
+    hash: true
+    chalkboard: false
+    preview-links: auto
+    footer: "October 28, 2026 · SoCO Research Forum · THE WORKSHOP"
+    self-contained: true
+
+execute:
+  enabled: true
+  echo: false
+  warning: false
+  message: false
+---
+
+## THE ART OF AUTHORSHIP {#title-slide .aoa-slide .aoa-title-slide data-state="no-footer"}
+
+
+<!-- All presentation styling is embedded here. No separate CSS file is required. -->
+<style>
+/* SoCO · The Art of Authorship
+   Presentation layout, 1600 × 900. Replace the earlier stylesheet in full.
+   Shared canvas -> typography -> layouts -> figures -> title/dividers.
+   Figure placement is controlled here; no inline positioning is required. */
+
+:root {
+  --aoa-navy: #041b33;
+  --aoa-blue: #06436e;
+  --aoa-teal: #0f7f86;
+  --aoa-teal-deep: #08636a;
+  --aoa-aqua: #70c4c5;
+  --aoa-coral: #ff3b3f;
+  --aoa-coral-deep: #c8333d;
+  --aoa-ink: #18293d;
+  --aoa-muted: #526579;
+  --aoa-border: #dbe8ee;
+  --aoa-surface: #f6fafb;
+  --aoa-surface-2: #eef7f8;
+  --aoa-surface-3: #f9fcfd;
+  --aoa-teal-wash: #eaf5f5;
+  --aoa-coral-wash: #fff3f3;
+  --aoa-white: #fff;
+  --aoa-gutter: 64px;
+  --aoa-gap: 26px;
+  --aoa-radius: 16px;
+  --aoa-shadow: 0 5px 18px rgba(4,27,51,.035);
+}
+
+.reveal {
+  background: var(--aoa-surface);
+  color: var(--aoa-ink);
+  font-family: "Avenir Next", "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.reveal .slides { text-align: left; }
+.reveal .slides section.aoa-slide {
+  width: 1600px !important;
+  height: 900px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  background: var(--aoa-surface);
+  box-sizing: border-box;
+}
+.aoa-slide *, .aoa-slide *::before, .aoa-slide *::after {
+  box-sizing: border-box;
+}
+/* Keep real headings in the source for navigation and accessibility. */
+.reveal .slides section.aoa-slide > h1,
+.reveal .slides section.aoa-slide > h2,
+.reveal .slides section.aoa-slide > h3 { display: none; }
+.reveal .aoa-slide p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+.reveal .aoa-slide strong { font-weight: 750; }
+.reveal .aoa-slide a { color: var(--aoa-teal-deep); }
+.reveal .aoa-slide img { margin: 0; }
+.reveal .controls { color: var(--aoa-teal); }
+.reveal .progress, .reveal .slide-number { display: none !important; }
+.reveal .footer {
+  left: var(--aoa-gutter) !important;
+  right: var(--aoa-gutter) !important;
+  width: auto !important;
+  bottom: 19px !important;
+  color: var(--aoa-muted) !important;
+  font-size: 13px !important;
+  line-height: 1.2;
+  letter-spacing: .035em;
+  text-align: left;
+}
+/* Cover Reveal versions that apply data-state to HTML, body, or .reveal. */
+html.no-footer .reveal .footer,
+html.no-footer .reveal .controls,
+body.no-footer .reveal .footer,
+body.no-footer .reveal .controls,
+body.no-footer .slide-menu-button,
+.reveal.no-footer .footer,
+.reveal.no-footer .controls { display: none !important; }
+.reveal .slide-menu-button a { color: var(--aoa-teal) !important; }
+.reveal a:focus-visible, .reveal button:focus-visible {
+  outline: 3px solid var(--aoa-teal);
+  outline-offset: 4px;
+}
+
+/* Canvas: heading, flexible content, optional takeaway, footer safe area.
+   The content no longer depends on fixed top offsets or X nudges. */
+.aoa-shell {
+  position: relative;
+  width: 1600px;
+  height: 900px;
+  padding: 34px var(--aoa-gutter) 68px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: var(--aoa-gap);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 94% 10%, rgba(15,127,134,.055), transparent 30%),
+    linear-gradient(135deg, var(--aoa-surface-3), var(--aoa-surface) 62%, var(--aoa-surface-2));
+}
+.aoa-shell.aoa-has-takeaway { grid-template-rows: auto minmax(0,1fr) auto; }
+.aoa-shell::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--aoa-coral);
+}
+.aoa-topbar {
+  position: relative;
+  min-width: 0;
+  padding-bottom: 19px;
+  border-bottom: 1px solid rgba(4,27,51,.12);
+}
+.aoa-section-label {
+  color: var(--aoa-teal-deep);
+  font-size: 16px;
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.aoa-heading {
+  margin-top: 13px;
+  color: var(--aoa-navy);
+  font-size: 44px;
+  line-height: 1.12;
+  font-weight: 750;
+  letter-spacing: -.032em;
+  text-wrap: pretty;
+}
+.aoa-content {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 26px;
+}
+.aoa-bottom-line, .slide-thesis {
+  margin: 0;
+  padding: 18px 24px;
+  border: 1px solid var(--aoa-border);
+  border-left: 6px solid var(--aoa-teal);
+  border-radius: 10px;
+  background: rgba(255,255,255,.88);
+  color: var(--aoa-navy);
+  font-size: 24px;
+  line-height: 1.27;
+}
+.slide-thesis { font-weight: 650; }
+.aoa-bottom-line.coral, .slide-thesis.question-thesis {
+  border-left-color: var(--aoa-coral);
+}
+.aoa-bottom-line.coral { background: #fff8f8; }
+.slide-thesis.question-thesis { font-size: 25px; }
+.source-note {
+  color: var(--aoa-muted);
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+/* Cards: one shared visual treatment, with restrained shadows. */
+.framework-card, .criteria-card, .why-card, .case-preview-card,
+.process-card, .trial-claim-card, .lineage-node {
+  min-width: 0;
+  padding: 32px 28px;
+  border: 1px solid var(--aoa-border);
+  border-top: 6px solid var(--aoa-teal);
+  border-radius: var(--aoa-radius);
+  background: var(--aoa-white);
+  color: var(--aoa-muted);
+  font-size: 24px;
+  line-height: 1.3;
+  box-shadow: var(--aoa-shadow);
+}
+.framework-grid, .criteria-grid, .why-grid, .case-preview-grid,
+.process-grid, .trial-claims-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+.framework-card, .criteria-card, .why-card, .case-preview-card,
+.process-card { min-height: 340px; }
+.why-card.coral-card, .framework-card.primary {
+  border-top-color: var(--aoa-coral);
+  background: linear-gradient(180deg,#fff6f6,#fff 65%);
+}
+.framework-label, .criteria-number, .case-preview-number,
+.process-number, .lineage-year {
+  color: var(--aoa-coral-deep);
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: .08em;
+}
+.framework-title, .criteria-title, .why-title, .case-preview-title,
+.process-title {
+  margin: 22px 0;
+  color: var(--aoa-navy);
+  font-size: 31px;
+  line-height: 1.12;
+  font-weight: 750;
+  letter-spacing: -.025em;
+  text-wrap: pretty;
+}
+.intro-chat-kicker, .intro-chat-side-label, .bridge-paper-kicker,
+.bridge-question-kicker, .why-label, .trial-claim-label,
+.case-kicker, .question-kicker, .rail-kicker, .editor-cue-label {
+  color: var(--aoa-teal-deep);
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 750;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* Introduction and publication bridge */
+.aoa-content.intro-chat-layout, .aoa-content.bridge-layout {
+  display: grid;
+  grid-template-columns: 1.25fr .9fr;
+  gap: 32px;
+  align-content: center;
+}
+.intro-chat-main, .intro-chat-side, .bridge-paper, .bridge-question {
+  min-width: 0;
+  padding: 44px;
+  border: 1px solid var(--aoa-border);
+  border-radius: var(--aoa-radius);
+}
+.intro-chat-main, .bridge-paper { background: #fff; box-shadow: var(--aoa-shadow); }
+.intro-chat-side { background: var(--aoa-teal-wash); border-color: #c7e0e1; }
+.intro-chat-question {
+  margin-top: 26px;
+  color: var(--aoa-navy);
+  font-size: 56px;
+  line-height: 1.09;
+  font-weight: 750;
+  letter-spacing: -.035em;
+}
+.intro-chat-copy, .intro-chat-side-copy, .bridge-question-copy {
+  margin-top: 28px;
+  color: var(--aoa-muted);
+  font-size: 25px;
+  line-height: 1.35;
+}
+.intro-chat-side-big {
+  margin-top: 28px;
+  color: var(--aoa-navy);
+  font-size: 42px;
+  line-height: 1.13;
+  font-weight: 750;
+  letter-spacing: -.03em;
+}
+.bridge-paper, .bridge-question { min-height: 450px; }
+.bridge-paper { border-top: 6px solid var(--aoa-teal); }
+.bridge-question { background: var(--aoa-coral-wash); border-color: #f4cdcd; }
+.bridge-question-kicker { color: var(--aoa-coral-deep); }
+.bridge-paper-title, .bridge-question-big {
+  margin-top: 32px;
+  color: var(--aoa-navy);
+  font-size: 49px;
+  line-height: 1.1;
+  font-weight: 750;
+  letter-spacing: -.035em;
+}
+.bridge-question-big { font-size: 56px; }
+.bridge-paper-citation {
+  margin-top: 34px;
+  padding-top: 22px;
+  border-top: 1px solid var(--aoa-border);
+  color: var(--aoa-muted);
+  font-size: 22px;
+  line-height: 1.3;
+}
+.lineage-rail {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 44px minmax(0,1fr) 44px minmax(0,1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+.lineage-node { min-height: 350px; padding: 34px 30px; }
+.lineage-node.active { background: var(--aoa-teal-wash); border-top-color: var(--aoa-coral); }
+.lineage-title { margin-top: 22px; color: var(--aoa-navy); font-size: 38px; line-height: 1.1; font-weight: 750; letter-spacing: -.03em; }
+.lineage-copy { margin-top: 26px; font-size: 25px; line-height: 1.32; }
+.lineage-arrow { align-self: center; text-align: center; color: var(--aoa-teal); font-size: 38px; }
+
+/* Case and question composition */
+.case-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1.15fr) minmax(0,.9fr);
+  gap: 32px;
+  align-items: stretch;
+}
+.case-card, .question-panel {
+  min-width: 0;
+  min-height: 450px;
+  padding: 40px;
+  border-radius: var(--aoa-radius);
+  border: 1px solid var(--aoa-border);
+}
+.case-card { background: #fff; box-shadow: var(--aoa-shadow); }
+.case-kicker, .question-kicker { color: var(--aoa-coral-deep); }
+.case-headline { margin-top: 22px; color: var(--aoa-navy); font-size: 38px; line-height: 1.16; font-weight: 750; letter-spacing: -.025em; }
+.case-copy { margin-top: 26px; color: var(--aoa-muted); font-size: 26px; line-height: 1.35; }
+.question-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(140deg,#f9fcfc,var(--aoa-teal-wash));
+  border-color: #c7dfe0;
+}
+.question-big { margin-top: 24px; color: var(--aoa-navy); font-size: 40px; line-height: 1.13; font-weight: 750; letter-spacing: -.03em; }
+.question-small { margin-top: 26px; color: var(--aoa-muted); font-size: 26px; line-height: 1.32; }
+.editor-cue {
+  margin: 0;
+  padding: 18px 24px;
+  border: 1px solid #c7dfe0;
+  border-left: 6px solid var(--aoa-teal);
+  border-radius: 10px;
+  background: var(--aoa-teal-wash);
+}
+.editor-cue-question { margin-top: 8px; color: var(--aoa-navy); font-size: 24px; line-height: 1.28; font-weight: 600; }
+/* This is the densest slide; fit with spacing, preserving readable text. */
+#guideline-landscape .aoa-content { gap: 17px; }
+#guideline-landscape .framework-card { min-height: 290px; padding: 26px 24px; font-size: 23px; }
+#guideline-landscape .framework-title { font-size: 29px; margin: 18px 0; }
+#guideline-landscape .aoa-bottom-line { font-size: 22px; padding: 15px 22px; }
+.trial-claim-card { min-height: 325px; display: flex; flex-direction: column; justify-content: center; }
+.trial-claim-label { margin-bottom: 24px; color: var(--aoa-coral-deep); }
+
+/* Survey figures: each wrapper in knitr's output has an explicit size.
+   Width and height are contained together, preserving the complete bitmap. */
+.aoa-content.workshop-png-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  transform: none;
+}
+.workshop-png-wrap .cell,
+.workshop-png-wrap .cell-output-display,
+.workshop-png-wrap .quarto-figure,
+.workshop-png-wrap figure,
+.workshop-png-wrap p,
+.figure-layout > .cell,
+.figure-layout .cell-output-display,
+.figure-layout .quarto-figure,
+.figure-layout figure,
+.figure-layout .quarto-figure p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0 !important;
+  padding: 0;
+  float: none;
+}
+.reveal .workshop-png-wrap img,
+.reveal .figure-layout img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* These survey figures are wide. Give the figure the full width, with
+   three discussion prompts underneath instead of a narrow side rail. */
+.aoa-content.figure-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1fr);
+  grid-template-rows: minmax(0,1fr) auto;
+  gap: 18px;
+}
+.discussion-rail {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 12px 26px;
+  padding: 19px 24px;
+  background: var(--aoa-teal-wash);
+  border: 1px solid #c7dfe0;
+  border-radius: 12px;
+}
+.rail-kicker { grid-column: 1 / -1; font-size: 16px; }
+.rail-question { min-width: 0; padding-top: 10px; border-top: 1px solid #c7dfe0; color: var(--aoa-ink); font-size: 23px; line-height: 1.27; }
+
+/* Title and section dividers retain the existing SoCO visual language. */
+.reveal .slides section#title-slide {
+  text-align: left;
+  background:
+    radial-gradient(circle at 88% 18%,rgba(15,127,134,.12),transparent 30%),
+    linear-gradient(135deg,var(--aoa-surface-3),var(--aoa-surface) 58%,var(--aoa-surface-2));
+}
+#title-slide::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background:var(--aoa-coral); }
+#title-slide::after { content:""; position:absolute; right:-40px; top:-60px; width:520px; height:520px; border:62px solid rgba(15,127,134,.16); border-radius:50%; }
+.aoa-title-field { position:absolute; z-index:2; left:98px; top:118px; width:1120px; }
+.aoa-title-field::after { content:""; position:absolute; right:-320px; top:-18px; width:255px; height:255px; border:28px solid rgba(219,75,73,.18); border-radius:50%; pointer-events:none; }
+.aoa-eyebrow { color:var(--aoa-teal-deep); font-size:22px; line-height:1.3; font-weight:750; letter-spacing:.13em; }
+.aoa-title { margin-top:40px; color:var(--aoa-navy); font-size:100px; line-height:.99; font-weight:800; letter-spacing:-.04em; }
+.aoa-title-rule { width:118px; height:6px; margin-top:34px; border-radius:6px; background:var(--aoa-coral); }
+.aoa-subtitle { margin-top:30px; color:#35536e; font-size:48px; line-height:1.12; font-weight:650; letter-spacing:-.03em; }
+.aoa-title-meta { margin-top:18px; color:var(--aoa-muted); font-size:25px; line-height:1.32; }
+.aoa-date-chip { position:absolute; z-index:2; right:78px; bottom:62px; padding:13px 21px; border:1px solid var(--aoa-border); border-radius:24px; background:rgba(255,255,255,.8); color:var(--aoa-navy); font-size:18px; font-weight:700; letter-spacing:.1em; }
+.aoa-transition, .aoa-closing { position:relative; width:1600px; height:900px; overflow:hidden; background:var(--aoa-navy); color:#fff; }
+.aoa-transition::before, .aoa-transition::after { content:""; position:absolute; border-radius:50%; pointer-events:none; }
+.aoa-transition::before { width:520px; height:520px; right:-120px; top:-110px; border:58px solid rgba(19,139,143,.22); }
+.aoa-transition::after { width:265px; height:265px; right:62px; top:66px; border:26px solid rgba(255,59,63,.16); }
+.aoa-transition.coral-transition::after { border-color:rgba(255,59,63,.3); }
+.transition-wrap { position:absolute; z-index:2; left:98px; top:142px; width:1160px; }
+.transition-index { color:var(--aoa-aqua); font-size:38px; line-height:1; font-weight:750; letter-spacing:.04em; }
+.transition-kicker { margin-top:30px; color:var(--aoa-aqua); font-size:22px; line-height:1.2; font-weight:700; letter-spacing:.12em; }
+.transition-title { margin-top:34px; color:#fff; font-size:74px; line-height:1.1; font-weight:750; letter-spacing:-.035em; text-wrap:pretty; }
+.transition-subtitle { max-width:1120px; margin-top:30px; color:#d6e3ed; font-size:32px; line-height:1.3; }
+.transition-presenters { margin-top:48px; color:var(--aoa-aqua); font-size:25px; line-height:1.3; font-weight:650; }
+.aoa-transition.light-transition, .aoa-closing.light-closing { background:radial-gradient(circle at 86% 18%,rgba(15,127,134,.1),transparent 30%),linear-gradient(135deg,#fbfefe,#f2f9f8 56%,#f8fbfc); }
+.light-transition .transition-index, .light-transition .transition-kicker { color:var(--aoa-teal-deep); }
+.light-transition .transition-title { color:var(--aoa-navy); }
+.light-transition .transition-subtitle { color:var(--aoa-muted); }
+.aoa-transition.light-transition::before { border-color:rgba(15,127,134,.12); }
+.aoa-transition.light-transition::after { border-color:rgba(255,59,63,.12); }
+.aoa-closing { padding:130px 98px; }
+.aoa-closing::after { content:""; position:absolute; width:520px; height:520px; right:-125px; bottom:-150px; border:60px solid rgba(19,139,143,.14); border-radius:50%; }
+.closing-eyebrow { color:var(--aoa-aqua); font-size:21px; line-height:1.3; font-weight:700; letter-spacing:.11em; }
+.closing-title { max-width:1280px; margin-top:46px; color:#fff; font-size:76px; line-height:1.1; font-weight:750; letter-spacing:-.035em; }
+.closing-subtitle { max-width:1200px; margin-top:36px; color:#d6e3ed; font-size:38px; line-height:1.27; }
+.closing-rule { width:130px; height:6px; margin-top:44px; border-radius:6px; background:var(--aoa-coral); }
+.closing-meta { margin-top:40px; color:var(--aoa-aqua); font-size:28px; line-height:1.3; }
+.light-closing .closing-eyebrow, .light-closing .closing-meta { color:var(--aoa-teal-deep); }
+.light-closing .closing-title { color:var(--aoa-navy); }
+.light-closing .closing-subtitle { color:var(--aoa-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .slides section { transition:none !important; }
+}
+
+/* October 2026 workshop revamp: simple click-controlled fades. */
+.reveal .slides section .fragment.fade-in,
+.reveal .slides section .fragment.fade-out {
+  transform: none;
+  transition-property: opacity, visibility;
+  transition-duration: .32s;
+  transition-timing-function: ease;
+}
+.revamp-number { color: var(--aoa-coral-deep); font-size: 23px; font-weight: 750; letter-spacing: .04em; }
+.revamp-item-title { color: var(--aoa-navy); font-size: 35px; line-height: 1.15; font-weight: 750; letter-spacing: -.025em; }
+.revamp-item-copy { margin-top: 12px; color: var(--aoa-muted); font-size: 26px; line-height: 1.3; }
+.revamp-agenda, .revamp-editor { display: grid; gap: 18px; }
+.revamp-agenda-item, .revamp-editor-item {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 24px;
+  padding: 22px 28px;
+  border-top: 1px solid var(--aoa-border);
+}
+.revamp-agenda-item:last-child, .revamp-editor-item:last-child { border-bottom: 1px solid var(--aoa-border); }
+.revamp-editor .revamp-item-title { font-size: 32px; }
+.revamp-editor .revamp-item-copy { font-size: 24px; margin-top: 8px; }
+.revamp-why, .revamp-framework { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 26px; }
+.revamp-why-item, .revamp-framework-item {
+  display: grid;
+  grid-template-columns: 45px minmax(0,1fr);
+  gap: 20px;
+  min-height: 235px;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid var(--aoa-border);
+  border-top: 5px solid var(--aoa-teal);
+  border-radius: 16px;
+}
+.revamp-why-item:last-child { background: var(--aoa-teal-wash); border-top-color: var(--aoa-coral); }
+.revamp-why .revamp-item-title { font-size: 32px; }
+.revamp-why .revamp-item-copy { font-size: 25px; }
+.revamp-framework-item { min-height: 215px; align-content: center; }
+.aoa-content.native-survey-content { display: block; }
+.native-survey {
+  display: grid;
+  grid-template-rows: auto minmax(0,1fr) auto;
+  gap: 24px;
+  width: 100%; height: 100%; min-height: 0;
+}
+.survey-question { color: var(--aoa-navy); font-size: 30px; line-height: 1.27; font-weight: 650; max-width: 1440px; }
+.survey-answer-area { position: relative; min-height: 0; }
+
+.survey-choices {
+  width: 100%; height: 100%;
+  display: grid;
+  grid-template-rows: repeat(var(--answer-count), minmax(0,1fr));
+  gap: 9px;
+  min-width: 0; min-height: 0;
+}
+.survey-choices.two-columns {
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  grid-template-rows: repeat(var(--answer-rows),minmax(0,1fr));
+  column-gap: 34px;
+}
+.survey-option {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 136px;
+  grid-template-rows: minmax(0,1fr) 7px;
+  column-gap: 26px;
+  row-gap: 8px;
+  align-items: center;
+  padding: 10px 20px 13px;
+  border: 1px solid var(--aoa-border);
+  border-radius: 11px;
+  background: rgba(255,255,255,.88);
+  min-width: 0; min-height: 0;
+}
+.survey-option-label { font-size: 25px; line-height: 1.22; color: var(--aoa-ink); }
+.survey-choices.two-columns .survey-option-label { font-size: 23px; }
+.survey-result { display: flex; align-items: baseline; justify-content: flex-end; gap: 10px; white-space: nowrap; }
+.survey-pct { color: var(--aoa-navy); font-size: 34px; font-weight: 750; letter-spacing: -.03em; }
+.survey-count { color: var(--aoa-muted); font-size: 17px; }
+.survey-track { grid-column: 1 / -1; height: 7px; border-radius: 4px; background: #e5eff0; overflow: hidden; }
+.survey-fill { height: 100%; border-radius: 4px; background: var(--aoa-teal); }
+.survey-stage-note { min-height: 25px; color: var(--aoa-muted); font-size: 19px; line-height: 1.3; }
+.survey-stage-note strong { color: var(--aoa-navy); }
+.survey-suppressed { padding: 28px; color: var(--aoa-muted); font-size: 26px; }
+.survey-with-summary { display: grid; grid-template-columns: minmax(0,1fr) 290px; gap: 28px; height: 100%; }
+.survey-summary { border-top: 6px solid var(--aoa-coral); border-radius: 14px; background: #fff7f7; padding: 32px 27px; display: flex; flex-direction: column; justify-content: center; }
+.survey-summary-number { font-size: 83px; font-weight: 780; letter-spacing: -.05em; line-height: 1; color: var(--aoa-navy); }
+.survey-summary-label { margin-top: 20px; font-size: 26px; font-weight: 650; line-height: 1.25; color: var(--aoa-navy); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal .slides section .fragment { transition-duration: 0s; }
+}
+
+.survey-question-help { margin-top: 8px; font-size: 20px; font-weight: 400; color: var(--aoa-muted); }
+
+
+/* Case 1: keep the invitation example concise and readable. */
+#module-1-office-hours .revamp-agenda { gap: 10px; }
+#module-1-office-hours .revamp-agenda-item { padding: 15px 26px; }
+#module-1-office-hours .revamp-item-title { font-size: 31px; }
+#module-1-office-hours .revamp-item-copy { margin-top: 7px; font-size: 24px; }
+.case-one-principle { margin-top: 20px; padding: 14px 22px; border-left: 5px solid var(--aoa-coral); background: #fff7f7; color: var(--aoa-navy); font-size: 23px; font-weight: 650; }
+/* Paired survey questions: left first, then right; retain both distributions. */
+.aoa-content.paired-survey-content { display:grid; grid-template-rows:minmax(0,1fr) auto; gap:16px; min-height:0; }
+.paired-survey { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px; min-height:0; }
+.paired-panel { display:grid; grid-template-rows:auto auto minmax(0,1fr) auto; gap:13px; min-height:0; min-width:0; padding:0 0 0 0; }
+.paired-panel + .paired-panel { border-left:1px solid var(--aoa-border); padding-left:28px; }
+.paired-perspective { color:var(--aoa-teal-deep); font-size:16px; font-weight:750; letter-spacing:.07em; line-height:1.2; }
+.paired-question { color:var(--aoa-navy); font-size:23px; font-weight:650; line-height:1.25; min-height:87px; }
+.paired-answers { display:grid; grid-template-rows:repeat(var(--paired-rows),minmax(0,1fr)); gap:8px; min-height:0; }
+.paired-option { display:grid; grid-template-columns:minmax(0,1fr) 112px; grid-template-rows:minmax(0,1fr) 5px; gap:5px 14px; align-items:center; padding:8px 13px; border:1px solid var(--aoa-border); border-radius:9px; background:#fff; min-height:0; min-width:0; }
+.paired-label { font-size:21px; line-height:1.2; color:var(--aoa-ink); }
+.paired-result { display:flex; justify-content:flex-end; align-items:baseline; gap:8px; white-space:nowrap; }
+.paired-pct { font-size:29px; font-weight:750; color:var(--aoa-navy); letter-spacing:-.03em; }
+.paired-count { font-size:15px; color:var(--aoa-muted); }
+.paired-track { grid-column:1/-1; height:5px; background:#e5eff0; border-radius:4px; overflow:hidden; }
+.paired-fill { height:100%; background:var(--aoa-teal); border-radius:4px; }
+.paired-denominator { color:var(--aoa-muted); font-size:17px; min-height:22px; line-height:1.25; }
+.paired-footnote { color:var(--aoa-muted); font-size:16px; line-height:1.3; min-height:42px; }
+.paired-dense .paired-question { font-size:21px; min-height:80px; }
+.paired-dense .paired-answers { gap:5px; }
+.paired-dense .paired-option { padding:4px 10px; gap:3px 10px; grid-template-columns:minmax(0,1fr) 93px; grid-template-rows:minmax(0,1fr) 4px; }
+.paired-dense .paired-label { font-size:18px; }
+.paired-dense .paired-pct { font-size:25px; }
+.paired-dense .paired-count { font-size:13px; }
+.paired-dense .paired-track { height:4px; }
+
+/* Section clock sits outside the slide canvas; it never affects slide layout. */
+.reveal .aoa-section-clock { position:fixed; right:55px; bottom:15px; z-index:80; font-family:inherit; font-size:13px; line-height:1.3; letter-spacing:.04em; }
+.aoa-section-clock[hidden], .aoa-clock-controls[hidden] { display:none!important; }
+.reveal .aoa-clock-indicator { display:flex; align-items:center; gap:9px; padding:7px 11px; border:1px solid #dbe4e8; border-radius:22px; background:rgba(255,255,255,.95); color:#17314b; font:inherit; font-weight:700; cursor:pointer; box-shadow:0 2px 9px rgba(4,27,51,.06); }
+.aoa-clock-dot { width:13px; height:13px; border-radius:50%; background:#218458; box-shadow:0 0 0 3px rgba(33,132,88,.13); flex:none; }
+[data-color="yellow"] .aoa-clock-dot { background:#be8600; box-shadow:0 0 0 3px rgba(190,134,0,.16); }
+[data-color="red"] .aoa-clock-dot { background:#d33443; box-shadow:0 0 0 3px rgba(211,52,67,.15); }
+[data-paused="true"] .aoa-clock-dot { box-shadow:0 0 0 2px #fff,0 0 0 4px #8799a7; }
+.aoa-clock-warning .aoa-clock-dot { animation:aoa-clock-pulse 1.2s ease-in-out 3; }
+@keyframes aoa-clock-pulse { 50% { opacity:.35; } }
+.reveal .aoa-clock-controls { position:absolute; right:0; bottom:46px; width:275px; padding:17px; background:#fff; border:1px solid #dbe4e8; border-radius:12px; color:#17314b; box-shadow:0 5px 25px rgba(4,27,51,.15); font-size:14px; letter-spacing:0; }
+.aoa-clock-actions { display:flex; gap:10px; margin-top:13px; }
+.reveal .aoa-clock-actions button { font:inherit; font-weight:650; padding:6px 9px; background:#f0f7f7; color:#17314b; border:1px solid #dbe4e8; border-radius:6px; cursor:pointer; }
+.aoa-clock-announcement { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+@media(prefers-reduced-motion:reduce) { .aoa-clock-warning .aoa-clock-dot { animation:none; } }
+@media print { .aoa-section-clock { display:none!important; } }
+
+</style>
+
+```{=html}
+<script>
+/* Per-case presentation clock. All settings and code stay inside this QMD. */
+(function () {
+  'use strict';
+  const budgetMs = 15 * 60 * 1000;
+  const warningMs = 2 * 60 * 1000;
+  const storageKey = 'aoa-workshop-section-clock-v1';
+  let records = {};
+  try {
+    const saved = JSON.parse(sessionStorage.getItem(storageKey) || '{}');
+    for (const id of ['case-1','case-2','case-3','case-4']) {
+      const r = saved[id];
+      if (r && Number.isFinite(r.elapsedMs) && r.elapsedMs >= 0 &&
+          (r.startedAt === null || Number.isFinite(r.startedAt))) {
+        records[id] = {elapsedMs:r.elapsedMs, startedAt:r.startedAt,
+          paused:!!r.paused, warned:!!r.warned};
+      }
+    }
+  } catch (_) { /* A private browser may disallow session storage. */ }
+  const save = () => { try { sessionStorage.setItem(storageKey, JSON.stringify(records)); } catch (_) {} };
+  const elapsed = r => r.elapsedMs + (r.startedAt === null ? 0 : Math.max(0,Date.now()-r.startedAt));
+  const stop = r => { r.elapsedMs = elapsed(r); r.startedAt = null; };
+
+  function startClock() {
+    if (window.AOASectionClock) return;
+    const reveal = window.Reveal;
+    const root = document.createElement('div');
+    root.className = 'aoa-section-clock';
+    root.hidden = true;
+    root.innerHTML = '<button type="button" class="aoa-clock-indicator" aria-expanded="false" aria-controls="aoa-clock-controls"><span class="aoa-clock-dot" aria-hidden="true"></span><span class="aoa-clock-label"></span></button><div id="aoa-clock-controls" class="aoa-clock-controls" hidden><div class="aoa-clock-detail"></div><div class="aoa-clock-actions"><button type="button" class="aoa-clock-pause">Pause</button><button type="button" class="aoa-clock-reset">Reset section</button></div></div><span class="aoa-clock-announcement" role="status" aria-live="polite"></span>';
+    (document.querySelector('.reveal') || document.body).appendChild(root);
+    const indicator = root.querySelector('.aoa-clock-indicator');
+    const label = root.querySelector('.aoa-clock-label');
+    const panel = root.querySelector('.aoa-clock-controls');
+    const pauseButton = root.querySelector('.aoa-clock-pause');
+    const detail = root.querySelector('.aoa-clock-detail');
+    const announce = root.querySelector('.aoa-clock-announcement');
+    let active = null;
+    let lastAnnouncement = '';
+
+    function state() {
+      if (!active) return null;
+      const r = records[active], ms = elapsed(r);
+      return {section:active,elapsedMs:ms,remainingMs:budgetMs-ms,
+        paused:r.paused,color:ms>=budgetMs?'red':ms>=budgetMs-warningMs?'yellow':'green'};
+    }
+    function paint() {
+      const s = state();
+      root.hidden = !s;
+      if (!s) return;
+      root.dataset.color = s.color;
+      root.dataset.paused = String(s.paused);
+      const name = 'CASE ' + s.section.slice(-1).padStart(2,'0');
+      label.textContent = name + (s.paused ? ' · PAUSED' : '');
+      const message = s.color==='red'?'Time reached':s.color==='yellow'?'Two-minute warning':'Within time';
+      indicator.title = name+' — '+message+'. Click for pause and reset.';
+      indicator.setAttribute('aria-label',name+', '+message+(s.paused?', paused':'')+'. Timer controls');
+      const remain = Math.abs(Math.ceil(s.remainingMs/1000));
+      const time = Math.floor(remain/60)+':'+String(remain%60).padStart(2,'0');
+      detail.textContent = time+(s.remainingMs<0?' over':' remaining')+' · 15-minute section';
+      pauseButton.textContent = s.paused?'Resume':'Pause';
+      const nextAnnouncement = name+': '+message+(s.paused?' — paused':'');
+      if (nextAnnouncement!==lastAnnouncement) {
+        announce.textContent = nextAnnouncement;
+        lastAnnouncement = nextAnnouncement;
+      }
+      const r = records[active];
+      if (s.color==='yellow' && !r.warned) {
+        r.warned = true;
+        root.classList.remove('aoa-clock-warning');
+        void root.offsetWidth;
+        root.classList.add('aoa-clock-warning');
+        save();
+      }
+      if (s.color!=='yellow') root.classList.remove('aoa-clock-warning');
+    }
+    function changeSection() {
+      const slide = reveal.getCurrentSlide();
+      const next = slide ? slide.getAttribute('data-aoa-section') : null;
+      if (next===active) { paint(); return; }
+      if (active) stop(records[active]);
+      // Stop any stored clock from an earlier page load before changing cases.
+      for (const [id,r] of Object.entries(records)) if (id!==next && r.startedAt!==null) stop(r);
+      active = next && /^case-[1-4]$/.test(next) ? next : null;
+      if (active) {
+        const r = records[active] || (records[active]={elapsedMs:0,startedAt:null,paused:false,warned:false});
+        if (!r.paused && r.startedAt===null) r.startedAt = Date.now();
+      }
+      panel.hidden = true;
+      indicator.setAttribute('aria-expanded','false');
+      root.classList.remove('aoa-clock-warning');
+      save(); paint();
+    }
+    function pause() {
+      if (!active) return;
+      const r=records[active]; stop(r); r.paused=true; save(); paint();
+    }
+    function resume() {
+      if (!active) return;
+      const r=records[active];
+      if (r.paused) { r.paused=false; r.startedAt=Date.now(); }
+      save(); paint();
+    }
+    function reset() {
+      if (!active) return;
+      const paused=records[active].paused;
+      records[active]={elapsedMs:0,startedAt:paused?null:Date.now(),paused,warned:false};
+      root.classList.remove('aoa-clock-warning'); save(); paint();
+    }
+    root.addEventListener('click', e=>e.stopPropagation());
+    root.addEventListener('pointerdown',e=>e.stopPropagation());
+    root.addEventListener('keydown',e=>e.stopPropagation());
+    indicator.addEventListener('click',()=>{
+      panel.hidden=!panel.hidden;
+      indicator.setAttribute('aria-expanded',String(!panel.hidden));
+      paint();
+    });
+    pauseButton.addEventListener('click',()=>state().paused?resume():pause());
+    root.querySelector('.aoa-clock-reset').addEventListener('click',reset);
+    document.addEventListener('click',e=>{
+      if (!root.contains(e.target)) { panel.hidden=true; indicator.setAttribute('aria-expanded','false'); }
+    });
+    window.AOASectionClock=Object.freeze({getState:state,pause,resume,reset,refresh:paint});
+    reveal.on('slidechanged',changeSection);
+    window.addEventListener('pagehide',save);
+    changeSection();
+    window.setInterval(paint,500);
+  }
+  (function attach() {
+    if (!window.Reveal) { window.setTimeout(attach,40); return; }
+    if (window.Reveal.isReady()) startClock();
+    else window.Reveal.on('ready',startClock);
+  })();
+})();
+
+</script>
+```
+
+
+<div class="aoa-title-field">
+<div class="aoa-eyebrow">
+<p>SOCIETY OF CUTANEOUS ONCOLOGY · RESEARCH WORKSHOP</p>
+</div>
+<div class="aoa-title">
+<p>THE ART OF<br>AUTHORSHIP</p>
+</div>
+<div class="aoa-title-rule">
+
+</div>
+<div class="aoa-subtitle">
+<p>Who gets on the paper?</p>
+</div>
+<div class="aoa-title-meta">
+<p>Guidelines, culture, and the reality of scientific publishing</p>
+</div>
+</div>
+<div class="aoa-date-chip">
+<p>OCTOBER 28 · 2026</p>
+</div>
+<aside class="notes">
+<p>Arrival slide. Keep this up while people enter.</p>
+</aside>
+<!-- Live survey refresh and figure names follow the supplied source.
+     Layout is controlled only by soco-art-of-authorship.css. -->
+
+```{r}
+#| label: refresh-live-survey
+#| include: false
+source("scripts/refresh_art_of_authorship.R")
+aoa_question_json <- r"---({
+  "guidelines_icmje_familiarity": {
+    "id": "guidelines_icmje_familiarity",
+    "type": "single",
+    "required": true,
+    "prompt": "How familiar are you with the International Committee of Medical Journal Editors (ICMJE) authorship criteria?",
+    "options": [
+      {
+        "value": "very_familiar",
+        "label": "Very familiar",
+        "display": "Very familiar"
+      },
+      {
+        "value": "somewhat_familiar",
+        "label": "Somewhat familiar",
+        "display": "Somewhat familiar"
+      },
+      {
+        "value": "slightly_familiar",
+        "label": "Slightly familiar",
+        "display": "Slightly familiar"
+      },
+      {
+        "value": "not_at_all_familiar",
+        "label": "Not at all familiar",
+        "display": "Not at all familiar"
+      }
+    ],
+    "branch": "",
+    "scenario": ""
+  },
+  "guidelines_use_frequency": {
+    "id": "guidelines_use_frequency",
+    "type": "single",
+    "required": true,
+    "prompt": "How often do you use the ICMJE criteria or other formal authorship guidance when making authorship decisions?",
+    "options": [
+      {
+        "value": "always",
+        "label": "Always",
+        "display": "Always"
+      },
+      {
+        "value": "often",
+        "label": "Often",
+        "display": "Often"
+      },
+      {
+        "value": "sometimes",
+        "label": "Sometimes",
+        "display": "Sometimes"
+      },
+      {
+        "value": "rarely",
+        "label": "Rarely",
+        "display": "Rarely"
+      },
+      {
+        "value": "never",
+        "label": "Never",
+        "display": "Never"
+      },
+      {
+        "value": "not_applicable",
+        "label": "Not applicable",
+        "display": "Not applicable"
+      }
+    ],
+    "branch": "",
+    "scenario": ""
+  },
+  "m2_clin_offer_expectation": {
+    "id": "m2_clin_offer_expectation",
+    "type": "single",
+    "required": true,
+    "prompt": "If a substantial portion of the study population came from patients you cared for, how strongly would you feel that you should be offered an opportunity to participate as an author?",
+    "options": [
+      {
+        "value": "very_strongly",
+        "label": "Very strongly",
+        "display": "Very strongly"
+      },
+      {
+        "value": "somewhat_strongly",
+        "label": "Somewhat strongly",
+        "display": "Somewhat strongly"
+      },
+      {
+        "value": "not_very_strongly",
+        "label": "Not very strongly",
+        "display": "Not very strongly"
+      },
+      {
+        "value": "not_at_all",
+        "label": "Not at all",
+        "display": "Not at all"
+      }
+    ],
+    "branch": "Clinician perspective",
+    "scenario": "A retrospective study is performed using clinical data from patients seen within a practice or multidisciplinary group. Some clinicians cared for many of the patients whose records form the dataset but were not involved in developing the research question, designing the study, analyzing the data, or drafting the manuscript."
+  },
+  "m2_clin_not_approached_reaction": {
+    "id": "m2_clin_not_approached_reaction",
+    "type": "single",
+    "required": true,
+    "prompt": "If you were not approached about authorship in that situation, how bothered would you be?",
+    "options": [
+      {
+        "value": "very_bothered",
+        "label": "Very bothered",
+        "display": "Very bothered"
+      },
+      {
+        "value": "somewhat_bothered",
+        "label": "Somewhat bothered",
+        "display": "Somewhat bothered"
+      },
+      {
+        "value": "not_very_bothered",
+        "label": "Not very bothered",
+        "display": "Not very bothered"
+      },
+      {
+        "value": "not_bothered",
+        "label": "Not bothered at all",
+        "display": "Not bothered at all"
+      }
+    ],
+    "branch": "Clinician perspective",
+    "scenario": "A retrospective study is performed using clinical data from patients seen within a practice or multidisciplinary group. Some clinicians cared for many of the patients whose records form the dataset but were not involved in developing the research question, designing the study, analyzing the data, or drafting the manuscript."
+  },
+  "m2_researcher_obligation_offer": {
+    "id": "m2_researcher_obligation_offer",
+    "type": "single",
+    "required": true,
+    "prompt": "If clinicians were substantially responsible for the care that generated the data used in the study, how strongly do you feel an obligation to offer them an opportunity to contribute toward authorship?",
+    "options": [
+      {
+        "value": "very_strongly",
+        "label": "Very strongly",
+        "display": "Very strongly"
+      },
+      {
+        "value": "somewhat_strongly",
+        "label": "Somewhat strongly",
+        "display": "Somewhat strongly"
+      },
+      {
+        "value": "not_very_strongly",
+        "label": "Not very strongly",
+        "display": "Not very strongly"
+      },
+      {
+        "value": "not_at_all",
+        "label": "Not at all",
+        "display": "Not at all"
+      }
+    ],
+    "branch": "Researcher / study-lead perspective",
+    "scenario": "A retrospective study is performed using clinical data from patients seen within a practice or multidisciplinary group. Some clinicians cared for many of the patients whose records form the dataset but were not involved in developing the research question, designing the study, analyzing the data, or drafting the manuscript."
+  },
+  "m2_researcher_clinical_care_principle": {
+    "id": "m2_researcher_clinical_care_principle",
+    "type": "single",
+    "required": true,
+    "prompt": "Which best reflects your view?",
+    "options": [
+      {
+        "value": "care_counts",
+        "label": "Caring for the patients whose data make the study possible should itself carry meaningful weight toward authorship",
+        "display": "Clinical care itself carries meaningful weight"
+      },
+      {
+        "value": "offer_path",
+        "label": "Clinical care alone is not enough for authorship, but those clinicians should generally be offered an opportunity to contribute further",
+        "display": "Care alone is insufficient; offer a path to qualify"
+      },
+      {
+        "value": "research_only",
+        "label": "Authorship should depend only on contributions to the research itself, regardless of who provided the clinical care",
+        "display": "Research contributions determine authorship"
+      },
+      {
+        "value": "unsure",
+        "label": "Unsure",
+        "display": "Unsure"
+      }
+    ],
+    "branch": "Researcher / study-lead perspective",
+    "scenario": "A retrospective study is performed using clinical data from patients seen within a practice or multidisciplinary group. Some clinicians cared for many of the patients whose records form the dataset but were not involved in developing the research question, designing the study, analyzing the data, or drafting the manuscript."
+  },
+  "m1_acad_no_data_access_comfort": {
+    "id": "m1_acad_no_data_access_comfort",
+    "type": "single",
+    "required": true,
+    "prompt": "Suppose you were not involved in the study design or analysis and did not have direct access to the underlying data. How comfortable would you be accepting authorship?",
+    "options": [
+      {
+        "value": "very_comfortable",
+        "label": "Very comfortable",
+        "display": "Very comfortable"
+      },
+      {
+        "value": "somewhat_comfortable",
+        "label": "Somewhat comfortable",
+        "display": "Somewhat comfortable"
+      },
+      {
+        "value": "somewhat_uncomfortable",
+        "label": "Somewhat uncomfortable",
+        "display": "Somewhat uncomfortable"
+      },
+      {
+        "value": "very_uncomfortable",
+        "label": "Very uncomfortable",
+        "display": "Very uncomfortable"
+      }
+    ],
+    "branch": "Invited-expert perspective",
+    "scenario": "A recognized expert is invited to review an abstract or manuscript shortly before submission. They were not involved in the original study."
+  },
+  "m1_ind_no_data_access_comfort": {
+    "id": "m1_ind_no_data_access_comfort",
+    "type": "single",
+    "required": true,
+    "prompt": "Suppose the invited expert was not involved in the study design or analysis and did not have direct access to the underlying data. How comfortable would you be continuing to offer authorship?",
+    "options": [
+      {
+        "value": "very_comfortable",
+        "label": "Very comfortable",
+        "display": "Very comfortable"
+      },
+      {
+        "value": "somewhat_comfortable",
+        "label": "Somewhat comfortable",
+        "display": "Somewhat comfortable"
+      },
+      {
+        "value": "somewhat_uncomfortable",
+        "label": "Somewhat uncomfortable",
+        "display": "Somewhat uncomfortable"
+      },
+      {
+        "value": "very_uncomfortable",
+        "label": "Very uncomfortable",
+        "display": "Very uncomfortable"
+      }
+    ],
+    "branch": "Inviter / industry perspective",
+    "scenario": "A recognized expert is invited to review an abstract or manuscript shortly before submission. They were not involved in the original study."
+  },
+  "m1_acad_ever_declined_contribution": {
+    "id": "m1_acad_ever_declined_contribution",
+    "type": "single",
+    "required": true,
+    "prompt": "Have you ever declined a late invitation to authorship because you did not feel your contribution justified authorship?",
+    "options": [
+      {
+        "value": "yes",
+        "label": "Yes",
+        "display": "Yes"
+      },
+      {
+        "value": "no",
+        "label": "No",
+        "display": "No"
+      },
+      {
+        "value": "not_sure",
+        "label": "Not sure / don't recall",
+        "display": "Not sure / don't recall"
+      }
+    ],
+    "branch": "Invited-expert perspective",
+    "scenario": "A recognized expert is invited to review an abstract or manuscript shortly before submission. They were not involved in the original study."
+  },
+  "volume_self_capacity": {
+    "id": "volume_self_capacity",
+    "type": "single",
+    "required": true,
+    "prompt": "Thinking about your actual professional responsibilities—including clinical, research, administrative, teaching, and other work—what is the highest sustained rate at which you believe you could serve as a lead or senior author on original research papers while still meeting the intellectual contribution, critical review, final approval, and accountability responsibilities expected of that role?",
+    "help": "Choose one.",
+    "options": [
+      {
+        "value": "le1",
+        "label": "1 or fewer per year",
+        "display": "1 or fewer / year"
+      },
+      {
+        "value": "2_3",
+        "label": "2–3 per year",
+        "display": "2–3 / year"
+      },
+      {
+        "value": "4_6",
+        "label": "4–6 per year",
+        "display": "4–6 / year"
+      },
+      {
+        "value": "7_11",
+        "label": "7–11 per year",
+        "display": "7–11 / year"
+      },
+      {
+        "value": "12_23",
+        "label": "12–23 per year (about 1–2 per month)",
+        "display": "12–23 / year"
+      },
+      {
+        "value": "24_35",
+        "label": "24–35 per year (about 2–3 per month)",
+        "display": "24–35 / year"
+      },
+      {
+        "value": "36_47",
+        "label": "36–47 per year (about 3–4 per month)",
+        "display": "36–47 / year"
+      },
+      {
+        "value": "48_plus",
+        "label": "48 or more per year (4+ per month)",
+        "display": "48 or more / year"
+      },
+      {
+        "value": "no_fixed_limit",
+        "label": "I do not think there is a meaningful fixed publication-rate limit",
+        "display": "No fixed publication-rate limit"
+      },
+      {
+        "value": "not_applicable",
+        "label": "Not applicable — I do not personally serve as a lead or senior author on original research",
+        "display": "Not applicable"
+      }
+    ],
+    "branch": "",
+    "scenario": "For these questions, “lead or senior author” means an authorship position that ordinarily signals substantial intellectual responsibility—for example, first/co-first or senior/last author, where applicable. Think about a publication rate sustained over several years rather than a single unusually productive year."
+  },
+  "volume_other_scrutiny": {
+    "id": "volume_other_scrutiny",
+    "type": "single",
+    "required": true,
+    "prompt": "Without knowing more about a person's role or circumstances, at what sustained rate of lead or senior authorship on original research papers would publication volume alone prompt you to look more closely at whether the responsibilities of authorship were actually being met?",
+    "help": "Choose one.",
+    "options": [
+      {
+        "value": "le1",
+        "label": "1 or fewer per year",
+        "display": "1 or fewer / year"
+      },
+      {
+        "value": "2_3",
+        "label": "2–3 per year",
+        "display": "2–3 / year"
+      },
+      {
+        "value": "4_6",
+        "label": "4–6 per year",
+        "display": "4–6 / year"
+      },
+      {
+        "value": "7_11",
+        "label": "7–11 per year",
+        "display": "7–11 / year"
+      },
+      {
+        "value": "12_23",
+        "label": "12–23 per year (about 1–2 per month)",
+        "display": "12–23 / year"
+      },
+      {
+        "value": "24_35",
+        "label": "24–35 per year (about 2–3 per month)",
+        "display": "24–35 / year"
+      },
+      {
+        "value": "36_47",
+        "label": "36–47 per year (about 3–4 per month)",
+        "display": "36–47 / year"
+      },
+      {
+        "value": "48_plus",
+        "label": "48 or more per year (4+ per month)",
+        "display": "48 or more / year"
+      },
+      {
+        "value": "volume_never_enough",
+        "label": "Volume alone would not prompt additional scrutiny",
+        "display": "Volume alone does not prompt scrutiny"
+      }
+    ],
+    "branch": "",
+    "scenario": "For these questions, “lead or senior author” means an authorship position that ordinarily signals substantial intellectual responsibility—for example, first/co-first or senior/last author, where applicable. Think about a publication rate sustained over several years rather than a single unusually productive year."
+  },
+  "m3_acad_authorship_clarity": {
+    "id": "m3_acad_authorship_clarity",
+    "type": "single",
+    "required": true,
+    "prompt": "Before agreeing to participate in a multicenter clinical trial, how clear are you usually about whether your contribution could lead to authorship?",
+    "options": [
+      {
+        "value": "very_clear",
+        "label": "Very clear",
+        "display": "Very clear"
+      },
+      {
+        "value": "somewhat_clear",
+        "label": "Somewhat clear",
+        "display": "Somewhat clear"
+      },
+      {
+        "value": "somewhat_unclear",
+        "label": "Somewhat unclear",
+        "display": "Somewhat unclear"
+      },
+      {
+        "value": "very_unclear",
+        "label": "Very unclear",
+        "display": "Very unclear"
+      }
+    ],
+    "branch": "Academic / investigator perspective",
+    "scenario": "For investigators participating in multicenter trials, two questions are often left unclear: Will my contribution lead to authorship? If so, where will I appear on the paper?"
+  },
+  "m3_ind_authorship_clarity": {
+    "id": "m3_ind_authorship_clarity",
+    "type": "single",
+    "required": true,
+    "prompt": "Before a site agrees to participate in a multicenter clinical trial, how clear are the authorship expectations typically made to investigators?",
+    "options": [
+      {
+        "value": "very_clear",
+        "label": "Very clear",
+        "display": "Very clear"
+      },
+      {
+        "value": "somewhat_clear",
+        "label": "Somewhat clear",
+        "display": "Somewhat clear"
+      },
+      {
+        "value": "somewhat_unclear",
+        "label": "Somewhat unclear",
+        "display": "Somewhat unclear"
+      },
+      {
+        "value": "very_unclear",
+        "label": "Very unclear",
+        "display": "Very unclear"
+      }
+    ],
+    "branch": "Industry / sponsor / publications perspective",
+    "scenario": "For investigators participating in multicenter trials, two questions are often left unclear: Will my contribution lead to authorship? If so, where will I appear on the paper?"
+  },
+  "m3_acad_inclusion_driver": {
+    "id": "m3_acad_inclusion_driver",
+    "type": "single",
+    "required": true,
+    "prompt": "In your experience, which factor most strongly determines whether an investigator is included as an author on the primary trial publication?",
+    "options": [
+      {
+        "value": "accrual",
+        "label": "Patient enrollment / accrual",
+        "display": "Patient enrollment / accrual"
+      },
+      {
+        "value": "site_pi",
+        "label": "Site principal investigator role",
+        "display": "Site PI role"
+      },
+      {
+        "value": "intellectual",
+        "label": "Scientific or intellectual contribution",
+        "display": "Scientific / intellectual contribution"
+      },
+      {
+        "value": "leadership",
+        "label": "Participation in trial leadership or steering committees",
+        "display": "Trial leadership / steering"
+      },
+      {
+        "value": "interpretation_writing",
+        "label": "Contribution to data interpretation or manuscript development",
+        "display": "Interpretation / manuscript development"
+      },
+      {
+        "value": "publication_plan",
+        "label": "Prespecified publication-plan rules",
+        "display": "Prespecified publication plan"
+      },
+      {
+        "value": "sponsor_discretion",
+        "label": "Sponsor/publication-team discretion",
+        "display": "Sponsor / publication-team discretion"
+      },
+      {
+        "value": "other",
+        "label": "Other",
+        "display": "Other"
+      }
+    ],
+    "help": "Choose one.",
+    "branch": "Academic / investigator perspective",
+    "scenario": "For investigators participating in multicenter trials, two questions are often left unclear: Will my contribution lead to authorship? If so, where will I appear on the paper?"
+  },
+  "m3_ind_inclusion_driver": {
+    "id": "m3_ind_inclusion_driver",
+    "type": "single",
+    "required": true,
+    "prompt": "When deciding which trial investigators are included as authors on the primary publication, which consideration most often carries the greatest weight?",
+    "options": [
+      {
+        "value": "accrual",
+        "label": "Patient enrollment / accrual",
+        "display": "Patient enrollment / accrual"
+      },
+      {
+        "value": "site_pi",
+        "label": "Site principal investigator role",
+        "display": "Site PI role"
+      },
+      {
+        "value": "intellectual",
+        "label": "Scientific or intellectual contribution",
+        "display": "Scientific / intellectual contribution"
+      },
+      {
+        "value": "leadership",
+        "label": "Participation in trial leadership or steering committees",
+        "display": "Trial leadership / steering"
+      },
+      {
+        "value": "interpretation_writing",
+        "label": "Contribution to data interpretation or manuscript development",
+        "display": "Interpretation / manuscript development"
+      },
+      {
+        "value": "publication_plan",
+        "label": "Prespecified publication-plan rules",
+        "display": "Prespecified publication plan"
+      },
+      {
+        "value": "site_representation",
+        "label": "Fair representation across participating sites",
+        "display": "Representation across sites"
+      },
+      {
+        "value": "manageable_list",
+        "label": "Keeping the total author list manageable",
+        "display": "Manageable author list"
+      },
+      {
+        "value": "relationships",
+        "label": "Investigator relationships and engagement",
+        "display": "Investigator relationships / engagement"
+      },
+      {
+        "value": "other",
+        "label": "Other",
+        "display": "Other"
+      }
+    ],
+    "help": "Choose one.",
+    "branch": "Industry / sponsor / publications perspective",
+    "scenario": "For investigators participating in multicenter trials, two questions are often left unclear: Will my contribution lead to authorship? If so, where will I appear on the paper?"
+  },
+  "m3_acad_authorship_initiator_actual": {
+    "id": "m3_acad_authorship_initiator_actual",
+    "type": "single",
+    "required": true,
+    "prompt": "When authorship expectations are discussed before or during a trial, who most often initiates that conversation?",
+    "options": [
+      {
+        "value": "investigator_site_team",
+        "label": "Someone on the investigator / site team",
+        "display": "Someone on the investigator / site team"
+      },
+      {
+        "value": "sponsor_company_team",
+        "label": "Someone on the sponsor / company team",
+        "display": "Someone on the sponsor / company team"
+      },
+      {
+        "value": "clinical_ops_cro",
+        "label": "Clinical operations / trial management / CRO",
+        "display": "Clinical operations / trial management / CRO"
+      },
+      {
+        "value": "joint_investigator_sponsor",
+        "label": "It is usually raised jointly by the investigator and sponsor teams",
+        "display": "It is usually raised jointly by the investigator and sponsor teams"
+      },
+      {
+        "value": "varies",
+        "label": "It varies substantially from trial to trial",
+        "display": "It varies substantially from trial to trial"
+      },
+      {
+        "value": "not_discussed",
+        "label": "Authorship expectations are usually not discussed explicitly",
+        "display": "Authorship expectations are usually not discussed explicitly"
+      }
+    ],
+    "help": "Choose one.",
+    "branch": "Academic / investigator perspective",
+    "scenario": "For investigators participating in multicenter trials, two questions are often left unclear: Will my contribution lead to authorship? If so, where will I appear on the paper?"
+  },
+  "m3_ind_authorship_initiator_actual": {
+    "id": "m3_ind_authorship_initiator_actual",
+    "type": "single",
+    "required": true,
+    "prompt": "When authorship expectations are discussed before or during a trial, who most often initiates that conversation?",
+    "options": [
+      {
+        "value": "investigator_site_team",
+        "label": "Someone on the investigator / site team",
+        "display": "Someone on the investigator / site team"
+      },
+      {
+        "value": "sponsor_company_team",
+        "label": "Someone on the sponsor / company team",
+        "display": "Someone on the sponsor / company team"
+      },
+      {
+        "value": "clinical_ops_cro",
+        "label": "Clinical operations / trial management / CRO",
+        "display": "Clinical operations / trial management / CRO"
+      },
+      {
+        "value": "joint_investigator_sponsor",
+        "label": "It is usually raised jointly by the investigator and sponsor teams",
+        "display": "It is usually raised jointly by the investigator and sponsor teams"
+      },
+      {
+        "value": "varies",
+        "label": "It varies substantially from trial to trial",
+        "display": "It varies substantially from trial to trial"
+      },
+      {
+        "value": "not_discussed",
+        "label": "Authorship expectations are usually not discussed explicitly",
+        "display": "Authorship expectations are usually not discussed explicitly"
+      }
+    ],
+    "help": "Choose one.",
+    "branch": "Industry / sponsor / publications perspective",
+    "scenario": "For investigators participating in multicenter trials, two questions are often left unclear: Will my contribution lead to authorship? If so, where will I appear on the paper?"
+  },
+  "m3_acad_authorship_initiator_ideal": {
+    "id": "m3_acad_authorship_initiator_ideal",
+    "type": "single",
+    "required": true,
+    "prompt": "Who should be primarily responsible for initiating the authorship conversation?",
+    "options": [
+      {
+        "value": "investigator_site_team",
+        "label": "The investigator / site team",
+        "display": "The investigator / site team"
+      },
+      {
+        "value": "sponsor_company_team",
+        "label": "The sponsor / company team",
+        "display": "The sponsor / company team"
+      },
+      {
+        "value": "clinical_ops_cro",
+        "label": "Clinical operations / trial management / CRO",
+        "display": "Clinical operations / trial management / CRO"
+      },
+      {
+        "value": "shared_investigator_sponsor",
+        "label": "Shared responsibility between the investigator and sponsor teams",
+        "display": "Shared responsibility between the investigator and sponsor teams"
+      },
+      {
+        "value": "unsure",
+        "label": "Unsure",
+        "display": "Unsure"
+      }
+    ],
+    "help": "Choose one.",
+    "branch": "Academic / investigator perspective",
+    "scenario": "For investigators participating in multicenter trials, two questions are often left unclear: Will my contribution lead to authorship? If so, where will I appear on the paper?"
+  },
+  "m3_ind_authorship_initiator_ideal": {
+    "id": "m3_ind_authorship_initiator_ideal",
+    "type": "single",
+    "required": true,
+    "prompt": "Who should be primarily responsible for initiating the authorship conversation?",
+    "options": [
+      {
+        "value": "investigator_site_team",
+        "label": "The investigator / site team",
+        "display": "The investigator / site team"
+      },
+      {
+        "value": "sponsor_company_team",
+        "label": "The sponsor / company team",
+        "display": "The sponsor / company team"
+      },
+      {
+        "value": "clinical_ops_cro",
+        "label": "Clinical operations / trial management / CRO",
+        "display": "Clinical operations / trial management / CRO"
+      },
+      {
+        "value": "shared_investigator_sponsor",
+        "label": "Shared responsibility between the investigator and sponsor teams",
+        "display": "Shared responsibility between the investigator and sponsor teams"
+      },
+      {
+        "value": "unsure",
+        "label": "Unsure",
+        "display": "Unsure"
+      }
+    ],
+    "help": "Choose one.",
+    "branch": "Industry / sponsor / publications perspective",
+    "scenario": "For investigators participating in multicenter trials, two questions are often left unclear: Will my contribution lead to authorship? If so, where will I appear on the paper?"
+  },
+  "m4_acad_participation_authorship": {
+    "id": "m4_acad_participation_authorship",
+    "type": "single",
+    "required": true,
+    "prompt": "How much weight should substantive participation in a Delphi or consensus process carry toward authorship?",
+    "options": [
+      {
+        "value": "generally_sufficient",
+        "label": "It should generally be sufficient to warrant authorship",
+        "display": "Generally sufficient for authorship"
+      },
+      {
+        "value": "major_but_more_required",
+        "label": "It should be a major contribution, but additional manuscript involvement should still be required",
+        "display": "A major contribution; manuscript involvement still required"
+      },
+      {
+        "value": "one_of_several",
+        "label": "It should be one contribution among several considered",
+        "display": "One contribution among several"
+      },
+      {
+        "value": "little_or_no_weight",
+        "label": "It should carry little or no weight toward authorship",
+        "display": "Little or no weight"
+      },
+      {
+        "value": "not_sure",
+        "label": "Not sure",
+        "display": "Not sure"
+      }
+    ],
+    "branch": "Participant perspective",
+    "scenario": "A Delphi or consensus project includes a group of experts who complete multiple rounds of rating, commenting, and refining statements. Their input helps shape the final recommendations. A smaller writing group then analyzes the results and prepares the manuscript."
+  },
+  "m4_acad_opportunity_to_qualify": {
+    "id": "m4_acad_opportunity_to_qualify",
+    "type": "single",
+    "required": true,
+    "prompt": "If a participant's consensus contributions were substantial but they had not yet met the full authorship criteria, should they generally be offered an opportunity to review or revise the manuscript, contribute intellectually, and qualify for authorship?",
+    "options": [
+      {
+        "value": "yes",
+        "label": "Yes",
+        "display": "Yes"
+      },
+      {
+        "value": "no",
+        "label": "No",
+        "display": "No"
+      },
+      {
+        "value": "unsure",
+        "label": "Unsure",
+        "display": "Unsure"
+      }
+    ],
+    "branch": "Participant perspective",
+    "scenario": "A Delphi or consensus project includes a group of experts who complete multiple rounds of rating, commenting, and refining statements. Their input helps shape the final recommendations. A smaller writing group then analyzes the results and prepares the manuscript."
+  },
+  "m4_org_opportunity_to_qualify": {
+    "id": "m4_org_opportunity_to_qualify",
+    "type": "single",
+    "required": true,
+    "prompt": "If a participant's consensus contributions were substantial but they had not yet met the full authorship criteria, should the writing group generally offer them an opportunity to review or revise the manuscript, contribute further, and qualify for authorship?",
+    "options": [
+      {
+        "value": "yes",
+        "label": "Yes",
+        "display": "Yes"
+      },
+      {
+        "value": "no",
+        "label": "No",
+        "display": "No"
+      },
+      {
+        "value": "unsure",
+        "label": "Unsure",
+        "display": "Unsure"
+      }
+    ],
+    "branch": "Organizer / study-lead perspective",
+    "scenario": "A Delphi or consensus project includes a group of experts who complete multiple rounds of rating, commenting, and refining statements. Their input helps shape the final recommendations. A smaller writing group then analyzes the results and prepares the manuscript."
+  },
+  "profile_setting": {
+    "id": "profile_setting",
+    "type": "single",
+    "required": true,
+    "prompt": "Which best describes your primary professional setting?",
+    "options": [
+      {
+        "value": "academic",
+        "label": "Academic medical center / university",
+        "display": "Academic medical center / university"
+      },
+      {
+        "value": "community",
+        "label": "Community or private practice",
+        "display": "Community or private practice"
+      },
+      {
+        "value": "industry",
+        "label": "Industry",
+        "display": "Industry"
+      },
+      {
+        "value": "government",
+        "label": "Government / regulatory agency",
+        "display": "Government / regulatory agency"
+      },
+      {
+        "value": "research",
+        "label": "Research institute",
+        "display": "Research institute"
+      },
+      {
+        "value": "other",
+        "label": "Other",
+        "display": "Other"
+      }
+    ],
+    "branch": "",
+    "scenario": ""
+  },
+  "profile_editorial_role": {
+    "id": "profile_editorial_role",
+    "type": "single",
+    "required": true,
+    "prompt": "Have you ever served in a formal editorial role for a peer-reviewed journal?",
+    "options": [
+      {
+        "value": "current",
+        "label": "Yes, currently",
+        "display": "Yes, currently"
+      },
+      {
+        "value": "previous",
+        "label": "Yes, previously",
+        "display": "Yes, previously"
+      },
+      {
+        "value": "no",
+        "label": "No",
+        "display": "No"
+      }
+    ],
+    "branch": "",
+    "scenario": ""
+  },
+  "profile_direct_patient_care": {
+    "id": "profile_direct_patient_care",
+    "type": "single",
+    "required": true,
+    "prompt": "Approximately what proportion of your usual professional time is devoted to direct patient care?",
+    "help": "Choose one.",
+    "options": [
+      {
+        "value": "none",
+        "label": "None",
+        "display": "None"
+      },
+      {
+        "value": "lt25",
+        "label": "Less than 25%",
+        "display": "Less than 25%"
+      },
+      {
+        "value": "25_49",
+        "label": "25–49%",
+        "display": "25–49%"
+      },
+      {
+        "value": "50_74",
+        "label": "50–74%",
+        "display": "50–74%"
+      },
+      {
+        "value": "75_plus",
+        "label": "75% or more",
+        "display": "75% or more"
+      }
+    ],
+    "branch": "",
+    "scenario": ""
+  },
+  "profile_career_stage_academic": {
+    "id": "profile_career_stage_academic",
+    "type": "single",
+    "required": true,
+    "gate": {
+      "field": "profile_setting",
+      "in": [
+        "academic",
+        "community",
+        "research"
+      ]
+    },
+    "prompt": "Which best describes your current career stage?",
+    "options": [
+      {
+        "value": "student",
+        "label": "Student",
+        "display": "Student"
+      },
+      {
+        "value": "resident_fellow",
+        "label": "Resident / fellow",
+        "display": "Resident / fellow"
+      },
+      {
+        "value": "early",
+        "label": "Early-career faculty / professional",
+        "display": "Early-career faculty / professional"
+      },
+      {
+        "value": "mid",
+        "label": "Mid-career faculty / professional",
+        "display": "Mid-career faculty / professional"
+      },
+      {
+        "value": "senior",
+        "label": "Senior faculty / professional",
+        "display": "Senior faculty / professional"
+      },
+      {
+        "value": "emeritus",
+        "label": "Emeritus / retired",
+        "display": "Emeritus / retired"
+      },
+      {
+        "value": "other",
+        "label": "Other",
+        "display": "Other"
+      }
+    ],
+    "branch": "",
+    "scenario": ""
+  },
+  "profile_career_stage_industry": {
+    "id": "profile_career_stage_industry",
+    "type": "single",
+    "required": true,
+    "gate": {
+      "field": "profile_setting",
+      "equals": "industry"
+    },
+    "prompt": "Which best describes your current role level?",
+    "options": [
+      {
+        "value": "early",
+        "label": "Early career",
+        "display": "Early career"
+      },
+      {
+        "value": "mid",
+        "label": "Mid-career",
+        "display": "Mid-career"
+      },
+      {
+        "value": "senior",
+        "label": "Senior / leadership",
+        "display": "Senior / leadership"
+      },
+      {
+        "value": "other",
+        "label": "Other",
+        "display": "Other"
+      }
+    ],
+    "branch": "",
+    "scenario": ""
+  },
+  "profile_publication_count": {
+    "id": "profile_publication_count",
+    "type": "single",
+    "required": true,
+    "prompt": "Approximately how many peer-reviewed publications have you authored?",
+    "options": [
+      {
+        "value": "0",
+        "label": "0",
+        "display": "0"
+      },
+      {
+        "value": "1_5",
+        "label": "1–5",
+        "display": "1–5"
+      },
+      {
+        "value": "6_20",
+        "label": "6–20",
+        "display": "6–20"
+      },
+      {
+        "value": "21_50",
+        "label": "21–50",
+        "display": "21–50"
+      },
+      {
+        "value": "51_100",
+        "label": "51–100",
+        "display": "51–100"
+      },
+      {
+        "value": "gt100",
+        "label": "More than 100",
+        "display": "More than 100"
+      }
+    ],
+    "branch": "",
+    "scenario": ""
+  },
+  "authorship_value_reasons": {
+    "id": "authorship_value_reasons",
+    "type": "multi",
+    "required": true,
+    "max_selections": 3,
+    "prompt": "Why is authorship valuable to you professionally?",
+    "help": "Select up to three that matter most to you.",
+    "options": [
+      {
+        "value": "sharing_findings",
+        "label": "Sharing findings and ideas with the field",
+        "display": "Sharing findings"
+      },
+      {
+        "value": "lasting_scientific_contribution",
+        "label": "Making a lasting contribution to the scientific literature",
+        "display": "Lasting scientific record"
+      },
+      {
+        "value": "appropriate_credit",
+        "label": "Receiving appropriate credit for my contributions",
+        "display": "Appropriate credit"
+      },
+      {
+        "value": "reputation_expertise_leadership",
+        "label": "Building my professional reputation, expertise, or leadership in a field",
+        "display": "Reputation / expertise"
+      },
+      {
+        "value": "career_opportunities",
+        "label": "Advancing my career or creating future professional opportunities",
+        "display": "Career opportunities"
+      },
+      {
+        "value": "funding",
+        "label": "Supporting grant or funding opportunities",
+        "display": "Funding opportunities"
+      },
+      {
+        "value": "collaboration",
+        "label": "Building collaborations and professional relationships",
+        "display": "Collaboration"
+      },
+      {
+        "value": "role_expectations",
+        "label": "Meeting expectations of my institution, company, or professional role",
+        "display": "Professional role expectations"
+      },
+      {
+        "value": "not_important",
+        "label": "Authorship is not particularly important to my current professional goals",
+        "exclusive": true,
+        "display": "Not important to current professional goals"
+      },
+      {
+        "value": "other",
+        "label": "Other",
+        "display": "Other"
+      }
+    ],
+    "branch": "",
+    "scenario": ""
+  },
+  "authorship_value_reasons_ranked": {
+    "id": "authorship_value_reasons_ranked",
+    "type": "rank",
+    "required": true,
+    "options_from": "authorship_value_reasons",
+    "min_source_selections": 2,
+    "prompt": "Of the reasons you selected, how would you rank their importance to you?",
+    "help": "Tap them in order, starting with the most important.",
+    "branch": "",
+    "scenario": "",
+    "options": [
+      {
+        "value": "sharing_findings",
+        "label": "Sharing findings and ideas with the field",
+        "display": "Sharing findings"
+      },
+      {
+        "value": "lasting_scientific_contribution",
+        "label": "Making a lasting contribution to the scientific literature",
+        "display": "Lasting scientific record"
+      },
+      {
+        "value": "appropriate_credit",
+        "label": "Receiving appropriate credit for my contributions",
+        "display": "Appropriate credit"
+      },
+      {
+        "value": "reputation_expertise_leadership",
+        "label": "Building my professional reputation, expertise, or leadership in a field",
+        "display": "Reputation / expertise"
+      },
+      {
+        "value": "career_opportunities",
+        "label": "Advancing my career or creating future professional opportunities",
+        "display": "Career opportunities"
+      },
+      {
+        "value": "funding",
+        "label": "Supporting grant or funding opportunities",
+        "display": "Funding opportunities"
+      },
+      {
+        "value": "collaboration",
+        "label": "Building collaborations and professional relationships",
+        "display": "Collaboration"
+      },
+      {
+        "value": "role_expectations",
+        "label": "Meeting expectations of my institution, company, or professional role",
+        "display": "Professional role expectations"
+      },
+      {
+        "value": "not_important",
+        "label": "Authorship is not particularly important to my current professional goals",
+        "exclusive": true,
+        "display": "Not important to current professional goals"
+      },
+      {
+        "value": "other",
+        "label": "Other",
+        "display": "Other"
+      }
+    ]
+  },
+  "authorship_counterfactual_importance": {
+    "id": "authorship_counterfactual_importance",
+    "type": "single",
+    "required": true,
+    "prompt": "Suppose authorship had no effect on hiring, promotion, funding, compensation, or professional reputation. How important would being an author still be to you?",
+    "options": [
+      {
+        "value": "very_important",
+        "label": "Very important",
+        "display": "Very important"
+      },
+      {
+        "value": "somewhat_important",
+        "label": "Somewhat important",
+        "display": "Somewhat important"
+      },
+      {
+        "value": "not_very_important",
+        "label": "Not very important",
+        "display": "Not very important"
+      },
+      {
+        "value": "not_important",
+        "label": "Not important at all",
+        "display": "Not important at all"
+      }
+    ],
+    "branch": "",
+    "scenario": ""
+  },
+  "authorship_relative_weight": {
+    "id": "authorship_relative_weight",
+    "type": "single",
+    "required": true,
+    "prompt": "Compared with other meaningful professional contributions—such as clinical care, research, teaching, mentorship, collaboration, program or product development, and organizational leadership—how much weight does authorship receive in career advancement and professional recognition in your environment?",
+    "options": [
+      {
+        "value": "far_too_little",
+        "label": "Far too little",
+        "display": "Far too little"
+      },
+      {
+        "value": "somewhat_too_little",
+        "label": "Somewhat too little",
+        "display": "Somewhat too little"
+      },
+      {
+        "value": "about_right",
+        "label": "About the right amount",
+        "display": "About the right amount"
+      },
+      {
+        "value": "somewhat_too_much",
+        "label": "Somewhat too much",
+        "display": "Somewhat too much"
+      },
+      {
+        "value": "far_too_much",
+        "label": "Far too much",
+        "display": "Far too much"
+      },
+      {
+        "value": "not_sure_na",
+        "label": "Not sure / not applicable",
+        "display": "Not sure / not applicable"
+      }
+    ],
+    "branch": "",
+    "scenario": ""
+  }
+}
+)---"
+
+# Native Reveal survey layers: question -> all choices -> all results.
+# Reads the same survey object and builder code used by the existing figures.
+# Does not contact Netlify or change survey records.
+
+.aoa_animation <- new.env(parent = emptyenv())
+
+aoa_html <- function(x) {
+  x <- as.character(x)
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  x <- gsub(">", "&gt;", x, fixed = TRUE)
+  x <- gsub('"', "&quot;", x, fixed = TRUE)
+  x
+}
+
+aoa_survey_init <- function(presentation_dir = getwd()) {
+  if (!requireNamespace("jsonlite", quietly = TRUE)) stop("The animated survey renderer requires jsonlite.")
+  .aoa_animation$questions <- jsonlite::fromJSON(aoa_question_json, simplifyVector = FALSE)
+  caller <- parent.frame()
+  builder <- get0("build_icmje_summary", envir = caller, inherits = TRUE)
+  context <- if (is.function(builder)) environment(builder) else NULL
+  if (is.null(context) || !exists("survey", envir = context, inherits = FALSE)) {
+    context <- new.env(parent = caller)
+    old <- options(aoa.autobuild = FALSE, aoa.presentation_dir = presentation_dir)
+    on.exit(options(old), add = TRUE)
+    sys.source(file.path(presentation_dir, "scripts", "build_workshop_figures.R"), envir = context)
+  }
+  if (!exists("survey", envir = context, inherits = FALSE) || !is.data.frame(context$survey)) {
+    stop("Could not obtain the survey cohort from the existing workshop figure builder.")
+  }
+  # A cohort-size mismatch must be investigated rather than silently showing
+  # data from a different population than the existing refreshed figures.
+  refreshed <- get0("AOA_SURVEY", envir = caller, inherits = TRUE)
+  if (is.list(refreshed) && !is.null(refreshed$n_label)) {
+    label <- as.character(refreshed$n_label)[1L]
+    match <- regmatches(label, regexpr("[0-9]+", label))
+    expected <- suppressWarnings(as.integer(match))
+    if (length(expected) && !is.na(expected) && expected != nrow(context$survey)) {
+      stop("Animated survey cohort (", nrow(context$survey), ") differs from the refreshed survey (", expected, "). Check the existing production-mode cohort before rendering.")
+    }
+  }
+  .aoa_animation$survey <- context$survey
+  .aoa_animation$min_n <- max(5L, as.integer(getOption("aoa.minimum_n", 5L)))
+  invisible(TRUE)
+}
+
+aoa_question_data <- function(id) {
+  q <- .aoa_animation$questions[[id]]
+  if (is.null(q)) stop("Unknown workshop survey question: ", id)
+  dat <- .aoa_animation$survey
+  raw <- if (id %in% names(dat)) trimws(as.character(dat[[id]])) else character()
+  raw <- raw[!is.na(raw) & nzchar(raw)]
+  options <- q$options
+  codes <- vapply(options, function(o) as.character(o$value), character(1))
+  # Support plain-text and JSON-array serializations without changing the
+  # question's denominator. Ranked results use the first-ranked response.
+  split_response <- function(s) {
+    if (grepl("^\\s*\\[", s)) {
+      return(as.character(jsonlite::fromJSON(s)))
+    }
+    trimws(strsplit(s, "\\s*[|;,]\\s*")[[1L]])
+  }
+  answers <- lapply(raw, split_response)
+  if (identical(q$type, "rank")) answers <- lapply(answers, function(z) head(z[nzchar(z)],1L))
+  if (!identical(q$type, "multi") && !identical(q$type, "rank")) answers <- lapply(raw, function(z) z)
+  answers <- lapply(answers, unique)
+  extra <- setdiff(unique(unlist(answers, use.names = FALSE)), codes)
+  if (length(extra)) {
+    warning("Additional answer codes in ", id, ": ", paste(extra, collapse = ", "), ". They are retained in the distribution.", call. = FALSE)
+    options <- c(options, lapply(extra, function(z) list(value = z, label = z, display = gsub("_"," ",z))))
+    codes <- c(codes,extra)
+  }
+  n <- length(answers)
+  counts <- vapply(codes, function(code) sum(vapply(answers, function(a) code %in% a, logical(1))), integer(1))
+  pct <- if (n) round(100 * counts / n) else rep(NA_real_,length(counts))
+  list(question = q, options = options, codes = codes, n = n, counts = counts, pct = pct)
+}
+
+aoa_survey_slide <- function(id, heading, section) {
+  d <- aoa_question_data(id)
+  q <- d$question
+  ok <- d$n >= .aoa_animation$min_n
+  nopts <- length(d$options)
+  cols <- if (nopts > 7L) " two-columns" else ""
+  answer_rows <- if (nopts > 7L) ceiling(nopts / 2) else nopts
+  summary <- NULL
+  if (ok && id == "guidelines_icmje_familiarity") {
+    summary <- list(pct = round(100 * sum(d$counts[d$codes %in% c("very_familiar","somewhat_familiar")]) / d$n), label = "very / somewhat familiar")
+  }
+  if (ok && id == "guidelines_use_frequency") {
+    summary <- list(pct = round(100 * sum(d$counts[d$codes %in% c("always","often","sometimes","very_often")]) / d$n), label = "use guidance at least sometimes")
+  }
+  cat('<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">',aoa_html(section),'</div><div class="aoa-heading">',aoa_html(heading),'</div></div><div class="aoa-content native-survey-content"><div class="native-survey">',sep="")
+  cat('<div class="survey-question">',aoa_html(q$prompt),sep="")
+  if (!is.null(q$help) && nzchar(q$help)) cat('<div class="survey-question-help">',aoa_html(q$help),'</div>',sep="")
+  cat('</div><div class="survey-answer-area">',sep="")
+  if (!is.null(summary)) cat('<div class="survey-with-summary">')
+  cat('<div class="survey-choices fragment fade-in',cols,'" data-fragment-index="0" style="--answer-count:',nopts,';--answer-rows:',answer_rows,'">',sep="")
+  for (i in seq_along(d$options)) {
+    o <- d$options[[i]]
+    display <- if (is.null(o$display)) o$label else o$display
+    cat('<div class="survey-option" title="',aoa_html(o$label),'"><div class="survey-option-label">',aoa_html(display),'</div><div class="survey-result fragment fade-in" data-fragment-index="1">',sep="")
+    if (ok) cat('<span class="survey-pct">',d$pct[[i]],'%</span><span class="survey-count">',d$counts[[i]],'</span>',sep="")
+    cat('</div><div class="survey-track"><div class="survey-fill fragment fade-in" data-fragment-index="1" style="width:',if(ok)d$pct[[i]] else 0,'%"></div></div></div>',sep="")
+  }
+  cat('</div>')
+  if (!is.null(summary)) {
+    cat('<div class="survey-summary fragment fade-in" data-fragment-index="1"><div class="survey-summary-number">',summary$pct,'%','</div><div class="survey-summary-label">',aoa_html(summary$label),'</div></div></div>',sep="")
+  }
+  cat('</div><div class="survey-stage-note fragment fade-in" data-fragment-index="1">',sep="")
+  if (ok) {
+    cat('<strong>n = ',d$n,'</strong> respondents. ',sep="")
+    if (identical(q$type,"multi")) cat('Multiple selections permitted; percentages need not total 100%.')
+    else if (identical(q$type,"rank")) cat('First-ranked choices; percentages may differ from 100% because of rounding.')
+    else cat('Percentages may differ from 100% because of rounding.')
+  } else cat('Question-level results display only when n &gt;= ',.aoa_animation$min_n,'.',sep="")
+  cat('</div></div></div></div><aside class="notes"><p>',aoa_html(q$scenario),'</p><p>Survey wording: ',aoa_html(q$prompt),'</p><p>Branch: ',aoa_html(q$branch),'. Present one question at a time. First click: all choices, no data. Ask the room to predict. Second click: every result for this question appears together. Counts and percentages are computed from the same local cohort as the workshop figures.</p><p>Full answer labels: ',paste(vapply(q$options,function(o)aoa_html(o$label),character(1)),collapse='; '),'</p></aside>\n',sep="")
+  invisible(d)
+}
+
+
+# Paired survey panels retain their own wording, options, and denominators.
+# Builds: left choices (0), left results (1), right question (2),
+# right choices (3), right results (4). Left results stay visible.
+aoa_survey_pair <- function(left_id, right_id, heading) {
+  pair <- lapply(c(left_id,right_id), aoa_question_data)
+  dense <- max(vapply(pair,function(d)length(d$options),integer(1))) > 7L
+  cat('<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">CASE 03 · TWO PERSPECTIVES</div><div class="aoa-heading">',aoa_html(heading),'</div></div><div class="aoa-content paired-survey-content"><div class="paired-survey',if(dense)' paired-dense' else '','">',sep='')
+  for (side in 1:2) {
+    d <- pair[[side]]; q <- d$question
+    ok <- d$n >= .aoa_animation$min_n
+    question_index <- if(side==1) NA_integer_ else 2L
+    choice_index <- if(side==1) 0L else 3L
+    result_index <- if(side==1) 1L else 4L
+    title <- if(side==1)'INVESTIGATOR PERSPECTIVE' else 'INDUSTRY / PUBLICATION-TEAM PERSPECTIVE'
+    cat('<div class="paired-panel',if(side==2)' fragment fade-in' else '','"',if(side==2)' data-fragment-index="2"' else '', '><div class="paired-perspective">',title,'</div><div class="paired-question">',aoa_html(q$prompt),'</div>',sep='')
+    cat('<div class="paired-answers fragment fade-in" data-fragment-index="',choice_index,'" style="--paired-rows:',length(d$options),'">',sep='')
+    for (i in seq_along(d$options)) {
+      o <- d$options[[i]]
+      display <- if(is.null(o$display))o$label else o$display
+      cat('<div class="paired-option" title="',aoa_html(o$label),'"><div class="paired-label">',aoa_html(display),'</div><div class="paired-result fragment fade-in" data-fragment-index="',result_index,'">',sep='')
+      if(ok)cat('<span class="paired-pct">',d$pct[[i]],'%</span><span class="paired-count">n=',d$counts[[i]],'</span>',sep='')
+      cat('</div><div class="paired-track"><div class="paired-fill fragment fade-in" data-fragment-index="',result_index,'" style="width:',if(ok)d$pct[[i]] else 0,'%"></div></div></div>',sep='')
+    }
+    cat('</div><div class="paired-denominator fragment fade-in" data-fragment-index="',result_index,'">',sep='')
+    if(ok)cat('n = ',d$n,' respondents',sep='') else cat('Results display only when n &gt;= ',.aoa_animation$min_n,sep='')
+    cat('</div></div>')
+  }
+  cat('</div><div class="paired-footnote fragment fade-in" data-fragment-index="4">Separate respondent groups and denominators. ',sep='')
+  if(grepl('inclusion_driver',left_id,fixed=TRUE))cat('The prompts and answer lists differ; compare patterns rather than treating these as identical questions. ')
+  cat('Percentages may differ from 100% because of rounding.</div></div></div><aside class="notes">')
+  cat('<p>Show the investigator question first. Click for all investigator choices, then all investigator results. Invite predictions aloud; no prediction cue appears on the slide. The next click reveals the industry question, followed by its choices and all results. The investigator results stay visible throughout.</p>')
+  cat('<p>These are distinct questions answered by separate respondent groups. Do not pool them or describe differences as individual changes in opinion. Each panel retains its own observed denominator and minimum-n suppression.</p>')
+  for(side in 1:2) {
+    d<-pair[[side]]
+    cat('<p>',if(side==1)'Investigator' else 'Industry',' question: ',aoa_html(d$question$prompt),'</p><p>Full answer labels: ',paste(vapply(d$question$options,function(o)aoa_html(o$label),character(1)),collapse='; '),'</p>',sep='')
+  }
+  if(grepl('inclusion_driver',left_id,fixed=TRUE))cat('<p>The inclusion-driver answer lists differ between branches. A category absent from one panel was not offered in that question; it must not be interpreted as a zero response.</p>')
+  cat('</aside>\n')
+  invisible(pair)
+}
+
+aoa_survey_init()
+```
+
+## Today’s workshop {#agenda .aoa-slide}
+
+<div class="aoa-shell "><div class="aoa-topbar"><div class="aoa-section-label">THE ART OF AUTHORSHIP</div><div class="aoa-heading">Today’s workshop</div></div><div class="aoa-content "><div class="revamp-agenda"><div class="revamp-agenda-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">Welcome and purpose</div><div class="revamp-item-copy">Meet the community and introduce new members.</div></div></div><div class="revamp-agenda-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">A shared starting point</div><div class="revamp-item-copy">Authorship guidance, the survey, and an editor’s perspective.</div></div></div><div class="revamp-agenda-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">Four case modules</div><div class="revamp-item-copy">Compare decisions across familiar situations.</div></div></div><div class="revamp-agenda-item fragment fade-in" data-fragment-index="3"><div class="revamp-number">04</div><div><div class="revamp-item-title">Discussion and takeaways</div><div class="revamp-item-copy">Identify agreements, disagreements, and useful approaches.</div></div></div></div></div></div><aside class="notes"><p>Reveal one agenda item per click. Keep this to about one minute. Signal that the session is participatory: attendees will consider each question before seeing the survey response. The four modules are the main activity.</p></aside>
+
+## Who’s in the room? {#introductions .aoa-slide}
+
+<div class="aoa-shell "><div class="aoa-topbar"><div class="aoa-section-label">WELCOME</div><div class="aoa-heading">Who’s in the room?</div></div><div class="aoa-content intro-chat-layout"><div class="intro-chat-main"><div class="intro-chat-kicker">IN THE CHAT</div><div class="intro-chat-question">Name · institution · what you do</div><div class="intro-chat-copy fragment fade-in" data-fragment-index="0">Tell us the perspective you bring to authorship.</div></div><div class="intro-chat-side fragment fade-in" data-fragment-index="1"><div class="intro-chat-side-label">WELCOME TO SOCO</div><div class="intro-chat-side-big">New to the community?</div><div class="intro-chat-side-copy">We’d like to meet you.</div></div></div></div><aside class="notes"><p>Invite chat introductions while briefly welcoming the room. Then introduce new members from the confirmed membership roster. Specific new-member names were not supplied for this revision; use your current roster rather than the workshop presenter list. Include clinicians, investigators, editors, industry colleagues, trainees, writers, and publication professionals in the invitation.</p></aside>
+
+## Why this workshop? {#why-this-workshop .aoa-slide}
+
+<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">WHY WE’RE HERE</div><div class="aoa-heading">Why this workshop?</div></div><div class="aoa-content"><div class="revamp-why">
+<div class="revamp-why-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">Different perspectives. Different stakes.</div></div></div>
+<div class="revamp-why-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">Shared work. Different expectations.</div></div></div>
+<div class="revamp-why-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">Criteria give us a starting point.</div></div></div>
+<div class="revamp-why-item fragment fade-in" data-fragment-index="3"><div class="revamp-number">04</div><div><div class="revamp-item-title">A conversation we can learn from.</div></div></div>
+</div></div></div>
+<aside class="notes">
+<p>Reveal one point per click. Use each paragraph below with its corresponding reveal. Leave room for the audience to read before continuing.</p>
+<p>REVEAL 1 — Different perspectives. Different stakes.</p>
+<p>We have people here at very different stages and in very different roles—medical students, trainees, junior and senior faculty, and colleagues in industry. We’re coming to this conversation for different reasons. Some are learning how to contribute to their first paper. Others are leading collaborations or managing publication programs. What we need from this discussion will differ.</p>
+<p>REVEAL 2 — Shared work. Different expectations.</p>
+<p>But we often work together on the same science. And we may bring different expectations about what earns authorship, who should be invited to contribute, and when those conversations should happen. Those differences can stay invisible until a manuscript is nearly finished.</p>
+<p>REVEAL 3 — Criteria give us a starting point.</p>
+<p>We have guidelines, and we’ll start with those. But applying them requires judgment: what counts as a substantial contribution, what happens when someone joins late, and how should expectations change as the work evolves?</p>
+<p>REVEAL 4 — A conversation we can learn from.</p>
+<p>That’s why we’re having a workshop. We’ll use the cases and survey to hear how others approach these questions, understand where our expectations differ, and learn from one another. You don’t need extensive publishing experience to contribute—your questions and perspective are part of the conversation.</p>
+</aside>
+
+## How we’ll work: four case modules {#four-cases .aoa-slide}
+
+<div class="aoa-shell aoa-has-takeaway">
+<div class="aoa-topbar">
+<div class="aoa-section-label">
+<p>TODAY’S WORK</p>
+</div>
+<div class="aoa-heading" role="heading" aria-level="2">
+<p>How we’ll work: four case modules</p>
+</div>
+</div>
+<div class="aoa-content">
+<div class="case-preview-grid">
+<div class="case-preview-card fragment fade-in" data-fragment-index="0">
+<div class="case-preview-number">
+<p>01</p>
+</div>
+<div class="case-preview-title">
+<p>“But I treated the patients.”</p>
+</div>
+<p>A substantial clinical contribution creates the dataset — but not necessarily the manuscript.</p>
+</div>
+<div class="case-preview-card fragment fade-in" data-fragment-index="1">
+<div class="case-preview-number">
+<p>02</p>
+</div>
+<div class="case-preview-title">
+<p>The late invitation</p>
+</div>
+<p>An expert joins after the study and draft already exist.</p>
+</div>
+<div class="case-preview-card fragment fade-in" data-fragment-index="2">
+<div class="case-preview-number">
+<p>03</p>
+</div>
+<div class="case-preview-title">
+<p>The clinical trial</p>
+</div>
+<p>Investigator roles, sponsor systems, enrollment, leadership, interpretation, and writing collide.</p>
+</div>
+<div class="case-preview-card fragment fade-in" data-fragment-index="3">
+<div class="case-preview-number">
+<p>04</p>
+</div>
+<div class="case-preview-title">
+<p>The Delphi panel</p>
+</div>
+<p>Collective intellectual work blurs the boundary between participation and authorship.</p>
+</div>
+</div>
+</div>
+<div class="aoa-bottom-line coral fragment fade-in" data-fragment-index="4">
+<p>Each case asks the same question: what process would make the authorship decision fairer, clearer, and less reactive?</p>
+</div>
+</div>
+<aside class="notes">
+<p>Set up the modules as stress tests, not just interesting cases. Each module should end by asking what process would have made the decision easier. The arc should build from opportunity, to timing, to system-scale authorship, to ambiguity.</p>
+</aside><aside class="notes"><p>Introduce the four situations briefly. For each module: present the case, ask the room, show the survey question, reveal the choices, invite predictions, then reveal all results for that question together. Let the panel discuss the reasoning. The synthesis comes after all four modules.</p></aside>
+
+## Several frameworks, different jobs {#guideline-landscape .aoa-slide}
+
+<div class="aoa-shell "><div class="aoa-topbar"><div class="aoa-section-label">A SHARED STARTING POINT</div><div class="aoa-heading">Several frameworks, different jobs</div></div><div class="aoa-content "><div class="revamp-framework"><div class="revamp-framework-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">ICMJE</div><div class="revamp-item-copy">Who meets the criteria for authorship?</div></div></div><div class="revamp-framework-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">COPE</div><div class="revamp-item-copy">How should publication-ethics concerns be handled?</div></div></div><div class="revamp-framework-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">CRediT</div><div class="revamp-item-copy">What did each contributor do?</div></div></div><div class="revamp-framework-item fragment fade-in" data-fragment-index="3"><div class="revamp-number">04</div><div><div class="revamp-item-title">Journals, WAME, and CSE</div><div class="revamp-item-copy">Which policies and editorial procedures apply?</div></div></div></div></div></div><aside class="notes"><p>Introduce each framework on its own click. They serve related but different functions. ICMJE provides our practical baseline for the cases; CRediT describes contribution roles and does not itself decide authorship. Journal policies also matter. Do not claim a numerical adoption rate.</p><p>Sources: https://www.icmje.org/recommendations/ ; https://publicationethics.org/authorship ; https://credit.niso.org/ . Ade will discuss which guidance he uses in practice after we see the familiarity and use results.</p></aside>
+
+## ICMJE gives us four criteria {#icmje .aoa-slide}
+
+<div class="aoa-shell aoa-has-takeaway">
+<div class="aoa-topbar">
+<div class="aoa-section-label">
+<p>THE FORMAL FRAMEWORK</p>
+</div>
+<div class="aoa-heading" role="heading" aria-level="2">
+<p>ICMJE gives us four criteria</p>
+</div>
+</div>
+<div class="aoa-content">
+<div class="criteria-grid">
+<div class="criteria-card fragment fade-in" data-fragment-index="0">
+<div class="criteria-number">
+<p>1</p>
+</div>
+<div class="criteria-title">
+<p>Substantial contribution</p>
+</div>
+<p>Conception/design; or acquisition, analysis, or interpretation of data.</p>
+</div>
+<div class="criteria-card fragment fade-in" data-fragment-index="1">
+<div class="criteria-number">
+<p>2</p>
+</div>
+<div class="criteria-title">
+<p>Draft or revise</p>
+</div>
+<p>Draft the work or revise it critically for important intellectual content.</p>
+</div>
+<div class="criteria-card fragment fade-in" data-fragment-index="2">
+<div class="criteria-number">
+<p>3</p>
+</div>
+<div class="criteria-title">
+<p>Final approval</p>
+</div>
+<p>Approve the version to be published.</p>
+</div>
+<div class="criteria-card fragment fade-in" data-fragment-index="3">
+<div class="criteria-number">
+<p>4</p>
+</div>
+<div class="criteria-title">
+<p>Accountability</p>
+</div>
+<p>Be accountable for the work and help resolve questions about accuracy or integrity.</p>
+</div>
+</div>
+</div>
+<div class="aoa-bottom-line coral fragment fade-in" data-fragment-index="4">
+<p>The hard part is not reciting the criteria. It is operationalizing them before expectations harden and after contributions evolve.</p>
+</div>
+</div>
+
+## Familiarity with authorship criteria {#survey-guidelines_icmje_familiarity .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("guidelines_icmje_familiarity", "Familiarity with authorship criteria", "GUIDELINES · FAMILIARITY")
+```
+
+## Use of authorship guidance {#survey-guidelines_use_frequency .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("guidelines_use_frequency", "Use of authorship guidance", "GUIDELINES · PRACTICE")
+```
+
+## Ade, how does this look from the editor’s desk? {#ade-editor-perspective .aoa-slide}
+
+<div class="aoa-shell "><div class="aoa-topbar"><div class="aoa-section-label">EDITOR PERSPECTIVE · ADE ADAMSON</div><div class="aoa-heading">Ade, how does this look from the editor’s desk?</div></div><div class="aoa-content "><div class="revamp-editor"><div class="revamp-editor-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">What do you make of these results?</div><div class="revamp-item-copy">What stands out in the familiarity and use distributions?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">Which guidance do you use in practice?</div><div class="revamp-item-copy">How do ICMJE, journal policies, and other frameworks enter editorial decisions?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">Where do the difficult questions arise?</div><div class="revamp-item-copy">Is the challenge knowing the criteria, interpreting contribution, or managing the process?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="3"><div class="revamp-number">04</div><div><div class="revamp-item-title">What can an editor help resolve?</div><div class="revamp-item-copy">Where does the journal’s role end and the author group’s responsibility begin?</div></div></div></div></div></div><aside class="notes"><p>Start with the observed distributions and ask Ade what he sees. Let him respond before revealing the next question. Ask which frameworks he uses rather than assuming that one guideline operates identically at every journal.</p><p>Keep this opening discussion focused on how guidance works in editorial practice. Return to contribution thresholds during the cases. ICMJE assigns the author group responsibility for determining who qualifies and does not ask journal editors to arbitrate authorship conflicts. Source: https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html .</p></aside>
+
+## “But I treated the patients.” {#module-1-transition .aoa-slide data-state="no-footer" data-aoa-section="case-1"}
+
+<div class="aoa-transition">
+<div class="transition-wrap">
+<div class="transition-index">
+<p>01</p>
+</div>
+<div class="transition-kicker">
+<p>CASE 01 · CLINICAL CONTRIBUTION</p>
+</div>
+<div class="transition-title">
+<p>“But I treated the patients.”</p>
+</div>
+<div class="transition-subtitle">
+<p>Clinical contribution and the pathway to authorship</p>
+</div>
+<div class="transition-presenters">
+<p>Discussion with Lisa Zaba</p>
+</div>
+</div>
+</div>
+
+<aside class="notes"><p>Clinical contribution and the pathway to authorship: this module asks how clinicians whose care generated a study cohort can be offered a meaningful opportunity to contribute to the research and meet authorship criteria.</p><p>“But I treated the patients.” It is an understandable starting point. Lisa, we’ll come to you after the survey to discuss what a meaningful pathway could look like.</p></aside>
+
+## Is the contribution enough — or is the opportunity the point? {#module-1-clinician-case .aoa-slide data-aoa-section="case-1"}
+
+<div class="aoa-shell">
+<div class="aoa-topbar">
+<div class="aoa-section-label">
+<p>CASE 01 · CLINICAL CONTRIBUTION · LISA ZABA</p>
+</div>
+<div class="aoa-heading" role="heading" aria-level="2">
+<p>Is the contribution enough — or is the opportunity the point?</p>
+</div>
+</div>
+<div class="aoa-content">
+<div class="case-layout">
+<div class="case-card">
+<div class="case-kicker">
+<p>THE SITUATION</p>
+</div>
+<div class="case-headline">
+<p>A clinician identified patients, delivered complex care, and generated much of the source data.</p>
+</div>
+<div class="case-copy">
+<p>They had little role in the original design, statistical analysis, interpretation, or first manuscript draft. The paper could not exist without the clinical work — but the authorship criteria require more than that.</p>
+</div>
+</div>
+<div class="question-panel fragment fade-in" data-fragment-index="0">
+<div class="question-kicker">
+<p>VOTE FIRST</p>
+</div>
+<div class="question-big">
+<p>Author now?</p>
+</div>
+<div class="question-small">
+<p>Acknowledgment? Group authorship? Or a meaningful opportunity to qualify?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><p>The clinical work was essential: these clinicians identified and cared for the patients whose data make the study possible. But essential clinical work and meeting the full authorship criteria are different questions.</p><p>Before we show the survey, where would you draw the line: authorship now, acknowledgment, or an invitation to contribute further? Take a moment to decide.</p><p>For each survey slide, read the question first. Reveal all choices together and ask the room to anticipate the distribution. Then reveal every result for that question together.</p><p>Across these questions, listen for three perspectives: what clinicians expect, how exclusion feels, and what study leads believe they owe contributors. On the final question, distinguish automatic authorship from an opportunity to qualify. We will then ask what that opportunity actually entails.</p></aside>
+
+## Would you expect an opportunity to contribute? {#survey-m2_clin_offer_expectation .aoa-slide data-aoa-section="case-1"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("m2_clin_offer_expectation", "Would you expect an opportunity to contribute?", "CASE 01 · CLINICIAN PERSPECTIVE")
+```
+
+## How would it feel not to be approached? {#survey-m2_clin_not_approached_reaction .aoa-slide data-aoa-section="case-1"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("m2_clin_not_approached_reaction", "How would it feel not to be approached?", "CASE 01 · CLINICIAN PERSPECTIVE")
+```
+
+## What obligation does the study lead feel? {#survey-m2_researcher_obligation_offer .aoa-slide data-aoa-section="case-1"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("m2_researcher_obligation_offer", "What obligation does the study lead feel?", "CASE 01 · RESEARCHER / STUDY-LEAD PERSPECTIVE")
+```
+
+## What should clinical contribution mean for authorship? {#survey-m2_researcher_clinical_care_principle .aoa-slide data-aoa-section="case-1"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("m2_researcher_clinical_care_principle", "What should clinical contribution mean for authorship?", "CASE 01 · RESEARCHER / STUDY-LEAD PERSPECTIVE")
+```
+
+## Lisa, what pathways work? {#module-1-lisa-discussion .aoa-slide data-aoa-section="case-1"}
+
+<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">CASE 01 · DISCUSSION WITH LISA ZABA</div><div class="aoa-heading">Lisa, what pathways work?</div></div><div class="aoa-content"><div class="revamp-editor"><div class="revamp-editor-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">How do you bring clinicians into the science?</div><div class="revamp-item-copy">When do you invite them to contribute?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">What can they meaningfully shape?</div><div class="revamp-item-copy">The question, data, interpretation, or manuscript.</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">What makes the pathway workable?</div><div class="revamp-item-copy">Clear expectations, real opportunities, and time to engage.</div></div></div></div></div></div><aside class="notes"><p>Lisa, the survey brings us to the practical question: if clinical care alone is insufficient, what does a meaningful path to authorship look like? I’d like to hear your experience before offering an example from our group.</p><p>Reveal one question at a time and give Lisa room to answer. First: when and how do you invite clinicians whose care generated the cohort into the scientific work?</p><p>Second: what opportunities do they have to ask questions, challenge the interpretation, improve the data, or contribute to the manuscript? How do you make sure the invitation involves more than approving a finished draft?</p><p>Third: what approaches have worked for busy clinicians, and what expectations do you make explicit about the contribution needed to qualify?</p><p>Then open the conversation to the room: what has felt like a meaningful invitation to you? The finished-manuscript problem and Office hours slides are in the supplementary section as optional backups; use them only if helpful. The main sequence now goes directly from Lisa to the next module.</p><p>Close: the question is whether the collaboration created a real opportunity to contribute. Next we’ll consider what happens when an expert joins after the study or draft already exists.</p></aside>
+
+## The late invitation {#module-2-transition .aoa-slide data-state="no-footer" data-aoa-section="case-2"}
+
+<div class="aoa-transition">
+<div class="transition-wrap">
+<div class="transition-index">
+<p>02</p>
+</div>
+<div class="transition-kicker">
+<p>CASE MODULE</p>
+</div>
+<div class="transition-title">
+<p>The late invitation</p>
+</div>
+<div class="transition-subtitle">
+<p>The study is done. The manuscript exists. A recognized expert is invited to join.</p>
+</div>
+<div class="transition-presenters">
+<p>Mike Wong · Howard Kaufman</p>
+</div>
+</div>
+</div>
+
+<aside class="notes"><p>In the first case, we asked how to offer clinicians a meaningful opportunity to contribute. Now we change the timing: the study is complete, a draft exists, and an expert is invited to join.</p><p>This can look different from the two sides of the invitation. Mike Wong brings the academic investigator’s perspective: what does he need to contribute, and what must he understand before accepting responsibility? Howard Kaufman brings the industry perspective: why bring someone in at this stage, and how does that decision happen within a publication team?</p><p>We’ll start with a concrete case and three survey questions, then ask Mike and Howard to connect the results to their experience. We’re interested in their standards, reasoning, and practical approaches—not a yes-or-no judgment about every late invitation.</p></aside>
+
+## Can someone arrive late and still qualify? {#module-2-late-case .aoa-slide data-aoa-section="case-2"}
+
+<div class="aoa-shell">
+<div class="aoa-topbar">
+<div class="aoa-section-label">
+<p>CASE 02 · THE LATE INVITATION · MIKE WONG / HOWARD KAUFMAN</p>
+</div>
+<div class="aoa-heading" role="heading" aria-level="2">
+<p>Can someone arrive late and still qualify?</p>
+</div>
+</div>
+<div class="aoa-content">
+<div class="case-layout">
+<div class="case-card">
+<div class="case-kicker">
+<p>THE SITUATION</p>
+</div>
+<div class="case-headline">
+<p>The study is complete. The manuscript is substantially drafted.</p>
+</div>
+<div class="case-copy">
+<p>A recognized expert is invited because their perspective would strengthen the interpretation. They review the manuscript and propose substantive revisions.</p>
+</div>
+</div>
+<div class="question-panel fragment fade-in" data-fragment-index="0">
+<div class="question-kicker">
+<p>VOTE BEFORE WE SHOW THE SURVEY</p>
+</div>
+<div class="question-big">
+<p>Author?</p>
+</div>
+<div class="question-small">
+<p>Acknowledgment? Something else? What contribution would change your answer?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<aside class="notes"><p>Here is the situation: the study is complete and the manuscript is substantially drafted. An expert is invited because their perspective could strengthen the interpretation, and they propose substantive revisions.</p><p>The timing alone does not tell us what contribution is possible. What exactly would this person add, what would they need to understand, and what responsibility would they be willing to accept?</p><p>Before we see the survey, would you consider this authorship? What would you need to know before deciding?</p><p>The survey adds a further complication: accepting or offering authorship when the invited expert has not had direct access to the underlying data. We’ll hear both the invited-expert and inviter perspectives, then ask whether respondents have ever declined because they felt their contribution was insufficient.</p><p>After the third question, go directly to Mike: how do these situations feel from the receiving end? Then ask Howard how they arise and are handled on the industry side. Keep publication volume for the supplementary discussion.</p></aside>
+
+## Late authorship without access to the underlying data {#survey-m1_acad_no_data_access_comfort .aoa-slide data-aoa-section="case-2"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("m1_acad_no_data_access_comfort", "Late authorship without access to the underlying data", "CASE 02 · INVITED-EXPERT PERSPECTIVE")
+```
+
+## Offering late authorship without access to the data {#survey-m1_ind_no_data_access_comfort .aoa-slide data-aoa-section="case-2"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("m1_ind_no_data_access_comfort", "Offering late authorship without access to the data", "CASE 02 · INVITER / INDUSTRY PERSPECTIVE")
+```
+
+## Have you declined a late authorship invitation? {#survey-m1_acad_ever_declined_contribution .aoa-slide data-aoa-section="case-2"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("m1_acad_ever_declined_contribution", "Have you declined a late authorship invitation?", "CASE 02 · INVITED-EXPERT PERSPECTIVE")
+```
+
+## Mike, what makes you say yes? {#module-2-investigator-perspective .aoa-slide data-aoa-section="case-2"}
+
+<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">CASE 02 · ACADEMIC INVESTIGATOR · MIKE WONG</div><div class="aoa-heading">Mike, what makes you say yes?</div></div><div class="aoa-content"><div class="revamp-editor"><div class="revamp-editor-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">What makes a late invitation worth accepting?</div><div class="revamp-item-copy">What meaningful contribution must still be possible?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">What do you need to stand behind the work?</div><div class="revamp-item-copy">Understanding, access, and accountability.</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">Where do you draw the line?</div><div class="revamp-item-copy">When do you decline—or ask for a different role?</div></div></div></div></div></div><aside class="notes"><p>Mike, we have heard the group’s responses. How does that compare with your experience of being invited onto a paper after the study or draft already exists?</p><p>Reveal one question at a time and allow his answer before proceeding. First: what distinguishes an invitation where you can make a real intellectual contribution from one where the manuscript is effectively closed? Ask for an example if useful.</p><p>Second: what information, conversations with the study team, or access do you need before you are comfortable standing behind the work? How do you handle an invitation when you did not design the study or work directly with the underlying data?</p><p>Third: have you declined an invitation or asked to contribute differently because the role did not meet your standards? What is the principle you use when deciding?</p><p>Transition: that is the decision from the receiving end. Howard, let’s turn to the team making the invitation.</p></aside>
+
+## Howard, how does the invitation happen? {#module-2-industry-perspective .aoa-slide data-aoa-section="case-2"}
+
+<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">CASE 02 · INDUSTRY PERSPECTIVE · HOWARD KAUFMAN</div><div class="aoa-heading">Howard, how does the invitation happen?</div></div><div class="aoa-content"><div class="revamp-editor"><div class="revamp-editor-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">How common are late invitations?</div><div class="revamp-item-copy">When do you try to involve investigators?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">Why bring someone in at that stage?</div><div class="revamp-item-copy">What contribution is the team looking for?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">How does the team make the decision?</div><div class="revamp-item-copy">Internal discussions, expectations, and room to contribute.</div></div></div></div></div></div><aside class="notes"><p>Howard, how often does this situation come up in your experience? When would you normally try to involve an investigator, and what leads a team to invite someone later?</p><p>Reveal the second question after his initial answer. What scientific need is the team trying to meet by adding an expert at that point? What can the person still change in the interpretation or manuscript?</p><p>Third: what internal discussions happen before an investigator is invited? Who identifies the need, how are contributions and expectations discussed, and how does the team make sure the invitation leaves room for substantive work?</p><p>If useful, ask how the process differs when investigators are involved early versus when a new perspective becomes important after results or a draft exist. Ask about his experience rather than treating one company’s practice as universal.</p><p>Close the module: across the two perspectives, what would make the invitation more explicit about the contribution expected and the responsibility accepted? Now let’s see how these decisions scale across a clinical trial.</p></aside>
+
+## The clinical trial {#module-3-transition .aoa-slide data-state="no-footer" data-aoa-section="case-3"}
+
+<div class="aoa-transition"><div class="transition-wrap"><div class="transition-index">03</div><div class="transition-kicker">CASE MODULE</div><div class="transition-title">The clinical trial</div><div class="transition-subtitle">The same collaboration. Different expectations about authorship.</div><div class="transition-presenters">Elizabeth Bookbinder · Raj Patel</div></div></div>
+<aside class="notes"><p>In the first two cases we considered the opportunity to contribute and the timing of an invitation. A multicenter clinical trial adds scale: many sites, many kinds of contribution, and a publication team trying to assemble a byline.</p><p>The tension is about expectations and voice. When does an investigator learn whether they may be an author, what they will be expected to do, and how author order will be decided? From the publication team’s side, how are those discussions initiated and coordinated across the trial?</p><p>Elizabeth Bookbinder will speak from her experience as an investigator. Raj Patel will discuss the process from the BMS team’s perspective. We’ll start with the problem, compare the two survey perspectives, and then hear their experiences.</p><p>The section light starts here and continues across the case, all four paired survey slides, and the discussions. It turns yellow with two minutes left and red at fifteen minutes. Click the light if you need to pause or reset this section.</p></aside>
+
+## When does the investigator get a voice? {#module-3-case .aoa-slide data-aoa-section="case-3"}
+
+<div class="aoa-shell aoa-has-takeaway"><div class="aoa-topbar"><div class="aoa-section-label">CASE 03 · EXPECTATIONS AND PROCESS</div><div class="aoa-heading">When does the investigator get a voice?</div></div><div class="aoa-content "><div class="case-layout"><div class="case-card"><div class="case-kicker">THE INVESTIGATOR</div><div class="case-headline">“I helped deliver this trial. What role will I have in the paper?”</div><div class="case-copy">Participation, scientific contribution, and expectations about the byline may develop long before a manuscript appears.</div></div><div class="question-panel fragment fade-in" data-fragment-index="0"><div class="question-kicker">THE PUBLICATION TEAM</div><div class="case-headline">“We need a byline that reflects contributions across the trial.”</div><div class="case-copy">Many investigators, several kinds of contribution, and decisions about inclusion, leading roles, and author order.</div></div></div></div><div class="slide-thesis fragment fade-in" data-fragment-index="1">A conversation along the way—or a decision communicated at the end?</div></div><aside class="notes"><p>Imagine a multicenter trial approaching its primary publication. An investigator has recruited patients, contributed clinical insight, and invested in the study. The publication team is assembling authors across sites and scientific roles. They may not have the same understanding of what has been discussed or promised.</p><p>From the investigator’s side: when will I be asked to contribute to the publication, do I have a voice, and what should I expect about inclusion or position? From the publication team’s side: how do we recognize the work across the trial and agree on a workable process?</p><p>The tension is not resolved by assuming that a site role automatically earns a particular position, or by treating the final byline as something that can simply be handed down. We want to understand the actual conversations: who starts them, when they occur, and how decisions are explained.</p><p>As we compare the survey, notice both agreement and mismatches in expectations. We’ll then ask Beth how it feels in practice and Raj how the process is run from the publication-team side.</p></aside>
+
+## How clear are authorship expectations? {#survey-trial-clarity .aoa-slide data-aoa-section="case-3"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_pair("m3_acad_authorship_clarity", "m3_ind_authorship_clarity", "How clear are authorship expectations?")
+```
+
+## What carries the most weight for inclusion? {#survey-trial-inclusion .aoa-slide data-aoa-section="case-3"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_pair("m3_acad_inclusion_driver", "m3_ind_inclusion_driver", "What carries the most weight for inclusion?")
+```
+
+## Who starts the conversation in practice? {#survey-trial-initiator-actual .aoa-slide data-aoa-section="case-3"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_pair("m3_acad_authorship_initiator_actual", "m3_ind_authorship_initiator_actual", "Who starts the conversation in practice?")
+```
+
+## Who should start the conversation? {#survey-trial-initiator-ideal .aoa-slide data-aoa-section="case-3"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_pair("m3_acad_authorship_initiator_ideal", "m3_ind_authorship_initiator_ideal", "Who should start the conversation?")
+```
+
+## Beth, what has the experience been? {#module-3-beth-discussion .aoa-slide data-aoa-section="case-3"}
+
+<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">CASE 03 · INVESTIGATOR EXPERIENCE · ELIZABETH BOOKBINDER</div><div class="aoa-heading">Beth, what has the experience been?</div></div><div class="aoa-content "><div class="revamp-editor"><div class="revamp-editor-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">When does the conversation reach you?</div><div class="revamp-item-copy">Before participation, during the trial, or near publication?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">How much say do you have?</div><div class="revamp-item-copy">A discussion—or a position communicated at the end?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">What do you expect?</div><div class="revamp-item-copy">Clarity about inclusion, contribution, and author order.</div></div></div></div></div></div><aside class="notes"><p>Beth, you have experienced this from the investigator side. How closely do these distributions resemble what you have seen?</p><p>First: when are you personally engaged in authorship discussions? Is it routine to have the conversation, or do you often have to initiate it? Ask for a concrete example if useful.</p><p>Second: how often is there a real discussion of your contribution and position, versus being told near the end where you are on the byline? If the process feels unclear, how do you raise the issue?</p><p>Third: what do you currently expect when you agree to participate in a trial? What should be explicit about the chance to contribute, the work required, and how order will be determined?</p><p>Let her describe her experience before revealing each next prompt. Then bridge to Raj: what does this look like from the team coordinating the publication?</p></aside>
+
+## Raj, how does the process take shape? {#module-3-raj-discussion .aoa-slide data-aoa-section="case-3"}
+
+<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">CASE 03 · BMS / PUBLICATION-TEAM PERSPECTIVE · RAJ PATEL</div><div class="aoa-heading">Raj, how does the process take shape?</div></div><div class="aoa-content "><div class="revamp-editor"><div class="revamp-editor-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">When does authorship planning begin?</div><div class="revamp-item-copy">Who starts the discussion with investigators?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">How are leading author roles decided?</div><div class="revamp-item-copy">First author, senior or last author, and expected responsibilities.</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">How is the rest of the byline ordered?</div><div class="revamp-item-copy">Criteria, investigator input, and changes as contributions evolve.</div></div></div></div></div></div><aside class="notes"><p>Raj, from your experience with the BMS team, when does the authorship process typically start? What is discussed before the trial, during enrollment, after results, and during manuscript development? Who takes responsibility for opening the conversation with investigators?</p><p>Second: how are leading roles designated? How do you approach first author, senior or last author where those roles apply, and the responsibilities attached to those positions? At what point are those roles discussed with the people involved?</p><p>Third: how do you determine order among the remaining authors? What contributions enter the decision, how are investigators involved, and when can the order change as actual work becomes clearer?</p><p>Ask about the reasoning and workflow rather than requesting confidential details or assuming one approach applies to every BMS program. If useful, ask how the team handles a mismatch between an investigator’s expectations and the proposed byline.</p><p>Close the module: what could investigators and publication teams make clearer to each other earlier in the study? Carry that process question into the next case, where collective Delphi participation creates another boundary problem.</p></aside>
+
+## The Delphi panel {#module-4-transition .aoa-slide data-state="no-footer" data-aoa-section="case-4"}
+
+<div class="aoa-transition coral-transition">
+<div class="transition-wrap">
+<div class="transition-index">
+<p>04</p>
+</div>
+<div class="transition-kicker">
+<p>GRAY-ZONE DELPHI</p>
+</div>
+<div class="transition-title">
+<p>The Delphi panel</p>
+</div>
+<div class="transition-subtitle">
+<p>Participation shapes consensus. Does participation itself warrant authorship?</p>
+</div>
+<div class="transition-presenters">
+<p>Vishal Patel · Ade Adamson · editor perspective</p>
+</div>
+</div>
+</div>
+
+<aside class="notes"><p>Delphi work puts collective intellectual input at the center of the study. Panelists may shape the consensus substantially, while a smaller team designs the process, analyzes the rounds, and writes the paper.</p><p>We’ll hear from Vishal as someone who has led these processes: how are participation and further contributions recognized, and what does a path to authorship look like? Then we’ll ask Ade what an editor can see from the submission and what needs clarification.</p><p>Use the case and survey to open the question. Hear both perspectives before moving to the synthesis; do not present our final categories as though the room has already agreed on them.</p></aside>
+
+## Participant, contributor, or author? {#module-4-case .aoa-slide data-aoa-section="case-4"}
+
+<div class="aoa-shell">
+<div class="aoa-topbar">
+<div class="aoa-section-label">
+<p>CASE 04 · DELPHI</p>
+</div>
+<div class="aoa-heading" role="heading" aria-level="2">
+<p>Participant, contributor, or author?</p>
+</div>
+</div>
+<div class="aoa-content">
+<div class="case-layout">
+<div class="case-card">
+<div class="case-kicker">
+<p>THE SITUATION</p>
+</div>
+<div class="case-headline">
+<p>A large expert panel completes several Delphi rounds and materially shapes the final consensus recommendations.</p>
+</div>
+<div class="case-copy">
+<p>A smaller investigator group designed the study, built the survey, analyzed the results, interpreted them, and drafted the manuscript.</p>
+</div>
+</div>
+<div class="question-panel fragment fade-in" data-fragment-index="0">
+<div class="question-kicker">
+<p>VOTE FIRST</p>
+</div>
+<div class="question-big">
+<p>Are the panelists participants — or authors?</p>
+</div>
+<div class="question-small">
+<p>Does your answer change if they substantially reshape the questions or recommendations?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<aside class="notes"><p>The panel has completed multiple rounds and helped shape the recommendations. The writing group designed and analyzed the study and prepared the manuscript. Where does meaningful participation become a contribution that could support authorship?</p><p>Ask the room before showing the survey. Then walk through the three questions using the established question, choices, and results sequence.</p><p>After the results, turn first to Vishal for the study-lead perspective, then to Ade for the editorial perspective. Keep the central question open: how do we distinguish participation, contribution, acknowledgment, and authorship in a way that people can understand?</p></aside>
+
+## How much weight should Delphi participation carry? {#survey-m4_acad_participation_authorship .aoa-slide data-aoa-section="case-4"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("m4_acad_participation_authorship", "How much weight should Delphi participation carry?", "CASE 04 · PARTICIPANT PERSPECTIVE")
+```
+
+## Should a participant be offered a path to qualify? {#survey-m4_acad_opportunity_to_qualify .aoa-slide data-aoa-section="case-4"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("m4_acad_opportunity_to_qualify", "Should a participant be offered a path to qualify?", "CASE 04 · PARTICIPANT PERSPECTIVE")
+```
+
+## Should the organizer offer a path to qualify? {#survey-m4_org_opportunity_to_qualify .aoa-slide data-aoa-section="case-4"}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("m4_org_opportunity_to_qualify", "Should the organizer offer a path to qualify?", "CASE 04 · ORGANIZER / STUDY-LEAD PERSPECTIVE")
+```
+
+## Vishal, how do you draw the distinctions? {#module-4-vishal-discussion .aoa-slide data-aoa-section="case-4"}
+
+<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">CASE 04 · DELPHI STUDY LEAD · VISHAL PATEL</div><div class="aoa-heading">Vishal, how do you draw the distinctions?</div></div><div class="aoa-content"><div class="revamp-editor"><div class="revamp-editor-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">What counts as a substantive contribution?</div><div class="revamp-item-copy">Completing rounds, reshaping statements, and interpreting consensus.</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">What does a path to authorship look like?</div><div class="revamp-item-copy">How can panelists contribute further to the paper?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">How do you distinguish the roles?</div><div class="revamp-item-copy">Participation · contribution · acknowledgment · authorship</div></div></div></div></div></div><aside class="notes"><p>Vishal, you’ve led these processes. What do these survey responses bring to mind from your own experience?</p><p>First: how do you think about the contribution made by someone who completes the rounds versus someone who substantially reshapes the statements or interpretation? What differences matter to you?</p><p>Second: if a panelist has made a substantial contribution but has not yet met the full authorship criteria, what does a real path to authorship look like? When and how do you invite further involvement in the manuscript?</p><p>Third: how do you distinguish participation, contribution, acknowledgment, and authorship when planning the study and communicating with the panel? What is decided early, and what remains open as the work evolves?</p><p>Let Vishal give a concrete example. Before synthesizing, turn to Ade: how much of this process is actually visible to the editor?</p></aside>
+
+## Ade, what can an editor actually see? {#module-4-ade-discussion .aoa-slide data-aoa-section="case-4"}
+
+<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">CASE 04 · EDITOR PERSPECTIVE · ADE ADAMSON</div><div class="aoa-heading">Ade, what can an editor actually see?</div></div><div class="aoa-content"><div class="revamp-editor"><div class="revamp-editor-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">How clear is the contribution story?</div><div class="revamp-item-copy">What can—and can’t—you infer from the submission?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">What would raise concern?</div><div class="revamp-item-copy">When would the author list prompt a closer look?</div></div></div><div class="revamp-editor-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">How do you ask for clarification?</div><div class="revamp-item-copy">What explanation or documentation would help?</div></div></div></div></div></div><aside class="notes"><p>Ade, from the editor’s desk, how clear or opaque is the distinction between a Delphi panelist, contributor, acknowledged participant, and author? What can you realistically tell from the manuscript and contribution statement?</p><p>Second: how much concern does this create in practice? What would make you pause and ask whether the byline accurately represents how the work was done?</p><p>Third: when you have needed clarification, how have you asked for it? What would you want the authors to explain about panel participation, the pathway to the writing group, and the contribution and accountability of named authors?</p><p>Ask for his experience of the editorial process. The aim is to understand what information makes the process assessable, rather than expecting an editor to reconstruct every conversation in the author group.</p><p>Now move to synthesis: having heard the study-lead and editorial perspectives, what would have made the decisions in each of our four cases clearer?</p></aside>
+
+## What would have made each decision easier? {#synthesis-board .aoa-slide}
+
+<div class="aoa-shell aoa-has-takeaway">
+<div class="aoa-topbar">
+<div class="aoa-section-label">
+<p>SYNTHESIS</p>
+</div>
+<div class="aoa-heading" role="heading" aria-level="2">
+<p>What would have made each decision easier?</p>
+</div>
+</div>
+<div class="aoa-content">
+<div class="case-preview-grid">
+<div class="case-preview-card fragment fade-in" data-fragment-index="0">
+<div class="case-preview-number">
+<p>01</p>
+</div>
+<div class="case-preview-title">
+<p>Clinician contributor</p>
+</div>
+<p>A visible opportunity to qualify before the manuscript is finished.</p>
+</div>
+<div class="case-preview-card fragment fade-in" data-fragment-index="1">
+<div class="case-preview-number">
+<p>02</p>
+</div>
+<div class="case-preview-title">
+<p>Late expert</p>
+</div>
+<p>A shared threshold for substantive intellectual revision.</p>
+</div>
+<div class="case-preview-card fragment fade-in" data-fragment-index="2">
+<div class="case-preview-number">
+<p>03</p>
+</div>
+<div class="case-preview-title">
+<p>Clinical trial</p>
+</div>
+<p>A prospective process that can flex as contribution evolves.</p>
+</div>
+<div class="case-preview-card fragment fade-in" data-fragment-index="3">
+<div class="case-preview-number">
+<p>04</p>
+</div>
+<div class="case-preview-title">
+<p>Delphi</p>
+</div>
+<p>A way to distinguish participation, contribution, acknowledgment, and authorship.</p>
+</div>
+</div>
+</div>
+<div class="aoa-bottom-line coral fragment fade-in" data-fragment-index="4">
+<p>The recurring issue is less “Do criteria exist?” than “How do we apply them visibly and fairly?”</p>
+</div>
+</div>
+
+
+## A process heuristic the room can use {#process .aoa-slide}
+
+<div class="aoa-shell aoa-has-takeaway">
+<div class="aoa-topbar">
+<div class="aoa-section-label">
+<p>DISCUSSION</p>
+</div>
+<div class="aoa-heading" role="heading" aria-level="2">
+<p>A process heuristic the room can use</p>
+</div>
+</div>
+<div class="aoa-content">
+<div class="process-grid">
+<div class="process-card fragment fade-in" data-fragment-index="0">
+<div class="process-number">
+<p>01</p>
+</div>
+<div class="process-title">
+<p>Earlier</p>
+</div>
+<p>Discuss the process before expectations harden and before the work is nearly complete.</p>
+</div>
+<div class="process-card fragment fade-in" data-fragment-index="1">
+<div class="process-number">
+<p>02</p>
+</div>
+<div class="process-title">
+<p>Explicitly</p>
+</div>
+<p>State what contributions are expected and what authorship requires.</p>
+</div>
+<div class="process-card fragment fade-in" data-fragment-index="2">
+<div class="process-number">
+<p>03</p>
+</div>
+<div class="process-title">
+<p>Transparently</p>
+</div>
+<p>Make the basis for decisions visible enough that people can understand the outcome.</p>
+</div>
+<div class="process-card fragment fade-in" data-fragment-index="3">
+<div class="process-number">
+<p>04</p>
+</div>
+<div class="process-title">
+<p>Revisited</p>
+</div>
+<p>Update the plan as actual contributions evolve.</p>
+</div>
+</div>
+</div>
+<div class="aoa-bottom-line fragment fade-in" data-fragment-index="4">
+<p>Decide the process early — not necessarily the final byline.</p>
+</div>
+</div>
+
+## Not just: who gets on the paper? {#closing .aoa-slide data-state="no-footer"}
+
+<div class="aoa-closing light-closing">
+<div class="closing-eyebrow">
+<p>THE WORKSHOP · HOW DOES THE EVIDENCE GET MADE?</p>
+</div>
+<div class="closing-title">
+<p>Not just: who gets on the paper?</p>
+</div>
+<div class="closing-subtitle">
+<p>How should we decide who gets on the paper?</p>
+</div>
+<div class="closing-rule">
+
+</div>
+<div class="closing-meta">
+<p>Earlier · explicitly · transparently · revisited</p>
+</div>
+</div>
+
+## Supplementary discussion {#supplementary .aoa-slide data-state="no-footer"}
+
+<div class="aoa-transition"><div class="transition-wrap"><div class="transition-kicker">SUPPLEMENTARY DISCUSSION</div><div class="transition-title">More perspectives from the survey</div><div class="transition-subtitle">Additional context and questions for discussion.</div></div></div>
+
+## What does a meaningful path look like? {#module-1-path-problem .aoa-slide data-aoa-section="case-1"}
+
+<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">CASE 01 · OPTIONAL BACKUP</div><div class="aoa-heading">What does a meaningful path look like?</div></div><div class="aoa-content"><div class="revamp-agenda"><div class="revamp-agenda-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">The manuscript is already finished.</div><div class="revamp-item-copy">“Please review and approve.”</div></div></div><div class="revamp-agenda-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">But what can the contributor still shape?</div><div class="revamp-item-copy">The analysis? The interpretation? The scientific story?</div></div></div><div class="revamp-agenda-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">An invitation needs room for contribution.</div><div class="revamp-item-copy">What would make this a meaningful path to qualify?</div></div></div></div></div></div><aside class="notes"><p>Optional backup for the discussion with Lisa. Respondents distinguish clinical care from an opportunity to qualify. Use the actual distribution on the preceding slide; the percentage can change as the survey refreshes.</p><p>That raises the practical question: what is the path? For many of us, the invitation arrives with a manuscript that is essentially done. We are asked to read it and give it a thumbs-up.</p><p>Substantive intellectual revision can still matter at that stage. But how much room have we actually left for the clinician to question the analysis, change the interpretation, or shape the story?</p><p>Let me show you one approach we tried—not as the answer, but as a concrete example for discussion.</p></aside>
+
+## Office hours {#module-1-office-hours .aoa-slide data-aoa-section="case-1"}
+
+<div class="aoa-shell"><div class="aoa-topbar"><div class="aoa-section-label">CASE 01 · OPTIONAL BACKUP</div><div class="aoa-heading">Office hours</div></div><div class="aoa-content"><div class="revamp-agenda"><div class="revamp-agenda-item fragment fade-in" data-fragment-index="0"><div class="revamp-number">01</div><div><div class="revamp-item-title">Invite clinicians into the project.</div><div class="revamp-item-copy">Start with their connection to the patient cohort.</div></div></div><div class="revamp-agenda-item fragment fade-in" data-fragment-index="1"><div class="revamp-number">02</div><div><div class="revamp-item-title">Make the methods visible.</div><div class="revamp-item-copy">Patient identification · abstraction · analysis · preliminary findings</div></div></div><div class="revamp-agenda-item fragment fade-in" data-fragment-index="2"><div class="revamp-number">03</div><div><div class="revamp-item-title">Create a place to contribute.</div><div class="revamp-item-copy">Brief office hours for questions, interpretation, and refinement.</div></div></div><div class="revamp-agenda-item fragment fade-in" data-fragment-index="3"><div class="revamp-number">04</div><div><div class="revamp-item-title">Let people choose to engage.</div><div class="revamp-item-copy">Offer several sessions and a clear, low-pressure invitation.</div></div></div></div><div class="case-one-principle fragment fade-in" data-fragment-index="4">An opportunity to contribute. Authorship still requires the full criteria.</div></div></div><aside class="notes"><p>In one project, we identified potential contributors through their involvement in patient care. Rather than only circulating a finished manuscript, I invited interested colleagues to a brief office-hour session.</p><p>We offered several dates and asked about their familiarity with analytical concepts so the discussion could be tailored. The sessions were designed to explain how patients were identified, how abstraction and analyses were performed, and what the preliminary findings showed.</p><p>The invitation was to ask questions, engage with the data, strengthen interpretation, and identify what might need refinement. Colleagues could opt in without pressure if the project fit their interests and bandwidth.</p><p>Attendance was an entry point to engagement, not an authorship credential by itself. The important part was the opportunity to contribute intellectually and then meet the full authorship criteria.</p><p>Optional personal context, if you want to use your recollection: roughly 50 colleagues were invited and about 11 engaged. These are approximate recollections, not a verified participation analysis. They are intentionally not displayed on the slide.</p><p>Optional backup: explain the project orally if you use this example. This is one approach we tried. What did it make possible—and what would others do differently?</p></aside>
+
+## SoCO has spent years asking what the evidence means {#soco-lineage .aoa-slide}
+
+<div class="aoa-shell aoa-has-takeaway">
+<div class="aoa-topbar">
+<div class="aoa-section-label">
+<p>THE CONVERSATION SO FAR</p>
+</div>
+<div class="aoa-heading" role="heading" aria-level="2">
+<p>SoCO has spent years asking what the evidence means</p>
+</div>
+</div>
+<div class="aoa-content">
+<div class="lineage-rail">
+<div class="lineage-node">
+<div class="lineage-year">
+<p>2019–2026</p>
+</div>
+<div class="lineage-title">
+<p>Journal Club</p>
+</div>
+<div class="lineage-copy">
+<p>Read the paper. Interrogate the evidence. Ask what it really establishes.</p>
+</div>
+</div>
+<div class="lineage-arrow">
+<p>→</p>
+</div>
+<div class="lineage-node">
+<div class="lineage-year">
+<p>2023–2026</p>
+</div>
+<div class="lineage-title">
+<p>Research Forum</p>
+</div>
+<div class="lineage-copy">
+<p>Move upstream: methods, inference, peer review, trial design, reproducibility.</p>
+</div>
+</div>
+<div class="lineage-arrow">
+<p>→</p>
+</div>
+<div class="lineage-node active">
+<div class="lineage-year">
+<p>2026</p>
+</div>
+<div class="lineage-title">
+<p>THE WORKSHOP</p>
+</div>
+<div class="lineage-copy">
+<p>How does the evidence get made — and who gets credit for making it?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="aoa-bottom-line fragment fade-in" data-fragment-index="1">
+<p><strong>Today:</strong> not just how we read papers — how we build them.</p>
+</div>
+</div>
+<aside class="notes">
+<p>This is the opening narrative spine: SoCO has traditionally been downstream of the paper. Research Forum moved upstream into methods and interpretation. This workshop moves one step further upstream: before there is evidence to interpret, people have to decide who made it and how credit/accountability will be assigned.</p>
+</aside>
+
+## A SoCO conversation became a paper {#daromun-paper .aoa-slide}
+
+<div class="aoa-shell">
+<div class="aoa-topbar">
+<div class="aoa-section-label">
+<p>FROM DISCUSSION TO SCHOLARSHIP</p>
+</div>
+<div class="aoa-heading" role="heading" aria-level="2">
+<p>A SoCO conversation became a paper</p>
+</div>
+</div>
+<div class="aoa-content bridge-layout">
+<div class="bridge-paper">
+<div class="bridge-paper-kicker">
+<p>DAROMUN / PIVOTAL · PERSPECTIVE</p>
+</div>
+<div class="bridge-paper-title">
+<p>From interpreting the evidence to writing about it</p>
+</div>
+<div class="bridge-paper-citation">
+<p>Publication citation / article image to be updated when published.</p>
+</div>
+</div>
+<div class="bridge-question">
+<div class="bridge-question-kicker">
+<p>THEN A DIFFERENT QUESTION APPEARS</p>
+</div>
+<div class="bridge-question-big">
+<p>Who belongs on the paper?</p>
+</div>
+<div class="bridge-question-copy">
+<p>The scientific conversation may feel collective. The byline forces individual decisions about contribution, credit, and accountability.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Use this as the inciting incident, not as a self-congratulatory example. The point is that authorship process appears quickly, even in a relatively small, collegial perspective piece.</p>
+</aside>
+
+## A paper creates a process problem {#pivotal-process-lens .aoa-slide}
+
+<div class="aoa-shell aoa-has-takeaway">
+<div class="aoa-topbar">
+<div class="aoa-section-label">
+<p>THE INCITING EXAMPLE</p>
+</div>
+<div class="aoa-heading" role="heading" aria-level="2">
+<p>A paper creates a process problem</p>
+</div>
+</div>
+<div class="aoa-content">
+<div class="case-layout">
+<div class="case-card">
+<div class="case-kicker">
+<p>THE ORDINARY MOMENT</p>
+</div>
+<div class="case-headline">
+<p>A SoCO discussion becomes a perspective piece.</p>
+</div>
+<div class="case-copy">
+<p>The scientific conversation feels collective. But once there is a manuscript, the byline forces practical decisions: who should be invited, what contribution is expected, and when do we revisit the author group?</p>
+</div>
+</div>
+<div class="question-panel fragment fade-in" data-fragment-index="0">
+<div class="question-kicker">
+<p>THE WORKSHOP QUESTION</p>
+</div>
+<div class="question-big">
+<p>Not only who qualifies.</p>
+</div>
+<div class="question-small">
+<p>How should we decide — early enough, explicitly enough, transparently enough, and flexibly enough — as the work evolves?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-thesis fragment fade-in" data-fragment-index="1">
+<p>The goal is not to replace authorship criteria. It is to make the decision process visible.</p>
+</div>
+</div>
+<aside class="notes">
+<p>Use the PIVOTAL/DAROMUN perspective as the low-stakes real example: not “we solved this,” but “we immediately encountered the problem.” Participation in a conversation does not automatically confer authorship, but once the possibility of a paper emerges, there should be a visible pathway to qualify.</p>
+</aside>
+
+## Who answered: professional setting {#survey-profile_setting .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("profile_setting", "Who answered: professional setting", "SUPPLEMENTARY · SURVEY CONTEXT")
+```
+
+## Who answered: editorial experience {#survey-profile_editorial_role .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("profile_editorial_role", "Who answered: editorial experience", "SUPPLEMENTARY · SURVEY CONTEXT")
+```
+
+## How clinically active are respondents? {#survey-profile_direct_patient_care .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("profile_direct_patient_care", "How clinically active are respondents?", "SUPPLEMENTARY · SURVEY CONTEXT")
+```
+
+## Career stage: academic respondents {#survey-profile_career_stage_academic .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("profile_career_stage_academic", "Career stage: academic respondents", "SUPPLEMENTARY · SURVEY CONTEXT")
+```
+
+## Role level: industry respondents {#survey-profile_career_stage_industry .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("profile_career_stage_industry", "Role level: industry respondents", "SUPPLEMENTARY · SURVEY CONTEXT")
+```
+
+## Publishing experience {#survey-profile_publication_count .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("profile_publication_count", "Publishing experience", "SUPPLEMENTARY · SURVEY CONTEXT")
+```
+
+## Why is authorship valuable? {#survey-authorship_value_reasons .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("authorship_value_reasons", "Why is authorship valuable?", "SUPPLEMENTARY · SURVEY CONTEXT")
+```
+
+## Which reasons rank first? {#survey-authorship_value_reasons_ranked .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("authorship_value_reasons_ranked", "Which reasons rank first?", "SUPPLEMENTARY · SURVEY CONTEXT")
+```
+
+## Would authorship matter if it did not “count”? {#survey-authorship_counterfactual_importance .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("authorship_counterfactual_importance", "Would authorship matter if it did not “count”?", "SUPPLEMENTARY · SURVEY CONTEXT")
+```
+
+## How much weight does authorship receive? {#survey-authorship_relative_weight .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("authorship_relative_weight", "How much weight does authorship receive?", "SUPPLEMENTARY · SURVEY CONTEXT")
+```
+
+## How many papers could you meaningfully lead? {#survey-volume_self_capacity .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("volume_self_capacity", "How many papers could you meaningfully lead?", "SUPPLEMENTARY · AUTHORSHIP CAPACITY")
+```
+
+## When would someone else’s volume prompt scrutiny? {#survey-volume_other_scrutiny .aoa-slide}
+
+```{r}
+#| results: asis
+#| echo: false
+aoa_survey_slide("volume_other_scrutiny", "When would someone else’s volume prompt scrutiny?", "SUPPLEMENTARY · AUTHORSHIP CAPACITY")
+```
+

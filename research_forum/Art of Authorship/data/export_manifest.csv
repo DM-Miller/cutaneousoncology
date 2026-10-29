@@ -1,0 +1,2 @@
+"file","source_file","source_modified","exported_at","rows","columns","distinct_question_ids_if_identifiable","source_md5","export_md5","data_handling"
+"art_of_authorship_question_summaries.csv","question_summaries.csv","2026-10-28 19:48:06 EDT","2026-10-28 19:51:54 EDT",299,8,49,"f022f3b58f9b3756690d4d83106b5847","f022f3b58f9b3756690d4d83106b5847","Existing aggregate output copied unchanged; no refresh or recount"

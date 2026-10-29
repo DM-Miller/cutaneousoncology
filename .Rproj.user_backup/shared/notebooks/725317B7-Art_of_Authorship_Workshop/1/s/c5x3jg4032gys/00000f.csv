@@ -1,0 +1,7 @@
+"0","#| results: asis"
+"0","cat(aoa_figure_html("
+"0","  c(""audience"", ""role"", ""profile"", ""overview""),"
+"0","  ""SURVEY FIGURE 01"","
+"0","  ""Role / experience composition + top-line tension metric"""
+"0","))"
+"1","<div class=""figure-live""><img src=""data/processed/survey/figures/profile_editorial_role.png"" alt=""Role / experience composition + top-line tension metric""></div>"

@@ -1,0 +1,300 @@
+value,n,label,denominator,proportion,display,question_id,response_type
+academic,36,Academic medical center / university,45,0.8,36 (80%),profile_setting,single
+community,1,Community or private practice,45,0.022222222222222223,1 (2%),profile_setting,single
+industry,8,Industry,45,0.17777777777777778,8 (18%),profile_setting,single
+government,0,Government / regulatory agency,45,0,0 (0%),profile_setting,single
+research,0,Research institute,45,0,0 (0%),profile_setting,single
+other,0,Other,45,0,0 (0%),profile_setting,single
+student,1,Student,37,0.02702702702702703,1 (3%),profile_career_stage_academic,single
+resident_fellow,1,Resident / fellow,37,0.02702702702702703,1 (3%),profile_career_stage_academic,single
+early,8,Early-career faculty / professional,37,0.21621621621621623,8 (22%),profile_career_stage_academic,single
+mid,12,Mid-career faculty / professional,37,0.32432432432432434,12 (32%),profile_career_stage_academic,single
+senior,12,Senior faculty / professional,37,0.32432432432432434,12 (32%),profile_career_stage_academic,single
+emeritus,1,Emeritus / retired,37,0.02702702702702703,1 (3%),profile_career_stage_academic,single
+other,2,Other,37,0.05405405405405406,2 (5%),profile_career_stage_academic,single
+early,2,Early career,8,0.25,2 (25%),profile_career_stage_industry,single
+mid,3,Mid-career,8,0.375,3 (38%),profile_career_stage_industry,single
+senior,3,Senior / leadership,8,0.375,3 (38%),profile_career_stage_industry,single
+other,0,Other,8,0,0 (0%),profile_career_stage_industry,single
+physician,35,Physician,43,0.813953488372093,35 (81%),profile_professional_background,single
+advanced_practice,1,Advanced practice clinician (NP or PA),43,0.023255813953488372,1 (2%),profile_professional_background,single
+nurse,0,Nurse,43,0,0 (0%),profile_professional_background,single
+pharmacist,4,Pharmacist,43,0.09302325581395349,4 (9%),profile_professional_background,single
+research_scientist_investigator,1,Research scientist / investigator,43,0.023255813953488372,1 (2%),profile_professional_background,single
+epi_biostats_data,0,Epidemiologist / biostatistician / data scientist,43,0,0 (0%),profile_professional_background,single
+other_scientific_technical,0,Other scientific or technical professional,43,0,0 (0%),profile_professional_background,single
+business_management_admin,1,Business / management / administration,43,0.023255813953488372,1 (2%),profile_professional_background,single
+other_healthcare,0,Other healthcare professional,43,0,0 (0%),profile_professional_background,single
+other_professional,1,Other professional background,43,0.023255813953488372,1 (2%),profile_professional_background,single
+not_yet_specialized,0,Not yet specialized / general training,45,0,0 (0%),profile_current_area,multi
+dermatology_mohs,13,Dermatology / Mohs surgery,45,0.28888888888888886,13 (29%),profile_current_area,multi
+medical_oncology,19,Medical oncology / hematology-oncology,45,0.4222222222222222,19 (42%),profile_current_area,multi
+surgery,5,Surgery / surgical oncology,45,0.1111111111111111,5 (11%),profile_current_area,multi
+radiation_oncology,4,Radiation oncology,45,0.08888888888888889,4 (9%),profile_current_area,multi
+pathology,1,Pathology / dermatopathology,45,0.022222222222222223,1 (2%),profile_current_area,multi
+otolaryngology,2,Otolaryngology / head and neck surgery,45,0.044444444444444446,2 (4%),profile_current_area,multi
+other_clinical,1,Other clinical specialty,45,0.022222222222222223,1 (2%),profile_current_area,multi
+basic_translational,5,Basic / translational research,45,0.1111111111111111,5 (11%),profile_current_area,multi
+epi_biostats_data,3,Epidemiology / biostatistics / data science,45,0.06666666666666667,3 (7%),profile_current_area,multi
+clinical_development,4,Clinical development,45,0.08888888888888889,4 (9%),profile_current_area,multi
+medical_affairs,3,Medical affairs,45,0.06666666666666667,3 (7%),profile_current_area,multi
+publications_editorial,1,Publications / medical communications / editorial,45,0.022222222222222223,1 (2%),profile_current_area,multi
+regulatory_government,0,Regulatory / government,45,0,0 (0%),profile_current_area,multi
+executive_leadership,7,Executive / organizational leadership,45,0.15555555555555556,7 (16%),profile_current_area,multi
+other,0,Other,45,0,0 (0%),profile_current_area,multi
+not_yet_specialized,0,Not yet specialized / general training,14,0,0 (0%),profile_current_area_ranked,rank_first
+dermatology_mohs,5,Dermatology / Mohs surgery,14,0.35714285714285715,5 (36%),profile_current_area_ranked,rank_first
+medical_oncology,3,Medical oncology / hematology-oncology,14,0.21428571428571427,3 (21%),profile_current_area_ranked,rank_first
+surgery,2,Surgery / surgical oncology,14,0.14285714285714285,2 (14%),profile_current_area_ranked,rank_first
+radiation_oncology,1,Radiation oncology,14,0.07142857142857142,1 (7%),profile_current_area_ranked,rank_first
+pathology,0,Pathology / dermatopathology,14,0,0 (0%),profile_current_area_ranked,rank_first
+otolaryngology,1,Otolaryngology / head and neck surgery,14,0.07142857142857142,1 (7%),profile_current_area_ranked,rank_first
+other_clinical,0,Other clinical specialty,14,0,0 (0%),profile_current_area_ranked,rank_first
+basic_translational,1,Basic / translational research,14,0.07142857142857142,1 (7%),profile_current_area_ranked,rank_first
+epi_biostats_data,0,Epidemiology / biostatistics / data science,14,0,0 (0%),profile_current_area_ranked,rank_first
+clinical_development,0,Clinical development,14,0,0 (0%),profile_current_area_ranked,rank_first
+medical_affairs,0,Medical affairs,14,0,0 (0%),profile_current_area_ranked,rank_first
+publications_editorial,0,Publications / medical communications / editorial,14,0,0 (0%),profile_current_area_ranked,rank_first
+regulatory_government,0,Regulatory / government,14,0,0 (0%),profile_current_area_ranked,rank_first
+executive_leadership,1,Executive / organizational leadership,14,0.07142857142857142,1 (7%),profile_current_area_ranked,rank_first
+other,0,Other,14,0,0 (0%),profile_current_area_ranked,rank_first
+none,9,None,45,0.2,9 (20%),profile_direct_patient_care,single
+lt25,5,Less than 25%,45,0.1111111111111111,5 (11%),profile_direct_patient_care,single
+25_49,9,25–49%,45,0.2,9 (20%),profile_direct_patient_care,single
+50_74,15,50–74%,45,0.3333333333333333,15 (33%),profile_direct_patient_care,single
+75_plus,7,75% or more,45,0.15555555555555556,7 (16%),profile_direct_patient_care,single
+0,2,0,45,0.044444444444444446,2 (4%),profile_publication_count,single
+1_5,3,1–5,45,0.06666666666666667,3 (7%),profile_publication_count,single
+6_20,8,6–20,45,0.17777777777777778,8 (18%),profile_publication_count,single
+21_50,9,21–50,45,0.2,9 (20%),profile_publication_count,single
+51_100,10,51–100,45,0.2222222222222222,10 (22%),profile_publication_count,single
+gt100,13,More than 100,45,0.28888888888888886,13 (29%),profile_publication_count,single
+current,14,"Yes, currently",45,0.3111111111111111,14 (31%),profile_editorial_role,single
+previous,5,"Yes, previously",45,0.1111111111111111,5 (11%),profile_editorial_role,single
+no,26,No,45,0.5777777777777777,26 (58%),profile_editorial_role,single
+sharing_findings,27,Sharing findings and ideas with the field,45,0.6,27 (60%),authorship_value_reasons,multi
+lasting_scientific_contribution,23,Making a lasting contribution to the scientific literature,45,0.5111111111111111,23 (51%),authorship_value_reasons,multi
+appropriate_credit,12,Receiving appropriate credit for my contributions,45,0.26666666666666666,12 (27%),authorship_value_reasons,multi
+reputation_expertise_leadership,20,"Building my professional reputation, expertise, or leadership in a field",45,0.4444444444444444,20 (44%),authorship_value_reasons,multi
+career_opportunities,13,Advancing my career or creating future professional opportunities,45,0.28888888888888886,13 (29%),authorship_value_reasons,multi
+funding,3,Supporting grant or funding opportunities,45,0.06666666666666667,3 (7%),authorship_value_reasons,multi
+collaboration,16,Building collaborations and professional relationships,45,0.35555555555555557,16 (36%),authorship_value_reasons,multi
+role_expectations,7,"Meeting expectations of my institution, company, or professional role",45,0.15555555555555556,7 (16%),authorship_value_reasons,multi
+not_important,3,Authorship is not particularly important to my current professional goals,45,0.06666666666666667,3 (7%),authorship_value_reasons,multi
+other,3,Other,45,0.06666666666666667,3 (7%),authorship_value_reasons,multi
+sharing_findings,16,Sharing findings and ideas with the field,40,0.4,16 (40%),authorship_value_reasons_ranked,rank_first
+lasting_scientific_contribution,10,Making a lasting contribution to the scientific literature,40,0.25,10 (25%),authorship_value_reasons_ranked,rank_first
+appropriate_credit,3,Receiving appropriate credit for my contributions,40,0.075,3 (8%),authorship_value_reasons_ranked,rank_first
+reputation_expertise_leadership,5,"Building my professional reputation, expertise, or leadership in a field",40,0.125,5 (12%),authorship_value_reasons_ranked,rank_first
+career_opportunities,2,Advancing my career or creating future professional opportunities,40,0.05,2 (5%),authorship_value_reasons_ranked,rank_first
+funding,0,Supporting grant or funding opportunities,40,0,0 (0%),authorship_value_reasons_ranked,rank_first
+collaboration,4,Building collaborations and professional relationships,40,0.1,4 (10%),authorship_value_reasons_ranked,rank_first
+role_expectations,0,"Meeting expectations of my institution, company, or professional role",40,0,0 (0%),authorship_value_reasons_ranked,rank_first
+not_important,0,Authorship is not particularly important to my current professional goals,40,0,0 (0%),authorship_value_reasons_ranked,rank_first
+other,0,Other,40,0,0 (0%),authorship_value_reasons_ranked,rank_first
+very_important,19,Very important,45,0.4222222222222222,19 (42%),authorship_counterfactual_importance,single
+somewhat_important,18,Somewhat important,45,0.4,18 (40%),authorship_counterfactual_importance,single
+not_very_important,5,Not very important,45,0.1111111111111111,5 (11%),authorship_counterfactual_importance,single
+not_important,3,Not important at all,45,0.06666666666666667,3 (7%),authorship_counterfactual_importance,single
+far_too_little,3,Far too little,45,0.06666666666666667,3 (7%),authorship_relative_weight,single
+somewhat_too_little,0,Somewhat too little,45,0,0 (0%),authorship_relative_weight,single
+about_right,14,About the right amount,45,0.3111111111111111,14 (31%),authorship_relative_weight,single
+somewhat_too_much,12,Somewhat too much,45,0.26666666666666666,12 (27%),authorship_relative_weight,single
+far_too_much,10,Far too much,45,0.2222222222222222,10 (22%),authorship_relative_weight,single
+not_sure_na,6,Not sure / not applicable,45,0.13333333333333333,6 (13%),authorship_relative_weight,single
+very_familiar,11,Very familiar,45,0.24444444444444444,11 (24%),guidelines_icmje_familiarity,single
+somewhat_familiar,19,Somewhat familiar,45,0.4222222222222222,19 (42%),guidelines_icmje_familiarity,single
+slightly_familiar,4,Slightly familiar,45,0.08888888888888889,4 (9%),guidelines_icmje_familiarity,single
+not_at_all_familiar,11,Not at all familiar,45,0.24444444444444444,11 (24%),guidelines_icmje_familiarity,single
+always,4,Always,45,0.08888888888888889,4 (9%),guidelines_use_frequency,single
+often,12,Often,45,0.26666666666666666,12 (27%),guidelines_use_frequency,single
+sometimes,9,Sometimes,45,0.2,9 (20%),guidelines_use_frequency,single
+rarely,6,Rarely,45,0.13333333333333333,6 (13%),guidelines_use_frequency,single
+never,6,Never,45,0.13333333333333333,6 (13%),guidelines_use_frequency,single
+not_applicable,8,Not applicable,45,0.17777777777777778,8 (18%),guidelines_use_frequency,single
+le1,6,1 or fewer per year,44,0.13636363636363635,6 (14%),volume_self_capacity,single
+2_3,19,2–3 per year,44,0.4318181818181818,19 (43%),volume_self_capacity,single
+4_6,12,4–6 per year,44,0.2727272727272727,12 (27%),volume_self_capacity,single
+7_11,2,7–11 per year,44,0.045454545454545456,2 (5%),volume_self_capacity,single
+12_23,1,12–23 per year (about 1–2 per month),44,0.022727272727272728,1 (2%),volume_self_capacity,single
+24_35,0,24–35 per year (about 2–3 per month),44,0,0 (0%),volume_self_capacity,single
+36_47,0,36–47 per year (about 3–4 per month),44,0,0 (0%),volume_self_capacity,single
+48_plus,0,48 or more per year (4+ per month),44,0,0 (0%),volume_self_capacity,single
+no_fixed_limit,0,I do not think there is a meaningful fixed publication-rate limit,44,0,0 (0%),volume_self_capacity,single
+not_applicable,4,Not applicable — I do not personally serve as a lead or senior author on original research,44,0.09090909090909091,4 (9%),volume_self_capacity,single
+le1,1,1 or fewer per year,45,0.022222222222222223,1 (2%),volume_other_scrutiny,single
+2_3,7,2–3 per year,45,0.15555555555555556,7 (16%),volume_other_scrutiny,single
+4_6,6,4–6 per year,45,0.13333333333333333,6 (13%),volume_other_scrutiny,single
+7_11,12,7–11 per year,45,0.26666666666666666,12 (27%),volume_other_scrutiny,single
+12_23,11,12–23 per year (about 1–2 per month),45,0.24444444444444444,11 (24%),volume_other_scrutiny,single
+24_35,2,24–35 per year (about 2–3 per month),45,0.044444444444444446,2 (4%),volume_other_scrutiny,single
+36_47,0,36–47 per year (about 3–4 per month),45,0,0 (0%),volume_other_scrutiny,single
+48_plus,4,48 or more per year (4+ per month),45,0.08888888888888889,4 (9%),volume_other_scrutiny,single
+volume_never_enough,2,Volume alone would not prompt additional scrutiny,45,0.044444444444444446,2 (4%),volume_other_scrutiny,single
+very_comfortable,4,Very comfortable,33,0.12121212121212122,4 (12%),m1_acad_accept_comfort,single
+somewhat_comfortable,14,Somewhat comfortable,33,0.42424242424242425,14 (42%),m1_acad_accept_comfort,single
+somewhat_uncomfortable,11,Somewhat uncomfortable,33,0.3333333333333333,11 (33%),m1_acad_accept_comfort,single
+very_uncomfortable,4,Very uncomfortable,33,0.12121212121212122,4 (12%),m1_acad_accept_comfort,single
+yes,18,Yes,33,0.5454545454545454,18 (55%),m1_acad_ever_declined_contribution,single
+no,12,No,33,0.36363636363636365,12 (36%),m1_acad_ever_declined_contribution,single
+not_sure,3,Not sure / don't recall,33,0.09090909090909091,3 (9%),m1_acad_ever_declined_contribution,single
+very_comfortable,6,Very comfortable,33,0.18181818181818182,6 (18%),m1_acad_no_change_comfort,single
+somewhat_comfortable,15,Somewhat comfortable,33,0.45454545454545453,15 (45%),m1_acad_no_change_comfort,single
+somewhat_uncomfortable,11,Somewhat uncomfortable,33,0.3333333333333333,11 (33%),m1_acad_no_change_comfort,single
+very_uncomfortable,1,Very uncomfortable,33,0.030303030303030304,1 (3%),m1_acad_no_change_comfort,single
+very_comfortable,3,Very comfortable,33,0.09090909090909091,3 (9%),m1_acad_no_data_access_comfort,single
+somewhat_comfortable,8,Somewhat comfortable,33,0.24242424242424243,8 (24%),m1_acad_no_data_access_comfort,single
+somewhat_uncomfortable,15,Somewhat uncomfortable,33,0.45454545454545453,15 (45%),m1_acad_no_data_access_comfort,single
+very_uncomfortable,7,Very uncomfortable,33,0.21212121212121213,7 (21%),m1_acad_no_data_access_comfort,single
+very_comfortable,1,Very comfortable,18,0.05555555555555555,1 (6%),m1_ind_offer_comfort,single
+somewhat_comfortable,8,Somewhat comfortable,18,0.4444444444444444,8 (44%),m1_ind_offer_comfort,single
+somewhat_uncomfortable,7,Somewhat uncomfortable,18,0.3888888888888889,7 (39%),m1_ind_offer_comfort,single
+very_uncomfortable,2,Very uncomfortable,18,0.1111111111111111,2 (11%),m1_ind_offer_comfort,single
+very_comfortable,3,Very comfortable,18,0.16666666666666666,3 (17%),m1_ind_no_change_comfort,single
+somewhat_comfortable,7,Somewhat comfortable,18,0.3888888888888889,7 (39%),m1_ind_no_change_comfort,single
+somewhat_uncomfortable,6,Somewhat uncomfortable,18,0.3333333333333333,6 (33%),m1_ind_no_change_comfort,single
+very_uncomfortable,2,Very uncomfortable,18,0.1111111111111111,2 (11%),m1_ind_no_change_comfort,single
+very_comfortable,2,Very comfortable,18,0.1111111111111111,2 (11%),m1_ind_no_data_access_comfort,single
+somewhat_comfortable,4,Somewhat comfortable,18,0.2222222222222222,4 (22%),m1_ind_no_data_access_comfort,single
+somewhat_uncomfortable,7,Somewhat uncomfortable,18,0.3888888888888889,7 (39%),m1_ind_no_data_access_comfort,single
+very_uncomfortable,5,Very uncomfortable,18,0.2777777777777778,5 (28%),m1_ind_no_data_access_comfort,single
+expertise,18,Their scientific or clinical expertise is expected to improve the interpretation or presentation of the work,18,1,18 (100%),m1_ind_late_invite_considerations,multi
+broader_contribution,13,The invitation recognizes contributions they made to the broader study or program that are not fully reflected in this specific manuscript,18,0.7222222222222222,13 (72%),m1_ind_late_invite_considerations,multi
+representation,11,"Their inclusion provides representation for an important investigator, site, discipline, or collaborating group",18,0.6111111111111112,11 (61%),m1_ind_late_invite_considerations,multi
+impact,13,"Their professional standing is expected to strengthen the credibility, visibility, or impact of the work",18,0.7222222222222222,13 (72%),m1_ind_late_invite_considerations,multi
+relationship,9,The invitation helps maintain or strengthen an important professional collaboration or relationship,18,0.5,9 (50%),m1_ind_late_invite_considerations,multi
+other,2,Other,18,0.1111111111111111,2 (11%),m1_ind_late_invite_considerations,multi
+expertise,14,Their scientific or clinical expertise is expected to improve the interpretation or presentation of the work,18,0.7777777777777778,14 (78%),m1_ind_late_invite_primary_driver,single
+broader_contribution,0,The invitation recognizes contributions they made to the broader study or program that are not fully reflected in this specific manuscript,18,0,0 (0%),m1_ind_late_invite_primary_driver,single
+representation,1,"Their inclusion provides representation for an important investigator, site, discipline, or collaborating group",18,0.05555555555555555,1 (6%),m1_ind_late_invite_primary_driver,single
+impact,1,"Their professional standing is expected to strengthen the credibility, visibility, or impact of the work",18,0.05555555555555555,1 (6%),m1_ind_late_invite_primary_driver,single
+relationship,2,The invitation helps maintain or strengthen an important professional collaboration or relationship,18,0.1111111111111111,2 (11%),m1_ind_late_invite_primary_driver,single
+other,0,Other,18,0,0 (0%),m1_ind_late_invite_primary_driver,single
+very_strongly,9,Very strongly,33,0.2727272727272727,9 (27%),m2_clin_offer_expectation,single
+somewhat_strongly,16,Somewhat strongly,33,0.48484848484848486,16 (48%),m2_clin_offer_expectation,single
+not_very_strongly,7,Not very strongly,33,0.21212121212121213,7 (21%),m2_clin_offer_expectation,single
+not_at_all,1,Not at all,33,0.030303030303030304,1 (3%),m2_clin_offer_expectation,single
+very_bothered,10,Very bothered,33,0.30303030303030304,10 (30%),m2_clin_not_approached_reaction,single
+somewhat_bothered,16,Somewhat bothered,33,0.48484848484848486,16 (48%),m2_clin_not_approached_reaction,single
+not_very_bothered,6,Not very bothered,33,0.18181818181818182,6 (18%),m2_clin_not_approached_reaction,single
+not_bothered,1,Not bothered at all,33,0.030303030303030304,1 (3%),m2_clin_not_approached_reaction,single
+very_strongly,10,Very strongly,35,0.2857142857142857,10 (29%),m2_researcher_obligation_offer,single
+somewhat_strongly,22,Somewhat strongly,35,0.6285714285714286,22 (63%),m2_researcher_obligation_offer,single
+not_very_strongly,3,Not very strongly,35,0.08571428571428572,3 (9%),m2_researcher_obligation_offer,single
+not_at_all,0,Not at all,35,0,0 (0%),m2_researcher_obligation_offer,single
+care_counts,8,Caring for the patients whose data make the study possible should itself carry meaningful weight toward authorship,35,0.22857142857142856,8 (23%),m2_researcher_clinical_care_principle,single
+offer_path,26,"Clinical care alone is not enough for authorship, but those clinicians should generally be offered an opportunity to contribute further",35,0.7428571428571429,26 (74%),m2_researcher_clinical_care_principle,single
+research_only,1,"Authorship should depend only on contributions to the research itself, regardless of who provided the clinical care",35,0.02857142857142857,1 (3%),m2_researcher_clinical_care_principle,single
+unsure,0,Unsure,35,0,0 (0%),m2_researcher_clinical_care_principle,single
+very_clear,4,Very clear,31,0.12903225806451613,4 (13%),m3_acad_authorship_clarity,single
+somewhat_clear,12,Somewhat clear,31,0.3870967741935484,12 (39%),m3_acad_authorship_clarity,single
+somewhat_unclear,9,Somewhat unclear,31,0.2903225806451613,9 (29%),m3_acad_authorship_clarity,single
+very_unclear,6,Very unclear,31,0.1935483870967742,6 (19%),m3_acad_authorship_clarity,single
+investigator_site_team,6,Someone on the investigator / site team,31,0.1935483870967742,6 (19%),m3_acad_authorship_initiator_actual,single
+sponsor_company_team,5,Someone on the sponsor / company team,31,0.16129032258064516,5 (16%),m3_acad_authorship_initiator_actual,single
+clinical_ops_cro,1,Clinical operations / trial management / CRO,31,0.03225806451612903,1 (3%),m3_acad_authorship_initiator_actual,single
+joint_investigator_sponsor,3,It is usually raised jointly by the investigator and sponsor teams,31,0.0967741935483871,3 (10%),m3_acad_authorship_initiator_actual,single
+varies,9,It varies substantially from trial to trial,31,0.2903225806451613,9 (29%),m3_acad_authorship_initiator_actual,single
+not_discussed,7,Authorship expectations are usually not discussed explicitly,31,0.22580645161290322,7 (23%),m3_acad_authorship_initiator_actual,single
+investigator_site_team,2,The investigator / site team,31,0.06451612903225806,2 (6%),m3_acad_authorship_initiator_ideal,single
+sponsor_company_team,8,The sponsor / company team,31,0.25806451612903225,8 (26%),m3_acad_authorship_initiator_ideal,single
+clinical_ops_cro,0,Clinical operations / trial management / CRO,31,0,0 (0%),m3_acad_authorship_initiator_ideal,single
+shared_investigator_sponsor,17,Shared responsibility between the investigator and sponsor teams,31,0.5483870967741935,17 (55%),m3_acad_authorship_initiator_ideal,single
+unsure,4,Unsure,31,0.12903225806451613,4 (13%),m3_acad_authorship_initiator_ideal,single
+accrual,13,Patient enrollment / accrual,31,0.41935483870967744,13 (42%),m3_acad_inclusion_driver,single
+site_pi,3,Site principal investigator role,31,0.0967741935483871,3 (10%),m3_acad_inclusion_driver,single
+intellectual,3,Scientific or intellectual contribution,31,0.0967741935483871,3 (10%),m3_acad_inclusion_driver,single
+leadership,7,Participation in trial leadership or steering committees,31,0.22580645161290322,7 (23%),m3_acad_inclusion_driver,single
+interpretation_writing,1,Contribution to data interpretation or manuscript development,31,0.03225806451612903,1 (3%),m3_acad_inclusion_driver,single
+publication_plan,1,Prespecified publication-plan rules,31,0.03225806451612903,1 (3%),m3_acad_inclusion_driver,single
+sponsor_discretion,2,Sponsor/publication-team discretion,31,0.06451612903225806,2 (6%),m3_acad_inclusion_driver,single
+other,1,Other,31,0.03225806451612903,1 (3%),m3_acad_inclusion_driver,single
+accrual,10,Patient enrollment / accrual,31,0.3225806451612903,10 (32%),m3_acad_order_driver,single
+site_pi,2,Site principal investigator role,31,0.06451612903225806,2 (6%),m3_acad_order_driver,single
+intellectual,3,Scientific or intellectual contribution,31,0.0967741935483871,3 (10%),m3_acad_order_driver,single
+leadership,9,Participation in trial leadership or steering committees,31,0.2903225806451613,9 (29%),m3_acad_order_driver,single
+interpretation_writing,0,Contribution to data interpretation or manuscript development,31,0,0 (0%),m3_acad_order_driver,single
+publication_plan,2,Prespecified publication-plan rules,31,0.06451612903225806,2 (6%),m3_acad_order_driver,single
+sponsor_discretion,3,Sponsor/publication-team discretion,31,0.0967741935483871,3 (10%),m3_acad_order_driver,single
+other,2,Other,31,0.06451612903225806,2 (6%),m3_acad_order_driver,single
+very_comfortable,0,Very comfortable,31,0,0 (0%),m3_acad_site_cap_comfort,single
+somewhat_comfortable,4,Somewhat comfortable,31,0.12903225806451613,4 (13%),m3_acad_site_cap_comfort,single
+somewhat_uncomfortable,13,Somewhat uncomfortable,31,0.41935483870967744,13 (42%),m3_acad_site_cap_comfort,single
+very_uncomfortable,14,Very uncomfortable,31,0.45161290322580644,14 (45%),m3_acad_site_cap_comfort,single
+very_clear,2,Very clear,21,0.09523809523809523,2 (10%),m3_ind_authorship_clarity,single
+somewhat_clear,8,Somewhat clear,21,0.38095238095238093,8 (38%),m3_ind_authorship_clarity,single
+somewhat_unclear,7,Somewhat unclear,21,0.3333333333333333,7 (33%),m3_ind_authorship_clarity,single
+very_unclear,4,Very unclear,21,0.19047619047619047,4 (19%),m3_ind_authorship_clarity,single
+investigator_site_team,6,Someone on the investigator / site team,20,0.3,6 (30%),m3_ind_authorship_initiator_actual,single
+sponsor_company_team,6,Someone on the sponsor / company team,20,0.3,6 (30%),m3_ind_authorship_initiator_actual,single
+clinical_ops_cro,0,Clinical operations / trial management / CRO,20,0,0 (0%),m3_ind_authorship_initiator_actual,single
+joint_investigator_sponsor,1,It is usually raised jointly by the investigator and sponsor teams,20,0.05,1 (5%),m3_ind_authorship_initiator_actual,single
+varies,6,It varies substantially from trial to trial,20,0.3,6 (30%),m3_ind_authorship_initiator_actual,single
+not_discussed,1,Authorship expectations are usually not discussed explicitly,20,0.05,1 (5%),m3_ind_authorship_initiator_actual,single
+investigator_site_team,6,The investigator / site team,21,0.2857142857142857,6 (29%),m3_ind_authorship_initiator_ideal,single
+sponsor_company_team,3,The sponsor / company team,21,0.14285714285714285,3 (14%),m3_ind_authorship_initiator_ideal,single
+clinical_ops_cro,0,Clinical operations / trial management / CRO,21,0,0 (0%),m3_ind_authorship_initiator_ideal,single
+shared_investigator_sponsor,12,Shared responsibility between the investigator and sponsor teams,21,0.5714285714285714,12 (57%),m3_ind_authorship_initiator_ideal,single
+unsure,0,Unsure,21,0,0 (0%),m3_ind_authorship_initiator_ideal,single
+accrual,8,Patient enrollment / accrual,21,0.38095238095238093,8 (38%),m3_ind_inclusion_driver,single
+site_pi,3,Site principal investigator role,21,0.14285714285714285,3 (14%),m3_ind_inclusion_driver,single
+intellectual,3,Scientific or intellectual contribution,21,0.14285714285714285,3 (14%),m3_ind_inclusion_driver,single
+leadership,6,Participation in trial leadership or steering committees,21,0.2857142857142857,6 (29%),m3_ind_inclusion_driver,single
+interpretation_writing,0,Contribution to data interpretation or manuscript development,21,0,0 (0%),m3_ind_inclusion_driver,single
+publication_plan,0,Prespecified publication-plan rules,21,0,0 (0%),m3_ind_inclusion_driver,single
+site_representation,0,Fair representation across participating sites,21,0,0 (0%),m3_ind_inclusion_driver,single
+manageable_list,0,Keeping the total author list manageable,21,0,0 (0%),m3_ind_inclusion_driver,single
+relationships,0,Investigator relationships and engagement,21,0,0 (0%),m3_ind_inclusion_driver,single
+other,1,Other,21,0.047619047619047616,1 (5%),m3_ind_inclusion_driver,single
+accrual,8,Patient enrollment / accrual,21,0.38095238095238093,8 (38%),m3_ind_order_driver,single
+site_pi,1,Site principal investigator role,21,0.047619047619047616,1 (5%),m3_ind_order_driver,single
+intellectual,3,Scientific or intellectual contribution,21,0.14285714285714285,3 (14%),m3_ind_order_driver,single
+leadership,5,Participation in trial leadership or steering committees,21,0.23809523809523808,5 (24%),m3_ind_order_driver,single
+interpretation_writing,1,Contribution to data interpretation or manuscript development,21,0.047619047619047616,1 (5%),m3_ind_order_driver,single
+publication_plan,0,Prespecified publication-plan rules,21,0,0 (0%),m3_ind_order_driver,single
+site_representation,1,Fair representation across participating sites,21,0.047619047619047616,1 (5%),m3_ind_order_driver,single
+sponsor_discretion,1,Sponsor/publication-team discretion,21,0.047619047619047616,1 (5%),m3_ind_order_driver,single
+other,1,Other,21,0.047619047619047616,1 (5%),m3_ind_order_driver,single
+very_comfortable,1,Very comfortable,21,0.047619047619047616,1 (5%),m3_ind_site_cap_comfort,single
+somewhat_comfortable,4,Somewhat comfortable,21,0.19047619047619047,4 (19%),m3_ind_site_cap_comfort,single
+somewhat_uncomfortable,7,Somewhat uncomfortable,21,0.3333333333333333,7 (33%),m3_ind_site_cap_comfort,single
+very_uncomfortable,9,Very uncomfortable,21,0.42857142857142855,9 (43%),m3_ind_site_cap_comfort,single
+generally_sufficient,11,It should generally be sufficient to warrant authorship,25,0.44,11 (44%),m4_acad_participation_authorship,single
+major_but_more_required,8,"It should be a major contribution, but additional manuscript involvement should still be required",25,0.32,8 (32%),m4_acad_participation_authorship,single
+one_of_several,3,It should be one contribution among several considered,25,0.12,3 (12%),m4_acad_participation_authorship,single
+little_or_no_weight,2,It should carry little or no weight toward authorship,25,0.08,2 (8%),m4_acad_participation_authorship,single
+not_sure,1,Not sure,25,0.04,1 (4%),m4_acad_participation_authorship,single
+yes,21,Yes,25,0.84,21 (84%),m4_acad_opportunity_to_qualify,single
+no,1,No,25,0.04,1 (4%),m4_acad_opportunity_to_qualify,single
+unsure,3,Unsure,25,0.12,3 (12%),m4_acad_opportunity_to_qualify,single
+generally_sufficient,3,It should generally be sufficient to warrant authorship,9,0.3333333333333333,3 (33%),m4_org_participation_weight,single
+major_but_more_required,6,"It should be a major contribution, but additional manuscript involvement should still be required",9,0.6666666666666666,6 (67%),m4_org_participation_weight,single
+one_of_several,0,It should be one contribution among several considered,9,0,0 (0%),m4_org_participation_weight,single
+little_or_no_weight,0,It should carry little or no weight toward authorship,9,0,0 (0%),m4_org_participation_weight,single
+not_sure,0,Not sure,9,0,0 (0%),m4_org_participation_weight,single
+yes,9,Yes,9,1,9 (100%),m4_org_opportunity_to_qualify,single
+no,0,No,9,0,0 (0%),m4_org_opportunity_to_qualify,single
+unsure,0,Unsure,9,0,0 (0%),m4_org_opportunity_to_qualify,single
+vague_contributions,2,Contribution statements are vague or do not clearly distinguish individual roles,19,0.10526315789473684,2 (11%),editor_authorship_concern_trigger,multi
+enrollment_data_only,0,"Some authors appear to have contributed primarily through patient enrollment or data provision, with little other involvement",19,0,0 (0%),editor_authorship_concern_trigger,multi
+little_interpretation_revision,2,Some authors appear to have had little involvement in interpretation or manuscript review/revision,19,0.10526315789473684,2 (11%),editor_authorship_concern_trigger,multi
+final_approval_unclear,3,It is unclear whether all authors approved the final manuscript,19,0.15789473684210525,3 (16%),editor_authorship_concern_trigger,multi
+accountability_unclear,3,It is unclear whether all authors can accept accountability for the work,19,0.15789473684210525,3 (16%),editor_authorship_concern_trigger,multi
+senior_unclear_contribution,3,A senior or well-known author appears to have been added without a clearly documented contribution,19,0.15789473684210525,3 (16%),editor_authorship_concern_trigger,multi
+scope_mismatch,5,The author list is difficult to reconcile with the scope of the work and the stated contributions,19,0.2631578947368421,5 (26%),editor_authorship_concern_trigger,multi
+rely_on_attestation,10,I generally rely on the authors' attestation unless there is specific information suggesting a problem,19,0.5263157894736842,10 (53%),editor_authorship_concern_trigger,multi
+other,0,Other,19,0,0 (0%),editor_authorship_concern_trigger,multi
+accept_attestation,1,The journal should generally accept the author group's attestation unless there is clear evidence of a problem,19,0.05263157894736842,1 (5%),editor_journal_role,single
+ask_clarification,16,The journal should ask for clarification or more detailed contribution statements when concerns arise,19,0.8421052631578947,16 (84%),editor_journal_role,single
+require_resolution,1,The journal should require the authors to resolve the issue before publication,19,0.05263157894736842,1 (5%),editor_journal_role,single
+institution,1,The journal should involve the relevant institution(s) when a substantial dispute cannot be resolved,19,0.05263157894736842,1 (5%),editor_journal_role,single
+unsure,0,Unsure,19,0,0 (0%),editor_journal_role,single
+m1_invited_expert,33,I have been invited to join an abstract or manuscript late in its development,45,0.7333333333333333,33 (73%),gate_experience_areas,multi
+m1_inviter,18,I have been involved in deciding to invite an external expert to join an abstract or manuscript late in its development,45,0.4,18 (40%),gate_experience_areas,multi
+m2_clinician,33,I have cared for patients whose clinical data were later used in retrospective research,45,0.7333333333333333,33 (73%),gate_experience_areas,multi
+m2_researcher,35,I have led or participated in retrospective research using data from patients cared for by clinicians who were not otherwise involved in the research,45,0.7777777777777778,35 (78%),gate_experience_areas,multi
+m3_investigator,31,I have participated as an investigator in a multicenter clinical trial,45,0.6888888888888889,31 (69%),gate_experience_areas,multi
+m3_publications,21,I have been involved in publication planning or authorship decisions for multicenter clinical trials,45,0.4666666666666667,21 (47%),gate_experience_areas,multi
+m4_participant,25,"I have participated in a Delphi, consensus panel, guideline, or similar project that resulted in a publication",45,0.5555555555555556,25 (56%),gate_experience_areas,multi
+m4_organizer,9,"I have organized or led a Delphi, consensus panel, guideline, or similar project that resulted in a publication",45,0.2,9 (20%),gate_experience_areas,multi
+none,1,None of the above,45,0.022222222222222223,1 (2%),gate_experience_areas,multi

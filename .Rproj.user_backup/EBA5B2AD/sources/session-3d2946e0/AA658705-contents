@@ -1,0 +1,43 @@
+# OIP 3.1 — Lean Stage I activation review
+
+**October 18, 2026 | Review pilot, not an approved scientific release**
+
+## One decision, implemented three ways
+
+**A field's meaning remains in the complete scientific codebook. Its `stage1_status` is a separate, closed, machine-checked instruction about whether the Stage I model should extract it.**
+
+| Status | Canonical fields | Annotation features | Stage I extraction / editable R / QC |
+| --- | ---: | ---: | --- |
+| `active_paper1` | 30 | 4 | Yes: core reporting science, source justified |
+| `active_handoff` | 68 | 1 conditional | Yes: sources, provenance, P/R identities and evidence needed later |
+| `deferred` | 52 | 28 | **No**: preserved definitions only; no model output or human QC |
+
+These labels are **execution priorities**, not an endorsement of article-level findings. Canonical schema 3.1.0 and dictionary 3.1.1-draft.4 are byte-identical to app 1.19.0. The JSON 25-table *transport* must keep null column placeholders; those placeholders do not count as Stage I extraction or review.
+
+## What Stage I now measures
+
+- Article identification/eligibility, journal, publication year, article type, study design and an optional supportable analyzed N.
+- Reported registry identifiers and supplied-source prospective timing; declaration of primary endpoint versus documented prespecification; SAP/protocol reporting. No external registry or historical amendment work.
+- Frequentist/Bayesian/mixed/unresolved; declared significance thresholds; basic yes/no/unknown covariate-adjusted modeling without judging its validity.
+- Multiplicity: overlapping, evidence-linked named procedures with separate FWER/FDR classification, author-declared criterion and scope. `unclear` scope is a valid, explicitly bounded status. Non-adjustment and mere limitation acknowledgment are separately recorded.
+- Complete physical printed P inventory, proposed distinct R identities, P→R mapping, source coverage and exceptions. P is not R, and R is not an independent hypothesis count.
+
+## Not asked of Stage I; definitions retained for later
+
+Full byline/affiliation extraction; detailed AI disclosures; full treatment/follow-up narrative; high-dimensional model screening; fitted model specifications or coefficient-level reconstruction; DAG presence/use; causal identification or confounding adequacy review; exhaustive statistical method rosters; source-indexed author claims; detailed Bayesian computational reporting. They are not silently left unfinished Stage I QC tasks: **they are absent from the active Stage I instruction and its editable R scopes**.
+
+## Named-multiplicity example
+
+One publication may legitimately create several records. Suppose Holm adjustment applies to two co-primary outcomes; Benjamini–Hochberg is named but its scope is not disclosed; the authors explicitly say safety analyses were unadjusted; and the Discussion acknowledges multiple-testing risk. These are **four typed statements**, not a semicolon-separated multi-select string or one mutually exclusive article label. Each has a source identifier, bounded location and source text. The methods and scope do not infer hidden hypothesis families. One Module 02 R scope covers these statements, without a seventh QC module.
+
+## The critical validator failure cases
+
+A Stage I output fails if it fills any deferred field, includes any deferred source annotation, adds a coverage or editable-R slice for deferred items, omits/mismatches the profile SHA-256, invents a multiplicity method code, fills a scope despite `scope_status = unclear`, or fails to provide provenance for reported multiplicity statements. Successful machine validation is not scientific truth or `qc_confirm()` review.
+
+## What remains to be checked
+
+The review package passes Python contract regressions and synthetic, profile-aware Stage I→II structural checks. Native R compilation and `qc_confirm()`, real source material/P detection, a complete real-article 25-table round trip and live Mac Shiny were **not run**. One limitation remains intrinsically costly: substantive source QC for all physical P appearances and scientifically correct P→R reconciliation cannot be eliminated simply by reducing article-level variables.
+
+## Investigator decision requested
+
+Review the three-way status assignment, especially whether any of the 68 `active_handoff` fields lack a genuine dependency and should instead be deferred. Approval of this status profile should be separate from approval of the scientific vocabulary definitions. Historical verified decisions and app 1.19.0 contracts are not migrated.
