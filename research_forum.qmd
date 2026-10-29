@@ -8,8 +8,12 @@ listing:
   - id: SoCO_Research_Workshop
     contents:
       - "research_forum/**/index.qmd"
+      - "!research_forum/**/survey/**"
       - "!data/**"
       - "!workflows/**"
+    # Exclude these cards by title, independently of their folder names.
+    exclude:
+      title: "{Inside the Review Room*,*Pre-Meeting*Survey*}"
     sort: "date desc"
     type: default
     categories: false
@@ -93,43 +97,6 @@ The working principle
 Research Workshop sessions may include **new study concepts, trial designs, preliminary data, statistical or methodological questions, reproducibility challenges, data-sharing opportunities, and collaborative projects** across the spectrum of cutaneous oncology.
 
 The work may be early. It may be incomplete. That is the point.
-
-:::
-
-:::
-
-::: {.soco-section .soco-forum-proposed}
-
-::: {.soco-archive-heading}
-
-::: {.soco-eyebrow}
-In development
-:::
-
-## Future Workshops
-
-Additional Research Workshop concepts remain in development for future dates.
-
-:::
-
-::: {.soco-proposed-meeting-card}
-
-::: {.soco-proposed-meeting-kicker}
-In Development
-:::
-
-### Inside the Review Room
-
-**From Patient-Level Data to FDA Regulatory Decision-Making**
-
-A 90-minute, moderator-led workshop exploring how oncology applications are reviewed inside FDA, how patient-level evidence is interrogated and reconstructed, and when advisory committees become part of the regulatory process.
-
-::: {.soco-proposed-meeting-meta}
-**Format:** Conversational, moderator-led workshop  
-**Potential participants:** FDA regulatory medicine colleagues with a SoCO moderator
-:::
-
-[View meeting concept →](https://societyofcutaneousoncology.org/research_forum/inside%20the%20review%20room/){.soco-card-link}
 
 :::
 

@@ -1284,7 +1284,7 @@ format:
 <p>This case began with a different relationship to the work: an academic expert had not treated the patients or participated in the study, and the manuscript was already substantially drafted. The question was whether enough meaningful intellectual work remained for the expert to qualify and accept responsibility.</p>
 <p>
 <strong>In the survey:</strong> 22 of 33 respondents (67%) were somewhat or very uncomfortable accepting late authorship without direct access to the underlying data. In a separate question, 18 of 33 (55%) said they had declined a late invitation because they did not feel their contribution justified authorship.</p>
-<p>Wong’s personal test was whether he could defend the paper in front of peers. Buchbinder distinguished an invitation to help shape interpretation from an invitation to endorse a finished product. Daniel Coit offered another perspective: a rigorous internal review can have intellectual value, even when the reviewer ultimately endorses the existing analysis. The group did not settle a universal threshold for how much interpretive input is enough.</p>
+<p>Mike Wong’s personal test was whether he could defend the paper in front of peers. Elizabeth Buchbinder distinguished an invitation to help shape interpretation from an invitation to endorse a finished product. Daniel Coit offered another perspective: a rigorous internal review can have intellectual value, even when the reviewer ultimately endorses the existing analysis. The group did not settle a universal threshold for how much interpretive input is enough.</p>
 <p>Howard Kaufman described legitimate reasons to seek expertise outside an existing team and the value of doing so early. He also explained the internal reviews that may surround industry publications, including scientific, publication-planning, conflict-of-interest, partner, and intellectual-property considerations. The discussion made clear why timing, access, and freedom to challenge conclusions belong in the invitation itself.</p>
 <article class="pub-survey-panel featured-survey" id="featured-m1_acad_ever_declined_contribution" data-question-id="m1_acad_ever_declined_contribution" data-search="case 2 · the late invited expert have you ever declined a late invitation to authorship because you did not feel your contribution justified authorship? m1_acad_ever_declined_contribution single choice yes no not sure / don&#x27;t recall">
 <div class="pub-survey-kicker">Invited-expert question</div>
@@ -1333,12 +1333,12 @@ format:
 </section>
 <section class="forum-entry-section fade-in" id="clinical-trials">
 <h2>Case 3 · Clinical trials, author order, and competing expectations</h2>
-<p>The third case expanded the problem across investigators, sites, specialties, and publication teams. Buchbinder described how authorship conversations can be more direct in small early-phase studies and more remote in larger programs. Expectations about enrollment, scientific input, and lead roles may develop well before a manuscript appears.</p>
+<p>The third case expanded the problem across investigators, sites, specialties, and publication teams. Elizabeth Buchbinder described how authorship conversations can be more direct in small early-phase studies and more remote in larger programs. Expectations about enrollment, scientific input, and lead roles may develop well before a manuscript appears.</p>
 <p>
 <strong>In the survey:</strong> only 4 of 31 respondents (13%) to the investigator-expectations question said authorship expectations were very clear. The separate publication-team question had 21 responses. Those are question-specific response counts, not verified counts of academics and industry employees.</p>
 <p>Raj Patel described how publication planning may consider enrollment, data quality, scientific insights, relevant expertise, and earlier conversations with the clinical team. He identified opportunities to contribute during a trial: investigator meetings, suggestions for additional analyses, and communication with clinical or medical teams. These were descriptions of practice and experience, not a single policy governing every sponsor.</p>
 <p>The exchange also exposed difficult tradeoffs. Additional authors require coordination, while a one-author-per-site convention can obscure contributions from surgeons, pathologists, and other specialists. The chat raised equity across sites and the risk of rewarding whoever presses hardest. Author order drew particular concern, including unclear decision rules and the repeated selection of established names for leading positions.</p>
-<p>Buchbinder raised the implications for advancement of other investigators. Kamaneh Montazeri described the importance of negotiating multidisciplinary roles early. Danielle Brazel connected publication pressure to trainee incentives, and Wong argued for assessing collaborative success more directly. These comments widened the discussion from manuscript administration to the institutions that assign value to a byline.</p>
+<p>Elizabeth Buchbinder raised the implications for advancement of other investigators. Kamaneh Montazeri described the importance of negotiating multidisciplinary roles early. Danielle Brazel connected publication pressure to trainee incentives, and Mike Wong argued for assessing collaborative success more directly. These comments widened the discussion from manuscript administration to the institutions that assign value to a byline.</p>
 <div class="featured-survey-pair">
 <article class="pub-survey-panel featured-survey" id="featured-m3_acad_authorship_clarity" data-question-id="m3_acad_authorship_clarity" data-search="case 3 · clinical trial authorship before agreeing to participate in a multicenter clinical trial, how clear are you usually about whether your contribution could lead to authorship? m3_acad_authorship_clarity single choice very clear somewhat clear somewhat unclear very unclear">
 <div class="pub-survey-kicker">Investigator question</div>
@@ -1454,13 +1454,13 @@ format:
 <section class="forum-entry-section fade-in">
 <h2>The acknowledgment debate remained open</h2>
 <p>Daniel Coit proposed more deliberate recognition of contributors whose work mattered but who did not fulfill all four authorship requirements. Later discussion returned to surgeons, pathologists, referring clinicians, and others whose contributions can be difficult to see in a conventional byline.</p>
-<p>Participants differed over whether acknowledgment offers meaningful recognition when promotion and other academic rewards remain tied to authorship. Miller argued for taking that recognition more seriously. Kenneth Tsai emphasized that an individual’s good intentions cannot change institutional incentives and noted that several members of a research team can be overlooked.</p>
+<p>Participants differed over whether acknowledgment offers meaningful recognition when promotion and other academic rewards remain tied to authorship. David Miller argued for taking that recognition more seriously. Kenneth Tsai emphasized that an individual’s good intentions cannot change institutional incentives and noted that several members of a research team can be overlooked.</p>
 <p>The exchange left two questions worth carrying forward: how to record important work fairly now, and how institutions could recognize that work more fully. Acknowledgment cannot replace authorship someone has earned. When non-author contributors are named, their contribution and permission to be acknowledged also matter. <a href="#ref-icmje">[1]</a>
 </p>
 </section>
 <section class="forum-entry-section fade-in">
 <h2>Four habits for the next collaboration</h2>
-<p>Miller closed by drawing together four process habits raised during the discussion:</p>
+<p>The discussion closed with four practical habits for approaching authorship:</p>
 <div class="forum-entry-grid">
 <div class="forum-entry-mini-card">
 <h3>Earlier</h3>
