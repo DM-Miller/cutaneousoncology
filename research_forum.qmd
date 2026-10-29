@@ -30,8 +30,7 @@ SoCO Research Workshop
 The Research Workshop is a recurring multidisciplinary space for investigators to bring forward work in progress, challenge assumptions, refine methods, and develop collaborative projects across cutaneous oncology.
 
 ::: {.soco-actions}
-[Upcoming workshop](#upcoming-workshop){.btn .btn-primary}
-[Explore presentations](#presentations){.btn .btn-outline-primary}
+[Explore presentations](#presentations){.btn .btn-primary}
 [Journal Club](jc.qmd){.btn .btn-outline-primary}
 :::
 
@@ -100,40 +99,6 @@ The work may be early. It may be incomplete. That is the point.
 :::
 
 ::: {.soco-section .soco-forum-proposed}
-
-::: {.soco-archive-heading}
-
-::: {.soco-eyebrow}
-Upcoming Research Workshop
-:::
-
-## October 28, 2026 {#upcoming-workshop}
-
-Our next Research Workshop is a 90-minute, multi-stakeholder discussion built around cases, survey data, and open conversation.
-
-:::
-
-::: {.soco-proposed-meeting-card}
-
-::: {.soco-proposed-meeting-kicker}
-Research Workshop · October 28, 2026 · 3:30–5:00 PM ET
-:::
-
-### The Art of Authorship
-
-**Who Gets on the Paper? Guidelines, Culture, and the Reality of Scientific Publishing**
-
-A 90-minute, multi-stakeholder Research Workshop on how authorship decisions are actually made, why practice can diverge from established standards, and how investigators, editors, industry colleagues, and publication professionals may see the same problem differently.
-
-::: {.soco-proposed-meeting-meta}
-**Date:** October 28, 2026 · 3:30–5:00 PM ET  
-**Format:** Case-based, moderator-led Research Workshop  
-**Perspectives:** Academia · Editors · Industry · Publication professionals
-:::
-
-[View workshop →](https://societyofcutaneousoncology.org/research_forum/Art%20of%20Authorship/){.soco-card-link}
-
-:::
 
 ::: {.soco-archive-heading}
 
