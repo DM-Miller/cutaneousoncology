@@ -1,0 +1,467 @@
+---
+title: "SoCO Winter Meeting Availability"
+title-block-style: none
+page-layout: full
+toc: false
+navbar: false
+sidebar: false
+search: false
+listing: false
+format:
+  html:
+    theme: none
+    minimal: true
+    include-in-header:
+      text: |
+        <meta name="robots" content="noindex,nofollow">
+        <meta name="referrer" content="no-referrer">
+---
+
+```{=html}
+<!-- generated soco-winter-scheduling-2026-2027 -->
+<style>
+/* Scoped to the survey; works standalone or inside the existing Quarto site. */
+html:has(.soco-survey) { background:#F7FAFA; scroll-behavior:smooth; }
+body:has(.soco-survey) { margin:0; padding:0; }
+body:has(.soco-survey) #quarto-content { display:block; padding:0; }
+body:has(.soco-survey) main.content { margin:0; padding:0; width:100%; max-width:none; }
+body:has(.soco-survey) #title-block-header { display:none; }
+.soco-survey { --navy:#0B2340; --teal:#0D7C80; --muted:#526873; --border:#D7E4E4; --aqua:#E4F3F2; --coral:#FF4B4B; color:var(--navy); font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; background:#F7FAFA; min-height:100vh; }
+.soco-survey *, .soco-survey *::before, .soco-survey *::after { box-sizing:border-box; }
+.soco-survey [hidden] { display:none !important; }
+.soco-survey button,.soco-survey input,.soco-survey textarea { font:inherit; }
+.soco-survey button { cursor:pointer; }
+.soco-survey button:disabled { cursor:default; opacity:.45; }
+.soco-survey :focus-visible { outline:3px solid var(--teal); outline-offset:4px; }
+.soco-survey h1,.soco-survey h2,.soco-survey h3,.soco-survey p { padding:0; border:0; margin:0; color:inherit; }
+.soco-survey .brand-header { max-width:1220px; padding:30px 36px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.soco-survey .brand { color:var(--navy); text-decoration:none; display:flex; align-items:center; gap:16px; }
+.soco-survey .wordmark { font-size:36px; letter-spacing:-2px; font-weight:800; line-height:1; }
+.soco-survey .brand-dot { color:var(--coral); }
+.soco-survey .brand-name { font-size:11px; line-height:1.35; border-left:1px solid var(--border); padding-left:16px; font-weight:600; }
+.soco-survey .header-label,.soco-survey .eyebrow { font-size:11px; font-weight:750; letter-spacing:.14em; }
+.soco-survey .header-label { color:var(--muted); }
+.soco-survey .planner-layout { max-width:1220px; margin:15px auto 50px; padding:0 36px; display:grid; grid-template-columns:340px minmax(0,1fr); gap:70px; align-items:start; }
+.soco-survey .planner-aside { position:sticky; top:32px; padding-top:24px; }
+.soco-survey .planner-aside>.eyebrow { color:var(--teal); margin-bottom:20px; }
+.soco-survey h1 { font-size:43px; line-height:1.12; font-weight:720; letter-spacing:-1.8px; }
+.soco-survey .aside-copy { color:var(--muted); font-size:15px; margin-top:22px; max-width:300px; }
+.soco-survey .step-nav { margin-top:32px; display:grid; gap:4px; }
+.soco-survey .step-link { background:transparent; text-align:left; border:0; border-radius:10px; padding:10px 12px; display:flex; align-items:center; gap:14px; color:var(--muted); width:100%; font-size:14px; font-weight:600; }
+.soco-survey .step-link[aria-current="step"] { background:var(--aqua); color:var(--teal); }
+.soco-survey .step-number { display:grid; place-items:center; width:26px; height:26px; border:1px solid #BDCDCF; border-radius:50%; font-size:11px; flex-shrink:0; }
+.soco-survey .step-link[aria-current="step"] .step-number,.soco-survey .step-link.complete .step-number { background:var(--teal); border-color:var(--teal); color:white; }
+.soco-survey .aside-note { display:flex; gap:12px; margin:30px 0 16px; padding-top:25px; border-top:1px solid var(--border); font-size:13px; color:var(--muted); }
+.soco-survey .aside-note strong { color:var(--navy); font-weight:650; }
+.soco-survey .clock-icon { font-size:24px; color:var(--teal); line-height:1.3; }
+.soco-survey .privacy-aside { color:var(--muted); font-size:12px; max-width:290px; }
+.soco-survey .survey-panel { min-width:0; background:white; border:1px solid var(--border); border-radius:20px; box-shadow:0 15px 45px #0b234008; overflow:hidden; }
+.soco-survey .panel-top { display:flex; justify-content:space-between; padding:22px 32px 17px; font-size:10px; letter-spacing:.14em; font-weight:700; color:var(--muted); }
+.soco-survey .progress-track { height:3px; background:#EDF3F2; }
+.soco-survey #progress-fill { display:block; height:100%; width:20%; background:var(--teal); transition:width .25s ease; }
+.soco-survey .step-content { padding:32px; }
+.soco-survey .step-content>.eyebrow { color:var(--teal); margin-bottom:12px; }
+.soco-survey h2 { font-size:31px; line-height:1.17; letter-spacing:-.8px; font-weight:700; margin-bottom:14px; }
+.soco-survey .step-description { color:var(--muted); font-size:15px; margin-bottom:25px; }
+.soco-survey .intro-points { display:grid; gap:18px; margin:26px 0; }
+.soco-survey .intro-points>div { display:flex; gap:14px; font-size:14px; color:var(--muted); }
+.soco-survey .intro-points strong { color:var(--navy); font-weight:650; }
+.soco-survey .point-number { font-size:11px; line-height:25px; color:var(--teal); font-weight:750; }
+.soco-survey .identity-notice { background:var(--aqua); border-radius:12px; padding:18px; font-size:13px; }
+.soco-survey .identity-notice p { margin:6px 0; }
+.soco-survey .identity-explainer { margin:25px 0 14px; font-size:13px; color:var(--muted); }
+.soco-survey .identity-fields { display:grid; grid-template-columns:1fr 1.2fr; gap:16px; }
+.soco-survey label { font-size:13px; font-weight:600; display:block; }
+.soco-survey input[type="text"],.soco-survey input:not([type]),.soco-survey input[type="email"],.soco-survey textarea { width:100%; border:1px solid #BCCFD1; border-radius:9px; padding:11px 12px; margin-top:6px; background:white; color:var(--navy); min-height:45px; }
+.soco-survey .survey-footer { display:flex; gap:12px; align-items:center; padding:0 32px 28px; }
+.soco-survey .footer-spacer { flex:1; }
+.soco-survey .button { border:1px solid transparent; border-radius:10px; font-size:13px; line-height:1.4; min-height:46px; padding:13px 18px; font-weight:650; display:inline-flex; align-items:center; justify-content:center; gap:17px; }
+.soco-survey .button-primary { background:var(--navy); color:white; }
+.soco-survey .button-primary:hover { background:#143D5A; }
+.soco-survey .button-secondary { border-color:var(--border); background:white; color:var(--navy); }
+.soco-survey .button-secondary:hover { background:#F3F8F8; }
+.soco-survey .text-button { border:0; color:var(--teal); background:transparent; padding:5px 0; font-size:12px; text-decoration:underline; text-underline-offset:3px; }
+.soco-survey .local-note { padding:15px 32px; background:#FAFCFC; border-top:1px solid #E7EEEE; font-size:11px; color:var(--muted); display:flex; flex-wrap:wrap; align-items:center; gap:4px 14px; justify-content:space-between; }
+.soco-survey .local-note .text-button { font-size:11px; }
+.soco-survey .availability-status { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:24px; }
+.soco-survey .status-choice { font-size:12px; background:white; border:1px solid var(--border); border-radius:8px; padding:10px 12px; color:var(--muted); min-height:43px; }
+.soco-survey .status-choice[aria-pressed="true"] { color:var(--teal); background:var(--aqua); border-color:var(--teal); font-weight:650; }
+.soco-survey .month-meta { display:flex; align-items:center; justify-content:space-between; gap:10px; margin:0 0 14px; font-size:12px; color:var(--muted); }
+.soco-survey .selected-count { color:var(--teal); font-weight:650; }
+.soco-survey .date-group { display:grid; grid-template-columns:110px 1fr; align-items:start; gap:16px; padding:16px 0; border-top:1px solid #EAF0F0; }
+.soco-survey .date-label { font-size:14px; font-weight:650; padding-top:5px; }
+.soco-survey .date-label span { display:block; color:var(--muted); font-size:11px; font-weight:450; margin-top:1px; }
+.soco-survey .time-options { display:flex; flex-wrap:wrap; gap:8px; }
+.soco-survey .time-choice { position:relative; }
+.soco-survey .time-choice input { position:absolute; opacity:0; width:1px; height:1px; }
+.soco-survey .time-choice span { display:flex; align-items:center; gap:7px; border:1px solid var(--border); border-radius:9px; padding:11px 12px; font-size:12px; font-weight:500; cursor:pointer; min-height:44px; background:white; }
+.soco-survey .time-choice span::before { content:""; height:14px; width:14px; border:1px solid #AFC5C7; border-radius:4px; display:grid; place-items:center; font-size:10px; }
+.soco-survey .time-choice input:checked+span { background:var(--teal); color:white; border-color:var(--teal); }
+.soco-survey .time-choice input:checked+span::before { content:"✓"; border-color:#FFFFFF80; }
+.soco-survey .time-choice input:focus-visible+span { outline:3px solid var(--navy); outline-offset:3px; }
+.soco-survey .time-choice span:hover { border-color:var(--teal); }
+.soco-survey .status-message { padding:25px; border-radius:12px; background:#F3F8F8; font-size:14px; color:var(--muted); margin-bottom:15px; }
+.soco-survey .preference-section { margin-top:22px; padding-top:20px; border-top:1px solid var(--border); }
+.soco-survey .preference-toggle { width:100%; display:flex; justify-content:space-between; text-align:left; background:none; border:0; padding:6px 0; color:var(--navy); font-size:14px; font-weight:650; }
+.soco-survey .optional-label { font-size:10px; color:var(--muted); background:#F0F5F5; border-radius:5px; padding:3px 7px; margin-left:6px; font-weight:500; }
+.soco-survey .preference-options { display:flex; flex-wrap:wrap; gap:6px; margin:15px 0; }
+.soco-survey .preference-options button { font-size:11px; }
+.soco-survey .ranking-help { font-size:12px; color:var(--muted); margin:12px 0; }
+.soco-survey .rank-list { list-style:none; padding:0; margin:0; display:grid; gap:7px; }
+.soco-survey .rank-item { display:flex; gap:10px; align-items:center; padding:10px 12px; background:#F6FAFA; border:1px solid #E2ECEC; border-radius:10px; }
+.soco-survey .rank-index { font-size:12px; font-weight:700; color:var(--teal); min-width:15px; }
+.soco-survey .rank-text { flex:1; font-size:12px; }
+.soco-survey .rank-controls { display:flex; gap:5px; }
+.soco-survey .rank-controls button { border:1px solid var(--border); background:white; border-radius:6px; width:34px; height:34px; color:var(--navy); }
+.soco-survey .confirm-order { margin-top:12px; background:var(--aqua); color:var(--teal); border:1px solid var(--teal); width:100%; }
+.soco-survey .small-note { font-size:12px; color:var(--muted); margin-top:18px; }
+.soco-survey .error-box { padding:14px 18px; border-left:3px solid var(--coral); background:#FFF0EF; color:#8C2630; margin:0 32px 22px; font-size:13px; border-radius:7px; }
+.soco-survey .review-card { border:1px solid var(--border); border-radius:12px; margin-bottom:13px; padding:18px; }
+.soco-survey .review-header { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.soco-survey .review-header h3 { font-size:16px; font-weight:650; }
+.soco-survey .review-caption { color:var(--teal); font-size:12px; margin:8px 0; }
+.soco-survey .review-windows { margin:8px 0 0; padding-left:18px; color:var(--muted); font-size:12px; }
+.soco-survey .review-windows li { margin:4px 0; }
+.soco-survey .review-identity { font-size:13px; margin:20px 0 12px; color:var(--muted); }
+.soco-survey .review-comments { margin:23px 0 0; }
+.soco-survey .review-comments textarea { min-height:90px; resize:vertical; font-weight:400; }
+.soco-survey .thank-you { text-align:center; padding:45px 32px; }
+.soco-survey .success-mark { display:grid; place-items:center; width:60px; height:60px; border-radius:50%; background:var(--aqua); color:var(--teal); font-size:28px; margin:0 auto 22px; }
+.soco-survey .thank-you>p:not(.eyebrow) { color:var(--muted); font-size:14px; }
+.soco-survey .thank-you .button { margin-top:24px; }
+.soco-survey #thanks-summary { margin:25px 0 18px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
+.soco-survey .summary-chip { font-size:11px; padding:8px 10px; background:#F3F8F8; border-radius:8px; }
+.soco-survey .page-footer { max-width:1220px; margin:auto; padding:20px 36px 30px; color:var(--muted); font-size:11px; display:flex; justify-content:space-between; gap:16px; }
+.soco-survey .preview-banner { padding:10px 20px; background:var(--navy); color:white; font-size:12px; text-align:center; }
+.soco-survey .honeypot { position:absolute; left:-10000px; height:1px; width:1px; overflow:hidden; }
+.soco-survey .skip-link { position:absolute; left:-10000px; }
+.soco-survey .skip-link:focus { left:15px; top:15px; z-index:10; background:white; padding:10px; }
+.soco-survey .noscript-notice { background:#FFF0EF; padding:20px; text-align:center; }
+@media(min-width:1100px) { .soco-survey .time-choice span { font-size:12px; } }
+@media(max-width:1000px) { .soco-survey .planner-layout { grid-template-columns:270px minmax(0,1fr); gap:30px; } .soco-survey h1 { font-size:37px; } .soco-survey .date-group { grid-template-columns:90px 1fr; gap:10px; } }
+@media(max-width:760px) {
+  .soco-survey .brand-header { padding:22px; } .soco-survey .header-label { display:none; }
+  .soco-survey .planner-layout { display:block; padding:0 18px; margin-top:0; margin-bottom:20px; }
+  .soco-survey .planner-aside { position:static; padding:12px 4px 22px; }
+  .soco-survey .planner-aside>.eyebrow { margin-bottom:12px; font-size:10px; }
+  .soco-survey h1 { font-size:32px; letter-spacing:-1.2px; } .soco-survey h1 br { display:none; }
+  .soco-survey .aside-copy { margin-top:12px; max-width:none; font-size:14px; }
+  .soco-survey .step-nav { display:flex; gap:4px; margin-top:20px; justify-content:space-between; }
+  .soco-survey .step-link { width:auto; flex:1; padding:8px 4px; justify-content:center; border-radius:7px; gap:5px; font-size:11px; }
+  .soco-survey .step-number { width:20px; height:20px; font-size:9px; }
+  .soco-survey .aside-note,.soco-survey .privacy-aside { display:none; }
+  .soco-survey .survey-panel { border-radius:15px; }
+  .soco-survey .panel-top { padding:18px 22px 15px; }
+  .soco-survey .step-content { padding:26px 22px; } .soco-survey h2 { font-size:27px; }
+  .soco-survey .survey-footer { padding:0 22px 24px; }
+  .soco-survey .local-note { padding:13px 22px; }
+  .soco-survey .error-box { margin-left:22px; margin-right:22px; }
+  .soco-survey .date-group { grid-template-columns:1fr; gap:10px; padding:15px 0; }
+  .soco-survey .date-label { display:flex; gap:8px; align-items:baseline; padding-top:0; }
+  .soco-survey .date-label span { display:inline; }
+  .soco-survey .rank-controls button { width:44px; height:44px; }
+  .soco-survey .page-footer { padding:20px 22px; display:block; }
+  .soco-survey .page-footer span { display:block; margin-top:4px; }
+  .soco-survey .identity-fields { grid-template-columns:1fr; gap:12px; }
+}
+@media(max-width:390px) { .soco-survey .step-link { font-size:10px; } .soco-survey .step-number { display:none; } .soco-survey .button { padding:12px; font-size:12px; } }
+@media(prefers-reduced-motion:reduce) { html:has(.soco-survey) { scroll-behavior:auto; } .soco-survey * { transition:none !important; } }
+
+/* Availability-first flow: visible optional preferences and one-step ranking save. */
+.soco-survey .intro-reassurance { margin:22px 0; padding:16px 18px; background:#F3F8F8; border-radius:10px; font-size:14px; color:var(--muted); }
+.soco-survey .intro-reassurance strong { color:var(--navy); }
+.soco-survey .selection-shortcuts { display:flex; align-items:center; gap:18px; }
+.soco-survey .selection-shortcuts .text-button { min-height:44px; padding:10px 0; }
+.soco-survey .window-help { color:var(--muted); font-size:12px; margin-bottom:14px; }
+.soco-survey .preference-heading { font-size:14px; font-weight:650; }
+.soco-survey .preference-options { margin:12px 0; }
+.soco-survey .preference-options button { min-height:44px; font-size:12px; }
+
+</style>
+<div class="soco-survey" id="soco-app">
+  <a class="skip-link" href="#step-heading">Skip to survey</a>
+  <div class="preview-banner" id="preview-banner" hidden></div>
+  <header class="brand-header">
+    <a class="brand" href="https://societyofcutaneousoncology.org/" referrerpolicy="no-referrer" aria-label="Society of Cutaneous Oncology home"><span class="wordmark">SoCO<span class="brand-dot">.</span></span><span class="brand-name">Society of<br>Cutaneous Oncology</span></a>
+    <span class="header-label">WINTER MEETING PLANNER</span>
+  </header>
+  <div class="planner-layout">
+    <aside class="planner-aside">
+      <p class="eyebrow">DEC 2026 — FEB 2027</p>
+      <h1>Let’s plan our <br>winter meetings.</h1>
+      <p class="aside-copy">A few minutes now will help us find the best times to bring the SoCO community together.</p>
+      <nav aria-label="Survey progress" class="step-nav" id="step-nav"></nav>
+      <div class="aside-note"><span class="clock-icon" aria-hidden="true">◷</span><div><strong>90-minute meetings</strong><br>All times are Eastern Time.<br>Topics will be announced later.</div></div>
+      <p class="privacy-aside">Availability helps us plan. Selecting a time does not register you for a meeting.</p>
+    </aside>
+    <main class="survey-panel" id="survey-main">
+      <div class="panel-top"><span id="step-label">GETTING STARTED</span><span id="step-count">1 / 5</span></div>
+      <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
+      <form id="winter-survey" name="soco-winter-scheduling-2026-2027-v1" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/" novalidate>
+        <input type="hidden" name="form-name" value="soco-winter-scheduling-2026-2027-v1">
+<input type="hidden" name="survey_id" value="soco-winter-scheduling-2026-2027">
+<input type="hidden" name="survey_version" value="1.0">
+<input type="hidden" name="schedule_revision" value="2026-10-29">
+<input type="hidden" name="respondent_token" value="">
+<input type="hidden" name="browser_id" value="">
+<input type="hidden" name="submission_id" value="">
+<input type="hidden" name="identity_mode" value="">
+<input type="hidden" name="is_test" value="">
+<input type="hidden" name="comments" value="">
+<input type="hidden" name="dec_status" value="">
+<input type="hidden" name="dec_available_json" value="">
+<input type="hidden" name="dec_preference_mode" value="">
+<input type="hidden" name="dec_rank_json" value="">
+<input type="hidden" name="jan_status" value="">
+<input type="hidden" name="jan_available_json" value="">
+<input type="hidden" name="jan_preference_mode" value="">
+<input type="hidden" name="jan_rank_json" value="">
+<input type="hidden" name="feb_status" value="">
+<input type="hidden" name="feb_available_json" value="">
+<input type="hidden" name="feb_preference_mode" value="">
+<input type="hidden" name="feb_rank_json" value="">
+        <p class="honeypot" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <section id="intro-step" class="step-content">
+          <p class="eyebrow">SOCO JOURNAL CLUB &amp; RESEARCH FORUM</p>
+          <h2 id="step-heading" tabindex="-1">What works for you?</h2>
+          <p class="step-description">Pick every time you could attend in December, January, and February. Add a preference order only if you want to.</p>
+          <p class="intro-reassurance"><strong>Checking availability is enough.</strong> Ranking is optional for every month.</p>
+          <div id="personal-notice" class="identity-notice" hidden><strong>You’re using a personal survey link.</strong><p>This link identifies your response, so you can go straight to availability. Please keep it for your own use.</p><button type="button" class="text-button" id="use-name">Using someone else’s link? Enter your own details</button></div>
+          <div id="named-identity"><p class="identity-explainer" id="identity-explainer">Add your name and email so we can identify your response. A personal invitation link lets you skip this step.</p><div class="identity-fields"><label>Your name<input name="participant_name" id="participant-name" autocomplete="name" maxlength="120" required></label><label>Email address<input type="email" name="participant_email" id="participant-email" autocomplete="email" maxlength="254" required></label></div></div>
+          <p id="resume-notice" class="small-note" hidden></p>
+        </section>
+        <section id="month-step" class="step-content" hidden></section>
+        <section id="review-step" class="step-content" hidden></section>
+        <div class="error-box" id="form-error" role="alert" tabindex="-1" hidden></div>
+        <div class="survey-footer"><button type="button" class="button button-secondary" id="back-button" hidden>Back</button><span class="footer-spacer"></span><button type="button" class="button button-primary" id="next-button">Choose December times <span aria-hidden="true">→</span></button><button type="submit" class="button button-primary" id="submit-button" hidden>Send my availability <span aria-hidden="true">→</span></button></div>
+      </form>
+      <section id="thank-you" class="step-content thank-you" hidden tabindex="-1"><span class="success-mark" aria-hidden="true">✓</span><p class="eyebrow" id="thanks-eyebrow">AVAILABILITY RECEIVED</p><h2 id="thanks-heading">Thank you for making time.</h2><p id="thanks-message">Your availability has been sent. We’ll share the meeting dates and topics once the schedule is set.</p><div id="thanks-summary"></div><p class="small-note">Return to this survey to submit an update, using the same personal link or email address. Your latest valid response will be used. Previous answers are restored only in the browser where you entered them.</p><button type="button" class="button button-primary" id="update-response">Update my response</button></section>
+      <div class="local-note"><span id="draft-note">Progress is saved in this browser when storage is available.</span><button type="button" class="text-button" id="clear-draft">Clear my saved answers</button></div>
+    </main>
+  </div>
+  <footer class="page-footer">Society of Cutaneous Oncology <span>Evidence · Collaboration · Critical Inquiry</span></footer>
+  <noscript><div class="noscript-notice">Please enable JavaScript to complete this scheduling survey.</div></noscript>
+</div>
+<script type="application/json" id="survey-config">{"survey_id": "soco-winter-scheduling-2026-2027", "survey_version": "1.0", "schedule_revision": "2026-10-29", "form_name": "soco-winter-scheduling-2026-2027-v1", "title": "SoCO Winter Meeting Availability", "timezone": "America/New_York", "timezone_label": "Eastern Time (ET)", "duration_minutes": 90, "site_origin": "https://societyofcutaneousoncology.org", "page_path": "/community/scheduling/2026-12_2027-02/", "months": [{"key": "dec", "label": "December", "year": 2026, "topic": "Topic to be announced", "dates": [{"date": "2026-12-07", "starts": ["12:00", "15:00", "15:30"]}, {"date": "2026-12-09", "starts": ["11:00", "11:30", "12:00"]}, {"date": "2026-12-10", "starts": ["11:00"]}, {"date": "2026-12-11", "starts": ["15:30"]}, {"date": "2026-12-16", "starts": ["13:00"]}, {"date": "2026-12-17", "starts": ["10:30"]}, {"date": "2026-12-18", "starts": ["15:00", "15:30"]}], "options": [{"id": "2026-12-07_1200", "date": "2026-12-07", "weekday": "Monday", "short_date": "Dec 7", "date_label": "Monday, December 7", "start_local": "2026-12-07T12:00:00-05:00", "end_local": "2026-12-07T13:30:00-05:00", "time_label": "12 p.m.–1:30 p.m.", "full_label": "Monday, December 7 · 12 p.m.–1:30 p.m. ET"}, {"id": "2026-12-07_1500", "date": "2026-12-07", "weekday": "Monday", "short_date": "Dec 7", "date_label": "Monday, December 7", "start_local": "2026-12-07T15:00:00-05:00", "end_local": "2026-12-07T16:30:00-05:00", "time_label": "3 p.m.–4:30 p.m.", "full_label": "Monday, December 7 · 3 p.m.–4:30 p.m. ET"}, {"id": "2026-12-07_1530", "date": "2026-12-07", "weekday": "Monday", "short_date": "Dec 7", "date_label": "Monday, December 7", "start_local": "2026-12-07T15:30:00-05:00", "end_local": "2026-12-07T17:00:00-05:00", "time_label": "3:30 p.m.–5 p.m.", "full_label": "Monday, December 7 · 3:30 p.m.–5 p.m. ET"}, {"id": "2026-12-09_1100", "date": "2026-12-09", "weekday": "Wednesday", "short_date": "Dec 9", "date_label": "Wednesday, December 9", "start_local": "2026-12-09T11:00:00-05:00", "end_local": "2026-12-09T12:30:00-05:00", "time_label": "11 a.m.–12:30 p.m.", "full_label": "Wednesday, December 9 · 11 a.m.–12:30 p.m. ET"}, {"id": "2026-12-09_1130", "date": "2026-12-09", "weekday": "Wednesday", "short_date": "Dec 9", "date_label": "Wednesday, December 9", "start_local": "2026-12-09T11:30:00-05:00", "end_local": "2026-12-09T13:00:00-05:00", "time_label": "11:30 a.m.–1 p.m.", "full_label": "Wednesday, December 9 · 11:30 a.m.–1 p.m. ET"}, {"id": "2026-12-09_1200", "date": "2026-12-09", "weekday": "Wednesday", "short_date": "Dec 9", "date_label": "Wednesday, December 9", "start_local": "2026-12-09T12:00:00-05:00", "end_local": "2026-12-09T13:30:00-05:00", "time_label": "12 p.m.–1:30 p.m.", "full_label": "Wednesday, December 9 · 12 p.m.–1:30 p.m. ET"}, {"id": "2026-12-10_1100", "date": "2026-12-10", "weekday": "Thursday", "short_date": "Dec 10", "date_label": "Thursday, December 10", "start_local": "2026-12-10T11:00:00-05:00", "end_local": "2026-12-10T12:30:00-05:00", "time_label": "11 a.m.–12:30 p.m.", "full_label": "Thursday, December 10 · 11 a.m.–12:30 p.m. ET"}, {"id": "2026-12-11_1530", "date": "2026-12-11", "weekday": "Friday", "short_date": "Dec 11", "date_label": "Friday, December 11", "start_local": "2026-12-11T15:30:00-05:00", "end_local": "2026-12-11T17:00:00-05:00", "time_label": "3:30 p.m.–5 p.m.", "full_label": "Friday, December 11 · 3:30 p.m.–5 p.m. ET"}, {"id": "2026-12-16_1300", "date": "2026-12-16", "weekday": "Wednesday", "short_date": "Dec 16", "date_label": "Wednesday, December 16", "start_local": "2026-12-16T13:00:00-05:00", "end_local": "2026-12-16T14:30:00-05:00", "time_label": "1 p.m.–2:30 p.m.", "full_label": "Wednesday, December 16 · 1 p.m.–2:30 p.m. ET"}, {"id": "2026-12-17_1030", "date": "2026-12-17", "weekday": "Thursday", "short_date": "Dec 17", "date_label": "Thursday, December 17", "start_local": "2026-12-17T10:30:00-05:00", "end_local": "2026-12-17T12:00:00-05:00", "time_label": "10:30 a.m.–12 p.m.", "full_label": "Thursday, December 17 · 10:30 a.m.–12 p.m. ET"}, {"id": "2026-12-18_1500", "date": "2026-12-18", "weekday": "Friday", "short_date": "Dec 18", "date_label": "Friday, December 18", "start_local": "2026-12-18T15:00:00-05:00", "end_local": "2026-12-18T16:30:00-05:00", "time_label": "3 p.m.–4:30 p.m.", "full_label": "Friday, December 18 · 3 p.m.–4:30 p.m. ET"}, {"id": "2026-12-18_1530", "date": "2026-12-18", "weekday": "Friday", "short_date": "Dec 18", "date_label": "Friday, December 18", "start_local": "2026-12-18T15:30:00-05:00", "end_local": "2026-12-18T17:00:00-05:00", "time_label": "3:30 p.m.–5 p.m.", "full_label": "Friday, December 18 · 3:30 p.m.–5 p.m. ET"}]}, {"key": "jan", "label": "January", "year": 2027, "topic": "Topic to be announced", "dates": [{"date": "2027-01-11", "starts": ["15:00", "15:30"]}, {"date": "2027-01-13", "starts": ["12:00"]}, {"date": "2027-01-29", "starts": ["15:00", "15:30"]}], "options": [{"id": "2027-01-11_1500", "date": "2027-01-11", "weekday": "Monday", "short_date": "Jan 11", "date_label": "Monday, January 11", "start_local": "2027-01-11T15:00:00-05:00", "end_local": "2027-01-11T16:30:00-05:00", "time_label": "3 p.m.–4:30 p.m.", "full_label": "Monday, January 11 · 3 p.m.–4:30 p.m. ET"}, {"id": "2027-01-11_1530", "date": "2027-01-11", "weekday": "Monday", "short_date": "Jan 11", "date_label": "Monday, January 11", "start_local": "2027-01-11T15:30:00-05:00", "end_local": "2027-01-11T17:00:00-05:00", "time_label": "3:30 p.m.–5 p.m.", "full_label": "Monday, January 11 · 3:30 p.m.–5 p.m. ET"}, {"id": "2027-01-13_1200", "date": "2027-01-13", "weekday": "Wednesday", "short_date": "Jan 13", "date_label": "Wednesday, January 13", "start_local": "2027-01-13T12:00:00-05:00", "end_local": "2027-01-13T13:30:00-05:00", "time_label": "12 p.m.–1:30 p.m.", "full_label": "Wednesday, January 13 · 12 p.m.–1:30 p.m. ET"}, {"id": "2027-01-29_1500", "date": "2027-01-29", "weekday": "Friday", "short_date": "Jan 29", "date_label": "Friday, January 29", "start_local": "2027-01-29T15:00:00-05:00", "end_local": "2027-01-29T16:30:00-05:00", "time_label": "3 p.m.–4:30 p.m.", "full_label": "Friday, January 29 · 3 p.m.–4:30 p.m. ET"}, {"id": "2027-01-29_1530", "date": "2027-01-29", "weekday": "Friday", "short_date": "Jan 29", "date_label": "Friday, January 29", "start_local": "2027-01-29T15:30:00-05:00", "end_local": "2027-01-29T17:00:00-05:00", "time_label": "3:30 p.m.–5 p.m.", "full_label": "Friday, January 29 · 3:30 p.m.–5 p.m. ET"}]}, {"key": "feb", "label": "February", "year": 2027, "topic": "Topic to be announced", "dates": [{"date": "2027-02-10", "starts": ["12:00"]}, {"date": "2027-02-12", "starts": ["15:00", "15:30"]}, {"date": "2027-02-17", "starts": ["12:00"]}, {"date": "2027-02-19", "starts": ["15:00", "15:30"]}, {"date": "2027-02-22", "starts": ["15:00", "15:30"]}, {"date": "2027-02-26", "starts": ["15:00", "15:30"]}], "options": [{"id": "2027-02-10_1200", "date": "2027-02-10", "weekday": "Wednesday", "short_date": "Feb 10", "date_label": "Wednesday, February 10", "start_local": "2027-02-10T12:00:00-05:00", "end_local": "2027-02-10T13:30:00-05:00", "time_label": "12 p.m.–1:30 p.m.", "full_label": "Wednesday, February 10 · 12 p.m.–1:30 p.m. ET"}, {"id": "2027-02-12_1500", "date": "2027-02-12", "weekday": "Friday", "short_date": "Feb 12", "date_label": "Friday, February 12", "start_local": "2027-02-12T15:00:00-05:00", "end_local": "2027-02-12T16:30:00-05:00", "time_label": "3 p.m.–4:30 p.m.", "full_label": "Friday, February 12 · 3 p.m.–4:30 p.m. ET"}, {"id": "2027-02-12_1530", "date": "2027-02-12", "weekday": "Friday", "short_date": "Feb 12", "date_label": "Friday, February 12", "start_local": "2027-02-12T15:30:00-05:00", "end_local": "2027-02-12T17:00:00-05:00", "time_label": "3:30 p.m.–5 p.m.", "full_label": "Friday, February 12 · 3:30 p.m.–5 p.m. ET"}, {"id": "2027-02-17_1200", "date": "2027-02-17", "weekday": "Wednesday", "short_date": "Feb 17", "date_label": "Wednesday, February 17", "start_local": "2027-02-17T12:00:00-05:00", "end_local": "2027-02-17T13:30:00-05:00", "time_label": "12 p.m.–1:30 p.m.", "full_label": "Wednesday, February 17 · 12 p.m.–1:30 p.m. ET"}, {"id": "2027-02-19_1500", "date": "2027-02-19", "weekday": "Friday", "short_date": "Feb 19", "date_label": "Friday, February 19", "start_local": "2027-02-19T15:00:00-05:00", "end_local": "2027-02-19T16:30:00-05:00", "time_label": "3 p.m.–4:30 p.m.", "full_label": "Friday, February 19 · 3 p.m.–4:30 p.m. ET"}, {"id": "2027-02-19_1530", "date": "2027-02-19", "weekday": "Friday", "short_date": "Feb 19", "date_label": "Friday, February 19", "start_local": "2027-02-19T15:30:00-05:00", "end_local": "2027-02-19T17:00:00-05:00", "time_label": "3:30 p.m.–5 p.m.", "full_label": "Friday, February 19 · 3:30 p.m.–5 p.m. ET"}, {"id": "2027-02-22_1500", "date": "2027-02-22", "weekday": "Monday", "short_date": "Feb 22", "date_label": "Monday, February 22", "start_local": "2027-02-22T15:00:00-05:00", "end_local": "2027-02-22T16:30:00-05:00", "time_label": "3 p.m.–4:30 p.m.", "full_label": "Monday, February 22 · 3 p.m.–4:30 p.m. ET"}, {"id": "2027-02-22_1530", "date": "2027-02-22", "weekday": "Monday", "short_date": "Feb 22", "date_label": "Monday, February 22", "start_local": "2027-02-22T15:30:00-05:00", "end_local": "2027-02-22T17:00:00-05:00", "time_label": "3:30 p.m.–5 p.m.", "full_label": "Monday, February 22 · 3:30 p.m.–5 p.m. ET"}, {"id": "2027-02-26_1500", "date": "2027-02-26", "weekday": "Friday", "short_date": "Feb 26", "date_label": "Friday, February 26", "start_local": "2027-02-26T15:00:00-05:00", "end_local": "2027-02-26T16:30:00-05:00", "time_label": "3 p.m.–4:30 p.m.", "full_label": "Friday, February 26 · 3 p.m.–4:30 p.m. ET"}, {"id": "2027-02-26_1530", "date": "2027-02-26", "weekday": "Friday", "short_date": "Feb 26", "date_label": "Friday, February 26", "start_local": "2027-02-26T15:30:00-05:00", "end_local": "2027-02-26T17:00:00-05:00", "time_label": "3:30 p.m.–5 p.m.", "full_label": "Friday, February 26 · 3:30 p.m.–5 p.m. ET"}]}], "cycle_id": "2026-12_2027-02"}</script>
+
+<script>
+/* Pure state/validation functions shared by the page and Node checks. */
+(function (root, factory) {
+  if (typeof module === 'object' && module.exports) module.exports = factory();
+  else root.SoCOSurvey = factory();
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  const emptyMonth = () => ({status: 'available', selected: [], preference: 'availability_only', order: [], confirmed: false});
+  function reconcile(month, selected) {
+    const unique = [...new Set(selected)];
+    const order = [...month.order.filter(id => unique.includes(id)), ...unique.filter(id => !month.order.includes(id))];
+    return {...month, status: 'available', selected: unique, order,
+      preference: unique.length < 2 ? 'availability_only' : month.preference, confirmed: false};
+  }
+  function move(order, id, direction) {
+    const next = order.slice(), i = next.indexOf(id), j = i + direction;
+    if (i >= 0 && j >= 0 && j < next.length) [next[i], next[j]] = [next[j], next[i]];
+    return next;
+  }
+  function validateMonth(month, allowed) {
+    if (!month || !['available', 'none', 'unsure'].includes(month.status)) return 'Please tell us your availability for this month.';
+    if (!Array.isArray(month.selected) || new Set(month.selected).size !== month.selected.length || month.selected.some(id => !allowed.includes(id))) return 'Please check the selected time windows.';
+    if (month.status !== 'available') return month.selected.length ? 'Clear your selected windows before continuing.' : '';
+    if (!month.selected.length) return 'Select at least one time window, or choose “None work” or “Not sure yet.”';
+    if (!['availability_only', 'equal', 'ranked'].includes(month.preference)) return 'Please check your preference choice.';
+    if (month.preference === 'ranked') {
+      if (month.selected.length < 2 || month.order.length !== month.selected.length || new Set(month.order).size !== month.order.length || month.order.some(id => !month.selected.includes(id))) return 'Please check your ranking.';
+      if (!month.confirmed) return 'Confirm your order with “Save ranking & continue,” or choose “Availability only.”';
+    }
+    return '';
+  }
+  const validToken = token => /^[A-Za-z0-9_-]{43}$/.test(token || '');
+  const validEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((email || '').trim());
+  return {emptyMonth, reconcile, move, validateMonth, validToken, validEmail};
+});
+
+(function () {
+  'use strict';
+  const C = JSON.parse(document.getElementById('survey-config').textContent);
+  const S = window.SoCOSurvey;
+  const $ = id => document.getElementById(id);
+  const escape = text => String(text).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const params = new URLSearchParams(location.search);
+  const fragment = new URLSearchParams(location.hash.slice(1));
+  const requestedToken = fragment.get('t') || params.get('t') || '';
+  const preview = C.preview_only === true || location.protocol === 'file:' || ['localhost','127.0.0.1','::1'].includes(location.hostname) || params.get('preview') === '1';
+  const test = !preview && params.get('test') === '1';
+  let token = S.validToken(requestedToken) ? requestedToken : '';
+  const draftKey = `${C.survey_id}:${C.survey_version}:${C.schedule_revision}:${preview ? 'preview' : test ? 'test' : 'live'}:${token || 'named'}`;
+  const uuid = () => window.crypto && crypto.randomUUID ? crypto.randomUUID() : 'local-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
+  let storageOK = true, browserId = '', restored = false, busy = false;
+  const fresh = () => ({step:0, months:Object.fromEntries(C.months.map(m => [m.key,S.emptyMonth()])), name:'',email:'',comments:'',submission_id:uuid(),sent:false, namedOverride:false});
+  let state = fresh();
+  try {
+    browserId = localStorage.getItem(C.survey_id + ':browser') || uuid();
+    localStorage.setItem(C.survey_id + ':browser', browserId);
+    const stored = JSON.parse(localStorage.getItem(draftKey) || 'null');
+    if (stored && stored.months && C.months.every(m => stored.months[m.key] && Array.isArray(stored.months[m.key].selected) && Array.isArray(stored.months[m.key].order))) {
+      state = {...fresh(),...stored,step:0}; restored = true;
+      for (const m of C.months) {
+        state.months[m.key] = {...S.emptyMonth(),...stored.months[m.key]};
+        if (S.validateMonth({...state.months[m.key],confirmed:true}, m.options.map(o => o.id)) && state.months[m.key].selected.length) state.months[m.key] = S.emptyMonth();
+      }
+    }
+  } catch (_) { storageOK = false; browserId = uuid(); }
+  if (state.namedOverride) token = '';
+  const save = () => { try { localStorage.setItem(draftKey,JSON.stringify(state)); } catch (_) { storageOK=false; $('draft-note').textContent='Progress stays on this page; browser storage is unavailable.'; } };
+  const error = message => { $('form-error').textContent=message; $('form-error').hidden=!message; if(message) $('form-error').focus(); };
+  function syncIdentity() {
+    $('personal-notice').hidden=!token; $('named-identity').hidden=!!token;
+    $('participant-name').required=!token; $('participant-email').required=!token;
+    $('participant-name').disabled=!!token; $('participant-email').disabled=!!token;
+    $('participant-name').value=state.name; $('participant-email').value=state.email;
+    if (requestedToken && !S.validToken(requestedToken)) $('identity-explainer').textContent='This link is incomplete. You can still respond by entering your name and email below.';
+  }
+  function validateIdentity() {
+    if(token) return '';
+    if(!state.name.trim()) return 'Please enter your name.';
+    if(!S.validEmail(state.email)) return 'Please enter a valid email address.';
+    return '';
+  }
+  const monthError = index => S.validateMonth(state.months[C.months[index].key],C.months[index].options.map(o=>o.id));
+  function go(next) {
+    if(busy) return;
+    if(next > state.step) {
+      const identityError=validateIdentity(); if(identityError){ if(state.step!==0) render(0); error(identityError); return; }
+      for(let i=0;i<Math.min(next-1,3);i++){ const msg=monthError(i); if(msg){ if(state.step!==i+1) render(i+1); error(msg); return; } }
+    }
+    render(next); $('step-heading')?.focus();
+    if (state.step>0 && matchMedia('(max-width:760px)').matches) $('survey-main').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+  }
+  function render(step) {
+    state.step=step; error('');
+    $('intro-step').hidden=step!==0; $('month-step').hidden=!(step>=1&&step<=3); $('review-step').hidden=step!==4;
+    // Each visible section owns the heading ID so the skip link and focus target stay correct.
+    $('intro-step').querySelector('h2').id=step===0?'step-heading':'intro-heading';
+    const names=['Start',...C.months.map(m=>m.label.slice(0,3)),'Review'];
+    $('step-nav').innerHTML=names.map((name,i)=>`<button type="button" class="step-link ${i<step?'complete':''}" data-step="${i}" ${i===step?'aria-current="step"':''}><span class="step-number">${i<step?'✓':i+1}</span>${name}</button>`).join('');
+    $('step-label').textContent=['GETTING STARTED','DECEMBER 2026','JANUARY 2027','FEBRUARY 2027','REVIEW YOUR RESPONSE'][step];
+    $('step-count').textContent=`${step+1} / 5`; $('progress-fill').style.width=`${(step+1)*20}%`;
+    $('back-button').hidden=step===0; $('next-button').hidden=step===4; $('submit-button').hidden=step!==4;
+    updateNextButton();
+    $('clear-draft').hidden=step!==0;
+    if(step>=1&&step<=3) renderMonth(C.months[step-1]);
+    else $('month-step').innerHTML='';
+    if(step===4) renderReview(); else $('review-step').innerHTML='';
+    save();
+  }
+  function updateNextButton() {
+    const m=C.months[state.step-1], a=m&&state.months[m.key];
+    const label=a&&a.status==='available'&&a.preference==='ranked'?'Save ranking & continue':state.step===0?'Choose December times':state.step===3?'Review my availability':`Continue to ${C.months[state.step]?.label || 'review'}`;
+    $('next-button').innerHTML=escape(label)+' <span aria-hidden="true">→</span>';
+  }
+  function advance() {
+    if(busy)return;
+    const m=C.months[state.step-1], a=m&&state.months[m.key];
+    if(a&&a.status==='available'&&a.preference==='ranked') {
+      const msg=S.validateMonth({...a,confirmed:true},m.options.map(o=>o.id));
+      if(msg){error(msg);return;}
+      a.confirmed=true;save();
+    }
+    go(state.step+1);
+  }
+  function renderMonth(m) {
+    const a=state.months[m.key], selected=a.selected;
+    const choices=[['available','Choose dates'],['none','None work'],['unsure','Not sure yet']];
+    const header=`<p class="eyebrow">${escape(m.topic)}</p><h2 id="step-heading" tabindex="-1">${m.label} ${m.year}</h2><p class="step-description">Select every full 90-minute window you could attend. All times are ${escape(C.timezone_label)}.</p><div class="availability-status" role="group" aria-label="${m.label} availability">${choices.map(([id,label])=>`<button type="button" class="status-choice" data-status="${id}" aria-pressed="${a.status===id}">${label}</button>`).join('')}</div>`;
+    let content='';
+    if(a.status==='available') {
+      const groups=m.dates.map(d=>({date:d,options:m.options.filter(o=>o.date===d.date)}));
+      content=`<div class="month-meta"><span class="selected-count" aria-live="polite">${selected.length} selected</span><div class="selection-shortcuts"><button type="button" class="text-button" id="select-all-windows" ${selected.length===m.options.length?'disabled':''}>All times work</button><button type="button" class="text-button" id="clear-windows" ${selected.length?'':'disabled'}>Clear</button></div></div><p class="window-help">Overlapping starts are separate choices. Select both if either works.</p><div class="dates">${groups.map(g=>`<div class="date-group"><div class="date-label">${escape(g.options[0].short_date)}<span>${escape(g.options[0].weekday)}</span></div><div class="time-options" role="group" aria-label="${escape(g.options[0].date_label)}">${g.options.map(o=>`<label class="time-choice"><input type="checkbox" data-option="${o.id}" ${selected.includes(o.id)?'checked':''} aria-label="${escape(o.full_label)}"><span>${escape(o.time_label)}</span></label>`).join('')}</div></div>`).join('')}</div>`;
+      if(selected.length>=2) {
+        content+=`<div class="preference-section"><h3 class="preference-heading">Any preferences? <span class="optional-label">OPTIONAL</span></h3><div class="preference-options" role="group" aria-label="Preference method">${[['availability_only','Availability only'],['equal','All equally good'],['ranked','Rank these times']].map(([id,label])=>`<button class="status-choice" type="button" data-preference="${id}" aria-pressed="${a.preference===id}">${label}</button>`).join('')}</div>${a.preference==='ranked'?ranking(m,a):`<p class="ranking-help">${a.preference==='equal'?'Your selected windows will be recorded as equally good.':'You can continue now. Adding a ranking is entirely optional.'}</p>`}</div>`;
+      }
+    } else content=`<div class="status-message">${a.status==='none'?`We’ll record that none of the proposed ${m.label} windows work for you.`:`We’ll record that you don’t know your ${m.label} availability yet. You can return to update your response.`}</div>`;
+    $('month-step').innerHTML=header+content;
+    updateNextButton();
+  }
+  function ranking(m,a) {
+    return `<p class="ranking-help">Top choice first. Use the arrows to reorder, then choose “Save ranking &amp; continue.”</p><ol class="rank-list">${a.order.map((id,i)=>{const o=m.options.find(o=>o.id===id);return `<li class="rank-item"><span class="rank-index">${i+1}</span><span class="rank-text">${escape(o.short_date)} · ${escape(o.time_label)}</span><div class="rank-controls"><button type="button" data-move="-1" data-id="${id}" ${i===0?'disabled':''} aria-label="Move ${escape(o.full_label)} up">↑</button><button type="button" data-move="1" data-id="${id}" ${i===a.order.length-1?'disabled':''} aria-label="Move ${escape(o.full_label)} down">↓</button></div></li>`;}).join('')}</ol><p class="ranking-help">Prefer to skip this? Choose “Availability only” above.</p>`;
+  }
+  function renderReview() {
+    $('review-step').innerHTML=`<p class="eyebrow">ONE LAST LOOK</p><h2 id="step-heading" tabindex="-1">Ready to send?</h2><p class="step-description">Check your selections below. You can edit any month before sending.</p>${C.months.map((m,i)=>{
+      const a=state.months[m.key], ids=a.preference==='ranked'?a.order:a.selected;
+      const caption=a.status==='none'?'None of these windows work':a.status==='unsure'?'Availability not yet known':`${ids.length} available window${ids.length===1?'':'s'} · ${a.preference==='ranked'?'Ranked best to least preferred':a.preference==='equal'?'All equally good':'No ranking added'}`;
+      return `<div class="review-card"><div class="review-header"><h3>${m.label} ${m.year}</h3><button type="button" class="text-button" data-step="${i+1}" aria-label="Edit ${m.label}">Edit</button></div><p class="review-caption">${caption}</p>${ids.length?`<${a.preference==='ranked'?'ol':'ul'} class="review-windows">${ids.map(id=>`<li>${escape(m.options.find(o=>o.id===id).full_label)}</li>`).join('')}</${a.preference==='ranked'?'ol':'ul'}>`:''}</div>`;
+    }).join('')}<p class="review-identity">${token?'This response will be linked to your personal invitation.':`Submitting as <strong>${escape(state.name)}</strong> (${escape(state.email)}).`}</p><button type="button" class="text-button" data-step="0">Change response identity</button><label class="review-comments">Anything else we should know? <span class="optional-label">OPTIONAL</span><textarea id="comments-input" maxlength="2000" rows="3" placeholder="For example, a recurring scheduling constraint…">${escape(state.comments)}</textarea></label>`;
+  }
+  $('winter-survey').addEventListener('click',e=>{
+    const b=e.target.closest('button'); if(!b||busy)return;
+    if(b.dataset.step!==undefined) return go(Number(b.dataset.step));
+    const m=C.months[state.step-1]; if(!m)return;
+    let a=state.months[m.key];
+    if(b.dataset.status) { state.months[m.key]=b.dataset.status==='available'?{...a,status:'available'}:{...S.emptyMonth(),status:b.dataset.status}; renderMonth(m); save(); error(''); }
+    if(b.id==='select-all-windows'||b.id==='clear-windows') {
+      state.months[m.key]=S.reconcile(a,b.id==='select-all-windows'?m.options.map(o=>o.id):[]);
+      renderMonth(m);save();error('');
+      $(b.id==='select-all-windows'?'clear-windows':'select-all-windows')?.focus();
+    }
+    if(b.dataset.preference) {a.preference=b.dataset.preference;a.confirmed=false;renderMonth(m);save();error('');$('month-step').querySelector(`[data-preference="${a.preference}"]`)?.focus();}
+    if(b.dataset.move) {
+      a.order=S.move(a.order,b.dataset.id,Number(b.dataset.move));a.confirmed=false;renderMonth(m);save();
+      const controls=[...$('month-step').querySelectorAll(`[data-id="${b.dataset.id}"]`)];
+      (controls.find(c=>c.dataset.move===b.dataset.move&&!c.disabled)||controls.find(c=>!c.disabled))?.focus();
+    }
+  });
+  $('winter-survey').addEventListener('change',e=>{
+    if(e.target.dataset.option){const m=C.months[state.step-1],a=state.months[m.key],id=e.target.dataset.option;state.months[m.key]=S.reconcile(a,e.target.checked?[...a.selected,id]:a.selected.filter(v=>v!==id));renderMonth(m);save();error('');$('month-step').querySelector(`[data-option="${id}"]`)?.focus();}
+  });
+  $('winter-survey').addEventListener('input',e=>{
+    if(e.target.id==='participant-name')state.name=e.target.value;
+    if(e.target.id==='participant-email')state.email=e.target.value;
+    if(e.target.id==='comments-input')state.comments=e.target.value;
+    save();
+  });
+  $('step-nav').addEventListener('click',e=>{const b=e.target.closest('[data-step]');if(b)go(Number(b.dataset.step));});
+  $('next-button').addEventListener('click',advance);
+  $('back-button').addEventListener('click',()=>go(state.step-1));
+  $('soco-app').querySelector('.skip-link').addEventListener('click',e=>{e.preventDefault();const target=$('step-heading')||$('thank-you');target.focus();target.scrollIntoView({block:'start'});});
+  $('use-name').addEventListener('click',()=>{token='';state.namedOverride=true;syncIdentity();save();$('participant-name').focus();});
+  $('clear-draft').addEventListener('click',()=>{
+    if(!window.confirm('Clear the answers saved in this browser? This does not remove any response already sent.'))return;
+    state=fresh();token=S.validToken(requestedToken)?requestedToken:'';
+    try{localStorage.removeItem(draftKey);}catch(_){}
+    $('thank-you').hidden=true;$('winter-survey').hidden=false;syncIdentity();render(0);$('resume-notice').hidden=true;
+  });
+  function thanks() {
+    $('winter-survey').hidden=true;$('thank-you').hidden=false;$('clear-draft').hidden=false;$('step-label').textContent='THANK YOU';$('step-count').textContent='5 / 5';$('progress-fill').style.width='100%';
+    $('thanks-summary').innerHTML=C.months.map(m=>`<span class="summary-chip">${m.label.slice(0,3)} · ${state.months[m.key].status==='available'?`${state.months[m.key].selected.length} available`:state.months[m.key].status==='none'?'None work':'Not sure yet'}</span>`).join('');
+    if(preview){$('thanks-eyebrow').textContent='PREVIEW COMPLETE';$('thanks-heading').textContent='That’s how the survey will work.';$('thanks-message').textContent='This was a preview. No response was sent to Netlify.';}
+    else if(test){$('thanks-eyebrow').textContent='TEST RESPONSE SENT';$('thanks-message').textContent='This test response was sent to Netlify and will be excluded from the scheduling analysis.';}
+    $('thank-you').focus();
+  }
+  $('winter-survey').addEventListener('submit',async e=>{
+    e.preventDefault();if(busy)return;
+    if(state.step!==4){advance();return;}
+    const identityError=validateIdentity();if(identityError){render(0);error(identityError);return;}
+    for(let i=0;i<3;i++){const msg=monthError(i);if(msg){render(i+1);error(msg);return;}}
+    const fields={'respondent_token':token,'browser_id':browserId,'submission_id':state.submission_id,'is_test':test?'1':'0','identity_mode':token?'personal_link':'named','participant_name':token?'':state.name.trim(),'participant_email':token?'':state.email.trim().toLowerCase(),'comments':state.comments};
+    C.months.forEach(m=>{const a=state.months[m.key];Object.assign(fields,{[m.key+'_status']:a.status,[m.key+'_available_json']:JSON.stringify(a.selected),[m.key+'_preference_mode']:a.status==='available'?a.preference:'availability_only',[m.key+'_rank_json']:JSON.stringify(a.preference==='ranked'?a.order:[])});});
+    const data=new URLSearchParams(new FormData($('winter-survey')));Object.entries(fields).forEach(([key,value])=>data.set(key,value));
+    if(preview){state.sent=true;save();thanks();return;}
+    busy=true;$('winter-survey').inert=true;$('step-nav').inert=true;$('clear-draft').disabled=true;$('submit-button').disabled=true;$('submit-button').textContent='Sending…';error('');
+    const controller=new AbortController(), timeout=setTimeout(()=>controller.abort(),25000);
+    try {
+      const response=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data.toString(),signal:controller.signal});
+      if(!response.ok)throw new Error('HTTP '+response.status);
+      state.sent=true;save();thanks();
+    } catch (_) {error('We couldn’t confirm your response was received. Your answers are still here. Please check your connection and try again.');}
+    finally {clearTimeout(timeout);busy=false;$('winter-survey').inert=false;$('step-nav').inert=false;$('clear-draft').disabled=false;$('submit-button').disabled=false;$('submit-button').innerHTML='Send my availability <span aria-hidden="true">→</span>';if(!$('form-error').hidden)$('form-error').focus();}
+  });
+  $('update-response').addEventListener('click',()=>{state.sent=false;state.submission_id=uuid();$('thank-you').hidden=true;$('winter-survey').hidden=false;render(4);$('step-heading').focus();});
+  if(preview||test){$('preview-banner').hidden=false;$('preview-banner').textContent=preview?'PREVIEW · Try every interaction. Responses are not sent.':'TEST MODE · Responses will be sent to Netlify and excluded from scheduling results.';}
+  if(!storageOK)$('draft-note').textContent='Progress stays on this page; browser storage is unavailable.';
+  if(restored){$('resume-notice').hidden=false;$('resume-notice').textContent=state.sent?(preview?'You completed a preview in this browser. You can review your answers and try again.':'A response was already sent from this browser. You can review your answers and send an update.'):'Your saved answers are ready. Continue to review or change them.';if(state.sent){state.submission_id=uuid();state.sent=false;}}
+  syncIdentity();render(0);
+})();
+
+</script>
+
+```

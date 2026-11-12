@@ -39,3 +39,10 @@ workflows/migration_history/local_artifacts/
 /START_HERE_SOCO_OPERATIONS.md
 /templates/
 
+# SoCO scheduling workflow private files
+/data/raw_private/netlify/scheduling/
+/data/working_private/scheduling/
+/data/processed_private/scheduling/
+/survey_build/scheduling/
+__pycache__/
+*.pyc

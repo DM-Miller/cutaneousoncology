@@ -1,2 +1,9 @@
 data/raw_private/migration_backups/**
 workflows/**
+
+# SoCO scheduling workflow non-public files
+/data/raw_private/**
+/data/working_private/**
+/data/processed_private/**
+/workflows/scheduling/**
+/survey_build/scheduling/**
