@@ -1533,7 +1533,7 @@ readr::write_csv(
 # PAGE OBJECTS
 # ============================================================
 
-interpath_recap_href <- "/journal_club/November 20 2026 - INTerpath-001/"
+interpath_recap_href <- "https://societyofcutaneousoncology.org/journal_club/november%2020%202026%20-%20interpath-001/"
 
 meeting_archive_links <- tribble(
   ~meeting_folder,                                                     ~archive_href,
@@ -2038,7 +2038,8 @@ if (nrow(meeting_summary)) {
               )
             else '',
           '</div>',
-        '</a>'
+        '</a>',
+        sep = ""
       )
     }
   }
