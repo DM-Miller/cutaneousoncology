@@ -895,7 +895,7 @@ The group discussed the two-year recurrence-free survival benefit, the delay bef
 ::: {.soco-jc-recap-footer}
 
 ::: {.soco-jc-recap-actions}
-[Read meeting recap](journal_club/2026-11-20_interpath/index.qmd){.soco-jc-recap-link}
+[Read meeting recap](journal_club/November 20 2026 - INTerpath-001/index.qmd){.soco-jc-recap-link}
 [Read the article](https://doi.org/10.1056/NEJMoa2609762){.soco-jc-recap-link .secondary}
 :::
 
