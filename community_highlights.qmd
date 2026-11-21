@@ -1533,7 +1533,7 @@ readr::write_csv(
 # PAGE OBJECTS
 # ============================================================
 
-interpath_recap_href <- "/journal_club/2026-11-20_interpath/"
+interpath_recap_href <- "/journal_club/November 20 2026 - INTerpath-001/"
 
 meeting_archive_links <- tribble(
   ~meeting_folder,                                                     ~archive_href,
