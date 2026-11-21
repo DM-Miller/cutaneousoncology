@@ -1128,18 +1128,10 @@ body.ip-preview main.content:has(.ip-daromun-hero) {
 <header class="ip-head ip-daromun-hero" id="interpath-top">
 <div class="ip-kicker">SoCO Journal Club · November 20, 2026</div>
 <h1>INTerpath-001</h1>
-<p class="ip-lede">At two years, an estimated 12 more patients per 100 were alive without recurrence when individualized neoantigen therapy was added to pembrolizumab. For a patient already planning adjuvant PD-1 blockade, that difference answers a practical question. For someone leaning toward surveillance, or someone we see before surgery, the decision is different.</p>
+<p class="ip-lede">After surgery for melanoma, how much does adding an individualized neoantigen vaccine to pembrolizumab improve the chance of remaining recurrence-free? In INTerpath-001, an estimated 12 more patients per 100 were alive and recurrence-free at two years with the combination than with pembrolizumab alone. For a patient already planning adjuvant PD-1 blockade, that comparison speaks directly to the decision at hand. For someone leaning toward surveillance, or someone we see before surgery, the decision is different.</p>
 <div class="ip-accent" aria-hidden="true"></div>
 </header>
 
-```
-
-```{r}
-#| label: meeting-pulse
-#| echo: false
-#| results: asis
-
-raw_recap_html(render_attendance_pulse(interpath_attendance$summary))
 ```
 
 ```{=html}
@@ -1156,7 +1148,8 @@ raw_recap_html(render_attendance_pulse(interpath_attendance$summary))
 <img class="ip-paper-art" src="INTerpath_001_Journal_Club_Card.svg" width="1200" height="675" alt="SoCO Journal Club, November 20, 2026. INTerpath-001: intismeran plus pembrolizumab for resected stage IIB–IV cutaneous melanoma."></article>
 <div class="ip-question-card"><strong>After melanoma surgery, who would add intismeran?</strong></div>
 <div class="ip-facts"><span>Randomized, double-blind phase III trial</span><span>1,137 participants</span><span>Median follow-up 24.6 months</span></div>
-<p class="ip-copy">Nikhil Khushalani opened with KEYNOTE-942, the randomized phase IIb study that prompted this larger trial. INTerpath-001 enrolled patients with completely resected stage IIB–IV cutaneous melanoma. All participants were assigned to adjuvant pembrolizumab. Randomization allocated 757 to receive up to nine additional injections of intismeran autogene, an mRNA therapy designed from each patient’s tumor, and 380 to receive diluent placebo.</p>
+<p class="ip-copy">For our November Journal Club, SoCO members gathered to discuss INTerpath-001 with colleagues from Moderna and Merck who had worked on the trial. We walked through the paper figure by figure and discussed how we’d explain the results to patients at different stages of melanoma. Nikhil Khushalani opened with KEYNOTE-942, the randomized phase IIb study that prompted this larger trial.</p>
+<p class="ip-copy">INTerpath-001 enrolled patients with completely resected stage IIB–IV cutaneous melanoma. All participants were assigned to adjuvant pembrolizumab. Randomization allocated 757 to receive up to nine additional injections of intismeran autogene, an mRNA therapy designed from each patient’s tumor, and 380 to receive diluent placebo.</p>
 <figure class="ip-results" aria-labelledby="ip-results-title"><figcaption id="ip-results-title">Estimated survival at 24 months</figcaption>
 <div class="ip-legend"><span><i class="ip-combo" aria-hidden="true"></i>Intismeran + pembrolizumab (n = 757)</span><span><i class="ip-control" aria-hidden="true"></i>Placebo + pembrolizumab (n = 380)</span></div>
 <div class="ip-outcome"><strong>Recurrence-free survival</strong><div class="ip-scale"><div class="ip-rail" aria-label="Intismeran group, 82.2 percent"><span class="ip-bar-track" aria-hidden="true"><i class="ip-combo" style="width:82.2%"></i></span><b>82.2%</b></div><div class="ip-rail" aria-label="Placebo group, 70.0 percent"><span class="ip-bar-track" aria-hidden="true"><i class="ip-control" style="width:70%"></i></span><b>70.0%</b></div></div><small>HR 0.58 (95% CI 0.45–0.75)<br>P &lt; 0.001</small></div>
@@ -1330,6 +1323,14 @@ raw_recap_html(interpath_charts[["perspectives"]])
 </section>
 ```
 
+```{r}
+#| label: meeting-pulse
+#| echo: false
+#| results: asis
+
+raw_recap_html(render_attendance_pulse(interpath_attendance$summary))
+```
+
 ::: {.ip-section .ip-addon}
 
 
@@ -1372,7 +1373,7 @@ local({
 <section class="ip-section" id="next-question">
 <div class="ip-section-kicker">Where the discussion landed</div>
 <h2>What would we take back to clinic?</h2>
-<div class="ip-perspective-card"><p class="ip-voice">First ask which decision the patient actually faces. If they already plan to take pembrolizumab, INTerpath-001 gives them an estimate of what adding intismeran could buy over two years. If they are choosing between treatment and surveillance, they also need an estimate of their risk after surgery alone. If surgery is still ahead, the order of treatment is itself part of the decision.</p></div>
+<div class="ip-perspective-card"><p class="ip-voice">The question changes depending on when we see the patient. For someone already planning adjuvant pembrolizumab, INTerpath-001 helps quantify the added benefit of intismeran at two years. For someone considering surveillance, the conversation starts with their risk of recurrence after surgery alone. And for someone we meet before surgery, there’s an earlier question: should treatment begin before the operation?</p></div>
 <p class="ip-copy">Building on SoCO’s <i>Art of Authorship</i> workshop, David Miller invited participants interested in developing a <i>Perspective on the Science</i> to reach out with the contribution they would like to make.</p></section>
 <footer class="ip-footer"><p>Society of Cutaneous Oncology · Journal Club · November 20, 2026</p><a href="https://societyofcutaneousoncology.org/jc">More SoCO Journal Clubs</a></footer>
 ```
