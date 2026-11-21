@@ -1,85 +1,89 @@
 person_id,name_key,name,audience,company,affiliation_display,meetings_attended,total_minutes
 SOCO-P0082,laurenoloughlin,Lauren O'Loughlin,Academic / clinical,NA,Beth Israel Deaconess Medical Center,1,59.73
-SOCO-P0075,mollyyancovitz,Molly Yancovitz,Academic / clinical,NA,Beth Israel Deaconess Medical Center,4,249.16
+SOCO-P0075,mollyyancovitz,Molly Yancovitz,Academic / clinical,NA,Beth Israel Deaconess Medical Center,5,345.18
 SOCO-P0094,reededrews,Reed E. Drews,Academic / clinical,NA,Beth Israel Deaconess Medical Center,1,95.65
 SOCO-P0002,adewunmioadelaja,Adewunmi O. Adelaja,Academic / clinical,NA,Beth Israel Lahey,6,550.24
 SOCO-P0105,shannonsaed,Shannon Saed,Academic / clinical,NA,CUNY School of Medicine,1,71.27
-SOCO-P0038,larisageskin,Larisa Geskin,Academic / clinical,NA,Columbia University,2,73.47
+SOCO-P0038,larisageskin,Larisa Geskin,Academic / clinical,NA,Columbia University,3,285.95
 SOCO-P0030,mariamelashmawy,Mariam El-Ashmawy,Academic / clinical,NA,Columbia University,4,229.45
 SOCO-P0097,rongejman,Ron Gejman,Academic / clinical,NA,Columbia University,1,76.22
 SOCO-P0108,annwsilk,Ann W. Silk,Academic / clinical,NA,Dana-Farber Cancer Institute,3,316.98
 SOCO-P0084,itaimpashtan,Itai M. Pashtan,Academic / clinical,NA,Dana-Farber Cancer Institute,2,131.91
 SOCO-P0151,jamesadecaprio,James A. DeCaprio,Academic / clinical,NA,Dana-Farber Cancer Institute,1,45.72
 SOCO-P0019,justinevcohen,Justine V. Cohen,Academic / clinical,NA,Dana-Farber Cancer Institute,2,81.2
-SOCO-P0053,karamkhaddour,Karam Khaddour,Academic / clinical,NA,Dana-Farber Cancer Institute,4,276.72
+SOCO-P0053,karamkhaddour,Karam Khaddour,Academic / clinical,NA,Dana-Farber Cancer Institute,5,375.65000000000003
 SOCO-P0200,desireeratner,Desiree Ratner,Academic / clinical,NA,"Désirée Ratner, M.D., P.C.",1,20.766667
-SOCO-P0122,vishalpatel,Vishal Patel,Academic / clinical,NA,George Washington University,9,651.4466669999999
+SOCO-P0122,vishalpatel,Vishal Patel,Academic / clinical,NA,George Washington University,10,741.3466669999999
 SOCO-P0147,baileyclairesmith,Bailey Claire Smith,Academic / clinical,NA,Harvard Medical School,1,36.33
 SOCO-P0015,anniechang,Annie Chang,Academic / clinical,NA,Icahn School of Medicine at Mount Sinai,1,108.23
 SOCO-P0050,jenniferdesimone,Jennifer DeSimone,Academic / clinical,NA,Inova,3,240.88000000000002
 SOCO-P0040,govindwarrier,Govind Warrier,Academic / clinical,NA,Johns Hopkins Medicine,1,95.366667
-SOCO-P0115,suzannetopalian,Suzanne Topalian,Academic / clinical,NA,Johns Hopkins Medicine,7,537.826667
+SOCO-P0115,suzannetopalian,Suzanne Topalian,Academic / clinical,NA,Johns Hopkins Medicine,8,637.246667
 SOCO-P0156,shinyauamano,Shinya U Amano,Academic / clinical,NA,MaineHealth,1,96.68
 SOCO-P0118,vatchetchekmedyian,Vatche Tchekmedyian,Academic / clinical,NA,MaineHealth,2,178.43
-SOCO-P0051,howardlkaufman,Howard L. Kaufman,Academic / clinical,NA,Mass Eye and Ear,8,629.6966669999999
+SOCO-P0051,howardlkaufman,Howard L. Kaufman,Academic / clinical,NA,Mass Eye and Ear,9,722.276667
 SOCO-P0034,jessicalfewkes,Jessica L. Fewkes,Academic / clinical,NA,Mass Eye and Ear,5,367.366667
-SOCO-P0031,kevinsemerick,Kevin S. Emerick,Academic / clinical,NA,Mass Eye and Ear,5,428.54999999999995
-SOCO-P0041,sameergupta,Sameer Gupta,Academic / clinical,NA,Mass Eye and Ear,8,694.5533330000001
-SOCO-P0011,williamjbenjamin,William J. Benjamin,Academic / clinical,NA,Mass Eye and Ear,2,172.16666700000002
+SOCO-P0031,kevinsemerick,Kevin S. Emerick,Academic / clinical,NA,Mass Eye and Ear,6,510.77
+SOCO-P0041,sameergupta,Sameer Gupta,Academic / clinical,NA,Mass Eye and Ear,9,790.6833330000001
+SOCO-P0011,williamjbenjamin,William J. Benjamin,Academic / clinical,NA,Mass Eye and Ear,3,269.21666700000003
 SOCO-P0003,ajaynairsharma,Ajay Nair Sharma,Academic / clinical,NA,Mass General Brigham,5,297.94
 SOCO-P0059,aleigharlawless,Aleigha R. Lawless,Academic / clinical,NA,Mass General Brigham,5,443.69333300000005
 SOCO-P0110,alexsorrentino,Alex Sorrentino,Academic / clinical,NA,Mass General Brigham,4,190.78
 SOCO-P0184,alexisrutt,Alexis Rutt,Academic / clinical,NA,Mass General Brigham,1,76.58
-SOCO-P0056,andrewdknight,Andrew D. Knight,Academic / clinical,NA,Mass General Brigham,2,161.57
+SOCO-P0056,andrewdknight,Andrew D. Knight,Academic / clinical,NA,Mass General Brigham,3,262.3
 SOCO-P0180,annekathryngoodman,Annekathryn Goodman,Academic / clinical,NA,Mass General Brigham,1,88.58
 SOCO-P0017,christineccimoch,Christine C. Cimoch,Academic / clinical,NA,Mass General Brigham,5,420.733333
-SOCO-P0168,daniellebrazel,Danielle Brazel,Academic / clinical,NA,Mass General Brigham,2,133.32999999999998
-SOCO-P0074,davidmmiller,David M. Miller,Academic / clinical,NA,Mass General Brigham,10,1067.0966669999998
+SOCO-P0168,daniellebrazel,Danielle Brazel,Academic / clinical,NA,Mass General Brigham,3,237.17999999999998
+SOCO-P0074,davidmmiller,David M. Miller,Academic / clinical,NA,Mass General Brigham,11,1168.5166669999999
 SOCO-P0060,donlawrence,Don Lawrence,Academic / clinical,NA,Mass General Brigham,1,102.85
-SOCO-P0013,elizabethibuchbinder,Elizabeth I. Buchbinder,Academic / clinical,NA,Mass General Brigham,8,710.866667
+SOCO-P0013,elizabethibuchbinder,Elizabeth I. Buchbinder,Academic / clinical,NA,Mass General Brigham,9,805.68666699999994
 SOCO-P0063,elizabethjlilley,Elizabeth J. Lilley,Academic / clinical,NA,Mass General Brigham,1,19.9
 SOCO-P0068,jamesfmcintyre,James F. McIntyre,Academic / clinical,NA,Mass General Brigham,1,102.82
-SOCO-P0022,julianeandradeczapla,Juliane Andrade Czapla,Academic / clinical,NA,Mass General Brigham,8,614.256667
+SOCO-P0022,julianeandradeczapla,Juliane Andrade Czapla,Academic / clinical,NA,Mass General Brigham,9,649.276667
 SOCO-P0076,kamanehmontazeri,Kamaneh Montazeri,Academic / clinical,NA,Mass General Brigham,5,307.753333
-SOCO-P0098,kristamrubin,Krista M. Rubin,Academic / clinical,NA,Mass General Brigham,6,489.14000000000004
+SOCO-P0098,kristamrubin,Krista M. Rubin,Academic / clinical,NA,Mass General Brigham,7,580.94
 SOCO-P0112,madelienestump,Madeliene Stump,Academic / clinical,NA,Mass General Brigham,1,77.92
-SOCO-P0119,manishathakuria,Manisha Thakuria,Academic / clinical,NA,Mass General Brigham,6,457.24
-SOCO-P0077,meghanjmooradian,Meghan J. Mooradian,Academic / clinical,NA,Mass General Brigham,3,115.19999999999999
+SOCO-P0119,manishathakuria,Manisha Thakuria,Academic / clinical,NA,Mass General Brigham,7,557.1700000000001
+SOCO-P0077,meghanjmooradian,Meghan J. Mooradian,Academic / clinical,NA,Mass General Brigham,4,162.48
 SOCO-P0008,minabakhtiar,Mina Bakhtiar,Academic / clinical,NA,Mass General Brigham,2,145.03
 SOCO-P0178,patrickkurpaska,Patrick Kurpaska,Academic / clinical,NA,Mass General Brigham,2,88.36666699999999
-SOCO-P0095,rhodaalani,Rhoda Alani,Academic / clinical,NA,Mass General Brigham,3,297.05999999999995
+SOCO-P0095,rhodaalani,Rhoda Alani,Academic / clinical,NA,Mass General Brigham,4,396.53999999999996
 SOCO-P0154,rileymfadden,Riley M. Fadden,Academic / clinical,NA,Mass General Brigham,1,45.3
 SOCO-P0071,rossdmerkin,Ross D. Merkin,Academic / clinical,NA,Mass General Brigham,7,534.53
 SOCO-P0113,ryanjsullivan,Ryan J. Sullivan,Academic / clinical,NA,Mass General Brigham,3,203.39
 SOCO-P0010,sarabehbahani,Sara Behbahani,Academic / clinical,NA,Mass General Brigham,2,158.87
 SOCO-P0020,soniacohen,Sonia Cohen,Academic / clinical,NA,Mass General Brigham,3,290.65000000000003
+SOCO-P0069,sophiakmckinley,Sophia K. McKinley,Academic / clinical,NA,Mass General Brigham,1,74.73
 SOCO-P0106,tatyanasharova,Tatyana Sharova,Academic / clinical,NA,Mass General Brigham,3,259.346667
 SOCO-P0087,toddfranklinpearson,Todd Franklin Pearson,Academic / clinical,NA,Mass General Brigham,1,77.5
 SOCO-P0117,taylorharp,Taylor Harp,Academic / clinical,NA,MedStar Health,1,15.42
 SOCO-P0009,christopherbarker,Christopher Barker,Academic / clinical,NA,Memorial Sloan Kettering Cancer Center,1,99
 SOCO-P0021,danielcoit,Daniel Coit,Academic / clinical,NA,Memorial Sloan Kettering Cancer Center (retired),2,178.633333
 SOCO-P0120,kennethytsai,Kenneth Y Tsai,Academic / clinical,NA,Moffitt Cancer Center,5,404.27
-SOCO-P0055,nikhilkhushalani,Nikhil Khushalani,Academic / clinical,NA,Moffitt Cancer Center,5,384.28999999999996
-SOCO-P0121,vernsondak,Vern Sondak,Academic / clinical,NA,Moffitt Cancer Center,7,641.83
-SOCO-P0194,mayadimitrova,Maya Dimitrova,Academic / clinical,NA,NYU Langone Health,1,101.533333
-SOCO-P0045,isaacbrownell,Isaac Brownell,Academic / clinical,NA,National Institutes of Health,9,834.0099999999999
+SOCO-P0055,nikhilkhushalani,Nikhil Khushalani,Academic / clinical,NA,Moffitt Cancer Center,6,483.03999999999996
+SOCO-P0121,vernsondak,Vern Sondak,Academic / clinical,NA,Moffitt Cancer Center,8,745.5600000000001
+SOCO-P0194,mayadimitrova,Maya Dimitrova,Academic / clinical,NA,NYU Langone Health,2,187.003333
+SOCO-P0045,isaacbrownell,Isaac Brownell,Academic / clinical,NA,National Institutes of Health,10,897.6899999999998
 SOCO-P0037,khalidgarman,Khalid Garman,Academic / clinical,NA,National Institutes of Health,1,96.92
 SOCO-P0196,laurenfleshner,Lauren Fleshner,Academic / clinical,NA,New York Medical College,1,101.066667
 SOCO-P0046,jacobchoi,Jacob Choi,Academic / clinical,NA,Northwestern Medicine,2,90.75
 SOCO-P0114,sunandanachandra,Sunandana Chandra,Academic / clinical,NA,Northwestern University,3,204.67
-SOCO-P0012,kathrynbollin,Kathryn Bollin,Academic / clinical,NA,Scripps Health,2,198.71
+SOCO-P0102,sarahweiss,Sarah Weiss,Academic / clinical,NA,Rutgers Cancer Institute of New Jersey,1,94.05
+SOCO-P0012,kathrynbollin,Kathryn Bollin,Academic / clinical,NA,Scripps Health,3,299.56
 SOCO-P0064,lisazaba,Lisa Zaba,Academic / clinical,NA,Stanford University,4,287.813333
-SOCO-P0018,claireverschraegen,Claire Verschraegen,Academic / clinical,NA,The Ohio State University,3,263.65999999999997
+SOCO-P0018,claireverschraegen,Claire Verschraegen,Academic / clinical,NA,The Ohio State University,4,360.98999999999995
+SOCO-P0025,davidrcarr,David R. Carr,Academic / clinical,NA,The Ohio State University,1,6.45
 SOCO-P0149,devaratimitra,Devarati Mitra,Academic / clinical,NA,The University of Texas MD Anderson Cancer Center,1,33.13
-SOCO-P0072,michaelkwong,Michael K. Wong,Academic / clinical,NA,The University of Texas MD Anderson Cancer Center,4,324.386667
-SOCO-P0001,adewolesadamson,Adewole S. Adamson,Academic / clinical,NA,The University of Texas at Austin,6,326.5
+SOCO-P0072,michaelkwong,Michael K. Wong,Academic / clinical,NA,The University of Texas MD Anderson Cancer Center,5,409.206667
+SOCO-P0001,adewolesadamson,Adewole S. Adamson,Academic / clinical,NA,The University of Texas at Austin,7,397.95
+SOCO-P0182,justinmoyers,Justin Moyers,Academic / clinical,NA,UC San Diego Health,1,101.78
 SOCO-P0101,sashahussain,Sasha Hussain,Academic / clinical,NA,UMass Chan Medical School,1,75.53
-SOCO-P0100,sanjaychandrasekaran,Sanjay Chandrasekaran,Academic / clinical,NA,UT Southwestern Medical Center,1,29.17
-SOCO-P0126,mehranbehrujyusuf,Mehran Behruj Yusuf,Academic / clinical,NA,University of Alabama at Birmingham,5,490.756667
+SOCO-P0100,sanjaychandrasekaran,Sanjay Chandrasekaran,Academic / clinical,NA,UT Southwestern Medical Center,2,127.94
+SOCO-P0126,mehranbehrujyusuf,Mehran Behruj Yusuf,Academic / clinical,NA,University of Alabama at Birmingham,6,593.756667
 SOCO-P0036,frankworden,Frank Worden,Academic / clinical,NA,University of Michigan,2,127.42
 SOCO-P0029,jonathanadyer,Jonathan A. Dyer,Academic / clinical,NA,University of Missouri,1,97.466667
-SOCO-P0024,davidjsavage,David J Savage,Academic / clinical,NA,University of New Mexico Comprehensive Cancer Center,3,321.7
-SOCO-P0035,francescollichio,Frances Collichio,Academic / clinical,NA,University of North Carolina,6,317.616667
+SOCO-P0024,davidjsavage,David J Savage,Academic / clinical,NA,University of New Mexico Comprehensive Cancer Center,4,423.88
+SOCO-P0035,francescollichio,Frances Collichio,Academic / clinical,NA,University of North Carolina,7,374.566667
 SOCO-P0058,lauraferris,Laura Ferris,Academic / clinical,NA,University of North Carolina,3,220.963333
 SOCO-P0066,mariamelendezgonzalez,Maria Melendez-Gonzalez,Academic / clinical,NA,University of North Carolina,1,56.63
 SOCO-P0014,candicedchurch,Candice D Church,Academic / clinical,NA,University of Washington,1,106.65
@@ -109,7 +113,13 @@ SOCO-P0171,leonsakkal,Leon Sakkal,Industry,Bristol Myers Squibb,Bristol Myers Sq
 SOCO-P0136,omidnajmi,Omid Najmi,Industry,Bristol Myers Squibb,Bristol Myers Squibb,1,75.23
 SOCO-P0189,rajpatel,Raj Patel,Industry,Bristol Myers Squibb,Bristol Myers Squibb,1,99.933333
 SOCO-P0127,adamwhalley,Adam Whalley,Industry,Replimune,Immatics,1,99.13
+SOCO-P0195,dmitrigrebennik,Dmitri Grebennik,Industry,"Merck & Co., Inc.","Merck & Co., Inc.",1,100.38
+SOCO-P0205,lifan,Li Fan,Industry,"Merck & Co., Inc.","Merck & Co., Inc.",1,99.45
+SOCO-P0191,scottmazzeo,Scott Mazzeo,Industry,"Merck & Co., Inc.","Merck & Co., Inc.",1,100.67
+SOCO-P0202,toshifumihoki,Toshifumi Hoki,Industry,"Merck & Co., Inc.","Merck & Co., Inc.",1,99
 SOCO-P0201,josephgrossman,Joseph Grossman,Industry,Moderna,Moderna,1,95.666667
+SOCO-P0203,laureensojalvo,Laureen S. Ojalvo,Industry,Moderna,"Moderna, Inc.",1,99.47
+SOCO-P0204,michellebrown,Michelle Brown,Industry,Moderna,"Moderna, Inc.",1,98.52
 SOCO-P0161,alfredocovelli,Alfredo Covelli,Industry,Philogen,Philogen,2,183.7
 SOCO-P0165,claudiacomacchio,Claudia Comacchio,Industry,Philogen,Philogen,1,93.17
 SOCO-P0185,donatomichelecosi,Donato Michele Cosi,Industry,Philogen,Philogen,1,91.18

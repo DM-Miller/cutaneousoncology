@@ -155,6 +155,10 @@ main.content {
   line-height:1.72;
 }
 
+.ch-section-head p + p {
+  margin-top:.8rem;
+}
+
 .ch-convener-note {
   margin-top:1rem;
   padding:.82rem 1rem;
@@ -1079,7 +1083,7 @@ source(registry_view_script, local = TRUE)
 
 # Full-program count is intentionally separate from the tracked registry subset.
 # Update this single value when a new SoCO meeting occurs.
-soco_total_meetings <- 80L
+soco_total_meetings <- 81L
 
 
 # ============================================================
@@ -1529,6 +1533,8 @@ readr::write_csv(
 # PAGE OBJECTS
 # ============================================================
 
+interpath_recap_href <- "/journal_club/2026-11-20_interpath/"
+
 meeting_archive_links <- tribble(
   ~meeting_folder,                                                     ~archive_href,
 
@@ -1635,6 +1641,24 @@ A record of the people who keep showing up: clinicians, researchers, trainees, a
 </div>
 
 <div class="ch-wrap">
+
+<section class="ch-section" id="interpath-001">
+<div class="ch-section-head">
+<div class="ch-eyebrow">Journal Club · November 20, 2026</div>
+
+## INTerpath-001 in resected melanoma
+
+<p>
+Forty people joined SoCO’s 81st meeting to discuss adding intismeran autogene, a therapy designed around each patient’s tumor neoantigens, to pembrolizumab after melanoma surgery. Thirty-six attended for at least an hour.
+</p>
+<p>
+Andrew Knight walked through the recurrence-free survival curves, which began to separate around six months. When Sameer Gupta asked who might miss out on treatment, Michelle Brown explained that some patients could not enter the trial because their tumor samples failed its initial quality checks. Suzanne Topalian asked whether the T cells that expanded during treatment recognized the neoantigens selected for each patient.
+</p>
+<p>
+Six industry colleagues joined the discussion. Li Fan, Dmitri Grebennik, Toshifumi Hoki, and Scott Mazzeo attended from Merck, and Michelle Brown and Laureen Ojalvo attended from Moderna. <a href="`r interpath_recap_href`">Read the full Journal Club recap</a>.
+</p>
+</div>
+</section>
 
 <section class="ch-section">
 <div class="ch-section-head">
@@ -1936,6 +1960,13 @@ if (nrow(meeting_summary)) {
     left_join(
       meeting_archive_links,
       by = "meeting_folder"
+    ) |>
+    mutate(
+      archive_href = case_when(
+        meeting_date == as.Date("2026-11-20") & meeting_type == "Journal Club" ~
+          interpath_recap_href,
+        TRUE ~ archive_href
+      )
     ) |>
     arrange(desc(meeting_date), meeting_folder)
 

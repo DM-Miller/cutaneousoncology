@@ -307,31 +307,10 @@ toc: false
     box-shadow: 0 16px 44px rgba(4,27,51,0.07);
   }
 
-  .soco-jc-next-card::after {
-    content: "11.20";
-    position: absolute;
-    right: 1.6rem;
-    bottom: -2.8rem;
-    color: rgba(15,127,134,0.055);
-    font-size: clamp(6rem, 14vw, 11rem);
-    font-weight: 850;
-    line-height: 1;
-    pointer-events: none;
-  }
-
   .soco-jc-next-copy {
     position: relative;
     z-index: 1;
     max-width: 780px;
-  }
-
-  .soco-jc-next-label {
-    margin-bottom: 0.55rem;
-    color: var(--soco-teal);
-    font-size: 0.76rem;
-    font-weight: 850;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
   }
 
   .soco-jc-next h2 {
@@ -348,27 +327,6 @@ toc: false
     color: #526574;
     font-size: 1.05rem;
     line-height: 1.7;
-  }
-
-  .soco-jc-next-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    margin-top: 1.35rem;
-    padding: 0.55rem 0.82rem;
-    border: 1px solid rgba(15,127,134,0.28);
-    border-radius: 999px;
-    background: rgba(255,255,255,0.82);
-    color: var(--soco-navy);
-    font-size: 0.82rem;
-    font-weight: 780;
-  }
-
-  .soco-jc-next-dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 999px;
-    background: var(--soco-coral);
   }
 
   /* =========================================================
@@ -757,11 +715,6 @@ toc: false
       border-radius: 0.95rem;
     }
 
-    .soco-jc-next-card::after {
-      right: -0.5rem;
-      bottom: -1.6rem;
-    }
-
     .soco-jc-current-top,
     .soco-jc-current-body {
       padding: 1.35rem 1.15rem;
@@ -853,8 +806,8 @@ A multidisciplinary forum for examining practice-changing and practice-informing
 :::
 
 ::: {.soco-actions}
-[Next Journal Club](#next-journal-club){.btn .btn-primary}
-[Meeting recaps](#meeting-recaps){.btn .btn-outline-primary}
+[Meeting recaps](#meeting-recaps){.btn .btn-primary}
+[Next Journal Club](#next-journal-club){.btn .btn-outline-primary}
 [Article archive](#article-archive){.btn .btn-outline-primary}
 [Interactive timeline](https://cutaneousoncology.shinyapps.io/soco_journal_club_timeline/){.btn .btn-outline-primary}
 :::
@@ -885,22 +838,9 @@ Beginning with selected meetings in late 2025 and continuing in 2026, we are als
 
 ::::: {.soco-jc-next-copy}
 
-::: {.soco-jc-next-label}
-Coming next
-:::
+## Next Journal Club {#next-meeting-heading}
 
-## INTerpath after ESMO
-
-**Friday, November 20, 2026 · 3:30 PM ET**
-
-Our next Journal Club will turn to **INTerpath** following its ESMO presentation. We will use the same evidence-first format: what the study actually establishes, where uncertainty remains, and how the results should be interpreted in the context of contemporary cutaneous oncology practice.
-
-Meeting materials and the primary publication will be added here as they become available.
-
-<div class="soco-jc-next-status">
-  <span class="soco-jc-next-dot"></span>
-  Meeting scheduled · November 20 at 3:30 PM ET
-</div>
+The date and paper for our next meeting are still to be determined.
 
 :::::
 
@@ -917,13 +857,57 @@ Meeting materials and the primary publication will be added here as they become 
 The conversations behind the papers
 :::
 
-## Meeting recaps
+## Meeting recaps {#meeting-recaps-heading}
 
 For selected Journal Clubs, we preserve the conversation behind the paper: the central question, the discussion it generated, who was in the room, and where the group landed.
 
 :::::::
 
 :::::: {.soco-jc-recap-list}
+
+::::: {.soco-jc-recap-card}
+
+::: {.soco-jc-recap-art}
+![](journal_club/November 20 2026 - INTerpath-001/INTerpath_001_Journal_Club_Card.svg){alt="INTerpath-001 meeting card for the November 20, 2026 SoCO Journal Club on adjuvant therapy for resected melanoma"}
+:::
+
+:::: {.soco-jc-recap-copy}
+
+::: {.soco-jc-recap-date}
+November 20, 2026 · SoCO Journal Club
+:::
+
+::: {.soco-jc-recap-title}
+INTerpath-001: Intismeran Plus Pembrolizumab in Resected Melanoma
+:::
+
+::: {.soco-jc-recap-divider}
+:::
+
+::: {.soco-jc-recap-question}
+After melanoma surgery, which patients would we offer intismeran in addition to pembrolizumab?
+:::
+
+::: {.soco-jc-recap-description}
+The group discussed the two-year recurrence-free survival benefit, the delay before the curves separated, and how stage, toxicity, and cost shaped treatment choices. Colleagues from Moderna and Merck joined the discussion of trial design and delivery.
+:::
+
+::: {.soco-jc-recap-footer}
+
+::: {.soco-jc-recap-actions}
+[Read meeting recap](journal_club/2026-11-20_interpath/index.qmd){.soco-jc-recap-link}
+[Read the article](https://doi.org/10.1056/NEJMoa2609762){.soco-jc-recap-link .secondary}
+:::
+
+::: {.soco-jc-recap-meta}
+40 attendees · 99-minute median attendance
+:::
+
+:::
+
+::::
+
+:::::
 
 
 ::::: {.soco-jc-recap-card}
@@ -1266,7 +1250,7 @@ Joint academic–industry session with Regeneron
 The complete reading history
 :::
 
-## Article archive
+## Article archive {#article-archive-heading}
 
 Not every prior meeting has a full recap—and that is fine. The citation archive below preserves the papers discussed across the history of SoCO Journal Club.
 
@@ -1277,7 +1261,7 @@ When a richer meeting recap exists, the recap above should be considered the pre
 # 2026 Articles
 
 ::: {.callout-note appearance="minimal" collapse="true"}
-## February – September 2026
+## February – November 2026
 
 ### February
 
@@ -1298,6 +1282,10 @@ Miller, David M., Ross D. Merkin, Howard L. Kaufman, Sameer G. Gupta, Natalie Wo
 ### September
 
 Hauschild, Axel, Jessica Cecile Hassel, Mirjana Ziemer, Piotr Rutkowski, Friedegund Meier, Lukas Flatz, Caroline Gaudy-Marqueste, et al. 2026. “Neoadjuvant Intralesional Daromun (L19IL2/L19TNF) in Resectable Locally Advanced Melanoma: An Update on the Efficacy and Safety Results of the PIVOTAL Phase III Trial.” *Journal of Clinical Oncology*, August. https://doi.org/10.1200/JCO-26-00852.
+
+### November
+
+Long, Georgina V., Muhammad A. Khattak, Helen J. Gogas, Dirk Schadendorf, Ana Arance, Matteo S. Carlino, Piotr Rutkowski, et al. 2026. “Intismeran Autogene plus Pembrolizumab for Resected Stage IIB to IV Melanoma.” *New England Journal of Medicine*, November 11. <https://doi.org/10.1056/NEJMoa2609762>.
 :::
 
 # 2025 Articles

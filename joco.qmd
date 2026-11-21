@@ -488,7 +488,7 @@ An open-access journal dedicated to advancing the understanding and care of pati
 <div class="soco-joco-actions">
 
 [Explore the Journal](https://journalofcutaneousoncology.io){.btn .btn-primary}
-[Perspectives on the Science](https://journalofcutaneousoncology.io/perspectives-on-the-science.html){.btn .btn-outline-primary}
+[Perspectives on the Science](https://journalofcutaneousoncology.io/perspectives){.btn .btn-outline-primary}
 
 </div>
 
@@ -573,7 +573,7 @@ Explore the latest publications, editorials, perspectives, and other content fro
 
 Read critical commentary placing emerging studies into their broader scientific, methodological, and clinical context.
 
-[Read Perspectives →](https://journalofcutaneousoncology.io/perspectives-on-the-science.html){.soco-joco-card-link}
+[Read Perspectives →](https://journalofcutaneousoncology.io/perspectives){.soco-joco-card-link}
 
 </div>
 
